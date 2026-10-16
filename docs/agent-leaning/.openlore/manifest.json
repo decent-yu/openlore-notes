@@ -1,130 +1,200 @@
 {
   "group_id": "group_65023894",
   "article_locations": {
-    "art_5e23dd19-236": {
-      "collection_id": "col_5df6179d-a2d",
-      "directory": "20261015-02/01-deno-is-joining-cloudflare",
-      "slug": "deno-is-joining-cloudflare"
+    "art_c1196428-261": {
+      "collection_id": "col_637531ac-ff3",
+      "directory": "20261016-01/01-context-engineering-with-deep-agents-how",
+      "slug": "context-engineering-with-deep-agents-how"
     },
-    "art_9a61fc6a-182": {
-      "collection_id": "col_5df6179d-a2d",
-      "directory": "20261015-02/02-a-new-feature-for-my-blog-built-using-my",
-      "slug": "a-new-feature-for-my-blog-built-using-my"
+    "art_813fb768-c48": {
+      "collection_id": "col_637531ac-ff3",
+      "directory": "20261016-01/02-building-long-running-agents-with-scaled",
+      "slug": "building-long-running-agents-with-scaled"
     },
-    "art_82ffc1f4-942": {
-      "collection_id": "col_5df6179d-a2d",
-      "directory": "20261015-02/03-tree-appreciator",
-      "slug": "tree-appreciator"
+    "art_cdd35870-813": {
+      "collection_id": "col_637531ac-ff3",
+      "directory": "20261016-01/03-the-most-common-questions-about-agent-ev",
+      "slug": "the-most-common-questions-about-agent-ev"
     },
-    "art_04dc16e9-260": {
-      "collection_id": "col_5df6179d-a2d",
-      "directory": "20261015-02/04-web-edit-01a0",
-      "slug": "web-edit-01a0"
+    "art_62331b31-18d": {
+      "collection_id": "col_637531ac-ff3",
+      "directory": "20261016-01/04-search-agent-traces-by-behavior-with-ai-",
+      "slug": "search-agent-traces-by-behavior-with-ai-"
     },
-    "art_aa37fe63-ba0": {
-      "collection_id": "col_5df6179d-a2d",
-      "directory": "20261015-02/05-llm-meta-ai-02",
-      "slug": "llm-meta-ai-02"
-    },
-    "art_d0d75237-c15": {
-      "collection_id": "col_5df6179d-a2d",
-      "directory": "20261015-02/06-yandex-outage-data-shows-that-instead-of",
-      "slug": "yandex-outage-data-shows-that-instead-of"
-    },
-    "art_6dcf3d28-bee": {
-      "collection_id": "col_5df6179d-a2d",
-      "directory": "20261015-02/07-ttok-10",
-      "slug": "ttok-10"
-    },
-    "art_e2c839b0-445": {
-      "collection_id": "col_5df6179d-a2d",
-      "directory": "20261015-02/08-quoting-geoffrey-huntley",
-      "slug": "quoting-geoffrey-huntley"
-    },
-    "art_23e24b21-f0f": {
-      "collection_id": "col_5df6179d-a2d",
-      "directory": "20261015-02/09-ai-is-mass-decompiling-games-thats-both-",
-      "slug": "ai-is-mass-decompiling-games-thats-both-"
-    },
-    "art_a4915cf0-111": {
-      "collection_id": "col_5df6179d-a2d",
-      "directory": "20261015-02/10-dwarf-fortress-uses-version-control-now",
-      "slug": "dwarf-fortress-uses-version-control-now"
+    "art_cc6e4d28-718": {
+      "collection_id": "col_637531ac-ff3",
+      "directory": "20261016-01/05-how-orange-business-built-live-intellige",
+      "slug": "how-orange-business-built-live-intellige"
     }
   },
   "collection_locations": {
-    "col_5df6179d-a2d": {
-      "directory": "docs/agent-leaning/20261015-02"
+    "col_637531ac-ff3": {
+      "directory": "docs/agent-leaning/20261016-01"
     }
   },
   "delivered_batches": [
-    "batch_1792066912755"
+    "batch_1792158874008"
   ],
   "managed_files": {
-    "docs/agent-leaning/20261015-02/01-deno-is-joining-cloudflare/article.md": {
-      "sha256": "67edcd59019e6c5a4c27737aa3c388fc4e2513fbb44fb015ff24ca1b2d3a0fc5",
+    "docs/agent-leaning/20261016-01/01-context-engineering-with-deep-agents-how/article.md": {
+      "sha256": "89dec6b4249066cb7270b4b36e15bbef9b560ebf417ca722b2514557d8fc440c",
       "media_type": "text/markdown",
-      "size": 3738
+      "size": 13718
     },
-    "docs/agent-leaning/20261015-02/02-a-new-feature-for-my-blog-built-using-my/article.md": {
-      "sha256": "69025eeea8896100832084df298a78d279e0f789e0ea4fcfff036a1b1675a86d",
+    "docs/agent-leaning/20261016-01/01-context-engineering-with-deep-agents-how/research.md": {
+      "sha256": "a29d5770b0136295ccee306377c92164cf073af3f0c4c635cb4eac30acb288e2",
       "media_type": "text/markdown",
-      "size": 9979
+      "size": 6898
     },
-    "docs/agent-leaning/20261015-02/03-tree-appreciator/article.md": {
-      "sha256": "8d0913643e04f22904dcd0df8c11433df2b8919f454b53bf754dbc2d62a1c551",
-      "media_type": "text/markdown",
-      "size": 3238
+    "docs/agent-leaning/20261016-01/01-context-engineering-with-deep-agents-how/assets/diagram-594a6f7b3ffd.png": {
+      "sha256": "594a6f7b3ffdd7f58ea9707cc07471575b557ab1559c57515d2983c2b754689a",
+      "media_type": "image/png",
+      "size": 294568
     },
-    "docs/agent-leaning/20261015-02/04-web-edit-01a0/article.md": {
-      "sha256": "2f2e86128e4ef3458a911f998f24c38f498bcd781401063bd8aea8f1822bc446",
-      "media_type": "text/markdown",
-      "size": 3139
+    "docs/agent-leaning/20261016-01/01-context-engineering-with-deep-agents-how/assets/diagram-dc9d178a948d.gif": {
+      "sha256": "dc9d178a948d14553a97ec18134dfbeb788a704cb12634e29519b855501ed99c",
+      "media_type": "image/gif",
+      "size": 981845
     },
-    "docs/agent-leaning/20261015-02/05-llm-meta-ai-02/article.md": {
-      "sha256": "e7e96db8f949cf41af15d18187553ec9f2cd208da8a1153d371fddca17025188",
-      "media_type": "text/markdown",
-      "size": 2571
+    "docs/agent-leaning/20261016-01/01-context-engineering-with-deep-agents-how/assets/diagram-1116eb1ef08a.png": {
+      "sha256": "1116eb1ef08a77dbdafb7c2ca7401732a480c3eb74ff0077e3e7bfbdda4e69a1",
+      "media_type": "image/png",
+      "size": 180284
     },
-    "docs/agent-leaning/20261015-02/06-yandex-outage-data-shows-that-instead-of/article.md": {
-      "sha256": "c1488f39212e51d25295a5041dc9de4c2cee7938b1ea9244cac7bdd8a45f3287",
-      "media_type": "text/markdown",
-      "size": 15314
+    "docs/agent-leaning/20261016-01/01-context-engineering-with-deep-agents-how/assets/diagram-8a2bee0e4b9b.png": {
+      "sha256": "8a2bee0e4b9b7738c4ecc35a9ef3c0060f3fa5cf440d37c496c2db060f13538a",
+      "media_type": "image/png",
+      "size": 46016
     },
-    "docs/agent-leaning/20261015-02/07-ttok-10/article.md": {
-      "sha256": "5c555b4141fe26e765549ce4e0e965dbea8e3eae2e2b1dfb9a94452b50fdab81",
-      "media_type": "text/markdown",
-      "size": 2001
+    "docs/agent-leaning/20261016-01/01-context-engineering-with-deep-agents-how/assets/diagram-53d0cb8598b2.png": {
+      "sha256": "53d0cb8598b2bfd67be6391e8b3d6f3d84823084cd5c22eea7ad1997fec2b881",
+      "media_type": "image/png",
+      "size": 93626
     },
-    "docs/agent-leaning/20261015-02/08-quoting-geoffrey-huntley/article.md": {
-      "sha256": "2c1067a7181e864fe75fa0eda67350d9067b35189611d42f1783e3c11950b899",
-      "media_type": "text/markdown",
-      "size": 1612
+    "docs/agent-leaning/20261016-01/01-context-engineering-with-deep-agents-how/assets/diagram-f4cb7e79e87c.gif": {
+      "sha256": "f4cb7e79e87caac8c562a9bf129fda245c873fca66e8de7dab3aab850c839828",
+      "media_type": "image/gif",
+      "size": 864575
     },
-    "docs/agent-leaning/20261015-02/09-ai-is-mass-decompiling-games-thats-both-/article.md": {
-      "sha256": "1f5adb2fb8ad9d0af2ab7c9f742d61013fd0d43a8d6c234e7555c7083b3a3f5c",
-      "media_type": "text/markdown",
-      "size": 2688
+    "docs/agent-leaning/20261016-01/01-context-engineering-with-deep-agents-how/assets/diagram-507ea117dd11.png": {
+      "sha256": "507ea117dd11b63b1641514195fd70e106829f192eead8d0f764afbaafea6271",
+      "media_type": "image/png",
+      "size": 178738
     },
-    "docs/agent-leaning/20261015-02/10-dwarf-fortress-uses-version-control-now/article.md": {
-      "sha256": "43f1d244ba1f13df6a56df92a8f00534e4c01f7e9535d6e8c758a0bf7547bc34",
+    "docs/agent-leaning/20261016-01/02-building-long-running-agents-with-scaled/article.md": {
+      "sha256": "e2f0d8177e89c5b91b1fcd9e9d27ea5f8ac6745fa3a61717bcda898640650d21",
       "media_type": "text/markdown",
-      "size": 2648
+      "size": 17744
     },
-    "docs/agent-leaning/20261015-02/README.md": {
-      "sha256": "594db04e9afef00fde53b991d21d78c6dc8c2f7b5def32f3e36d1f684c9c084a",
+    "docs/agent-leaning/20261016-01/02-building-long-running-agents-with-scaled/research.md": {
+      "sha256": "690dd59d877a19d1c7bdfb28ff46f0b551eb14563fd965d04587ede506b387de",
       "media_type": "text/markdown",
-      "size": 1513
+      "size": 9619
     },
-    "docs/agent-leaning/20261015-02/digest.md": {
-      "sha256": "5f84f1d8a304a2a1d75e6e10964e78bd43ee183f024d9fc3f01f2899d19c0b09",
+    "docs/agent-leaning/20261016-01/02-building-long-running-agents-with-scaled/assets/diagram-1397a1a325ce.png": {
+      "sha256": "1397a1a325ced19f80b61dd694eea36933647e1773a9b953a8767435583aa94d",
+      "media_type": "image/png",
+      "size": 204212
+    },
+    "docs/agent-leaning/20261016-01/02-building-long-running-agents-with-scaled/assets/diagram-0d2e7339cf1d.png": {
+      "sha256": "0d2e7339cf1d6f03d92f29fc428d20a3fd244e4cd8fda4e48e274a64e816fbbb",
+      "media_type": "image/png",
+      "size": 101922
+    },
+    "docs/agent-leaning/20261016-01/02-building-long-running-agents-with-scaled/assets/diagram-a163296dbcba.png": {
+      "sha256": "a163296dbcba18b6988c35c1bf1db3bd85396a076700990f9b21699fde3cd5e9",
+      "media_type": "image/png",
+      "size": 127465
+    },
+    "docs/agent-leaning/20261016-01/03-the-most-common-questions-about-agent-ev/article.md": {
+      "sha256": "1ed24c20834bb93cf235042ce1ce953461992239450b08669d26358fdc890ed5",
       "media_type": "text/markdown",
-      "size": 2459
+      "size": 22160
+    },
+    "docs/agent-leaning/20261016-01/03-the-most-common-questions-about-agent-ev/research.md": {
+      "sha256": "55bf2c1c66c73c614004c7c3f81330d289e5d2fbdeaddf96ab95a2e876b8ca52",
+      "media_type": "text/markdown",
+      "size": 12261
+    },
+    "docs/agent-leaning/20261016-01/03-the-most-common-questions-about-agent-ev/assets/diagram-506a1266218a.png": {
+      "sha256": "506a1266218ac7acc415282eb8962870fd1fd605918fd7b8a0df9bb99962273d",
+      "media_type": "image/png",
+      "size": 229883
+    },
+    "docs/agent-leaning/20261016-01/03-the-most-common-questions-about-agent-ev/assets/diagram-8d1912f4048d.png": {
+      "sha256": "8d1912f4048d48caaf1c60e686de8c0ff6436fef1002ac59967e2e82d3cf1aa7",
+      "media_type": "image/png",
+      "size": 221943
+    },
+    "docs/agent-leaning/20261016-01/03-the-most-common-questions-about-agent-ev/assets/diagram-46d4a0d26825.png": {
+      "sha256": "46d4a0d26825d7fb1af7dab74105df5231ce9b9e8fff612c4ea717e5cf025f11",
+      "media_type": "image/png",
+      "size": 219657
+    },
+    "docs/agent-leaning/20261016-01/03-the-most-common-questions-about-agent-ev/assets/diagram-9236d5cca7eb.png": {
+      "sha256": "9236d5cca7eba368e24c2820fd7b8b988dc6018d2168777470126a21e5828c98",
+      "media_type": "image/png",
+      "size": 148918
+    },
+    "docs/agent-leaning/20261016-01/03-the-most-common-questions-about-agent-ev/assets/diagram-abb97340b382.png": {
+      "sha256": "abb97340b382b36d89f8f68be0d17fbede62cc36a16da7a23a5ae4cc846f88b9",
+      "media_type": "image/png",
+      "size": 227598
+    },
+    "docs/agent-leaning/20261016-01/03-the-most-common-questions-about-agent-ev/assets/diagram-0ef7c9de5bae.png": {
+      "sha256": "0ef7c9de5bae2a18e325926bae154f40fa8e307b9c99b2d59b1a494c1c787edf",
+      "media_type": "image/png",
+      "size": 151608
+    },
+    "docs/agent-leaning/20261016-01/03-the-most-common-questions-about-agent-ev/assets/diagram-5831ee90d513.png": {
+      "sha256": "5831ee90d513bbb1c289ae776dc1b4071ca041fd1226913a5b43842ce6972d0d",
+      "media_type": "image/png",
+      "size": 166616
+    },
+    "docs/agent-leaning/20261016-01/04-search-agent-traces-by-behavior-with-ai-/article.md": {
+      "sha256": "eaf2e026dae452d81f0505a9131d279c3cea588cfd7fab2a6e23581a3768fe8a",
+      "media_type": "text/markdown",
+      "size": 9817
+    },
+    "docs/agent-leaning/20261016-01/04-search-agent-traces-by-behavior-with-ai-/assets/diagram-266ae4662f23.png": {
+      "sha256": "266ae4662f23201c2de848fdfb41947c21b0421436655b393d4bdf062640b3c3",
+      "media_type": "image/png",
+      "size": 246543
+    },
+    "docs/agent-leaning/20261016-01/04-search-agent-traces-by-behavior-with-ai-/assets/diagram-670f0c6c9b71.png": {
+      "sha256": "670f0c6c9b71d4206858332dfd3708d09880bf5481da117cf811d0eb267a4e7f",
+      "media_type": "image/png",
+      "size": 128420
+    },
+    "docs/agent-leaning/20261016-01/04-search-agent-traces-by-behavior-with-ai-/assets/diagram-769c10c20773.png": {
+      "sha256": "769c10c207736d213bcc59528faf3643b2cc900bb2eba3ee4c5748f25df5560e",
+      "media_type": "image/png",
+      "size": 143930
+    },
+    "docs/agent-leaning/20261016-01/04-search-agent-traces-by-behavior-with-ai-/assets/diagram-1f18ba71c2bc.png": {
+      "sha256": "1f18ba71c2bc2f1cbd8bcc7ea434f48f84f925ca646269d92e2a8af457b12307",
+      "media_type": "image/png",
+      "size": 651962
+    },
+    "docs/agent-leaning/20261016-01/04-search-agent-traces-by-behavior-with-ai-/assets/diagram-5660d4f67b19.png": {
+      "sha256": "5660d4f67b19cb0418290e132c18d9330ae250b1031d13009fda7ab779aaee85",
+      "media_type": "image/png",
+      "size": 179311
+    },
+    "docs/agent-leaning/20261016-01/05-how-orange-business-built-live-intellige/article.md": {
+      "sha256": "13eb5e42fc0a0208905cf991e1bca9e2c7389c7f8b9d7aa51abd30b1d91d2c54",
+      "media_type": "text/markdown",
+      "size": 8413
+    },
+    "docs/agent-leaning/20261016-01/README.md": {
+      "sha256": "26dc5e724a96094014304b6ba0ebe927a3ca69793efcf512d3b4b3f89c454027",
+      "media_type": "text/markdown",
+      "size": 971
     },
     "docs/agent-leaning/README.md": {
-      "sha256": "e130e943ad1a463f7d5d7b2420a0df38b06036e4625f35c3a94fc86fd4362a6b",
+      "sha256": "a248ba4db6202cb88bdb5082945bc9c1c9f4201f4533c8ad6382f815a1b95664",
       "media_type": "text/markdown",
-      "size": 151
+      "size": 150
     }
   }
 }
