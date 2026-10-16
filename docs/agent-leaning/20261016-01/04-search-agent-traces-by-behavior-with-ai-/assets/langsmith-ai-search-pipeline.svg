@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">LangSmith AI Search 行为检索核心流水线拓扑</title>
+  <desc id="svg-desc">展示从异构 Trace 规整、Token 预算优先级裁剪到双阶段批量决策模型推理的端到端架构</desc>
+  <defs>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.04"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-violet" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#7c3aed"/>
+    </marker>
+    <linearGradient id="bg-canvas" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 画布背景 -->
+  <rect width="1600" height="900" fill="url(#bg-canvas)"/>
+
+  <!-- 居中标题区（严格居中，无全大写英文标签） -->
+  <g font-family="Inter, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <text x="800" y="75" text-anchor="middle" font-size="32" font-weight="800" fill="#0f172a">LangSmith AI Search 行为检索架构与执行流转</text>
+    <text x="800" y="110" text-anchor="middle" font-size="15" font-weight="400" fill="#64748b">从异构 Trace 轨迹去重、层次化 Token 预算裁剪到双阶段流式决策判别</text>
+  </g>
+
+  <!-- 阶段 1：轨迹规整与去重 (x: 80, width: 440) -->
+  <g filter="url(#card-shadow)" font-family="Inter, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="80" y="150" width="440" height="680" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="80" y="150" width="440" height="8" rx="4" fill="#2563eb"/>
+    
+    <rect x="110" y="185" width="220" height="32" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="220" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">阶段一 · 数据清洗与契约对齐</text>
+    
+    <text x="110" y="248" font-size="20" font-weight="700" fill="#0f172a">异构 Trace 规整为 Trajectory</text>
+    <text x="110" y="274" font-size="13" fill="#64748b">消除跨 SDK 协议异构性与累积对话冗余</text>
+
+    <!-- 子模块 1.1 -->
+    <rect x="110" y="305" width="380" height="150" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="135" y="335" font-size="15" font-weight="700" fill="#1e293b">1. 抹平多源异构协议差异</text>
+    <text x="135" y="365" font-size="13" fill="#475569">• 接入 OpenAI, Anthropic, LangGraph, OTel</text>
+    <text x="135" y="390" font-size="13" fill="#475569">• 统一抽象为会话级轨迹数据结构</text>
+    <text x="135" y="415" font-size="13" fill="#475569">• 消除各 SDK 消息嵌套与字段定义分歧</text>
+
+    <!-- 子模块 1.2 -->
+    <rect x="110" y="480" width="380" height="150" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="135" y="510" font-size="15" font-weight="700" fill="#1e293b">2. 消除二次方级历史重发冗余</text>
+    <text x="135" y="540" font-size="13" fill="#475569">• 拦截 Agent 每轮调用重新携带的全量上下文</text>
+    <text x="135" y="565" font-size="13" fill="#475569">• 保证每个 Message 与 Tool Call 仅记录一次</text>
+    <text x="135" y="590" font-size="13" fill="#475569">• 削减无效传输体积，保留完整因果时序链</text>
+
+    <!-- 底部状态指示条 -->
+    <rect x="110" y="655" width="380" height="135" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="135" y="688" font-size="14" font-weight="700" fill="#1e40af">规整产物：标准轨迹视图</text>
+    <text x="135" y="718" font-size="12" fill="#3b82f6">• 包含用户输入、Agent 决策、工具入参及出参</text>
+    <text x="135" y="743" font-size="12" fill="#3b82f6">• 作为后续语义判别与检索的标准化单一源</text>
+  </g>
+
+  <!-- 阶段 2：层次化 Token 预算裁剪 (x: 580, width: 440) -->
+  <g filter="url(#card-shadow)" font-family="Inter, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="580" y="150" width="440" height="680" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="580" y="150" width="440" height="8" rx="4" fill="#7c3aed"/>
+
+    <rect x="610" y="185" width="220" height="32" rx="8" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="720" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#6d28d9">阶段二 · 上下文精炼与压缩</text>
+
+    <text x="610" y="248" font-size="20" font-weight="700" fill="#0f172a">固定 Token 预算优先级截断</text>
+    <text x="610" y="274" font-size="13" fill="#64748b">应对长轨迹膨胀，保障关键交互语义保真</text>
+
+    <!-- 子模块 2.1 -->
+    <rect x="610" y="305" width="380" height="150" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="635" y="335" font-size="15" font-weight="700" fill="#1e293b">1. 编码长会话的 Token 现实</text>
+    <text x="635" y="365" font-size="13" fill="#475569">• Open SWE 抽样中位数：单会话 72K Token</text>
+    <text x="635" y="390" font-size="13" fill="#475569">• 工具执行输出（Shell/文件）占比高达 ~85%</text>
+    <text x="635" y="415" font-size="13" fill="#475569">• 人机直接交互内容仅占 ~2K Token (~2.8%)</text>
+
+    <!-- 子模块 2.2 -->
+    <rect x="610" y="480" width="380" height="150" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="635" y="510" font-size="15" font-weight="700" fill="#1e293b">2. 严格优先级填充机制</text>
+    <text x="635" y="540" font-size="13" fill="#475569">• 优先级 1：优先完整灌入用户提问与模型直接答复</text>
+    <text x="635" y="565" font-size="13" fill="#475569">• 优先级 2：余量分配给思考过程与工具调用参数</text>
+    <text x="635" y="590" font-size="13" fill="#475569">• 优先级 3：末位部分裁剪，超出预算则舍弃</text>
+
+    <!-- 底部状态指示条 -->
+    <rect x="610" y="655" width="380" height="135" rx="12" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="635" y="688" font-size="14" font-weight="700" fill="#5b21b6">工程权衡与代价</text>
+    <text x="635" y="718" font-size="12" fill="#6d28d9">• 优势：大幅控制推断开销，覆盖绝大多数意图</text>
+    <text x="635" y="743" font-size="12" fill="#6d28d9">• 边界：隐蔽的工具崩溃可能因工具日志被裁而漏检</text>
+  </g>
+
+  <!-- 阶段 3：过滤与决策模型流式推理 (x: 1080, width: 440) -->
+  <g filter="url(#card-shadow)" font-family="Inter, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="1080" y="150" width="440" height="680" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="1080" y="150" width="440" height="8" rx="4" fill="#059669"/>
+
+    <rect x="1110" y="185" width="220" height="32" rx="8" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="1220" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">阶段三 · 联合检索与判别</text>
+
+    <text x="1110" y="248" font-size="20" font-weight="700" fill="#0f172a">小决策模型并行判别与流式回传</text>
+    <text x="1110" y="274" font-size="13" fill="#64748b">结构化过滤粗筛 + 专注模型细判</text>
+
+    <!-- 子模块 3.1 -->
+    <rect x="1110" y="305" width="380" height="150" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1135" y="335" font-size="15" font-weight="700" fill="#1e293b">1. 结构化元数据极速初筛</text>
+    <text x="1135" y="365" font-size="13" fill="#475569">• 在 SmithDB 侧基于 Status/Tag/耗时快速预过滤</text>
+    <text x="1135" y="390" font-size="13" fill="#475569">• 迅速压降待评估候选集，避免全量无差别扫描</text>
+    <text x="1135" y="415" font-size="13" fill="#475569">• 规避传统全轨迹向量嵌入的有损压缩与信息丢失</text>
+
+    <!-- 子模块 3.2 -->
+    <rect x="1110" y="480" width="380" height="150" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1135" y="510" font-size="15" font-weight="700" fill="#1e293b">2. 管道化批处理与实时流式输出</text>
+    <text x="1135" y="540" font-size="13" fill="#475569">• 快速决策模型（Fast Decision Model）并发判决</text>
+    <text x="1135" y="565" font-size="13" fill="#475569">• 流水线重叠：判决当前批次同时预取下一批次</text>
+    <text x="1135" y="590" font-size="13" fill="#475569">• 命中结果即时 Streaming 回前端，无需等待全扫</text>
+
+    <!-- 底部状态指示条 -->
+    <rect x="1110" y="655" width="380" height="135" rx="12" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="1135" y="688" font-size="14" font-weight="700" fill="#14532d">业务交付收益</text>
+    <text x="1135" y="718" font-size="12" fill="#15803d">• 摆脱预置 Evaluator 束缚，实现即时探索性排查</text>
+    <text x="1135" y="743" font-size="12" fill="#15803d">• 快速定位“假完成”、PII 泄漏与用户受挫等深层问题</text>
+  </g>
+
+  <!-- 连接线：阶段 1 -> 阶段 2 (独立 line，防断裂) -->
+  <line x1="520" y1="490" x2="574" y2="490" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- 连接线：阶段 2 -> 阶段 3 (独立 line，防断裂) -->
+  <line x1="1020" y1="490" x2="1074" y2="490" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arrow-violet)"/>
+</svg>
