@@ -1,350 +1,105 @@
 {
   "group_id": "group_65023894",
   "article_locations": {
-    "art_23a7f6d8-ae5": {
-      "collection_id": "col_ec4953e5-b47",
-      "directory": "20261016-02/01-how-to-build-a-model-router-in-the-harne",
-      "slug": "how-to-build-a-model-router-in-the-harne"
+    "art_5156d2b5-fb0": {
+      "collection_id": "col_9047ad55-a45",
+      "directory": "20261017-01/01-whats-new-in-managed-deep-agents-schedul",
+      "slug": "whats-new-in-managed-deep-agents-schedul"
     },
-    "art_b7c87884-974b-4dc0-84d4-120e54fdb9ee": {
-      "collection_id": "col_ec4953e5-b47",
-      "directory": "20261016-02/02-agents-that-can-pay-building-restock-wit",
-      "slug": "agents-that-can-pay-building-restock-wit"
+    "art_1851689c-c09": {
+      "collection_id": "col_9047ad55-a45",
+      "directory": "20261017-01/02-the-reliability-layer-for-healthcare-ai-",
+      "slug": "the-reliability-layer-for-healthcare-ai-"
     },
-    "art_f48068e9-0a4": {
-      "collection_id": "col_ec4953e5-b47",
-      "directory": "20261016-02/03-can-jev-be-a-better-agent-evaluator",
-      "slug": "can-jev-be-a-better-agent-evaluator"
-    },
-    "art_03f40af2-86e": {
-      "collection_id": "col_ec4953e5-b47",
-      "directory": "20261016-02/04-revamping-skills-in-deep-agents",
-      "slug": "revamping-skills-in-deep-agents"
-    },
-    "art_fef9e664-b6e": {
-      "collection_id": "col_ec4953e5-b47",
-      "directory": "20261016-02/05-building-an-evidence-grounded-agentic-se",
-      "slug": "building-an-evidence-grounded-agentic-se"
-    },
-    "art_4fa7b14b-8fb": {
-      "collection_id": "col_ec4953e5-b47",
-      "directory": "20261016-02/06-building-production-agents-with-jev-and-",
-      "slug": "building-production-agents-with-jev-and-"
-    },
-    "art_48849e3e-339": {
-      "collection_id": "col_ec4953e5-b47",
-      "directory": "20261016-02/07-how-included-health-built-federated-heal",
-      "slug": "how-included-health-built-federated-heal"
-    },
-    "art_b3184a54-d94": {
-      "collection_id": "col_ec4953e5-b47",
-      "directory": "20261016-02/08-introducing-langsmith-fine-tuning",
-      "slug": "introducing-langsmith-fine-tuning"
-    },
-    "art_9ee1cc5a-464c-47d8-bf7a-7a4c838b86d5": {
-      "collection_id": "col_ec4953e5-b47",
-      "directory": "20261016-02/09-how-snyk-turned-an-internal-support-agen",
-      "slug": "how-snyk-turned-an-internal-support-agen"
-    },
-    "art_5d9b4c40-bda": {
-      "collection_id": "col_ec4953e5-b47",
-      "directory": "20261016-02/10-what-is-jev-a-guide-to-typesafe-ais-syst",
-      "slug": "what-is-jev-a-guide-to-typesafe-ais-syst"
+    "art_8806577e-57f": {
+      "collection_id": "col_9047ad55-a45",
+      "directory": "20261017-01/03-jev-is-now-available-in-langsmith-evals",
+      "slug": "jev-is-now-available-in-langsmith-evals"
     }
   },
   "collection_locations": {
-    "col_ec4953e5-b47": {
-      "directory": "docs/agent-leaning/20261016-02"
+    "col_9047ad55-a45": {
+      "directory": "docs/agent-leaning/20261017-01"
     }
   },
   "delivered_batches": [
-    "batch_1792163321850"
+    "batch_1792195565064"
   ],
   "managed_files": {
-    "docs/agent-leaning/20261016-02/01-how-to-build-a-model-router-in-the-harne/article.md": {
-      "sha256": "dfd562d8e22a3e3bc57c017928ae5f1811617a6a188fc1c7ac19a37c901c6e1a",
+    "docs/agent-leaning/20261017-01/01-whats-new-in-managed-deep-agents-schedul/article.md": {
+      "sha256": "ac6fa763e4407109998cfecc2e0b2bac9e6bce4622a97b0e1adfacdda30a51cb",
       "media_type": "text/markdown",
-      "size": 17384
+      "size": 8422
     },
-    "docs/agent-leaning/20261016-02/01-how-to-build-a-model-router-in-the-harne/research.md": {
-      "sha256": "0835abc3bb9e60bef9430d381816e87acf341b56f6fc5740aab5562ab8bbd573",
+    "docs/agent-leaning/20261017-01/01-whats-new-in-managed-deep-agents-schedul/research.md": {
+      "sha256": "a482b2dad9f738e96df71087ee3d561cf5110d58eb6df51ed0f8bacdc9c20964",
       "media_type": "text/markdown",
-      "size": 7255
+      "size": 12092
     },
-    "docs/agent-leaning/20261016-02/01-how-to-build-a-model-router-in-the-harne/assets/diagram-0a0f5ef7e520.png": {
-      "sha256": "0a0f5ef7e5203c64d9f7f30988d5e7a39036f2d7559ca2b4d2ec95f7ab20dede",
+    "docs/agent-leaning/20261017-01/01-whats-new-in-managed-deep-agents-schedul/assets/diagram-55f10e8949b4.png": {
+      "sha256": "55f10e8949b402576c7c40c1f08a91f3c37f4b175d1374f7defa29ee3e28a9cd",
       "media_type": "image/png",
-      "size": 205002
+      "size": 202880
     },
-    "docs/agent-leaning/20261016-02/01-how-to-build-a-model-router-in-the-harne/assets/diagram-42bd4fed823d.png": {
-      "sha256": "42bd4fed823def1fdf5e8e8c58517bc283a5bd11debd7be91e455f54dd534487",
-      "media_type": "image/png",
-      "size": 183457
-    },
-    "docs/agent-leaning/20261016-02/01-how-to-build-a-model-router-in-the-harne/assets/diagram-423d1fafded2.png": {
-      "sha256": "423d1fafded2720a23798309b83028b9eb92d3d21016eeeae82bbd55864386db",
-      "media_type": "image/png",
-      "size": 266454
-    },
-    "docs/agent-leaning/20261016-02/01-how-to-build-a-model-router-in-the-harne/assets/diagram-dcca4cedbf95.png": {
-      "sha256": "dcca4cedbf950b8c124cc4f5ffe52f46a132955696c53b666e442046c5c40cd2",
-      "media_type": "image/png",
-      "size": 149149
-    },
-    "docs/agent-leaning/20261016-02/01-how-to-build-a-model-router-in-the-harne/assets/diagram-5cb84823d3c0.png": {
-      "sha256": "5cb84823d3c05df43ccd4404a51a768226dc10647dac8e9edce17b417aea19b7",
-      "media_type": "image/png",
-      "size": 259724
-    },
-    "docs/agent-leaning/20261016-02/02-agents-that-can-pay-building-restock-wit/article.md": {
-      "sha256": "8da92232cd09d61c1356164b06dee9eef0f01eabcb31554d23301e609e4dca7b",
+    "docs/agent-leaning/20261017-01/02-the-reliability-layer-for-healthcare-ai-/article.md": {
+      "sha256": "5b6257d9610dcb5ccb6fc275eced3daa95cb271ce01e25b58684bff8716bea36",
       "media_type": "text/markdown",
-      "size": 10653
+      "size": 14902
     },
-    "docs/agent-leaning/20261016-02/02-agents-that-can-pay-building-restock-wit/research.md": {
-      "sha256": "057a19319cc69edc145eeb40df4abfb7ad507474e34c1a1ec757bd5de17a642d",
+    "docs/agent-leaning/20261017-01/02-the-reliability-layer-for-healthcare-ai-/research.md": {
+      "sha256": "69135ba9204f1ca94e28d02f07e880d03a99f7c536b8e0913c4edc7c153a76e8",
       "media_type": "text/markdown",
-      "size": 7116
+      "size": 13238
     },
-    "docs/agent-leaning/20261016-02/02-agents-that-can-pay-building-restock-wit/assets/diagram-e5eb1d362050.png": {
-      "sha256": "e5eb1d3620505cc4dc164bab48d3aa1f6b524b1fb371f65612173efff9a8ead5",
+    "docs/agent-leaning/20261017-01/02-the-reliability-layer-for-healthcare-ai-/assets/diagram-634333886d4d.png": {
+      "sha256": "634333886d4d897503179f322f1caa2e90e6e6fde041029db95cf254b87d796b",
       "media_type": "image/png",
-      "size": 209135
+      "size": 237869
     },
-    "docs/agent-leaning/20261016-02/02-agents-that-can-pay-building-restock-wit/assets/diagram-96eb8744e3f0.png": {
-      "sha256": "96eb8744e3f0bb6f803593666ac7b0b51ba59a97c6fe67cba289cef59284173e",
+    "docs/agent-leaning/20261017-01/02-the-reliability-layer-for-healthcare-ai-/assets/diagram-eff327c1d10d.png": {
+      "sha256": "eff327c1d10dd7918a1ed7422280f01dded0f177f2357ed598dcb66d398c6ea6",
       "media_type": "image/png",
-      "size": 108482
+      "size": 199024
     },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/article.md": {
-      "sha256": "2ac4eb2378491dc93bce895c359fdc3dc5cdb978f4b5a5caf6270d221ba560ad",
+    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/article.md": {
+      "sha256": "afd8b7bad53966c046c1d12094005cfc45179621c83afb3e29c4a1e0e80bfc90",
       "media_type": "text/markdown",
-      "size": 14133
+      "size": 12147
     },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/research.md": {
-      "sha256": "d2ecb97043ceb70784d3b0c0ca9142141322b122ad43efc733c0e4f80e0e85be",
+    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/research.md": {
+      "sha256": "db074c59865b60a7618606540e33915dbb398f67faceb90896c61b50205d782c",
       "media_type": "text/markdown",
-      "size": 6427
+      "size": 11945
     },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/assets/diagram-5b62cae60205.png": {
-      "sha256": "5b62cae60205dab9f7696794bdd164563a56638e6fcb8967a3dd55507529719b",
+    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/assets/diagram-5d2ccbc37722.png": {
+      "sha256": "5d2ccbc377221ab0081d4543779bdb4ced90b2d59548b66f7226d9aededfa976",
       "media_type": "image/png",
-      "size": 191976
+      "size": 194121
     },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/assets/diagram-92cda9398e9f.png": {
-      "sha256": "92cda9398e9f1b1236ca9f261325ac55592db0c809c877a40717fd783081b81b",
+    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/assets/diagram-9783cf7dd6f9.png": {
+      "sha256": "9783cf7dd6f9c5f7690ccfc83aaff09beb210ba0ba6e25f06db5e95610dd09f8",
       "media_type": "image/png",
-      "size": 394724
+      "size": 117634
     },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/assets/diagram-62daba9bfde0.png": {
-      "sha256": "62daba9bfde08a7dfe9b5f6b2c1858e4ad8290fa98a90ddabfd751ea86f8781b",
+    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/assets/diagram-790d96f4c3bc.png": {
+      "sha256": "790d96f4c3bc122fe74446bc6618e195ae9f44d89a45d28ed61e26e9600804a1",
       "media_type": "image/png",
-      "size": 219604
+      "size": 45889
     },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/assets/diagram-355fd5df21a8.png": {
-      "sha256": "355fd5df21a8389a1b880da36c38e24a77dca5d300bdfb72338575210f06b028",
-      "media_type": "image/png",
-      "size": 203388
+    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/assets/eval_architecture.svg": {
+      "sha256": "8b7eb94ac195a1f2c8d5afdf761b58402db8f30b95a340b0b1fc7901a9e493c5",
+      "media_type": "image/svg+xml",
+      "size": 10717
     },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/assets/diagram-583b861d8461.png": {
-      "sha256": "583b861d846105c708d4a96201a9b4ae4bc8a042b3585bce7bd4c9883e779506",
-      "media_type": "image/png",
-      "size": 117414
-    },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/assets/diagram-b0f77dd042fa.png": {
-      "sha256": "b0f77dd042fad2ad309728de0523e92fefbe1aab3fc04ba0d1bb9430fee9a070",
-      "media_type": "image/png",
-      "size": 254009
-    },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/assets/diagram-0e9108a6c6ba.png": {
-      "sha256": "0e9108a6c6ba492befc66e60ccd9fcdca5e5a3bf26d35d0a2c3bcfa22337f2e7",
-      "media_type": "image/png",
-      "size": 169050
-    },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/assets/diagram-3ca83ede8dc2.png": {
-      "sha256": "3ca83ede8dc219145beef8fb9e7debc198ac203d4bd8f23a522934e9dd52bd22",
-      "media_type": "image/png",
-      "size": 103701
-    },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/assets/diagram-8597012fa6b1.png": {
-      "sha256": "8597012fa6b101d6bd3ab33d2d8dcc8543abbed50caa1a7fa51db8e27af6271d",
-      "media_type": "image/png",
-      "size": 145967
-    },
-    "docs/agent-leaning/20261016-02/03-can-jev-be-a-better-agent-evaluator/assets/diagram-1dc12800566d.png": {
-      "sha256": "1dc12800566db8f2e9c0b9788701512eed72992f8059b3f80fe2340f88cb1b2c",
-      "media_type": "image/png",
-      "size": 126553
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/article.md": {
-      "sha256": "21f44811736c9b9544b813f8938f496b157c4d0edb3a7dc00e0cb90bcc390a39",
+    "docs/agent-leaning/20261017-01/README.md": {
+      "sha256": "929aeac0d9cf6c79f6aee0236498cae06c2da4a1854c3da7b26bd60657b46121",
       "media_type": "text/markdown",
-      "size": 12351
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-44cab9f79f0e.png": {
-      "sha256": "44cab9f79f0efad166179d5398f8e2ef01428089d036dec24faa87ea7e4a656f",
-      "media_type": "image/png",
-      "size": 134222
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-e69663d40905.png": {
-      "sha256": "e69663d4090545a8d71e6bdb006a2f5aed73d8c017723cddd7a4e626c06caeed",
-      "media_type": "image/png",
-      "size": 110868
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-706dcd9cc609.png": {
-      "sha256": "706dcd9cc6098a63257c562326ec1d5194f93901dbd41c72b5030100e9b41a0f",
-      "media_type": "image/png",
-      "size": 108970
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-f52bbc295522.png": {
-      "sha256": "f52bbc295522998cb6680ad8f09a7a4d63fde4327bf3a6753bce02e695b139e5",
-      "media_type": "image/png",
-      "size": 134414
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-d9893f308a7a.png": {
-      "sha256": "d9893f308a7ad9c0e1faf968ef8f8966c79760795dab3a82e828ee16d5389fbe",
-      "media_type": "image/png",
-      "size": 72712
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-158ec3108a1b.png": {
-      "sha256": "158ec3108a1bb6f9ba72d795362fdc1c261981d3d681c1bb35d45e5e5de61bee",
-      "media_type": "image/png",
-      "size": 188738
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-1eb72f9f5be1.png": {
-      "sha256": "1eb72f9f5be1881d117f7734cbac77d76632dc6e8f9e0346701e321ade60fa29",
-      "media_type": "image/png",
-      "size": 96846
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-e43ead4b2b2c.png": {
-      "sha256": "e43ead4b2b2c7037175f7084eccaae4077ca76dda0d576940d443459f7829103",
-      "media_type": "image/png",
-      "size": 112015
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-2066956855ff.png": {
-      "sha256": "2066956855ffde7179de7831332627996d394e3175358f1b517c30c1d277baa0",
-      "media_type": "image/png",
-      "size": 108868
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-bff54da73190.png": {
-      "sha256": "bff54da7319088dbf5d0d48689446b495d8f0983adedd3ad05b668a117f25d54",
-      "media_type": "image/png",
-      "size": 50894
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-b91fba6b4d13.png": {
-      "sha256": "b91fba6b4d13f46fecebe5eb0cc44392648253d4d03426fa44c4e3e3ac339af1",
-      "media_type": "image/png",
-      "size": 105940
-    },
-    "docs/agent-leaning/20261016-02/04-revamping-skills-in-deep-agents/assets/diagram-1f254352f535.png": {
-      "sha256": "1f254352f535cae84aeb2f4a04d27cd44cd5b0ea150c507cea5b8009fe43ad6c",
-      "media_type": "image/png",
-      "size": 87083
-    },
-    "docs/agent-leaning/20261016-02/05-building-an-evidence-grounded-agentic-se/article.md": {
-      "sha256": "525f4d791e9ab054d0503634af214df82a27019d1757bb6d1edec8be42729847",
-      "media_type": "text/markdown",
-      "size": 14129
-    },
-    "docs/agent-leaning/20261016-02/05-building-an-evidence-grounded-agentic-se/assets/diagram-c896d2cb6349.webp": {
-      "sha256": "c896d2cb6349c5e5c094dd604f4c667e65ee3ddfb689cb22421a19e89b5a207f",
-      "media_type": "image/webp",
-      "size": 87210
-    },
-    "docs/agent-leaning/20261016-02/05-building-an-evidence-grounded-agentic-se/assets/diagram-a0175d625b8a.webp": {
-      "sha256": "a0175d625b8ad82517fa5bff2d6bbdb15792cc42797d735d6a795c9fda3f1d5a",
-      "media_type": "image/webp",
-      "size": 26266
-    },
-    "docs/agent-leaning/20261016-02/05-building-an-evidence-grounded-agentic-se/assets/diagram-71cbffba6701.webp": {
-      "sha256": "71cbffba6701b5a03525947c87bb4ab5757d0eaaeb7bdd9d2720400cd36e4737",
-      "media_type": "image/webp",
-      "size": 42656
-    },
-    "docs/agent-leaning/20261016-02/05-building-an-evidence-grounded-agentic-se/assets/diagram-e5ea41b2020e.webp": {
-      "sha256": "e5ea41b2020e16361e30d630813627828467c6ce07cb0b23c303f1d2def81843",
-      "media_type": "image/webp",
-      "size": 20000
-    },
-    "docs/agent-leaning/20261016-02/05-building-an-evidence-grounded-agentic-se/assets/diagram-3a201ae9b181.webp": {
-      "sha256": "3a201ae9b181e1715ac9ba8cfa94e38118d7fb8b0b2dd8a7cee00f2256906b41",
-      "media_type": "image/webp",
-      "size": 33662
-    },
-    "docs/agent-leaning/20261016-02/05-building-an-evidence-grounded-agentic-se/assets/diagram-931fb43a5a47.webp": {
-      "sha256": "931fb43a5a47dbc00f581696732d5c1c129371791df6bb9aeb4ffefd3b7459c3",
-      "media_type": "image/webp",
-      "size": 20370
-    },
-    "docs/agent-leaning/20261016-02/06-building-production-agents-with-jev-and-/article.md": {
-      "sha256": "50b7d6903b04f42fb619c06e24044b72dbf6c44bfc7eb96f99c09e648f1b9798",
-      "media_type": "text/markdown",
-      "size": 13444
-    },
-    "docs/agent-leaning/20261016-02/06-building-production-agents-with-jev-and-/assets/diagram-a2ab4444aebc.png": {
-      "sha256": "a2ab4444aebc12a3c8dd7cfc8b9334c17914ffaef73e2c0d963c5a428d7dbc9e",
-      "media_type": "image/png",
-      "size": 225663
-    },
-    "docs/agent-leaning/20261016-02/06-building-production-agents-with-jev-and-/assets/diagram-9850f0730461.png": {
-      "sha256": "9850f0730461c0e236d9718348154dcf369783af49cdc5700a3a57d3344d865e",
-      "media_type": "image/png",
-      "size": 76817
-    },
-    "docs/agent-leaning/20261016-02/06-building-production-agents-with-jev-and-/assets/diagram-51418a19e426.png": {
-      "sha256": "51418a19e426a36ba29169e2449a7351358e9709a6a8aa3f4f93deb90052902f",
-      "media_type": "image/png",
-      "size": 39124
-    },
-    "docs/agent-leaning/20261016-02/07-how-included-health-built-federated-heal/article.md": {
-      "sha256": "8b92003649faae826ebc1d3aadc892b24e8b90eaa3b0f63f9ea140c4845314d1",
-      "media_type": "text/markdown",
-      "size": 11174
-    },
-    "docs/agent-leaning/20261016-02/08-introducing-langsmith-fine-tuning/article.md": {
-      "sha256": "b57821e67eac74845cbb7a0f91b158f259565e65bae11c25d0bf6d1736a76429",
-      "media_type": "text/markdown",
-      "size": 11770
-    },
-    "docs/agent-leaning/20261016-02/08-introducing-langsmith-fine-tuning/assets/diagram-6ffb7c8dc88f.png": {
-      "sha256": "6ffb7c8dc88f9f473a48dab61af04668807c00f9017c24924dd3aba1dd6970ff",
-      "media_type": "image/png",
-      "size": 289610
-    },
-    "docs/agent-leaning/20261016-02/08-introducing-langsmith-fine-tuning/assets/diagram-b8e7d7f61959.png": {
-      "sha256": "b8e7d7f619597b924da9247dd6e8eeb7d74ae7b4f1640bf0a697d4bc2b02e032",
-      "media_type": "image/png",
-      "size": 457425
-    },
-    "docs/agent-leaning/20261016-02/09-how-snyk-turned-an-internal-support-agen/article.md": {
-      "sha256": "3242a140ca7f2845334aa17654c4a919f0c60a17a4372abc55c09c777d934b7e",
-      "media_type": "text/markdown",
-      "size": 11106
-    },
-    "docs/agent-leaning/20261016-02/09-how-snyk-turned-an-internal-support-agen/assets/diagram-8cdec12fec06.png": {
-      "sha256": "8cdec12fec067050438d8b7491ffcf9715a1f2a22096545724b76ecd491a4c43",
-      "media_type": "image/png",
-      "size": 443438
-    },
-    "docs/agent-leaning/20261016-02/10-what-is-jev-a-guide-to-typesafe-ais-syst/article.md": {
-      "sha256": "66b39a0472b108bf1c55224eaa52590c9857399b501be4c06b42b7794014e1e6",
-      "media_type": "text/markdown",
-      "size": 9328
-    },
-    "docs/agent-leaning/20261016-02/10-what-is-jev-a-guide-to-typesafe-ais-syst/assets/diagram-7cf2c64c31a8.png": {
-      "sha256": "7cf2c64c31a8437ad66c49313795ad4d769c7837baea10645605562c0a8b185d",
-      "media_type": "image/png",
-      "size": 228511
-    },
-    "docs/agent-leaning/20261016-02/README.md": {
-      "sha256": "5c11f1211519fff4d8669d7b316e0fbba4aede816552a4974e29c1d6419f166d",
-      "media_type": "text/markdown",
-      "size": 1472
+      "size": 707
     },
     "docs/agent-leaning/README.md": {
-      "sha256": "3fa98afd1506f0f5c024a9b0c3c0b4f05682a827dd28a20ca2f6e3a3e1981451",
+      "sha256": "1fe98351e361e18f65db5f3b4f094cbc9c004779ae9eba06c0a28e7e42797051",
       "media_type": "text/markdown",
-      "size": 151
+      "size": 150
     }
   }
 }

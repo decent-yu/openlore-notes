@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="eval-arch-title eval-arch-desc">
+  <title id="eval-arch-title">Agent 评估架构演进与混合评判流水线</title>
+  <desc id="eval-arch-desc">展示代码断言、快系统类型化判定与大模型深度推理三层评估流水线的机制对比与协同流转</desc>
+  <defs>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.04"/>
+    </filter>
+    <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arr-violet" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#8b5cf6"/>
+    </marker>
+    <linearGradient id="bg-canvas" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg-canvas)"/>
+
+  <!-- 居中主标题区（严格无英文小胶囊，水平居中） -->
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <text x="800" y="75" text-anchor="middle" font-size="32" font-weight="800" fill="#0f172a">Agent 评估架构演进与混合分层流水线</text>
+    <text x="800" y="110" text-anchor="middle" font-size="15" font-weight="400" fill="#64748b">从代码规则断言、快系统类型化判别到大模型深度反思的工程协同实践</text>
+  </g>
+
+  <!-- 第一列：确定性代码规则断言 (x: 80, width: 440) -->
+  <g filter="url(#card-shadow)" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="80" y="150" width="440" height="680" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="80" y="150" width="440" height="8" rx="4" fill="#3b82f6"/>
+    
+    <!-- 阶段徽章 -->
+    <rect x="110" y="180" width="220" height="30" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="220" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">第一层 · 确定性规则门禁</text>
+    <text x="110" y="245" font-size="20" font-weight="700" fill="#0f172a">代码断言与静态契约检查</text>
+    <text x="110" y="270" font-size="13" fill="#64748b">毫秒级执行，拦截硬性格式与不可变状态</text>
+
+    <!-- 机制卡片 -->
+    <rect x="105" y="295" width="390" height="150" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="125" y="325" font-size="15" font-weight="700" fill="#1e293b">底层机制与输入输出</text>
+    <text x="125" y="355" font-size="13" fill="#475569">• 输入：结构化 Trace 字段与函数调用记录</text>
+    <text x="125" y="380" font-size="13" fill="#475569">• 逻辑：正则匹配、模式提取、工具调用校验</text>
+    <text x="125" y="405" font-size="13" fill="#475569">• 输出：确定性布尔断言 (Pass / Fail)</text>
+    <text x="125" y="430" font-size="13" fill="#475569">• 性能：&lt; 5ms 响应，零外部模型调用开销</text>
+
+    <!-- 指标与适用卡片 -->
+    <rect x="105" y="465" width="390" height="165" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="125" y="495" font-size="15" font-weight="700" fill="#1e293b">工程特性与局限性</text>
+    <text x="125" y="525" font-size="13" fill="#475569">• 核心优势：运行极快、成本为零、结果 100% 幂等</text>
+    <text x="125" y="550" font-size="13" fill="#dc2626">• 关键死穴：无法理解发散意图与多路径有效解</text>
+    <text x="125" y="575" font-size="13" fill="#475569">• 适用场景：JSON Schema 验证、特定敏感词阻断</text>
+    <text x="125" y="600" font-size="13" fill="#475569">• 流水线角色：作为生产最外层轻量门禁</text>
+
+    <!-- 状态指示 -->
+    <rect x="105" y="650" width="390" height="50" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="300" y="681" text-anchor="middle" font-size="13" font-weight="600" fill="#1d4ed8">全量硬性校验：拦截语法错误与格式畸变</text>
+  </g>
+
+  <!-- 第二列：快系统类型化判定 Jev (x: 580, width: 440) -->
+  <g filter="url(#card-shadow)" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="580" y="150" width="440" height="680" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="580" y="150" width="440" height="8" rx="4" fill="#8b5cf6"/>
+    
+    <!-- 阶段徽章 -->
+    <rect x="610" y="180" width="220" height="30" rx="8" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="720" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#6d28d9">第二层 · 快系统类型化判别</text>
+    <text x="610" y="245" font-size="20" font-weight="700" fill="#0f172a">状态评估与类型化原语</text>
+    <text x="610" y="270" font-size="13" fill="#64748b">亚秒级并行分类，直接输出机器可用概率</text>
+
+    <!-- 机制卡片 -->
+    <rect x="605" y="295" width="390" height="150" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="625" y="325" font-size="15" font-weight="700" fill="#1e293b">底层机制与输入输出</text>
+    <text x="625" y="355" font-size="13" fill="#475569">• 输入：State 上下文 (Run / Thread 上下文)</text>
+    <text x="625" y="380" font-size="13" fill="#475569">• 原语：noul(布尔)、choice(单选)、score(打分)</text>
+    <text x="625" y="405" font-size="13" fill="#475569">• 特性：多问题同请求并行评估，边际成本接近零</text>
+    <text x="625" y="430" font-size="13" fill="#475569">• 性能：均值 0.44s 延迟，$0.00035/次超低成本</text>
+
+    <!-- 指标与适用卡片 -->
+    <rect x="605" y="465" width="390" height="165" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="625" y="495" font-size="15" font-weight="700" fill="#1e293b">工程特性与局限性</text>
+    <text x="625" y="525" font-size="13" fill="#475569">• 核心优势：彻底规避文本解析误差，方差降低百倍</text>
+    <text x="625" y="550" font-size="13" fill="#ea580c">• 关键约束：不输出自由思考链，不适合开放式长文评述</text>
+    <text x="625" y="575" font-size="13" fill="#475569">• 适用场景：100% 流量在线风控、PII 泄露拦截、意图识别</text>
+    <text x="625" y="600" font-size="13" fill="#475569">• 流水线角色：作为在线高吞吐实时打分核心引擎</text>
+
+    <!-- 状态指示 -->
+    <rect x="605" y="650" width="390" height="50" rx="8" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="800" y="681" text-anchor="middle" font-size="13" font-weight="600" fill="#6d28d9">生产全量实时巡检：高频指标在线自动化度量</text>
+  </g>
+
+  <!-- 第三列：大模型深度推演 LLM-as-a-Judge (x: 1080, width: 440) -->
+  <g filter="url(#card-shadow)" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="1080" y="150" width="440" height="680" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="1080" y="150" width="440" height="8" rx="4" fill="#059669"/>
+    
+    <!-- 阶段徽章 -->
+    <rect x="1110" y="180" width="220" height="30" rx="8" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="1220" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">第三层 · 慢系统深度归因</text>
+    <text x="1110" y="245" font-size="20" font-weight="700" fill="#0f172a">大模型思考链与开放式评判</text>
+    <text x="1110" y="270" font-size="13" fill="#64748b">多秒级异步推理，输出详尽理由与诊断建议</text>
+
+    <!-- 机制卡片 -->
+    <rect x="1105" y="295" width="390" height="150" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1125" y="325" font-size="15" font-weight="700" fill="#1e293b">底层机制与输入输出</text>
+    <text x="1125" y="355" font-size="13" fill="#475569">• 输入：完整 Trace + 评分 Rubric + 复杂推理 Prompt</text>
+    <text x="1125" y="380" font-size="13" fill="#475569">• 逻辑：自由文本 CoT 逻辑推演，多步权衡后给出裁决</text>
+    <text x="1125" y="405" font-size="13" fill="#475569">• 输出：自然语言评审意见与结构化评分 (二次抽取)</text>
+    <text x="1125" y="430" font-size="13" fill="#475569">• 性能：2.16s ~ 2.83s 耗时，单次成本达 $0.03~$0.05</text>
+
+    <!-- 指标与适用卡片 -->
+    <rect x="1105" y="465" width="390" height="165" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1125" y="495" font-size="15" font-weight="700" fill="#1e293b">工程特性与局限性</text>
+    <text x="1125" y="525" font-size="13" fill="#475569">• 核心优势：能够处理复杂主观标准，生成根因诊断</text>
+    <text x="1125" y="550" font-size="13" fill="#ea580c">• 关键死穴：单次成本高昂、非确定性波动、响应慢</text>
+    <text x="1125" y="575" font-size="13" fill="#475569">• 适用场景：复杂长文逻辑评审、边界模糊案例仲裁</text>
+    <text x="1125" y="600" font-size="13" fill="#475569">• 流水线角色：作为异步抽样分析与根因诊断复核层</text>
+
+    <!-- 状态指示 -->
+    <rect x="1105" y="650" width="390" height="50" rx="8" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="1300" y="681" text-anchor="middle" font-size="13" font-weight="600" fill="#166534">异步抽样归因：1% 疑难流量深度诊断与模型对齐</text>
+  </g>
+
+  <!-- 连接线：第一层 -> 第二层 (独立 <line>，防断裂) -->
+  <line x1="520" y1="490" x2="572" y2="490" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+  <rect x="526" y="465" width="48" height="20" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="550" y="479" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">流转</text>
+
+  <!-- 连接线：第二层 -> 第三层 (独立 <line>，防断裂) -->
+  <line x1="1020" y1="490" x2="1072" y2="490" stroke="#8b5cf6" stroke-width="2.5" marker-end="url(#arr-violet)"/>
+  <rect x="1026" y="465" width="48" height="20" rx="4" fill="#f5f3ff" stroke="#c4b5fd"/>
+  <text x="1050" y="479" text-anchor="middle" font-size="10" font-weight="700" fill="#6d28d9">抽样</text>
+</svg>
