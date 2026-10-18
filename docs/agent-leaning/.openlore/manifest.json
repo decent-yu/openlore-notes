@@ -1,103 +1,48 @@
 {
   "group_id": "group_65023894",
   "article_locations": {
-    "art_5156d2b5-fb0": {
-      "collection_id": "col_9047ad55-a45",
-      "directory": "20261017-01/01-whats-new-in-managed-deep-agents-schedul",
-      "slug": "whats-new-in-managed-deep-agents-schedul"
-    },
-    "art_1851689c-c09": {
-      "collection_id": "col_9047ad55-a45",
-      "directory": "20261017-01/02-the-reliability-layer-for-healthcare-ai-",
-      "slug": "the-reliability-layer-for-healthcare-ai-"
-    },
-    "art_8806577e-57f": {
-      "collection_id": "col_9047ad55-a45",
-      "directory": "20261017-01/03-jev-is-now-available-in-langsmith-evals",
-      "slug": "jev-is-now-available-in-langsmith-evals"
+    "art_43ea7c34-880": {
+      "collection_id": "col_80317c10-e49",
+      "directory": "20261018-01/01-managed-deep-agents-delivers-a-better-us",
+      "slug": "managed-deep-agents-delivers-a-better-us"
     }
   },
   "collection_locations": {
-    "col_9047ad55-a45": {
-      "directory": "docs/agent-leaning/20261017-01"
+    "col_80317c10-e49": {
+      "directory": "docs/agent-leaning/20261018-01"
     }
   },
   "delivered_batches": [
-    "batch_1792195565064"
+    "batch_1792283523360"
   ],
   "managed_files": {
-    "docs/agent-leaning/20261017-01/01-whats-new-in-managed-deep-agents-schedul/article.md": {
-      "sha256": "ac6fa763e4407109998cfecc2e0b2bac9e6bce4622a97b0e1adfacdda30a51cb",
+    "docs/agent-leaning/20261018-01/01-managed-deep-agents-delivers-a-better-us/article.md": {
+      "sha256": "59fc07600d6d59951022f8f0a8748924ef3cc48ca60ef2f2bf687d31c1d02318",
       "media_type": "text/markdown",
-      "size": 8422
+      "size": 13972
     },
-    "docs/agent-leaning/20261017-01/01-whats-new-in-managed-deep-agents-schedul/research.md": {
-      "sha256": "a482b2dad9f738e96df71087ee3d561cf5110d58eb6df51ed0f8bacdc9c20964",
+    "docs/agent-leaning/20261018-01/01-managed-deep-agents-delivers-a-better-us/research.md": {
+      "sha256": "b8ce050c299cd90b2bd1b6ba6aedc6c4c33586afad904217a0e6b209152ddd04",
       "media_type": "text/markdown",
-      "size": 12092
+      "size": 15421
     },
-    "docs/agent-leaning/20261017-01/01-whats-new-in-managed-deep-agents-schedul/assets/diagram-55f10e8949b4.png": {
-      "sha256": "55f10e8949b402576c7c40c1f08a91f3c37f4b175d1374f7defa29ee3e28a9cd",
+    "docs/agent-leaning/20261018-01/01-managed-deep-agents-delivers-a-better-us/assets/diagram-93e3474b71a0.png": {
+      "sha256": "93e3474b71a0c0936ed5a8474b3a9f54e8048ec1c374263560872891c7e4f967",
       "media_type": "image/png",
-      "size": 202880
+      "size": 201329
     },
-    "docs/agent-leaning/20261017-01/02-the-reliability-layer-for-healthcare-ai-/article.md": {
-      "sha256": "5b6257d9610dcb5ccb6fc275eced3daa95cb271ce01e25b58684bff8716bea36",
-      "media_type": "text/markdown",
-      "size": 14902
-    },
-    "docs/agent-leaning/20261017-01/02-the-reliability-layer-for-healthcare-ai-/research.md": {
-      "sha256": "69135ba9204f1ca94e28d02f07e880d03a99f7c536b8e0913c4edc7c153a76e8",
-      "media_type": "text/markdown",
-      "size": 13238
-    },
-    "docs/agent-leaning/20261017-01/02-the-reliability-layer-for-healthcare-ai-/assets/diagram-634333886d4d.png": {
-      "sha256": "634333886d4d897503179f322f1caa2e90e6e6fde041029db95cf254b87d796b",
+    "docs/agent-leaning/20261018-01/01-managed-deep-agents-delivers-a-better-us/assets/diagram-5349bf741191.png": {
+      "sha256": "5349bf741191639b751cf30044f9e7677650b49f89a0cd045199de68ccde94b4",
       "media_type": "image/png",
-      "size": 237869
+      "size": 240939
     },
-    "docs/agent-leaning/20261017-01/02-the-reliability-layer-for-healthcare-ai-/assets/diagram-eff327c1d10d.png": {
-      "sha256": "eff327c1d10dd7918a1ed7422280f01dded0f177f2357ed598dcb66d398c6ea6",
-      "media_type": "image/png",
-      "size": 199024
-    },
-    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/article.md": {
-      "sha256": "afd8b7bad53966c046c1d12094005cfc45179621c83afb3e29c4a1e0e80bfc90",
+    "docs/agent-leaning/20261018-01/README.md": {
+      "sha256": "ded82cdf0995b1b0fd980c2a0fd90bd447c4bb72a39de1db40abd48a70a76a66",
       "media_type": "text/markdown",
-      "size": 12147
-    },
-    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/research.md": {
-      "sha256": "db074c59865b60a7618606540e33915dbb398f67faceb90896c61b50205d782c",
-      "media_type": "text/markdown",
-      "size": 11945
-    },
-    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/assets/diagram-5d2ccbc37722.png": {
-      "sha256": "5d2ccbc377221ab0081d4543779bdb4ced90b2d59548b66f7226d9aededfa976",
-      "media_type": "image/png",
-      "size": 194121
-    },
-    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/assets/diagram-9783cf7dd6f9.png": {
-      "sha256": "9783cf7dd6f9c5f7690ccfc83aaff09beb210ba0ba6e25f06db5e95610dd09f8",
-      "media_type": "image/png",
-      "size": 117634
-    },
-    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/assets/diagram-790d96f4c3bc.png": {
-      "sha256": "790d96f4c3bc122fe74446bc6618e195ae9f44d89a45d28ed61e26e9600804a1",
-      "media_type": "image/png",
-      "size": 45889
-    },
-    "docs/agent-leaning/20261017-01/03-jev-is-now-available-in-langsmith-evals/assets/eval_architecture.svg": {
-      "sha256": "8b7eb94ac195a1f2c8d5afdf761b58402db8f30b95a340b0b1fc7901a9e493c5",
-      "media_type": "image/svg+xml",
-      "size": 10717
-    },
-    "docs/agent-leaning/20261017-01/README.md": {
-      "sha256": "929aeac0d9cf6c79f6aee0236498cae06c2da4a1854c3da7b26bd60657b46121",
-      "media_type": "text/markdown",
-      "size": 707
+      "size": 323
     },
     "docs/agent-leaning/README.md": {
-      "sha256": "1fe98351e361e18f65db5f3b4f094cbc9c004779ae9eba06c0a28e7e42797051",
+      "sha256": "f0293f82ccef6aac343122212447105a2c0d44268783bc843e58a13597b17913",
       "media_type": "text/markdown",
       "size": 150
     }
