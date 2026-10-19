@@ -1,2 +1,3 @@
 # openlore-knowledge-vault
-OpenLore Automated Knowledge Vault Test
+
+OpenLore Automated Knowledge Vault
