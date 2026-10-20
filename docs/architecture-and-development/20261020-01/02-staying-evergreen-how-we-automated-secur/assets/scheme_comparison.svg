@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+<title id="t">选型先看谁作决定，再看怎样收敛</title><desc id="d">比较 Evergreen、定时脚本、safe-settings、Terraform 的决策、收敛、一致性和团队成本。</desc><defs>
+<linearGradient id="bg-canvas" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#f1f5f9"/></linearGradient>
+<filter id="card-shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.04"/></filter>
+<marker id="arrow-blue" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#3b82f6"/></marker>
+<marker id="arrow-violet" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#8b5cf6"/></marker>
+<marker id="arrow-green" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#16a34a"/></marker>
+<marker id="arrow-orange" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#ea580c"/></marker>
+<marker id="arrow-red" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#dc2626"/></marker>
+<marker id="arrow-slate" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker>
+</defs><rect width="1600" height="900" fill="url(#bg-canvas)"/><g font-family="Inter, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+<text x="800" y="83" font-size="34" fill="#0f172a" font-weight="800" text-anchor="middle">选型先看谁作决定，再看怎样收敛</text>
+<text x="800" y="118" font-size="16" fill="#64748b" font-weight="400" text-anchor="middle">没有同口径吞吐 Benchmark；四条路线均受 GitHub API 约束</text>
+<rect x="80" y="170" width="345" height="580" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+<rect x="80" y="170" width="345" height="580" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#card-shadow)"/>
+<text x="104" y="215" font-size="25" fill="#3b82f6" font-weight="700" text-anchor="start">Evergreen 模式</text>
+<rect x="100" y="243" width="305" height="108" rx="10" fill="#eff6ff" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="122" y="272" font-size="18" fill="#3b82f6" font-weight="700" text-anchor="start">决策载体</text>
+<text x="122" y="301" font-size="17" fill="#475569" font-weight="400" text-anchor="start">负责人在本仓库续期</text>
+<text x="122" y="327" font-size="17" fill="#475569" font-weight="400" text-anchor="start">Issue + 期限 + 快照</text>
+<rect x="100" y="364" width="305" height="108" rx="10" fill="#eff6ff" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="122" y="393" font-size="18" fill="#3b82f6" font-weight="700" text-anchor="start">吞吐与延迟</text>
+<text x="122" y="422" font-size="17" fill="#475569" font-weight="400" text-anchor="start">内容写入受二级限流</text>
+<text x="122" y="448" font-size="17" fill="#475569" font-weight="400" text-anchor="start">宽限期 + 执行排队</text>
+<rect x="100" y="485" width="305" height="108" rx="10" fill="#eff6ff" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="122" y="514" font-size="18" fill="#3b82f6" font-weight="700" text-anchor="start">一致性与恢复</text>
+<text x="122" y="543" font-size="17" fill="#475569" font-weight="400" text-anchor="start">部分失败不宣告完成</text>
+<text x="122" y="569" font-size="17" fill="#475569" font-weight="400" text-anchor="start">需事件与状态对账</text>
+<rect x="100" y="606" width="305" height="108" rx="10" fill="#eff6ff" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="122" y="635" font-size="18" fill="#3b82f6" font-weight="700" text-anchor="start">团队与适用</text>
+<text x="122" y="664" font-size="17" fill="#475569" font-weight="400" text-anchor="start">维护 App 与审批边界</text>
+<text x="122" y="690" font-size="17" fill="#475569" font-weight="400" text-anchor="start">适合临时外部访问</text>
+<rect x="445" y="170" width="345" height="580" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+<rect x="445" y="170" width="345" height="580" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#card-shadow)"/>
+<text x="469" y="215" font-size="25" fill="#64748b" font-weight="700" text-anchor="start">定时 Actions</text>
+<rect x="465" y="243" width="305" height="108" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="487" y="272" font-size="18" fill="#64748b" font-weight="700" text-anchor="start">决策载体</text>
+<text x="487" y="301" font-size="17" fill="#475569" font-weight="400" text-anchor="start">报告或配置清单</text>
+<text x="487" y="327" font-size="17" fill="#475569" font-weight="400" text-anchor="start">审批流程自行定义</text>
+<rect x="465" y="364" width="305" height="108" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="487" y="393" font-size="18" fill="#64748b" font-weight="700" text-anchor="start">吞吐与延迟</text>
+<text x="487" y="422" font-size="17" fill="#475569" font-weight="400" text-anchor="start">受 API 与任务时长限制</text>
+<text x="487" y="448" font-size="17" fill="#475569" font-weight="400" text-anchor="start">扫描间隔决定等待</text>
+<rect x="465" y="485" width="305" height="108" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="487" y="514" font-size="18" fill="#64748b" font-weight="700" text-anchor="start">一致性与恢复</text>
+<text x="487" y="543" font-size="17" fill="#475569" font-weight="400" text-anchor="start">检查点 + 幂等重跑</text>
+<text x="487" y="569" font-size="17" fill="#475569" font-weight="400" text-anchor="start">不能假定 cron 必达</text>
+<rect x="465" y="606" width="305" height="108" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="487" y="635" font-size="18" fill="#64748b" font-weight="700" text-anchor="start">团队与适用</text>
+<text x="487" y="664" font-size="17" fill="#475569" font-weight="400" text-anchor="start">无需常驻入口</text>
+<text x="487" y="690" font-size="17" fill="#475569" font-weight="400" text-anchor="start">适合低频小规模</text>
+<rect x="810" y="170" width="345" height="580" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+<rect x="810" y="170" width="345" height="580" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#card-shadow)"/>
+<text x="834" y="215" font-size="25" fill="#8b5cf6" font-weight="700" text-anchor="start">safe-settings</text>
+<rect x="830" y="243" width="305" height="108" rx="10" fill="#f5f3ff" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="852" y="272" font-size="18" fill="#8b5cf6" font-weight="700" text-anchor="start">决策载体</text>
+<text x="852" y="301" font-size="17" fill="#475569" font-weight="400" text-anchor="start">中央 YAML 与 PR</text>
+<text x="852" y="327" font-size="17" fill="#475569" font-weight="400" text-anchor="start">组织层级配置继承</text>
+<rect x="830" y="364" width="305" height="108" rx="10" fill="#f5f3ff" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="852" y="393" font-size="18" fill="#8b5cf6" font-weight="700" text-anchor="start">吞吐与延迟</text>
+<text x="852" y="422" font-size="17" fill="#475569" font-weight="400" text-anchor="start">按差异减少写请求</text>
+<text x="852" y="448" font-size="17" fill="#475569" font-weight="400" text-anchor="start">事件 / 定时同步</text>
+<rect x="830" y="485" width="305" height="108" rx="10" fill="#f5f3ff" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="852" y="514" font-size="18" fill="#8b5cf6" font-weight="700" text-anchor="start">一致性与恢复</text>
+<text x="852" y="543" font-size="17" fill="#475569" font-weight="400" text-anchor="start">期望配置驱动校正</text>
+<text x="852" y="569" font-size="17" fill="#475569" font-weight="400" text-anchor="start">additive 模式不删除</text>
+<rect x="830" y="606" width="305" height="108" rx="10" fill="#f5f3ff" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="852" y="635" font-size="18" fill="#8b5cf6" font-weight="700" text-anchor="start">团队与适用</text>
+<text x="852" y="664" font-size="17" fill="#475569" font-weight="400" text-anchor="start">管理插件与覆盖规则</text>
+<text x="852" y="690" font-size="17" fill="#475569" font-weight="400" text-anchor="start">适合稳定组织策略</text>
+<rect x="1175" y="170" width="345" height="580" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+<rect x="1175" y="170" width="345" height="580" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#card-shadow)"/>
+<text x="1199" y="215" font-size="25" fill="#16a34a" font-weight="700" text-anchor="start">Terraform</text>
+<rect x="1195" y="243" width="305" height="108" rx="10" fill="#f0fdf4" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="1217" y="272" font-size="18" fill="#16a34a" font-weight="700" text-anchor="start">决策载体</text>
+<text x="1217" y="301" font-size="17" fill="#475569" font-weight="400" text-anchor="start">HCL + plan + PR</text>
+<text x="1217" y="327" font-size="17" fill="#475569" font-weight="400" text-anchor="start">权限纳入 IaC 审批</text>
+<rect x="1195" y="364" width="305" height="108" rx="10" fill="#f0fdf4" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="1217" y="393" font-size="18" fill="#16a34a" font-weight="700" text-anchor="start">吞吐与延迟</text>
+<text x="1217" y="422" font-size="17" fill="#475569" font-weight="400" text-anchor="start">串行配置影响吞吐</text>
+<text x="1217" y="448" font-size="17" fill="#475569" font-weight="400" text-anchor="start">等待下一次 apply</text>
+<rect x="1195" y="485" width="305" height="108" rx="10" fill="#f0fdf4" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="1217" y="514" font-size="18" fill="#16a34a" font-weight="700" text-anchor="start">一致性与恢复</text>
+<text x="1217" y="543" font-size="17" fill="#475569" font-weight="400" text-anchor="start">state + refresh + apply</text>
+<text x="1217" y="569" font-size="17" fill="#475569" font-weight="400" text-anchor="start">远程写入没有事务</text>
+<rect x="1195" y="606" width="305" height="108" rx="10" fill="#f0fdf4" stroke="#e2e8f0" stroke-width="1.5"/>
+<text x="1217" y="635" font-size="18" fill="#16a34a" font-weight="700" text-anchor="start">团队与适用</text>
+<text x="1217" y="664" font-size="17" fill="#475569" font-weight="400" text-anchor="start">管理 backend 与导入</text>
+<text x="1217" y="690" font-size="17" fill="#475569" font-weight="400" text-anchor="start">适合已有 IaC 团队</text>
+<rect x="80" y="785" width="1440" height="55" rx="12" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+<text x="800" y="820" font-size="21" fill="#9a3412" font-weight="600" text-anchor="middle">同一权限只设一个写入者：声明式控制器可能把另一流程刚撤销的权限重新加回。</text>
+</g></svg>

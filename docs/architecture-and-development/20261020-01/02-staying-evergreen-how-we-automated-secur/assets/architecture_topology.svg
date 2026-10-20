@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+<title id="t">把复核交互、流程记录与执行结果分开</title><desc id="d">从季度调度、状态文件到 Go 服务、Issue 审批与权限操作。橙色虚线模块为建议，非已验证实现。</desc><defs>
+<linearGradient id="bg-canvas" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#f1f5f9"/></linearGradient>
+<filter id="card-shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.04"/></filter>
+<marker id="arrow-blue" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#3b82f6"/></marker>
+<marker id="arrow-violet" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#8b5cf6"/></marker>
+<marker id="arrow-green" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#16a34a"/></marker>
+<marker id="arrow-orange" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#ea580c"/></marker>
+<marker id="arrow-red" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#dc2626"/></marker>
+<marker id="arrow-slate" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker>
+</defs><rect width="1600" height="900" fill="url(#bg-canvas)"/><g font-family="Inter, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+<text x="800" y="83" font-size="34" fill="#0f172a" font-weight="800" text-anchor="middle">把复核交互、流程记录与执行结果分开</text>
+<text x="800" y="118" font-size="16" fill="#64748b" font-weight="400" text-anchor="middle">原文架构 + 本文可靠性建议；流程完成必须有 API 结果支撑</text>
+<rect x="80" y="175" width="420" height="550" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+<rect x="80" y="175" width="420" height="550" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#card-shadow)"/>
+<text x="110" y="218" font-size="24" fill="#3b82f6" font-weight="700" text-anchor="start">控制仓库</text>
+<text x="110" y="246" font-size="17" fill="#64748b" font-weight="400" text-anchor="start">时钟与流程记录</text>
+<rect x="590" y="175" width="420" height="550" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+<rect x="590" y="175" width="420" height="550" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#card-shadow)"/>
+<text x="620" y="218" font-size="24" fill="#8b5cf6" font-weight="700" text-anchor="start">Go App 服务</text>
+<text x="620" y="246" font-size="17" fill="#64748b" font-weight="400" text-anchor="start">认证与任务执行</text>
+<rect x="1100" y="175" width="420" height="550" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+<rect x="1100" y="175" width="420" height="550" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#card-shadow)"/>
+<text x="1130" y="218" font-size="24" fill="#16a34a" font-weight="700" text-anchor="start">业务仓库</text>
+<text x="1130" y="246" font-size="17" fill="#64748b" font-weight="400" text-anchor="start">负责人交互与真实权限</text>
+<rect x="110" y="275" width="360" height="130" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="134" y="309" font-size="21" fill="#3b82f6" font-weight="700" text-anchor="start">Actions 季度触发</text>
+<text x="134" y="341" font-size="18" fill="#475569" font-weight="400" text-anchor="start">1 / 8 日：打开治理任务</text>
+<text x="134" y="368" font-size="18" fill="#475569" font-weight="400" text-anchor="start">16 / 23 日：清理阶段</text>
+<rect x="110" y="455" width="360" height="140" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="134" y="489" font-size="21" fill="#3b82f6" font-weight="700" text-anchor="start">逐仓库 JSON</text>
+<text x="134" y="521" font-size="18" fill="#475569" font-weight="400" text-anchor="start">快照 · 期限 · 决策人</text>
+<text x="134" y="548" font-size="18" fill="#475569" font-weight="400" text-anchor="start">Git 历史记录流程变化</text>
+<text x="110" y="643" font-size="19" fill="#0f172a" font-weight="600" text-anchor="start">自定义属性指定负责人</text>
+<text x="110" y="677" font-size="18" fill="#475569" font-weight="400" text-anchor="start">缺失时按近期作者回退</text>
+<rect x="620" y="275" width="360" height="130" rx="12" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="644" y="309" font-size="21" fill="#8b5cf6" font-weight="700" text-anchor="start">Webhook 入口</text>
+<text x="644" y="341" font-size="18" fill="#475569" font-weight="400" text-anchor="start">dispatch / issues.closed</text>
+<text x="644" y="368" font-size="18" fill="#475569" font-weight="400" text-anchor="start">安装范围与授权者校验</text>
+<rect x="620" y="455" width="360" height="140" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="644" y="489" font-size="21" fill="#ea580c" font-weight="700" text-anchor="start">持久任务与按仓库串行</text>
+<text x="644" y="521" font-size="18" fill="#475569" font-weight="400" text-anchor="start">建议：幂等键与逐项回读</text>
+<text x="644" y="548" font-size="18" fill="#475569" font-weight="400" text-anchor="start">建议：漏事件对账与检查点</text>
+<text x="620" y="643" font-size="18" fill="#0f172a" font-weight="600" text-anchor="start">原文：部分失败保持待处理</text>
+<text x="620" y="677" font-size="18" fill="#475569" font-weight="400" text-anchor="start">建议：单写者或版本冲突重算</text>
+<rect x="1130" y="275" width="360" height="130" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1154" y="309" font-size="21" fill="#3b82f6" font-weight="700" text-anchor="start">Issue 审批界面</text>
+<text x="1154" y="341" font-size="18" fill="#475569" font-weight="400" text-anchor="start">授权者勾选保留者并关闭</text>
+<text x="1154" y="368" font-size="18" fill="#475569" font-weight="400" text-anchor="start">正文绑定快照与复核周期</text>
+<rect x="1130" y="455" width="360" height="140" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+<text x="1154" y="489" font-size="21" fill="#16a34a" font-weight="700" text-anchor="start">GitHub API 执行</text>
+<text x="1154" y="521" font-size="18" fill="#475569" font-weight="400" text-anchor="start">移除协作者 · 保存回执</text>
+<text x="1154" y="548" font-size="18" fill="#475569" font-weight="400" text-anchor="start">权限确认后才能进入归档</text>
+<text x="1130" y="643" font-size="20" fill="#0f172a" font-weight="600" text-anchor="start">Issue ≠ 权限数据库</text>
+<text x="1130" y="677" font-size="18" fill="#475569" font-weight="400" text-anchor="start">归档前完成回执与状态保存</text>
+<line x1="503" y1="338" x2="616" y2="338" stroke="#3b82f6" stroke-width="2.5"/>
+<polygon points="616,338 607.00,333.50 607.00,342.50" fill="#3b82f6"/>
+<text x="559" y="316" font-size="16" fill="#64748b" font-weight="400" text-anchor="middle">触发</text>
+<line x1="983" y1="525" x2="1126" y2="525" stroke="#8b5cf6" stroke-width="2.5"/>
+<polygon points="1126,525 1117.00,520.50 1117.00,529.50" fill="#8b5cf6"/>
+<text x="1054" y="505" font-size="16" fill="#64748b" font-weight="400" text-anchor="middle">执行</text>
+<line x1="800" y1="408" x2="800" y2="451" stroke="#8b5cf6" stroke-width="2.5"/>
+<polygon points="800,451 804.50,442.00 795.50,442.00" fill="#8b5cf6"/>
+<path d="M1310 408 V430 H1006 V436 H800 V451" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="6 6"/>
+<polygon points="800.0,451.0 804.50,442.00 795.50,442.00" fill="#3b82f6"/>
+<text x="1120" y="427" font-size="15" fill="#1d4ed8" font-weight="400" text-anchor="middle">审批事件</text>
+<path d="M620 565 H540 V570 H474" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-dasharray="6 6"/>
+<polygon points="474.0,570.0 483.00,574.50 483.00,565.50" fill="#ea580c"/>
+<text x="548" y="608" font-size="15" fill="#ea580c" font-weight="400" text-anchor="middle">保存结果</text>
+<rect x="80" y="765" width="1440" height="65" rx="12" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+<text x="110" y="805" font-size="22" fill="#9a3412" font-weight="600" text-anchor="start">可靠性边界：不能用“收到事件”替代持久任务，也不能用“写入 Git”替代远程撤权成功。</text>
+</g></svg>

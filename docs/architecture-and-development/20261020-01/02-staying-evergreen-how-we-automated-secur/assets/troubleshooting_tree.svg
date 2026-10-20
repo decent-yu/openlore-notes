@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="t d">
+<title id="t">逾期未收敛，先查执行条件再查 API</title><desc id="d">决策树依次检查期限审批、是否归档、限流权限和状态漂移。</desc><defs>
+<linearGradient id="bg-canvas" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#f1f5f9"/></linearGradient>
+<filter id="card-shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.04"/></filter>
+<marker id="arrow-blue" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#3b82f6"/></marker>
+<marker id="arrow-violet" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#8b5cf6"/></marker>
+<marker id="arrow-green" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#16a34a"/></marker>
+<marker id="arrow-orange" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#ea580c"/></marker>
+<marker id="arrow-red" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#dc2626"/></marker>
+<marker id="arrow-slate" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker>
+</defs><rect width="1600" height="900" fill="url(#bg-canvas)"/><g font-family="Inter, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+<text x="800" y="83" font-size="34" fill="#0f172a" font-weight="800" text-anchor="middle">逾期未收敛，先查执行条件再查 API</text>
+<text x="800" y="118" font-size="16" fill="#64748b" font-weight="400" text-anchor="middle">排障卡：所有重试均保存检查点；永久异常与策略冲突转人工</text>
+<rect x="80" y="180" width="1440" height="645" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+<rect x="80" y="180" width="1440" height="645" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#card-shadow)"/>
+<rect x="115" y="220" width="630" height="105" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="139" y="254" font-size="21" fill="#3b82f6" font-weight="700" text-anchor="start">期限与审批可信？</text>
+<text x="139" y="286" font-size="18" fill="#475569" font-weight="400" text-anchor="start">回读 Issue、授权者、快照与期限</text>
+<rect x="920" y="220" width="565" height="105" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+<text x="944" y="254" font-size="21" fill="#ea580c" font-weight="700" text-anchor="start">否：暂停写入并升级</text>
+<text x="944" y="286" font-size="18" fill="#475569" font-weight="400" text-anchor="start">调查漏事件、正文篡改与时钟</text>
+<line x1="749" y1="272" x2="916" y2="272" stroke="#ea580c" stroke-width="2.5"/>
+<polygon points="916,272 907.00,267.50 907.00,276.50" fill="#ea580c"/>
+<text x="830" y="254" font-size="16" fill="#ea580c" font-weight="400" text-anchor="middle">分支处置</text>
+<line x1="430" y1="329" x2="430" y2="356" stroke="#8b5cf6" stroke-width="2.5"/>
+<polygon points="430,356 434.50,347.00 425.50,347.00" fill="#8b5cf6"/>
+<text x="465" y="348" font-size="15" fill="#64748b" font-weight="400" text-anchor="start">继续检查</text>
+<rect x="115" y="360" width="630" height="105" rx="12" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="139" y="394" font-size="21" fill="#8b5cf6" font-weight="700" text-anchor="start">仓库已归档？</text>
+<text x="139" y="426" font-size="18" fill="#475569" font-weight="400" text-anchor="start">检查 archived 与待撤权限是否冲突</text>
+<rect x="920" y="360" width="565" height="105" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+<text x="944" y="394" font-size="21" fill="#ea580c" font-weight="700" text-anchor="start">是：进入受控恢复流程</text>
+<text x="944" y="426" font-size="18" fill="#475569" font-weight="400" text-anchor="start">解除归档 → 清理 → 再归档</text>
+<line x1="749" y1="412" x2="916" y2="412" stroke="#ea580c" stroke-width="2.5"/>
+<polygon points="916,412 907.00,407.50 907.00,416.50" fill="#ea580c"/>
+<text x="830" y="394" font-size="16" fill="#ea580c" font-weight="400" text-anchor="middle">分支处置</text>
+<line x1="430" y1="469" x2="430" y2="496" stroke="#8b5cf6" stroke-width="2.5"/>
+<polygon points="430,496 434.50,487.00 425.50,487.00" fill="#8b5cf6"/>
+<text x="465" y="488" font-size="15" fill="#64748b" font-weight="400" text-anchor="start">继续检查</text>
+<rect x="115" y="500" width="630" height="105" rx="12" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="139" y="534" font-size="21" fill="#8b5cf6" font-weight="700" text-anchor="start">API 暂态错误？</text>
+<text x="139" y="566" font-size="18" fill="#475569" font-weight="400" text-anchor="start">查看 429 / 403、Retry-After 与 5xx</text>
+<rect x="920" y="500" width="565" height="105" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+<text x="944" y="534" font-size="21" fill="#ea580c" font-weight="700" text-anchor="start">是：退避并续跑检查点</text>
+<text x="944" y="566" font-size="18" fill="#475569" font-weight="400" text-anchor="start">区分主限额、二级限流和权限</text>
+<line x1="749" y1="552" x2="916" y2="552" stroke="#ea580c" stroke-width="2.5"/>
+<polygon points="916,552 907.00,547.50 907.00,556.50" fill="#ea580c"/>
+<text x="830" y="534" font-size="16" fill="#ea580c" font-weight="400" text-anchor="middle">分支处置</text>
+<line x1="430" y1="609" x2="430" y2="636" stroke="#8b5cf6" stroke-width="2.5"/>
+<polygon points="430,636 434.50,627.00 425.50,627.00" fill="#8b5cf6"/>
+<text x="465" y="628" font-size="15" fill="#64748b" font-weight="400" text-anchor="start">继续检查</text>
+<rect x="115" y="640" width="630" height="105" rx="12" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="139" y="674" font-size="21" fill="#8b5cf6" font-weight="700" text-anchor="start">回读仍有差异？</text>
+<text x="139" y="706" font-size="18" fill="#475569" font-weight="400" text-anchor="start">对比逐用户结果、state 与真实权限</text>
+<rect x="920" y="640" width="565" height="105" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="944" y="674" font-size="21" fill="#dc2626" font-weight="700" text-anchor="start">是：检查另一权限写入者</text>
+<text x="944" y="706" font-size="18" fill="#475569" font-weight="400" text-anchor="start">排查 IaC 回填、邀请与版本冲突</text>
+<line x1="749" y1="692" x2="916" y2="692" stroke="#ea580c" stroke-width="2.5"/>
+<polygon points="916,692 907.00,687.50 907.00,696.50" fill="#ea580c"/>
+<text x="830" y="674" font-size="16" fill="#ea580c" font-weight="400" text-anchor="middle">分支处置</text>
+<text x="800" y="790" font-size="19" fill="#0f172a" font-weight="600" text-anchor="middle">非限流 403 优先查 App 权限与安装范围；404 先验证仓库可见性，不能一概当作移除成功。</text>
+</g></svg>
