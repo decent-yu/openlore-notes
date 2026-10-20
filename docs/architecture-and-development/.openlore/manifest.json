@@ -3,103 +3,148 @@
   "article_locations": {
     "art_0dc50241-fe1e-446f-9269-e12f7306f5fa": {
       "collection_id": "col_16aacdb9-7ad",
-      "directory": "20261020-01/01-from-2500-requests-to-24-rebuilding-star",
-      "slug": "from-2500-requests-to-24-rebuilding-star"
+      "directory": "articles/20261020-star-history-request-optimization",
+      "slug": "star-history-request-optimization",
+      "title": "From 2,500 requests to 24: Rebuilding star history without the stargazers",
+      "original_url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers",
+      "tags": [
+        "API设计",
+        "数据库查询优化",
+        "时间序列聚合",
+        "分页策略",
+        "隐私保护",
+        "缓存",
+        "性能分析"
+      ],
+      "collected_at": "2026-10-20T06:55:03.158Z",
+      "updated_at": "2026-10-20T06:55:03.158Z",
+      "has_research": true
     },
     "art_e8289f12-1250-4958-97c4-1acf7ae8eb3e": {
       "collection_id": "col_16aacdb9-7ad",
-      "directory": "20261020-01/02-staying-evergreen-how-we-automated-secur",
-      "slug": "staying-evergreen-how-we-automated-secur"
+      "directory": "articles/20261020-secure-access-and-repo-hygiene",
+      "slug": "secure-access-and-repo-hygiene",
+      "title": "Staying Evergreen: How we automated secure access and repo hygiene in a shared org",
+      "original_url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org",
+      "tags": [
+        "GitHub App",
+        "GitHub Actions",
+        "访问权限治理",
+        "仓库生命周期管理",
+        "IssueOps",
+        "Webhook",
+        "审计与可观测性",
+        "API 限流"
+      ],
+      "collected_at": "2026-10-20T06:55:03.159Z",
+      "updated_at": "2026-10-20T06:55:03.159Z",
+      "has_research": true
     }
   },
   "collection_locations": {
     "col_16aacdb9-7ad": {
-      "directory": "docs/architecture-and-development/20261020-01"
+      "path": "docs/architecture-and-development/batches/20261020-01.md",
+      "date_sequence": "20261020-01",
+      "created_at": "2026-10-20T06:55:03.157Z",
+      "article_ids": [
+        "art_0dc50241-fe1e-446f-9269-e12f7306f5fa",
+        "art_e8289f12-1250-4958-97c4-1acf7ae8eb3e"
+      ]
     }
   },
   "delivered_batches": [
     "batch_1792479137775"
   ],
   "managed_files": {
-    "docs/architecture-and-development/20261020-01/01-from-2500-requests-to-24-rebuilding-star/article.md": {
-      "sha256": "5476c11dbb54f74b1ff54d97f2fd94eb0b5c3b9c92c35ad4be88d5e0de4921cf",
+    "docs/architecture-and-development/README.md": {
+      "sha256": "43ae2fe0a244f2abb37f3fa702e5d44826607dee2d46f011717ce0db5a78922d",
       "media_type": "text/markdown",
-      "size": 12330
+      "size": 1375
     },
-    "docs/architecture-and-development/20261020-01/01-from-2500-requests-to-24-rebuilding-star/article-zh-CN.md": {
-      "sha256": "d9972ce3c9ed8fb33a33d05c883ffe1410d0d7bc774113a10d88e0e4ab8337e7",
+    "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
+      "sha256": "aade97fead6328d768114df6e3f3ebc116a7affd6b360bbeeda8ca31b361c79f",
       "media_type": "text/markdown",
-      "size": 12042
+      "size": 615
     },
-    "docs/architecture-and-development/20261020-01/01-from-2500-requests-to-24-rebuilding-star/research.md": {
-      "sha256": "4718cc9976e39ac7487e6fea5e4d4690eef718fc9e7b08577bfff162f31e2c4f",
-      "media_type": "text/markdown",
-      "size": 17624
-    },
-    "docs/architecture-and-development/20261020-01/01-from-2500-requests-to-24-rebuilding-star/assets/architecture_topology.svg": {
-      "sha256": "e89364cf1bcff741ca44ff7da0545227b3bacc3ab09dc56b697d911b5db4cb8c",
-      "media_type": "image/svg+xml",
-      "size": 7103
-    },
-    "docs/architecture-and-development/20261020-01/01-from-2500-requests-to-24-rebuilding-star/assets/scheme_comparison.svg": {
-      "sha256": "7e60c9dd7c81f6e8ccd9069cc04c054cf426952a34974680daac0761ad502c2f",
-      "media_type": "image/svg+xml",
-      "size": 9144
-    },
-    "docs/architecture-and-development/20261020-01/01-from-2500-requests-to-24-rebuilding-star/assets/state_machine.svg": {
-      "sha256": "16878e3eabada3a79d71c41cd18fcf9298220565ae0f491cef02ec4bd499d83f",
-      "media_type": "image/svg+xml",
-      "size": 6524
-    },
-    "docs/architecture-and-development/20261020-01/01-from-2500-requests-to-24-rebuilding-star/assets/troubleshooting_tree.svg": {
-      "sha256": "90d778a50b42d6a97b69c12fce0c9fb3c2cd2cd091a19c4cfa29186f8effc24a",
-      "media_type": "image/svg+xml",
-      "size": 7064
-    },
-    "docs/architecture-and-development/20261020-01/02-staying-evergreen-how-we-automated-secur/article.md": {
-      "sha256": "91223b94b9c94fb02ec094cc2189e7aa37093fd7312a63faafb384e49c331400",
-      "media_type": "text/markdown",
-      "size": 11891
-    },
-    "docs/architecture-and-development/20261020-01/02-staying-evergreen-how-we-automated-secur/article-zh-CN.md": {
+    "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/article-zh-CN.md": {
       "sha256": "6c1b23db5fd4d35416eb6da3acccb568fc6e6b6c02b7285dd74589517844f0a9",
       "media_type": "text/markdown",
       "size": 12479
     },
-    "docs/architecture-and-development/20261020-01/02-staying-evergreen-how-we-automated-secur/research.md": {
-      "sha256": "5db4f569b7d4bebee2cb4c8ec468c2ef70f00f8dd6a1048556cbfbafee07314b",
+    "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/article.md": {
+      "sha256": "91223b94b9c94fb02ec094cc2189e7aa37093fd7312a63faafb384e49c331400",
       "media_type": "text/markdown",
-      "size": 17604
+      "size": 11891
     },
-    "docs/architecture-and-development/20261020-01/02-staying-evergreen-how-we-automated-secur/assets/architecture_topology.svg": {
+    "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/assets/architecture_topology.svg": {
       "sha256": "f8ff70806d0212843d1bcef80fea5f0dde2c57d5fb8e2b3fbcbe8e15bbdf8d8a",
       "media_type": "image/svg+xml",
       "size": 9053
     },
-    "docs/architecture-and-development/20261020-01/02-staying-evergreen-how-we-automated-secur/assets/scheme_comparison.svg": {
+    "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/assets/scheme_comparison.svg": {
       "sha256": "07b617a14bc4ad1fe9811cbbd9caeae1dd57cb9a61f806c720dd6f7e803938bd",
       "media_type": "image/svg+xml",
       "size": 11455
     },
-    "docs/architecture-and-development/20261020-01/02-staying-evergreen-how-we-automated-secur/assets/state_machine.svg": {
+    "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/assets/state_machine.svg": {
       "sha256": "92c4728d9cda7aab74bfcd1aa36886bdccbd109a868ce0146716ce3970e98087",
       "media_type": "image/svg+xml",
       "size": 10133
     },
-    "docs/architecture-and-development/20261020-01/02-staying-evergreen-how-we-automated-secur/assets/troubleshooting_tree.svg": {
+    "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/assets/troubleshooting_tree.svg": {
       "sha256": "34da5e414dc5b278c2d594059cd23a21f30a9a55ee8748803976fec9a4861bea",
       "media_type": "image/svg+xml",
       "size": 7519
     },
-    "docs/architecture-and-development/20261020-01/README.md": {
-      "sha256": "b4f5cab625f092e21c705d604d65bd4c215179ae305b3f3507b6c1f2fafc1a73",
+    "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/research.md": {
+      "sha256": "5db4f569b7d4bebee2cb4c8ec468c2ef70f00f8dd6a1048556cbfbafee07314b",
       "media_type": "text/markdown",
-      "size": 693
+      "size": 17604
     },
-    "docs/architecture-and-development/README.md": {
-      "sha256": "c151fa5f678cffa2e2cc585b40ca49fc91c486fb5182bad9a1b04899dcac73ba",
+    "docs/architecture-and-development/articles/20261020-star-history-request-optimization/README.md": {
+      "sha256": "084fa9e1488aaa3a68ab5be7c385eaa4834aae2e7d8913edff44475592f3037b",
       "media_type": "text/markdown",
-      "size": 206
+      "size": 579
+    },
+    "docs/architecture-and-development/articles/20261020-star-history-request-optimization/article-zh-CN.md": {
+      "sha256": "d9972ce3c9ed8fb33a33d05c883ffe1410d0d7bc774113a10d88e0e4ab8337e7",
+      "media_type": "text/markdown",
+      "size": 12042
+    },
+    "docs/architecture-and-development/articles/20261020-star-history-request-optimization/article.md": {
+      "sha256": "5476c11dbb54f74b1ff54d97f2fd94eb0b5c3b9c92c35ad4be88d5e0de4921cf",
+      "media_type": "text/markdown",
+      "size": 12330
+    },
+    "docs/architecture-and-development/articles/20261020-star-history-request-optimization/assets/architecture_topology.svg": {
+      "sha256": "e89364cf1bcff741ca44ff7da0545227b3bacc3ab09dc56b697d911b5db4cb8c",
+      "media_type": "image/svg+xml",
+      "size": 7103
+    },
+    "docs/architecture-and-development/articles/20261020-star-history-request-optimization/assets/scheme_comparison.svg": {
+      "sha256": "7e60c9dd7c81f6e8ccd9069cc04c054cf426952a34974680daac0761ad502c2f",
+      "media_type": "image/svg+xml",
+      "size": 9144
+    },
+    "docs/architecture-and-development/articles/20261020-star-history-request-optimization/assets/state_machine.svg": {
+      "sha256": "16878e3eabada3a79d71c41cd18fcf9298220565ae0f491cef02ec4bd499d83f",
+      "media_type": "image/svg+xml",
+      "size": 6524
+    },
+    "docs/architecture-and-development/articles/20261020-star-history-request-optimization/assets/troubleshooting_tree.svg": {
+      "sha256": "90d778a50b42d6a97b69c12fce0c9fb3c2cd2cd091a19c4cfa29186f8effc24a",
+      "media_type": "image/svg+xml",
+      "size": 7064
+    },
+    "docs/architecture-and-development/articles/20261020-star-history-request-optimization/research.md": {
+      "sha256": "4718cc9976e39ac7487e6fea5e4d4690eef718fc9e7b08577bfff162f31e2c4f",
+      "media_type": "text/markdown",
+      "size": 17624
+    },
+    "docs/architecture-and-development/batches/20261020-01.md": {
+      "sha256": "1fd8aeed6b08d3d3498591dc8ba5080414ce14cb968a3c6b2d9f8ecf204a07cd",
+      "media_type": "text/markdown",
+      "size": 591
     }
   }
 }
