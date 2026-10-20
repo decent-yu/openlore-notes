@@ -17,7 +17,7 @@
         "性能分析"
       ],
       "collected_at": "2026-10-20T06:55:03.158Z",
-      "updated_at": "2026-10-20T06:55:03.158Z",
+      "updated_at": "2026-10-20T11:55:42.685Z",
       "has_research": true
     },
     "art_e8289f12-1250-4958-97c4-1acf7ae8eb3e": {
@@ -54,11 +54,12 @@
   },
   "delivered_batches": [
     "batch_1792479137775",
-    "research_res_17acc04a-1f9"
+    "research_res_17acc04a-1f9",
+    "research_res_abc2d9a2-b53"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "25a69ec9d2e6d9625157449b8823dc6bb86691673bc3159528f0f7e919ffd7be",
+      "sha256": "4337bec717b7eb301f18ec5fe401e6604fedd266f3c050f6998ba5f26192668e",
       "media_type": "text/markdown",
       "size": 1759
     },
@@ -103,7 +104,7 @@
       "size": 23461
     },
     "docs/architecture-and-development/articles/20261020-star-history-request-optimization/README.md": {
-      "sha256": "084fa9e1488aaa3a68ab5be7c385eaa4834aae2e7d8913edff44475592f3037b",
+      "sha256": "fbbf712dfa8561f8184d73c6474ed9f371544cbb05d82095dbd2ef5363476889",
       "media_type": "text/markdown",
       "size": 579
     },
@@ -138,9 +139,9 @@
       "size": 7064
     },
     "docs/architecture-and-development/articles/20261020-star-history-request-optimization/research.md": {
-      "sha256": "4718cc9976e39ac7487e6fea5e4d4690eef718fc9e7b08577bfff162f31e2c4f",
+      "sha256": "6fc3b66a7559e2c25fe6ce599ca631a1ca402af6bada6413426f8024ab7e9041",
       "media_type": "text/markdown",
-      "size": 17624
+      "size": 20276
     },
     "docs/architecture-and-development/batches/20261020-01.md": {
       "sha256": "1fd8aeed6b08d3d3498591dc8ba5080414ce14cb968a3c6b2d9f8ecf204a07cd",
@@ -156,6 +157,16 @@
       "sha256": "caa8474f72fdfbc045b663aced6abdb7256c7b462bcbdefd1264d2384579d156",
       "media_type": "image/svg+xml",
       "size": 4794
+    },
+    "docs/architecture-and-development/articles/20261020-star-history-request-optimization/assets/history-meaning.svg": {
+      "sha256": "3b723afe968b581b6ceacfbcea5ce802d370284680af0f29b2fe63962a5e70f1",
+      "media_type": "image/svg+xml",
+      "size": 3529
+    },
+    "docs/architecture-and-development/articles/20261020-star-history-request-optimization/assets/query-work.svg": {
+      "sha256": "8461b52390215779cf26ced91308c8f52c609b9f4dba173094f449d5e123c3b8",
+      "media_type": "image/svg+xml",
+      "size": 5998
     }
   }
 }
