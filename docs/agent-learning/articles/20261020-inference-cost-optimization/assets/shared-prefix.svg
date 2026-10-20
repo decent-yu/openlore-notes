@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="764" viewBox="0 0 1120 764" role="img" aria-labelledby="title desc">
+  <title id="title">先保存稳定前缀，再让不同审查复用它</title>
+  <desc id="desc">上部展示错误的缓存边界把仓库和日期包含在内，导致跨仓库无法命中；中部展示稳定前缀单独保存；下部展示一次合并请求内，首个审查启动响应后，其他审查读取共享上下文。色块长度不代表词元数量。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#52667b"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#17324d}
+      .title{font-size:28px;font-weight:650}.head{font-size:22px;font-weight:600}.label{font-size:19px}.note{font-size:17px;fill:#52667b}.small{font-size:16px;fill:#52667b}
+    </style>
+  </defs>
+  <rect width="1120" height="764" rx="18" fill="#f5f8fc"/>
+  <text x="38" y="50" class="title">同样的内容，要有同样的开头和可复用的保存边界</text>
+  <text x="38" y="82" class="note">概念示意：从左向右读取请求；色块宽度不代表词元数</text>
+  <text x="38" y="127" class="head">① 原来的边界：稳定规则与变化环境一起保存</text>
+  <text x="40" y="172" class="label">仓库 A</text>
+  <rect x="145" y="144" width="574" height="44" rx="6" fill="#d7e7f7"/>
+  <text x="164" y="173" class="label">工具定义 ＋ 固定的审查规则</text>
+  <rect x="725" y="144" width="248" height="44" rx="6" fill="#f8dfc5"/>
+  <text x="742" y="173" class="label">A 的目录、日期</text>
+  <path d="M983 139V194" stroke="#c16b22" stroke-width="3"/>
+  <text x="997" y="172" class="small">保存</text>
+  <text x="40" y="229" class="label">仓库 B</text>
+  <rect x="145" y="201" width="574" height="44" rx="6" fill="#d7e7f7"/>
+  <text x="164" y="230" class="label">工具定义 ＋ 固定的审查规则</text>
+  <rect x="725" y="201" width="248" height="44" rx="6" fill="#f8dfc5"/>
+  <text x="742" y="230" class="label">B 的目录、日期</text>
+  <path d="M983 196V251" stroke="#c16b22" stroke-width="3"/>
+  <text x="145" y="275" class="note">虽然蓝色部分相同，但没有单独保存；橙色部分变化，使整段无法复用。</text>
+  <path d="M38 300H1082" stroke="#d7e0ea"/>
+  <text x="38" y="340" class="head">② 调整边界：把所有仓库共有的部分单独保存</text>
+  <rect x="145" y="359" width="574" height="48" rx="6" fill="#cbeadf"/>
+  <text x="164" y="390" class="label">固定工具定义 ＋ 固定审查规则</text>
+  <path d="M729 353V413" stroke="#168063" stroke-width="3"/>
+  <text x="746" y="390" class="label">再接目录、日期等变化内容</text>
+  <text x="145" y="437" class="note">绿色部分可跨仓库复用；前提是模型、请求配置和缓存隔离范围等条件相容。</text>
+  <path d="M38 460H1082" stroke="#d7e0ea"/>
+  <text x="38" y="500" class="head">③ 同一次合并请求：再共享规则和代码差异</text>
+  <rect x="40" y="526" width="462" height="82" rx="10" fill="#d7e7f7"/>
+  <text x="60" y="558" class="label">相同工具 ＋ 公共规则 ＋ 本次全部补丁</text>
+  <text x="60" y="586" class="note">共同输入放前面，各自的审查指令接在后面</text>
+  <path d="M502 566H544" fill="none" stroke="#52667b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="558" y="526" width="522" height="82" rx="10" fill="#cbeadf"/>
+  <text x="580" y="558" class="label">首个审查写入缓存，并开始返回响应</text>
+  <text x="580" y="586" class="note">其他两个审查等待这一时点，最多等 20 秒</text>
+  <path d="M819 608V630H290V647" fill="none" stroke="#52667b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M819 630V647" fill="none" stroke="#52667b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="654" width="502" height="48" rx="8" fill="#e3edf8"/>
+  <text x="60" y="685" class="label">另一个审查：读取共同输入，按自身指令检查</text>
+  <rect x="558" y="654" width="522" height="48" rx="8" fill="#e3edf8"/>
+  <text x="578" y="685" class="label">第三个审查：同样读取，继续独立完成任务</text>
+  <text x="40" y="738" class="small">依据：Cloudflare 原文与 Anthropic 提示缓存文档。共享的是输入计算，不是审查结论。</text>
+</svg>

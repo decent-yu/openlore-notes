@@ -17,7 +17,7 @@
         "成本与延迟优化"
       ],
       "collected_at": "2026-10-20T02:37:01.557Z",
-      "updated_at": "2026-10-20T02:37:01.557Z",
+      "updated_at": "2026-10-20T11:39:34.624Z",
       "has_research": true
     },
     "art_20a436bd-333a-49b1-92b2-af8c695acb97": {
@@ -73,11 +73,12 @@
   },
   "delivered_batches": [
     "batch_1792463821557",
-    "research_res_1bb0ecd3-9f3"
+    "research_res_1bb0ecd3-9f3",
+    "research_res_b89190ee-bf0"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "e6ff79cdb548082c3ec5f5e863f3628df1378df58bc6159c504370bc923cc6bc",
+      "sha256": "5e14dbb6cbdf7d01fc31a29b570dc628706fdef8647dfb40d993ebd23e3c2f1f",
       "media_type": "text/markdown",
       "size": 1737
     },
@@ -152,7 +153,7 @@
       "size": 16945
     },
     "docs/agent-learning/articles/20261020-inference-cost-optimization/README.md": {
-      "sha256": "cef6f4950493291d7ea919de78b31166ce0d52a8f6ab872ff17ecd29dc71cdbb",
+      "sha256": "e48ebee7d60329aaba4457615af66b0abaf63fc449ab96185c2513e5756123fb",
       "media_type": "text/markdown",
       "size": 487
     },
@@ -232,9 +233,9 @@
       "size": 8198
     },
     "docs/agent-learning/articles/20261020-inference-cost-optimization/research.md": {
-      "sha256": "1abf9132ceb1ff43d869dd01cea0c5c12e2187a7cf0a22057971fe2cfaf5c11d",
+      "sha256": "d3a29196c8ad735e903d33e7fe4b8bf647ec4ad5d6492e009f9155a21d2294dd",
       "media_type": "text/markdown",
-      "size": 17258
+      "size": 16781
     },
     "docs/agent-learning/articles/20261020-numan-ai-health-coach/README.md": {
       "sha256": "3806c4f62f3662102fbf30df73a7c099d4fafce5a6b86f17b70ced13d62b8692",
@@ -290,6 +291,16 @@
       "sha256": "ffc31e8f9cf44ca62f9645f398742d7469caea26dbca55fc193b4c657a5d8d11",
       "media_type": "image/svg+xml",
       "size": 4562
+    },
+    "docs/agent-learning/articles/20261020-inference-cost-optimization/assets/quality-evidence.svg": {
+      "sha256": "de352cf518c8201f511bee4c5a60b817b88310b8dcef57f80a328f4f389e8d93",
+      "media_type": "image/svg+xml",
+      "size": 3306
+    },
+    "docs/agent-learning/articles/20261020-inference-cost-optimization/assets/shared-prefix.svg": {
+      "sha256": "c49cd25decc2ee7de3e521c6eda1175751009b0290328668f51d47ba051276f0",
+      "media_type": "image/svg+xml",
+      "size": 4458
     }
   }
 }

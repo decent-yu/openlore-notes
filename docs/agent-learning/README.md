@@ -16,9 +16,9 @@
 
 | 更新日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261020 | [Cutting our inference bill by 68% by being obsessive about optimization](articles/20261020-inference-cost-optimization/README.md) | — | [调研](articles/20261020-inference-cost-optimization/research.md) |
 | 20261020 | [How Numan Built an Eval-First AI Health Coach with LangGraph and LangSmith](articles/20261020-numan-ai-health-coach/README.md) | — | [调研](articles/20261020-numan-ai-health-coach/research.md) |
 | 20261020 | [The Most Common Questions About Agent Evals, Answered](articles/20261020-agent-evals-faq/README.md) | — | [调研](articles/20261020-agent-evals-faq/research.md) |
-| 20261020 | [Cutting our inference bill by 68% by being obsessive about optimization](articles/20261020-inference-cost-optimization/README.md) | — | [调研](articles/20261020-inference-cost-optimization/research.md) |
 
 ## 采集批次
 

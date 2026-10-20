@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="594" viewBox="0 0 1100 594" role="img" aria-labelledby="title desc">
+  <title id="title">评价已报出的问题，不能直接测出漏检</title>
+  <desc id="desc">已报出的问题进入作者后续修改检查与模型盲评两条路径；没有报出的问题不会进入这两项评价。补充已知缺陷或完整人工审查样本，才有机会估计漏检。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#52667b"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#17324d}
+      .title{font-size:28px;font-weight:650}.head{font-size:22px;font-weight:600}.body{font-size:19px}.note{font-size:17px;fill:#52667b}
+    </style>
+  </defs>
+  <rect width="1100" height="594" rx="18" fill="#f5f8fc"/>
+  <text x="36" y="50" class="title">“报得更准”和“漏得更少”，需要不同的证据</text>
+  <text x="36" y="83" class="note">图中两条实线是原文已做的评价；下方虚线是本文建议补充的验证方向。</text>
+  <rect x="36" y="162" width="232" height="104" rx="12" fill="#d7e7f7"/>
+  <text x="60" y="205" class="head">Agent 已报出的问题</text>
+  <text x="60" y="238" class="note">从这些报告中取样</text>
+  <path d="M268 214H310V152H348" stroke="#52667b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M310 214V287H348" stroke="#52667b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <rect x="362" y="108" width="704" height="112" rx="12" fill="#e1efe9"/>
+  <text x="385" y="143" class="head">作者后续是否修改了被指出的代码行？</text>
+  <text x="385" y="176" class="body">可以观察：报告是否促成行动</text>
+  <text x="385" y="204" class="note">不能据此确认问题一定正确，或其他缺陷都已找到。</text>
+  <rect x="362" y="240" width="704" height="112" rx="12" fill="#e1efe9"/>
+  <text x="385" y="275" class="head">隐藏报告所属时期，让其他模型判断问题</text>
+  <text x="385" y="308" class="body">可以观察：重要性、重复、错误与严重性是否夸大</text>
+  <text x="385" y="336" class="note">判断依据仍是已报出的问题及相关代码差异。</text>
+  <path d="M36 383H1066" stroke="#d7e0ea"/>
+  <rect x="36" y="409" width="232" height="108" rx="12" fill="#f7e4cd"/>
+  <text x="60" y="451" class="head">Agent 没报出的问题</text>
+  <text x="60" y="485" class="note">不在上述取样范围内</text>
+  <path d="M268 463H348" stroke="#ad7943" stroke-width="2" stroke-dasharray="7 6" fill="none" marker-end="url(#arrow)"/>
+  <rect x="362" y="409" width="704" height="108" rx="12" fill="#fff6ea" stroke="#d8b58a" stroke-dasharray="7 5"/>
+  <text x="385" y="445" class="head">需要另有“这里确实有缺陷”的参照</text>
+  <text x="385" y="477" class="body">例如已确认的历史缺陷、人工完整审查的样本</text>
+  <text x="385" y="504" class="note">再比较不同设置各自找到了多少，才可估计漏检变化。</text>
+  <text x="36" y="562" class="note">依据：Cloudflare 原文的两种评价方法；关于漏检范围的说明与补充验证是本文分析。</text>
+</svg>
