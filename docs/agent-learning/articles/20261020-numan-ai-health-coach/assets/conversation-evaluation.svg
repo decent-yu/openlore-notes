@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="900" viewBox="0 0 1120 900" role="img" aria-labelledby="title desc">
+  <title id="title">Nu 如何模拟并评审整段对话</title>
+  <desc id="desc">模拟患者依据人物和场景设定，与真实 Nu 工作流程往返交谈。Nu 的每条待发回复先经过内部安全检查。对话结束后，评审模型依据标准评价完整记录。多轮模拟仍是原型，尚不用于发布门禁或安全声明。</desc>
+  <defs>
+    <style>
+      text { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #183247; }
+      .title { font-size: 30px; font-weight: 650; }
+      .label { font-size: 21px; font-weight: 600; }
+      .body { font-size: 19px; }
+      .small { font-size: 17px; fill: #526778; }
+      .arrow { fill: none; stroke: #38536a; stroke-width: 2; }
+      .life { stroke: #cad5de; stroke-width: 2; stroke-dasharray: 5 7; }
+    </style>
+  </defs>
+  <rect width="1120" height="900" rx="20" fill="#f8fafc"/>
+  <text x="40" y="56" class="title">测试的是交谈如何发展，而非能否复述标准答案</text>
+  <text x="40" y="91" class="small">依据 Numan 案例绘制的机制示意；不表示内部节点与调用的完整实现。</text>
+
+  <rect x="40" y="120" width="400" height="115" rx="12" fill="#eaf1fb" stroke="#c9d9ed"/>
+  <text x="60" y="153" class="label">先设定处境，不预写后续台词</text>
+  <text x="60" y="187" class="body">患者画像、场景、应了解的关键问题</text>
+  <text x="60" y="216" class="body">对话轮数上限</text>
+  <path d="M165 235 V269" class="arrow"/>
+  <path d="M160 262 L165 269 L170 262" class="arrow"/>
+
+  <rect x="735" y="120" width="345" height="115" rx="12" fill="#fff3df" stroke="#e8c992"/>
+  <text x="755" y="153" class="label">整段对话的评审标准</text>
+  <text x="755" y="187" class="body">当前由工程师起草</text>
+  <text x="755" y="216" class="body">涉及安全的标准待临床人员签署</text>
+  <path d="M955 235 V269" class="arrow"/>
+  <path d="M950 262 L955 269 L960 262" class="arrow"/>
+
+  <rect x="40" y="280" width="250" height="60" rx="10" fill="#dce9fa"/>
+  <text x="165" y="317" class="label" text-anchor="middle">模拟患者</text>
+  <rect x="435" y="280" width="250" height="60" rx="10" fill="#d9eee9"/>
+  <text x="560" y="317" class="label" text-anchor="middle">真实 Nu 工作流程</text>
+  <rect x="830" y="280" width="250" height="60" rx="10" fill="#f4e6cf"/>
+  <text x="955" y="317" class="label" text-anchor="middle">事后评审模型</text>
+
+  <path d="M165 340 V637 M560 340 V637 M955 340 V637" class="life"/>
+  <text x="353" y="375" class="body" text-anchor="middle">发出当前消息</text>
+  <path d="M175 391 H548" class="arrow"/>
+  <path d="M541 386 L548 391 L541 396" class="arrow"/>
+  <text x="353" y="435" class="body" text-anchor="middle">返回经过安全检查的回复</text>
+  <path d="M550 451 H177" class="arrow"/>
+  <path d="M184 446 L177 451 L184 456" class="arrow"/>
+
+  <rect x="40" y="474" width="250" height="75" rx="9" fill="#eaf1fb"/>
+  <text x="165" y="505" class="body" text-anchor="middle">读取 Nu 的实际回答</text>
+  <text x="165" y="533" class="body" text-anchor="middle">再生成下一句</text>
+  <text x="353" y="575" class="body" text-anchor="middle">继续交谈，直至结束或达到上限</text>
+  <path d="M175 590 H548" class="arrow"/>
+  <path d="M541 585 L548 590 L541 595" class="arrow"/>
+
+  <text x="758" y="627" class="body" text-anchor="middle">结束后提交整段记录</text>
+  <path d="M560 644 H943" class="arrow"/>
+  <path d="M936 639 L943 644 L936 649" class="arrow"/>
+  <rect x="785" y="666" width="295" height="79" rx="10" fill="#fff3df" stroke="#e8c992"/>
+  <text x="805" y="698" class="label">按类别评价过程</text>
+  <text x="805" y="728" class="body">不要求每一轮都完成全部目标</text>
+
+  <rect x="40" y="666" width="700" height="135" rx="12" fill="#eaf5f1" stroke="#bedbd1"/>
+  <text x="60" y="700" class="label">Nu 内部：在每条回复发出前检查草稿</text>
+  <text x="60" y="734" class="body">主管与专门智能体生成草稿 → 安全检查</text>
+  <text x="60" y="766" class="body">通过才发出；失败则重写，持续失败则改用安全备用回复。</text>
+
+  <rect x="40" y="830" width="1040" height="43" rx="8" fill="#fff3df"/>
+  <text x="60" y="859" class="body">状态边界：多轮模拟仍是原型，尚不用于发布门禁或安全声明；现有分类安全测试另行把关。</text>
+</svg>

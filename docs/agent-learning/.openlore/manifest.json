@@ -55,7 +55,7 @@
         "评测准则治理"
       ],
       "collected_at": "2026-10-20T02:37:01.564Z",
-      "updated_at": "2026-10-20T02:37:01.557Z",
+      "updated_at": "2026-10-20T11:38:28.211Z",
       "has_research": true
     }
   },
@@ -72,13 +72,14 @@
     }
   },
   "delivered_batches": [
-    "batch_1792463821557"
+    "batch_1792463821557",
+    "research_res_1bb0ecd3-9f3"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "ad027c59589088d0ccf20bb17bff06d8111c1634544f93dbe9be0be955c7585b",
+      "sha256": "e6ff79cdb548082c3ec5f5e863f3628df1378df58bc6159c504370bc923cc6bc",
       "media_type": "text/markdown",
-      "size": 1587
+      "size": 1737
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "ab90d8e545ab8445ecde6617b3c4c74f273912e79f82266a356a245ca9388d9a",
@@ -236,7 +237,7 @@
       "size": 17258
     },
     "docs/agent-learning/articles/20261020-numan-ai-health-coach/README.md": {
-      "sha256": "55ed8605c5310fb307788208098e0186d972142759f2f07572b0a6b6990256a8",
+      "sha256": "3806c4f62f3662102fbf30df73a7c099d4fafce5a6b86f17b70ced13d62b8692",
       "media_type": "text/markdown",
       "size": 547
     },
@@ -252,7 +253,7 @@
     },
     "docs/agent-learning/articles/20261020-numan-ai-health-coach/assets/diagram-8c90eeb02f64.jpg": {
       "sha256": "8c90eeb02f64944efae9bcf812042c95ecca668c82a444cdd9cc7f4c042489d8",
-      "media_type": "image/jpg",
+      "media_type": "image/jpeg",
       "size": 255590
     },
     "docs/agent-learning/articles/20261020-numan-ai-health-coach/assets/diagram-bbd65b75fcc6.png": {
@@ -276,14 +277,19 @@
       "size": 9199
     },
     "docs/agent-learning/articles/20261020-numan-ai-health-coach/research.md": {
-      "sha256": "bda1e5213d0e6b6dd2ed21960994b4ebc9186f94e9b94d42572334512cb33aa3",
+      "sha256": "04926ab9b5be4dbc2eec3ab21d3ea1456a3cddab9e4f70770452774118995c10",
       "media_type": "text/markdown",
-      "size": 17003
+      "size": 15282
     },
     "docs/agent-learning/batches/20261020-01.md": {
       "sha256": "f445027940522d7bfb52f56636fc53bc27e9a9acfe86e1a2d1d89ba7228691a2",
       "media_type": "text/markdown",
       "size": 719
+    },
+    "docs/agent-learning/articles/20261020-numan-ai-health-coach/assets/conversation-evaluation.svg": {
+      "sha256": "ffc31e8f9cf44ca62f9645f398742d7469caea26dbca55fc193b4c657a5d8d11",
+      "media_type": "image/svg+xml",
+      "size": 4562
     }
   }
 }
