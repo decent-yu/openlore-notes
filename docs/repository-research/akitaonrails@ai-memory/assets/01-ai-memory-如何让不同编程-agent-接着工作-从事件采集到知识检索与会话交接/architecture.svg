@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="820" viewBox="0 0 1180 820" role="img" aria-labelledby="title desc">
+  <title id="title">ai-memory 的客户端、服务端和持久数据</title>
+  <desc id="desc">原生钩子先将事件放入本地队列，发送给服务端钩子处理器。Wiki 层写入 Markdown，并通过写入线程维护 SQLite。MCP 工具读取数据库索引。托管启动器另外在本机准备临时历史。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#456170"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#193542;font-size:17px}
+      .title{font-size:28px;font-weight:650}.group{font-size:20px;font-weight:600}.name{font-size:20px;font-weight:600}
+      .small{font-size:15px;fill:#49616d}.line{fill:none;stroke:#456170;stroke-width:2;marker-end:url(#a)}
+      .node{fill:#fff;stroke:#afc0c9;stroke-width:1.5}.db{fill:#eaf3f8;stroke:#507b95;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect width="1180" height="820" fill="#fbfaf6"/>
+  <text x="32" y="46" class="title">工作留在哪里，下一位 Agent 从哪里读取</text>
+  <text x="32" y="73" class="small">实线表示调用或数据流；虚线表示后台对账。服务可在本机，也可部署在另一台机器。</text>
+  <rect x="30" y="100" width="300" height="605" rx="12" fill="#f1f0e9"/>
+  <text x="52" y="134" class="group">客户端所在机器</text>
+  <rect class="node" x="52" y="156" width="255" height="78" rx="8"/>
+  <text x="70" y="187" class="name">编程 Agent</text><text x="70" y="213" class="small">Claude Code / Codex / 其他工具</text>
+  <rect class="node" x="52" y="290" width="255" height="76" rx="8"/>
+  <text x="70" y="320" class="name">原生生命周期钩子</text><text x="70" y="346" class="small">识别事件、目录与采集策略</text>
+  <rect class="node" x="52" y="421" width="255" height="78" rx="8"/>
+  <text x="70" y="452" class="name">hook-spool 待发送队列</text><text x="70" y="478" class="small">事件 JSON、重试键、认证信息</text>
+  <path class="line" d="M105 234V288"/><text x="119" y="265" class="small">回调</text>
+  <path class="line" d="M105 366V419"/><text x="119" y="397" class="small">先落本地文件</text>
+  <rect x="52" y="559" width="255" height="120" rx="8" fill="#fff8df" stroke="#c3aa60"/>
+  <text x="70" y="590" class="name">可选：ai-memory run</text><text x="70" y="618" class="small">管理启动、原生会话与心跳</text>
+  <text x="70" y="645" class="small">切换工具时准备私有临时历史</text><text x="70" y="667" class="small">这份文件的路径与正文留在本机</text>
+  <rect x="384" y="100" width="766" height="605" rx="12" fill="#edf4f0" stroke="#bfd2c6"/>
+  <text x="408" y="134" class="group">ai-memory serve：同一服务进程中的主要职责</text>
+  <rect class="node" x="410" y="163" width="278" height="96" rx="8"/>
+  <text x="430" y="194" class="name">钩子与启动入口</text><text x="430" y="221" class="small">/hook、/hook/batch、/handoff</text><text x="430" y="245" class="small">项目归属、权限、脱敏、摘要、交接</text>
+  <rect class="node" x="816" y="163" width="310" height="96" rx="8"/>
+  <text x="836" y="194" class="name">MCP 记忆工具</text><text x="836" y="221" class="small">查询、读写页面、显式接受交接</text><text x="836" y="245" class="small">读走检索；写页面走左侧 Wiki 层</text>
+  <path class="line" d="M307 174H345V145H971V161"/><text x="703" y="159" class="small">按需调用</text>
+  <path class="line" d="M307 460H358V207H408"/><text x="337" y="351" class="small" transform="rotate(-90 337 351)">限时发送与批量补发</text>
+  <path class="line" d="M410 280H371V195H309"/><text x="416" y="305" class="small">启动上下文返回宿主工具</text>
+  <path d="M464 259V280H410" fill="none" stroke="#456170" stroke-width="2"/>
+  <rect class="node" x="410" y="354" width="278" height="96" rx="8"/>
+  <text x="430" y="386" class="name">Wiki 页面写入层</text><text x="430" y="413" class="small">路径检查、原子替换与失败回滚</text><text x="430" y="437" class="small">解析元数据、链接与实体</text>
+  <rect class="node" x="816" y="354" width="310" height="96" rx="8"/>
+  <text x="836" y="386" class="name">只读连接池与检索</text><text x="836" y="413" class="small">全文、实体、链接邻居与观察证据</text><text x="836" y="437" class="small">可选向量；融合后排序</text>
+  <path class="line" d="M549 259V352"/>
+  <path class="line" d="M971 259V352"/>
+  <path class="line" d="M688 211H749V576H814"/><text x="764" y="330" class="small" transform="rotate(-90 764 330)">观察、会话与交接状态</text>
+  <rect x="410" y="543" width="278" height="113" rx="4" fill="#fff" stroke="#8d9f72" stroke-width="2"/>
+  <path d="M420 551H678" stroke="#8d9f72"/>
+  <text x="430" y="582" class="name">Markdown 文件 + Git</text><text x="430" y="610" class="small">页面正文的权威来源</text><text x="430" y="636" class="small">Git 快照是单独一步</text>
+  <path class="line" d="M535 450V541"/><text x="547" y="491" class="small">写文件</text>
+  <path class="line" stroke-dasharray="6 5" d="M436 543V452"/><text x="412" y="513" class="small">对账</text>
+  <path class="db" d="M816 555C816 530 1126 530 1126 555V640C1126 665 816 665 816 640Z"/>
+  <path d="M816 555C816 580 1126 580 1126 555" fill="none" stroke="#507b95" stroke-width="1.5"/>
+  <text x="838" y="600" class="name">SQLite + 单一写入线程</text><text x="838" y="625" class="small">页面索引与版本；数据库独有的</text><text x="838" y="648" class="small">观察、会话、交接、身份等状态</text>
+  <path class="line" d="M688 404H720V611H814"/>
+  <path class="line" d="M971 538V452"/><text x="983" y="492" class="small">读索引与状态</text>
+  <text x="34" y="748" class="group">重建边界</text>
+  <text x="34" y="777">Markdown 能重建页面索引；不能恢复全部数据库状态。完整恢复需要数据库备份。</text>
+  <text x="34" y="803" class="small">图聚焦普通采集与检索。可选模型整理通过同一 Wiki 层写页；托管工作流另有运行记录与租约。</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="540" viewBox="0 0 1100 540" role="img" aria-labelledby="title desc">
+<title id="title">缺失页面重新出现时，怎样保护旧版本链</title><desc id="desc">缺失页面被软删除后仍保留版本链。文件重新出现会产生新版本，指向原删除标记版本，同时清除旧行的删除时间，避免它继续成为老化清理的起点。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#465e70" stroke-width="1.5"/></marker></defs>
+<rect width="1100" height="540" fill="#f7fafc"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#203440">
+<text x="40" y="49" font-size="26" font-weight="600">文件回来后，要接回历史，还要撤销清理资格</text>
+<text x="40" y="82" font-size="16" fill="#5c6d79">箭头从新版本指向它替代的旧版本，表示 supersedes（前一版本）。</text>
+<g font-size="19" font-weight="600"><text x="40" y="158">① 正常更新</text><text x="40" y="281">② 文件缺失</text><text x="40" y="420">③ 文件重现</text></g>
+<g fill="none" stroke="#465e70" stroke-width="2"><path d="M710 150H600" marker-end="url(#a)"/><path d="M710 274H600" marker-end="url(#a)"/><path d="M990 411H882" marker-end="url(#a)"/><path d="M710 411H600" marker-end="url(#a)"/></g>
+<g stroke="#465e70" fill="#ffffff"><rect x="425" y="121" width="170" height="58" rx="4"/><rect x="715" y="121" width="170" height="58" rx="4"/><rect x="425" y="245" width="170" height="58" rx="4"/><rect x="715" y="245" width="170" height="58" rx="4" fill="#f6dfb6"/><rect x="425" y="382" width="170" height="58" rx="4"/><rect x="715" y="382" width="170" height="58" rx="4"/><rect x="995" y="382" width="70" height="58" rx="4" fill="#cce9e2"/></g>
+<g font-size="21" text-anchor="middle"><text x="510" y="158">v1</text><text x="800" y="158">v2 · 当前</text><text x="510" y="282">v1</text><text x="800" y="282">v2 · 软删除</text><text x="510" y="419">v1</text><text x="800" y="419">v2 · 历史</text><text x="1030" y="419">v3</text></g>
+<g font-size="16" text-anchor="middle" fill="#5c6d79"><text x="800" y="207">is_latest = 1</text><text x="800" y="332">is_latest = 0；记录删除时间</text><text x="800" y="470">清除 superseded_at</text><text x="1030" y="470">新当前页</text></g>
+<text x="40" y="503" font-size="17" fill="#385d58">只补上 v3 → v2 的箭头还不够：清理 SQL 直接检查旧行的删除时间是否存在。</text>
+<path d="M608 144L600 150L608 156 M608 268L600 274L608 280 M890 405L882 411L890 417 M608 405L600 411L608 417" fill="none" stroke="#465e70" stroke-width="2"/></g></svg>

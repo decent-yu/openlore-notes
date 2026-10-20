@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="800" viewBox="0 0 1180 800" role="img" aria-labelledby="title desc">
+<title id="title">Superset：界面、主机执行与云端协作的边界</title><desc id="desc">桌面界面直接连接本机主机服务；远程入口经过中继。主机服务管理工作区及本机数据库，通过 Unix socket 连接拥有终端进程的独立守护进程。云端 API 管理组织、任务和云工作区。</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="#416176"/></marker></defs>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#183546;font-size:17px}.title{font-size:27px;font-weight:650}.name{font-size:20px;font-weight:600}.small{font-size:15px;fill:#486274}.line{fill:none;stroke:#416176;stroke-width:2}.dash{stroke-dasharray:7 5}</style>
+<rect width="1180" height="800" fill="#f8fafb"/>
+<text x="30" y="43" class="title">同一个工作区，界面与执行可以位于不同设备</text>
+<rect x="30" y="80" width="335" height="90" rx="10" fill="#dfeef5"/><text x="50" y="113" class="name">桌面界面 · React</text><text x="50" y="143">终端、代码差异、浏览器预览</text>
+<rect x="415" y="80" width="350" height="90" rx="10" fill="#e9eef2"/><text x="435" y="113" class="name">CLI / MCP 等程序入口</text><text x="435" y="143">按目标选择主机或云端接口</text>
+<rect x="815" y="80" width="335" height="90" rx="10" fill="#e9eef2"/><text x="835" y="113" class="name">远程客户端</text><text x="835" y="143">手机、其他设备上的桌面界面</text>
+<rect x="20" y="230" width="755" height="520" rx="14" fill="#fff" stroke="#9eb8c5" stroke-width="2"/><text x="40" y="258" class="name">执行主机：以本机桌面场景为例</text>
+<rect x="805" y="230" width="355" height="520" rx="14" fill="#f1f1f9" stroke="#b6b6d0" stroke-width="2"/><text x="825" y="258" class="name">云端服务：协作与远程入口</text>
+<rect x="45" y="280" width="410" height="65" rx="8" fill="#e9eef2"/><text x="65" y="307" class="name">Electron 主进程</text><text x="65" y="332" class="small">协调各组织的主机服务；管理桌面能力</text>
+<rect x="45" y="395" width="410" height="130" rx="8" fill="#dceee9" stroke="#5a9383"/><text x="65" y="426" class="name">host-service · 主机服务</text><text x="65" y="455">工作区 / Git / 文件 / 代理启动</text><text x="65" y="481">接口调用、状态事件与终端数据流</text><text x="65" y="507" class="small">主机本地状态归它管理</text>
+<rect x="485" y="395" width="260" height="130" rx="8" fill="#fff0d9" stroke="#bf9350"/><text x="505" y="426" class="name">pty-daemon</text><text x="505" y="455">独立终端守护进程</text><text x="505" y="481">持有伪终端、进程与输出缓冲</text><text x="505" y="507" class="small">主机服务重启后可重新接管</text>
+<rect x="45" y="590" width="195" height="100" rx="8" fill="#e9eef2"/><text x="63" y="623" class="name">Git 与工作目录</text><text x="63" y="653">分支、worktree、文件</text>
+<rect x="260" y="590" width="195" height="100" rx="8" fill="#e9eef2"/><text x="278" y="623" class="name">SQLite · host.db</text><text x="278" y="653">工作区、终端、绑定</text>
+<rect x="485" y="590" width="260" height="100" rx="8" fill="#fff0d9"/><text x="505" y="623" class="name">命令解释器 → 代理 CLI</text><text x="505" y="653">在指定工作目录中改代码</text>
+<rect x="835" y="280" width="295" height="65" rx="8" fill="#e1e1f0"/><text x="853" y="307" class="name">API + PostgreSQL</text><text x="853" y="332" class="small">组织、任务、自动化、云工作区记录</text>
+<rect x="835" y="395" width="295" height="100" rx="8" fill="#e1e1f0"/><text x="853" y="427" class="name">relay · 中继</text><text x="853" y="455">验证访问权；转发请求和流</text><text x="853" y="482" class="small">远程连接最终仍到达执行主机</text>
+<rect x="835" y="590" width="295" height="100" rx="8" fill="#e1e1f0"/><text x="853" y="623" class="name">托管云工作区</text><text x="853" y="653">另行配置的沙箱与主机服务</text>
+<path d="M75 170V215H32V460H45" class="line"/><text x="85" y="204" class="small">本机直连</text>
+<path d="M315 345V395" class="line"/><text x="326" y="378" class="small">启动 / 接管</text>
+<path d="M455 460H485" class="line"/><text x="495" y="381" class="small">本机套接字通信</text>
+<path d="M143 525V590" class="line"/><path d="M358 525V590" class="line"/><path d="M615 525V590" class="line"/>
+<path d="M590 170V205H1168V415H1130" class="line"/><path d="M1060 170V190H1150V445H1130" class="line"/>
+<path d="M835 465H790V550H410V525" class="line dash"/><text x="590" y="574" class="small">主机主动建立隧道；请求转回本机</text>
+<path d="M982 345V365H1140V640H1130" class="line"/>
+<text x="40" y="729" class="small">图中箭头表示主要连接或管理关系；省略聊天专用通道和其他协作服务。</text>
+<text x="30" y="781" class="small">依据：desktop 主机服务入口、host-service/app.ts、DaemonSupervisor.ts、relay 与 cloud-workspace 实现</text>
+<polygon points="45,460 37,464 37,456" fill="#416176"/>
+<polygon points="315,395 311,387 319,387" fill="#416176"/>
+<polygon points="485,460 477,464 477,456" fill="#416176"/>
+<polygon points="143,590 139,582 147,582" fill="#416176"/>
+<polygon points="358,590 354,582 362,582" fill="#416176"/>
+<polygon points="615,590 611,582 619,582" fill="#416176"/>
+<polygon points="1130,415 1138,411 1138,419" fill="#416176"/>
+<polygon points="1130,445 1138,441 1138,449" fill="#416176"/>
+<polygon points="410,525 414,533 406,533" fill="#416176"/>
+<polygon points="1130,640 1138,636 1138,644" fill="#416176"/>
+</svg>

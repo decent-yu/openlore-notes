@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">断线重试与更换协调者，消息批次怎样变化</title>
+  <desc id="desc">同一消费者第七代读到批次D1，包含未读消息M1和M2。网络断线后重试仍返回D1，新消息M3等待下一批。如果改由另一协调者绑定Run，代次升到八，D1被封存，新批次D2重新包含未读的M1、M2和M3；旧代不能确认D1。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="none" stroke="#52677a" stroke-width="1.5"/></marker>
+    <style>
+      text {font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill:#193348}
+      .title {font-size:29px;font-weight:700}
+      .label {font-size:22px;font-weight:650}
+      .body {font-size:20px}
+      .small {font-size:18px;fill:#52677a}
+      .mono {font-family:ui-monospace,monospace;font-size:20px}
+      .arrow {fill:none;stroke:#52677a;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="820" fill="#f9fbfc"/>
+  <text x="44" y="53" class="title">消息可以重读；确认权属于当前协调者</text>
+  <text x="44" y="87" class="small">自拟编号示意 · 同一主机、同一 Run（协作工作集合）· M 是消息，D 是一次交付批次</text>
+
+  <text x="46" y="142" class="label">共同起点</text>
+  <line x1="46" y1="158" x2="1154" y2="158" stroke="#c8d5df"/>
+  <text x="50" y="199" class="body">协调者甲，第 7 代</text>
+  <path d="M255 192H376" class="arrow"/>
+  <text x="283" y="181" class="small">check</text>
+  <rect x="396" y="176" width="308" height="84" rx="6" fill="#e2f0f3" stroke="#43818c"/>
+  <text x="416" y="206" class="label">D1 · 第 7 代</text>
+  <text x="416" y="240" class="mono">[ M1, M2 ]</text>
+  <text x="748" y="203" class="body">数据库：M1、M2 仍未读</text>
+  <text x="748" y="239" class="small">返回消息不会自动确认</text>
+  <text x="748" y="280" class="small">随后 M3 到达，D1 尚未确认</text>
+
+  <path d="M550 264V300H290V329" class="arrow"/>
+  <path d="M550 300H889V329" class="arrow"/>
+  <text x="70" y="323" class="small">A · 只有网络断线</text>
+  <text x="650" y="323" class="small">B · 改由乙接管</text>
+  <line x1="600" y1="346" x2="600" y2="733" stroke="#c8d5df" stroke-dasharray="5 6"/>
+
+  <text x="49" y="375" class="label">甲仍然是第 7 代消费者</text>
+  <text x="49" y="411" class="body">甲再次 check，请求收件</text>
+  <rect x="49" y="440" width="500" height="112" rx="6" fill="#e2f0f3" stroke="#43818c"/>
+  <text x="71" y="473" class="label">返回原 D1 · replayed = true</text>
+  <text x="71" y="510" class="mono">[ M1, M2 ]</text>
+  <text x="284" y="510" class="small">M3 留待下一批</text>
+  <path d="M298 559V589" class="arrow"/>
+  <text x="49" y="625" class="body">甲处理完整批次，再确认 D1</text>
+  <text x="49" y="660" class="small">确认事务只把 M1、M2 标为已读</text>
+  <text x="49" y="695" class="small">随后才能正常取得包含 M3 的新批次</text>
+
+  <text x="650" y="375" class="label">乙执行 run-use，升到第 8 代</text>
+  <text x="650" y="411" class="body">旧 D1 → fenced（失去确认资格）</text>
+  <rect x="650" y="440" width="500" height="112" rx="6" fill="#edf1fa" stroke="#7284b0"/>
+  <text x="672" y="473" class="label">乙 check → 新 D2 · 第 8 代</text>
+  <text x="672" y="510" class="mono">[ M1, M2, M3 ]</text>
+  <path d="M900 559V589" class="arrow"/>
+  <text x="650" y="625" class="body">甲确认旧批次 → consumer_fenced</text>
+  <text x="650" y="660" class="small">换人不会把消息标成已读</text>
+  <text x="650" y="695" class="small">乙重新处理未读消息；业务动作仍需防重复</text>
+
+  <rect x="44" y="750" width="1112" height="44" rx="4" fill="#fff1da"/>
+  <text x="61" y="779" class="small">适用条件：示意中的消息未被其他机制标为已读；旧心跳被完成报告抑制时，批次可另行退出待处理集合。</text>
+</svg>

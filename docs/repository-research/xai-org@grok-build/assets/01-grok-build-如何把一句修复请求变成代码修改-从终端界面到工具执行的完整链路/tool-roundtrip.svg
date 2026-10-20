@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="868" viewBox="0 0 1120 868" role="img">
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#345773"/></marker><marker id="b" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#328274"/></marker></defs>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203047;font-size:20px}.title{font-size:30px;font-weight:650}.head{font-size:23px;font-weight:600}.small{font-size:17px;fill:#566679}.code{font-family:Menlo,monospace;font-size:17px}.arrow{fill:none;stroke:#345773;stroke-width:2.5;marker-end:url(#a)}.return{fill:none;stroke:#328274;stroke-width:2.5;marker-end:url(#b)}.dash{stroke-dasharray:7 5}</style>
+<rect width="1120" height="868" fill="#fcfcf9"/>
+<text x="35" y="46" class="title">一条“修复并测试”请求，怎样完成一次工具往返</text>
+<text x="35" y="78" class="small">示意任务为自拟；消息方向与处理步骤来自本地源码。</text>
+<rect x="16" y="103" width="188" height="49" rx="8" fill="#eaf0f5" stroke="#a3b1bf"/>
+<text x="32" y="135" class="head">终端界面</text>
+<path d="M110 160V784" stroke="#a7b4c0" stroke-dasharray="5 6"/>
+<rect x="271" y="103" width="188" height="49" rx="8" fill="#eaf0f5" stroke="#a3b1bf"/>
+<text x="287" y="135" class="head">会话运行时</text>
+<path d="M365 160V784" stroke="#a7b4c0" stroke-dasharray="5 6"/>
+<rect x="536" y="103" width="188" height="49" rx="8" fill="#eaf0f5" stroke="#a3b1bf"/>
+<text x="552" y="135" class="head">模型服务</text>
+<path d="M630 160V784" stroke="#a7b4c0" stroke-dasharray="5 6"/>
+<rect x="876" y="103" width="188" height="49" rx="8" fill="#eaf0f5" stroke="#a3b1bf"/>
+<text x="892" y="135" class="head">工具 / 本机资源</text>
+<path d="M970 160V784" stroke="#a7b4c0" stroke-dasharray="5 6"/>
+<path d="M110 205H365" class="arrow"/>
+<text x="122" y="195" class="small">① PromptRequest：输入 + 会话 ID</text>
+<rect x="248" y="230" width="231" height="65" rx="8" fill="#e5f2ed" stroke="#a3b1bf"/>
+<text x="262" y="255" class="small">排队、记录用户输入</text>
+<text x="262" y="281" class="small">构造对话与工具说明</text>
+<path d="M365 330H630" class="arrow"/>
+<text x="377" y="320" class="small">② 请求下一步决策</text>
+<path d="M630 390H365" class="return"/>
+<text x="377" y="380" class="small">③ 工具名 + 参数 + 调用 ID</text>
+<rect x="247" y="418" width="237" height="80" rx="8" fill="#fff1d0" stroke="#a3b1bf"/>
+<text x="262" y="446" class="small">④ 参数解析 / Hook / 权限</text>
+<text x="262" y="477" class="small">Hook：执行前后的扩展动作</text>
+<path d="M365 535H970" class="arrow"/>
+<text x="377" y="525" class="small">⑤ WorkspaceOps → 注册工具 → 终端后端</text>
+<path d="M970 595H365" class="return"/>
+<text x="377" y="585" class="small">⑥ 输出、退出码或执行错误</text>
+<rect x="247" y="618" width="237" height="66" rx="8" fill="#e5f2ed" stroke="#a3b1bf"/>
+<text x="262" y="644" class="small">把结果写为 tool_result</text>
+<text x="262" y="670" class="small">后续模型请求可读取它</text>
+<path d="M365 720H630" class="arrow"/>
+<text x="377" y="710" class="small">⑦ 携带工具结果继续请求</text>
+<path d="M365 773H110" class="return"/>
+<text x="122" y="763" class="small">⑧ 持续通知；最终响应</text>
+<rect x="565" y="620" width="513" height="64" rx="8" fill="#fff" stroke="#b3bfc9"/>
+<text x="582" y="646" class="small">执行失败通常回给模型处理；用户拒绝权限会结束本轮。</text>
+<text x="582" y="672" class="small">文本与状态在过程中持续回传，图中只画出汇总方向。</text>
+<text x="35" y="834" class="small">一次用户提交可触发多次“模型决策—工具执行”；无工具调用时仍会检查是否需要继续。</text>
+</svg>

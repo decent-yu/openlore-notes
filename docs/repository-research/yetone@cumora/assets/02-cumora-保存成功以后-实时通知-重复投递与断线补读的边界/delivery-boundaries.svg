@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="600" viewBox="0 0 1080 600">
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#475569" stroke-width="1.5"/></marker></defs>
+<rect width="1080" height="600" fill="#fafaf7"/>
+<g font-family="PingFang SC, Noto Sans CJK SC, sans-serif" fill="#182c38">
+<text x="44" y="48" font-size="27" font-weight="650">一次保存，三个不同的确认边界</text>
+<text x="44" y="78" font-size="16" fill="#526572">实线是实际投递路径；下方列出各阶段仍可能发生的事。</text>
+<rect x="44" y="124" width="336" height="170" rx="12" fill="#e6f1ec" stroke="#3e8068"/>
+<text x="64" y="157" font-size="19" font-weight="600">① PostgreSQL 事务提交</text>
+<text x="64" y="193" font-size="17">业务对象 ＋ 待通知事件</text>
+<text x="64" y="224" font-size="16">同一连接写入，一起提交或回滚</text>
+<text x="64" y="267" font-size="15" fill="#396652">确认：业务修改已被接受</text>
+<path d="M380 207H450" stroke="#475569" stroke-width="2" fill="none" />
+<polygon points="450,207 438,201 438,213" fill="#475569"/><text x="393" y="184" font-size="14">后台投递</text>
+<rect x="462" y="124" width="240" height="170" rx="12" fill="#eaf0f8" stroke="#6085ac"/>
+<text x="482" y="157" font-size="19" font-weight="600">② Redis 发布成功</text>
+<text x="482" y="193" font-size="17">写入 published_at</text>
+<text x="482" y="224" font-size="16">不等待每个接收者确认</text>
+<text x="482" y="267" font-size="15" fill="#436886">确认：已发布到消息总线</text>
+<path d="M702 207H772" stroke="#475569" stroke-width="2" fill="none" />
+<polygon points="772,207 760,201 760,213" fill="#475569"/><text x="713" y="184" font-size="14">实时转发</text>
+<rect x="784" y="124" width="252" height="170" rx="12" fill="#f1edf7" stroke="#8c77a5"/>
+<text x="804" y="157" font-size="19" font-weight="600">③ 客户端 / Agent 消费</text>
+<text x="804" y="193" font-size="17">界面合并、拉取或唤醒</text>
+<text x="804" y="224" font-size="16">接收失败不退回发件箱</text>
+<text x="804" y="267" font-size="15" fill="#70558a">需要各自的恢复机制</text>
+<g stroke="#b5c1c7" stroke-dasharray="4 5"><path d="M210 294V334"/><path d="M582 294V334"/><path d="M910 294V334"/></g>
+<text x="64" y="359" font-size="18" font-weight="600">响应丢失</text>
+<text x="64" y="391" font-size="16">业务可能已完成；同一 requestId</text>
+<text x="64" y="417" font-size="16">或 clientId 用于安全重试。</text>
+<text x="462" y="359" font-size="18" font-weight="600">发布后，成功标记前退出</text>
+<text x="462" y="391" font-size="16">租约过期后可再次投递，</text>
+<text x="462" y="417" font-size="16">同一事件可能出现多次。</text>
+<text x="804" y="359" font-size="18" font-weight="600">离线或转发时漏帧</text>
+<text x="804" y="391" font-size="16">聊天重连后补读数据库；</text>
+<text x="804" y="417" font-size="16">其他模块须单独核查。</text>
+<path d="M910 458V493H404V275H380" stroke="#3e8068" stroke-width="2" stroke-dasharray="7 6" fill="none" />
+<polygon points="380,275 392,269 392,281" fill="#3e8068"/><rect x="420" y="477" width="330" height="30" fill="#fafaf7"/>
+<text x="434" y="498" font-size="16" fill="#396652">恢复事实：重新读取已保存的业务状态</text>
+<text x="44" y="562" font-size="15" fill="#526572">依据：realtime-outbox.ts、redis.ts、ws.ts、src/stores/messages.ts。示意不表示全链路恰好执行一次。</text>
+</g></svg>

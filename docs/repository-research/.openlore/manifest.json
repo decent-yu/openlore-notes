@@ -13,6 +13,166 @@
       "has_research": true,
       "reading_path": "stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md",
       "research_path": "stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md"
+    },
+    "art_9f122dd8-1bed-4c23-b36f-a1785a4c949a": {
+      "collection_id": "col_ba2a580e-e1a",
+      "directory": "yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动",
+      "slug": "cumora-如何把团队消息变成-agent-的协作行动",
+      "title": "Cumora 如何把团队消息变成 Agent 的协作行动",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-20T21:29:43.367Z",
+      "updated_at": "2026-10-20T21:29:43.367Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md",
+      "research_path": "yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md"
+    },
+    "art_b4ba666f-d204-43c0-9f9a-5de284c8ca55": {
+      "collection_id": "col_ba2a580e-e1a",
+      "directory": "superset-sh@superset/01-superset-如何把并行改代码变成可管理的工作区-从界面到-git-与终端进程",
+      "slug": "superset-如何把并行改代码变成可管理的工作区-从界面到-git-与终端进程",
+      "title": "Superset 如何把并行改代码变成可管理的工作区：从界面到 Git 与终端进程",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-20T21:29:43.367Z",
+      "updated_at": "2026-10-20T21:29:43.367Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/01-superset-如何把并行改代码变成可管理的工作区-从界面到-git-与终端进程.md",
+      "research_path": "superset-sh@superset/01-superset-如何把并行改代码变成可管理的工作区-从界面到-git-与终端进程.md"
+    },
+    "art_61975fb8-73eb-4075-952b-ec5e83df5a12": {
+      "collection_id": "col_ba2a580e-e1a",
+      "directory": "akitaonrails@ai-memory/01-ai-memory-如何让不同编程-agent-接着工作-从事件采集到知识检索与会话交接",
+      "slug": "ai-memory-如何让不同编程-agent-接着工作-从事件采集到知识检索与会话交接",
+      "title": "ai-memory 如何让不同编程 Agent 接着工作：从事件采集到知识检索与会话交接",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-20T21:29:43.367Z",
+      "updated_at": "2026-10-20T21:29:43.367Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/01-ai-memory-如何让不同编程-agent-接着工作-从事件采集到知识检索与会话交接.md",
+      "research_path": "akitaonrails@ai-memory/01-ai-memory-如何让不同编程-agent-接着工作-从事件采集到知识检索与会话交接.md"
+    },
+    "art_2e66336d-4648-41ca-b583-67b9107ab616": {
+      "collection_id": "col_ba2a580e-e1a",
+      "directory": "xai-org@grok-build/01-grok-build-如何把一句修复请求变成代码修改-从终端界面到工具执行的完整链路",
+      "slug": "grok-build-如何把一句修复请求变成代码修改-从终端界面到工具执行的完整链路",
+      "title": "Grok Build 如何把一句修复请求变成代码修改：从终端界面到工具执行的完整链路",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-20T21:29:43.367Z",
+      "updated_at": "2026-10-20T21:29:43.367Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/01-grok-build-如何把一句修复请求变成代码修改-从终端界面到工具执行的完整链路.md",
+      "research_path": "xai-org@grok-build/01-grok-build-如何把一句修复请求变成代码修改-从终端界面到工具执行的完整链路.md"
+    },
+    "art_437f412c-a08a-4f34-bebb-6cb8259dce51": {
+      "collection_id": "col_ba2a580e-e1a",
+      "directory": "stablyai@orca/02-orca-如何把一个开发任务变成独立工作区-代理进程和可追踪的结果",
+      "slug": "orca-如何把一个开发任务变成独立工作区-代理进程和可追踪的结果",
+      "title": "Orca 如何把一个开发任务变成独立工作区、代理进程和可追踪的结果",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-20T21:29:43.367Z",
+      "updated_at": "2026-10-20T21:29:43.367Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/02-orca-如何把一个开发任务变成独立工作区-代理进程和可追踪的结果.md",
+      "research_path": "stablyai@orca/02-orca-如何把一个开发任务变成独立工作区-代理进程和可追踪的结果.md"
+    },
+    "art_d27cd525-dd42-4109-a60d-aaf95f4e9707": {
+      "collection_id": "col_ba2a580e-e1a",
+      "directory": "yetone@cumora/02-cumora-保存成功以后-实时通知-重复投递与断线补读的边界",
+      "slug": "cumora-保存成功以后-实时通知-重复投递与断线补读的边界",
+      "title": "Cumora 保存成功以后：实时通知、重复投递与断线补读的边界",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-20T21:29:43.367Z",
+      "updated_at": "2026-10-20T21:29:43.367Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/02-cumora-保存成功以后-实时通知-重复投递与断线补读的边界.md",
+      "research_path": "yetone@cumora/02-cumora-保存成功以后-实时通知-重复投递与断线补读的边界.md"
+    },
+    "art_fa4c2f6c-9cd0-4cde-a0d9-ef4893f38345": {
+      "collection_id": "col_ba2a580e-e1a",
+      "directory": "superset-sh@superset/02-superset-自动化如何防止重复派发-从-github-事件到代理启动的可靠性边界",
+      "slug": "superset-自动化如何防止重复派发-从-github-事件到代理启动的可靠性边界",
+      "title": "Superset 自动化如何防止重复派发：从 GitHub 事件到代理启动的可靠性边界",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-20T21:29:43.367Z",
+      "updated_at": "2026-10-20T21:29:43.367Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/02-superset-自动化如何防止重复派发-从-github-事件到代理启动的可靠性边界.md",
+      "research_path": "superset-sh@superset/02-superset-自动化如何防止重复派发-从-github-事件到代理启动的可靠性边界.md"
+    },
+    "art_f6950e54-6e92-4372-aac9-3b4931689226": {
+      "collection_id": "col_ba2a580e-e1a",
+      "directory": "akitaonrails@ai-memory/02-ai-memory-的页面改了一半会怎样-文件-索引与删除恢复的真实边界",
+      "slug": "ai-memory-的页面改了一半会怎样-文件-索引与删除恢复的真实边界",
+      "title": "ai-memory 的页面改了一半会怎样：文件、索引与删除恢复的真实边界",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-20T21:29:43.367Z",
+      "updated_at": "2026-10-20T21:29:43.367Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/02-ai-memory-的页面改了一半会怎样-文件-索引与删除恢复的真实边界.md",
+      "research_path": "akitaonrails@ai-memory/02-ai-memory-的页面改了一半会怎样-文件-索引与删除恢复的真实边界.md"
+    },
+    "art_1257b965-0e99-4072-b90f-e63668b5ddca": {
+      "collection_id": "col_ba2a580e-e1a",
+      "directory": "xai-org@grok-build/02-grok-build-回退对话时-为什么代码还在-从请求编号到压缩历史重建",
+      "slug": "grok-build-回退对话时-为什么代码还在-从请求编号到压缩历史重建",
+      "title": "Grok Build 回退对话时，为什么代码还在：从请求编号到压缩历史重建",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-20T21:29:43.367Z",
+      "updated_at": "2026-10-20T21:29:43.367Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/02-grok-build-回退对话时-为什么代码还在-从请求编号到压缩历史重建.md",
+      "research_path": "xai-org@grok-build/02-grok-build-回退对话时-为什么代码还在-从请求编号到压缩历史重建.md"
+    },
+    "art_0fd09e02-f30d-409d-b56e-fbd359254613": {
+      "collection_id": "col_ba2a580e-e1a",
+      "directory": "stablyai@orca/03-orca-如何交付代理结果-断线重读-整批确认与协调者接管",
+      "slug": "orca-如何交付代理结果-断线重读-整批确认与协调者接管",
+      "title": "Orca 如何交付代理结果：断线重读、整批确认与协调者接管",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-20T21:29:43.367Z",
+      "updated_at": "2026-10-20T21:29:43.367Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/03-orca-如何交付代理结果-断线重读-整批确认与协调者接管.md",
+      "research_path": "stablyai@orca/03-orca-如何交付代理结果-断线重读-整批确认与协调者接管.md"
     }
   },
   "collection_locations": {
@@ -23,11 +183,29 @@
       "article_ids": [
         "art_c17587a6-f73d-4f71-b32b-35a869ad0db6"
       ]
+    },
+    "col_ba2a580e-e1a": {
+      "path": "docs/repository-research/batches/20261021-01.md",
+      "date_sequence": "20261021-01",
+      "created_at": "2026-10-20T21:29:43.367Z",
+      "article_ids": [
+        "art_9f122dd8-1bed-4c23-b36f-a1785a4c949a",
+        "art_b4ba666f-d204-43c0-9f9a-5de284c8ca55",
+        "art_61975fb8-73eb-4075-952b-ec5e83df5a12",
+        "art_2e66336d-4648-41ca-b583-67b9107ab616",
+        "art_437f412c-a08a-4f34-bebb-6cb8259dce51",
+        "art_d27cd525-dd42-4109-a60d-aaf95f4e9707",
+        "art_fa4c2f6c-9cd0-4cde-a0d9-ef4893f38345",
+        "art_f6950e54-6e92-4372-aac9-3b4931689226",
+        "art_1257b965-0e99-4072-b90f-e63668b5ddca",
+        "art_0fd09e02-f30d-409d-b56e-fbd359254613"
+      ]
     }
   },
   "delivered_batches": [
     "batch_7952a338-040f-479f-aeff-c883e836211e",
-    "repair_f058c4bc-b756-49cb-9a5c-42969c9a4823"
+    "repair_f058c4bc-b756-49cb-9a5c-42969c9a4823",
+    "batch_ca872c48-a7cf-45ab-82a1-74a6d71fe961"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -51,9 +229,149 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "c9cafac3a1911f4ab77f26af32e88e242e89f1fc946e141bffeab61dfd007c45",
+      "sha256": "d8b8ede4c3a9b9f0db0508f6faf7c0e3125bc04c00bdc60a9dab8f655cf110ed",
       "media_type": "text/markdown",
-      "size": 1703
+      "size": 14460
+    },
+    "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
+      "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
+      "media_type": "text/markdown",
+      "size": 31079
+    },
+    "docs/repository-research/yetone@cumora/assets/01-cumora-如何把团队消息变成-agent-的协作行动/architecture.svg": {
+      "sha256": "b97db6c93506eadf2ee5ec337e0923a74e3812794491431caf39a7729c38c6f7",
+      "media_type": "image/svg+xml",
+      "size": 5933
+    },
+    "docs/repository-research/yetone@cumora/assets/01-cumora-如何把团队消息变成-agent-的协作行动/message-flow.svg": {
+      "sha256": "d5d9851ece039411f5dc1ac3d87ed859ae60aed16eccf09f61bd020aa2643793",
+      "media_type": "image/svg+xml",
+      "size": 4007
+    },
+    "docs/repository-research/superset-sh@superset/01-superset-如何把并行改代码变成可管理的工作区-从界面到-git-与终端进程.md": {
+      "sha256": "ff3f59629bad1e42ce567d9f432328d2933259f741fd8cbf491f302e8badd8b9",
+      "media_type": "text/markdown",
+      "size": 25573
+    },
+    "docs/repository-research/superset-sh@superset/assets/01-superset-如何把并行改代码变成可管理的工作区-从界面到-git-与终端进程/architecture.svg": {
+      "sha256": "0246a1e39983740ba54cb0194fafbd5d2c37b67c95d09aeae929398822c6e17b",
+      "media_type": "image/svg+xml",
+      "size": 5828
+    },
+    "docs/repository-research/superset-sh@superset/assets/01-superset-如何把并行改代码变成可管理的工作区-从界面到-git-与终端进程/create-flow.svg": {
+      "sha256": "8e136194354bcf8f29a5b9cb567dd30181c9f5c901f313b4b07576f7d859de58",
+      "media_type": "image/svg+xml",
+      "size": 4476
+    },
+    "docs/repository-research/akitaonrails@ai-memory/01-ai-memory-如何让不同编程-agent-接着工作-从事件采集到知识检索与会话交接.md": {
+      "sha256": "010d7bc1c9d23392b098f866aa69393de979640ada34967611df23f3fb75acc6",
+      "media_type": "text/markdown",
+      "size": 34300
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/01-ai-memory-如何让不同编程-agent-接着工作-从事件采集到知识检索与会话交接/architecture.svg": {
+      "sha256": "78bc368f067b49152cac314fc32313b4c57b104df2d8b98b24b9c9c1ee27bb3d",
+      "media_type": "image/svg+xml",
+      "size": 6357
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/01-ai-memory-如何让不同编程-agent-接着工作-从事件采集到知识检索与会话交接/handoff-flow.svg": {
+      "sha256": "10a017841b0500d3ca6827c1d4fda1949b155548f45f8d32fe0dcb390c25300c",
+      "media_type": "image/svg+xml",
+      "size": 5192
+    },
+    "docs/repository-research/xai-org@grok-build/01-grok-build-如何把一句修复请求变成代码修改-从终端界面到工具执行的完整链路.md": {
+      "sha256": "e782f87a27f12f0612abb858dc6f74773589153bfa1a3b4b6a4cdca1c2dd005b",
+      "media_type": "text/markdown",
+      "size": 31548
+    },
+    "docs/repository-research/xai-org@grok-build/assets/01-grok-build-如何把一句修复请求变成代码修改-从终端界面到工具执行的完整链路/architecture.svg": {
+      "sha256": "f5464af575cbc87b2fbae350984531dc6f0d62eeefb4607df61228527ec0ac99",
+      "media_type": "image/svg+xml",
+      "size": 4895
+    },
+    "docs/repository-research/xai-org@grok-build/assets/01-grok-build-如何把一句修复请求变成代码修改-从终端界面到工具执行的完整链路/tool-roundtrip.svg": {
+      "sha256": "a52252f510d18e750349fe98a02a1244bf0698507d118473fe893271b6b55323",
+      "media_type": "image/svg+xml",
+      "size": 3930
+    },
+    "docs/repository-research/stablyai@orca/02-orca-如何把一个开发任务变成独立工作区-代理进程和可追踪的结果.md": {
+      "sha256": "52828decff5f2ad7c0c0a5504fb80bbc4374bdba233e1608600b75569d9c6cd1",
+      "media_type": "text/markdown",
+      "size": 27592
+    },
+    "docs/repository-research/stablyai@orca/assets/02-orca-如何把一个开发任务变成独立工作区-代理进程和可追踪的结果/orca-launch-path.svg": {
+      "sha256": "15880e6f4bdce69cecd3de5653ed79f6240a6ac724a0d95d004fb566aad5a7d9",
+      "media_type": "image/svg+xml",
+      "size": 6160
+    },
+    "docs/repository-research/stablyai@orca/assets/02-orca-如何把一个开发任务变成独立工作区-代理进程和可追踪的结果/orca-runtime-map.svg": {
+      "sha256": "b6912b53871287be943fd1c0cc5f731533f4d6b8b5d5038a85ce4d1116e791dc",
+      "media_type": "image/svg+xml",
+      "size": 7119
+    },
+    "docs/repository-research/yetone@cumora/02-cumora-保存成功以后-实时通知-重复投递与断线补读的边界.md": {
+      "sha256": "bb68ddac0deb68af5d7e206396d2bd6ce84cb2715343bbc0f42b272ae37f18f9",
+      "media_type": "text/markdown",
+      "size": 18679
+    },
+    "docs/repository-research/yetone@cumora/assets/02-cumora-保存成功以后-实时通知-重复投递与断线补读的边界/cache-gap.svg": {
+      "sha256": "04cd2133364eec6d4ed91f7c918a0188e93a34fde2480318ee3c076df0815b0e",
+      "media_type": "image/svg+xml",
+      "size": 3315
+    },
+    "docs/repository-research/yetone@cumora/assets/02-cumora-保存成功以后-实时通知-重复投递与断线补读的边界/delivery-boundaries.svg": {
+      "sha256": "7a46a6d52cb28a3bb832597b4719b9129dec4f256db0a892733d9a41aeb3d24e",
+      "media_type": "image/svg+xml",
+      "size": 3629
+    },
+    "docs/repository-research/superset-sh@superset/02-superset-自动化如何防止重复派发-从-github-事件到代理启动的可靠性边界.md": {
+      "sha256": "df2cb438469bac248ccf6ccd3a605374f80a8b26feb445154e666d2a1040a517",
+      "media_type": "text/markdown",
+      "size": 24343
+    },
+    "docs/repository-research/superset-sh@superset/assets/02-superset-自动化如何防止重复派发-从-github-事件到代理启动的可靠性边界/automation-handoff.svg": {
+      "sha256": "5255918d6b914f1731f6f12d870d6a3d8e573c40e6184dfccafb8443c98bb63f",
+      "media_type": "image/svg+xml",
+      "size": 3502
+    },
+    "docs/repository-research/akitaonrails@ai-memory/02-ai-memory-的页面改了一半会怎样-文件-索引与删除恢复的真实边界.md": {
+      "sha256": "9f791a79ff43d08bab03a4d94174c2deab5dcee3850c4b7955a9607322b1fddf",
+      "media_type": "text/markdown",
+      "size": 25802
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/02-ai-memory-的页面改了一半会怎样-文件-索引与删除恢复的真实边界/tombstone-revival.svg": {
+      "sha256": "a297b6969c7bc6e6f07e12cecc41947b41ba7fc89012699d32c3c1487d64fa14",
+      "media_type": "image/svg+xml",
+      "size": 2726
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/02-ai-memory-的页面改了一半会怎样-文件-索引与删除恢复的真实边界/write-interruption.svg": {
+      "sha256": "80c7a2a2804cefa48ae5ec84853867a36be623e9d01e833808f84df48eccc867",
+      "media_type": "image/svg+xml",
+      "size": 3289
+    },
+    "docs/repository-research/xai-org@grok-build/02-grok-build-回退对话时-为什么代码还在-从请求编号到压缩历史重建.md": {
+      "sha256": "7e0af699f2b99f54ee8589ff7936a234d8859372a8b1cda7f7241253addc763b",
+      "media_type": "text/markdown",
+      "size": 21510
+    },
+    "docs/repository-research/xai-org@grok-build/assets/02-grok-build-回退对话时-为什么代码还在-从请求编号到压缩历史重建/rewind-after-compaction.svg": {
+      "sha256": "18e2b5e57a5d6d0ea6728e1649a57333ab8db2b631c9790044b56949c60205e6",
+      "media_type": "image/svg+xml",
+      "size": 3894
+    },
+    "docs/repository-research/stablyai@orca/03-orca-如何交付代理结果-断线重读-整批确认与协调者接管.md": {
+      "sha256": "23f51f12c7f59682383299299297047c81a8ed8a0cf694bf6d2c0da9d20c192d",
+      "media_type": "text/markdown",
+      "size": 21336
+    },
+    "docs/repository-research/stablyai@orca/assets/03-orca-如何交付代理结果-断线重读-整批确认与协调者接管/orca-mailbox-handoff.svg": {
+      "sha256": "c668764762f7518233e58058a21dcfe4780119962fd127218774ce5e53ea3d64",
+      "media_type": "image/svg+xml",
+      "size": 4189
+    },
+    "docs/repository-research/batches/20261021-01.md": {
+      "sha256": "3afc50f5735c7b2926a71f8188659f8344b8c91371fb41c0c019b6d525609e2b",
+      "media_type": "text/markdown",
+      "size": 6373
     }
   }
 }

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720">
+<title>一次压缩之后，两个回退目标为什么走不同的恢复路径</title>
+<desc>假设请求零到四之后发生压缩，随后执行五和六。回退到三要从原始文本事件重建零到二；回退到六要加载压缩检查点再接上请求五。两条路径均不回退磁盘文件。</desc>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#506979" stroke-width="1.5"/></marker></defs>
+<rect width="1120" height="720" fill="#fbfaf6"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#243946">
+<text x="42" y="48" font-size="27" font-weight="600">压缩后，回退靠什么重建对话？</text>
+<text x="42" y="82" font-size="18" fill="#5c6e77">假设示意 · Pn 表示编号为 n 的请求及其回复；回退到 N 会删除 N 及之后的轮次</text>
+<text x="42" y="130" font-size="20" font-weight="600">事件记录：保留发生顺序</text>
+<path d="M55 177H1060" stroke="#c3cbc9" stroke-width="3" marker-end="url(#a)"/>
+<circle cx="80" cy="177" r="25" fill="#dce9e6" stroke="#4d8174"/><text x="80" y="184" font-size="20" text-anchor="middle">P0</text><circle cx="185" cy="177" r="25" fill="#dce9e6" stroke="#4d8174"/><text x="185" y="184" font-size="20" text-anchor="middle">P1</text><circle cx="290" cy="177" r="25" fill="#dce9e6" stroke="#4d8174"/><text x="290" y="184" font-size="20" text-anchor="middle">P2</text><circle cx="395" cy="177" r="25" fill="#dce9e6" stroke="#4d8174"/><text x="395" y="184" font-size="20" text-anchor="middle">P3</text><circle cx="500" cy="177" r="25" fill="#dce9e6" stroke="#4d8174"/><text x="500" y="184" font-size="20" text-anchor="middle">P4</text><path d="M626 153L651 177L626 201L601 177Z" fill="#e8d7b4" stroke="#a07b35"/>
+<text x="626" y="232" font-size="18" text-anchor="middle">检查点：压缩发生在 5</text>
+<circle cx="790" cy="177" r="25" fill="#dce9e6" stroke="#4d8174"/><text x="790" y="184" font-size="20" text-anchor="middle">P5</text>
+<circle cx="950" cy="177" r="25" fill="#dce9e6" stroke="#4d8174"/><text x="950" y="184" font-size="20" text-anchor="middle">P6</text>
+<text x="42" y="278" font-size="19">当前模型上下文已变成：会话前缀 ＋ 压缩后的历史 ＋ P5 ＋ P6</text>
+<path d="M42 302H1078" stroke="#d9dcd5"/>
+<text x="42" y="345" font-size="22" font-weight="600" fill="#2b7464">回退到 3：目标早于压缩点</text>
+<text x="42" y="378" font-size="18">跳过这个压缩历史，从文本事件重建</text>
+<path d="M485 366H558" stroke="#506979" stroke-width="2" marker-end="url(#a)"/>
+<text x="588" y="376" font-size="22">会话前缀 ＋ P0 ＋ P1 ＋ P2</text>
+<text x="588" y="410" font-size="18" fill="#5c6e77">不保留摘要；清除对应压缩标记</text>
+<text x="42" y="464" font-size="22" font-weight="600" fill="#926722">回退到 6：目标晚于压缩点</text>
+<text x="42" y="497" font-size="18">加载检查点，接上之后的文本事件</text>
+<path d="M485 485H558" stroke="#506979" stroke-width="2" marker-end="url(#a)"/>
+<text x="588" y="495" font-size="22">检查点中的压缩历史 ＋ P5</text>
+<text x="588" y="529" font-size="18" fill="#5c6e77">仍依赖该检查点；P6 被删除</text>
+<path d="M42 561H1078" stroke="#d9dcd5"/>
+<text x="42" y="600" font-size="21" font-weight="600">两条路径共同的边界</text>
+<text x="42" y="635" font-size="19">TUI 发送 conversation_only：磁盘文件保持当前内容。</text>
+<text x="42" y="667" font-size="19">重建对话不等于逐项还原工具调用、图片与外部副作用。</text>
+<text x="42" y="700" font-size="15" fill="#6e797d">源码依据：rewind.rs / needs_compaction_replay；helpers/replay.rs / replay_to_prompt；effects/mod.rs / rewind_execute_params</text>
+</g></svg>

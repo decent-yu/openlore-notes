@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="850" viewBox="0 0 1120 850" role="img">
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#345773"/></marker><marker id="b" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#328274"/></marker></defs>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203047;font-size:20px}.title{font-size:30px;font-weight:650}.head{font-size:23px;font-weight:600}.small{font-size:17px;fill:#566679}.code{font-family:Menlo,monospace;font-size:17px}.arrow{fill:none;stroke:#345773;stroke-width:2.5;marker-end:url(#a)}.return{fill:none;stroke:#328274;stroke-width:2.5;marker-end:url(#b)}.dash{stroke-dasharray:7 5}</style>
+<rect width="1120" height="850" fill="#fcfcf9"/>
+<text x="40" y="48" class="title">Grok Build：界面、决策与执行在哪里发生</text>
+<text x="40" y="80" class="small">实线表示请求或调用；绿色表示结果。主图画本地执行，右侧标出外部边界。</text>
+<rect x="30" y="110" width="780" height="594" rx="12" fill="#f5f7f9" stroke="#8d9eaf"/>
+<text x="48" y="143" class="head">本机：前台界面 + 内嵌运行时，或连接可选的 leader 后台进程</text>
+<rect x="50" y="165" width="330" height="105" rx="8" fill="#e7eef8" stroke="#a3b1bf"/>
+<text x="68" y="199" class="head">终端界面 / 无界面输出</text>
+<text x="68" y="230" class="">pager：输入、交互、呈现</text>
+<text x="68" y="254" class="small">编辑器也可通过 ACP 接入</text>
+<rect x="443" y="165" width="345" height="105" rx="8" fill="#fff4d9" stroke="#a3b1bf"/>
+<text x="461" y="199" class="head">Agent 入口：MvpAgent</text>
+<text x="461" y="230" class="">建会话、装配配置与能力</text>
+<text x="461" y="254" class="small">内嵌通道；leader 路径用本地 IPC</text>
+<path d="M380 196H443" class="arrow"/>
+<text x="385" y="184" class="small">ACP</text>
+<path d="M443 245H380" class="return"/>
+<rect x="50" y="327" width="738" height="145" rx="8" fill="#e5f2ed" stroke="#87ac9f"/>
+<text x="70" y="361" class="head">SessionActor：每个会话自己的执行循环</text>
+<text x="70" y="395" class="">收取输入 → 组装上下文 → 请求模型 → 调工具 → 再请求模型</text>
+<text x="70" y="430" class="small">ChatStateActor 管对话；Sampler 管模型请求与流式返回</text>
+<text x="70" y="455" class="small">会话使用独立线程上的 Tokio 运行环境</text>
+<path d="M615 270V327" class="arrow"/>
+<rect x="50" y="525" width="338" height="145" rx="8" fill="#f0eaf7" stroke="#a3b1bf"/>
+<text x="70" y="560" class="head">WorkspaceOps + 工具集合</text>
+<text x="70" y="593" class="">按会话找到已注册工具</text>
+<text x="70" y="622" class="">参数映射、文件与终端适配器</text>
+<text x="70" y="650" class="small">可委托给具备能力的 ACP 客户端</text>
+<path d="M218 472V525" class="arrow"/>
+<path d="M362 525V472" class="return"/>
+<rect x="444" y="525" width="344" height="145" rx="8" fill="#f6efe3" stroke="#a3b1bf"/>
+<text x="464" y="560" class="head">会话记录与文件状态</text>
+<text x="464" y="593" class="">对话、界面更新、文件快照</text>
+<text x="464" y="622" class="">支持恢复、回放和受限回退</text>
+<text x="464" y="650" class="small">持久化与实际文件不是同一份状态</text>
+<path d="M616 472V525" class="arrow"/>
+<rect x="848" y="327" width="245" height="145" rx="8" fill="#fff4d9" stroke="#a3b1bf"/>
+<text x="868" y="364" class="head">模型服务</text>
+<text x="868" y="398" class="">网络请求 / 流式响应</text>
+<text x="868" y="432" class="small">推理发生在服务端</text>
+<text x="868" y="457" class="small">本仓库是客户端运行时</text>
+<path d="M788 375H848" class="arrow"/>
+<path d="M848 427H788" class="return"/>
+<rect x="848" y="525" width="245" height="145" rx="8" fill="#f0eaf7" stroke="#a3b1bf"/>
+<text x="868" y="562" class="head">MCP 服务</text>
+<text x="868" y="595" class="">外部工具与数据源</text>
+<text x="868" y="628" class="">本地子进程或网络请求</text>
+<text x="868" y="654" class="small">握手后注册到工具集合</text>
+<path d="M388 600H416V720H826V600H848" class="arrow"/>
+<path d="M220 670V737" class="arrow"/>
+<path d="M616 670V737" class="arrow"/>
+<rect x="50" y="738" width="738" height="73" rx="8" fill="#fff" stroke="#a3b1bf"/>
+<text x="70" y="769" class="">本机资源：项目文件、子进程、会话目录</text>
+<text x="70" y="796" class="small">操作系统沙箱按配置约束访问；应用层权限决定是否批准某次调用。</text>
+<text x="848" y="730" class="head">部署边界</text>
+<text x="848" y="763" class="">无需为普通本地路径</text>
+<text x="848" y="790" class="small">先部署一个工作区服务。</text>
+</svg>

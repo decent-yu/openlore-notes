@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="620" viewBox="0 0 1080 620">
+<defs><pattern id="h" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0" stroke="#dfc09a" stroke-width="1"/></pattern><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#596b78" stroke-width="1.5"/></marker></defs>
+<rect width="1080" height="620" fill="#fbfaf7"/>
+<g font-family="PingFang SC, Noto Sans CJK SC, sans-serif" fill="#253647">
+<text x="42" y="47" font-size="27" font-weight="650">收到第 300 号，不等于已经收到前 300 条</text>
+<text x="42" y="79" font-size="16" fill="#64707c">假设：断线前缓存 1—80，重连后第 300 号先到；每页读取 80 条。下图区间不按数量比例绘制。</text>
+<text x="42" y="135" font-size="18" font-weight="600">本地缓存</text>
+<rect x="190" y="108" width="220" height="49" rx="5" fill="#d8eadf" stroke="#4e8866"/>
+<text x="270" y="140" font-size="20">1—80</text>
+<rect x="416" y="108" width="473" height="49" rx="5" fill="url(#h)" stroke="#b68a57" stroke-dasharray="5 4"/>
+<text x="535" y="140" font-size="19" fill="#8c663d">81—299：还没有补齐</text>
+<rect x="895" y="108" width="124" height="49" rx="5" fill="#dce9f7" stroke="#6085ac"/>
+<text x="929" y="140" font-size="20">300</text>
+<path d="M410 163V199" stroke="#4e8866" stroke-width="2"/>
+<text x="205" y="223" font-size="17" fill="#3d7352">连续边界停在 80</text>
+<path d="M958 163V199" stroke="#6085ac" stroke-width="2"/>
+<text x="770" y="223" font-size="17" fill="#486b8f">最大序号是 300，但不能作边界</text>
+<path d="M42 251H1038" stroke="#d9ddd9"/>
+<text x="42" y="293" font-size="18" font-weight="600">向前翻页</text>
+<text x="190" y="293" font-size="16" fill="#64707c">先读最新页，若尚未接上 80，就继续读更旧的一页。</text>
+<g font-size="18">
+<text x="70" y="345">第 1 次</text><rect x="190" y="315" width="330" height="47" rx="5" fill="#eaf0f8"/><text x="211" y="345">无 before → 221—300</text><text x="570" y="345" font-size="16">221 ＞ 80，继续</text>
+<path d="M355 367V380" stroke="#596b78" fill="none" />
+<polygon points="355,380 350,372 360,372" fill="#596b78"/><text x="70" y="419">第 2 次</text><rect x="190" y="389" width="330" height="47" rx="5" fill="#eaf0f8"/><text x="211" y="419">before=221 → 141—220</text><text x="570" y="419" font-size="16">141 ＞ 80，继续</text>
+<path d="M355 441V454" stroke="#596b78" fill="none" />
+<polygon points="355,454 350,446 360,446" fill="#596b78"/><text x="70" y="493">第 3 次</text><rect x="190" y="463" width="330" height="47" rx="5" fill="#d8eadf"/><text x="211" y="493">before=141 → 61—140</text><text x="570" y="485" font-size="16">61 ≤ 80，已接上旧缓存</text><text x="570" y="511" font-size="16">只保留缺少的部分；按编号合并</text>
+</g>
+<path d="M190 538H1019" stroke="#4e8866" stroke-width="3"/>
+<text x="190" y="572" font-size="18" fill="#3d7352">结果：1—300 连起来；第 300 号的实时副本与拉取副本合为一条。</text>
+<text x="42" y="606" font-size="14" fill="#64707c">依据：messages.ts 的 completeThrough、fetchMessagesSinceCache、mergeFetchedMessages；对应消息历史测试。</text>
+</g></svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="820" viewBox="0 0 1140 820" role="img" aria-labelledby="title desc">
+  <title id="title">会话结束、交接领取与可重复项目简报</title>
+  <desc id="desc">普通非托管会话有实质工作时生成摘要，写入页面后将结束状态和交接一起提交。下一工具启动时先选择交接，再在数据库中领取，只有领取成功才返回正文。响应丢失不等于模型收到。简报可反复生成，可选模型整理不阻塞基本摘要可用。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#436371"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#213b47;font-size:17px}
+      .title{font-size:27px;font-weight:650}.head{font-size:20px;font-weight:600}.small{font-size:15px;fill:#526773}
+      .arrow{fill:none;stroke:#436371;stroke-width:2;marker-end:url(#a)}.box{fill:#fff;stroke:#a3b9c4;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect width="1140" height="820" fill="#fbfaf6"/>
+  <text class="title" x="30" y="43">交接是一次状态转换，简报是一份可重复读取的材料</text>
+  <text class="small" x="30" y="72">代表路径：普通非托管会话，自动创建与领取开启，请求启用项目简报。</text>
+  <path d="M553 111V725" stroke="#d2dbdf" stroke-dasharray="5 6"/>
+  <text x="30" y="124" class="head">上一工具：结束工作</text>
+  <text x="593" y="124" class="head">下一工具：开始工作</text>
+  <rect x="30" y="149" width="480" height="67" rx="7" class="box"/>
+  <text x="50" y="177" class="head">收到真正的 SessionEnd</text><text x="50" y="202" class="small">Stop 与上下文压缩不等于会话结束</text>
+  <path class="arrow" d="M270 216V254"/>
+  <rect x="30" y="256" width="480" height="77" rx="7" class="box"/>
+  <text x="50" y="286" class="head">读取有界摘要数据，生成会话页</text><text x="50" y="314" class="small">有实质工作才生成；没有模型也能执行</text>
+  <path class="arrow" d="M270 333V370"/>
+  <rect x="30" y="372" width="480" height="66" rx="7" class="box"/>
+  <text x="50" y="400" class="head">经 Wiki 写入 Markdown 与页面索引</text><text x="50" y="424" class="small">文件替换 + 数据库更新；失败尝试回滚</text>
+  <path class="arrow" d="M270 438V476"/>
+  <rect x="30" y="478" width="480" height="96" rx="7" fill="#e8f2ec" stroke="#6c9b7d" stroke-width="2"/>
+  <text x="50" y="508" class="head">一个数据库事务</text><text x="50" y="537">标记会话结束及覆盖数量 + 插入 open 交接</text><text x="50" y="560" class="small">事务外再尝试 Git 快照；可选整理任务另行排队</text>
+  <path class="arrow" d="M510 525H568V180H591"/>
+  <rect x="593" y="149" width="517" height="67" rx="7" class="box"/>
+  <text x="613" y="177" class="head">GET /handoff：解析项目和身份</text><text x="613" y="202" class="small">选择有资格领取的交接；组合请求的项目简报</text>
+  <path class="arrow" d="M851 216V254"/>
+  <rect x="593" y="256" width="517" height="96" rx="7" fill="#e8f2ec" stroke="#6c9b7d" stroke-width="2"/>
+  <text x="613" y="286" class="head">事务中复核范围、所有者与来源活跃状态</text><text x="613" y="315">条件更新：open → accepted</text><text x="613" y="339" class="small">同一条交接只允许一个竞争者成功领取</text>
+  <path class="arrow" d="M851 352V388"/>
+  <rect x="593" y="390" width="517" height="77" rx="7" class="box"/>
+  <text x="613" y="419" class="head">领取成功才返回交接正文</text><text x="613" y="446" class="small">项目简报不被“消费”，后续启动仍可重新生成</text>
+  <path class="arrow" d="M851 467V505"/>
+  <rect x="593" y="507" width="517" height="67" rx="7" class="box"/>
+  <text x="613" y="535" class="head">客户端按宿主格式注入上下文</text><text x="613" y="560" class="small">未包含的细节，再用搜索、读页面或原始记录取得</text>
+  <path class="arrow" d="M270 574V615" stroke-dasharray="5 5"/>
+  <rect x="30" y="617" width="480" height="83" rx="7" fill="#eff0f8" stroke="#959cc3"/>
+  <text x="50" y="647" class="head">可选：模型重写</text><text x="50" y="674" class="small">配置提供者并开启相应功能后执行</text><text x="50" y="694" class="small">失败可重试；规则摘要仍然保留</text>
+  <rect x="593" y="617" width="517" height="83" rx="7" fill="#fff1dd" stroke="#bf9c64"/>
+  <text x="613" y="647" class="head">数据库领取 ≠ 模型已读</text><text x="613" y="675" class="small">领取提交后响应仍可能丢失；部分空接收会话可归还，</text><text x="613" y="695" class="small">但这里没有覆盖所有失败的端到端已读确认。</text>
+  <text x="30" y="755" class="head">绿色框的事务各自原子；整张图不是一个跨文件、数据库、Git 与网络的总事务。</text>
+  <text x="30" y="787" class="small">本图省略准入回调的拒绝分支、恢复会话重结束、OpenCode 轮次检查点和托管工作流专门分支。</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="810" viewBox="0 0 1120 810" role="img" aria-label="Cumora 的状态中心与两种执行位置">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#506477"/></marker></defs>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203446}.title{font-size:26px;font-weight:650}.label{font-size:19px;font-weight:600}.body{font-size:16px}.note{font-size:14px;fill:#566a7b}.edge{fill:none;stroke:#506477;stroke-width:2;marker-end:url(#a)}</style>
+<rect width="1120" height="810" fill="#f7f8fa"/>
+<text x="38" y="46" class="title" text-anchor="start">同一套团队状态，两种 Agent 执行位置</text>
+<text x="38" y="74" class="note" text-anchor="start">箭头表示请求或通知方向；模型与执行进程不直接读取 PostgreSQL。</text>
+<rect x="38" y="112" width="260" height="122" rx="9" fill="#fff" stroke="#b8c6d1"/>
+<text x="56" y="143" class="label" text-anchor="start">人使用的客户端</text>
+<text x="56" y="173" class="body" text-anchor="start">React 共享界面</text>
+<text x="56" y="198" class="body" text-anchor="start">桌面 / 网页 / iOS / Android</text>
+<rect x="362" y="112" width="395" height="122" rx="9" fill="#e8f1f8" stroke="#b8c6d1"/>
+<text x="380" y="143" class="label" text-anchor="start">应用服务：Express + ws</text>
+<text x="380" y="173" class="body" text-anchor="start">/api：人的请求与团队业务</text>
+<text x="380" y="198" class="body" text-anchor="start">/runtime：Agent 请求；WS：界面通知</text>
+<path d="M298 153H362" class="edge"/>
+<polygon points="362.0,153.0 353.0,149.0 353.0,157.0" fill="#506477"/>
+<text x="308" y="139" class="note" text-anchor="start">HTTP</text>
+<path d="M362 207H298" class="edge"/>
+<polygon points="298.0,207.0 307.0,203.0 307.0,211.0" fill="#506477"/>
+<text x="308" y="225" class="note" text-anchor="start">WS</text>
+<rect x="823" y="112" width="259" height="122" rx="9" fill="#fff3dc" stroke="#b8c6d1"/>
+<text x="841" y="143" class="label" text-anchor="start">PostgreSQL</text>
+<text x="841" y="173" class="body" text-anchor="start">消息、成员、看板、文档</text>
+<text x="841" y="198" class="body" text-anchor="start">Agent 文件、运行记录、outbox</text>
+<path d="M757 171H823" class="edge"/>
+<polygon points="823.0,171.0 814.0,167.0 814.0,175.0" fill="#506477"/>
+<rect x="823" y="300" width="259" height="107" rx="9" fill="#f0ecfa" stroke="#b8c6d1"/>
+<text x="841" y="331" class="label" text-anchor="start">Redis</text>
+<text x="841" y="361" class="body" text-anchor="start">实时广播、唤醒、在线状态</text>
+<text x="841" y="386" class="body" text-anchor="start">短期协作记录</text>
+<path d="M952 234V300" class="edge"/>
+<polygon points="952.0,300.0 948.0,291.0 956.0,291.0" fill="#506477"/>
+<text x="969" y="273" class="note" text-anchor="start">outbox 后台投递</text>
+<rect x="362" y="300" width="395" height="107" rx="9" fill="#e8f1f8" stroke="#b8c6d1"/>
+<text x="380" y="331" class="label" text-anchor="start">唤醒调度器 scheduler</text>
+<text x="380" y="361" class="body" text-anchor="start">查当前成员 → 路由 → 判断执行位置</text>
+<text x="380" y="386" class="body" text-anchor="start">云端分诊 / BYOA 本地分诊</text>
+<path d="M823 350H757" class="edge"/>
+<polygon points="757.0,350.0 766.0,346.0 766.0,354.0" fill="#506477"/>
+<text x="779" y="335" class="note" text-anchor="start">事件</text>
+<path d="M38 456H1082" stroke="#b8c6d1" stroke-dasharray="6 6"/>
+<text x="38" y="482" class="note" text-anchor="start">工作实际发生的位置</text>
+<rect x="38" y="512" width="489" height="187" rx="9" fill="#e8f5ef" stroke="#b8c6d1"/>
+<text x="56" y="543" class="label" text-anchor="start">Cumora 管理的云端 Pod</text>
+<text x="56" y="573" class="body" text-anchor="start">pod-agent 串行处理唤醒 → runAgentTurn</text>
+<text x="56" y="598" class="body" text-anchor="start">模型调用 → bash / 文件工具 → cumora 命令</text>
+<text x="56" y="623" class="body" text-anchor="start">工作区：FUSE → /runtime/fs → agent_workspace</text>
+<text x="56" y="648" class="body" text-anchor="start">编排器通过 kubectl 按需创建 Pod</text>
+<rect x="592" y="512" width="490" height="187" rx="9" fill="#f6eee6" stroke="#b8c6d1"/>
+<text x="610" y="543" class="label" text-anchor="start">用户配对的机器（BYOA）</text>
+<text x="610" y="573" class="body" text-anchor="start">守护进程 AgentRunner → 本地引擎会话</text>
+<text x="610" y="598" class="body" text-anchor="start">默认受限模式：MCP cli 工具 → 可信桥接</text>
+<text x="610" y="623" class="body" text-anchor="start">桥接持有运行令牌 → /runtime/cli</text>
+<text x="610" y="648" class="body" text-anchor="start">模型凭据留在本机；执行依赖主机在线</text>
+<path d="M452 407V440H277V512" class="edge"/>
+<polygon points="277.0,512.0 273.0,503.0 281.0,503.0" fill="#506477"/>
+<text x="290" y="501" class="note" text-anchor="start">SSE 唤醒 / 按需启动</text>
+<path d="M666 407V440H837V512" class="edge"/>
+<polygon points="837.0,512.0 833.0,503.0 841.0,503.0" fill="#506477"/>
+<text x="851" y="501" class="note" text-anchor="start">SSE 唤醒 / 断线后补读</text>
+<path d="M38 590H20V260H460V234" class="edge"/>
+<polygon points="460.0,234.0 456.0,243.0 464.0,243.0" fill="#506477"/>
+<text x="551" y="744" class="body" text-anchor="middle">两条执行路径都经 /runtime 回到服务端，修改共享状态并交付结果。</text>
+<path d="M1082 590H1100V250H710V234" class="edge"/>
+<polygon points="710.0,234.0 706.0,243.0 714.0,243.0" fill="#506477"/>
+<text x="38" y="785" class="note" text-anchor="start">省略邮件、对象存储与推送等外围服务；图中没有把 BYOA 等同于云端 turn 循环。</text>
+</svg>

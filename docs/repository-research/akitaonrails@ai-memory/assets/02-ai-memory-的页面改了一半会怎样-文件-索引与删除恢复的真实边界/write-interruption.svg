@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+<title id="title">页面写入在中断前后的不同结果</title><desc id="desc">文件先替换、数据库后提交。在两步之间发生数据库错误时尝试回滚；进程中断则由后续对账读取现有文件。批量文件逐个替换，可能只完成一部分。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#354b5b" stroke-width="1.5"/></marker></defs>
+<rect width="1100" height="650" fill="#faf9f5"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#203440">
+<text x="40" y="49" font-size="27" font-weight="600">文件先落地，索引随后提交</text>
+<text x="40" y="81" font-size="16" fill="#5d6a71">A、B 表示同一页面的旧版与新版；图示依据写入和对账代码，未进行崩溃实测。</text>
+<path d="M155 139H1030" stroke="#354b5b" stroke-width="2" marker-end="url(#arrow)"/>
+<g font-size="18" text-anchor="middle"><text x="230" y="122">写入前</text><text x="515" y="122">原子替换文件后</text><text x="855" y="122">数据库事务提交后</text></g>
+<rect x="365" y="151" width="312" height="152" fill="#f7e3bb"/>
+<g font-size="18"><text x="40" y="194">磁盘文件</text><text x="40" y="249">数据库最新页</text></g>
+<g font-size="24" text-anchor="middle"><text x="230" y="194">A</text><text x="515" y="194" fill="#056e68">B</text><text x="855" y="194" fill="#056e68">B</text><text x="230" y="249">A</text><text x="515" y="249">A</text><text x="855" y="249" fill="#056e68">B</text></g>
+<text x="521" y="285" font-size="17" text-anchor="middle" fill="#815817">两处暂时不同的窗口</text>
+<path d="M442 303V337H275V357 M605 303V337H830V357" fill="none" stroke="#354b5b" stroke-width="2" marker-end="url(#arrow)"/>
+<g font-size="20" text-anchor="middle" font-weight="600"><text x="275" y="386">数据库返回错误</text><text x="830" y="386">进程突然中断</text></g>
+<g font-size="18" text-anchor="middle"><text x="275" y="420">用内存中的旧文件快照补偿</text><text x="275" y="451">回滚成功 → 文件 A，数据库 A</text><text x="830" y="420">内存快照消失，现有文件 B 留下</text><text x="830" y="451">后续对账成功 → 文件 B，数据库 B</text></g>
+<path d="M40 487H1060" stroke="#c8ccca"/>
+<text x="40" y="526" font-size="21" font-weight="600">批量操作：每个文件完整，不代表整批一起生效</text>
+<g font-size="18"><text x="40" y="562">初始：文件甲 A / 文件乙 A</text><path d="M345 555H410" stroke="#354b5b" marker-end="url(#arrow)"/><text x="430" y="562">只替换甲后中断：甲 B / 乙 A</text><path d="M780 555H835" stroke="#354b5b" marker-end="url(#arrow)"/><text x="855" y="562">对账按此状态入库</text></g>
+<text x="40" y="608" font-size="16" fill="#5d6a71">恢复前提：监听器启用、项目范围可解析、页面可读且解析与入库成功；不是固定时限承诺。</text>
+<path d="M1022 133L1030 139L1022 145 M270 350L275 357L280 350 M825 350L830 357L835 350 M402 550L410 555L402 560 M827 550L835 555L827 560" fill="none" stroke="#354b5b" stroke-width="2"/></g></svg>

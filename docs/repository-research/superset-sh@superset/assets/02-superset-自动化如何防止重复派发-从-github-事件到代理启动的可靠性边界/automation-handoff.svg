@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="820" viewBox="0 0 1100 820">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3f6076"/></marker>
+    <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203745;font-size:17px}.title{font-size:26px;font-weight:600}.head{font-size:19px;font-weight:600}.small{font-size:15px;fill:#536b78}.call{stroke:#3f6076;stroke-width:2;fill:none}.life{stroke:#b9c9d1;stroke-width:1.5;stroke-dasharray:5 6}.note{fill:#855323}.num{font-weight:600;fill:#237669}</style>
+  </defs>
+  <rect width="1100" height="820" fill="#fbfcfa"/>
+  <text x="40" y="45" class="title">一次 GitHub 事件，怎样交到执行主机</text>
+  <text x="40" y="75" class="small">按源码调用顺序示意；消息送达可与入口后续记账交错，图中不表示耗时比例。</text>
+  <rect x="40" y="101" width="1020" height="48" rx="6" fill="#e9f0f2"/>
+  <text x="85" y="132" class="head">接收与派发接口</text><text x="402" y="132" class="head">PostgreSQL 数据库</text><text x="688" y="132" class="head">QStash 消息服务</text><text x="943" y="132" class="head">执行主机</text>
+  <path d="M170 158V694M480 158V694M755 158V694M990 158V694" class="life"/>
+  <path d="M170 193H480" class="call"/><text x="196" y="181">写入 automation_events</text>
+  <text x="500" y="201" class="num">① 事件已记录</text>
+  <path d="M170 252H755" class="call"/><text x="223" y="241">匹配触发器 → 发布 triggerId + eventId</text>
+  <path d="M170 301H480" class="call"/><text x="195" y="289">写事件 dispatchedAt</text><text x="500" y="308" class="small">只表示交接已处理</text>
+  <path d="M755 360H170" class="call"/><text x="288" y="349">消息调用 dispatch 接口</text>
+  <path d="M170 418H480" class="call"/><text x="194" y="405">插入唯一运行：dispatching</text>
+  <text x="500" y="425" class="num">② 运行已占位</text>
+  <path d="M170 487H990" class="call"/><text x="221" y="475">经中继创建 / 选择工作区，再调用 agents.run</text>
+  <path d="M990 543H170" class="call"/><text x="522" y="533">返回会话编号</text>
+  <path d="M170 606H480" class="call"/><text x="194" y="594">更新运行：dispatched</text>
+  <text x="500" y="614" class="num">③ 主机调用已返回</text>
+  <text x="911" y="588" class="small">代理独立运行</text><text x="911" y="613" class="small">尚未验收结果</text>
+  <rect x="40" y="704" width="1020" height="85" rx="6" fill="#fff1df"/>
+  <text x="59" y="731" class="note">三个中断窗口，三种后果</text>
+  <text x="59" y="758" class="small">① 后发布失败：扫描事件补交。</text>
+  <text x="398" y="758" class="small">② 后进程中断：重送遇到冲突。</text>
+  <text x="743" y="758" class="small">③ 前响应丢失：代理可能已启动。</text>
+  <text x="59" y="781" class="small">数据库记录、消息发布、主机进程并不处于同一个事务中。</text>
+<path d="M480 193L470 188L470 198Z" fill="#3f6076"/>
+<path d="M755 252L745 247L745 257Z" fill="#3f6076"/>
+<path d="M480 301L470 296L470 306Z" fill="#3f6076"/>
+<path d="M170 360L180 355L180 365Z" fill="#3f6076"/>
+<path d="M480 418L470 413L470 423Z" fill="#3f6076"/>
+<path d="M990 487L980 482L980 492Z" fill="#3f6076"/>
+<path d="M170 543L180 538L180 548Z" fill="#3f6076"/>
+<path d="M480 606L470 601L470 611Z" fill="#3f6076"/>
+</svg>

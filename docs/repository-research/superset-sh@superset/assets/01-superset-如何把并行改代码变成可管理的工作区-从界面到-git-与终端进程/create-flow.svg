@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="850" viewBox="0 0 1120 850" role="img" aria-labelledby="title desc">
+<title id="title">从点击创建到看到代理工作</title><desc id="desc">以新建 worktree 和单个终端代理为例，展示界面先订阅再入队、主机创建 Git 目录和保存记录、守护进程启动 shell，随后创建结果和代理事件分别回到界面。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#3a6476"/></marker></defs>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#183546;font-size:16px}.title{font-size:26px;font-weight:650}.head{font-size:18px;font-weight:600}.small{font-size:14px;fill:#4c6876}.lane{stroke:#c3d1d8;stroke-width:2;stroke-dasharray:5 6}.arrow{fill:none;stroke:#3a6476;stroke-width:2}.reply{stroke-dasharray:5 4}</style>
+<rect width="1120" height="850" fill="#fafbfc"/><text x="28" y="43" class="title">一次创建，三种不同的结果</text><text x="28" y="71" class="small">示例：新建 worktree，并启动一个终端代理；时间方向向下，不表示实际耗时。</text>
+<rect x="28" y="94" width="190" height="46" rx="7" fill="#dfeef5"/><text x="63" y="123" class="head">桌面界面</text>
+<rect x="258" y="94" width="235" height="46" rx="7" fill="#dceee9"/><text x="282" y="123" class="head">主机服务 + host.db</text>
+<rect x="535" y="94" width="145" height="46" rx="7" fill="#e8edf1"/><text x="557" y="123" class="head">Git / 目录</text>
+<rect x="726" y="94" width="160" height="46" rx="7" fill="#fff0d9"/><text x="745" y="123" class="head">终端守护进程</text>
+<rect x="930" y="94" width="160" height="46" rx="7" fill="#fff0d9"/><text x="950" y="123" class="head">shell / 代理</text>
+<path d="M123 148V790M376 148V790M608 148V790M806 148V790M1010 148V790" class="lane"/>
+<path d="M123 185H376" class="arrow"/><text x="134" y="174">① 订阅创建结果事件</text>
+<path d="M123 235H376" class="arrow"/><text x="134" y="224">② createEnqueued(id, …)</text>
+<path d="M376 282H123" class="arrow reply"/><text x="134" y="271">收到 workspaceId：请求已受理</text>
+<path d="M376 335H608" class="arrow"/><text x="390" y="323">③ 准备分支与 worktree</text>
+<path d="M608 383H376" class="arrow reply"/><text x="390" y="372">核对实际检出结果</text>
+<path d="M376 414H460V448H376" class="arrow"/><text x="480" y="435">④ 写入 SQLite；广播工作区变化</text>
+<path d="M376 495H806" class="arrow"/><text x="401" y="483">⑤ open：shell、当前目录、环境与尺寸</text>
+<path d="M806 538H1010" class="arrow"/><text x="825" y="527">启动 shell</text>
+<path d="M376 580H1010" class="arrow"/><text x="405" y="568">经守护进程输入代理命令；等待 shell 可接收输入</text>
+<path d="M376 625H123" class="arrow reply"/><text x="134" y="614">⑥ settled：工作区与启动结果</text>
+<path d="M123 672H376" class="arrow"/><text x="135" y="660">连接终端 WebSocket</text>
+<path d="M376 684H806" class="arrow"/><text x="430" y="674">主机服务订阅守护进程输出</text>
+<path d="M1010 720H376" class="arrow reply"/><text x="402" y="708">⑦ 代理 hook 报告开始、等待授权或本轮结束</text>
+<path d="M376 766H123" class="arrow reply"/><text x="134" y="754">广播生命周期事件，更新状态提示</text>
+<rect x="28" y="803" width="1062" height="33" rx="6" fill="#e9eef2"/><text x="43" y="825" class="small">已受理 ≠ 已完成创建；已创建会话 ≠ 初始化已完成；代理本轮结束 ≠ 代码已通过测试或合并。</text>
+<polygon points="376,185 368,189 368,181" fill="#416176"/>
+<polygon points="376,235 368,239 368,231" fill="#416176"/>
+<polygon points="123,282 131,278 131,286" fill="#416176"/>
+<polygon points="608,335 600,339 600,331" fill="#416176"/>
+<polygon points="376,383 384,379 384,387" fill="#416176"/>
+<polygon points="376,448 384,444 384,452" fill="#416176"/>
+<polygon points="806,495 798,499 798,491" fill="#416176"/>
+<polygon points="1010,538 1002,542 1002,534" fill="#416176"/>
+<polygon points="1010,580 1002,584 1002,576" fill="#416176"/>
+<polygon points="123,625 131,621 131,629" fill="#416176"/>
+<polygon points="376,672 368,676 368,668" fill="#416176"/>
+<polygon points="806,684 798,688 798,680" fill="#416176"/>
+<polygon points="376,720 384,716 384,724" fill="#416176"/>
+<polygon points="123,766 131,762 131,770" fill="#416176"/>
+</svg>
