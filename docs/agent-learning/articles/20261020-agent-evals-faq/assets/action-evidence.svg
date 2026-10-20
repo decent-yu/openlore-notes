@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="570" viewBox="0 0 1100 570" role="img" aria-labelledby="title desc">
+  <title id="title">同一次旅行预订，从三类证据得到不同判断</title>
+  <desc id="desc">假设用户把出发日期从二十一日改到二十二日，要求确认前不付款。智能体查询正确日期却直接付款，最后回复预订成功。回复和订单日期可以正确，付款前未获确认仍然违反要求。</desc>
+  <rect width="1100" height="570" rx="20" fill="#f8fafc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#14283f">
+    <text x="40" y="50" font-size="27" font-weight="700">说对了日期，仍可能做错事</text>
+    <text x="40" y="81" font-size="17" fill="#536579">假设例子 · 沿时间线读一遍，再看下方三类证据</text>
+    <path d="M78 157H1026" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M1027 157 1017 151 1017 163Z" fill="#64748b"/>
+    <g fill="#ffffff" stroke="#cbd5e1" stroke-width="2">
+      <circle cx="98" cy="157" r="10"/><circle cx="304" cy="157" r="10"/><circle cx="510" cy="157" r="10"/>
+      <circle cx="716" cy="157" r="10" fill="#fff1f2" stroke="#be3455"/><circle cx="922" cy="157" r="10"/>
+    </g>
+    <g font-size="18" font-weight="600">
+      <text x="52" y="127">用户请求</text><text x="258" y="127">用户修改</text><text x="464" y="127">查询工具</text><text x="670" y="127" fill="#a42646">付款工具</text><text x="876" y="127">最终回复</text>
+    </g>
+    <g font-size="17">
+      <text x="52" y="198">查 21 日机票</text><text x="52" y="225">预算 1500 元</text>
+      <text x="258" y="198">改为 22 日</text><text x="258" y="225" font-weight="600">确认前别付款</text>
+      <text x="464" y="198">查到 22 日航班</text><text x="464" y="225">价格 1200 元</text>
+      <text x="670" y="198" fill="#a42646">直接支付</text><text x="670" y="225" fill="#a42646">没有用户确认</text>
+      <text x="876" y="198">“已订好 22 日</text><text x="876" y="225">1200 元的票”</text>
+    </g>
+    <path d="M716 245V286H551V311" fill="none" stroke="#be3455" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="40" y="292" font-size="18" font-weight="600">分开检查，别让一个“总分”盖过关键违规</text>
+    <g>
+      <rect x="40" y="322" width="320" height="168" rx="12" fill="#eaf4f5"/>
+      <rect x="390" y="322" width="320" height="168" rx="12" fill="#fff0f2"/>
+      <rect x="740" y="322" width="320" height="168" rx="12" fill="#eaf0fa"/>
+      <g font-size="21" font-weight="700"><text x="62" y="360">回复：日期与价格</text><text x="412" y="360">过程：付款前的授权</text><text x="762" y="360">状态：真实订单</text></g>
+      <g font-size="17">
+        <text x="62" y="397">文字符合最新日期和预算</text><text x="62" y="426">单看这些字段，会判为通过</text><text x="62" y="465" fill="#365d63">不能据此认定整个任务成功</text>
+        <text x="412" y="397">没有确认事件，就调用付款</text><text x="412" y="426">必须结合前文和调用顺序</text><text x="412" y="465" fill="#a42646" font-weight="700">违反“确认前不付款”</text>
+        <text x="762" y="397">查订单，确认日期与实付金额</text><text x="762" y="426">记录也暴露出已付款这一事实</text><text x="762" y="465" fill="#385d87">状态与过程共同说明问题</text>
+      </g>
+    </g>
+    <text x="40" y="536" font-size="16" fill="#536579">示意依据：原文对最终回复、执行轨迹、完整对话及环境最终状态的区分。数字均为假设。</text>
+  </g>
+</svg>

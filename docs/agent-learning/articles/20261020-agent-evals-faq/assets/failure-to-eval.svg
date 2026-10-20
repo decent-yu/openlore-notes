@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+  <title id="title">从线上失败到可重复的智能体评测</title>
+  <desc id="desc">线上请求形成执行记录，经抽样和人工确认后成为离线任务。任务包含输入和标准、初始环境、检查脚本。对不同智能体版本分别启动独立环境，执行后评分和比较。上线后的新失败继续补充任务。</desc>
+  <rect width="1100" height="650" rx="20" fill="#f8fafc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#14283f">
+    <text x="38" y="48" font-size="27" font-weight="700">把一次失败，变成下次改动的检查题</text>
+    <text x="38" y="80" font-size="17" fill="#536579">先确认应该发生什么，再重建足以检验它的环境</text>
+    <rect x="38" y="113" width="280" height="110" rx="12" fill="#eaf0fa"/>
+    <text x="58" y="147" font-size="21" font-weight="700">线上请求与执行记录</text>
+    <text x="58" y="177" font-size="17">抽样评分，发现可疑失败</text><text x="58" y="203" font-size="17">包含消息、工具参数和返回值</text>
+    <path d="M318 168H388" stroke="#63788c" stroke-width="2"/>
+    <rect x="400" y="113" width="280" height="110" rx="12" fill="#fff3df"/>
+    <text x="420" y="147" font-size="21" font-weight="700">人工确认目标与边界</text>
+    <text x="420" y="177" font-size="17">例如：确认前不得付款</text><text x="420" y="203" font-size="17">可由智能体起草，仍需核对</text>
+    <path d="M680 168H750" stroke="#63788c" stroke-width="2"/>
+    <rect x="762" y="113" width="300" height="110" rx="12" fill="#eaf4f5"/>
+    <text x="782" y="147" font-size="21" font-weight="700">保存为离线任务</text>
+    <text x="782" y="177" font-size="17">① 输入与验收标准</text><text x="782" y="203" font-size="17">② 初始环境　③ 检查脚本</text>
+    <path d="M912 223V267H178V305" fill="none" stroke="#63788c" stroke-width="2"/>
+    <text x="462" y="258" font-size="16" fill="#536579">固定任务条件；每次尝试使用独立环境</text>
+    <rect x="38" y="318" width="280" height="187" rx="12" fill="#ffffff" stroke="#b9c7d5" stroke-width="1.5"/>
+    <text x="58" y="353" font-size="21" font-weight="700">分别运行两个版本</text>
+    <rect x="58" y="372" width="240" height="45" rx="7" fill="#eaf0fa"/><text x="74" y="400" font-size="17">版本 A ＋ 初始环境副本</text>
+    <rect x="58" y="430" width="240" height="45" rx="7" fill="#eaf4f5"/><text x="74" y="458" font-size="17">版本 B ＋ 初始环境副本</text>
+    <path d="M318 407H388" stroke="#63788c" stroke-width="2"/>
+    <rect x="400" y="318" width="280" height="187" rx="12" fill="#ffffff" stroke="#b9c7d5" stroke-width="1.5"/>
+    <text x="420" y="353" font-size="21" font-weight="700">执行后检查证据</text>
+    <g font-size="17"><text x="420" y="391">代码检查：订单、文件、测试</text><text x="420" y="423">模型判断：解释是否充分</text><text x="420" y="455">轨迹检查：是否先确认后付款</text><text x="420" y="484" fill="#536579">不能只相信“我已完成”</text></g>
+    <path d="M680 407H750" stroke="#63788c" stroke-width="2"/>
+    <rect x="762" y="318" width="300" height="187" rx="12" fill="#ffffff" stroke="#b9c7d5" stroke-width="1.5"/>
+    <text x="782" y="353" font-size="21" font-weight="700">比较结果并检查原因</text>
+    <g font-size="17"><text x="782" y="391">按任务、维度查看通过与失败</text><text x="782" y="423">必要时重复运行，观察波动</text><text x="782" y="455">结合轨迹决定是否保留改动</text><text x="782" y="484" fill="#536579">分数提高仍需检查新任务表现</text></g>
+    <path d="M912 505V554H18V168H26" fill="none" stroke="#63788c" stroke-width="2" stroke-dasharray="7 6"/>
+    <g fill="#63788c">
+      <path d="M388 168 378 162 378 174Z"/><path d="M750 168 740 162 740 174Z"/>
+      <path d="M178 307 172 297 184 297Z"/>
+      <path d="M388 407 378 401 378 413Z"/><path d="M750 407 740 401 740 413Z"/>
+      <path d="M28 168 20 163 20 173Z"/>
+    </g>
+    <rect x="341" y="537" width="418" height="31" fill="#f8fafc"/>
+    <text x="355" y="559" font-size="17" fill="#536579">发布后继续观察；新失败补充下一轮任务</text>
+    <text x="38" y="610" font-size="16" fill="#536579">方法示意，非产品界面。对执行记录评分，与重新运行智能体，是两种不同操作。</text>
+  </g>
+</svg>

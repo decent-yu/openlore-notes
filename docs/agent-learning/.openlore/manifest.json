@@ -36,7 +36,7 @@
         "Software Testing"
       ],
       "collected_at": "2026-10-20T02:37:01.560Z",
-      "updated_at": "2026-10-20T02:37:01.557Z",
+      "updated_at": "2026-10-20T11:46:19.287Z",
       "has_research": true
     },
     "art_8c2c8b05-4bdd-4245-99a9-3b69a280e5c9": {
@@ -74,16 +74,17 @@
   "delivered_batches": [
     "batch_1792463821557",
     "research_res_1bb0ecd3-9f3",
-    "research_res_b89190ee-bf0"
+    "research_res_b89190ee-bf0",
+    "research_res_f214315e-797"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "5e14dbb6cbdf7d01fc31a29b570dc628706fdef8647dfb40d993ebd23e3c2f1f",
+      "sha256": "248f801f54c2f44eaa3e0fd7062b3eac5646e15b1313e348c3ff4ed171ca8617",
       "media_type": "text/markdown",
       "size": 1737
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
-      "sha256": "ab90d8e545ab8445ecde6617b3c4c74f273912e79f82266a356a245ca9388d9a",
+      "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
       "media_type": "text/markdown",
       "size": 437
     },
@@ -148,9 +149,9 @@
       "size": 7479
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/research.md": {
-      "sha256": "459fe5e8d91e2e702c04ed37c0ce0ca009e231784db66ee78aa7ea263b320938",
+      "sha256": "5eeb7c1f6a297df7f0fe3a72c4d317d7c8501484615c8c4617a968d41d83b99a",
       "media_type": "text/markdown",
-      "size": 16945
+      "size": 15688
     },
     "docs/agent-learning/articles/20261020-inference-cost-optimization/README.md": {
       "sha256": "e48ebee7d60329aaba4457615af66b0abaf63fc449ab96185c2513e5756123fb",
@@ -301,6 +302,16 @@
       "sha256": "c49cd25decc2ee7de3e521c6eda1175751009b0290328668f51d47ba051276f0",
       "media_type": "image/svg+xml",
       "size": 4458
+    },
+    "docs/agent-learning/articles/20261020-agent-evals-faq/assets/action-evidence.svg": {
+      "sha256": "243ba5e0205b9fdd162bd39ff127ad227d9db2b8d4d31773a5ea457b85bb0959",
+      "media_type": "image/svg+xml",
+      "size": 3669
+    },
+    "docs/agent-learning/articles/20261020-agent-evals-faq/assets/failure-to-eval.svg": {
+      "sha256": "c0f9912c3ba4670bd4b902a6a6750a77a1ac9e8d728b4c00bd333da8fe16ce02",
+      "media_type": "image/svg+xml",
+      "size": 4559
     }
   }
 }
