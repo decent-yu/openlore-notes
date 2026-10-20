@@ -2,18 +2,24 @@
 
 关注 Agent 的工程实现与可靠性
 
-## 主题导航
+## 最近收录（3 篇）
 
-- [评测与可靠性](topics/evaluation.md)（3 篇）
-- [成本与性能优化](topics/cost-optimization.md)（1 篇）
-- [实践案例](topics/case-studies.md)（2 篇）
+按首次收录时间从新到旧排列；更新旧文章不改变收录日期和目录。
 
-## 全部文章（3 篇）
+| 收录日期 | 文章 | 深度调研 |
+| --- | --- | --- |
+| 20261020 | [How Numan Built an Eval-First AI Health Coach with LangGraph and LangSmith](articles/20261020-numan-ai-health-coach/README.md) | [调研](articles/20261020-numan-ai-health-coach/research.md) |
+| 20261020 | [The Most Common Questions About Agent Evals, Answered](articles/20261020-agent-evals-faq/README.md) | [调研](articles/20261020-agent-evals-faq/research.md) |
+| 20261020 | [Cutting our inference bill by 68% by being obsessive about optimization](articles/20261020-inference-cost-optimization/README.md) | [调研](articles/20261020-inference-cost-optimization/research.md) |
 
-- [The Most Common Questions About Agent Evals, Answered](articles/agent-evals-faq/README.md) · [调研](articles/agent-evals-faq/research.md)
-- [Cutting our inference bill by 68% by being obsessive about optimization](articles/inference-cost-optimization/README.md) · [调研](articles/inference-cost-optimization/research.md)
-- [How Numan Built an Eval-First AI Health Coach with LangGraph and LangSmith](articles/numan-ai-health-coach/README.md) · [调研](articles/numan-ai-health-coach/research.md)
+## 最近更新
+
+| 更新日期 | 文章 | 深度调研 |
+| --- | --- | --- |
+| 20261020 | [The Most Common Questions About Agent Evals, Answered](articles/20261020-agent-evals-faq/README.md) | [调研](articles/20261020-agent-evals-faq/research.md) |
+| 20261020 | [Cutting our inference bill by 68% by being obsessive about optimization](articles/20261020-inference-cost-optimization/README.md) | [调研](articles/20261020-inference-cost-optimization/research.md) |
+| 20261020 | [How Numan Built an Eval-First AI Health Coach with LangGraph and LangSmith](articles/20261020-numan-ai-health-coach/README.md) | [调研](articles/20261020-numan-ai-health-coach/research.md) |
 
 ## 采集批次
 
-- [2026-10-20-01](batches/2026-10-20-01.md)（3 篇）
+- [20261020-01](batches/20261020-01.md)（3 篇）
