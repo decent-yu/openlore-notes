@@ -37,7 +37,7 @@
         "API 限流"
       ],
       "collected_at": "2026-10-20T06:55:03.159Z",
-      "updated_at": "2026-10-20T06:55:03.159Z",
+      "updated_at": "2026-10-20T11:49:43.071Z",
       "has_research": true
     }
   },
@@ -53,16 +53,17 @@
     }
   },
   "delivered_batches": [
-    "batch_1792479137775"
+    "batch_1792479137775",
+    "research_res_17acc04a-1f9"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "43ae2fe0a244f2abb37f3fa702e5d44826607dee2d46f011717ce0db5a78922d",
+      "sha256": "25a69ec9d2e6d9625157449b8823dc6bb86691673bc3159528f0f7e919ffd7be",
       "media_type": "text/markdown",
-      "size": 1375
+      "size": 1759
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
-      "sha256": "aade97fead6328d768114df6e3f3ebc116a7affd6b360bbeeda8ca31b361c79f",
+      "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
       "media_type": "text/markdown",
       "size": 615
     },
@@ -97,9 +98,9 @@
       "size": 7519
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/research.md": {
-      "sha256": "5db4f569b7d4bebee2cb4c8ec468c2ef70f00f8dd6a1048556cbfbafee07314b",
+      "sha256": "9c73ad55fbc7f0c94c79d3db06769d02f72da4e28fb28927d22864affb1ccc15",
       "media_type": "text/markdown",
-      "size": 17604
+      "size": 23461
     },
     "docs/architecture-and-development/articles/20261020-star-history-request-optimization/README.md": {
       "sha256": "084fa9e1488aaa3a68ab5be7c385eaa4834aae2e7d8913edff44475592f3037b",
@@ -145,6 +146,16 @@
       "sha256": "1fd8aeed6b08d3d3498591dc8ba5080414ce14cb968a3c6b2d9f8ecf204a07cd",
       "media_type": "text/markdown",
       "size": 591
+    },
+    "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/assets/evergreen-control-flow.svg": {
+      "sha256": "e9128c4a75f24d550ce046ed137b84eeea1cb0ecba86542332522d9a6e5f098f",
+      "media_type": "image/svg+xml",
+      "size": 4537
+    },
+    "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/assets/evergreen-review-states.svg": {
+      "sha256": "caa8474f72fdfbc045b663aced6abdb7256c7b462bcbdefd1264d2384579d156",
+      "media_type": "image/svg+xml",
+      "size": 4794
     }
   }
 }

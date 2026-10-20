@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="775" viewBox="0 0 1120 775" role="img" aria-labelledby="title desc">
+  <title id="title">复核到期不等于撤权已完成</title>
+  <desc id="desc">复核开始时保存名单快照。授权者关闭议题时保留勾选者，撤销其余人。无人应答且期限已到时撤销快照中的所有人。非授权者关闭时重新打开议题，期限未到不执行到期清理。任何撤权失败都保持待处理，仅在后续重试全部确认成功后记录完成。该图为行为示意，不是源码中的枚举定义。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#50667c"/></marker>
+    <marker id="amber-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#ad641c"/></marker>
+    <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#1e3347}.title{font-size:28px;font-weight:650}.label{font-size:21px;font-weight:600}.body{font-size:19px}.small{font-size:17px;fill:#50667c}.line{fill:none;stroke:#50667c;stroke-width:2.2;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1120" height="775" rx="20" fill="#f6f8fb"/>
+  <text x="38" y="51" class="title">政策要求撤权，与实际完成撤权，是两件事</text>
+  <text x="38" y="83" class="small">行为示意：强调判断条件与失败路径，不对应源码中的状态名称。</text>
+  <rect x="378" y="112" width="364" height="82" rx="12" fill="#173c4b"/>
+  <text x="560" y="145" text-anchor="middle" class="label" style="fill:white">本轮复核等待处理</text>
+  <text x="560" y="173" text-anchor="middle" class="small" style="fill:#d0e2e8">名单快照、议题与截止时间已保存</text>
+  <path d="M378 152H174V226" class="line"/>
+  <path d="M560 194V226" class="line"/>
+  <path d="M742 152H942V226" class="line"/>
+  <rect x="38" y="228" width="274" height="103" rx="12" fill="#edf1f6" stroke="#c3cfdd"/>
+  <text x="175" y="264" text-anchor="middle" class="label">非授权者关闭</text>
+  <text x="175" y="297" text-anchor="middle" class="body">重新打开，不接受该决定</text>
+  <rect x="360" y="228" width="400" height="103" rx="12" fill="#e8f4ee" stroke="#b8d6ca"/>
+  <text x="560" y="264" text-anchor="middle" class="label">授权者关闭</text>
+  <text x="560" y="297" text-anchor="middle" class="body">勾选者保留，其余人列入撤权目标</text>
+  <rect x="808" y="228" width="274" height="103" rx="12" fill="#fff3e4" stroke="#e2c498"/>
+  <text x="945" y="264" text-anchor="middle" class="label">没有有效决定</text>
+  <text x="945" y="297" text-anchor="middle" class="body">到期后撤销快照中全部人</text>
+  <path d="M175 331V368H318V194H378" fill="none" stroke="#8393a5" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+  <text x="57" y="397" class="small">继续等待有效复核</text>
+  <path d="M560 331V433" class="line"/>
+  <path d="M1060 331V474H761" class="line"/>
+  <text x="818" y="367" class="small">期限未到：继续等待</text>
+  <text x="818" y="393" class="small">手动运行也不能提前清理</text>
+  <rect x="360" y="435" width="400" height="82" rx="12" fill="white" stroke="#bdcbd8"/>
+  <text x="560" y="468" text-anchor="middle" class="label">逐个执行撤权，确认结果</text>
+  <text x="560" y="496" text-anchor="middle" class="small">若没有撤权目标，则直接记录保留决定</text>
+  <path d="M459 517V576H303V610" class="line"/>
+  <text x="304" y="552" text-anchor="middle" class="small">仍有失败或结果未确认</text>
+  <path d="M662 517V576H867V610" class="line"/>
+  <text x="700" y="552" class="small">全部目标已确认完成</text>
+  <rect x="116" y="612" width="376" height="92" rx="12" fill="#fff0dc" stroke="#dfb57c"/>
+  <text x="304" y="647" text-anchor="middle" class="label">保持待处理，后续重试</text>
+  <text x="304" y="678" text-anchor="middle" class="body">保留失败项，不伪装成整批完成</text>
+  <path d="M116 658H76V476H359" fill="none" stroke="#ad641c" stroke-width="2.4" marker-end="url(#amber-arrow)"/>
+  <text x="93" y="451" class="small">下一轮重试剩余目标</text>
+  <rect x="680" y="612" width="376" height="92" rx="12" fill="#def0e7" stroke="#8abca5"/>
+  <text x="868" y="647" text-anchor="middle" class="label">写入最终状态与结果回执</text>
+  <text x="868" y="678" text-anchor="middle" class="body">完成记录必须对应已确认的结果</text>
+  <text x="38" y="751" class="small">依据：原文的复核与部分失败机制；“结果未确认需核对”是本文补充的实现建议。</text>
+</svg>

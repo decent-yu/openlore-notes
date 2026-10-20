@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="710" viewBox="0 0 1120 710" role="img" aria-labelledby="title desc">
+  <title id="title">Evergreen 如何把定时复核与仓库内的人工决定连接起来</title>
+  <desc id="desc">控制仓库中的定时工作流发送 repository_dispatch 事件，Evergreen 应用读取策略和状态，在业务仓库创建复核议题。负责人勾选并关闭议题后，GitHub 发送关闭事件。应用检查决定者身份，调用接口修改权限或归档，将结果写入议题和控制仓库。图是原文机制的概念整理，不表示内部队列或事务实现。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#50667c"/></marker>
+    <marker id="green-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#157a65"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#1e3347} .title{font-size:28px;font-weight:650} .label{font-size:22px;font-weight:600} .body{font-size:19px} .small{font-size:17px;fill:#50667c} .line{fill:none;stroke:#50667c;stroke-width:2.3;marker-end:url(#arrow)} .green{fill:none;stroke:#157a65;stroke-width:2.6;marker-end:url(#green-arrow)}
+    </style>
+  </defs>
+  <rect width="1120" height="710" rx="20" fill="#f6f8fb"/>
+  <text x="38" y="52" class="title">一个应用执行规则，两处仓库各司其职</text>
+  <text x="38" y="83" class="small">按箭头阅读：触发 → 发起复核 → 接收决定 → 执行与留痕</text>
+  <rect x="38" y="112" width="1044" height="142" rx="14" fill="#eaf0f7"/>
+  <text x="62" y="149" class="label">控制仓库</text>
+  <rect x="235" y="133" width="312" height="98" rx="10" fill="white" stroke="#c5d2df"/>
+  <text x="256" y="168" class="body">GitHub Actions 定时工作流</text>
+  <text x="256" y="201" class="small">发起复核 / 到期清理；可手动触发</text>
+  <rect x="704" y="133" width="350" height="98" rx="10" fill="white" stroke="#c5d2df"/>
+  <text x="726" y="168" class="body">每个仓库一个 JSON 状态文件</text>
+  <text x="726" y="201" class="small">名单快照、期限、决定者、处理结果</text>
+  <path d="M391 231V327" class="line"/>
+  <text x="409" y="277" class="small">① repository_dispatch</text>
+  <text x="409" y="301" class="small">通知应用开始一类任务</text>
+  <rect x="235" y="329" width="563" height="128" rx="14" fill="#173c4b"/>
+  <text x="260" y="367" class="label" style="fill:#fff">Evergreen · GitHub App</text>
+  <text x="260" y="402" class="body" style="fill:#e1f0f0">检查身份与期限，读取快照，调用 GitHub 接口</text>
+  <text x="260" y="432" class="small" style="fill:#c3d9df">容器内运行 Go 服务；保存执行进度</text>
+  <path d="M879 231V350H799" class="line"/>
+  <text x="890" y="277" class="small">读取状态</text>
+  <path d="M799 422H1027V232" class="green"/>
+  <text x="900" y="402" class="small">⑤ 写回结果</text>
+  <rect x="38" y="535" width="1044" height="137" rx="14" fill="#e7f3ee"/>
+  <text x="62" y="574" class="label">业务仓库</text>
+  <text x="62" y="607" class="small">自定义属性：</text>
+  <text x="62" y="634" class="small">负责人、豁免规则</text>
+  <rect x="316" y="555" width="358" height="96" rx="10" fill="white" stroke="#b8d6ca"/>
+  <text x="337" y="588" class="body">复核议题（Issue）</text>
+  <text x="337" y="620" class="small">负责人勾选保留名单，再关闭议题</text>
+  <rect x="713" y="555" width="341" height="96" rx="10" fill="white" stroke="#b8d6ca"/>
+  <text x="733" y="588" class="body">权限 / 归档状态 / 结果回执</text>
+  <text x="733" y="620" class="small">由应用执行；人工可查阅原因</text>
+  <path d="M358 457V554" class="line"/>
+  <text x="190" y="496" class="small">② 创建议题</text>
+  <path d="M590 555V458" class="line"/>
+  <text x="609" y="496" class="small">③ issues.closed</text>
+  <path d="M770 457V507H884V554" class="green"/>
+  <text x="901" y="505" class="small">④ 执行并回执</text>
+  <path d="M155 535V397H234" fill="none" stroke="#50667c" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+  <text x="53" y="372" class="small">读取策略</text>
+  <text x="38" y="697" class="small">来源：原文机制的概念整理；未推定应用内部的队列、锁或事务实现。</text>
+</svg>
