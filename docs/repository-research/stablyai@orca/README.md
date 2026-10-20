@@ -1,0 +1,3 @@
+# stablyai@orca 仓库研读
+
+- [Orca 如何组织多个编码代理：从独立工作区到终端、聊天与故障恢复](01-orca-%E5%A6%82%E4%BD%95%E7%BB%84%E7%BB%87%E5%A4%9A%E4%B8%AA%E7%BC%96%E7%A0%81%E4%BB%A3%E7%90%86-%E4%BB%8E%E7%8B%AC%E7%AB%8B%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%88%B0%E7%BB%88%E7%AB%AF-%E8%81%8A%E5%A4%A9%E4%B8%8E%E6%95%85%E9%9A%9C%E6%81%A2%E5%A4%8D.md)

@@ -1,0 +1,69 @@
+{
+  "group_id": "repository-study",
+  "article_locations": {
+    "art_c17587a6-f73d-4f71-b32b-35a869ad0db6": {
+      "collection_id": "col_23fd5ca9-977",
+      "directory": "stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复",
+      "slug": "orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复",
+      "title": "Orca 如何组织多个编码代理：从独立工作区到终端、聊天与故障恢复",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [],
+      "collected_at": "2026-10-20T12:26:44.895Z",
+      "updated_at": "2026-10-20T12:26:44.895Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md",
+      "article_path": "stablyai@orca/articles/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md",
+      "research_path": "stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md"
+    }
+  },
+  "collection_locations": {
+    "col_23fd5ca9-977": {
+      "path": "docs/repository-research/batches/20261020-01.md",
+      "date_sequence": "20261020-01",
+      "created_at": "2026-10-20T12:26:44.895Z",
+      "article_ids": [
+        "art_c17587a6-f73d-4f71-b32b-35a869ad0db6"
+      ]
+    }
+  },
+  "delivered_batches": [
+    "batch_7952a338-040f-479f-aeff-c883e836211e"
+  ],
+  "managed_files": {
+    "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
+      "sha256": "e19ef65d169c0399ece1d21257486465134f43014fcc1b69188b862aeacdafd3",
+      "media_type": "text/markdown",
+      "size": 27518
+    },
+    "docs/repository-research/stablyai@orca/articles/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
+      "sha256": "9057ffbfe8a7aebc2070e006a60ad8e631d6874ea27df7ad371a7abe4108a9a9",
+      "media_type": "text/markdown",
+      "size": 876
+    },
+    "docs/repository-research/stablyai@orca/assets/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复/orca-create-and-launch.svg": {
+      "sha256": "2b7d3e1aa3f6c00eebb246aecfe31eaf69986244ec385b5f8d83740d978866fc",
+      "media_type": "image/svg+xml",
+      "size": 6197
+    },
+    "docs/repository-research/stablyai@orca/assets/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复/orca-runtime-boundaries.svg": {
+      "sha256": "1c7936ada16b77d5be80712e245433b730ebd937b629c13fb5e13ca61b9afed3",
+      "media_type": "image/svg+xml",
+      "size": 6497
+    },
+    "docs/repository-research/stablyai@orca/README.md": {
+      "sha256": "90f53c4125758949ca7895b1492185382ebaf464df27a9ef7ea59f2b6e440f67",
+      "media_type": "text/markdown",
+      "size": 373
+    },
+    "docs/repository-research/batches/20261020-01.md": {
+      "sha256": "de0371ea74aeeeb6b91d0c30bcad31638cef51f2f22f6758061cfa1ee0ee3d02",
+      "media_type": "text/markdown",
+      "size": 782
+    },
+    "docs/repository-research/README.md": {
+      "sha256": "c9cafac3a1911f4ab77f26af32e88e242e89f1fc946e141bffeab61dfd007c45",
+      "media_type": "text/markdown",
+      "size": 1703
+    }
+  }
+}
