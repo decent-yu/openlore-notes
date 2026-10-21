@@ -1,5 +1,7 @@
 # 让过期权限真正到期：GitHub Evergreen 的机制、取舍与落地边界
 
+> 正文：[阅读中文正文](article-zh-CN.md)
+
 客户试用结束了，代码仓库却还允许原来的合作人员访问；项目已经收尾，也没人确认仓库是否应继续维护。这类问题往往不是缺少删除按钮，而是缺少持续跟进的人。GitHub 的 Evergreen 把名单复核、提醒、撤权和归档连成定期流程，让负责人在仓库里直接作决定，再由程序执行。对外部协作频繁、临时仓库不断积累的团队，这种做法值得研究；对长期稳定运行的生产仓库，自动归档则需要更谨慎的判断。
 
 本文以 Greg Mohler 于 2026 年 10 月 15 日发表的 [Evergreen 原文](https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/) 为研究主体，并用 GitHub 官方文档核验平台行为，核验日期为 2026 年 10 月 20 日。下文用“原文介绍”说明作者披露的机制，用“官方文档”说明平台约束；标为“分析”或“建议”的部分是本文推导，不代表 Evergreen 已实现。原文没有提供公开源码入口、完整配置或可复现效果测试，本次搜索也未找到可确认的对应源码，因此不能据此认定它已经处理了所有边界情况。
