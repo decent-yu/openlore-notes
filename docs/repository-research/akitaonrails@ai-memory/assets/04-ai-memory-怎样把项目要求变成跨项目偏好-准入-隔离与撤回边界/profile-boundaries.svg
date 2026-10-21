@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="650" viewBox="0 0 1180 650" role="img" aria-labelledby="title desc">
+  <title id="title">偏好生成的过滤位置与撤回边界</title>
+  <desc id="desc">项目内容先被提取为候选，再按个人或团队范围过滤，最后写为独立页面。模型分类发生在范围过滤之前。关闭贡献不会自动删除已生成的页面。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#355c66"/></marker></defs>
+  <rect width="1180" height="650" fill="#faf9f5"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#18343c">
+    <text x="42" y="51" font-size="30" font-weight="600">先提取候选，再决定它能进入谁的偏好档案</text>
+    <text x="42" y="87" font-size="20" fill="#586d73">实线表示处理顺序；下方说明来源变化对既有页面的影响。</text>
+    <g stroke="#9cacae" fill="white" stroke-width="1.5">
+      <rect x="42" y="131" width="244" height="188" rx="8"/>
+      <rect x="328" y="131" width="244" height="188" rx="8"/>
+      <rect x="614" y="131" width="244" height="188" rx="8"/>
+      <rect x="900" y="131" width="238" height="188" rx="8"/>
+    </g>
+    <g stroke="#355c66" stroke-width="2.5" marker-end="url(#arrow)"><path d="M286 219 H316"/><path d="M572 219 H602"/><path d="M858 219 H888"/></g>
+    <g fill="#355c66"><path d="M316 213 L324 219 L316 225 Z"/><path d="M602 213 L610 219 L602 225 Z"/><path d="M888 213 L896 219 L888 225 Z"/></g>
+    <g font-size="24" font-weight="600"><text x="60" y="170">1　项目材料</text><text x="346" y="170">2　候选记录</text><text x="632" y="170">3　范围与准入</text><text x="918" y="170">4　偏好页面</text></g>
+    <g font-size="20">
+      <text x="60" y="212">用户提示、维护过的页</text><text x="60" y="246">另提取技术栈信号</text><text x="60" y="285" fill="#586d73">仅处理允许贡献的项目</text>
+      <text x="346" y="212">原句、主题、时间</text><text x="346" y="246">来源项目、署名</text><text x="346" y="285" fill="#586d73">数据库保存、按来源去重</text>
+      <text x="632" y="207">个人：本人署名＋可读</text><text x="632" y="239">团队：排除受限项目</text><text x="632" y="277" fill="#586d73">再判断项目数、贡献人数</text>
+      <text x="918" y="212">独立的 Markdown 页</text><text x="918" y="246">保留原句与项目出处</text><text x="918" y="285" fill="#586d73">开局摘要／后续搜索</text>
+    </g>
+    <path d="M164 330 V349 H450 V330" fill="none" stroke="#b47b3b" stroke-width="2"/>
+    <text x="42" y="383" font-size="21" fill="#885a27">可选模型分类发生在第 3 步之前：输出隔离不等于材料从未交给模型。</text>
+    <rect x="42" y="417" width="1096" height="187" fill="#edf2f0" rx="8"/>
+    <text x="63" y="455" font-size="24" font-weight="600">来源停用与成品撤回，是两个动作</text>
+    <g font-size="21">
+      <text x="63" y="493">关闭 contribute → 不再采集，已有候选退出后续汇总；已生成页面不会因此自动删除。</text>
+      <text x="63" y="533">清理来源会话 → 删除该会话的提示词候选；其他范围里的偏好成品需另行检查。</text>
+      <text x="63" y="573">显式删除偏好页 → 已有账本阻止旧证据重建；晚于上次生成的新证据仍可能让它重现。</text>
+    </g>
+    <text x="42" y="633" font-size="17" fill="#63777d">依据：consolidate/profile.rs、store/profile.rs、store/ops.rs。示意处理关系，不表示端到端事务。</text>
+  </g>
+</svg>

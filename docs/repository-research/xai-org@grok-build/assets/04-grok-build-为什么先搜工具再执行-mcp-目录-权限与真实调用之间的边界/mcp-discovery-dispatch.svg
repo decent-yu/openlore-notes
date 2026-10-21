@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9" fill="context-stroke"/></marker>
+  </defs>
+  <rect width="1120" height="760" fill="#faf9f5"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#242c32">
+    <text x="48" y="52" font-size="29" font-weight="600">找到工具，与执行工具，是两条相接的路径</text>
+    <text x="48" y="88" font-size="18" fill="#616970">本地会话主线示意：省略文件参数形式、托管网关及重连细节</text>
+    <text x="48" y="142" font-size="22" font-weight="600" fill="#35705b">① 建目录：服务提供定义，运行时决定登记哪些工具</text>
+    <rect x="48" y="170" width="234" height="105" rx="8" fill="#e7eee8" stroke="#90aa97"/>
+    <text x="70" y="204" font-size="22">外部 MCP 服务</text>
+    <text x="70" y="237" font-size="18">握手 → 分页获取工具定义</text>
+    <path d="M282 221 H343" fill="none" stroke="#50795e" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="352" y="170" width="330" height="105" rx="8" fill="#e7eee8" stroke="#90aa97"/>
+    <text x="374" y="204" font-size="22">执行登记表</text>
+    <text x="374" y="237" font-size="17">名称合规、未禁用、允许模型使用</text>
+    <path d="M682 221 H746" fill="none" stroke="#50795e" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="756" y="170" width="316" height="105" rx="8" fill="#e7eee8" stroke="#90aa97"/>
+    <text x="778" y="204" font-size="22">可搜索快照</text>
+    <text x="778" y="237" font-size="17">名称、说明、参数结构、就绪标志</text>
+    <text x="48" y="328" font-size="22" font-weight="600" fill="#335f88">② 找工具：模型只取当前任务需要的定义</text>
+    <rect x="48" y="354" width="234" height="95" rx="8" fill="#e7eef5" stroke="#91a9bf"/>
+    <text x="70" y="389" font-size="19">模型调用 search_tool</text>
+    <text x="70" y="421" font-size="18">linear create issue</text>
+    <path d="M282 400 H343" fill="none" stroke="#456f94" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="352" y="354" width="330" height="95" rx="8" fill="#e7eef5" stroke="#91a9bf"/>
+    <text x="374" y="389" font-size="20">查快照：精确匹配或关键词排序</text>
+    <text x="374" y="421" font-size="18">返回少量结果及各自的参数结构</text>
+    <path d="M914 275 V309 H520 V345" fill="none" stroke="#50795e" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M682 400 H746" fill="none" stroke="#456f94" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="756" y="354" width="316" height="95" rx="8" fill="#e7eef5" stroke="#91a9bf"/>
+    <text x="778" y="389" font-size="20">模型得到目标名和参数要求</text>
+    <text x="778" y="421" font-size="18">目录可能仍是 partial（未齐备）</text>
+    <text x="48" y="501" font-size="22" font-weight="600" fill="#8b6037">③ 用工具：按实际目标检查权限，再走当前执行路径</text>
+    <path d="M914 449 V516 H165 V534" fill="none" stroke="#456f94" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="48" y="543" width="234" height="96" rx="8" fill="#f4eadc" stroke="#b49b79"/>
+    <text x="70" y="578" font-size="22">模型调用 use_tool</text>
+    <text x="70" y="611" font-size="18">linear__save_issue</text>
+    <path d="M282 590 H343" fill="none" stroke="#96764e" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="352" y="543" width="330" height="96" rx="8" fill="#f4eadc" stroke="#b49b79"/>
+    <text x="374" y="578" font-size="22">检查目标、参数与权限</text>
+    <text x="374" y="611" font-size="18">允许后，向登记的实际工具分派</text>
+    <path d="M682 590 H746" fill="none" stroke="#96764e" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="756" y="543" width="316" height="96" rx="8" fill="#f4eadc" stroke="#b49b79"/>
+    <text x="778" y="578" font-size="20">MCP 客户端发出 tools/call</text>
+    <text x="778" y="611" font-size="18">处理连接、响应和错误</text>
+    <path d="M914 639 V669 H104" fill="none" stroke="#96764e" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="48" y="696" font-size="17">结果经转换和大小限制，回到会话与界面；服务已连接或曾被搜到，都不保证本次执行成功。</text>
+    <text x="48" y="735" font-size="17" fill="#616970">配置删除服务时，同步移除执行登记和搜索条目；模型已经读到的旧定义无法一并收回。</text>
+  </g>
+</svg>

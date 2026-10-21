@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="800" viewBox="0 0 1080 800" role="img" aria-labelledby="title desc">
+<title id="title">Cumora 选人记录：等到运行开始，不等交付完成</title>
+<desc id="desc">消息先选出候选顺序并等待当前候选。租约到期后，检查当前候选在本轮分配后是否开始过任意运行。有运行则结束选人并唤醒未读成员；没有则递补下一位，候选耗尽则恢复全体唤醒。该状态机不撤销前任执行权，也不验证成果。</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#405466"/></marker>
+ <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203345;font-size:20px}.small{font-size:17px;fill:#536779}.head{font-size:28px;font-weight:650}.state{font-size:23px;font-weight:600}.line{fill:none;stroke:#405466;stroke-width:2.3}</style>
+</defs>
+<rect width="1080" height="800" fill="#f8fafb"/>
+<text x="42" y="48" class="head">先叫醒谁：选人记录怎样结束或递补</text>
+<text x="42" y="82" class="small">仅在开启 ROUTING_ONE_OF_US，且未点名群消息被判断为“一个人可承接”时进入</text>
+<rect x="42" y="122" width="300" height="112" rx="8" fill="#e8f0f9" stroke="#9eb7cf"/>
+<text x="62" y="156" class="state">pending · 等当前候选</text>
+<text x="62" y="189">保存候选顺序、当前位置</text>
+<text x="62" y="217" class="small">默认给每位候选 90 秒启动窗口</text>
+<path class="line" d="M342 178H440"/>
+<text x="365" y="158" class="small">到期</text>
+<rect x="450" y="122" width="578" height="112" rx="8" fill="white" stroke="#9daab6"/>
+<text x="474" y="157" class="state">定时检查：本轮分配后，开始过运行吗？</text>
+<text x="474" y="190">按 Agent、时间和工作区查 agent_runs</text>
+<text x="474" y="217" class="small">不要求同一会话，不检查本条消息和完成状态</text>
+<path class="line" d="M740 234V285H267V326"/>
+<text x="515" y="274">有记录</text>
+<path class="line" d="M850 234V326"/>
+<text x="866" y="285">无记录</text>
+<rect x="42" y="336" width="450" height="104" rx="8" fill="#e9f4ee" stroke="#8db29c"/>
+<text x="64" y="374" class="state">served · 结束本次选人</text>
+<text x="64" y="409">含义：见到运行开始；不是交付验收</text>
+<rect x="566" y="336" width="462" height="104" rx="8" fill="white" stroke="#9daab6"/>
+<text x="588" y="374" class="state">还有下一位候选？</text>
+<text x="588" y="409">沿保存的顺序推进，不重新排序</text>
+<path class="line" d="M267 440V495"/>
+<rect x="42" y="505" width="450" height="106" rx="8" fill="#e9f4ee" stroke="#8db29c"/>
+<text x="64" y="542" class="state">catchup · 唤醒阅读进度落后的成员</text>
+<text x="64" y="578">走普通唤醒与分诊，不直接替他们标已读</text>
+<path class="line" d="M797 440V488H650V505"/>
+<text x="663" y="478" class="small">有</text>
+<rect x="566" y="515" width="215" height="96" rx="8" fill="#e8f0f9" stroke="#9eb7cf"/>
+<text x="586" y="551" class="state">advance · 递补</text>
+<text x="586" y="583" class="small">更新起点，再唤醒</text>
+<path class="line" d="M912 440V505"/>
+<text x="928" y="478" class="small">没有</text>
+<rect x="813" y="515" width="215" height="96" rx="8" fill="#fff1e3" stroke="#caa57c"/>
+<text x="833" y="551" class="state">exhausted</text>
+<text x="833" y="583" class="small">唤醒原候选全体</text>
+<path class="line" d="M674 611V653H20V178H32"/>
+<text x="383" y="644" class="small">新窗口：等待下一位开始运行</text>
+<line x1="42" y1="693" x2="1028" y2="693" stroke="#bdc8d1"/>
+<text x="42" y="727">递补没有撤销前任的执行能力；补读也可能进入正常 Agent 运行。</text>
+<text x="42" y="761" class="small">依据：scheduler.ts、routing-election.ts、routing-claims.ts；时间为源码默认值，不是交付时限。</text>
+<g fill="#405466"><polygon points="440,178 430,172 430,184"/><polygon points="267,326 261,316 273,316"/><polygon points="850,326 844,316 856,316"/><polygon points="267,495 261,485 273,485"/><polygon points="650,505 644,495 656,495"/><polygon points="912,505 906,495 918,495"/><polygon points="32,178 22,172 22,184"/></g>
+</svg>

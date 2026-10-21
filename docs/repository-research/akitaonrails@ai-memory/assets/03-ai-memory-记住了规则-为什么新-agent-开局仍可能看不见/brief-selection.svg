@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="790" viewBox="0 0 1160 790" role="img" aria-labelledby="title desc">
+<title id="title">启动简报有两道筛选，省略计数只覆盖第二道</title>
+<desc id="desc">假设项目有三十篇符合条件的核心页。数据库排序后只取二十四篇，另外六篇不进入渲染器。渲染器在字节预算内显示其中一段连续前缀，对剩余候选页给出省略提示。近期页标题是另一条至多十篇的旁路，不能补齐全部正文。最终还要由宿主工具接收。</desc>
+<defs>
+ <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#354d58" stroke-width="1.5"/></marker>
+ <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 8 L8 0" stroke="#d9bbaa" stroke-width="1"/></pattern>
+ <style>text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#223b46} .title{font-size:28px;font-weight:650}.section{font-size:22px;font-weight:600}.body{font-size:18px}.small{font-size:16px;fill:#536c76}.mono{font-family:Menlo,monospace;font-size:16px}.line{stroke:#354d58;stroke-width:2;fill:none;marker-end:url(#arrow)}</style>
+</defs>
+<rect width="1160" height="790" fill="#faf9f5"/>
+<text x="40" y="50" class="title">“没有省略提示” ≠ “所有规则都进了上下文”</text>
+<text x="40" y="81" class="small">假设示意：30 篇符合条件的核心页。数字展示上限关系，不代表实测分配结果。</text>
+
+<text x="40" y="132" class="section">① 数据库先决定：哪些页面有机会被打包</text>
+<text x="40" y="164" class="body">项目与可见性检查 → 当前且未过期 → 固定页优先，其次按路径排序</text>
+<g transform="translate(40 187)">
+ <rect width="720" height="60" fill="#d6e7e2" stroke="#598576"/>
+ <path d="M30 0V60 M60 0V60 M90 0V60 M120 0V60 M150 0V60 M180 0V60 M210 0V60 M240 0V60 M270 0V60 M300 0V60 M330 0V60 M360 0V60 M390 0V60 M420 0V60 M450 0V60 M480 0V60 M510 0V60 M540 0V60 M570 0V60 M600 0V60 M630 0V60 M660 0V60 M690 0V60" stroke="#a4bfb4"/>
+ <rect x="720" width="180" height="60" fill="url(#hatch)" stroke="#b98568"/>
+ <rect x="230" y="16" width="260" height="29" fill="#d6e7e2"/>
+ <text x="360" y="38" text-anchor="middle" class="body">前 24 篇：进入渲染器</text>
+ <rect x="737" y="16" width="146" height="29" fill="#faf9f5"/>
+ <text x="810" y="38" text-anchor="middle" class="body">其余 6 篇</text>
+</g>
+<path d="M400 249V312" class="line"/>
+<path d="M941 217H1010V301H908" fill="none" stroke="#b98568" stroke-width="2"/>
+<text x="682" y="286" class="small">这 6 篇不在“预算省略”计数中</text>
+<text x="40" y="345" class="section">② 渲染器再决定：候选页能显示多深</text>
+<text x="40" y="376" class="body">先给连续前缀各放一段短摘要；遇到放不下的页面就停止覆盖</text>
+<g transform="translate(40 400)">
+ <rect width="530" height="70" fill="#d6e7e2" stroke="#598576"/>
+ <text x="265" y="29" text-anchor="middle" class="body">前 n 篇：短摘要 / 长摘要 / 完整正文</text>
+ <text x="265" y="54" text-anchor="middle" class="small">固定页与槽位优先加深；正文只整篇放入</text>
+ <rect x="530" width="370" height="70" fill="#f1e3d8" stroke="#b98568"/>
+ <text x="715" y="29" text-anchor="middle" class="body">其余 24 − n 篇：预算省略</text>
+ <text x="715" y="54" text-anchor="middle" class="small">尽量列路径，空间更小时只报数量</text>
+</g>
+<text x="40" y="503" class="small">n 由正文、摘要、标题、路径和固定说明的实际字节数共同决定；这里的条宽不表示字节比例。</text>
+<path d="M400 519V558" class="line"/>
+
+<text x="40" y="593" class="section">③ 保留来源边界，再交给宿主 Agent</text>
+<rect x="40" y="613" width="900" height="95" rx="4" fill="#e7edf1" stroke="#74909f"/>
+<text x="60" y="642" class="body">安全说明 ＋ 历史起止标记 ＋ 页面内容与指针 ＋ 读取全文的提示</text>
+<text x="60" y="671" class="small">默认整个项目简报 ≤ 4000 字节；它只是启动包的一部分。</text>
+<text x="60" y="696" class="small">近期最多 10 篇标题另行补充线索，也受预算限制；不能补齐遗漏的规则正文。</text>
+<path d="M945 658H1000" class="line"/>
+<text x="1018" y="646" class="body">客户端</text><text x="1018" y="675" class="body">宿主接收</text>
+<text x="40" y="754" class="small">源码：ReaderPool::session_brief_pages_with_slot_visibility → assign_tiers → render_session_brief</text>
+</svg>

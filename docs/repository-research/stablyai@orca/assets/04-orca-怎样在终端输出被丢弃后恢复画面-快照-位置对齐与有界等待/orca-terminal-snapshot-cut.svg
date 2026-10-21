@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="820" viewBox="0 0 1060 820" role="img" aria-labelledby="title desc">
+<title id="title">Orca 如何从有缺口的传输恢复终端</title>
+<desc id="desc">后台先更新终端模型，实时传输可以丢弃旧数据。恢复取回模型快照，然后依据输出位置去掉重复部分、续上新输出。下方用快照位置64与跨界数据ABCDEF举例。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#42556a"/></marker></defs>
+<rect width="1060" height="820" fill="#fafbf8"/>
+<g font-family="PingFang SC, Noto Sans CJK SC, sans-serif" fill="#233649">
+<text x="45" y="48" font-size="27" font-weight="700">传输可以有缺口，恢复要有明确的衔接位置</text>
+<text x="45" y="79" font-size="16" fill="#59697a">上半部表示实现关系；下半部用自拟位置说明恢复算法。只讨论仍存活的终端会话。</text>
+<path d="M45 106 H1015" stroke="#c7d0d5"/>
+<text x="45" y="141" font-size="20" font-weight="700">① 先形成可恢复的画面，再发送实时副本</text>
+<rect x="45" y="174" width="180" height="78" rx="8" fill="#e8edf1" stroke="#94a4b1"/>
+<text x="135" y="206" font-size="19" text-anchor="middle">程序输出</text><text x="135" y="231" font-size="15" text-anchor="middle">经会话有序处理</text>
+<path d="M225 212 H308" stroke="#42556a" stroke-width="2"/>
+<rect x="320" y="174" width="300" height="78" rx="8" fill="#e5efe7" stroke="#759682"/>
+<text x="470" y="205" font-size="19" text-anchor="middle">后台终端模型</text><text x="470" y="232" font-size="15" text-anchor="middle">屏幕、保留的回滚内容、模式、输出位置</text>
+<path d="M620 212 H700" stroke="#42556a" stroke-width="2"/>
+<rect x="712" y="174" width="303" height="78" rx="8" fill="#edf0f6" stroke="#8f9bb5"/>
+<text x="863" y="205" font-size="19" text-anchor="middle">待发送队列 → 界面</text><text x="863" y="232" font-size="15" text-anchor="middle">隐藏时可删旧数据，保留较新尾部</text>
+<path d="M863 252 V296 H600 V256" fill="none" stroke="#42556a" stroke-width="2"/>
+<text x="859" y="284" font-size="15" text-anchor="end">收到缺口通知后，请求模型快照</text>
+<path d="M470 252 V343 H998 V256" fill="none" stroke="#42556a" stroke-width="2"/>
+<text x="480" y="332" font-size="15">返回画面及其覆盖位置；再核对积压的新数据</text>
+<text x="45" y="287" font-size="15" fill="#59697a">删的是传输副本。</text><text x="45" y="311" font-size="15" fill="#59697a">模型仍有保留深度，</text><text x="45" y="335" font-size="15" fill="#59697a">不等于无限原始日志。</text>
+<g fill="#42556a"><path d="M308 207 L318 212 L308 217 Z"/><path d="M700 207 L710 212 L700 217 Z"/><path d="M595 262 L600 252 L605 262 Z"/><path d="M993 262 L998 252 L1003 262 Z"/><path d="M945 487 L955 492 L945 497 Z"/></g>
+<path d="M45 375 H1015" stroke="#c7d0d5"/>
+<text x="45" y="412" font-size="20" font-weight="700">② 快照已覆盖到 64，跨界数据只追加 DEF</text>
+<text x="45" y="443" font-size="16" fill="#59697a">seq 是数据块结束位置；rawLength 是它代表的原始长度。此例均为单字母，未经过滤。</text>
+<path d="M130 492 H945" stroke="#758596" stroke-width="2"/>
+<g font-size="16" text-anchor="middle">
+<text x="225" y="481">61</text><text x="330" y="481">62</text><text x="435" y="481">63</text><text x="540" y="481" font-weight="700">64</text><text x="645" y="481">65</text><text x="750" y="481">66</text><text x="855" y="481">67</text>
+</g>
+<rect x="120" y="516" width="420" height="46" fill="#e5efe7"/><text x="330" y="546" text-anchor="middle" font-size="17">快照已包含的状态</text>
+<g stroke="#fafbf8" stroke-width="2"><rect x="225" y="584" width="105" height="52" fill="#d7dedf"/><rect x="330" y="584" width="105" height="52" fill="#d7dedf"/><rect x="435" y="584" width="105" height="52" fill="#d7dedf"/><rect x="540" y="584" width="105" height="52" fill="#b9d9df"/><rect x="645" y="584" width="105" height="52" fill="#b9d9df"/><rect x="750" y="584" width="105" height="52" fill="#b9d9df"/></g>
+<g font-size="24" text-anchor="middle"><text x="277" y="619">A</text><text x="382" y="619">B</text><text x="487" y="619">C</text><text x="592" y="619">D</text><text x="697" y="619">E</text><text x="802" y="619">F</text></g>
+<path d="M540 457 V680" stroke="#427b68" stroke-dasharray="6 5" stroke-width="2"/>
+<text x="382" y="665" font-size="16" text-anchor="middle">不再写入：避免重复</text><text x="698" y="665" font-size="16" text-anchor="middle">追加到快照之后</text>
+<text x="45" y="610" font-size="16">晚到的数据块</text><text x="45" y="635" font-size="15" fill="#59697a">结束 67，长度 6</text>
+<rect x="45" y="708" width="970" height="71" rx="6" fill="#f3eadb"/>
+<text x="65" y="738" font-size="17">若原始长度与文本长度不同，重叠处无法可靠换算，就重新取快照。</text>
+<text x="65" y="764" font-size="15" fill="#655d50">这套拼接以同一输出位置范围为前提；进程换代、缺少位置或空画面另有保护分支。</text>
+</g></svg>

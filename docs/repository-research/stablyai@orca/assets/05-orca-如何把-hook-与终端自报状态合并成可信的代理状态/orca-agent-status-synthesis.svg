@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Orca 合并代理状态的调用链</title>
+  <desc id="desc">受控 Hook 和终端中的 OSC 7501 都进入运行时扫描器，再进入 AgentHookServer。Hook 行拥有优先权，OSC 在 Hook 沉默两分钟且状态不一致后接管；OSC 的进度和消息作为 facet 附着到最终状态行。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#52606d"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#2f6fed"/>
+    </marker>
+    <style>
+      .title{font:700 25px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#16202a}
+      .label{font:600 17px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#16202a}
+      .body{font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#344454}
+      .small{font:12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#52606d}
+      .box{stroke:#9aa7b5;stroke-width:1.5;rx:14}
+      .lane{fill:#f8fafc;stroke:#d8e0e8;stroke-width:1}
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text x="48" y="48" class="title">同一终端的两种状态来源，如何汇合为一行可用状态</text>
+  <text x="48" y="74" class="body">实线表示状态进入主状态库；蓝色虚线表示只附加展示信息，不改变谁拥有 state。</text>
+
+  <rect x="36" y="105" width="1128" height="170" class="lane"/>
+  <text x="56" y="132" class="label">1. 代理进程产生证据</text>
+  <rect x="64" y="154" width="300" height="88" fill="#eaf2ff" class="box"/>
+  <text x="84" y="181" class="label">Managed Hook</text>
+  <text x="84" y="204" class="body">插件 / hook POST 到 loopback</text>
+  <text x="84" y="225" class="small">prompt、tool、session、子代理等结构化字段</text>
+  <rect x="420" y="154" width="300" height="88" fill="#fff5df" class="box"/>
+  <text x="440" y="181" class="label">OSC 7501</text>
+  <text x="440" y="204" class="body">程序把状态写入 PTY 输出流</text>
+  <text x="440" y="225" class="small">working / blocked / done / error、进度、子记录</text>
+  <rect x="776" y="154" width="348" height="88" fill="#f1f5f1" class="box"/>
+  <text x="796" y="181" class="label">同一 PTY 的现实约束</text>
+  <text x="796" y="204" class="body">Hook 可能缺失、沉默或来自上一轮</text>
+  <text x="796" y="225" class="small">远程 / 手工启动时尤其需要程序自报状态</text>
+  <path d="M364 198 H470" stroke="#52606d" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M720 198 H776" stroke="#52606d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="36" y="300" width="1128" height="174" class="lane"/>
+  <text x="56" y="327" class="label">2. 运行时按字节顺序解析并送入服务器</text>
+  <rect x="90" y="350" width="292" height="92" fill="#f4f1ff" class="box"/>
+  <text x="110" y="378" class="label">terminal-agent-status-processor</text>
+  <text x="110" y="401" class="body">合并 OSC 9999 与 OSC 7501</text>
+  <text x="110" y="422" class="small">处理跨 chunk 的半截序列，保留原 PTY 输出</text>
+  <rect x="454" y="350" width="292" height="92" fill="#f4f1ff" class="box"/>
+  <text x="474" y="378" class="label">ProgramStatusProjector</text>
+  <text x="474" y="401" class="body">根记录 → Orca state；子记录 → subagents</text>
+  <text x="474" y="422" class="small">prompt/reset 结束 invocation，done/error 留作显示</text>
+  <rect x="818" y="350" width="292" height="92" fill="#f4f1ff" class="box"/>
+  <text x="838" y="378" class="label">AgentHookServer</text>
+  <text x="838" y="401" class="body">校验 pane 身份，合并并持久化状态行</text>
+  <text x="838" y="422" class="small">旧 pane / 已关闭 tab 可被 fence 抑制</text>
+  <path d="M382 396 H454" stroke="#52606d" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M746 396 H818" stroke="#52606d" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M214 242 V350" stroke="#2f6fed" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arrowBlue)"/>
+
+  <rect x="36" y="500" width="1128" height="220" class="lane"/>
+  <text x="56" y="527" class="label">3. 决策与发布</text>
+  <rect x="72" y="550" width="350" height="122" fill="#eaf2ff" class="box"/>
+  <text x="94" y="578" class="label">Hook precedence</text>
+  <text x="94" y="602" class="body">Hook 同状态：持续让 Hook 负责</text>
+  <text x="94" y="624" class="body">Hook 不同状态：2 分钟内仍让 Hook 负责</text>
+  <text x="94" y="646" class="body">超时且仍不一致：OSC 接管，并设回查定时器</text>
+  <rect x="470" y="550" width="300" height="122" fill="#fff5df" class="box"/>
+  <text x="492" y="578" class="label">ProgramStatusFacetStore</text>
+  <text x="492" y="602" class="body">进度、自由文本、阻塞 kind 单独保存</text>
+  <text x="492" y="624" class="body">发布时 stitch 到状态行，未持久化</text>
+  <text x="492" y="646" class="small">同状态高频 tick 约 250 ms 合并一次</text>
+  <rect x="818" y="550" width="300" height="122" fill="#f1f5f1" class="box"/>
+  <text x="840" y="578" class="label">共享展示层</text>
+  <text x="840" y="602" class="body">桌面、dashboard、mobile 读同一快照</text>
+  <text x="840" y="624" class="body">tool 预览优先于程序自由文本</text>
+  <text x="840" y="646" class="body">blocked facet 可补充“需要登录/批准/回答”</text>
+  <path d="M964 442 V550" stroke="#52606d" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M746 442 C746 492 620 500 620 550" stroke="#2f6fed" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arrowBlue)"/>
+  <path d="M770 611 H818" stroke="#2f6fed" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arrowBlue)"/>
+  <text x="60" y="704" class="small">实线：谁决定主状态；蓝色虚线：旁路 facet 只补充可读信息。所有时间阈值与容量均来自源码常量，不表示性能测量。</text>
+</svg>

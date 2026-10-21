@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="670" viewBox="0 0 1120 670">
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#28666c"/></marker></defs>
+  <rect width="1120" height="670" fill="#fbfaf6"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#213c40">
+    <text x="48" y="54" font-size="28" font-weight="600">相同的 memory/ 名称，可能落在两处存储</text>
+    <text x="48" y="87" font-size="17" fill="#596b6c">按实际调用区分：本机写文件、云端写文件、调用服务端命令</text>
+    <rect x="48" y="120" width="450" height="450" rx="12" fill="#edf3ee"/>
+    <rect x="620" y="120" width="452" height="450" rx="12" fill="#eaf1f5"/>
+    <text x="72" y="160" font-size="23" font-weight="600">自带 Agent 的本机目录</text>
+    <text x="644" y="160" font-size="23" font-weight="600">服务端 agent_workspace 表</text>
+    <text x="72" y="200" font-size="18">本地引擎直接写 memory/ 文件</text>
+    <path d="M273 214V248" stroke="#28666c" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="72" y="260" width="402" height="110" rx="5" fill="white" stroke="#9db4a5"/>
+    <text x="90" y="290" font-size="18">Agent 专用 home 下的文件</text>
+    <text x="90" y="320" font-size="16">memory/MEMORY.md</text>
+    <text x="90" y="346" font-size="16">memory/projects/P/MEMORY.md</text>
+    <path d="M273 378V414" stroke="#28666c" stroke-width="2" marker-end="url(#a)"/>
+    <text x="72" y="448" font-size="20" font-weight="600">memoryDigest() 读取索引</text>
+    <text x="72" y="480" font-size="17">拼接全局与当前项目，截取摘要</text>
+    <text x="72" y="524" font-size="17" fill="#596b6c">不会自动遍历并检索所有笔记正文</text>
+    <text x="644" y="200" font-size="18">云端文件挂载写入 / 服务端命令写入</text>
+    <path d="M846 214V248" stroke="#28666c" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="644" y="260" width="404" height="110" rx="5" fill="white" stroke="#9cb7c5"/>
+    <text x="662" y="290" font-size="18">每条记录：Agent、路径、正文</text>
+    <text x="662" y="320" font-size="17">来源项目、置顶标记等元数据</text>
+    <text x="662" y="346" font-size="17">可选的文本向量</text>
+    <path d="M846 378V414" stroke="#28666c" stroke-width="2" marker-end="url(#a)"/>
+    <text x="644" y="448" font-size="20" font-weight="600">云端 loadMemory() 查询记录</text>
+    <text x="644" y="480" font-size="17">先按范围筛选，再选相关与近期条目</text>
+    <text x="644" y="524" font-size="17" fill="#596b6c">置顶优先；默认总数上限 40 条</text>
+    <path d="M498 315H620" stroke="#b5915f" stroke-width="2" stroke-dasharray="5 6"/>
+    <circle cx="559" cy="315" r="15" fill="#fbfaf6" stroke="#b5915f"/>
+    <path d="M550 324L568 306" stroke="#b5915f" stroke-width="2"/>
+    <text x="477" y="403" font-size="16" fill="#8b6337">无自动镜像</text>
+    <text x="48" y="610" font-size="18">本地 Agent 也能调用 cumora memory note → /runtime/cli → 右侧数据库。</text>
+    <text x="48" y="641" font-size="17" fill="#596b6c">这不会同步改写左侧本机索引。图示依据 daemon.ts、cli.ts、fs-endpoints.ts 与 inproc-client.ts。</text>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690" role="img" aria-labelledby="title desc">
+  <title id="title">普通停止：轮次结束与进程终止分别推进</title>
+  <desc id="desc">会话运行时先封住自动唤醒，将终止前台命令的消息放入终端队列，再结束轮次并返回取消状态。终端执行器另行消费消息、杀进程组并限时等待。终止消息没有完成回执，不能用轮次取消状态证明进程已经全部退出。已是后台的命令不在这次前台清理之内。</desc>
+  <defs>
+    <style>
+      text {font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill:#1f3446}
+      .title {font-size:29px;font-weight:650}
+      .subtitle {font-size:17px;fill:#586c7c}
+      .lane {font-size:20px;font-weight:650}
+      .body {font-size:19px}
+      .small {font-size:16px;fill:#586c7c}
+      .flow {fill:none;stroke:#384d62;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1120" height="690" fill="#faf9f5"/>
+  <text x="48" y="54" class="title">一次“停止”，两条各自推进的收尾路径</text>
+  <text x="48" y="87" class="subtitle">本地终端 · 已进入正常执行的轮次 · 不含尚未输出时的输入撤回分支</text>
+  <rect x="48" y="117" width="467" height="437" rx="12" fill="#edf3f8"/>
+  <rect x="624" y="117" width="448" height="437" rx="12" fill="#edf4ee"/>
+  <text x="72" y="152" class="lane">会话运行时 SessionActor</text>
+  <text x="648" y="152" class="lane">终端执行器 LocalTerminalActor</text>
+  <path d="M72 168H489M648 168H1046" stroke="#c6d2dc"/>
+  <circle cx="83" cy="206" r="13" fill="#244f75"/><text x="78" y="212" font-size="17" style="fill:white">1</text>
+  <text x="109" y="211" class="body">取得本轮收尾权，封住自动唤醒</text>
+  <path d="M281 228V254" class="flow"/>
+  <path d="M275 248L281 257L287 248Z" fill="#384d62"/>
+  <rect x="72" y="267" width="418" height="58" rx="5" fill="#fff" stroke="#aabecf"/>
+  <text x="91" y="302" class="body">提交 KillForegroundCommands</text>
+  <path d="M490 296H646" fill="none" stroke="#167b94" stroke-width="2.5"/>
+  <path d="M639 290L649 296L639 302Z" fill="#167b94"/>
+  <text x="542" y="279" text-anchor="middle" class="small">入队</text>
+  <rect x="650" y="267" width="397" height="58" rx="5" fill="#fff" stroke="#aabfac"/>
+  <text x="674" y="302" class="body">从终端消息队列取出清理请求</text>
+  <path d="M281 325V353" class="flow"/>
+  <path d="M275 347L281 356L287 347Z" fill="#384d62"/>
+  <text x="91" y="383" class="body">中止本轮任务，补齐缺失工具结果</text>
+  <path d="M281 399V427" class="flow"/>
+  <path d="M275 421L281 430L287 421Z" fill="#384d62"/>
+  <text x="91" y="457" class="body">原请求返回“已取消”</text>
+  <text x="91" y="484" class="small">释放收尾权；真实用户队列仍可继续</text>
+  <path d="M848 325V353" class="flow"/>
+  <path d="M842 347L848 356L854 347Z" fill="#384d62"/>
+  <text x="674" y="383" class="body">向前台进程组发出强制终止</text>
+  <path d="M848 399V427" class="flow"/>
+  <path d="M842 421L848 430L854 421Z" fill="#384d62"/>
+  <text x="674" y="457" class="body">每个子进程最多等待 5 秒</text>
+  <text x="674" y="484" class="small">更新输出和状态，移除前台记录</text>
+  <path d="M520 447H618" stroke="#a37843" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M559 438L578 457M578 438L559 457" stroke="#a37843" stroke-width="2.5"/>
+  <text x="568" y="519" text-anchor="middle" font-size="16" style="fill:#91622f">无完成回执</text>
+  <rect x="48" y="575" width="1024" height="66" rx="7" fill="#fff2d9"/>
+  <text x="70" y="603" class="body">已是后台的命令不属于这次前台清理；完成通知暂存，等真实用户输入重新放行。</text>
+  <text x="70" y="627" class="small">左右只表示各自内部的执行顺序，不表示两条路径在同一时刻走到同一高度。</text>
+  <text x="48" y="671" class="small">依据：cancel.rs · turn_task.rs · computer/local/terminal.rs · notification_drain.rs</text>
+</svg>

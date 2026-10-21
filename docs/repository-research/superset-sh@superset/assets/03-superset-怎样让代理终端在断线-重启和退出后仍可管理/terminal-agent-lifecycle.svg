@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Superset 代理终端的进程与恢复链</title>
+  <desc id="desc">展示 agents.run、host-service、pty-daemon、PTY 进程、数据库和 hook 之间的启动、输出、退出和恢复关系。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#334155"/></marker>
+    <marker id="blueArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="redArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#dc2626"/></marker>
+    <style>
+      .lane { font: 600 15px system-ui, -apple-system, sans-serif; fill: #0f172a; }
+      .small { font: 13px system-ui, -apple-system, sans-serif; fill: #334155; }
+      .tiny { font: 12px system-ui, -apple-system, sans-serif; fill: #475569; }
+      .step { fill: #fff; stroke: #cbd5e1; stroke-width: 1.5; rx: 10; }
+      .db { fill: #fff7ed; stroke: #fb923c; stroke-width: 1.5; rx: 10; }
+      .daemon { fill: #eff6ff; stroke: #60a5fa; stroke-width: 1.5; rx: 10; }
+      .agent { fill: #f0fdf4; stroke: #4ade80; stroke-width: 1.5; rx: 10; }
+      .failure { fill: #fef2f2; stroke: #f87171; stroke-width: 1.5; rx: 10; }
+      .line { stroke: #334155; stroke-width: 1.8; fill: none; marker-end: url(#arrow); }
+      .blue { stroke: #2563eb; stroke-width: 2; fill: none; marker-end: url(#blueArrow); }
+      .red { stroke: #dc2626; stroke-width: 2; fill: none; marker-end: url(#redArrow); }
+      .dash { stroke-dasharray: 6 5; }
+    </style>
+  </defs>
+  <rect width="1200" height="820" fill="#f8fafc"/>
+  <text x="44" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="700" fill="#0f172a">一次代理运行的两个世界：PTY 进程与可恢复的代理身份</text>
+  <text x="44" y="63" class="small">实线是调用或字节流；蓝线是恢复/接管；红线是退出后形成的恢复候选。</text>
+
+  <line x1="170" y1="92" x2="170" y2="780" stroke="#cbd5e1"/>
+  <line x1="390" y1="92" x2="390" y2="780" stroke="#cbd5e1"/>
+  <line x1="610" y1="92" x2="610" y2="780" stroke="#cbd5e1"/>
+  <line x1="840" y1="92" x2="840" y2="780" stroke="#cbd5e1"/>
+  <line x1="1050" y1="92" x2="1050" y2="780" stroke="#cbd5e1"/>
+  <text x="70" y="112" class="lane">调用方 / 界面</text>
+  <text x="252" y="112" class="lane">host-service</text>
+  <text x="464" y="112" class="lane">SQLite 状态</text>
+  <text x="680" y="112" class="lane">pty-daemon</text>
+  <text x="910" y="112" class="lane">shell + Agent</text>
+
+  <rect x="35" y="140" width="180" height="70" class="step"/>
+  <text x="50" y="164" class="small">1. agents.run</text>
+  <text x="50" y="185" class="tiny">workspaceId + prompt + agent</text>
+  <path d="M215 175 L300 175" class="line"/>
+
+  <rect x="245" y="140" width="290" height="70" class="step"/>
+  <text x="260" y="164" class="small">2. resolve config / build command</text>
+  <text x="260" y="185" class="tiny">创建 terminalId，校验工作区和参数</text>
+  <path d="M390 210 L390 260" class="line"/>
+  <rect x="245" y="260" width="290" height="74" class="db"/>
+  <text x="260" y="284" class="small">terminal_sessions = active</text>
+  <text x="260" y="305" class="tiny">持久化归属、创建时间、处置意图</text>
+  <path d="M535 297 L675 297" class="blue"/>
+
+  <rect x="650" y="260" width="305" height="74" class="daemon"/>
+  <text x="665" y="284" class="small">3. daemon.open → SessionStore</text>
+  <text x="665" y="305" class="tiny">独立进程持有 PTY master fd 和 shell PID</text>
+  <path d="M955 297 L1080 297" class="line"/>
+  <rect x="880" y="260" width="285" height="74" class="agent"/>
+  <text x="895" y="284" class="small">4. shell 输入初始命令</text>
+  <text x="895" y="305" class="tiny">代理 CLI 在工作区中运行</text>
+
+  <path d="M1080 370 L800 370" class="blue"/>
+  <rect x="650" y="350" width="305" height="70" class="daemon"/>
+  <text x="665" y="374" class="small">输出：ring buffer + broadcast</text>
+  <text x="665" y="395" class="tiny">默认保留有限尾部；订阅者拥塞会暂停 PTY</text>
+  <path d="M650 385 L300 385" class="blue"/>
+  <rect x="245" y="350" width="290" height="70" class="step"/>
+  <text x="260" y="374" class="small">host-service 转发字节流</text>
+  <text x="260" y="395" class="tiny">WebSocket / snapshot / mode replay</text>
+  <path d="M245 385 L125 385" class="blue"/>
+  <text x="45" y="430" class="tiny">用户可断开界面，PTY 仍继续运行</text>
+
+  <path d="M1015 334 L1015 480 L800 480" class="line"/>
+  <rect x="650" y="450" width="305" height="70" class="daemon"/>
+  <text x="665" y="474" class="small">5. agent hook → notifications.hook</text>
+  <text x="665" y="495" class="tiny">事件只报告身份和一轮状态，不承载 PTY 输出</text>
+  <path d="M650 485 L535 485" class="line"/>
+  <rect x="245" y="450" width="290" height="70" class="db"/>
+  <text x="260" y="474" class="small">terminal_agent_bindings</text>
+  <text x="260" y="495" class="tiny">agentSessionId、lastEventType、endReason</text>
+  <path d="M245 520 L120 520" class="line"/>
+  <text x="45" y="550" class="tiny">event-bus 通知界面刷新工作中/完成/权限等待</text>
+
+  <rect x="35" y="600" width="180" height="74" class="failure"/>
+  <text x="50" y="624" class="small">6. 进程退出 / daemon 断开</text>
+  <text x="50" y="645" class="tiny">不是同一个故障语义</text>
+  <path d="M215 637 L245 637" class="red"/>
+  <rect x="245" y="590" width="290" height="84" class="failure"/>
+  <text x="260" y="614" class="small">terminal_sessions → exited</text>
+  <text x="260" y="635" class="tiny">PTY exit：绑定标为 terminal-exited</text>
+  <text x="260" y="654" class="tiny">显式 dispose：标为 disposed</text>
+  <path d="M535 632 L650 632" class="red"/>
+  <rect x="650" y="590" width="305" height="84" class="failure"/>
+  <text x="665" y="614" class="small">代理绑定成为恢复候选</text>
+  <text x="665" y="635" class="tiny">必须有 agentSessionId 且 endReason=terminal-exited</text>
+  <text x="665" y="654" class="tiny">Detached / disposed 不会自动恢复</text>
+  <path d="M800 674 L800 730 L535 730" class="red"/>
+  <rect x="245" y="700" width="290" height="70" class="step"/>
+  <text x="260" y="724" class="small">7. resumeTerminalAgentSession</text>
+  <text x="260" y="745" class="tiny">原子 claim → 新 terminalId → --resume</text>
+  <path d="M245 735 L125 735" class="blue"/>
+  <text x="45" y="765" class="tiny">面板收到 resumed 事件，跟随到新终端</text>
+
+  <path d="M690 260 C590 185 590 130 690 130" class="dash blue"/>
+  <text x="555" y="154" class="tiny">host-service 重启：open 遇 EEXIST → list → adopt + replay</text>
+  <path d="M1080 297 C1150 350 1150 430 970 430" class="dash line"/>
+  <text x="1000" y="444" class="tiny">同一 PID / 同一 PTY，命令不重跑</text>
+</svg>

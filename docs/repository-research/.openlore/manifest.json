@@ -173,6 +173,166 @@
       "has_research": true,
       "reading_path": "stablyai@orca/03-orca-如何交付代理结果-断线重读-整批确认与协调者接管.md",
       "research_path": "stablyai@orca/03-orca-如何交付代理结果-断线重读-整批确认与协调者接管.md"
+    },
+    "art_d256849f-7ffb-4c45-9b0c-e1ea1760cd51": {
+      "collection_id": "col_a9535b1c-9ee",
+      "directory": "yetone@cumora/03-cumora-的项目记忆边界-笔记分开以后-旧背景为何仍可能留下",
+      "slug": "cumora-的项目记忆边界-笔记分开以后-旧背景为何仍可能留下",
+      "title": "Cumora 的项目记忆边界：笔记分开以后，旧背景为何仍可能留下",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-21T21:51:18.049Z",
+      "updated_at": "2026-10-21T21:51:18.049Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/03-cumora-的项目记忆边界-笔记分开以后-旧背景为何仍可能留下.md",
+      "research_path": "yetone@cumora/03-cumora-的项目记忆边界-笔记分开以后-旧背景为何仍可能留下.md"
+    },
+    "art_3a530cf0-3783-4ada-a004-cf8b7598747e": {
+      "collection_id": "col_a9535b1c-9ee",
+      "directory": "superset-sh@superset/03-superset-怎样让代理终端在断线-重启和退出后仍可管理",
+      "slug": "superset-怎样让代理终端在断线-重启和退出后仍可管理",
+      "title": "Superset 怎样让代理终端在断线、重启和退出后仍可管理",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-21T21:51:18.049Z",
+      "updated_at": "2026-10-21T21:51:18.049Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/03-superset-怎样让代理终端在断线-重启和退出后仍可管理.md",
+      "research_path": "superset-sh@superset/03-superset-怎样让代理终端在断线-重启和退出后仍可管理.md"
+    },
+    "art_4f138bfc-90f3-4cdf-85e1-20668990dcbb": {
+      "collection_id": "col_a9535b1c-9ee",
+      "directory": "akitaonrails@ai-memory/03-ai-memory-记住了规则-为什么新-agent-开局仍可能看不见",
+      "slug": "ai-memory-记住了规则-为什么新-agent-开局仍可能看不见",
+      "title": "ai-memory 记住了规则，为什么新 Agent 开局仍可能看不见",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-21T21:51:18.049Z",
+      "updated_at": "2026-10-21T21:51:18.049Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/03-ai-memory-记住了规则-为什么新-agent-开局仍可能看不见.md",
+      "research_path": "akitaonrails@ai-memory/03-ai-memory-记住了规则-为什么新-agent-开局仍可能看不见.md"
+    },
+    "art_c031c5f8-0697-411f-86eb-c8755f6622d0": {
+      "collection_id": "col_a9535b1c-9ee",
+      "directory": "xai-org@grok-build/03-grok-build-按下停止后-为什么还有任务在跑-轮次取消-命令存活与自动唤醒",
+      "slug": "grok-build-按下停止后-为什么还有任务在跑-轮次取消-命令存活与自动唤醒",
+      "title": "Grok Build 按下停止后，为什么还有任务在跑：轮次取消、命令存活与自动唤醒",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-21T21:51:18.049Z",
+      "updated_at": "2026-10-21T21:51:18.049Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/03-grok-build-按下停止后-为什么还有任务在跑-轮次取消-命令存活与自动唤醒.md",
+      "research_path": "xai-org@grok-build/03-grok-build-按下停止后-为什么还有任务在跑-轮次取消-命令存活与自动唤醒.md"
+    },
+    "art_c8b1479f-0efc-41ec-b43f-9cdc2e9e5c5e": {
+      "collection_id": "col_a9535b1c-9ee",
+      "directory": "stablyai@orca/04-orca-怎样在终端输出被丢弃后恢复画面-快照-位置对齐与有界等待",
+      "slug": "orca-怎样在终端输出被丢弃后恢复画面-快照-位置对齐与有界等待",
+      "title": "Orca 怎样在终端输出被丢弃后恢复画面：快照、位置对齐与有界等待",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-21T21:51:18.049Z",
+      "updated_at": "2026-10-21T21:51:18.049Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/04-orca-怎样在终端输出被丢弃后恢复画面-快照-位置对齐与有界等待.md",
+      "research_path": "stablyai@orca/04-orca-怎样在终端输出被丢弃后恢复画面-快照-位置对齐与有界等待.md"
+    },
+    "art_5b30ef73-7bd9-4f81-a513-653d2dbf1248": {
+      "collection_id": "col_a9535b1c-9ee",
+      "directory": "yetone@cumora/04-cumora-群里没人被点名时-先叫醒谁-超时以后谁接手",
+      "slug": "cumora-群里没人被点名时-先叫醒谁-超时以后谁接手",
+      "title": "Cumora 群里没人被点名时：先叫醒谁，超时以后谁接手",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-21T21:51:18.049Z",
+      "updated_at": "2026-10-21T21:51:18.049Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/04-cumora-群里没人被点名时-先叫醒谁-超时以后谁接手.md",
+      "research_path": "yetone@cumora/04-cumora-群里没人被点名时-先叫醒谁-超时以后谁接手.md"
+    },
+    "art_833382f5-75fd-4c97-bf80-931633178ce6": {
+      "collection_id": "col_a9535b1c-9ee",
+      "directory": "superset-sh@superset/04-superset-怎样接通远程终端-主机回拨-在线判断与重试边界",
+      "slug": "superset-怎样接通远程终端-主机回拨-在线判断与重试边界",
+      "title": "Superset 怎样接通远程终端：主机回拨、在线判断与重试边界",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-21T21:51:18.049Z",
+      "updated_at": "2026-10-21T21:51:18.049Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/04-superset-怎样接通远程终端-主机回拨-在线判断与重试边界.md",
+      "research_path": "superset-sh@superset/04-superset-怎样接通远程终端-主机回拨-在线判断与重试边界.md"
+    },
+    "art_459a2d86-8c48-4091-90d1-26feead5b49e": {
+      "collection_id": "col_a9535b1c-9ee",
+      "directory": "akitaonrails@ai-memory/04-ai-memory-怎样把项目要求变成跨项目偏好-准入-隔离与撤回边界",
+      "slug": "ai-memory-怎样把项目要求变成跨项目偏好-准入-隔离与撤回边界",
+      "title": "ai-memory 怎样把项目要求变成跨项目偏好：准入、隔离与撤回边界",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-21T21:51:18.049Z",
+      "updated_at": "2026-10-21T21:51:18.049Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/04-ai-memory-怎样把项目要求变成跨项目偏好-准入-隔离与撤回边界.md",
+      "research_path": "akitaonrails@ai-memory/04-ai-memory-怎样把项目要求变成跨项目偏好-准入-隔离与撤回边界.md"
+    },
+    "art_97f020db-a22a-430f-b633-248351a9f553": {
+      "collection_id": "col_a9535b1c-9ee",
+      "directory": "xai-org@grok-build/04-grok-build-为什么先搜工具再执行-mcp-目录-权限与真实调用之间的边界",
+      "slug": "grok-build-为什么先搜工具再执行-mcp-目录-权限与真实调用之间的边界",
+      "title": "Grok Build 为什么先搜工具再执行：MCP 目录、权限与真实调用之间的边界",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-21T21:51:18.049Z",
+      "updated_at": "2026-10-21T21:51:18.049Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/04-grok-build-为什么先搜工具再执行-mcp-目录-权限与真实调用之间的边界.md",
+      "research_path": "xai-org@grok-build/04-grok-build-为什么先搜工具再执行-mcp-目录-权限与真实调用之间的边界.md"
+    },
+    "art_9eab8529-3a25-4417-af55-e2275da7e7e9": {
+      "collection_id": "col_a9535b1c-9ee",
+      "directory": "stablyai@orca/05-orca-如何把-hook-与终端自报状态合并成可信的代理状态",
+      "slug": "orca-如何把-hook-与终端自报状态合并成可信的代理状态",
+      "title": "Orca 如何把 Hook 与终端自报状态合并成可信的代理状态",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-21T21:51:18.049Z",
+      "updated_at": "2026-10-21T21:51:18.049Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/05-orca-如何把-hook-与终端自报状态合并成可信的代理状态.md",
+      "research_path": "stablyai@orca/05-orca-如何把-hook-与终端自报状态合并成可信的代理状态.md"
     }
   },
   "collection_locations": {
@@ -200,12 +360,30 @@
         "art_1257b965-0e99-4072-b90f-e63668b5ddca",
         "art_0fd09e02-f30d-409d-b56e-fbd359254613"
       ]
+    },
+    "col_a9535b1c-9ee": {
+      "path": "docs/repository-research/batches/20261022-01.md",
+      "date_sequence": "20261022-01",
+      "created_at": "2026-10-21T21:51:18.049Z",
+      "article_ids": [
+        "art_d256849f-7ffb-4c45-9b0c-e1ea1760cd51",
+        "art_3a530cf0-3783-4ada-a004-cf8b7598747e",
+        "art_4f138bfc-90f3-4cdf-85e1-20668990dcbb",
+        "art_c031c5f8-0697-411f-86eb-c8755f6622d0",
+        "art_c8b1479f-0efc-41ec-b43f-9cdc2e9e5c5e",
+        "art_5b30ef73-7bd9-4f81-a513-653d2dbf1248",
+        "art_833382f5-75fd-4c97-bf80-931633178ce6",
+        "art_459a2d86-8c48-4091-90d1-26feead5b49e",
+        "art_97f020db-a22a-430f-b633-248351a9f553",
+        "art_9eab8529-3a25-4417-af55-e2275da7e7e9"
+      ]
     }
   },
   "delivered_batches": [
     "batch_7952a338-040f-479f-aeff-c883e836211e",
     "repair_f058c4bc-b756-49cb-9a5c-42969c9a4823",
-    "batch_ca872c48-a7cf-45ab-82a1-74a6d71fe961"
+    "batch_ca872c48-a7cf-45ab-82a1-74a6d71fe961",
+    "batch_55eeaf41-d2aa-4ebc-97ca-8e43973fdcc3"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -229,9 +407,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "d8b8ede4c3a9b9f0db0508f6faf7c0e3125bc04c00bdc60a9dab8f655cf110ed",
+      "sha256": "dd5febf4b2e2d25acdd31a6e73c2464a714c5017615d8028c5e7fe6ddbd95f3b",
       "media_type": "text/markdown",
-      "size": 14460
+      "size": 26356
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -372,6 +550,116 @@
       "sha256": "3afc50f5735c7b2926a71f8188659f8344b8c91371fb41c0c019b6d525609e2b",
       "media_type": "text/markdown",
       "size": 6373
+    },
+    "docs/repository-research/yetone@cumora/03-cumora-的项目记忆边界-笔记分开以后-旧背景为何仍可能留下.md": {
+      "sha256": "efad24446c97cfc99132ff1048fbd3da1ae126674692122975d0d28f850b25be",
+      "media_type": "text/markdown",
+      "size": 20676
+    },
+    "docs/repository-research/yetone@cumora/assets/03-cumora-的项目记忆边界-笔记分开以后-旧背景为何仍可能留下/memory-stores.svg": {
+      "sha256": "ae599e89abf24a12fa1f4a5649e1940fc09c9eb1448655169873375fc7852719",
+      "media_type": "image/svg+xml",
+      "size": 3337
+    },
+    "docs/repository-research/yetone@cumora/assets/03-cumora-的项目记忆边界-笔记分开以后-旧背景为何仍可能留下/scope-and-session.svg": {
+      "sha256": "b82220e30bcd5d50f8d318fef52422a910a2ae3fbc489824c1d1a3867f7a6ea8",
+      "media_type": "image/svg+xml",
+      "size": 2702
+    },
+    "docs/repository-research/superset-sh@superset/03-superset-怎样让代理终端在断线-重启和退出后仍可管理.md": {
+      "sha256": "5e2d384566660ab3ec17c374316ee14f4635c65b9a82547782a0f757a11adb3f",
+      "media_type": "text/markdown",
+      "size": 14526
+    },
+    "docs/repository-research/superset-sh@superset/assets/03-superset-怎样让代理终端在断线-重启和退出后仍可管理/terminal-agent-lifecycle.svg": {
+      "sha256": "8e8614107dd54b373068a0730fce98c1050a44ebecd7ac644f81668b0f6ac813",
+      "media_type": "image/svg+xml",
+      "size": 7125
+    },
+    "docs/repository-research/akitaonrails@ai-memory/03-ai-memory-记住了规则-为什么新-agent-开局仍可能看不见.md": {
+      "sha256": "6c0894f1cfd6ad83ca3577b0d1c371ff2d8844f3c6a43f491dd9d4094010dac2",
+      "media_type": "text/markdown",
+      "size": 21925
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/03-ai-memory-记住了规则-为什么新-agent-开局仍可能看不见/brief-selection.svg": {
+      "sha256": "81c451eb1ecd4e8e4104ec9a0069796f694b3448086b2a93072426e3492b82f3",
+      "media_type": "image/svg+xml",
+      "size": 4629
+    },
+    "docs/repository-research/xai-org@grok-build/03-grok-build-按下停止后-为什么还有任务在跑-轮次取消-命令存活与自动唤醒.md": {
+      "sha256": "56d7d130c0095371286fe81a9d78ae47a7cc8a7b46ace78da1407756f04c4a9b",
+      "media_type": "text/markdown",
+      "size": 24126
+    },
+    "docs/repository-research/xai-org@grok-build/assets/03-grok-build-按下停止后-为什么还有任务在跑-轮次取消-命令存活与自动唤醒/stop-two-lifetimes.svg": {
+      "sha256": "af4759be9e105b5992bbbca5577691af100ce5f7804713029a19351f67feafcf",
+      "media_type": "image/svg+xml",
+      "size": 4108
+    },
+    "docs/repository-research/stablyai@orca/04-orca-怎样在终端输出被丢弃后恢复画面-快照-位置对齐与有界等待.md": {
+      "sha256": "941cdbab553d87a6eb65e0cfb281c43b7e1734cfe8895466bcacb776a1bd4bbc",
+      "media_type": "text/markdown",
+      "size": 22854
+    },
+    "docs/repository-research/stablyai@orca/assets/04-orca-怎样在终端输出被丢弃后恢复画面-快照-位置对齐与有界等待/orca-terminal-snapshot-cut.svg": {
+      "sha256": "a35dadebd0d6be266a30f2bbe533a0eb19228194f0a24882d9bca81dddd85c56",
+      "media_type": "image/svg+xml",
+      "size": 5241
+    },
+    "docs/repository-research/yetone@cumora/04-cumora-群里没人被点名时-先叫醒谁-超时以后谁接手.md": {
+      "sha256": "1cf58f1f3f1415c7184eac059061c96912fbc47eed2418f2f437f9e398538f58",
+      "media_type": "text/markdown",
+      "size": 17044
+    },
+    "docs/repository-research/yetone@cumora/assets/04-cumora-群里没人被点名时-先叫醒谁-超时以后谁接手/first-wake-election.svg": {
+      "sha256": "dc3746cd831388e80587d657c5a2989a5de486fbc42d2245ab1fabdb8911c2f7",
+      "media_type": "image/svg+xml",
+      "size": 4338
+    },
+    "docs/repository-research/superset-sh@superset/04-superset-怎样接通远程终端-主机回拨-在线判断与重试边界.md": {
+      "sha256": "91ac7727e169b30934e85ddc970e7515a6436e451f924fd67c070f05bdc4af96",
+      "media_type": "text/markdown",
+      "size": 21902
+    },
+    "docs/repository-research/superset-sh@superset/assets/04-superset-怎样接通远程终端-主机回拨-在线判断与重试边界/remote-terminal-dial.svg": {
+      "sha256": "79af292d2a3fe06dc97c2614ec22863eb8dec8fb317e51b0520a06efc5eee86b",
+      "media_type": "image/svg+xml",
+      "size": 4920
+    },
+    "docs/repository-research/akitaonrails@ai-memory/04-ai-memory-怎样把项目要求变成跨项目偏好-准入-隔离与撤回边界.md": {
+      "sha256": "a8f0201a2d7f59fb5acaac8b5e6834e2a618686fe4dfbdada0505a819e2b4bad",
+      "media_type": "text/markdown",
+      "size": 24409
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/04-ai-memory-怎样把项目要求变成跨项目偏好-准入-隔离与撤回边界/profile-boundaries.svg": {
+      "sha256": "d0ef1827e72d3c3e48f851904cc68656acb59a9df7be1a5607a27bb7e62ef630",
+      "media_type": "image/svg+xml",
+      "size": 3720
+    },
+    "docs/repository-research/xai-org@grok-build/04-grok-build-为什么先搜工具再执行-mcp-目录-权限与真实调用之间的边界.md": {
+      "sha256": "cb4c4e21795b2f1ea8203fe119254d4302a7a3614ab2b4a1cf38a32252b2cf4d",
+      "media_type": "text/markdown",
+      "size": 21556
+    },
+    "docs/repository-research/xai-org@grok-build/assets/04-grok-build-为什么先搜工具再执行-mcp-目录-权限与真实调用之间的边界/mcp-discovery-dispatch.svg": {
+      "sha256": "75e8468d3caf1f9ac5ea6a9e16c618d0715dc96b0479b7371536832170a93790",
+      "media_type": "image/svg+xml",
+      "size": 4630
+    },
+    "docs/repository-research/stablyai@orca/05-orca-如何把-hook-与终端自报状态合并成可信的代理状态.md": {
+      "sha256": "32b80cf396d5ccd7ea5e106314fd39901c2a30acf1c13f4f54294e897eb4ab96",
+      "media_type": "text/markdown",
+      "size": 17888
+    },
+    "docs/repository-research/stablyai@orca/assets/05-orca-如何把-hook-与终端自报状态合并成可信的代理状态/orca-agent-status-synthesis.svg": {
+      "sha256": "bfbe5d5fb3781bf101a14da19206335b6b3febcc23b4f4a2e9bdafd23cc7b9b3",
+      "media_type": "image/svg+xml",
+      "size": 6287
+    },
+    "docs/repository-research/batches/20261022-01.md": {
+      "sha256": "738228637794711642df7c68028894f63e97cb682ff7d556adf1322b2d75bf04",
+      "media_type": "text/markdown",
+      "size": 5943
     }
   }
 }
