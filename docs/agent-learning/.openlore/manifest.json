@@ -124,7 +124,8 @@
     "research_res_1bb0ecd3-9f3",
     "research_res_b89190ee-bf0",
     "research_res_f214315e-797",
-    "batch_53ac2a25-5c99-4341-b759-6a15cc0f675e"
+    "batch_53ac2a25-5c99-4341-b759-6a15cc0f675e",
+    "repair_b16015cb-450d-45b7-b522-1692af183715"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
@@ -198,9 +199,9 @@
       "size": 7479
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/research.md": {
-      "sha256": "5eeb7c1f6a297df7f0fe3a72c4d317d7c8501484615c8c4617a968d41d83b99a",
+      "sha256": "13dab045609a8cc74b7902fc5f8faa90a06e52a7f0006ee554cbc47693685237",
       "media_type": "text/markdown",
-      "size": 15688
+      "size": 15727
     },
     "docs/agent-learning/articles/20261020-inference-cost-optimization/README.md": {
       "sha256": "e48ebee7d60329aaba4457615af66b0abaf63fc449ab96185c2513e5756123fb",
@@ -283,9 +284,9 @@
       "size": 8198
     },
     "docs/agent-learning/articles/20261020-inference-cost-optimization/research.md": {
-      "sha256": "d3a29196c8ad735e903d33e7fe4b8bf647ec4ad5d6492e009f9155a21d2294dd",
+      "sha256": "5c92de251c61067caf3231bc50edc84e44a2df08b2e94a6b22cf42ed0aff1351",
       "media_type": "text/markdown",
-      "size": 16781
+      "size": 16820
     },
     "docs/agent-learning/articles/20261020-numan-ai-health-coach/README.md": {
       "sha256": "3806c4f62f3662102fbf30df73a7c099d4fafce5a6b86f17b70ced13d62b8692",
@@ -328,9 +329,9 @@
       "size": 9199
     },
     "docs/agent-learning/articles/20261020-numan-ai-health-coach/research.md": {
-      "sha256": "04926ab9b5be4dbc2eec3ab21d3ea1456a3cddab9e4f70770452774118995c10",
+      "sha256": "002c92417a3ed6b17e46c426577cb0cb949d99e8a93e4296f121805e71d4a0b5",
       "media_type": "text/markdown",
-      "size": 15282
+      "size": 15321
     },
     "docs/agent-learning/batches/20261020-01.md": {
       "sha256": "f445027940522d7bfb52f56636fc53bc27e9a9acfe86e1a2d1d89ba7228691a2",
@@ -378,9 +379,9 @@
       "size": 28797
     },
     "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/research.md": {
-      "sha256": "960b7991564f6ec19eb2053ce250f27e08f9903463980304f5cc02c3011f05c6",
+      "sha256": "2e97b75fee6c4e6d8c967da56c2ed3f559501104780ab174e820100d87fd5cbd",
       "media_type": "text/markdown",
-      "size": 17473
+      "size": 17524
     },
     "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/assets/diagram-2f088decc36c.webp": {
       "sha256": "2f088decc36c90a98a4fd2bcacc39ac5bf5055ae8333b592512cdc356059a954",
@@ -428,9 +429,9 @@
       "size": 27904
     },
     "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/research.md": {
-      "sha256": "0a36dbf1d6b20768fc3e4c06c146189d5bfc70b20eced7c6f4a1f3ab3ced342e",
+      "sha256": "e9612d1cae30f9db20f1248b5dd764792048a8a2c88997057bf0138f0f6cba98",
       "media_type": "text/markdown",
-      "size": 14963
+      "size": 15014
     },
     "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-c906646f0c8e.webp": {
       "sha256": "c906646f0c8ec3a7ac3d618c57c3beef1535a37da147863570e59b64f8a90770",
