@@ -1,6 +1,8 @@
 # 智能体评测的新重点：从检查回答，到检查行动和结果
 
-> 正文：[阅读正文](article.md)
+> 来源：[www.langchain.com](<https://www.langchain.com/blog/common-questions-about-agent-evals>)  
+> 作者：Divya Santhanam · 发布时间：2026-10-16 03:00（Asia/Shanghai）  
+> 正文：[阅读原文](article.md)
 
 一个旅行助手可以把日期和价格说得完全正确，却已经替用户付了不该付的钱。面对这类会调用工具、修改数据的智能体，评测必须把用户要求、执行过程和实际结果放在一起检查；只读最后一段回答，往往看不到最重要的错误。如果你关注的是能连续完成任务的智能体，而非单轮问答，这个变化就值得注意。
 

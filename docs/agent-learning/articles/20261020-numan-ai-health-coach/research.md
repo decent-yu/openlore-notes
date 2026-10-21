@@ -1,6 +1,8 @@
 # Nu 健康教练：为什么智能体要测试整段对话
 
-> 正文：[阅读正文](article.md)
+> 来源：[www.langchain.com](<https://www.langchain.com/blog/how-numan-built-an-eval-first-ai-health-coach-with-langgraph-and-langsmith>)  
+> 作者：Asif Laldin Marcus Wadge-Dale Shubhangi Hora Konstantinos Georgakilas · 发布时间：2026-10-19 23:00（Asia/Shanghai）  
+> 正文：[阅读原文](article.md)
 
 一个健康教练可以帮助用户找到坚持运动的办法，却不应在用户反复追问后，开始替他决定如何调整药物。难点在于：孤立地看，每句话都可能礼貌、合理；连起来看，系统却可能没有弄清问题就给建议，或者逐步越过职责边界。英国数字健康公司 Numan 为其人工智能健康教练 Nu 尝试的办法，是保留针对明确问题的固定测试，再让另一个模型扮演患者，与真实系统来回交谈，最后评审整段过程。对于需要持续沟通、又必须守住业务边界的智能体，这种评测方式值得关注。
 

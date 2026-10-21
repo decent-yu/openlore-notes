@@ -1,6 +1,8 @@
 # Battle Drones：当 Agent 开始造游戏、测游戏，也下场玩游戏
 
-> 正文：[阅读中文正文](article-zh-CN.md)
+> 来源：[simonwillison.net](<https://simonwillison.net/2026/Oct/20/battledrones>)  
+> 作者：Simon Willison · 发布时间：2026-10-20 08:00（Asia/Shanghai）  
+> 翻译正文：[阅读中文正文](article-zh-CN.md)
 
 让 AI 写出一个“看起来像游戏”的页面，和做出一个愿意反复玩的游戏，中间隔着玩法设计、反复测试和大量修改。Simon Willison 的 Battle Drones 实验尝试跨过这段距离：他给出方向，编码 Agent——能修改文件、调用工具并检查结果的 AI 程序——连续迭代作品，还制作测试和观察工具来辅助改进。最后，这个浏览器策略游戏不仅能让语言模型互相对战，还尝试让两台附近设备通过声音联机。
 

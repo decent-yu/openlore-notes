@@ -1,6 +1,8 @@
 # Clairic：让 Agent 直接取得数值，而不必先生成一段话
 
-> 正文：[阅读中文正文](article-zh-CN.md)
+> 来源：[blog.cloudflare.com](<https://blog.cloudflare.com/clairic-extraction-model>)  
+> 作者：未知 · 发布时间：2026-10-20 01:48（Asia/Shanghai）  
+> 翻译正文：[阅读中文正文](article-zh-CN.md)
 
 一封售后邮件里有订单号、价格、税费和收货日期。程序需要把这些信息读出来，算出总付款额，再决定如何处理。今天，这些步骤经常交给大语言模型：先让它写出一份结构化答案，再由程序接着处理。Cloudflare 新发布的 Clairic 尝试省掉逐字生成答案的过程，直接返回文本片段、数值、日期，以及带不确定性区间的预测。
 
