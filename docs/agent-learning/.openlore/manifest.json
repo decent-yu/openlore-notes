@@ -57,6 +57,45 @@
       "collected_at": "2026-10-20T02:37:01.564Z",
       "updated_at": "2026-10-20T11:38:28.211Z",
       "has_research": true
+    },
+    "art_1856c632-7ba5-47eb-ae55-b51ea64de2b1": {
+      "collection_id": "col_7f9f8d7e-854",
+      "directory": "articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models",
+      "slug": "introducing-clairic-a-new-system-one-class-of-extraction-models",
+      "title": "Introducing Clairic, a new System One class of extraction models",
+      "original_url": "https://blog.cloudflare.com/clairic-extraction-model",
+      "tags": [
+        "信息抽取",
+        "结构化输出",
+        "多模态模型",
+        "不确定性估计",
+        "时间序列预测",
+        "模型级联",
+        "Workers AI"
+      ],
+      "collected_at": "2026-10-21T01:17:46.860Z",
+      "updated_at": "2026-10-21T01:17:46.860Z",
+      "has_research": true
+    },
+    "art_4d0dca52-6239-47cd-bff6-4837c1112f37": {
+      "collection_id": "col_7f9f8d7e-854",
+      "directory": "articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer",
+      "slug": "battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer",
+      "title": "Battle Drones—a vibe coded RTS with audio-based multiplayer",
+      "original_url": "https://simonwillison.net/2026/Oct/20/battledrones",
+      "tags": [
+        "AI辅助编程",
+        "即时战略游戏",
+        "游戏平衡性测试",
+        "Three.js",
+        "程序化地图生成",
+        "确定性模拟",
+        "音频调制解调器",
+        "大型语言模型对战"
+      ],
+      "collected_at": "2026-10-21T01:17:46.860Z",
+      "updated_at": "2026-10-21T01:17:46.860Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -69,19 +108,29 @@
         "art_20a436bd-333a-49b1-92b2-af8c695acb97",
         "art_8c2c8b05-4bdd-4245-99a9-3b69a280e5c9"
       ]
+    },
+    "col_7f9f8d7e-854": {
+      "path": "docs/agent-learning/batches/20261021-01.md",
+      "date_sequence": "20261021-01",
+      "created_at": "2026-10-21T01:17:46.860Z",
+      "article_ids": [
+        "art_1856c632-7ba5-47eb-ae55-b51ea64de2b1",
+        "art_4d0dca52-6239-47cd-bff6-4837c1112f37"
+      ]
     }
   },
   "delivered_batches": [
     "batch_1792463821557",
     "research_res_1bb0ecd3-9f3",
     "research_res_b89190ee-bf0",
-    "research_res_f214315e-797"
+    "research_res_f214315e-797",
+    "batch_53ac2a25-5c99-4341-b759-6a15cc0f675e"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "248f801f54c2f44eaa3e0fd7062b3eac5646e15b1313e348c3ff4ed171ca8617",
+      "sha256": "a58d32be7bdc48f960bd8ea9426251987c269e4a5108e7c68c3a4503e1df392a",
       "media_type": "text/markdown",
-      "size": 1737
+      "size": 3350
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -312,6 +361,141 @@
       "sha256": "c0f9912c3ba4670bd4b902a6a6750a77a1ac9e8d728b4c00bd333da8fe16ce02",
       "media_type": "image/svg+xml",
       "size": 4559
+    },
+    "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/README.md": {
+      "sha256": "6790b3a6071b311e10bc5d0fd58a84332faffa8051444be55c7b4f57a73ec2cc",
+      "media_type": "text/markdown",
+      "size": 503
+    },
+    "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/article.md": {
+      "sha256": "f699d268699fccd89fb7506a75fe12e02a1f84709f665ef0ee5e507cf1755b52",
+      "media_type": "text/markdown",
+      "size": 28905
+    },
+    "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/article-zh-CN.md": {
+      "sha256": "00c56b20ba2954baa3dde1fa375530240ddae86e3a82ad9e173aa2c5c21a596c",
+      "media_type": "text/markdown",
+      "size": 28797
+    },
+    "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/research.md": {
+      "sha256": "960b7991564f6ec19eb2053ce250f27e08f9903463980304f5cc02c3011f05c6",
+      "media_type": "text/markdown",
+      "size": 17473
+    },
+    "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/assets/diagram-2f088decc36c.webp": {
+      "sha256": "2f088decc36c90a98a4fd2bcacc39ac5bf5055ae8333b592512cdc356059a954",
+      "media_type": "image/webp",
+      "size": 52986
+    },
+    "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/assets/diagram-7ad50982e156.webp": {
+      "sha256": "7ad50982e15646116386c46422fb506a8a425dba2b7c06a5d1f4d421d755510c",
+      "media_type": "image/webp",
+      "size": 23506
+    },
+    "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/assets/diagram-e6856ef9c697.webp": {
+      "sha256": "e6856ef9c697a7e0d79f3bd292e2b3c4b79e431397b48f8f91136f03467e71fa",
+      "media_type": "image/webp",
+      "size": 92570
+    },
+    "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/assets/diagram-cbf13770a92b.webp": {
+      "sha256": "cbf13770a92bf180148f619a4f04e639cdb1ae23ae18d4928510b0b76049d652",
+      "media_type": "image/webp",
+      "size": 28760
+    },
+    "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/assets/diagram-70a34eea079d.webp": {
+      "sha256": "70a34eea079d44dc02214ff0927ef36c13289f016fa08696a2a664d2bc9acb38",
+      "media_type": "image/webp",
+      "size": 17042
+    },
+    "docs/agent-learning/articles/20261021-introducing-clairic-a-new-system-one-class-of-extraction-models/assets/clairic-values.svg": {
+      "sha256": "470e5f249e6c560ecbf697578eeb3f41f918fdeb92623daf3119b171f996a403",
+      "media_type": "image/svg+xml",
+      "size": 4765
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/README.md": {
+      "sha256": "a1ea88fc2133d29e010831a55d406b079af86aaf222e096a126ffe859d897940",
+      "media_type": "text/markdown",
+      "size": 543
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/article.md": {
+      "sha256": "2a4671c49f535d35123696030424e748b4b95845cd3ddd5d740f7936baddb176",
+      "media_type": "text/markdown",
+      "size": 27743
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/article-zh-CN.md": {
+      "sha256": "fd320eb618d244a8cdae6a116c0fa0193782548c68fb417b10f262cb9f1ace66",
+      "media_type": "text/markdown",
+      "size": 27904
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/research.md": {
+      "sha256": "0a36dbf1d6b20768fc3e4c06c146189d5bfc70b20eced7c6f4a1f3ab3ced342e",
+      "media_type": "text/markdown",
+      "size": 14963
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-c906646f0c8e.webp": {
+      "sha256": "c906646f0c8ec3a7ac3d618c57c3beef1535a37da147863570e59b64f8a90770",
+      "media_type": "image/webp",
+      "size": 112426
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-a2cffa0190cc.webp": {
+      "sha256": "a2cffa0190cc15b8126fc95c0224c98cfe9486603379efbe67b9b7909ad4aa3c",
+      "media_type": "image/webp",
+      "size": 93006
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-aa469ad70cb4.jpg": {
+      "sha256": "aa469ad70cb4e543da41c527cd2fbdaca737994618a77be0ccb04b3d19bf7e4d",
+      "media_type": "image/jpeg",
+      "size": 214764
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-408c230cc73b.jpg": {
+      "sha256": "408c230cc73ba104bf19c2f353593b2b9f5f9376561ef3613a1b7aabcc9d6079",
+      "media_type": "image/jpeg",
+      "size": 207410
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-ec8c519318c4.jpg": {
+      "sha256": "ec8c519318c4a316379ed828be7abb55f3c2988ceac1095b5929d35df023a50a",
+      "media_type": "image/jpeg",
+      "size": 321726
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-00a86343f605.jpg": {
+      "sha256": "00a86343f6056b808fb380f50ce49333f6d2f6e2ee6047fd557f1aeebf4ef83a",
+      "media_type": "image/jpeg",
+      "size": 228787
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-07b18167b525.jpg": {
+      "sha256": "07b18167b5255b66a4d2d7dcf094682d838212895d166b661b8deae6230837d1",
+      "media_type": "image/jpeg",
+      "size": 187804
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-922e5c0b881e.jpg": {
+      "sha256": "922e5c0b881e9544410ba3651d53852cf7a87b69753af58623fb93cf498a7709",
+      "media_type": "image/jpeg",
+      "size": 277329
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/island-incentives.svg": {
+      "sha256": "b0539c92d314a7ddb63381350bf94362725f9c030e083ae4f8c1b2e33231467c",
+      "media_type": "image/svg+xml",
+      "size": 3434
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/lockstep.svg": {
+      "sha256": "f07fb130a30f985c3d117f1fe2225a8fd2f2a542fb039397f97ab00e80df90ab",
+      "media_type": "image/svg+xml",
+      "size": 5382
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/agent-round.svg": {
+      "sha256": "5addbfb5eb34bea09775b7313c9adedd2b1358fe1bfcbb8e958d0963183a0453",
+      "media_type": "image/svg+xml",
+      "size": 3626
+    },
+    "docs/agent-learning/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/sound-lockstep.svg": {
+      "sha256": "bdc9299763c5bf85acda54d358f21f8e098080c11050982f37107cc8fd7177f0",
+      "media_type": "image/svg+xml",
+      "size": 4169
+    },
+    "docs/agent-learning/batches/20261021-01.md": {
+      "sha256": "44c0a76d642bf7138122ddac847fcba86f72584e5c1e8a719e092020d50305a4",
+      "media_type": "text/markdown",
+      "size": 917
     }
   }
 }
