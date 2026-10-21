@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="title desc">
+<title id="title">只传操作，两台手机各自计算同一场战斗</title>
+<desc id="desc">上半部分展示两台手机都运行模拟，只通过声音交换带编号的指令。下半部分以假设的第120步为例，展示对方操作迟到时等待，收到后按同一顺序继续。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#52677c"/></marker></defs>
+<rect width="1200" height="850" rx="20" fill="#f6f8fb"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#172d43">
+<text x="54" y="61" font-size="30" font-weight="700">声音运送指令，战局在本机计算</text>
+<text x="54" y="94" font-size="18" fill="#54677a">结构依据项目规格；下方步编号为假设示例，横向距离不代表实际耗时。</text>
+<rect x="54" y="126" width="410" height="342" rx="18" fill="#fff" stroke="#b9cfe9" stroke-width="2"/>
+<rect x="736" y="126" width="410" height="342" rx="18" fill="#fff" stroke="#ecc8b7" stroke-width="2"/>
+<text x="80" y="164" font-size="23" fill="#245c9a" font-weight="700">手机 A · 蓝方</text>
+<text x="762" y="164" font-size="23" fill="#a34b2a" font-weight="700">手机 B · 红方</text>
+<text x="80" y="200" font-size="18">触屏输入 → 排入未来某一步</text>
+<text x="762" y="200" font-size="18">触屏输入 → 排入未来某一步</text>
+<rect x="80" y="222" width="358" height="64" rx="10" fill="#edf4fc"/>
+<rect x="762" y="222" width="358" height="64" rx="10" fill="#fff1e9"/>
+<text x="100" y="249" font-size="19" font-weight="600">指令压缩 / 确认 / 去重</text>
+<text x="100" y="274" font-size="16">声音编码与解码在音频线程执行</text>
+<text x="782" y="249" font-size="19" font-weight="600">指令压缩 / 确认 / 去重</text>
+<text x="782" y="274" font-size="16">声音编码与解码在音频线程执行</text>
+<path d="M448 240 H748" fill="none" stroke="#52677c" stroke-width="2"/>
+<path d="M752 278 H452" fill="none" stroke="#52677c" stroke-width="2"/>
+<path d="M748 240 l-10 -6 v12Z M452 278 l10 -6 v12Z M258 328 l-6 -10 h12Z M940 328 l-6 -10 h12Z" fill="#52677c"/>
+<rect x="501" y="193" width="198" height="33" rx="16" fill="#e3eaf2"/>
+<text x="600" y="216" text-anchor="middle" font-size="17">扬声器 ↔ 麦克风</text>
+<text x="600" y="317" text-anchor="middle" font-size="17" fill="#54677a">不传每个单位的位置</text>
+<path d="M258 289 V328" fill="none" stroke="#52677c" stroke-width="2"/>
+<path d="M940 289 V328" fill="none" stroke="#52677c" stroke-width="2"/>
+<rect x="80" y="339" width="358" height="99" rx="10" fill="#eef5ef"/>
+<rect x="762" y="339" width="358" height="99" rx="10" fill="#eef5ef"/>
+<text x="100" y="368" font-size="19" font-weight="600">相同规则 + 地图种子</text>
+<text x="100" y="396" font-size="18">按步执行：先蓝方，再红方</text>
+<text x="100" y="423" font-size="17">得到本机战局 → 绘制画面</text>
+<text x="782" y="368" font-size="19" font-weight="600">相同规则 + 地图种子</text>
+<text x="782" y="396" font-size="18">按步执行：先蓝方，再红方</text>
+<text x="782" y="423" font-size="17">得到本机战局 → 绘制画面</text>
+<text x="600" y="397" text-anchor="middle" font-size="18" fill="#356543">定期比较</text>
+<text x="600" y="425" text-anchor="middle" font-size="18" fill="#356543">状态摘要</text>
+<path d="M451 413 H522 M678 413 H749" stroke="#6e9176" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="54" y="525" font-size="24" font-weight="700">一条指令迟到时，为什么要停下来？</text>
+<text x="54" y="557" font-size="18" fill="#54677a">假设 A 已发出蓝方第 120 步指令，但尚未收到红方这一小步的指令。</text>
+<text x="70" y="614" font-size="20" fill="#245c9a">A</text>
+<text x="70" y="687" font-size="20" fill="#a34b2a">B</text>
+<path d="M119 608 H1100 M119 681 H1100" stroke="#becbd8" stroke-width="2"/>
+<rect x="146" y="582" width="155" height="48" rx="8" fill="#dce9f8"/>
+<text x="223" y="612" text-anchor="middle" font-size="18">已完成 119</text>
+<rect x="327" y="582" width="332" height="48" rx="8" fill="#ffebc6"/>
+<text x="493" y="612" text-anchor="middle" font-size="18">等待红方 120，不猜下一步</text>
+<rect x="703" y="582" width="190" height="48" rx="8" fill="#dceedd"/>
+<text x="798" y="612" text-anchor="middle" font-size="18">两方齐全 → 算 120</text>
+<rect x="146" y="655" width="245" height="48" rx="8" fill="#f9e2d7"/>
+<text x="268" y="685" text-anchor="middle" font-size="18">发送 / 重复携带红方 120</text>
+<path d="M394 672 Q543 672 700 610" fill="none" stroke="#a34b2a" stroke-width="2.5"/>
+<path d="M700 610 l-13 -1 5 10Z" fill="#a34b2a"/>
+<rect x="931" y="582" width="146" height="48" rx="8" fill="#e8edf3"/>
+<text x="1004" y="612" text-anchor="middle" font-size="18">继续算 121</text>
+<text x="54" y="765" font-size="20" font-weight="600">等待解决“指令没到”；状态摘要检查解决“收到同样指令却算出不同结果”。</text>
+<text x="54" y="800" font-size="18" fill="#54677a">摘要用于发现分歧，不会自动修复分歧；具体中止策略由联机协议决定。</text>
+</g></svg>

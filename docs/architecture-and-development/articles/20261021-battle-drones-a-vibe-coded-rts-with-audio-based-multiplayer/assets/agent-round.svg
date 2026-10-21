@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="650" viewBox="0 0 1080 650" role="img" aria-labelledby="title desc">
+  <title id="title">模型对战：先读局势，再提交命令，最后推进游戏</title>
+  <desc id="desc">一台机器持有唯一游戏世界，分别过滤出蓝红双方可见信息。两个模型读取信息和自己的笔记，调用工具提交命令。双方结束后，游戏推进五秒，再进入下一轮。五秒指游戏时间，不是模型必须在五秒内回答。</desc>
+
+  <rect width="1080" height="650" rx="20" fill="#f7f9fc"/>
+  <g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#182b40">
+    <text x="46" y="55" font-size="28" font-weight="700">语言模型指挥战局，游戏程序执行规则</text>
+    <text x="46" y="88" font-size="17" fill="#526174">按箭头阅读：这是一轮决策；并非让模型逐帧操控画面。</text>
+    <rect x="350" y="124" width="380" height="92" rx="14" fill="#e7edf4" stroke="#bac7d4"/>
+    <text x="540" y="162" text-anchor="middle" font-size="22" font-weight="600">唯一的游戏世界</text>
+    <text x="540" y="192" text-anchor="middle" font-size="17">同一台机器保存状态、计算双方结果</text>
+    <g fill="none" stroke="#596779" stroke-width="2"><path d="M420 216V244H265V274"/><path d="M660 216V244H815V274"/></g>
+    <text x="265" y="235" text-anchor="middle" font-size="16" fill="#30678f">过滤蓝方看不到的信息</text>
+    <text x="815" y="235" text-anchor="middle" font-size="16" fill="#a14c49">过滤红方看不到的信息</text>
+    <rect x="75" y="282" width="380" height="145" rx="15" fill="#e6f2fc" stroke="#79aace"/>
+    <rect x="625" y="282" width="380" height="145" rx="15" fill="#fff0eb" stroke="#d89c8f"/>
+    <text x="105" y="318" font-size="23" font-weight="600">蓝方模型</text>
+    <text x="105" y="350" font-size="18">读局势 + 上轮笔记 → 决定行动</text>
+    <text x="105" y="380" font-size="18">工具返回命令是否被接受及原因</text>
+    <text x="105" y="410" font-size="18">保存新笔记 → 结束本轮</text>
+    <text x="655" y="318" font-size="23" font-weight="600">红方模型</text>
+    <text x="655" y="350" font-size="18">读局势 + 上轮笔记 → 决定行动</text>
+    <text x="655" y="380" font-size="18">工具返回命令是否被接受及原因</text>
+    <text x="655" y="410" font-size="18">保存新笔记 → 结束本轮</text>
+    <g fill="none" stroke="#596779" stroke-width="2"><path d="M265 427V468H386"/><path d="M815 427V468H694"/></g>
+    <rect x="395" y="444" width="290" height="88" rx="14" fill="#e7f4ec" stroke="#83b49b"/>
+    <text x="540" y="478" text-anchor="middle" font-size="21" font-weight="600">双方提交完毕</text>
+    <text x="540" y="510" text-anchor="middle" font-size="18">合并命令，推进 5 秒游戏时间</text>
+    <path d="M685 502H1034V170H738" fill="none" stroke="#596779" stroke-width="2" stroke-dasharray="7 6"/>
+    <g fill="none" stroke="#596779" stroke-width="2"><path d="M259 268L265 274L271 268"/><path d="M809 268L815 274L821 268"/><path d="M380 462L386 468L380 474"/><path d="M700 462L694 468L700 474"/><path d="M744 164L738 170L744 176"/></g>
+    <text x="836" y="528" font-size="17" fill="#526174">新局势进入下一轮</text>
+    <text x="46" y="585" font-size="18" font-weight="600">时间边界：模型思考时，战局不会按现实时间继续流逝。</text>
+    <text x="46" y="616" font-size="16" fill="#526174">依据项目 Agent Battles 文档及工具插件整理；示意省略预算、重试和观战功能。</text>
+  </g>
+</svg>

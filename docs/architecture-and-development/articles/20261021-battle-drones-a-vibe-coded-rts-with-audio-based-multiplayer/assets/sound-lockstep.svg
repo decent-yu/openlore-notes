@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="730" viewBox="0 0 1080 730" role="img" aria-labelledby="title desc">
+  <title id="title">声音联机：交换命令，两端各算一遍</title>
+  <desc id="desc">两台设备使用相同规则和初始设置。命令通过声音双向传送，双方按相同次序执行。假设第20步红方的命令在蓝方设备上尚未到达，蓝方等待，收到后才继续；不能推测对方没有操作。</desc>
+
+  <rect width="1080" height="730" rx="20" fill="#f7f9fc"/>
+  <g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#182b40">
+    <text x="46" y="54" font-size="28" font-weight="700">声音传递玩家命令，本机负责计算整场战斗</text>
+    <text x="46" y="87" font-size="17" fill="#526174">成立条件：相同初始设置、相同计算规则、相同命令与执行顺序。</text>
+    <rect x="60" y="122" width="310" height="224" rx="20" fill="#e6f2fc" stroke="#79aace"/>
+    <rect x="710" y="122" width="310" height="224" rx="20" fill="#fff0eb" stroke="#d89c8f"/>
+    <text x="215" y="161" text-anchor="middle" font-size="23" font-weight="600">设备 A · 蓝方玩家</text>
+    <text x="865" y="161" text-anchor="middle" font-size="23" font-weight="600">设备 B · 红方玩家</text>
+    <text x="215" y="210" text-anchor="middle" font-size="19">收齐蓝、红双方命令</text>
+    <text x="215" y="245" text-anchor="middle" font-size="19">本地推进整个游戏世界</text>
+    <text x="215" y="300" text-anchor="middle" font-size="17" fill="#30678f">扬声器发送 · 麦克风接收</text>
+    <text x="865" y="210" text-anchor="middle" font-size="19">收齐蓝、红双方命令</text>
+    <text x="865" y="245" text-anchor="middle" font-size="19">本地推进整个游戏世界</text>
+    <text x="865" y="300" text-anchor="middle" font-size="17" fill="#a14c49">扬声器发送 · 麦克风接收</text>
+    <path d="M385 207H695" fill="none" stroke="#596779" stroke-width="2"/>
+    <path d="M695 272H385" fill="none" stroke="#596779" stroke-width="2"/>
+    <g fill="none" stroke="#596779" stroke-width="2"><path d="M689 201L695 207L689 213"/><path d="M391 266L385 272L391 278"/></g>
+    <text x="540" y="190" text-anchor="middle" font-size="18">蓝方命令 → 编成声音</text>
+    <text x="540" y="304" text-anchor="middle" font-size="18">红方命令 ← 还原数据</text>
+    <text x="540" y="362" text-anchor="middle" font-size="17" fill="#526174">不需要把每辆坦克的坐标不断传给对方</text>
+    <path d="M60 390H1020" stroke="#ccd5df"/>
+    <text x="60" y="430" font-size="22" font-weight="600">假设例子：蓝方设备缺少第 20 步的红方命令</text>
+    <text x="60" y="478" font-size="18">本机进度</text>
+    <rect x="180" y="451" width="190" height="48" rx="9" fill="#e7edf4"/>
+    <text x="275" y="482" text-anchor="middle" font-size="19">完成第 19 步</text>
+    <path d="M380 475H420" fill="none" stroke="#596779" stroke-width="2"/>
+    <rect x="435" y="451" width="240" height="48" rx="9" fill="#fff1d6" stroke="#d6b16d"/>
+    <text x="555" y="482" text-anchor="middle" font-size="19">第 20 步等待收齐</text>
+    <path d="M685 475H725" fill="none" stroke="#596779" stroke-width="2"/>
+    <rect x="740" y="451" width="280" height="48" rx="9" fill="#e7f4ec" stroke="#83b49b"/>
+    <text x="880" y="482" text-anchor="middle" font-size="19">收到后按固定次序执行</text>
+    <g fill="none" stroke="#596779" stroke-width="2"><path d="M414 469L420 475L414 481"/><path d="M719 469L725 475L719 481"/></g>
+    <text x="435" y="535" font-size="18" fill="#886328">不能把“还没收到”当成“没有操作”</text>
+    <text x="60" y="597" font-size="19" font-weight="600">代价：声音传输越慢、命令越密，等待或操作排队就可能越明显。</text>
+    <text x="60" y="632" font-size="18">每一步代表 100 毫秒游戏时间；传输预留延迟，命令安排到后续步骤生效。</text>
+    <text x="60" y="688" font-size="16" fill="#526174">依据 SOUND-DUEL.md 整理；命令延迟场景为解释机制的假设，不代表实测故障。</text>
+  </g>
+</svg>

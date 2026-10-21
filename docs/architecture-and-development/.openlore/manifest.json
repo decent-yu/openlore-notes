@@ -39,6 +39,45 @@
       "collected_at": "2026-10-20T06:55:03.159Z",
       "updated_at": "2026-10-20T11:49:43.071Z",
       "has_research": true
+    },
+    "art_64165f4d-1df0-4cb1-bc3d-25fb89c80746": {
+      "collection_id": "col_933fbd81-38b",
+      "directory": "articles/20261021-improving-site-performance-by-shipping-more-css",
+      "slug": "improving-site-performance-by-shipping-more-css",
+      "title": "Improving site performance by shipping more CSS",
+      "original_url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css",
+      "tags": [
+        "CSS Modules",
+        "CSS-in-JS",
+        "设计系统",
+        "渐进式迁移",
+        "前端性能",
+        "服务端渲染",
+        "主题系统"
+      ],
+      "collected_at": "2026-10-21T01:16:50.558Z",
+      "updated_at": "2026-10-21T01:16:50.558Z",
+      "has_research": true
+    },
+    "art_4d0dca52-6239-47cd-bff6-4837c1112f37": {
+      "collection_id": "col_933fbd81-38b",
+      "directory": "articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer",
+      "slug": "battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer",
+      "title": "Battle Drones—a vibe coded RTS with audio-based multiplayer",
+      "original_url": "https://simonwillison.net/2026/Oct/20/battledrones",
+      "tags": [
+        "AI辅助编程",
+        "即时战略游戏",
+        "游戏平衡性测试",
+        "Three.js",
+        "程序化地图生成",
+        "确定性模拟",
+        "音频调制解调器",
+        "大型语言模型对战"
+      ],
+      "collected_at": "2026-10-21T01:16:50.558Z",
+      "updated_at": "2026-10-21T01:16:50.558Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -50,18 +89,28 @@
         "art_0dc50241-fe1e-446f-9269-e12f7306f5fa",
         "art_e8289f12-1250-4958-97c4-1acf7ae8eb3e"
       ]
+    },
+    "col_933fbd81-38b": {
+      "path": "docs/architecture-and-development/batches/20261021-01.md",
+      "date_sequence": "20261021-01",
+      "created_at": "2026-10-21T01:16:50.558Z",
+      "article_ids": [
+        "art_64165f4d-1df0-4cb1-bc3d-25fb89c80746",
+        "art_4d0dca52-6239-47cd-bff6-4837c1112f37"
+      ]
     }
   },
   "delivered_batches": [
     "batch_1792479137775",
     "research_res_17acc04a-1f9",
-    "research_res_abc2d9a2-b53"
+    "research_res_abc2d9a2-b53",
+    "batch_54478cdb-049c-4d3e-9c1c-edec272a0808"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "4337bec717b7eb301f18ec5fe401e6604fedd266f3c050f6998ba5f26192668e",
+      "sha256": "b1966765ac4fc5a5333da2df16c4d98249b3e01b98e96764ca002e22fd99369f",
       "media_type": "text/markdown",
-      "size": 1759
+      "size": 3242
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
       "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
@@ -167,6 +216,121 @@
       "sha256": "8461b52390215779cf26ced91308c8f52c609b9f4dba173094f449d5e123c3b8",
       "media_type": "image/svg+xml",
       "size": 5998
+    },
+    "docs/architecture-and-development/articles/20261021-improving-site-performance-by-shipping-more-css/README.md": {
+      "sha256": "269eddd20c1eaf8bb6af69d887dbfcbf93f8a9798dc79b0de11d704d66c9f30b",
+      "media_type": "text/markdown",
+      "size": 525
+    },
+    "docs/architecture-and-development/articles/20261021-improving-site-performance-by-shipping-more-css/article.md": {
+      "sha256": "a09ae65324c2e76a4a711495a25e52a9f3ad2b5fe2d981eac61a3363a62b6ddb",
+      "media_type": "text/markdown",
+      "size": 11277
+    },
+    "docs/architecture-and-development/articles/20261021-improving-site-performance-by-shipping-more-css/article-zh-CN.md": {
+      "sha256": "da61a63ca4d0f712ddcfb75c1dc8676acff83a6658125a1fcd147bba42794397",
+      "media_type": "text/markdown",
+      "size": 10742
+    },
+    "docs/architecture-and-development/articles/20261021-improving-site-performance-by-shipping-more-css/research.md": {
+      "sha256": "491f44c1f4d2481f7bd73124c391ca53e63776f866f78e423592516ac05fe737",
+      "media_type": "text/markdown",
+      "size": 22824
+    },
+    "docs/architecture-and-development/articles/20261021-improving-site-performance-by-shipping-more-css/assets/migration-paths.svg": {
+      "sha256": "7ea182e7268d151a0b604dcb7f7818de262b17a69ac35e310f3c8e17a6103ae7",
+      "media_type": "image/svg+xml",
+      "size": 4347
+    },
+    "docs/architecture-and-development/articles/20261021-improving-site-performance-by-shipping-more-css/assets/style-work.svg": {
+      "sha256": "a387d62d4fa7c96cfdb368ccfcf7a30c4d0a6ab9ee4d0cd56c09930ad7282ae7",
+      "media_type": "image/svg+xml",
+      "size": 5026
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/README.md": {
+      "sha256": "5172103da9237d6abd19849b5f2c8d9fc79e423aeb35cef2e617762a89651172",
+      "media_type": "text/markdown",
+      "size": 543
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/article.md": {
+      "sha256": "2a4671c49f535d35123696030424e748b4b95845cd3ddd5d740f7936baddb176",
+      "media_type": "text/markdown",
+      "size": 27743
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/article-zh-CN.md": {
+      "sha256": "fd320eb618d244a8cdae6a116c0fa0193782548c68fb417b10f262cb9f1ace66",
+      "media_type": "text/markdown",
+      "size": 27904
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/research.md": {
+      "sha256": "6cf4b3c7f5723157713a2e05c873a34aae9c9fcef89eaddfc08d9bed3f1e58db",
+      "media_type": "text/markdown",
+      "size": 23333
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-c906646f0c8e.webp": {
+      "sha256": "c906646f0c8ec3a7ac3d618c57c3beef1535a37da147863570e59b64f8a90770",
+      "media_type": "image/webp",
+      "size": 112426
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-a2cffa0190cc.webp": {
+      "sha256": "a2cffa0190cc15b8126fc95c0224c98cfe9486603379efbe67b9b7909ad4aa3c",
+      "media_type": "image/webp",
+      "size": 93006
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-aa469ad70cb4.jpg": {
+      "sha256": "aa469ad70cb4e543da41c527cd2fbdaca737994618a77be0ccb04b3d19bf7e4d",
+      "media_type": "image/jpeg",
+      "size": 214764
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-408c230cc73b.jpg": {
+      "sha256": "408c230cc73ba104bf19c2f353593b2b9f5f9376561ef3613a1b7aabcc9d6079",
+      "media_type": "image/jpeg",
+      "size": 207410
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-ec8c519318c4.jpg": {
+      "sha256": "ec8c519318c4a316379ed828be7abb55f3c2988ceac1095b5929d35df023a50a",
+      "media_type": "image/jpeg",
+      "size": 321726
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-00a86343f605.jpg": {
+      "sha256": "00a86343f6056b808fb380f50ce49333f6d2f6e2ee6047fd557f1aeebf4ef83a",
+      "media_type": "image/jpeg",
+      "size": 228787
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-07b18167b525.jpg": {
+      "sha256": "07b18167b5255b66a4d2d7dcf094682d838212895d166b661b8deae6230837d1",
+      "media_type": "image/jpeg",
+      "size": 187804
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-922e5c0b881e.jpg": {
+      "sha256": "922e5c0b881e9544410ba3651d53852cf7a87b69753af58623fb93cf498a7709",
+      "media_type": "image/jpeg",
+      "size": 277329
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/island-incentives.svg": {
+      "sha256": "b0539c92d314a7ddb63381350bf94362725f9c030e083ae4f8c1b2e33231467c",
+      "media_type": "image/svg+xml",
+      "size": 3434
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/lockstep.svg": {
+      "sha256": "f07fb130a30f985c3d117f1fe2225a8fd2f2a542fb039397f97ab00e80df90ab",
+      "media_type": "image/svg+xml",
+      "size": 5382
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/agent-round.svg": {
+      "sha256": "5addbfb5eb34bea09775b7313c9adedd2b1358fe1bfcbb8e958d0963183a0453",
+      "media_type": "image/svg+xml",
+      "size": 3626
+    },
+    "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/sound-lockstep.svg": {
+      "sha256": "bdc9299763c5bf85acda54d358f21f8e098080c11050982f37107cc8fd7177f0",
+      "media_type": "image/svg+xml",
+      "size": 4169
+    },
+    "docs/architecture-and-development/batches/20261021-01.md": {
+      "sha256": "122f922908c13d3a621d72fc5482c271673a69aae5db3a4b340ca5d050183070",
+      "media_type": "text/markdown",
+      "size": 852
     }
   }
 }

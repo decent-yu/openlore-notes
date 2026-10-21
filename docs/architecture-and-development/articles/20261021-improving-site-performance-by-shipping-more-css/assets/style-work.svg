@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="700" viewBox="0 0 1120 700" role="img" aria-labelledby="title desc">
+  <title id="title">把静态样式生成提前到构建阶段</title>
+  <desc id="desc">上排展示运行时方案：样式描述随 JavaScript 交付，服务端渲染时求值并收集规则，客户端初始化和更新时仍处理动态输入。下排展示提取 CSS 后的方案：构建生成 CSS 和类名映射，服务端写类名，浏览器结合 HTML 和 CSS 显示页面。两条路径都保留浏览器的样式计算成本。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1L9 5L0 9" fill="none" stroke="#52677a" stroke-width="1.6"/></marker>
+    <marker id="green-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1L9 5L0 9" fill="none" stroke="#147d73" stroke-width="1.6"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#213448}
+      .title{font-size:29px;font-weight:650}.sub{font-size:17px;fill:#52677a}.head{font-size:21px;font-weight:600}.body{font-size:19px}.small{font-size:16px;fill:#52677a}.flow{fill:none;stroke:#52677a;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1120" height="700" rx="18" fill="#f8fafc"/>
+  <text class="title" x="35" y="47">同样的外观，工作可以发生在不同阶段</text>
+  <text class="sub" x="35" y="80">比较前提：下排使用已提取 CSS 的生产构建；上排展示带服务端样式收集的接入方式。</text>
+  <text class="head" x="220" y="127">构建与交付</text>
+  <text class="head" x="500" y="127">每次服务端渲染</text>
+  <text class="head" x="810" y="127">浏览器初始化与更新</text>
+  <rect x="24" y="146" width="1072" height="194" rx="12" fill="#fff5e7"/>
+  <text class="head" x="46" y="203">运行时</text>
+  <text class="head" x="46" y="233">生成样式</text>
+  <rect x="190" y="175" width="220" height="136" rx="10" fill="#fff" stroke="#c9a77a"/>
+  <text class="head" x="213" y="211">JavaScript 样式</text>
+  <text class="body" x="213" y="246">和组件代码一起交付</text>
+  <text class="small" x="213" y="279">部分结果可被缓存复用</text>
+  <path class="flow" d="M410 243H470"/>
+  <path d="M458 238L470 243L458 248Z" fill="#52677a"/>
+  <rect x="470" y="175" width="240" height="136" rx="10" fill="#fff" stroke="#c9a77a"/>
+  <text class="head" x="493" y="211">渲染组件并处理样式</text>
+  <text class="body" x="493" y="246">求值、收集规则</text>
+  <text class="body" x="493" y="278">生成 HTML 与样式标签</text>
+  <path class="flow" d="M710 243H770"/>
+  <path d="M758 238L770 243L758 248Z" fill="#52677a"/>
+  <rect x="770" y="164" width="300" height="158" rx="10" fill="#fff" stroke="#c9a77a"/>
+  <text class="head" x="793" y="200">样式可随 HTML 到达</text>
+  <text class="body" x="793" y="235">初始化／更新时处理动态输入</text>
+  <text class="body" x="793" y="269">命中缓存则复用</text>
+  <text class="body" x="793" y="300">缺失时插入规则</text>
+  <rect x="24" y="363" width="1072" height="277" rx="12" fill="#eaf6f2"/>
+  <text class="head" x="46" y="426">构建时</text>
+  <text class="head" x="46" y="456">输出 CSS</text>
+  <rect x="190" y="393" width="220" height="168" rx="10" fill="#fff" stroke="#7bafa5"/>
+  <text class="head" x="213" y="431">处理静态规则</text>
+  <text class="body" x="213" y="468">① 输出类名映射</text>
+  <text class="body" x="213" y="505">② 输出 CSS 文件</text>
+  <text class="small" x="213" y="539">发布构建时完成</text>
+  <path class="flow" d="M410 437H470"/>
+  <path d="M458 432L470 437L458 442Z" fill="#52677a"/>
+  <rect x="470" y="393" width="240" height="106" rx="10" fill="#fff" stroke="#7bafa5"/>
+  <text class="head" x="493" y="432">选择已有类名</text>
+  <text class="body" x="493" y="470">将类名写入 HTML</text>
+  <path class="flow" d="M710 444H770"/>
+  <path d="M758 439L770 444L758 449Z" fill="#52677a"/>
+  <rect x="770" y="393" width="300" height="168" rx="10" fill="#fff" stroke="#7bafa5"/>
+  <text class="head" x="793" y="431">接收 HTML 与 CSS</text>
+  <text class="body" x="793" y="468">按类名、状态和变量取样式</text>
+  <text class="body" x="793" y="505">应用仍可选择类名、更新变量</text>
+  <text class="small" x="793" y="539">无需为这些静态规则运行生成器</text>
+  <path d="M410 522H440V591H742V524H770" fill="none" stroke="#147d73" stroke-width="2.3" marker-end="url(#green-arrow)"/>
+  <path d="M758 519L770 524L758 529Z" fill="#147d73"/>
+  <text x="472" y="618" font-size="17" fill="#147d73">CSS 作为资源，由页面引用后加载</text>
+  <text class="sub" x="35" y="674">两条路径都需要浏览器解析 CSS、匹配规则、计算布局并绘制。示意图不表示耗时或资源大小。</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">兼容层允许业务分批迁移，但不会自动清除旧依赖</title>
+  <desc id="desc">已迁移业务通过 className 直接使用 Primer 新组件，未迁移业务传 sx 给兼容包装器后再使用新组件。兼容包装器仍依赖旧样式处理链；主题相关的 JavaScript 工具也可能依赖旧链。只有这些用法迁走，才可检查和删除最终依赖。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 1L9 5L0 9" fill="none" stroke="#52677a" stroke-width="1.6"/></marker>
+    <marker id="old-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 1L9 5L0 9" fill="none" stroke="#ab6e25" stroke-width="1.6"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#213448}.title{font-size:29px;font-weight:650}.sub{font-size:17px;fill:#52677a}.head{font-size:22px;font-weight:600}.body{font-size:19px}.code{font-size:20px;font-family:"SFMono-Regular",Consolas,monospace}.flow{fill:none;stroke:#52677a;stroke-width:2;marker-end:url(#arrow)}.dep{fill:none;stroke:#ab6e25;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#old-arrow)}
+    </style>
+  </defs>
+  <rect width="1120" height="720" rx="18" fill="#f8fafc"/>
+  <text class="title" x="35" y="48">组件迁移完成 ≠ 旧依赖已经可以删除</text>
+  <text class="sub" x="35" y="81">实线：调用或样式处理路径　　虚线：仍然存在的依赖　　依据公开资料整理，非完整架构</text>
+  <rect x="35" y="125" width="262" height="114" rx="12" fill="#eaf6f2" stroke="#7bafa5"/>
+  <text class="head" x="58" y="164">已迁移的业务</text>
+  <text class="body" x="58" y="203">传入类名和 CSS 变量</text>
+  <path class="flow" d="M297 180H732V234H770"/>
+  <path d="M758 229L770 234L758 239Z" fill="#52677a"/>
+  <text class="sub" x="430" y="163">直接使用新组件</text>
+  <rect x="35" y="296" width="262" height="114" rx="12" fill="#fff5e7" stroke="#c9a77a"/>
+  <text class="head" x="58" y="335">尚未迁移的业务</text>
+  <text class="body" x="58" y="374">继续传入 sx 样式对象</text>
+  <path class="flow" d="M297 353H393"/>
+  <path d="M381 348L393 353L381 358Z" fill="#52677a"/>
+  <rect x="393" y="296" width="294" height="114" rx="12" fill="#fff" stroke="#c9a77a"/>
+  <text class="code" x="415" y="333">@primer/styled-react</text>
+  <text class="body" x="415" y="374">包装新组件，接受旧属性</text>
+  <path class="flow" d="M687 353H732V305H770"/>
+  <path d="M758 300L770 305L758 310Z" fill="#52677a"/>
+  <rect x="770" y="197" width="315" height="162" rx="12" fill="#eaf6f2" stroke="#7bafa5"/>
+  <text class="code" x="795" y="238">@primer/react</text>
+  <text class="head" x="795" y="279">新组件</text>
+  <text class="body" x="795" y="319">默认样式使用 CSS Modules</text>
+  <path class="flow" d="M927 359V409"/>
+  <path d="M922 397L927 409L932 397Z" fill="#52677a"/>
+  <text class="body" x="832" y="442">浏览器应用静态 CSS</text>
+  <text class="sub" x="832" y="474">旧调用还会叠加兼容样式</text>
+  <path class="dep" d="M540 410V486"/>
+  <path d="M535 474L540 486L545 474Z" fill="#ab6e25"/>
+  <text x="558" y="458" font-size="17" fill="#ab6e25">依赖</text>
+  <rect x="393" y="486" width="294" height="105" rx="12" fill="#fff5e7" stroke="#c9a77a"/>
+  <text class="head" x="415" y="521">旧样式处理链</text>
+  <text class="code" x="415" y="553">styled-components</text>
+  <text x="415" y="578" font-size="17">及 styled-system 等相关依赖</text>
+  <rect x="35" y="487" width="262" height="104" rx="12" fill="#fff" stroke="#c9a77a"/>
+  <text class="head" x="58" y="525">主题相关 JavaScript</text>
+  <text class="body" x="58" y="564">工具和用法也需要迁走</text>
+  <path class="dep" d="M297 539H393"/>
+  <path d="M381 534L393 539L381 544Z" fill="#ab6e25"/>
+  <rect x="35" y="625" width="1050" height="65" rx="10" fill="#e6edf5"/>
+  <text x="58" y="664" font-size="21" font-weight="600">删除依赖前：旧属性调用清零 → 主题依赖迁走 → 检查资源包与回归 → 再删除旧库</text>
+</svg>
