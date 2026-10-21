@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">代码行与动态评论的双几何布局</title>
+  <desc id="desc">左侧展示代码行使用已知高度和前缀和，右侧展示评论块使用估计、测量和缓存，底部展示按稳定身份恢复滚动锚点的流程。</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2d6cdf"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d4772d"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2c8b62"/>
+    </marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #18324b; }
+      .title { font-size: 26px; font-weight: 700; }
+      .subtitle { font-size: 15px; fill: #54708a; }
+      .lane-title { font-size: 19px; font-weight: 700; }
+      .label { font-size: 15px; font-weight: 600; }
+      .small { font-size: 13px; fill: #527088; }
+      .tiny { font-size: 12px; fill: #527088; }
+      .box { stroke-width: 2; rx: 14; }
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#f7fafc"/>
+  <rect x="30" y="26" width="1140" height="70" rx="18" fill="#e8f0fb"/>
+  <text x="60" y="58" class="title">一份文档，两套几何</text>
+  <text x="60" y="82" class="subtitle">代码行在绘制前就知道高度；评论块先估计，接近视口后再测量，并用身份锚定修正滚动位置。</text>
+
+  <rect x="45" y="125" width="535" height="300" rx="20" fill="#ffffff" stroke="#b9cfe9" stroke-width="2"/>
+  <rect x="620" y="125" width="535" height="300" rx="20" fill="#ffffff" stroke="#e3c29e" stroke-width="2"/>
+  <text x="75" y="164" class="lane-title" fill="#2459a6">代码几何：确定的行</text>
+  <text x="650" y="164" class="lane-title" fill="#a85b1f">动态几何：评论块</text>
+  <text x="75" y="190" class="small">固定行高 → 前缀和 → 精确偏移</text>
+  <text x="650" y="190" class="small">估计 → 实测 → 缓存（指纹 + 宽度桶仍匹配时复用）</text>
+
+  <g transform="translate(75,215)">
+    <rect x="0" y="0" width="420" height="34" rx="8" fill="#dceafd"/>
+    <rect x="0" y="42" width="420" height="34" rx="8" fill="#dceafd"/>
+    <rect x="0" y="84" width="420" height="34" rx="8" fill="#dceafd"/>
+    <rect x="0" y="126" width="420" height="34" rx="8" fill="#dceafd"/>
+    <rect x="0" y="168" width="420" height="34" rx="8" fill="#dceafd"/>
+    <text x="16" y="22" class="label">第 1 行 · 高度 h</text>
+    <text x="16" y="64" class="label">第 2 行 · 高度 h</text>
+    <text x="16" y="106" class="label">第 3 行 · 高度 h</text>
+    <text x="16" y="148" class="label">…</text>
+    <text x="16" y="190" class="label">第 N 行 · 高度 h</text>
+    <path d="M430,17 L470,17" stroke="#2d6cdf" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+    <path d="M430,101 L470,101" stroke="#2d6cdf" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+    <path d="M430,185 L470,185" stroke="#2d6cdf" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+    <text x="290" y="238" class="small">offset(N) = 前 N 行高度之和</text>
+  </g>
+
+  <g transform="translate(650,215)">
+    <rect x="0" y="0" width="185" height="68" rx="12" fill="#fff0df" stroke="#e2a267" stroke-width="2"/>
+    <text x="18" y="27" class="label">评论 A</text>
+    <text x="18" y="50" class="small">估计 96 px</text>
+    <path d="M195,34 L240,34" stroke="#d4772d" stroke-width="2.5" marker-end="url(#arrow-orange)"/>
+    <rect x="250" y="0" width="185" height="68" rx="12" fill="#e4f5ec" stroke="#80bd9d" stroke-width="2"/>
+    <text x="268" y="27" class="label">接近视口</text>
+    <text x="268" y="50" class="small">批量读取真实高度</text>
+    <path d="M435,34 L480,34" stroke="#2c8b62" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+    <rect x="490" y="0" width="0" height="0" fill="none"/>
+    <text x="455" y="22" class="small"></text>
+    <rect x="0" y="100" width="185" height="68" rx="12" fill="#fff0df" stroke="#e2a267" stroke-width="2"/>
+    <text x="18" y="127" class="label">评论 B</text>
+    <text x="18" y="150" class="small">展开 details 后变高</text>
+    <path d="M195,134 L240,134" stroke="#d4772d" stroke-width="2.5" marker-end="url(#arrow-orange)"/>
+    <rect x="250" y="100" width="185" height="68" rx="12" fill="#e4f5ec" stroke="#80bd9d" stroke-width="2"/>
+    <text x="268" y="127" class="label">observer 只标记</text>
+    <text x="268" y="150" class="small">空闲/停滚时再测量</text>
+    <text x="0" y="212" class="small">块身份：文件 + 行 + side</text>
+    <text x="0" y="236" class="small">高度缓存：内容指纹 + 宽度桶</text>
+  </g>
+
+  <rect x="45" y="457" width="1110" height="260" rx="20" fill="#ffffff" stroke="#b8d7c7" stroke-width="2"/>
+  <text x="75" y="496" class="lane-title">高度变化后的滚动锚定</text>
+  <text x="75" y="522" class="small">目标：评论上方变高时，用户仍停留在原来正在看的行或块；视口下方的变化不把用户拉走。</text>
+
+  <g transform="translate(75,558)">
+    <rect x="0" y="0" width="210" height="94" rx="14" fill="#e8f0fb"/>
+    <text x="18" y="27" class="label">1 记录锚点</text>
+    <text x="18" y="53" class="small">稳定身份 + 视口内偏移</text>
+    <text x="18" y="75" class="small">例如：文件 X，第 500 行</text>
+    <path d="M220,47 L270,47" stroke="#2d6cdf" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+
+    <rect x="280" y="0" width="210" height="94" rx="14" fill="#fff0df"/>
+    <text x="298" y="27" class="label">2 应用高度差</text>
+    <text x="298" y="53" class="small">更新动态块索引</text>
+    <text x="298" y="75" class="small">代码行表保持不变</text>
+    <path d="M500,47 L550,47" stroke="#d4772d" stroke-width="2.5" marker-end="url(#arrow-orange)"/>
+
+    <rect x="560" y="0" width="210" height="94" rx="14" fill="#e4f5ec"/>
+    <text x="578" y="27" class="label">3 重新解析锚点</text>
+    <text x="578" y="53" class="small">算出它的新像素位置</text>
+    <text x="578" y="75" class="small">在同一视口偏移处恢复</text>
+    <path d="M780,47 L830,47" stroke="#2c8b62" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+
+    <rect x="840" y="0" width="210" height="94" rx="14" fill="#f2edf9"/>
+    <text x="858" y="27" class="label">4 体验结果</text>
+    <text x="858" y="53" class="small">内容与下方代码一起移动</text>
+    <text x="858" y="75" class="small">避免大范围 scroll jump</text>
+  </g>
+
+  <text x="75" y="695" class="tiny">图示依据：GitHub 原文的双几何、延迟测量和身份锚定描述；箭头表示处理顺序，非性能比例。</text>
+</svg>

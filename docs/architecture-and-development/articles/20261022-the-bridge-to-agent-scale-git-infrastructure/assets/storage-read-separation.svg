@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="770" viewBox="0 0 1120 770" role="img" aria-labelledby="title desc">
+  <title id="title">把持久存储与读取计算分开：GitHub 的过渡架构</title>
+  <desc id="desc">Spokes 协调现有完整副本及虚拟写副本。虚拟写副本流式写入 Azure Blob Storage，写入成功前必须在对象存储持久化。虚拟读副本从对象存储填充缓存，不参与写入法定多数。初期后台追平仅适合部分读负载，服务全部读类型需在请求路径核对并补齐变化。</desc>
+  <defs>
+    <marker id="blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0L9 4.5L0 9" fill="#176b91"/></marker>
+    <marker id="green" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="#35735e"/></marker>
+  </defs>
+  <rect width="1120" height="770" rx="18" fill="#f8fafc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#172b42">
+    <text x="38" y="48" font-size="26" font-weight="700">读节点可以增加，而不成为新的写入协调参与者</text>
+    <text x="38" y="80" font-size="17" fill="#526579">过渡阶段示意 · 依据原文职责划分 · 省略副本数量、内部布局和完整提交协议</text>
+    <rect x="30" y="113" width="650" height="321" rx="15" fill="#edf5fa" stroke="#b1ccd9" stroke-dasharray="7 5"/>
+    <text x="51" y="145" font-size="17" fill="#176b91" font-weight="600">参与写入协调的路径</text>
+    <rect x="198" y="169" width="314" height="76" rx="10" fill="#176b91"/>
+    <text x="355" y="200" font-size="21" text-anchor="middle" fill="white" font-weight="600">Spokes</text>
+    <text x="355" y="226" font-size="16" text-anchor="middle" fill="white">接收更新 · 按引用协调</text>
+    <path d="M355 157V169" stroke="#176b91" stroke-width="2" marker-end="url(#blue)"/>
+    <text x="355" y="134" font-size="18" text-anchor="middle">写入请求</text>
+    <path d="M290 245V270H189V300" fill="none" stroke="#176b91" stroke-width="2.5" marker-start="url(#blue)" marker-end="url(#blue)"/>
+    <path d="M420 245V270H519V300" fill="none" stroke="#176b91" stroke-width="2.5" marker-start="url(#blue)" marker-end="url(#blue)"/>
+    <rect x="54" y="307" width="270" height="95" rx="10" fill="white" stroke="#7ca5ba"/>
+    <text x="189" y="339" font-size="21" text-anchor="middle" font-weight="600">现有完整副本</text>
+    <text x="189" y="367" font-size="17" text-anchor="middle">仍参与过渡期的写入</text>
+    <text x="189" y="390" font-size="15" text-anchor="middle" fill="#526579">可继续承担原有读流量</text>
+    <rect x="374" y="307" width="290" height="95" rx="10" fill="white" stroke="#7ca5ba"/>
+    <text x="519" y="339" font-size="21" text-anchor="middle" font-weight="600">虚拟写副本</text>
+    <text x="519" y="367" font-size="17" text-anchor="middle">流式写入 · 合并网络操作</text>
+    <text x="519" y="390" font-size="15" text-anchor="middle" fill="#526579">不服务读请求；暂时负责数据整理</text>
+    <path d="M519 402V496" stroke="#176b91" stroke-width="2.5" marker-end="url(#blue)"/>
+    <text x="541" y="461" font-size="17" fill="#176b91">写入并等待持久化</text>
+    <rect x="75" y="474" width="326" height="99" rx="10" fill="#fff6e9" stroke="#dfc291"/>
+    <text x="96" y="505" font-size="19" font-weight="600" fill="#895017">成功确认的必要条件</text>
+    <text x="96" y="534" font-size="17">数据已在对象存储持久保存</text>
+    <text x="96" y="558" font-size="15" fill="#7d6546">不只是满足一个可绕过它的任意多数</text>
+    <rect x="428" y="506" width="278" height="99" rx="12" fill="#dcefe5" stroke="#78a891"/>
+    <text x="567" y="543" font-size="21" text-anchor="middle" font-weight="600">Azure Blob Storage</text>
+    <text x="567" y="574" font-size="17" text-anchor="middle">权威持久数据来源</text>
+    <rect x="765" y="126" width="310" height="87" rx="10" fill="#35735e"/>
+    <text x="920" y="161" font-size="21" text-anchor="middle" fill="white" font-weight="600">获准走新路径的读请求</text>
+    <text x="920" y="190" font-size="16" text-anchor="middle" fill="white">选择相应虚拟读副本</text>
+    <path d="M920 213V297" stroke="#35735e" stroke-width="2.5" marker-end="url(#green)"/>
+    <rect x="785" y="321" width="290" height="97" rx="10" fill="#e5ebe7" stroke="#78a891"/>
+    <rect x="775" y="310" width="290" height="97" rx="10" fill="#edf5f0" stroke="#78a891"/>
+    <rect x="765" y="299" width="290" height="97" rx="10" fill="white" stroke="#78a891"/>
+    <text x="910" y="332" font-size="21" text-anchor="middle" font-weight="600">虚拟读副本与本地缓存</text>
+    <text x="910" y="361" font-size="17" text-anchor="middle">可按需增加 · 不参加写入多数</text>
+    <text x="910" y="385" font-size="15" text-anchor="middle" fill="#526579">节点本地状态可重建</text>
+    <path d="M706 558H910V423" fill="none" stroke="#35735e" stroke-width="2.5" marker-end="url(#green)"/>
+    <text x="744" y="588" font-size="17" fill="#35735e">取回数据、填充缓存、核对状态</text>
+    <rect x="38" y="644" width="1044" height="95" rx="10" fill="#fff6e9"/>
+    <text x="59" y="675" font-size="19" font-weight="600" fill="#895017">读取最新引用，还有一道条件</text>
+    <text x="59" y="703" font-size="17">初期后台追平只适合部分负载；要服务全部读类型，需在请求路径核对并补齐变化。</text>
+    <text x="59" y="726" font-size="15" fill="#7d6546">对象存储已更新，不代表计算节点缓存也已更新。图不表示这一后续机制已全部部署。</text>
+  </g>
+</svg>

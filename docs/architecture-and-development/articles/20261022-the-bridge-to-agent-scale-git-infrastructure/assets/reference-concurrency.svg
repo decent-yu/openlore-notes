@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="660" viewBox="0 0 1120 660" role="img" aria-labelledby="title desc">
+  <title id="title">缩小串行范围，让不同引用在网络等待期间并行推进</title>
+  <desc id="desc">上方全仓库串行使 A 分支第一项更新、B 分支更新和 A 分支第二项更新依次执行。下方按引用串行使 A 与 B 同时执行，而 A 的第二项更新仍等待第一项。所有协调块等宽，说明并未缩短单次协调。图为机制示意，不是实测。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#64748b"/></marker>
+    <pattern id="wait" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M-2 2L2-2M0 9L9 0M7 11L11 7" stroke="#cbd5e1" stroke-width="2"/></pattern>
+  </defs>
+  <rect width="1120" height="660" rx="18" fill="#f8fafc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#172b42">
+    <text x="38" y="48" font-size="26" font-weight="700">等待仍在，互不相关的更新可以同时推进</text>
+    <text x="38" y="81" font-size="17" fill="#526579">假设三项更新已就绪；横向表示时间，区间长度只用于比较执行关系</text>
+    <text x="38" y="133" font-size="21" font-weight="600">全仓库串行</text>
+    <text x="38" y="160" font-size="16" fill="#526579">同一时刻只有一项更新持有仓库锁</text>
+    <g stroke="#e2e8f0" stroke-width="1"><path d="M210 186H1000M210 236H1000M210 286H1000"/></g>
+    <g font-size="17"><text x="38" y="207">分支 A · 更新 1</text><text x="38" y="257">分支 B · 更新 1</text><text x="38" y="307">分支 A · 更新 2</text></g>
+    <rect x="210" y="183" width="245" height="34" rx="6" fill="#176b91"/>
+    <rect x="210" y="233" width="245" height="34" rx="5" fill="url(#wait)"/>
+    <rect x="470" y="233" width="245" height="34" rx="6" fill="#ad5b23"/>
+    <rect x="210" y="283" width="505" height="34" rx="5" fill="url(#wait)"/>
+    <rect x="730" y="283" width="245" height="34" rx="6" fill="#176b91"/>
+    <g fill="white" text-anchor="middle" font-size="17"><text x="332" y="206">协调与网络等待</text><text x="592" y="256">协调与网络等待</text><text x="852" y="306">协调与网络等待</text></g>
+    <path d="M210 339H1005" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="1017" y="345" font-size="16" fill="#526579">时间</text>
+    <text x="38" y="399" font-size="21" font-weight="600">按引用串行</text>
+    <text x="38" y="426" font-size="16" fill="#526579">不同引用可重叠；同一引用仍需先后推进</text>
+    <g stroke="#e2e8f0" stroke-width="1"><path d="M210 452H1000M210 502H1000M210 552H1000"/></g>
+    <g font-size="17"><text x="38" y="473">分支 A · 更新 1</text><text x="38" y="523">分支 B · 更新 1</text><text x="38" y="573">分支 A · 更新 2</text></g>
+    <rect x="210" y="449" width="245" height="34" rx="6" fill="#176b91"/>
+    <rect x="210" y="499" width="245" height="34" rx="6" fill="#ad5b23"/>
+    <rect x="210" y="549" width="245" height="34" rx="5" fill="url(#wait)"/>
+    <rect x="470" y="549" width="245" height="34" rx="6" fill="#176b91"/>
+    <g fill="white" text-anchor="middle" font-size="17"><text x="332" y="472">协调与网络等待</text><text x="332" y="522">协调与网络等待</text><text x="592" y="572">协调与网络等待</text></g>
+    <text x="750" y="476" font-size="17" fill="#176b91">A、B 的网络等待可重叠</text>
+    <text x="750" y="525" font-size="17" fill="#526579">块的宽度没有缩短</text>
+    <path d="M210 604H1005" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="1017" y="610" font-size="16" fill="#526579">时间</text>
+    <rect x="38" y="625" width="22" height="15" fill="url(#wait)"/>
+    <text x="70" y="638" font-size="15" fill="#526579">斜纹：进入协调前的等待。机制依据 GitHub 原文；不表达具体协议阶段或实测加速比。</text>
+  </g>
+</svg>

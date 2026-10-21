@@ -78,6 +78,45 @@
       "collected_at": "2026-10-21T01:16:50.558Z",
       "updated_at": "2026-10-21T01:16:50.558Z",
       "has_research": true
+    },
+    "art_d1fd0724-b5b5-4b6e-96a2-abe51243c787": {
+      "collection_id": "col_6ec23b9f-398",
+      "directory": "articles/20261022-the-bridge-to-agent-scale-git-infrastructure",
+      "slug": "the-bridge-to-agent-scale-git-infrastructure",
+      "title": "The bridge to agent-scale Git infrastructure",
+      "original_url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure",
+      "tags": [
+        "Git",
+        "Azure Blob Storage",
+        "分布式存储",
+        "副本一致性",
+        "并发控制",
+        "读写分离",
+        "云迁移"
+      ],
+      "collected_at": "2026-10-21T23:18:17.749Z",
+      "updated_at": "2026-10-21T23:18:17.749Z",
+      "has_research": true
+    },
+    "art_0e10b0ad-cc04-461b-9507-702610b5f220": {
+      "collection_id": "col_6ec23b9f-398",
+      "directory": "articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app",
+      "slug": "rendering-huge-pull-requests-in-the-github-copilot-app",
+      "title": "Rendering huge pull requests in the GitHub Copilot app",
+      "original_url": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app",
+      "tags": [
+        "前端性能优化",
+        "列表虚拟化",
+        "动态布局",
+        "滚动锚定",
+        "代码审阅",
+        "缓存策略",
+        "自动化性能测试",
+        "可观测性"
+      ],
+      "collected_at": "2026-10-21T23:18:17.749Z",
+      "updated_at": "2026-10-21T23:18:17.749Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -98,6 +137,15 @@
         "art_64165f4d-1df0-4cb1-bc3d-25fb89c80746",
         "art_4d0dca52-6239-47cd-bff6-4837c1112f37"
       ]
+    },
+    "col_6ec23b9f-398": {
+      "path": "docs/architecture-and-development/batches/20261022-01.md",
+      "date_sequence": "20261022-01",
+      "created_at": "2026-10-21T23:18:17.749Z",
+      "article_ids": [
+        "art_d1fd0724-b5b5-4b6e-96a2-abe51243c787",
+        "art_0e10b0ad-cc04-461b-9507-702610b5f220"
+      ]
     }
   },
   "delivered_batches": [
@@ -106,13 +154,14 @@
     "research_res_abc2d9a2-b53",
     "batch_54478cdb-049c-4d3e-9c1c-edec272a0808",
     "repair_198f008a-b280-466b-9a59-1fd62022fb51",
-    "repair_dac43ee2-3fca-492a-a2e8-6c86e1c489bb"
+    "repair_dac43ee2-3fca-492a-a2e8-6c86e1c489bb",
+    "batch_45f87efe-f078-4b0e-9781-5649a5dfadee"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "b1966765ac4fc5a5333da2df16c4d98249b3e01b98e96764ca002e22fd99369f",
+      "sha256": "5aa66aef6b4cc6dc31a6184ac24f9c96dbde7f8d57b1fb8e0eca16966321c276",
       "media_type": "text/markdown",
-      "size": 3242
+      "size": 4657
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
       "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
@@ -333,6 +382,66 @@
       "sha256": "122f922908c13d3a621d72fc5482c271673a69aae5db3a4b340ca5d050183070",
       "media_type": "text/markdown",
       "size": 852
+    },
+    "docs/architecture-and-development/articles/20261022-the-bridge-to-agent-scale-git-infrastructure/README.md": {
+      "sha256": "204e6a62823aec216349ffd02249ff37f38db23dd084a6031be3438b0dbb43dc",
+      "media_type": "text/markdown",
+      "size": 517
+    },
+    "docs/architecture-and-development/articles/20261022-the-bridge-to-agent-scale-git-infrastructure/article.md": {
+      "sha256": "32b905d11f9762d76afdc20a350f3b9af34444ed96243aa4deb7e16d1317f4a0",
+      "media_type": "text/markdown",
+      "size": 12423
+    },
+    "docs/architecture-and-development/articles/20261022-the-bridge-to-agent-scale-git-infrastructure/article-zh-CN.md": {
+      "sha256": "d3107b4d98bb84f02b1845d6044fb82f6eef3dc5e50b40af51fac0b5406b199c",
+      "media_type": "text/markdown",
+      "size": 12345
+    },
+    "docs/architecture-and-development/articles/20261022-the-bridge-to-agent-scale-git-infrastructure/research.md": {
+      "sha256": "d16b055199ecc3985d439531b0f3ae4ef8d5d29afef3e288242dd9f6dc27f225",
+      "media_type": "text/markdown",
+      "size": 25322
+    },
+    "docs/architecture-and-development/articles/20261022-the-bridge-to-agent-scale-git-infrastructure/assets/reference-concurrency.svg": {
+      "sha256": "aa7fcc459927a26a8e2151aec8251486a1b6ff4babd4c3e013009306b4508708",
+      "media_type": "image/svg+xml",
+      "size": 4075
+    },
+    "docs/architecture-and-development/articles/20261022-the-bridge-to-agent-scale-git-infrastructure/assets/storage-read-separation.svg": {
+      "sha256": "cfbdcfa90521919574e78080f9afbab551c9370377ecffc3b8b86fac0325dfb6",
+      "media_type": "image/svg+xml",
+      "size": 5753
+    },
+    "docs/architecture-and-development/articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/README.md": {
+      "sha256": "55a1488c5f1a0a0bd2de50e80337e2c1f434e5eb92bc7d250ed70cd6de5b04fd",
+      "media_type": "text/markdown",
+      "size": 560
+    },
+    "docs/architecture-and-development/articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/article.md": {
+      "sha256": "86d6ea92a4210e2f9638d767aa0af76674ecd7ff57aeae5aff51a2105f08c8c4",
+      "media_type": "text/markdown",
+      "size": 15097
+    },
+    "docs/architecture-and-development/articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/article-zh-CN.md": {
+      "sha256": "d5eb20c40a7409e064a30d437610c3578a538b955b6b7bcbea4c6152912bd4b6",
+      "media_type": "text/markdown",
+      "size": 16041
+    },
+    "docs/architecture-and-development/articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/research.md": {
+      "sha256": "0bdac7d63831b541c4ba1b528fd8df371e393aefa29a6bf97a993e6d889eb4e0",
+      "media_type": "text/markdown",
+      "size": 19867
+    },
+    "docs/architecture-and-development/articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/assets/two-geometries.svg": {
+      "sha256": "5238f5109a222b9dd48a9b0703a4e551c3996125e0c5335ea38714d0e711f927",
+      "media_type": "image/svg+xml",
+      "size": 7052
+    },
+    "docs/architecture-and-development/batches/20261022-01.md": {
+      "sha256": "c231c6754043ce083a5d5d37ec814da64fd00b40f552a83994297a7edb031bc3",
+      "media_type": "text/markdown",
+      "size": 818
     }
   }
 }
