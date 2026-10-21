@@ -1,6 +1,8 @@
 # GitHub 为什么把样式从 JavaScript 搬回 CSS
 
-> 正文：[阅读中文正文](article-zh-CN.md)
+> 来源：[github.blog](<https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css>)  
+> 作者：Josh Black; Marie Lucca · 发布时间：2026-09-25 23:00（Asia/Shanghai）  
+> 翻译正文：[阅读中文正文](article-zh-CN.md)
 
 页面里只有几个按钮时，临时计算它们的样式通常不显眼；当列表、工具栏和弹窗包含大量组件时，同一类计算就可能拖慢页面生成和交互。GitHub 的做法是把可以提前确定的样式放进 CSS 文件，在构建应用时处理好，让页面运行时主要选择类名和更新变量。如果你的应用也大量使用动态样式对象，并且已经测到相关开销，这次迁移值得研究。
 

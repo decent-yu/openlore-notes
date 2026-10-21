@@ -1,6 +1,8 @@
 # GitHub 星标历史为何能从约 2,500 次请求降到 24 次
 
-> 正文：[阅读中文正文](article-zh-CN.md)
+> 来源：[github.blog](<https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers>)  
+> 作者：Taylor Cuilty; Sarita Iyer · 发布时间：2026-10-15 03:11（Asia/Shanghai）  
+> 翻译正文：[阅读中文正文](article-zh-CN.md)
 
 想知道一次版本发布有没有带来更多关注，维护者通常只需要一条按日期排列的星标曲线。过去，工具却要分页下载“谁在什么时候加了星”，取出日期，再丢掉用户名。GitHub 的新接口直接返回每日计数，并在统计之前限定查询的时间范围，减少客户端请求和数据库的重复工作。如果你正在开发趋势图、统计报表，或者发现接口只返回几条数据却依然很慢，这个案例值得关注。
 

@@ -105,7 +105,8 @@
     "research_res_17acc04a-1f9",
     "research_res_abc2d9a2-b53",
     "batch_54478cdb-049c-4d3e-9c1c-edec272a0808",
-    "repair_198f008a-b280-466b-9a59-1fd62022fb51"
+    "repair_198f008a-b280-466b-9a59-1fd62022fb51",
+    "repair_dac43ee2-3fca-492a-a2e8-6c86e1c489bb"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
@@ -149,9 +150,9 @@
       "size": 7519
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/research.md": {
-      "sha256": "6b8bb0e8e4b0d7c74bd255d3fd419091ae4155508dd6930e5792de3218a37f17",
+      "sha256": "95cdb1189de1f17d68ed067ffd320270ec71601d04e439992226c56bb33b6551",
       "media_type": "text/markdown",
-      "size": 23512
+      "size": 23759
     },
     "docs/architecture-and-development/articles/20261020-star-history-request-optimization/README.md": {
       "sha256": "fbbf712dfa8561f8184d73c6474ed9f371544cbb05d82095dbd2ef5363476889",
@@ -189,9 +190,9 @@
       "size": 7064
     },
     "docs/architecture-and-development/articles/20261020-star-history-request-optimization/research.md": {
-      "sha256": "7c76b74138b7344260141387d308d4bfa3b3a59c1c3a75ed1f45a0443d2ca7f9",
+      "sha256": "5d940221700c757a8088ca4ef1345a27585e82941819d60dcb133442a50a93cd",
       "media_type": "text/markdown",
-      "size": 20327
+      "size": 20587
     },
     "docs/architecture-and-development/batches/20261020-01.md": {
       "sha256": "1fd8aeed6b08d3d3498591dc8ba5080414ce14cb968a3c6b2d9f8ecf204a07cd",
@@ -234,9 +235,9 @@
       "size": 10742
     },
     "docs/architecture-and-development/articles/20261021-improving-site-performance-by-shipping-more-css/research.md": {
-      "sha256": "6e9685cfa6af274e3abb5296f43b786756dabe873ab09437b3cd5302c9f07f6e",
+      "sha256": "7e04543ede5d93bb5b2b9f85c870e2118824b42995749d2ee041795f009820c6",
       "media_type": "text/markdown",
-      "size": 22875
+      "size": 23108
     },
     "docs/architecture-and-development/articles/20261021-improving-site-performance-by-shipping-more-css/assets/migration-paths.svg": {
       "sha256": "7ea182e7268d151a0b604dcb7f7818de262b17a69ac35e310f3c8e17a6103ae7",
@@ -264,9 +265,9 @@
       "size": 27904
     },
     "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/research.md": {
-      "sha256": "a8bfc8314f17a5513840b97d8b21c0e7a4bf86598a8431adbbf5f1eb5b7063b7",
+      "sha256": "b65081e7e4f064b6a4ba2405708330f29f524988f0c56a860c6f4bf04044ae99",
       "media_type": "text/markdown",
-      "size": 23384
+      "size": 23559
     },
     "docs/architecture-and-development/articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/assets/diagram-c906646f0c8e.webp": {
       "sha256": "c906646f0c8ec3a7ac3d618c57c3beef1535a37da147863570e59b64f8a90770",

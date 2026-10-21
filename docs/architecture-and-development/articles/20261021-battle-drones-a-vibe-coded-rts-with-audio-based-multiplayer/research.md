@@ -1,6 +1,8 @@
 # Battle Drones：怎样把 AI 写出的游戏变得可玩，再用声音连接两台手机
 
-> 正文：[阅读中文正文](article-zh-CN.md)
+> 来源：[simonwillison.net](<https://simonwillison.net/2026/Oct/20/battledrones>)  
+> 作者：Simon Willison · 发布时间：2026-10-20 08:00（Asia/Shanghai）  
+> 翻译正文：[阅读中文正文](article-zh-CN.md)
 
 让 AI 写出能造兵、能战斗的游戏，距离让人愿意再玩一局，还有一段距离。让两台手机进入同一场战斗，也通常意味着准备联机服务、处理连接和维护后台。Battle Drones 同时尝试解决这两个问题：用反复试玩与自动化对局改进玩法，再让附近设备通过扬声器和麦克风交换操作，各自在本机计算战局。
 
