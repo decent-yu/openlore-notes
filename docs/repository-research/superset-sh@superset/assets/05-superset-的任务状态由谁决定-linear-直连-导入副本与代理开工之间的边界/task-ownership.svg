@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="850" viewBox="0 0 1120 850" role="img" aria-labelledby="title desc">
+  <title id="title">Linear 原始事项、导入任务与主机工作区的连接</title>
+  <desc id="desc">直接读写 Linear 作用于原事项。导入复制部分字段成为 Superset 自有任务并保留来源。Linear 加入工作区只提供代理上下文；从 Superset 任务创建或关联主机工作区才保存 taskId，开工调用更新该任务。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#325c83"/></marker>
+    <marker id="warm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#a75b30"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#243849}
+      .title{font-size:28px;font-weight:650}.label{font-size:20px;font-weight:600}.body{font-size:18px}.small{font-size:16px;fill:#526575}
+      .flow{fill:none;stroke:#325c83;stroke-width:2.5}
+      .context{fill:none;stroke:#a75b30;stroke-width:2.5;stroke-dasharray:8 6}
+    </style>
+  </defs>
+  <rect width="1120" height="850" fill="#fbfcfd"/>
+  <text class="title" x="38" y="46">同一条事项，三种不同连接</text>
+  <text class="small" x="38" y="77">以自有主机的桌面创建路径为例；连线表示源码中的动作，不表示共享事务。</text>
+
+  <rect x="30" y="101" width="1060" height="142" rx="12" fill="#eef1f8" stroke="#d3dbe7"/>
+  <text class="small" x="50" y="126">原记录在 Linear</text>
+  <rect x="65" y="143" width="265" height="74" rx="5" fill="white" stroke="#a9b9ce"/>
+  <text class="label" x="84" y="174">ENG-123 · 登录错误</text>
+  <text class="small" x="84" y="201">保留 Linear 状态与身份</text>
+  <rect x="700" y="143" width="355" height="74" rx="5" fill="white" stroke="#a9b9ce"/>
+  <text class="label" x="721" y="174">Superset 的 Linear 页面</text>
+  <text class="small" x="721" y="201">经云端接口访问用户的连接</text>
+  <path d="M 342 179 H 686" fill="none" stroke="#325c83" stroke-width="2.5"/>
+  <text class="body" x="402" y="160">读取／明确编辑</text>
+
+  <path class="flow" d="M 278 219 V 288 H 872 V 345"/>
+  <rect x="364" y="270" width="410" height="34" fill="#fbfcfd"/>
+  <text class="body" x="379" y="293">点击“导入任务”：复制字段，保存来源</text>
+
+  <rect x="651" y="345" width="404" height="133" rx="7" fill="#eaf4f0" stroke="#a4c7b8"/>
+  <text class="small" x="674" y="371">Superset 云端数据库</text>
+  <text class="label" x="674" y="401">新任务 · 独立编号与状态</text>
+  <text class="body" x="674" y="431">标题、描述、优先级、状态分类</text>
+  <text class="small" x="674" y="459">task_imports 保存原事项编号与链接</text>
+  <text class="small" x="678" y="506">导入后，两边的编辑分别生效。</text>
+
+  <path class="context" d="M 111 219 V 559 H 229 V 635"/>
+  <text class="label" x="147" y="385" fill="#8a4827">Linear“加入工作区”</text>
+  <text class="body" x="147" y="420">标题、链接和可取得的正文</text>
+  <text class="body" x="147" y="450">交给代理作为上下文</text>
+  <text class="small" x="147" y="486">这一步不导入任务，也不写回状态。</text>
+
+  <path class="flow" d="M 940 478 V 635"/>
+  <text class="body" x="685" y="552">从 Superset 任务创建或关联</text>
+  <text class="small" x="685" y="580">主机保存 taskId</text>
+
+  <path class="flow" d="M 686 635 V 600 H 592 V 408 H 650"/>
+  <text class="small" transform="translate(573 566) rotate(-90)">开工调用 task.start → 更新副本</text>
+
+  <rect x="65" y="635" width="444" height="111" rx="6" fill="#fff4e9" stroke="#d5b596"/>
+  <text class="small" x="85" y="661">执行主机</text>
+  <text class="label" x="85" y="691">工作区与代理</text>
+  <text class="body" x="85" y="722">本次 Linear 引用没有 taskId</text>
+  <rect x="651" y="635" width="404" height="111" rx="6" fill="#edf4fa" stroke="#a8bfd2"/>
+  <text class="small" x="674" y="661">执行主机</text>
+  <text class="label" x="674" y="691">关联 Superset 任务的工作区</text>
+  <text class="body" x="674" y="722">创建、关联或 Start 触发开工请求</text>
+
+  <path d="M 65 790 H 118" stroke="#325c83" stroke-width="2.5"/>
+  <text class="small" x="134" y="796">明确的读写或创建</text>
+  <path d="M 420 790 H 473" stroke="#a75b30" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <text class="small" x="489" y="796">代理上下文</text>
+  <text class="small" x="65" y="826">task.start 仅尝试推进待办类状态；请求成功不等于任务完成。</text>
+  <g fill="#325c83">
+    <path d="M342 179 L353 173 L353 185 Z M686 179 L675 173 L675 185 Z"/>
+    <path d="M872 345 L866 334 L878 334 Z"/>
+    <path d="M940 635 L934 624 L946 624 Z"/>
+    <path d="M650 408 L639 402 L639 414 Z"/>
+    <path d="M118 790 L107 784 L107 796 Z"/>
+  </g>
+  <g fill="#a75b30"><path d="M229 635 L223 624 L235 624 Z M473 790 L462 784 L462 796 Z"/></g>
+</svg>

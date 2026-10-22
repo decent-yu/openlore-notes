@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="730" viewBox="0 0 1120 730" role="img" aria-labelledby="title desc">
+  <title id="title">先保存派发意图，再启动代理，但两者并非共同事务</title>
+  <desc id="desc">运行从 pending 到持久化的 dispatching，再跨过启动外部代理的边界，随后记录 dispatched 并观察完成。dispatching 之后重启，不直接重发；能恢复终端则观察，终端系统准备就绪后经过恢复窗口仍找不到则记失败。</desc>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9" fill="#334155"/></marker></defs>
+  <rect width="1120" height="730" fill="#f9fbfc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#172b3a">
+    <text x="45" y="49" font-size="28" font-weight="650">保存了意图，不等于已经启动</text>
+    <text x="45" y="81" font-size="17" fill="#576675">主路径向下阅读；右侧表示崩溃后可能保留的不确定性。</text>
+    <text x="125" y="129" font-size="19" font-weight="600">运行记录与执行动作</text>
+    <text x="705" y="129" font-size="19" font-weight="600">重启后如何处理</text>
+    <path d="M120 140 H565 M700 140 H1065" stroke="#cfd9df"/>
+    <path d="M122 182 V599" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+    <g font-size="18">
+      <circle cx="122" cy="185" r="7" fill="#526e83"/>
+      <text x="150" y="191" font-weight="600">pending：创建待派发记录</text>
+      <text x="150" y="219" font-size="16" fill="#576675">等待持久化确认，再进入派发队列</text>
+      <rect x="104" y="249" width="483" height="68" rx="7" fill="#e1eee8"/>
+      <circle cx="122" cy="271" r="7" fill="#24735b"/>
+      <text x="150" y="278" font-weight="600" fill="#205e4c">dispatching：取得本次派发资格</text>
+      <text x="150" y="304" font-size="16" fill="#3c6658">必须等写入确认；失败则不启动外部工作</text>
+      <text x="150" y="357">前置检查、重读定义与目的地</text>
+      <circle cx="122" cy="403" r="7" fill="#b66826"/>
+      <text x="150" y="409" font-weight="600" fill="#8b501d">启动或复用代理终端</text>
+      <text x="150" y="437" font-size="16" fill="#576675">终端发布后返回；提示词可能仍在投递</text>
+      <circle cx="122" cy="486" r="7" fill="#526e83"/>
+      <text x="150" y="492" font-weight="600">dispatched：记录本轮终端与时间</text>
+      <text x="150" y="520" font-size="16" fill="#576675">同时安排观察，记录写入受阻也继续接结果</text>
+      <circle cx="122" cy="581" r="7" fill="#24735b"/>
+      <text x="150" y="587">观察本轮完成证据，保存最终结果</text>
+    </g>
+    <path d="M612 245 V523" stroke="#b66826" stroke-width="2.5" stroke-dasharray="7 5"/>
+    <path d="M620 285 H691" stroke="#b66826" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <text x="705" y="207" font-size="18" fill="#8b501d">这段不是一个共同事务</text>
+    <g font-size="17">
+      <text x="705" y="247">可能：意图已保存，代理尚未启动</text>
+      <text x="705" y="278">也可能：代理已启动，终端身份未保存</text>
+      <text x="705" y="333" font-weight="600">同一候选不再直接自动派发</text>
+      <path d="M870 348 V378" stroke="#334155" stroke-width="1.5" marker-end="url(#a)"/>
+      <text x="705" y="405">能解析保留的终端 → 接上完成观察</text>
+      <text x="705" y="441">暂时解析不到 → 等待终端系统恢复</text>
+      <text x="705" y="477">已就绪且两分钟后仍找不到</text>
+      <text x="705" y="508" fill="#9c443b">→ 记录无法继续确认的失败</text>
+      <text x="705" y="556" fill="#576675">不会因此宣称成功，也不在此自动替换代理。</text>
+    </g>
+    <path d="M45 625 H1075" stroke="#cfd9df"/>
+    <text x="45" y="662" font-size="19" font-weight="600">减少盲目重复，需要接受一部分“可能执行过”的不确定记录。</text>
+    <text x="45" y="695" font-size="17" fill="#576675">依据：automation-dispatch-request、headless-dispatch-runner 与 retained-run-reconciliation。</text>
+  </g>
+</svg>

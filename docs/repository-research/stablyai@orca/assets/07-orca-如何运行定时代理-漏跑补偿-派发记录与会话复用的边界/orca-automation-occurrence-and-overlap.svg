@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690" role="img" aria-labelledby="title desc">
+  <title id="title">到期时间与代理工作时间是两条不同的时间线</title>
+  <desc id="desc">假设每小时整点触发，休眠后在十一点十分恢复，只考虑十一点的最近候选。另一个例子中，十一点的代理在十二点仍忙，开启复用也可能新开终端，并不等待上一轮结束。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9" fill="none" stroke="#334155" stroke-width="1.5"/></marker>
+    <pattern id="sleep" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10 10 0" stroke="#dce2e8" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1120" height="690" fill="#fffdf8"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#172b3a">
+    <text x="48" y="48" font-size="28" font-weight="650">到期时间 ≠ 代理工作时间</text>
+    <text x="48" y="79" font-size="17" fill="#576675">自拟场景 · 每小时整点触发 · 图示不按实际时长比例绘制</text>
+    <text x="48" y="128" font-size="21" font-weight="600">恢复检查：只挑最近一次候选，再判断能否补跑</text>
+    <rect x="130" y="157" width="681" height="112" fill="url(#sleep)"/>
+    <text x="147" y="181" font-size="16" fill="#657482">08:50 起休眠</text>
+    <path d="M130 229 H1032" stroke="#334155" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <g font-size="19" text-anchor="middle">
+      <circle cx="245" cy="229" r="6" fill="#a3acb4"/>
+      <circle cx="440" cy="229" r="6" fill="#a3acb4"/>
+      <circle cx="630" cy="229" r="8" fill="#15766b"/>
+      <path d="M245 218 V240 M440 218 V240" stroke="#a3acb4"/>
+      <text x="245" y="298">09:00</text><text x="440" y="298">10:00</text>
+      <text x="630" y="298" fill="#15766b" font-weight="600">11:00</text>
+      <text x="811" y="298">11:10 恢复</text>
+      <text x="993" y="298">12:00</text>
+    </g>
+    <path d="M811 198 V252" stroke="#b66826" stroke-width="2.5"/>
+    <path d="M796 202 Q714 148 645 212" stroke="#15766b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <text x="701" y="151" font-size="17" text-anchor="middle" fill="#15766b">向前找最近候选</text>
+    <path d="M979 213 V244" stroke="#334155" stroke-width="1.5"/>
+    <text x="132" y="332" font-size="17" fill="#657482">09:00、10:00 不逐次补发；11:00 超过宽限则跳过，否则尝试一次。</text>
+    <path d="M48 365 H1072" stroke="#d6d9d9"/>
+    <text x="48" y="408" font-size="21" font-weight="600">任务重叠：复用已开启，也只把提示词交给已完成且空闲的候选</text>
+    <text x="48" y="438" font-size="16" fill="#576675">另一个例子：同一既有工作区，上一轮尚未结束，且没有其他可复用会话。</text>
+    <g font-size="17">
+      <text x="48" y="497">终端 A · 11:00 轮</text>
+      <rect x="250" y="473" width="730" height="35" rx="5" fill="#e5edee"/>
+      <text x="275" y="497" fill="#355965">代理持续工作</text>
+      <text x="48" y="556">终端 B · 12:00 轮</text>
+      <rect x="700" y="532" width="280" height="35" rx="5" fill="#bfe1d7"/>
+      <text x="721" y="556" fill="#155c50">新开代理，可能同时运行</text>
+    </g>
+    <path d="M700 460 V580" stroke="#b66826" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="700" y="603" text-anchor="middle" font-size="18" fill="#8b501d">12:00：A 仍忙，不能复用 A</text>
+    <text x="48" y="654" font-size="17" fill="#576675">派发阶段按自动化排队；代理工作期间不持有这条队列，因此复用不提供整轮互斥。</text>
+  </g>
+</svg>

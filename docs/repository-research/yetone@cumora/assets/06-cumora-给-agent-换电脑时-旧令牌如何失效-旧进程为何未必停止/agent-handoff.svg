@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="760" viewBox="0 0 1160 760" role="img" aria-labelledby="title desc">
+  <title id="title">换机后，拒绝旧身份与停止旧进程沿不同路径推进</title>
+  <desc id="desc">假设 Nova 从电脑 A 移到 B。数据库更新分配代次后，旧运行令牌不能通过后续授权检查；旧长连接在事件或心跳时复核关闭。A 在成功刷新名单后停止执行器，B 独立刷新并启动，两者没有等待对方确认的共同交接点。时间仅表示先后，不按比例。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#465668"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#233344}
+      .title{font-size:28px;font-weight:650}.sub{font-size:17px;fill:#5e6c7b}
+      .label{font-size:20px;font-weight:650}.body{font-size:18px}.small{font-size:16px}
+      .line{stroke:#465668;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1160" height="760" fill="#fcfbf8"/>
+  <text x="38" y="49" class="title">Nova 从 A 换到 B：三条分别推进的路径</text>
+  <text x="38" y="80" class="sub">假设示意；时间不按比例。A、B 的设备凭据均有效，名单查询成功。</text>
+  <rect x="38" y="111" width="1084" height="80" rx="7" fill="#e9eef4"/>
+  <text x="60" y="143" class="label">管理员提交换机</text>
+  <text x="60" y="173" class="body">数据库：Computer A ／代次 g1　→　Computer B ／代次 g2</text>
+  <path d="M 380 191 V 632" stroke="#97a1ad" stroke-width="2" stroke-dasharray="5 6"/>
+  <text x="394" y="218" class="small" fill="#637184">换机提交以后</text>
+
+  <text x="38" y="265" class="label">服务端入口</text>
+  <text x="38" y="290" class="small">决定还准不准访问</text>
+  <path d="M 225 270 H 1100" class="line"/>
+  <rect x="427" y="234" width="295" height="74" rx="6" fill="#f4dfd9"/>
+  <text x="445" y="264" class="body">旧令牌：A ／g1</text>
+  <text x="445" y="291" class="body">下次授权检查不匹配 → 拒绝</text>
+  <rect x="742" y="234" width="380" height="74" fill="#fcfbf8"/>
+  <text x="753" y="264" class="body">旧唤醒流也复核分配</text>
+  <text x="753" y="291" class="small">事件前或约 25 秒心跳时关闭</text>
+  <text x="427" y="337" class="small">这里没有向 A 发送“旧引擎已停止”的证明。</text>
+
+  <text x="38" y="411" class="label">旧电脑 A</text>
+  <text x="38" y="436" class="small">由本机守护进程停机</text>
+  <path d="M 225 417 H 1100" class="line"/>
+  <circle cx="289" cy="417" r="7" fill="#9b6247"/>
+  <text x="243" y="389" class="small">可能仍在计算</text>
+  <rect x="652" y="376" width="178" height="81" rx="6" fill="#e6ece2"/>
+  <text x="669" y="407" class="body">成功刷新名单</text>
+  <text x="669" y="435" class="body">Nova 已不在 A</text>
+  <path d="M 830 417 H 866" class="line"/>
+  <rect x="875" y="376" width="247" height="81" rx="6" fill="#e6ece2"/>
+  <text x="892" y="407" class="body">停止命令桥与引擎进程树</text>
+  <text x="892" y="435" class="small">名单轮询默认每 60 秒</text>
+  <text x="427" y="487" class="small">查询失败会保留现有执行器；60 秒不是停机时限保证。</text>
+
+  <text x="38" y="559" class="label">新电脑 B</text>
+  <text x="38" y="584" class="small">独立发现并启动</text>
+  <path d="M 225 566 H 1100" class="line"/>
+  <rect x="427" y="526" width="216" height="81" rx="6" fill="#e0ebf2"/>
+  <text x="445" y="557" class="body">刷新名单发现 Nova</text>
+  <text x="445" y="585" class="body">独立进行接手</text>
+  <path d="M 643 566 H 683" class="line"/>
+  <rect x="692" y="526" width="209" height="81" rx="6" fill="#e0ebf2"/>
+  <text x="710" y="557" class="body">建立执行器</text>
+  <text x="710" y="585" class="body">申请 B ／g2 新令牌</text>
+  <text x="427" y="635" class="small">可早于 A 本机停机；这条路径不等待 A 的停机确认。</text>
+
+  <path d="M 38 652 H 1122" stroke="#d5d9de"/>
+  <text x="38" y="687" class="label">源码提供的边界</text>
+  <text x="38" y="718" class="body">旧身份后续访问会被拦住；跨机器没有共同的“先停旧进程，再启动新进程”确认步骤。</text>
+</svg>

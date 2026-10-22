@@ -333,6 +333,166 @@
       "has_research": true,
       "reading_path": "stablyai@orca/05-orca-如何把-hook-与终端自报状态合并成可信的代理状态.md",
       "research_path": "stablyai@orca/05-orca-如何把-hook-与终端自报状态合并成可信的代理状态.md"
+    },
+    "art_0fd774e4-c5cb-4959-8857-08fdfb3e9f73": {
+      "collection_id": "col_ef2f42f4-b03",
+      "directory": "yetone@cumora/05-cumora-两位-agent-都要建文档时-怎样拦住重复-又为何仍可能多出一份",
+      "slug": "cumora-两位-agent-都要建文档时-怎样拦住重复-又为何仍可能多出一份",
+      "title": "Cumora 两位 Agent 都要建文档时：怎样拦住重复，又为何仍可能多出一份",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-22T21:34:06.825Z",
+      "updated_at": "2026-10-22T21:34:06.825Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/05-cumora-两位-agent-都要建文档时-怎样拦住重复-又为何仍可能多出一份.md",
+      "research_path": "yetone@cumora/05-cumora-两位-agent-都要建文档时-怎样拦住重复-又为何仍可能多出一份.md"
+    },
+    "art_f1076b1d-0c3c-4baa-aed9-9d0c71fa78d8": {
+      "collection_id": "col_ef2f42f4-b03",
+      "directory": "superset-sh@superset/05-superset-的任务状态由谁决定-linear-直连-导入副本与代理开工之间的边界",
+      "slug": "superset-的任务状态由谁决定-linear-直连-导入副本与代理开工之间的边界",
+      "title": "Superset 的任务状态由谁决定：Linear 直连、导入副本与代理开工之间的边界",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-22T21:34:06.825Z",
+      "updated_at": "2026-10-22T21:34:06.825Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/05-superset-的任务状态由谁决定-linear-直连-导入副本与代理开工之间的边界.md",
+      "research_path": "superset-sh@superset/05-superset-的任务状态由谁决定-linear-直连-导入副本与代理开工之间的边界.md"
+    },
+    "art_00364da2-923d-4b9e-bc6c-7457153bdd35": {
+      "collection_id": "col_ef2f42f4-b03",
+      "directory": "akitaonrails@ai-memory/05-ai-memory-怎样阻止私密文件进入记忆-路径排除-离线队列与脱敏的真实边界",
+      "slug": "ai-memory-怎样阻止私密文件进入记忆-路径排除-离线队列与脱敏的真实边界",
+      "title": "ai-memory 怎样阻止私密文件进入记忆：路径排除、离线队列与脱敏的真实边界",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-22T21:34:06.825Z",
+      "updated_at": "2026-10-22T21:34:06.825Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/05-ai-memory-怎样阻止私密文件进入记忆-路径排除-离线队列与脱敏的真实边界.md",
+      "research_path": "akitaonrails@ai-memory/05-ai-memory-怎样阻止私密文件进入记忆-路径排除-离线队列与脱敏的真实边界.md"
+    },
+    "art_be916e88-967f-4849-9dda-6ce30dd7ab7a": {
+      "collection_id": "col_ef2f42f4-b03",
+      "directory": "xai-org@grok-build/05-grok-build-的无界面输出能证明什么-结构化答案-纠错与退出码",
+      "slug": "grok-build-的无界面输出能证明什么-结构化答案-纠错与退出码",
+      "title": "Grok Build 的无界面输出能证明什么：结构化答案、纠错与退出码",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-22T21:34:06.825Z",
+      "updated_at": "2026-10-22T21:34:06.825Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/05-grok-build-的无界面输出能证明什么-结构化答案-纠错与退出码.md",
+      "research_path": "xai-org@grok-build/05-grok-build-的无界面输出能证明什么-结构化答案-纠错与退出码.md"
+    },
+    "art_bef008a3-131f-4c06-9143-2857c846f37b": {
+      "collection_id": "col_ef2f42f4-b03",
+      "directory": "stablyai@orca/06-orca-如何避免自动保存覆盖代理改动-磁盘基线-写入排队与远程确认",
+      "slug": "orca-如何避免自动保存覆盖代理改动-磁盘基线-写入排队与远程确认",
+      "title": "Orca 如何避免自动保存覆盖代理改动：磁盘基线、写入排队与远程确认",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-22T21:34:06.825Z",
+      "updated_at": "2026-10-22T21:34:06.825Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/06-orca-如何避免自动保存覆盖代理改动-磁盘基线-写入排队与远程确认.md",
+      "research_path": "stablyai@orca/06-orca-如何避免自动保存覆盖代理改动-磁盘基线-写入排队与远程确认.md"
+    },
+    "art_de9eaea2-db18-461a-ae05-35a4a9c2d129": {
+      "collection_id": "col_ef2f42f4-b03",
+      "directory": "yetone@cumora/06-cumora-给-agent-换电脑时-旧令牌如何失效-旧进程为何未必停止",
+      "slug": "cumora-给-agent-换电脑时-旧令牌如何失效-旧进程为何未必停止",
+      "title": "Cumora 给 Agent 换电脑时：旧令牌如何失效，旧进程为何未必停止",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-22T21:34:06.825Z",
+      "updated_at": "2026-10-22T21:34:06.825Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/06-cumora-给-agent-换电脑时-旧令牌如何失效-旧进程为何未必停止.md",
+      "research_path": "yetone@cumora/06-cumora-给-agent-换电脑时-旧令牌如何失效-旧进程为何未必停止.md"
+    },
+    "art_ba9aa421-c2ad-45a3-b811-67f15ea1c1fc": {
+      "collection_id": "col_ef2f42f4-b03",
+      "directory": "superset-sh@superset/06-superset-删除工作区时如何收尾-归档意图-代码保护与失败恢复",
+      "slug": "superset-删除工作区时如何收尾-归档意图-代码保护与失败恢复",
+      "title": "Superset 删除工作区时如何收尾：归档意图、代码保护与失败恢复",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-22T21:34:06.825Z",
+      "updated_at": "2026-10-22T21:34:06.825Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/06-superset-删除工作区时如何收尾-归档意图-代码保护与失败恢复.md",
+      "research_path": "superset-sh@superset/06-superset-删除工作区时如何收尾-归档意图-代码保护与失败恢复.md"
+    },
+    "art_446baa2d-9586-4ecc-ba89-de4ca84762bf": {
+      "collection_id": "col_ef2f42f4-b03",
+      "directory": "akitaonrails@ai-memory/06-ai-memory-怎样找回摘要漏掉的细节-原始事件投票-搜索回退与可见边界",
+      "slug": "ai-memory-怎样找回摘要漏掉的细节-原始事件投票-搜索回退与可见边界",
+      "title": "ai-memory 怎样找回摘要漏掉的细节：原始事件投票、搜索回退与可见边界",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-22T21:34:06.825Z",
+      "updated_at": "2026-10-22T21:34:06.825Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/06-ai-memory-怎样找回摘要漏掉的细节-原始事件投票-搜索回退与可见边界.md",
+      "research_path": "akitaonrails@ai-memory/06-ai-memory-怎样找回摘要漏掉的细节-原始事件投票-搜索回退与可见边界.md"
+    },
+    "art_83f12b01-c314-424a-903d-d7472c397442": {
+      "collection_id": "col_ef2f42f4-b03",
+      "directory": "xai-org@grok-build/06-grok-build-被沙箱拦下后-为什么-允许-会重跑命令-逐命令隔离的接线与边界",
+      "slug": "grok-build-被沙箱拦下后-为什么-允许-会重跑命令-逐命令隔离的接线与边界",
+      "title": "Grok Build 被沙箱拦下后，为什么“允许”会重跑命令：逐命令隔离的接线与边界",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-22T21:34:06.825Z",
+      "updated_at": "2026-10-22T21:34:06.825Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/06-grok-build-被沙箱拦下后-为什么-允许-会重跑命令-逐命令隔离的接线与边界.md",
+      "research_path": "xai-org@grok-build/06-grok-build-被沙箱拦下后-为什么-允许-会重跑命令-逐命令隔离的接线与边界.md"
+    },
+    "art_1962fa39-477e-4afe-9d5e-d7e1f92376ef": {
+      "collection_id": "col_ef2f42f4-b03",
+      "directory": "stablyai@orca/07-orca-如何运行定时代理-漏跑补偿-派发记录与会话复用的边界",
+      "slug": "orca-如何运行定时代理-漏跑补偿-派发记录与会话复用的边界",
+      "title": "Orca 如何运行定时代理：漏跑补偿、派发记录与会话复用的边界",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-22T21:34:06.825Z",
+      "updated_at": "2026-10-22T21:34:06.825Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/07-orca-如何运行定时代理-漏跑补偿-派发记录与会话复用的边界.md",
+      "research_path": "stablyai@orca/07-orca-如何运行定时代理-漏跑补偿-派发记录与会话复用的边界.md"
     }
   },
   "collection_locations": {
@@ -377,13 +537,31 @@
         "art_97f020db-a22a-430f-b633-248351a9f553",
         "art_9eab8529-3a25-4417-af55-e2275da7e7e9"
       ]
+    },
+    "col_ef2f42f4-b03": {
+      "path": "docs/repository-research/batches/20261023-01.md",
+      "date_sequence": "20261023-01",
+      "created_at": "2026-10-22T21:34:06.825Z",
+      "article_ids": [
+        "art_0fd774e4-c5cb-4959-8857-08fdfb3e9f73",
+        "art_f1076b1d-0c3c-4baa-aed9-9d0c71fa78d8",
+        "art_00364da2-923d-4b9e-bc6c-7457153bdd35",
+        "art_be916e88-967f-4849-9dda-6ce30dd7ab7a",
+        "art_bef008a3-131f-4c06-9143-2857c846f37b",
+        "art_de9eaea2-db18-461a-ae05-35a4a9c2d129",
+        "art_ba9aa421-c2ad-45a3-b811-67f15ea1c1fc",
+        "art_446baa2d-9586-4ecc-ba89-de4ca84762bf",
+        "art_83f12b01-c314-424a-903d-d7472c397442",
+        "art_1962fa39-477e-4afe-9d5e-d7e1f92376ef"
+      ]
     }
   },
   "delivered_batches": [
     "batch_7952a338-040f-479f-aeff-c883e836211e",
     "repair_f058c4bc-b756-49cb-9a5c-42969c9a4823",
     "batch_ca872c48-a7cf-45ab-82a1-74a6d71fe961",
-    "batch_55eeaf41-d2aa-4ebc-97ca-8e43973fdcc3"
+    "batch_55eeaf41-d2aa-4ebc-97ca-8e43973fdcc3",
+    "batch_75270be3-b29c-43c8-877b-a843c7a34a96"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -407,9 +585,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "dd5febf4b2e2d25acdd31a6e73c2464a714c5017615d8028c5e7fe6ddbd95f3b",
+      "sha256": "057b5af866d7c1b2da62617d889131ccb0d8921a52f90faef2fff5ef9e38bd1b",
       "media_type": "text/markdown",
-      "size": 26356
+      "size": 39460
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -660,6 +838,116 @@
       "sha256": "738228637794711642df7c68028894f63e97cb682ff7d556adf1322b2d75bf04",
       "media_type": "text/markdown",
       "size": 5943
+    },
+    "docs/repository-research/yetone@cumora/05-cumora-两位-agent-都要建文档时-怎样拦住重复-又为何仍可能多出一份.md": {
+      "sha256": "2dd636f6c866910478588db8ab341cf47cf2b653fa25031701fcbc7ea957c8d1",
+      "media_type": "text/markdown",
+      "size": 16708
+    },
+    "docs/repository-research/yetone@cumora/assets/05-cumora-两位-agent-都要建文档时-怎样拦住重复-又为何仍可能多出一份/document-dedup-timeline.svg": {
+      "sha256": "879e86be74b748d3cbe139a8503dcec9148cd427cfe7d6ce734e4976e3da18d4",
+      "media_type": "image/svg+xml",
+      "size": 3884
+    },
+    "docs/repository-research/superset-sh@superset/05-superset-的任务状态由谁决定-linear-直连-导入副本与代理开工之间的边界.md": {
+      "sha256": "c8d21ef700aee84eef6ebe302f77ec2fdb6204d75a66465c67e0471c95ae4210",
+      "media_type": "text/markdown",
+      "size": 25535
+    },
+    "docs/repository-research/superset-sh@superset/assets/05-superset-的任务状态由谁决定-linear-直连-导入副本与代理开工之间的边界/task-ownership.svg": {
+      "sha256": "dadc3bc5507c25dac856f91e7b6890d8d9cd0a6f11ab1abe46398322297420f4",
+      "media_type": "image/svg+xml",
+      "size": 5190
+    },
+    "docs/repository-research/akitaonrails@ai-memory/05-ai-memory-怎样阻止私密文件进入记忆-路径排除-离线队列与脱敏的真实边界.md": {
+      "sha256": "a5bfde3ccd835d3478a6294ed63306ead084d7c4ee2701d2c4c50511fbbb5b36",
+      "media_type": "text/markdown",
+      "size": 24863
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/05-ai-memory-怎样阻止私密文件进入记忆-路径排除-离线队列与脱敏的真实边界/capture-boundaries.svg": {
+      "sha256": "19a06f6bd121579fc8dd00400285b2c095e7552acbb0ef690cbfc9b946dab3e2",
+      "media_type": "image/svg+xml",
+      "size": 4564
+    },
+    "docs/repository-research/xai-org@grok-build/05-grok-build-的无界面输出能证明什么-结构化答案-纠错与退出码.md": {
+      "sha256": "712279c646b6824a345783db2fc59e8782b66287b5a05a3eadb7c285b7a1cb2f",
+      "media_type": "text/markdown",
+      "size": 17464
+    },
+    "docs/repository-research/xai-org@grok-build/assets/05-grok-build-的无界面输出能证明什么-结构化答案-纠错与退出码/structured-output.svg": {
+      "sha256": "9521a324219815403f79015e8d1e21035270cdced3b2fd9c9ea4e4e02ded9b4f",
+      "media_type": "image/svg+xml",
+      "size": 4687
+    },
+    "docs/repository-research/stablyai@orca/06-orca-如何避免自动保存覆盖代理改动-磁盘基线-写入排队与远程确认.md": {
+      "sha256": "45008aa1b9d01bb69f3de8aec3f16b71d5247e1d14a91d11c44bb4ced6e5734e",
+      "media_type": "text/markdown",
+      "size": 20164
+    },
+    "docs/repository-research/stablyai@orca/assets/06-orca-如何避免自动保存覆盖代理改动-磁盘基线-写入排队与远程确认/orca-guarded-save.svg": {
+      "sha256": "53c6426c18a96c686322ea0af4db73088d29724c4c028365d524e819f0951b89",
+      "media_type": "image/svg+xml",
+      "size": 4214
+    },
+    "docs/repository-research/yetone@cumora/06-cumora-给-agent-换电脑时-旧令牌如何失效-旧进程为何未必停止.md": {
+      "sha256": "83e03841c4ae85f091fd0b524573450637a5f96ca423cc6d5e30eb8d5b18f1be",
+      "media_type": "text/markdown",
+      "size": 23594
+    },
+    "docs/repository-research/yetone@cumora/assets/06-cumora-给-agent-换电脑时-旧令牌如何失效-旧进程为何未必停止/agent-handoff.svg": {
+      "sha256": "6c33304301a149bd9557ff23b4ec7ccddf4467d87c4fcbc41900ebac3d361262",
+      "media_type": "image/svg+xml",
+      "size": 4411
+    },
+    "docs/repository-research/superset-sh@superset/06-superset-删除工作区时如何收尾-归档意图-代码保护与失败恢复.md": {
+      "sha256": "bb7c2dc51ef158ec472509c92a9089eab4300be26869ae43bb9039fe601d3352",
+      "media_type": "text/markdown",
+      "size": 23453
+    },
+    "docs/repository-research/superset-sh@superset/assets/06-superset-删除工作区时如何收尾-归档意图-代码保护与失败恢复/workspace-delete-boundaries.svg": {
+      "sha256": "90857e3e608130d118ff0eb108705e577aab7021a57b9182039d2ff65b71abf3",
+      "media_type": "image/svg+xml",
+      "size": 4841
+    },
+    "docs/repository-research/akitaonrails@ai-memory/06-ai-memory-怎样找回摘要漏掉的细节-原始事件投票-搜索回退与可见边界.md": {
+      "sha256": "e21b99635f8f68908085d2875bf1ec1ab32f9f4e9ca37a76163bceaf7596b503",
+      "media_type": "text/markdown",
+      "size": 21953
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/06-ai-memory-怎样找回摘要漏掉的细节-原始事件投票-搜索回退与可见边界/observation-recall.svg": {
+      "sha256": "69f3d661fe5ec754b79a1ade119d0255b68f25260e0c728168053fb3363abf51",
+      "media_type": "image/svg+xml",
+      "size": 3921
+    },
+    "docs/repository-research/xai-org@grok-build/06-grok-build-被沙箱拦下后-为什么-允许-会重跑命令-逐命令隔离的接线与边界.md": {
+      "sha256": "1eead86eb0b32411b4469b69ddc6cec26a6a5a844b3d2bac1d8fb364590a2f7c",
+      "media_type": "text/markdown",
+      "size": 21541
+    },
+    "docs/repository-research/xai-org@grok-build/assets/06-grok-build-被沙箱拦下后-为什么-允许-会重跑命令-逐命令隔离的接线与边界/command-rerun.svg": {
+      "sha256": "c5a133d6faa6b60bc93f92aa17887045336e76535b1eb751efcedbb6dce9b07d",
+      "media_type": "image/svg+xml",
+      "size": 4074
+    },
+    "docs/repository-research/stablyai@orca/07-orca-如何运行定时代理-漏跑补偿-派发记录与会话复用的边界.md": {
+      "sha256": "ec155950ed4186b4171cc1b6dbab8f65a2e933167b1165cd07f3d8aaa682c5b0",
+      "media_type": "text/markdown",
+      "size": 22722
+    },
+    "docs/repository-research/stablyai@orca/assets/07-orca-如何运行定时代理-漏跑补偿-派发记录与会话复用的边界/orca-automation-durable-dispatch.svg": {
+      "sha256": "72cd9a9ee8a8f4877c7daa7e1bf026ce76c16ea467c3c6b05fd6c94655fa2cd0",
+      "media_type": "image/svg+xml",
+      "size": 4232
+    },
+    "docs/repository-research/stablyai@orca/assets/07-orca-如何运行定时代理-漏跑补偿-派发记录与会话复用的边界/orca-automation-occurrence-and-overlap.svg": {
+      "sha256": "5eb8492bb8cb2a9d453b6269a2d6e1a71500581091c61528f6ff4dc9bac81520",
+      "media_type": "image/svg+xml",
+      "size": 3776
+    },
+    "docs/repository-research/batches/20261023-01.md": {
+      "sha256": "31efffb7ff4b5dcd90ef40d8937c2c36b1f8a8bc809047513ba484eb6804ff39",
+      "media_type": "text/markdown",
+      "size": 6547
     }
   }
 }

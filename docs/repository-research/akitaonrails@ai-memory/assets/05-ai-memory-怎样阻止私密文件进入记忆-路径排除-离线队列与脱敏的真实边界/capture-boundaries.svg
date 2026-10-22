@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">同一份私密内容，经不同入口进入 ai-memory 的结果</title>
+  <desc id="desc">目录获准采集后，明确文件路径可以在客户端被丢弃。直接粘贴到用户提示的内容不走工具路径策略，可能经过本地队列和网络后才接受服务端脱敏。仅留元数据的事件不含工具正文，但可保留工作目录。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="none" stroke="#42596b" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1120" height="720" fill="#faf9f5"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#233a49">
+    <text x="42" y="48" font-size="26" font-weight="600">排除的是可识别的采集路径，文字本身没有来源标签</text>
+    <text x="42" y="80" font-size="17">示意条件：原生命令入口；目录已获准采集；private/** 排除策略有效</text>
+    <path d="M744 104V608" stroke="#82929c" stroke-width="2" stroke-dasharray="7 7"/>
+    <text x="42" y="125" font-size="18" font-weight="600">客户端</text>
+    <text x="780" y="125" font-size="18" font-weight="600">服务端</text>
+
+    <rect x="42" y="155" width="274" height="85" rx="8" fill="#f4e4df" stroke="#ac7668"/>
+    <text x="60" y="186" font-size="19">文件工具读取</text>
+    <text x="60" y="216" font-size="17">private/pricing.md</text>
+    <path d="M316 197H360" fill="none" stroke="#42596b" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="379" y="188" font-size="20" font-weight="600" fill="#904d3d">匹配路径 → 丢弃</text>
+    <text x="379" y="219" font-size="17">不进入队列，也不发送</text>
+    <path d="M636 179L667 211M667 179L636 211" stroke="#904d3d" stroke-width="3"/>
+
+    <rect x="42" y="285" width="274" height="85" rx="8" fill="#e8edf0" stroke="#8b9ca8"/>
+    <text x="60" y="317" font-size="19">路径缺失／不确定的工具</text>
+    <text x="60" y="347" font-size="17">仅指策略能识别的特定分支</text>
+    <path d="M316 327H361" fill="none" stroke="#42596b" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="378" y="285" width="300" height="85" rx="8" fill="#edf1ef" stroke="#7a968e"/>
+    <text x="395" y="317" font-size="19">重建为有限元数据</text>
+    <text x="395" y="347" font-size="17">无工具正文；可保留工作目录</text>
+    <path d="M678 327H774" fill="none" stroke="#42596b" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="791" y="317" font-size="19">继续发送并复核</text>
+    <text x="791" y="347" font-size="17">不会恢复被删的正文</text>
+
+    <rect x="42" y="420" width="274" height="100" rx="8" fill="#f4ebd7" stroke="#b29a63"/>
+    <text x="60" y="451" font-size="19">用户提示粘贴折扣原文</text>
+    <text x="60" y="480" font-size="17">不走工具路径检查</text>
+    <text x="60" y="505" font-size="15">本图以普通、未超长提示为例</text>
+    <path d="M316 470H378" fill="none" stroke="#42596b" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="395" y="420" width="283" height="100" rx="8" fill="#f4ebd7" stroke="#b29a63"/>
+    <text x="413" y="452" font-size="19">本地离线队列</text>
+    <text x="413" y="481" font-size="17">一般事件无通用脱敏</text>
+    <text x="413" y="506" font-size="15">文件权限限制访问，不是加密</text>
+    <path d="M678 470H780" fill="none" stroke="#42596b" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="702" y="452" font-size="15">网络</text>
+    <rect x="796" y="420" width="282" height="135" rx="8" fill="#e2edf0" stroke="#7196a4"/>
+    <text x="814" y="452" font-size="19">提取文字 → 脱敏 → 入库</text>
+    <text x="814" y="482" font-size="17">匹配密钥等既定格式</text>
+    <text x="814" y="510" font-size="17">普通业务内容不因保密</text>
+    <text x="814" y="536" font-size="17">就被自动删除</text>
+
+    <path d="M42 608H1078" stroke="#c9cfcd"/>
+    <text x="42" y="641" font-size="18" font-weight="600">三种不同的结果</text>
+    <text x="42" y="675" font-size="17">客户端没留下　≠　网络没有传输原文　≠　数据库正文已按规则脱敏</text>
+    <text x="42" y="701" font-size="14" fill="#657680">依据：hook.rs、capture_policy.rs、hook_spool.rs、payload.rs、router.rs 与 sanitize.rs；未作运行实测。</text>
+  </g>
+</svg>

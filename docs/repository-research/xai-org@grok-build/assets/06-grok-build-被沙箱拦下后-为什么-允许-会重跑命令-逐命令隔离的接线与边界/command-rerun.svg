@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="740" viewBox="0 0 1100 740" role="img" aria-labelledby="title desc">
+  <title id="title">逐命令沙箱：文件授权后重跑，网络授权后继续连接</title>
+  <desc id="desc">假设宿主已接入逐命令沙箱并启用 enforce。左侧文件复制被拦截后，授权使整条命令从头执行，因此此前追加的日志可能重复。右侧代理暂存网络连接，授权后释放连接，不重启命令。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#475569" stroke-width="1.5"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#1e293b;font-size:18px}
+      .small{font-size:16px;fill:#475569}.label{font-size:20px;font-weight:600}.line{stroke:#475569;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1100" height="740" fill="#fafaf8"/>
+  <text x="44" y="47" font-size="26" font-weight="600">“允许”之后，从哪里继续？</text>
+  <text x="44" y="78" class="small">前提：宿主已接入 WorkspaceSandbox，且本次命令在 enforce 下运行。以下为假设场景。</text>
+  <path d="M550 116V658" stroke="#cbd5e1" stroke-dasharray="5 7"/>
+  <text x="44" y="131" class="label">文件访问：进程已结束，再执行一次</text>
+  <text x="591" y="131" class="label">代理连接：进程仍在，释放等待</text>
+  <text x="44" y="165" class="small">示意命令：先追加日志，再复制到工作区外</text>
+  <text x="591" y="165" class="small">示意命令：先处理本地文件，再请求外部站点</text>
+  <path d="M79 196V594" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M627 196V594" stroke="#cbd5e1" stroke-width="3"/>
+  <circle cx="79" cy="215" r="10" fill="#147d64"/>
+  <text x="106" y="221">① 工作区内追加日志：已发生</text>
+  <circle cx="79" cy="288" r="10" fill="#b94a43"/>
+  <text x="106" y="283">② 复制到工作区外：被拒绝</text>
+  <text x="106" y="309" class="small">命令非零退出，运行时识别失败目标</text>
+  <path d="M106 335H451V375" class="line"/>
+  <rect x="126" y="380" width="365" height="62" rx="7" fill="#fff0cf" stroke="#c99a3d"/>
+  <text x="147" y="406">用户允许目标目录</text>
+  <text x="147" y="430" class="small">记录授权，再次分派原工具调用</text>
+  <path d="M308 445V474H106" class="line"/>
+  <circle cx="79" cy="493" r="10" fill="#bd7c22"/>
+  <text x="106" y="490">③ 从头执行：再次追加日志</text>
+  <text x="106" y="516" class="small">先前的日志没有自动撤销</text>
+  <circle cx="79" cy="575" r="10" fill="#147d64"/>
+  <text x="106" y="581">④ 按新策略复制；若再失败则收尾</text>
+  <circle cx="627" cy="215" r="10" fill="#147d64"/>
+  <text x="654" y="221">① 本地处理：已发生</text>
+  <circle cx="627" cy="288" r="10" fill="#bd7c22"/>
+  <text x="654" y="283">② 代理暂存尚未获准的连接</text>
+  <text x="654" y="309" class="small">命令还在等待，不重新启动进程</text>
+  <path d="M654 335H991V375" class="line"/>
+  <rect x="674" y="380" width="365" height="62" rx="7" fill="#fff0cf" stroke="#c99a3d"/>
+  <text x="695" y="406">用户允许目标主机</text>
+  <text x="695" y="430" class="small">记录授权，代理重新检查并释放连接</text>
+  <path d="M856 445V540H654" class="line"/>
+  <circle cx="627" cy="575" r="10" fill="#147d64"/>
+  <text x="654" y="581">③ 原命令沿这条连接继续</text>
+  <rect x="44" y="626" width="470" height="42" rx="5" fill="#fbe8e5"/>
+  <text x="61" y="653" fill="#943b34">最多一次自动重跑 ≠ 副作用只发生一次</text>
+  <rect x="591" y="626" width="465" height="42" rx="5" fill="#e0f1eb"/>
+  <text x="608" y="653" fill="#11664f">仅指代理持有的连接；直连拒绝不走此路</text>
+  <text x="44" y="709" class="small">依据：result_path.rs 的 ReplayBudget / dispatch；network.rs 的 settle_network_hold。</text>
+</svg>

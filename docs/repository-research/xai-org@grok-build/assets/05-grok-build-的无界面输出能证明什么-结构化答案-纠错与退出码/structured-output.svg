@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="820" viewBox="0 0 1160 820" role="img" aria-labelledby="title desc">
+<title id="title">一份结构化答案经过哪些检查</title>
+<desc id="desc">请求先按模型接口分为原生格式约束或合成工具两条路径，再由运行时校验。合成工具参数错误时最多返回三次纠错机会。校验结果由最终响应元数据交给输出层，进程退出码另行决定。</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#526173"/></marker>
+ <marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#a76018"/></marker>
+ <style>
+ text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#172c3b;font-size:19px}
+ .small{font-size:17px;fill:#485d6b}.label{font-size:18px;fill:#485d6b}.title{font-size:27px;font-weight:600}.strong{font-size:21px;font-weight:600}
+ .line{fill:none;stroke:#526173;stroke-width:2;marker-end:url(#arrow)}
+ </style>
+</defs>
+<rect width="1160" height="820" fill="#fafbf9"/>
+<text x="44" y="47" class="title">结构化答案：校验结果与进程退出码分别产生</text>
+<text x="44" y="78" class="small">有效规则下的主要路径 · 连线表示数据或控制流，不表示耗时</text>
+<rect x="370" y="104" width="420" height="58" rx="8" fill="#e1ecef" stroke="#6d909c"/>
+<text x="580" y="140" text-anchor="middle" class="strong">用户请求 + outputSchema</text>
+<path d="M580 162 V185 H278 V210" class="line"/>
+<path d="M580 185 H868 V210" class="line"/>
+<rect x="54" y="210" width="448" height="150" rx="8" fill="#eef4f5" stroke="#92acb4"/>
+<text x="78" y="243" class="strong">Chat Completions / Responses</text>
+<text x="78" y="279">把格式规则传入模型请求</text>
+<text x="78" y="310">模型返回最终答案文本</text>
+<text x="78" y="340" class="small">运行时仍然解析并校验</text>
+<rect x="640" y="210" width="458" height="150" rx="8" fill="#f8f0df" stroke="#bda46b"/>
+<text x="664" y="243" class="strong">Messages 路径</text>
+<text x="664" y="279">模型单独调用 StructuredOutput</text>
+<text x="664" y="310">调用参数就是待交付的答案</text>
+<text x="664" y="340" class="small">运行时截获；不进入普通工具执行</text>
+<path d="M278 360 V399 H428 V425" class="line"/>
+<path d="M868 360 V399 H732 V425" class="line"/>
+<rect x="366" y="425" width="428" height="88" rx="8" fill="#ffffff" stroke="#577681" stroke-width="2"/>
+<text x="580" y="459" text-anchor="middle" class="strong">解析 JSON，再按规则校验</text>
+<text x="580" y="489" text-anchor="middle" class="small">通过 → 值　　失败 → 错误说明</text>
+<path d="M794 469 H1122 V286 H1099" fill="none" stroke="#a76018" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#orange)"/>
+<rect x="824" y="424" width="276" height="85" fill="#fafbf9"/>
+<text x="842" y="449" style="fill:#915017;font-size:18px">仅合成工具的参数错误：</text>
+<text x="842" y="477" style="fill:#915017;font-size:18px">最多给 3 次纠错机会</text>
+<text x="842" y="503" class="small">继续失败则交付错误</text>
+<path d="M580 513 V550" class="line"/>
+<rect x="280" y="550" width="600" height="58" rx="8" fill="#e1ecef" stroke="#6d909c"/>
+<text x="580" y="586" text-anchor="middle">最终响应元数据：校验后的值，或校验错误</text>
+<path d="M580 608 V630 H260 V653" class="line"/>
+<path d="M580 630 H858 V653" class="line"/>
+<rect x="54" y="653" width="448" height="123" rx="8" fill="#ffffff" stroke="#92acb4"/>
+<text x="78" y="686" class="strong">输出层：告诉脚本答案是否可用</text>
+<text x="78" y="719" class="small">json：structuredOutput / 错误字段</text>
+<text x="78" y="749" class="small">Messages 流：result.is_error 等</text>
+<rect x="640" y="653" width="458" height="123" rx="8" fill="#ffffff" stroke="#bda46b"/>
+<text x="664" y="686" class="strong">退出路径：单独判断进程成败</text>
+<text x="664" y="719" class="small">正常响应分支仅对轮次上限特别报错</text>
+<text x="664" y="749" class="small">结构化校验错误本身不触发非零退出</text>
+<g fill="#526173">
+<path d="M272 202 L278 210 L284 202 Z"/><path d="M862 202 L868 210 L874 202 Z"/>
+<path d="M422 417 L428 425 L434 417 Z"/><path d="M726 417 L732 425 L738 417 Z"/>
+<path d="M574 542 L580 550 L586 542 Z"/><path d="M254 645 L260 653 L266 645 Z"/><path d="M852 645 L858 653 L864 645 Z"/>
+</g><path d="M1107 280 L1099 286 L1107 292 Z" fill="#a76018"/>
+</svg>

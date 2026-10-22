@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="715" viewBox="0 0 1120 715">
+  <title>代理先改磁盘，旧草稿随后保存时会发生什么</title>
+  <desc>自拟场景的时序示意。编辑器从 A 形成草稿 H，代理把磁盘改为 B。即使文件通知尚未到达，受保护的保存也会在宿主比较时发现 B 不匹配 A，拒绝写入并保留 H。此保护不涵盖独立进程在比较后、写入前的竞争。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#286c8d"/></marker>
+    <marker id="warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#ad5530"/></marker>
+    <style>
+      text {font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill:#213b48; font-size:18px}
+      .small {font-size:16px;fill:#526c77}
+      .label {font-size:20px;font-weight:600}
+      .line {stroke:#286c8d;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1120" height="715" fill="#f8faf8"/>
+  <text x="40" y="45" font-size="27" font-weight="650">先改的是磁盘，留下的是两份可供选择的内容</text>
+  <text x="40" y="76" class="small">自拟场景 · A = 原始内容，H = 人的草稿，B = 代理的新内容 · 向下表示先后，不表示耗时</text>
+  <rect x="40" y="101" width="1040" height="46" rx="6" fill="#e7f0f3"/>
+  <text x="155" y="131" text-anchor="middle" class="label">编辑器</text>
+  <text x="430" y="131" text-anchor="middle" class="label">文件宿主</text>
+  <text x="720" y="131" text-anchor="middle" class="label">磁盘文件</text>
+  <text x="990" y="131" text-anchor="middle" class="label">代理进程</text>
+  <g stroke="#b9ccd2" stroke-dasharray="4 6"><path d="M155 154V558"/><path d="M430 154V558"/><path d="M720 154V558"/><path d="M990 154V558"/></g>
+  <path d="M720 181H155" class="line"/>
+  <rect x="305" y="163" width="274" height="29" fill="#f8faf8"/>
+  <text x="442" y="184" text-anchor="middle">读取 A，记住 A 的内容指纹</text>
+  <rect x="64" y="207" width="183" height="54" rx="5" fill="#dcecf3"/>
+  <text x="155" y="231" text-anchor="middle">在 A 上编辑为 H</text>
+  <text x="155" y="251" text-anchor="middle" class="small">基线仍然是 A</text>
+  <path d="M990 282H720" stroke="#ad5530" stroke-width="2" marker-end="url(#warn)"/>
+  <text x="855" y="271" text-anchor="middle">写入 B</text>
+  <circle cx="720" cy="282" r="6" fill="#ad5530"/>
+  <text x="63" y="306" class="small">文件通知可能还未到达</text>
+  <path d="M155 342H430" class="line"/>
+  <text x="293" y="330" text-anchor="middle">保存 H，要求磁盘仍为 A</text>
+  <rect x="415" y="350" width="30" height="90" rx="4" fill="#dcecf3" stroke="#83aebe"/>
+  <path d="M445 373H720" class="line"/>
+  <text x="583" y="362" text-anchor="middle">取得文件锁后读取当前内容</text>
+  <path d="M720 412H445" class="line"/>
+  <text x="583" y="401" text-anchor="middle">当前是 B，与基线 A 不符</text>
+  <path d="M430 471H155" stroke="#ad5530" stroke-width="2" marker-end="url(#warn)"/>
+  <text x="292" y="460" text-anchor="middle" fill="#ad5530">拒绝写入：changed</text>
+  <rect x="55" y="495" width="385" height="60" rx="6" fill="#fff0df" stroke="#d4aa7c"/>
+  <text x="247" y="519" text-anchor="middle">保留 H，标记冲突，暂停自动保存</text>
+  <text x="247" y="542" text-anchor="middle" class="small">由人比较、重载或选择保留自己的版本</text>
+  <rect x="627" y="495" width="186" height="60" rx="6" fill="#e9eee5" stroke="#a3b69a"/>
+  <text x="720" y="531" text-anchor="middle">磁盘继续保留 B</text>
+  <path d="M40 581H1080" stroke="#b9ccd2"/>
+  <text x="40" y="612" font-weight="600">保护成立的边界</text>
+  <text x="40" y="642">宿主锁只协调该进程内的受保护写入；代理进程并未取得这把锁。</text>
+  <text x="40" y="672">若代理在比较通过之后、真正写入之前改文件，仍可能发生覆盖；旧远程宿主的窗口还包含网络往返。</text>
+</svg>

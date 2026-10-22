@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680" role="img" aria-labelledby="title desc">
+  <title id="title">临时认领结束后，由已提交的文档接住后来的创建请求</title>
+  <desc id="desc">假设两位不同 Agent 在同一工作区创建匹配标题的文档。第一位的认领存续时，第二位被拒绝；第一位提交并释放认领后，第二位虽然能认领，仍会被最近文档检查拦住。时间只表示先后，不表示耗时比例。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#566779" stroke-width="1.4"/></marker>
+    <style>
+      text {font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill:#233648}
+      .small {font-size:17px} .body {font-size:20px} .label {font-size:21px;font-weight:600}
+      .line {stroke:#cbd5de;stroke-width:2}
+      .link {fill:none;stroke:#566779;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1120" height="680" fill="#fbfaf6"/>
+  <text x="44" y="49" font-size="28" font-weight="700">“正在创建”和“已经创建”，由两种状态分别回答</text>
+  <text x="44" y="83" class="small">假设：同一工作区、不同 Agent、匹配标题、Redis 正常；后一次请求落在最近文档检查范围内。</text>
+  <path d="M204 126 H1054" class="link"/>
+  <text x="204" y="117" class="small">时间先后示意，不代表耗时比例</text>
+  <text x="1035" y="117" class="small">→</text>
+
+  <text x="44" y="178" class="label">Nova 的命令</text>
+  <line x1="204" y1="174" x2="1054" y2="174" class="line"/>
+  <circle cx="264" cy="174" r="7" fill="#287d83"/>
+  <circle cx="734" cy="174" r="7" fill="#287d83"/>
+  <circle cx="822" cy="174" r="7" fill="#287d83"/>
+  <text x="234" y="204" class="small">认领成功</text>
+  <text x="665" y="157" class="small">事务提交</text>
+  <text x="784" y="204" class="small">随后释放</text>
+
+  <text x="44" y="267" class="label">Redis 临时认领</text>
+  <line x1="204" y1="259" x2="1054" y2="259" class="line"/>
+  <rect x="264" y="237" width="558" height="44" rx="4" fill="#d0e9e5" stroke="#287d83"/>
+  <text x="395" y="266" class="body">Nova 占有 doc-create + 标题</text>
+  <path d="M822 235 V285" stroke="#287d83" stroke-width="2"/>
+  <text x="871" y="266" class="small">此后可重新认领</text>
+
+  <text x="44" y="351" class="label">数据库中的文档</text>
+  <line x1="204" y1="344" x2="1054" y2="344" class="line"/>
+  <rect x="734" y="322" width="320" height="44" rx="4" fill="#e8dfbf" stroke="#9e7a28"/>
+  <text x="764" y="351" class="body">已提交，认领释放后仍存在</text>
+  <line x1="734" y1="182" x2="734" y2="322" stroke="#9e7a28" stroke-dasharray="5 6"/>
+
+  <text x="44" y="430" class="label">Iris 较早尝试</text>
+  <circle cx="450" cy="422" r="7" fill="#a55249"/>
+  <path d="M450 412 V289" class="link"/>
+  <text x="474" y="429" class="body">认领失败：有人正在创建</text>
+  <text x="474" y="457" class="small">退出码 1；此时尚未执行最近文档检查</text>
+
+  <text x="44" y="514" class="label">Iris 稍后尝试</text>
+  <circle cx="929" cy="506" r="7" fill="#9e7a28"/>
+  <path d="M929 495 V376" class="link"/>
+  <text x="232" y="513" class="body">重新认领成功 → 查到 Nova 的文档 → HELD</text>
+  <text x="232" y="543" class="small">退出码 2；返回现有文档编号，提示读取、追加，或重新判断是否另建</text>
+
+  <path d="M44 582 H1076" stroke="#cbd5de"/>
+  <text x="44" y="616" class="label">认领消失 ≠ 文档消失；文档存在 ≠ 内容已经完成</text>
+  <text x="44" y="647" class="small">依据：cli.ts 的 cmdDoc / cmdDocAsActiveAgent，inproc-client.ts 的 claimWork / releaseWork。</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="790" viewBox="0 0 1260 790" role="img" aria-labelledby="title desc">
+  <title id="title">工作区先归档，实际资源随后清理</title>
+  <desc id="desc">自有主机独立 worktree 的删除依次执行归档、改动检查、拆除脚本、关闭会话、移除目录和可选分支清理。阻塞错误恢复可见性，进程崩溃由启动扫描有条件接续，成功仍可能带资源残留警告。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#34465a" stroke-width="1.5"/></marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #26374a; }
+      .title { font-size: 29px; font-weight: 650; }
+      .sub { font-size: 17px; fill: #596b7e; }
+      .step { font-size: 21px; font-weight: 600; text-anchor: middle; }
+      .small { font-size: 16px; text-anchor: middle; fill: #596b7e; }
+      .body { font-size: 18px; }
+      .label { font-size: 18px; font-weight: 650; }
+      .line { fill: none; stroke: #34465a; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1260" height="790" fill="#fbfcfe"/>
+  <text x="45" y="53" class="title">列表消失、文件移除、资源收尾，是三个时间点</text>
+  <text x="45" y="85" class="sub">范围：自有主机上的独立 worktree；共享项目目录与云沙箱走不同分支。图示顺序不表示耗时比例。</text>
+
+  <path d="M130 160H1130" stroke="#d0d9e4" stroke-width="3"/>
+  <g fill="#fff" stroke="#34465a" stroke-width="2">
+    <circle cx="130" cy="160" r="22"/><circle cx="330" cy="160" r="22"/><circle cx="530" cy="160" r="22"/>
+    <circle cx="730" cy="160" r="22"/><circle cx="930" cy="160" r="22"/><circle cx="1130" cy="160" r="22"/>
+  </g>
+  <g class="step"><text x="130" y="167">1</text><text x="330" y="167">2</text><text x="530" y="167">3</text><text x="730" y="167">4</text><text x="930" y="167">5</text><text x="1130" y="167">6</text></g>
+  <g class="step"><text x="130" y="210">写归档标记</text><text x="330" y="210">复查改动</text><text x="530" y="210">执行拆除脚本</text><text x="730" y="210">关闭会话</text><text x="930" y="210">移除工作目录</text><text x="1130" y="210">其余收尾</text></g>
+  <g class="small"><text x="130" y="238">广播删除事件</text><text x="330" y="238">force 可跳过</text><text x="530" y="238">单独决定是否跳过</text><text x="730" y="238">终端与聊天</text><text x="930" y="238">核验登记与磁盘</text><text x="1130" y="238">可选删分支、缓存</text></g>
+
+  <rect x="45" y="278" width="1170" height="59" rx="5" fill="#e2f0ed"/>
+  <text x="64" y="314" class="label">主机数据库</text>
+  <text x="240" y="314" class="body">已归档，默认列表不再显示；原记录保留，没有保存工作文件副本</text>
+  <rect x="45" y="346" width="1170" height="59" rx="5" fill="#fff0d6"/>
+  <text x="64" y="382" class="label">真实资源</text>
+  <text x="240" y="382" class="body">归档之后，代理仍可能运行；目录、会话和外部资源随后分步处理</text>
+
+  <path d="M250 423V468" class="line"/>
+  <path d="M630 423V468" class="line"/>
+  <path d="M1010 423V468" class="line"/>
+  <text x="60" y="447" class="sub">过程中可能出现：</text>
+
+  <path d="M45 482H405" stroke="#a54c3d" stroke-width="4"/>
+  <path d="M450 482H810" stroke="#6875a3" stroke-width="4"/>
+  <path d="M855 482H1215" stroke="#26796b" stroke-width="4"/>
+  <text x="55" y="521" class="label">捕获到阻塞错误</text>
+  <text x="55" y="560" class="body">清除归档标记，重新显示工作区</text>
+  <text x="55" y="593" class="body">但已执行的脚本、已停止的进程</text>
+  <text x="55" y="622" class="body">或已删除的部分文件不会自动复原</text>
+
+  <text x="460" y="521" class="label">主机服务中途崩溃</text>
+  <text x="460" y="560" class="body">下次启动筛选仍存在的无主目录</text>
+  <text x="460" y="593" class="body">核对分支和目录创建时间后接续</text>
+  <text x="460" y="622" class="body">不强制删除，不恢复原删分支选项</text>
+
+  <text x="865" y="521" class="label">调用返回 success</text>
+  <text x="865" y="560" class="body">工作区保留归档状态</text>
+  <text x="865" y="593" class="body">目录可能被保护而留下，终端也</text>
+  <text x="865" y="622" class="body">可能关闭失败；仍须读取警告</text>
+
+  <path d="M45 673H1215" stroke="#d0d9e4"/>
+  <text x="45" y="709" class="label">两类确认分别生效</text>
+  <text x="45" y="744" class="body">force：跳过 Git 改动检查　　skipTeardown：放弃拆除脚本　　两者不能互相替代</text>
+</svg>

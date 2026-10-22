@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="780" viewBox="0 0 1120 780" role="img" aria-labelledby="title desc">
+<title id="title">同一条原始事件，两种返回方式</title>
+<desc id="desc">事件通过会话标识帮助现存摘要页参与排名；仅在主查询没有混合页面命中且未使用页面筛选时，才独立返回原始事件片段。事件所有权限制正文展示，但不阻止它为共享页面投票。</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="none" stroke="#405268" stroke-width="1.6"/></marker>
+ <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#182e43}.title{font-size:28px;font-weight:650}.label{font-size:21px;font-weight:600}.body{font-size:18px}.small{font-size:16px;fill:#526579}.line{fill:none;stroke:#405268;stroke-width:2}</style>
+</defs>
+<rect width="1120" height="780" fill="#fafbf9"/>
+<text x="44" y="52" class="title">错误码只在事件正文里，搜索怎样找回来？</text>
+<text x="44" y="82" class="small">源码机制示意 · 普通项目 / scopes 查询 · 省略可选重排、固定页前置与偏好补充</text>
+<rect x="44" y="114" width="1032" height="84" rx="9" fill="#e9f1f5" stroke="#b3c7d1"/>
+<text x="66" y="146" class="label">已保存的观察事件：工具输出含 ERR_POOL_47</text>
+<text x="66" y="177" class="body">保留 session_id；全文索引匹配事件标题与正文。这里的“原始”仍是采集、裁剪和脱敏后的记录。</text>
+<path d="M262 198V240" class="line"/>
+<path d="M843 198V474" class="line"/>
+<text x="860" y="310" class="small">独立的原文回退</text>
+<rect x="44" y="244" width="606" height="100" rx="9" fill="#e5efe9" stroke="#93b29f"/>
+<text x="66" y="278" class="label">按会话找到 sessions/&lt;id&gt;.md</text>
+<text x="66" y="308" class="body">同项目、最新版本、通过有效期与页面筛选；</text>
+<text x="66" y="333" class="body">没有合格页面，这条事件就不能产生页面候选。</text>
+<path d="M262 344V379" class="line"/>
+<rect x="44" y="383" width="606" height="112" rx="9" fill="#e5efe9" stroke="#93b29f"/>
+<text x="66" y="416" class="label">每个会话计一次，加入混合页面排名</text>
+<text x="66" y="446" class="body">若页面自身未被全文命中，且调用者可读事件，</text>
+<text x="66" y="475" class="body">搜索片段可取自事件；返回的标识仍然属于页面。</text>
+<path d="M262 495V548H686" class="line"/>
+<rect x="690" y="478" width="386" height="142" rx="9" fill="#fff2d9" stroke="#ceaf71"/>
+<text x="710" y="513" class="label">主查询的混合页面结果为空？</text>
+<text x="710" y="546" class="body">非空 → 不返回独立原始命中</text>
+<text x="710" y="578" class="body">为空，且未使用页面筛选</text>
+<text x="710" y="605" class="body">→ 查询可读会话的原始事件</text>
+<path d="M843 620V650" class="line"/>
+<rect x="690" y="654" width="386" height="76" rx="9" fill="#fff2d9" stroke="#ceaf71"/>
+<text x="710" y="685" class="label">raw_hits：事件片段 + 会话标识</text>
+<text x="710" y="713" class="body">可继续分页读取该会话的事件正文</text>
+<path d="M44 595H642" stroke="#b3c7d1"/>
+<text x="44" y="630" class="label">共享排名 ≠ 共享事件正文</text>
+<text x="44" y="662" class="body">他人的事件仍能为共享摘要页投票；</text>
+<text x="44" y="692" class="body">隐藏的是事件片段与事件标识。</text>
+<text x="44" y="748" class="small">依据：memory_query → hybrid_search_inner → observation_stream_votes；search_observations_for_project_as</text>
+<path d="M256 234L262 240L268 234M256 373L262 379L268 373M837 468L843 474L849 468M680 542L686 548L680 554M837 644L843 650L849 644" fill="none" stroke="#405268" stroke-width="2"/>
+</svg>
