@@ -96,6 +96,25 @@
       "collected_at": "2026-10-21T01:17:46.860Z",
       "updated_at": "2026-10-21T01:17:46.860Z",
       "has_research": true
+    },
+    "art_cdd1f7c2-6fe6-4e73-83ad-1c1412bb8e38": {
+      "collection_id": "col_428778d3-361",
+      "directory": "articles/20261022-research-sparqlite-sparql-1-1-inside-sqlite-written-in-rust",
+      "slug": "research-sparqlite-sparql-1-1-inside-sqlite-written-in-rust",
+      "title": "Research: sparqlite: SPARQL 1.1 inside SQLite, written in Rust",
+      "original_url": "https://simonwillison.net/2026/Oct/16/sqlite-sparql-rust",
+      "tags": [
+        "SQLite",
+        "Rust",
+        "RDF",
+        "SPARQL 1.1",
+        "Claude Code",
+        "多智能体协作",
+        "代码审查"
+      ],
+      "collected_at": "2026-10-22T00:07:39.233Z",
+      "updated_at": "2026-10-22T00:07:39.233Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -117,6 +136,14 @@
         "art_1856c632-7ba5-47eb-ae55-b51ea64de2b1",
         "art_4d0dca52-6239-47cd-bff6-4837c1112f37"
       ]
+    },
+    "col_428778d3-361": {
+      "path": "docs/agent-learning/batches/20261022-01.md",
+      "date_sequence": "20261022-01",
+      "created_at": "2026-10-22T00:07:39.233Z",
+      "article_ids": [
+        "art_cdd1f7c2-6fe6-4e73-83ad-1c1412bb8e38"
+      ]
     }
   },
   "delivered_batches": [
@@ -126,13 +153,14 @@
     "research_res_f214315e-797",
     "batch_53ac2a25-5c99-4341-b759-6a15cc0f675e",
     "repair_b16015cb-450d-45b7-b522-1692af183715",
-    "repair_80f9c79c-f529-4c5a-86cb-2bc6f59269bf"
+    "repair_80f9c79c-f529-4c5a-86cb-2bc6f59269bf",
+    "batch_7723dd56-3a4d-4e95-9db7-246a57a8bbbb"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "a58d32be7bdc48f960bd8ea9426251987c269e4a5108e7c68c3a4503e1df392a",
+      "sha256": "70b38a82f029709383b3e5c58f7d90cce729229c03f9c021f5e556fcab8d8116",
       "media_type": "text/markdown",
-      "size": 3350
+      "size": 4169
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -498,6 +526,36 @@
       "sha256": "44c0a76d642bf7138122ddac847fcba86f72584e5c1e8a719e092020d50305a4",
       "media_type": "text/markdown",
       "size": 917
+    },
+    "docs/agent-learning/articles/20261022-research-sparqlite-sparql-1-1-inside-sqlite-written-in-rust/README.md": {
+      "sha256": "791eecb72e5fd488db321035a2a9aa89889248b6ebbbe86bb0ac730aa88e97f5",
+      "media_type": "text/markdown",
+      "size": 469
+    },
+    "docs/agent-learning/articles/20261022-research-sparqlite-sparql-1-1-inside-sqlite-written-in-rust/article.md": {
+      "sha256": "c9afbe26597ac1e65ab5113234e3f16c9130c69b29a4896986d204e76a78ca4e",
+      "media_type": "text/markdown",
+      "size": 4410
+    },
+    "docs/agent-learning/articles/20261022-research-sparqlite-sparql-1-1-inside-sqlite-written-in-rust/article-zh-CN.md": {
+      "sha256": "85a4ecacc33b6583ea11e509fa8178813de40c88113185f770865c39b8ebd745",
+      "media_type": "text/markdown",
+      "size": 4523
+    },
+    "docs/agent-learning/articles/20261022-research-sparqlite-sparql-1-1-inside-sqlite-written-in-rust/research.md": {
+      "sha256": "f5ea12890577e469c7a3006142de8896e4dd420aed1a363a94cf05b270d6cab7",
+      "media_type": "text/markdown",
+      "size": 13404
+    },
+    "docs/agent-learning/articles/20261022-research-sparqlite-sparql-1-1-inside-sqlite-written-in-rust/assets/agent-workflow.svg": {
+      "sha256": "fe09835a96717d2c7436815144b782b9a79a80d928301a95237a87a9304022c5",
+      "media_type": "image/svg+xml",
+      "size": 4546
+    },
+    "docs/agent-learning/batches/20261022-01.md": {
+      "sha256": "0d1505d5003fbdae4b3f9314600adb3d9f1e5757405517fd52f8e244d00321af",
+      "media_type": "text/markdown",
+      "size": 522
     }
   }
 }

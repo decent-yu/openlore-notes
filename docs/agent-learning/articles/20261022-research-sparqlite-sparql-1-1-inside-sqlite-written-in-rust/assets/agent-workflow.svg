@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="850" viewBox="0 0 1120 850" role="img" aria-labelledby="title desc">
+<title id="title">sparqlite：从模糊需求到可检验产物</title>
+<desc id="desc">按项目文档重绘的工作过程：比较设计，确定共享接口，分模块实现、审查和修复，汇合后做正确性检查、性能优化与最终审查。脚本调度工作，子智能体执行工具调用；自动检查通过与人类理解并接手之间仍有距离。</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#557084"/></marker>
+ <marker id="loopArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#b06a2c"/></marker>
+ <style>
+ text{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#19354a}
+ .h{font-size:23px;font-weight:600}.b{font-size:19px}.s{font-size:16px;fill:#526b7b}
+ .line{fill:none;stroke:#557084;stroke-width:2;marker-end:url(#arrow)}
+ </style>
+</defs>
+<rect width="1120" height="850" rx="18" fill="#f6f8fa"/>
+<text x="48" y="51" font-size="29" font-weight="650">一句需求之后，工作怎样继续？</text>
+<text x="48" y="82" class="s">按项目记录概括；分组表示职责，并非全部智能体或精确调度时序</text>
+<rect x="48" y="108" width="1024" height="62" rx="10" fill="#e5edf5"/>
+<text x="70" y="135" class="b" font-weight="600">脚本与运行时：分派任务 → 等待结果 → 决定后续步骤</text>
+<text x="70" y="157" class="s">子智能体：读取材料、修改代码、执行检查，再把结果交回</text>
+<rect x="325" y="195" width="470" height="56" rx="10" fill="#193f59"/>
+<text x="560" y="230" text-anchor="middle" class="b" style="fill:#fff">需求：用 Rust 写一个快速的 SQLite 扩展</text>
+<path d="M560 251 V276" class="line"/>
+<rect x="180" y="281" width="760" height="69" rx="10" fill="#fff" stroke="#c5d3de"/>
+<text x="560" y="309" text-anchor="middle" class="h">先比较设计，再确定共享接口</text>
+<text x="560" y="335" text-anchor="middle" class="s">速度、查询语义、SQLite 工程约束 → 统一数据与模块约定</text>
+<path d="M560 350 V375 H220 V400" class="line"/>
+<path d="M560 350 V400" class="line"/>
+<path d="M560 350 V375 H900 V400" class="line"/>
+<g fill="#fff" stroke="#acc7c3" stroke-width="1.5">
+ <rect x="65" y="405" width="310" height="126" rx="12"/>
+ <rect x="405" y="405" width="310" height="126" rx="12"/>
+ <rect x="745" y="405" width="310" height="126" rx="12"/>
+</g>
+<g text-anchor="middle">
+ <text x="220" y="438" class="h">存储等模块</text><text x="560" y="438" class="h">查询计划等模块</text><text x="900" y="438" class="h">表达式等模块</text>
+ <text x="220" y="471" class="b">实现 → 审查 → 修复</text><text x="560" y="471" class="b">实现 → 审查 → 修复</text><text x="900" y="471" class="b">实现 → 审查 → 修复</text>
+ <text x="220" y="505" class="s">用失败测试说明问题</text><text x="560" y="505" class="s">用失败测试说明问题</text><text x="900" y="505" class="s">用失败测试说明问题</text>
+</g>
+<path d="M220 531 V554 H560 V577" class="line"/>
+<path d="M560 531 V577" class="line"/>
+<path d="M900 531 V554 H560 V577" class="line"/>
+<rect x="250" y="582" width="620" height="70" rx="10" fill="#e2efea" stroke="#9cbab2"/>
+<text x="560" y="611" text-anchor="middle" class="h">汇合检查：标准用例 + 参考求值器对照</text>
+<text x="560" y="637" text-anchor="middle" class="s">优化后重新检查；检查通过仍受测试范围限制</text>
+<path d="M560 652 V681" class="line"/>
+<rect x="305" y="686" width="510" height="52" rx="10" fill="#fff0df" stroke="#d6b28b"/>
+<text x="560" y="719" text-anchor="middle" class="b">性能优化、审查 → 代码、测试、基准与教程</text>
+<path d="M815 712 H970 V617 H875" fill="none" stroke="#b06a2c" stroke-width="2" marker-end="url(#loopArrow)"/>
+<text x="985" y="673" class="s" style="fill:#995b24">再验证</text>
+<path d="M560 738 V761" fill="none" stroke="#8d9ba6" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="560" y="791" text-anchor="middle" class="b" font-weight="600">人类是否理解、是否愿意维护，仍需另外回答</text>
+<text x="560" y="822" text-anchor="middle" class="s">依据：项目 README、开发日志与 Claude Code 动态工作流文档</text>
+</svg>
