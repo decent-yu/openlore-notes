@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="744" viewBox="0 0 1100 744" role="img" aria-labelledby="title desc">
+  <title id="title">分别控制写入、验证和合并</title>
+  <desc id="desc">本文建议的三层控制。执行入口核查计划授权；验证记录绑定当前代码版本；代码托管平台要求可信检查和有效审查。任何一层不满足条件均停止对应动作。不是 Sensible Harness 已核验架构。</desc>
+  <defs>
+    <style>
+      text {font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#18314a}
+      .title {font-size:30px;font-weight:650}
+      .sub {font-size:17px;fill:#586f83}
+      .head {font-size:21px;font-weight:600}
+      .body {font-size:18px}
+      .small {font-size:16px;fill:#586f83}
+      .flow {fill:none;stroke:#526a80;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1100" height="744" fill="#f8fafc"/>
+  <text x="46" y="57" class="title">“请先问人”怎样变成实际生效的控制</text>
+  <text x="46" y="91" class="sub">本文建议 · 不是 Sensible Harness 的已验证实现 · 每层控制解决不同问题</text>
+  <text x="46" y="138" class="body">智能体提出动作</text>
+  <path d="M213 132H265" class="flow"/>
+  <polyline points="258,128 265,132 258,136" fill="none" stroke="#526a80" stroke-width="2"/>
+  <text x="286" y="138" class="body">由智能体之外的执行机制核对条件</text>
+
+  <rect x="46" y="167" width="1008" height="127" rx="12" fill="white" stroke="#bfcede"/>
+  <rect x="46" y="167" width="7" height="127" rx="3" fill="#377caa"/>
+  <text x="74" y="205" class="head">1　写入之前：核对计划授权</text>
+  <text x="74" y="240" class="body">计划版本、允许范围、批准人</text>
+  <text x="74" y="271" class="small">由工具入口检查；没有批准就拒绝写入，而非只发提醒</text>
+  <path d="M640 230H692" class="flow"/>
+  <polyline points="685,226 692,230 685,234" fill="none" stroke="#526a80" stroke-width="2"/>
+  <text x="715" y="220" class="body">通过：允许约定范围内修改</text>
+  <text x="715" y="252" class="body" fill="#a53c35">未通过：停止写入，补充决定</text>
+  <path d="M544 294V323" class="flow"/>
+  <polyline points="540,316 544,323 548,316" fill="none" stroke="#526a80" stroke-width="2"/>
+
+  <rect x="46" y="329" width="1008" height="127" rx="12" fill="white" stroke="#bfcede"/>
+  <rect x="46" y="329" width="7" height="127" rx="3" fill="#2b8775"/>
+  <text x="74" y="367" class="head">2　验证之后：确认记录对应当前代码</text>
+  <text x="74" y="402" class="body">验收条件、代码提交标识、实际测试结果</text>
+  <text x="74" y="433" class="small">代码再次变化，需重跑受影响检查；缺少环境不能算通过</text>
+  <path d="M640 392H692" class="flow"/>
+  <polyline points="685,388 692,392 685,396" fill="none" stroke="#526a80" stroke-width="2"/>
+  <text x="715" y="382" class="body">通过：形成可审查证据</text>
+  <text x="715" y="414" class="body" fill="#a53c35">未通过：修复、重测或标为阻塞</text>
+  <path d="M544 456V485" class="flow"/>
+  <polyline points="540,478 544,485 548,478" fill="none" stroke="#526a80" stroke-width="2"/>
+
+  <rect x="46" y="491" width="1008" height="127" rx="12" fill="white" stroke="#bfcede"/>
+  <rect x="46" y="491" width="7" height="127" rx="3" fill="#7955a4"/>
+  <text x="74" y="529" class="head">3　合并之前：由托管平台执行规则</text>
+  <text x="74" y="564" class="body">可信状态检查、有效审查、受限的绕过权限</text>
+  <text x="74" y="595" class="small">CI 成功不能替代人工审查；旧批准不能覆盖新增修改</text>
+  <path d="M640 554H692" class="flow"/>
+  <polyline points="685,550 692,554 685,558" fill="none" stroke="#526a80" stroke-width="2"/>
+  <text x="715" y="544" class="body">通过：允许进入主分支</text>
+  <text x="715" y="576" class="body" fill="#a53c35">未通过：平台拒绝合并</text>
+
+  <path d="M46 654H1054" stroke="#d7e1eb"/>
+  <text x="46" y="684" class="small">基础条件：权限和检查配置不能任由智能体放宽；所有等效操作入口都应受控。</text>
+  <text x="46" y="715" class="small">依据：正文对工具钩子、沙箱及 GitHub 规则集的外部核验；三层组合为本文建议。</text>
+</svg>

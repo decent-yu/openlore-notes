@@ -2,12 +2,14 @@
 
 关注架构设计与演进，以及有工程证据的新开发方法和协作流程。
 
-## 最近收录（6 篇）
+## 最近收录（8 篇）
 
 按首次收录时间从新到旧排列；更新旧文章不改变收录日期和目录。
 
 | 收录日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261023 | [Building Git infrastructure for agent-scale development](articles/20261023-building-git-infrastructure-for-agent-scale-development/README.md) | [简体中文](articles/20261023-building-git-infrastructure-for-agent-scale-development/article-zh-CN.md) | [调研](articles/20261023-building-git-infrastructure-for-agent-scale-development/research.md) |
+| 20261023 | [How Sensible Harness can help teams create an AI-first delivery environment](articles/20261023-how-sensible-harness-can-help-teams-create-an-ai-first-delivery-environment/README.md) | [简体中文](articles/20261023-how-sensible-harness-can-help-teams-create-an-ai-first-delivery-environment/article-zh-CN.md) | [调研](articles/20261023-how-sensible-harness-can-help-teams-create-an-ai-first-delivery-environment/research.md) |
 | 20261022 | [Rendering huge pull requests in the GitHub Copilot app](articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/README.md) | [简体中文](articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/article-zh-CN.md) | [调研](articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/research.md) |
 | 20261022 | [The bridge to agent-scale Git infrastructure](articles/20261022-the-bridge-to-agent-scale-git-infrastructure/README.md) | [简体中文](articles/20261022-the-bridge-to-agent-scale-git-infrastructure/article-zh-CN.md) | [调研](articles/20261022-the-bridge-to-agent-scale-git-infrastructure/research.md) |
 | 20261021 | [Battle Drones—a vibe coded RTS with audio-based multiplayer](articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/README.md) | [简体中文](articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/article-zh-CN.md) | [调研](articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/research.md) |
@@ -19,6 +21,8 @@
 
 | 更新日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261023 | [Building Git infrastructure for agent-scale development](articles/20261023-building-git-infrastructure-for-agent-scale-development/README.md) | [简体中文](articles/20261023-building-git-infrastructure-for-agent-scale-development/article-zh-CN.md) | [调研](articles/20261023-building-git-infrastructure-for-agent-scale-development/research.md) |
+| 20261023 | [How Sensible Harness can help teams create an AI-first delivery environment](articles/20261023-how-sensible-harness-can-help-teams-create-an-ai-first-delivery-environment/README.md) | [简体中文](articles/20261023-how-sensible-harness-can-help-teams-create-an-ai-first-delivery-environment/article-zh-CN.md) | [调研](articles/20261023-how-sensible-harness-can-help-teams-create-an-ai-first-delivery-environment/research.md) |
 | 20261022 | [Rendering huge pull requests in the GitHub Copilot app](articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/README.md) | [简体中文](articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/article-zh-CN.md) | [调研](articles/20261022-rendering-huge-pull-requests-in-the-github-copilot-app/research.md) |
 | 20261022 | [The bridge to agent-scale Git infrastructure](articles/20261022-the-bridge-to-agent-scale-git-infrastructure/README.md) | [简体中文](articles/20261022-the-bridge-to-agent-scale-git-infrastructure/article-zh-CN.md) | [调研](articles/20261022-the-bridge-to-agent-scale-git-infrastructure/research.md) |
 | 20261021 | [Battle Drones—a vibe coded RTS with audio-based multiplayer](articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/README.md) | [简体中文](articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/article-zh-CN.md) | [调研](articles/20261021-battle-drones-a-vibe-coded-rts-with-audio-based-multiplayer/research.md) |
@@ -28,6 +32,7 @@
 
 ## 采集批次
 
+- [20261023-01](batches/20261023-01.md)（2 篇）
 - [20261022-01](batches/20261022-01.md)（2 篇）
 - [20261021-01](batches/20261021-01.md)（2 篇）
 - [20261020-01](batches/20261020-01.md)（2 篇）

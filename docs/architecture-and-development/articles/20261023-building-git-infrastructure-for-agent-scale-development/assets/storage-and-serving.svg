@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="790" viewBox="0 0 1120 790" role="img" aria-labelledby="title desc">
+  <title id="title">完整副本与存储、计算分离的职责差异</title>
+  <desc id="desc">上半图表示旧架构中的完整副本既保存数据又服务读取，新增读容量会扩大发送写入的副本集合。下半图表示新设计把权威数据放入持久存储，由可替换的缓存工作节点服务读取，引用更新仍须协调。此图是职责示意，不是实际部署拓扑。</desc>
+  <defs>
+    <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#172c40}.heading{font-size:25px;font-weight:650}.label{font-size:20px;font-weight:600}.body{font-size:18px}.note{font-size:17px;fill:#506579}.edge{fill:none;stroke:#536679;stroke-width:2}.box{fill:#fff;stroke:#bac8d4;stroke-width:1.5}</style>
+  </defs>
+  <rect width="1120" height="790" rx="18" fill="#f5f8fb"/>
+  <text x="36" y="48" class="heading">读容量增加时，谁必须跟着承担写入？</text>
+  <text x="36" y="78" class="note">按原文设计原则归纳的职责示意；箭头表示请求或数据流，不表示实际部署连接。</text>
+  <rect x="24" y="100" width="1072" height="278" rx="15" fill="#fff4e9"/>
+  <text x="46" y="136" class="heading">旧架构：完整副本兼任存储与服务</text>
+  <rect x="48" y="181" width="158" height="82" rx="10" class="box"/>
+  <text x="127" y="214" text-anchor="middle" class="label">推送入口</text><text x="127" y="242" text-anchor="middle" class="body">协调引用更新</text>
+  <path d="M206 222H280M280 222V191H340M280 222V299H340" class="edge"/>
+  <rect x="340" y="164" width="245" height="72" rx="10" class="box"/>
+  <text x="462" y="194" text-anchor="middle" class="label">完整副本 A</text><text x="462" y="221" text-anchor="middle" class="body">保存数据 ＋ 回答读取</text>
+  <rect x="340" y="267" width="245" height="72" rx="10" class="box"/>
+  <text x="462" y="297" text-anchor="middle" class="label">完整副本 B / …</text><text x="462" y="324" text-anchor="middle" class="body">默认共 5 份，图中省略</text>
+  <path d="M850 199H590M850 303H590" class="edge"/>
+  <text x="720" y="187" text-anchor="middle" class="note">读取</text><text x="720" y="290" text-anchor="middle" class="note">读取</text>
+  <rect x="850" y="177" width="210" height="148" rx="10" fill="#ffe5c7" stroke="#dcac76"/>
+  <text x="955" y="214" text-anchor="middle" class="label">读取请求</text><text x="955" y="247" text-anchor="middle" class="body">分散到完整副本</text><text x="955" y="277" text-anchor="middle" class="body">扩容仍需复制仓库</text>
+  <text x="48" y="362" class="note">新增读容量需增加完整副本；新增副本也参与写入，读扩容由此影响写入。</text>
+  <rect x="24" y="398" width="1072" height="348" rx="15" fill="#eaf4f4"/>
+  <text x="46" y="435" class="heading">新设计：权威存储保数据，缓存节点接读流量</text>
+  <rect x="48" y="475" width="195" height="84" rx="10" class="box"/>
+  <text x="145" y="507" text-anchor="middle" class="label">写入处理</text><text x="145" y="537" text-anchor="middle" class="body">保存对象、完成校验</text>
+  <rect x="48" y="597" width="195" height="84" rx="10" class="box"/>
+  <text x="145" y="629" text-anchor="middle" class="label">引用发布</text><text x="145" y="659" text-anchor="middle" class="body">仍需有序、条件更新</text>
+  <path d="M243 517H350" class="edge"/><text x="295" y="500" text-anchor="middle" class="note">写入</text>
+  <path d="M145 559V596" class="edge"/>
+  <rect x="350" y="475" width="310" height="84" rx="10" fill="#d1e9e6" stroke="#83b1aa" stroke-width="1.5"/>
+  <text x="505" y="507" text-anchor="middle" class="label">持久存储：Azure Blob Storage</text><text x="505" y="537" text-anchor="middle" class="body">权威仓库数据与底层复制</text>
+  <path d="M660 517H766" class="edge"/><text x="714" y="499" text-anchor="middle" class="note">取数据</text>
+  <rect x="770" y="475" width="285" height="84" rx="10" class="box"/>
+  <text x="912" y="507" text-anchor="middle" class="label">缓存读节点 A / B / …</text><text x="912" y="537" text-anchor="middle" class="body">按需增加，无须加入写入副本组</text>
+  <path d="M912 597V560" class="edge"/>
+  <text x="912" y="623" text-anchor="middle" class="label">开发者、智能体、持续集成</text>
+  <rect x="350" y="597" width="310" height="84" rx="10" class="box"/>
+  <text x="505" y="629" text-anchor="middle" class="label">独立维护工作节点</text><text x="505" y="659" text-anchor="middle" class="body">目标：后台压实与垃圾回收</text>
+  <path d="M505 597V560" class="edge"/>
+  <text x="48" y="717" class="note">目标职责 ≠ 已完成部署；引用元数据与发布协议的最终实现，不能从此图推定。</text>
+  <g fill="#536679">
+    <path d="M340 191l-10 -5v10Z M340 299l-10 -5v10Z M590 199l10 -5v10Z M590 303l10 -5v10Z"/>
+    <path d="M350 517l-10 -5v10Z M766 517l-10 -5v10Z M145 596l-5 -10h10Z M912 560l-5 10h10Z M505 560l-5 10h10Z"/>
+  </g>
+  <text x="36" y="776" class="note">依据：GitHub《Building Git infrastructure for agent-scale development》；过渡阶段见正文。</text>
+</svg>

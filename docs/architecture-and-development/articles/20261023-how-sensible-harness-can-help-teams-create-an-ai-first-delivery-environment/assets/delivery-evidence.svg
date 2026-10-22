@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="850" viewBox="0 0 1100 850" role="img" aria-labelledby="title desc">
+  <title id="title">从模糊需求到可审查结果</title>
+  <desc id="desc">按原文整理的职责与交接过程。业务分析澄清需求，开发先提交计划供人批准，再实现和测试；质量分析发布评估。无法执行的测试标为阻塞。此图不表示产品内部架构已获验证。</desc>
+  <defs>
+    <style>
+      text {font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#18314a}
+      .title {font-size:30px;font-weight:650}
+      .sub {font-size:17px;fill:#576c80}
+      .label {font-size:19px;font-weight:600}
+      .body {font-size:18px}
+      .small {font-size:16px;fill:#576c80}
+      .line {stroke:#62758b;stroke-width:2;fill:none}
+    </style>
+  </defs>
+  <rect width="1100" height="850" fill="#f7f9fc"/>
+  <text x="46" y="58" class="title">每次交接，都应留下下一步可以核查的记录</text>
+  <text x="46" y="91" class="sub">原文流程概览 · 自上而下阅读 · 角色分工不等于权限隔离</text>
+  <text x="58" y="139" class="small">负责角色</text>
+  <text x="302" y="139" class="small">主要动作与交接记录</text>
+  <text x="831" y="139" class="small">人工决定 / 异常</text>
+  <path d="M46 153H1054" stroke="#d7e1eb"/>
+
+  <rect x="46" y="174" width="206" height="102" rx="12" fill="#e4eefb"/>
+  <text x="66" y="215" class="label">业务分析智能体</text>
+  <text x="66" y="246" class="small">先澄清，再整理</text>
+  <rect x="290" y="174" width="474" height="102" rx="12" fill="white" stroke="#bed1e8"/>
+  <text x="312" y="210" class="label">需求记录与验收条件</text>
+  <text x="312" y="242" class="body">明确权限、导出字段、日志要求</text>
+  <path d="M252 225H286" class="line"/>
+  <polyline points="279,221 286,225 279,229" fill="none" stroke="#62758b" stroke-width="2"/>
+  <path d="M764 225H812" class="line"/>
+  <polyline points="805,221 812,225 805,229" fill="none" stroke="#62758b" stroke-width="2"/>
+  <text x="831" y="215" class="body">负责人回答</text>
+  <text x="831" y="244" class="body">缺失的业务问题</text>
+  <path d="M526 276V304" class="line"/>
+  <polyline points="522,297 526,304 530,297" fill="none" stroke="#62758b" stroke-width="2"/>
+
+  <rect x="46" y="310" width="206" height="270" rx="12" fill="#e0f1ec"/>
+  <text x="66" y="351" class="label">开发智能体</text>
+  <text x="66" y="383" class="small">先计划，再实施</text>
+  <text x="66" y="543" class="small">审查意见处理后</text>
+  <text x="66" y="566" class="small">再次检查 CI</text>
+  <rect x="290" y="310" width="474" height="94" rx="12" fill="white" stroke="#a9cec1"/>
+  <text x="312" y="345" class="label">逐条引用验收条件，提交实现计划</text>
+  <text x="312" y="376" class="body">批准后的计划保存到任务单评论</text>
+  <path d="M252 357H286" class="line"/>
+  <polyline points="279,353 286,357 279,361" fill="none" stroke="#62758b" stroke-width="2"/>
+  <path d="M764 357H812" class="line"/>
+  <polyline points="805,353 812,357 805,361" fill="none" stroke="#62758b" stroke-width="2"/>
+  <rect x="818" y="320" width="236" height="77" rx="12" fill="#fff0d3" stroke="#d8ad55"/>
+  <text x="838" y="351" class="label">人批准计划</text>
+  <text x="838" y="378" class="small">原文要求：写代码之前</text>
+  <path d="M526 404V449" class="line"/>
+  <polyline points="522,442 526,449 530,442" fill="none" stroke="#62758b" stroke-width="2"/>
+  <text x="542" y="434" class="small">批准后进入实现</text>
+  <rect x="290" y="455" width="474" height="125" rx="12" fill="white" stroke="#a9cec1"/>
+  <text x="312" y="489" class="label">测试 → 实现 → 提交 → PR 与 CI</text>
+  <text x="312" y="521" class="body">保留修改、自动检查和审查记录</text>
+  <text x="312" y="553" class="small">原文称有九个关卡，未公开完整清单</text>
+  <path d="M526 580V611" class="line"/>
+  <polyline points="522,604 526,611 530,604" fill="none" stroke="#62758b" stroke-width="2"/>
+
+  <rect x="46" y="617" width="206" height="112" rx="12" fill="#eee7f8"/>
+  <text x="66" y="660" class="label">质量分析智能体</text>
+  <text x="66" y="692" class="small">从验收条件出发验证</text>
+  <rect x="290" y="617" width="474" height="112" rx="12" fill="white" stroke="#cbb9e2"/>
+  <text x="312" y="653" class="label">运行场景，发布评估与建议</text>
+  <text x="312" y="685" class="body">结果写入任务单与 PR</text>
+  <text x="312" y="713" class="small">评估建议不等于自动批准合并</text>
+  <path d="M252 674H286" class="line"/>
+  <polyline points="279,670 286,674 279,678" fill="none" stroke="#62758b" stroke-width="2"/>
+  <path d="M764 674H812" class="line"/>
+  <polyline points="805,670 812,674 805,678" fill="none" stroke="#62758b" stroke-width="2"/>
+  <rect x="818" y="625" width="236" height="96" rx="12" fill="#fff0d3" stroke="#d8ad55"/>
+  <text x="838" y="657" class="label">无法执行 → 阻塞</text>
+  <text x="838" y="687" class="body">返回人工审阅</text>
+  <text x="838" y="711" class="small">不得标为通过</text>
+  <path d="M46 765H1054" stroke="#d7e1eb"/>
+  <text x="46" y="796" class="small">来源：所提供的 Thoughtworks 原文。导出功能为本文假设例子，非产品实测。</text>
+  <text x="46" y="823" class="small">PR：请求审查并合并代码；CI：远端自动构建与检查。箭头表示流程或记录交接。</text>
+</svg>
