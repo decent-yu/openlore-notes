@@ -493,6 +493,166 @@
       "has_research": true,
       "reading_path": "stablyai@orca/07-orca-如何运行定时代理-漏跑补偿-派发记录与会话复用的边界.md",
       "research_path": "stablyai@orca/07-orca-如何运行定时代理-漏跑补偿-派发记录与会话复用的边界.md"
+    },
+    "art_d9e0cb8f-a0a6-4d0b-a3b6-fbd3a7c6701a": {
+      "collection_id": "col_c8b0957c-90c",
+      "directory": "yetone@cumora/07-cumora-发回复前再看一眼-怎样拦住旧决定-为什么仍会重复发言",
+      "slug": "cumora-发回复前再看一眼-怎样拦住旧决定-为什么仍会重复发言",
+      "title": "Cumora 发回复前再看一眼：怎样拦住旧决定，为什么仍会重复发言",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-23T21:37:54.903Z",
+      "updated_at": "2026-10-23T21:37:54.903Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/07-cumora-发回复前再看一眼-怎样拦住旧决定-为什么仍会重复发言.md",
+      "research_path": "yetone@cumora/07-cumora-发回复前再看一眼-怎样拦住旧决定-为什么仍会重复发言.md"
+    },
+    "art_73f9bfb4-5ce3-4254-9c3b-b897b3d32213": {
+      "collection_id": "col_c8b0957c-90c",
+      "directory": "superset-sh@superset/07-superset-怎样跟上代理的文件改动-changes-刷新-局部重读与过期结果的边界",
+      "slug": "superset-怎样跟上代理的文件改动-changes-刷新-局部重读与过期结果的边界",
+      "title": "Superset 怎样跟上代理的文件改动：Changes 刷新、局部重读与过期结果的边界",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-23T21:37:54.903Z",
+      "updated_at": "2026-10-23T21:37:54.903Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/07-superset-怎样跟上代理的文件改动-changes-刷新-局部重读与过期结果的边界.md",
+      "research_path": "superset-sh@superset/07-superset-怎样跟上代理的文件改动-changes-刷新-局部重读与过期结果的边界.md"
+    },
+    "art_e9fca3b7-4132-4e06-8a0e-479c4714ba68": {
+      "collection_id": "col_c8b0957c-90c",
+      "directory": "akitaonrails@ai-memory/07-ai-memory-的旧记忆为什么还在-访问加权-过时反馈与淘汰时序",
+      "slug": "ai-memory-的旧记忆为什么还在-访问加权-过时反馈与淘汰时序",
+      "title": "ai-memory 的旧记忆为什么还在：访问加权、过时反馈与淘汰时序",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-23T21:37:54.903Z",
+      "updated_at": "2026-10-23T21:37:54.903Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/07-ai-memory-的旧记忆为什么还在-访问加权-过时反馈与淘汰时序.md",
+      "research_path": "akitaonrails@ai-memory/07-ai-memory-的旧记忆为什么还在-访问加权-过时反馈与淘汰时序.md"
+    },
+    "art_52e75352-3268-4dcd-af6f-20ffc7de7a8d": {
+      "collection_id": "col_c8b0957c-90c",
+      "directory": "xai-org@grok-build/07-grok-build-怎样提前压缩长对话-两阶段摘要-缓存校验与失败退路",
+      "slug": "grok-build-怎样提前压缩长对话-两阶段摘要-缓存校验与失败退路",
+      "title": "Grok Build 怎样提前压缩长对话：两阶段摘要、缓存校验与失败退路",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-23T21:37:54.903Z",
+      "updated_at": "2026-10-23T21:37:54.903Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/07-grok-build-怎样提前压缩长对话-两阶段摘要-缓存校验与失败退路.md",
+      "research_path": "xai-org@grok-build/07-grok-build-怎样提前压缩长对话-两阶段摘要-缓存校验与失败退路.md"
+    },
+    "art_20e4f14f-72f9-41dc-bbd6-9d200087d0db": {
+      "collection_id": "col_c8b0957c-90c",
+      "directory": "stablyai@orca/08-orca-删除工作区时如何保住分支-压缩合并判断-远程刷新与旧操作保护",
+      "slug": "orca-删除工作区时如何保住分支-压缩合并判断-远程刷新与旧操作保护",
+      "title": "Orca 删除工作区时如何保住分支：压缩合并判断、远程刷新与旧操作保护",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-23T21:37:54.903Z",
+      "updated_at": "2026-10-23T21:37:54.903Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/08-orca-删除工作区时如何保住分支-压缩合并判断-远程刷新与旧操作保护.md",
+      "research_path": "stablyai@orca/08-orca-删除工作区时如何保住分支-压缩合并判断-远程刷新与旧操作保护.md"
+    },
+    "art_6c112f3b-1c14-4c81-8f88-3c62aae7cb40": {
+      "collection_id": "col_c8b0957c-90c",
+      "directory": "yetone@cumora/08-cumora-认领任务卡以后-接管为什么不会让旧执行者停手",
+      "slug": "cumora-认领任务卡以后-接管为什么不会让旧执行者停手",
+      "title": "Cumora 认领任务卡以后：接管为什么不会让旧执行者停手",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-23T21:37:54.903Z",
+      "updated_at": "2026-10-23T21:37:54.903Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/08-cumora-认领任务卡以后-接管为什么不会让旧执行者停手.md",
+      "research_path": "yetone@cumora/08-cumora-认领任务卡以后-接管为什么不会让旧执行者停手.md"
+    },
+    "art_50072429-06ae-4d8a-a85e-198f758a2eca": {
+      "collection_id": "col_c8b0957c-90c",
+      "directory": "superset-sh@superset/08-superset-怎样判断代理需要你处理-状态上报-已读记录与提示音的分工",
+      "slug": "superset-怎样判断代理需要你处理-状态上报-已读记录与提示音的分工",
+      "title": "Superset 怎样判断代理需要你处理：状态上报、已读记录与提示音的分工",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-23T21:37:54.903Z",
+      "updated_at": "2026-10-23T21:37:54.903Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/08-superset-怎样判断代理需要你处理-状态上报-已读记录与提示音的分工.md",
+      "research_path": "superset-sh@superset/08-superset-怎样判断代理需要你处理-状态上报-已读记录与提示音的分工.md"
+    },
+    "art_074cbcf0-b332-4b54-986f-4be41e2ecd37": {
+      "collection_id": "col_c8b0957c-90c",
+      "directory": "akitaonrails@ai-memory/08-ai-memory-的交接会被谁拿走-并发领取-空会话归还与送达边界",
+      "slug": "ai-memory-的交接会被谁拿走-并发领取-空会话归还与送达边界",
+      "title": "ai-memory 的交接会被谁拿走：并发领取、空会话归还与送达边界",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-23T21:37:54.903Z",
+      "updated_at": "2026-10-23T21:37:54.903Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/08-ai-memory-的交接会被谁拿走-并发领取-空会话归还与送达边界.md",
+      "research_path": "akitaonrails@ai-memory/08-ai-memory-的交接会被谁拿走-并发领取-空会话归还与送达边界.md"
+    },
+    "art_943e7bc8-13ce-48f8-b9a3-1bc4ec8a7021": {
+      "collection_id": "col_c8b0957c-90c",
+      "directory": "xai-org@grok-build/08-grok-build-怎样汇合子任务结果-多路交付-批量提醒与去重边界",
+      "slug": "grok-build-怎样汇合子任务结果-多路交付-批量提醒与去重边界",
+      "title": "Grok Build 怎样汇合子任务结果：多路交付、批量提醒与去重边界",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-23T21:37:54.903Z",
+      "updated_at": "2026-10-23T21:37:54.903Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/08-grok-build-怎样汇合子任务结果-多路交付-批量提醒与去重边界.md",
+      "research_path": "xai-org@grok-build/08-grok-build-怎样汇合子任务结果-多路交付-批量提醒与去重边界.md"
+    },
+    "art_d60d21c5-c0dd-4bde-b284-e8401bb359bd": {
+      "collection_id": "col_c8b0957c-90c",
+      "directory": "stablyai@orca/09-orca-如何确认终端已经停止-主机证据-旧查询隔离与关闭回执",
+      "slug": "orca-如何确认终端已经停止-主机证据-旧查询隔离与关闭回执",
+      "title": "Orca 如何确认终端已经停止：主机证据、旧查询隔离与关闭回执",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-23T21:37:54.903Z",
+      "updated_at": "2026-10-23T21:37:54.903Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/09-orca-如何确认终端已经停止-主机证据-旧查询隔离与关闭回执.md",
+      "research_path": "stablyai@orca/09-orca-如何确认终端已经停止-主机证据-旧查询隔离与关闭回执.md"
     }
   },
   "collection_locations": {
@@ -554,6 +714,23 @@
         "art_83f12b01-c314-424a-903d-d7472c397442",
         "art_1962fa39-477e-4afe-9d5e-d7e1f92376ef"
       ]
+    },
+    "col_c8b0957c-90c": {
+      "path": "docs/repository-research/batches/20261024-01.md",
+      "date_sequence": "20261024-01",
+      "created_at": "2026-10-23T21:37:54.903Z",
+      "article_ids": [
+        "art_d9e0cb8f-a0a6-4d0b-a3b6-fbd3a7c6701a",
+        "art_73f9bfb4-5ce3-4254-9c3b-b897b3d32213",
+        "art_e9fca3b7-4132-4e06-8a0e-479c4714ba68",
+        "art_52e75352-3268-4dcd-af6f-20ffc7de7a8d",
+        "art_20e4f14f-72f9-41dc-bbd6-9d200087d0db",
+        "art_6c112f3b-1c14-4c81-8f88-3c62aae7cb40",
+        "art_50072429-06ae-4d8a-a85e-198f758a2eca",
+        "art_074cbcf0-b332-4b54-986f-4be41e2ecd37",
+        "art_943e7bc8-13ce-48f8-b9a3-1bc4ec8a7021",
+        "art_d60d21c5-c0dd-4bde-b284-e8401bb359bd"
+      ]
     }
   },
   "delivered_batches": [
@@ -561,7 +738,8 @@
     "repair_f058c4bc-b756-49cb-9a5c-42969c9a4823",
     "batch_ca872c48-a7cf-45ab-82a1-74a6d71fe961",
     "batch_55eeaf41-d2aa-4ebc-97ca-8e43973fdcc3",
-    "batch_75270be3-b29c-43c8-877b-a843c7a34a96"
+    "batch_75270be3-b29c-43c8-877b-a843c7a34a96",
+    "batch_1fcbd952-af7a-4531-8d1a-99c696ed3041"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -585,9 +763,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "057b5af866d7c1b2da62617d889131ccb0d8921a52f90faef2fff5ef9e38bd1b",
+      "sha256": "9b56902f2a5299b1783995a35b936e8edb687e7d486805013273e0fc09a59d81",
       "media_type": "text/markdown",
-      "size": 39460
+      "size": 52036
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -948,6 +1126,116 @@
       "sha256": "31efffb7ff4b5dcd90ef40d8937c2c36b1f8a8bc809047513ba484eb6804ff39",
       "media_type": "text/markdown",
       "size": 6547
+    },
+    "docs/repository-research/yetone@cumora/07-cumora-发回复前再看一眼-怎样拦住旧决定-为什么仍会重复发言.md": {
+      "sha256": "517db3a1db100f912839aa45f5d3126a7c9f2a29bbae01242610c6609fe1b5d5",
+      "media_type": "text/markdown",
+      "size": 17999
+    },
+    "docs/repository-research/yetone@cumora/assets/07-cumora-发回复前再看一眼-怎样拦住旧决定-为什么仍会重复发言/reply-check-gap.svg": {
+      "sha256": "c50523dca479a962e7450c37c3659a2d91a87dcc570c451838ea2bb6dd28bad3",
+      "media_type": "image/svg+xml",
+      "size": 4310
+    },
+    "docs/repository-research/superset-sh@superset/07-superset-怎样跟上代理的文件改动-changes-刷新-局部重读与过期结果的边界.md": {
+      "sha256": "fe2aa68408cedca9cfb3206f787c3484f4596f3f18752d2c7b2518d865e7148a",
+      "media_type": "text/markdown",
+      "size": 24830
+    },
+    "docs/repository-research/superset-sh@superset/assets/07-superset-怎样跟上代理的文件改动-changes-刷新-局部重读与过期结果的边界/git-refresh-race.svg": {
+      "sha256": "16a6184ec9145abc47929f0e7c2ed7e4e47dfc27f1b7ece88e9921a57bd44184",
+      "media_type": "image/svg+xml",
+      "size": 4220
+    },
+    "docs/repository-research/akitaonrails@ai-memory/07-ai-memory-的旧记忆为什么还在-访问加权-过时反馈与淘汰时序.md": {
+      "sha256": "a59757eb41f0c34c31b3eb6a0aab6cc0a31f6de99702144a457a5534896c3b6d",
+      "media_type": "text/markdown",
+      "size": 20599
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/07-ai-memory-的旧记忆为什么还在-访问加权-过时反馈与淘汰时序/retention-race.svg": {
+      "sha256": "126e8a26fa8e282830d801a3dc73b6b55041932d3a2b85bb3ec9fa54d25ad89e",
+      "media_type": "image/svg+xml",
+      "size": 3621
+    },
+    "docs/repository-research/xai-org@grok-build/07-grok-build-怎样提前压缩长对话-两阶段摘要-缓存校验与失败退路.md": {
+      "sha256": "18270e5b59eee3c29d287326f8a092cb0aceb4b46ede77e6e644acbd55de9d12",
+      "media_type": "text/markdown",
+      "size": 20637
+    },
+    "docs/repository-research/xai-org@grok-build/assets/07-grok-build-怎样提前压缩长对话-两阶段摘要-缓存校验与失败退路/two-pass-compaction.svg": {
+      "sha256": "90d33e4ee7b5c0a8e0f2c390f73aa34781e44e370d5aeacca12efc6b8d9a0e2c",
+      "media_type": "image/svg+xml",
+      "size": 4634
+    },
+    "docs/repository-research/stablyai@orca/08-orca-删除工作区时如何保住分支-压缩合并判断-远程刷新与旧操作保护.md": {
+      "sha256": "c25175dec71e4166e0cba7328555db6e425e40a45aacf0c25a470ad257fb4d6d",
+      "media_type": "text/markdown",
+      "size": 21847
+    },
+    "docs/repository-research/stablyai@orca/assets/08-orca-删除工作区时如何保住分支-压缩合并判断-远程刷新与旧操作保护/orca-branch-delete-guard.svg": {
+      "sha256": "8b647812743c9130ba71853efa77735c157a159bf081dfaf1d7d98c5d890f77d",
+      "media_type": "image/svg+xml",
+      "size": 5502
+    },
+    "docs/repository-research/stablyai@orca/assets/08-orca-删除工作区时如何保住分支-压缩合并判断-远程刷新与旧操作保护/orca-branch-retention-proof.svg": {
+      "sha256": "aa443b18e3ea2f415cd81e5971807eabaaeed5d5faf225891c04f8d91ce1346f",
+      "media_type": "image/svg+xml",
+      "size": 6111
+    },
+    "docs/repository-research/yetone@cumora/08-cumora-认领任务卡以后-接管为什么不会让旧执行者停手.md": {
+      "sha256": "dd438379348af5047e3f81017d66f76757f324a61a26295b638a051c1ccb0c64",
+      "media_type": "text/markdown",
+      "size": 19441
+    },
+    "docs/repository-research/yetone@cumora/assets/08-cumora-认领任务卡以后-接管为什么不会让旧执行者停手/card-takeover.svg": {
+      "sha256": "0def95441d3b5998bd507f40c57155e1aba4a1c339123c208c675425fbbaea9f",
+      "media_type": "image/svg+xml",
+      "size": 4037
+    },
+    "docs/repository-research/superset-sh@superset/08-superset-怎样判断代理需要你处理-状态上报-已读记录与提示音的分工.md": {
+      "sha256": "ff48168b273c7066b47375486a3341fb6933db4952c368e0537124f0d6b0b334",
+      "media_type": "text/markdown",
+      "size": 24302
+    },
+    "docs/repository-research/superset-sh@superset/assets/08-superset-怎样判断代理需要你处理-状态上报-已读记录与提示音的分工/agent-attention-paths.svg": {
+      "sha256": "4f702dd47b3d83f9917db3fdd00911291206655441d3aa5fa6d834bd7c271bd4",
+      "media_type": "image/svg+xml",
+      "size": 5128
+    },
+    "docs/repository-research/akitaonrails@ai-memory/08-ai-memory-的交接会被谁拿走-并发领取-空会话归还与送达边界.md": {
+      "sha256": "4f342da2113f72803365da3ddb5f9a3029ee96ece33bb1703bb45dbd4fe9c16f",
+      "media_type": "text/markdown",
+      "size": 22738
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/08-ai-memory-的交接会被谁拿走-并发领取-空会话归还与送达边界/handoff-claim-return.svg": {
+      "sha256": "0ed38a69dbd8f8d785882bb9ec27c20694e4a512f53e3c7b478aeac28e824d7e",
+      "media_type": "image/svg+xml",
+      "size": 4815
+    },
+    "docs/repository-research/xai-org@grok-build/08-grok-build-怎样汇合子任务结果-多路交付-批量提醒与去重边界.md": {
+      "sha256": "2f47110d1e1e04db9912cb308dd2f6a031d5e7d9dedeffc82593e132c92b6f6c",
+      "media_type": "text/markdown",
+      "size": 20309
+    },
+    "docs/repository-research/xai-org@grok-build/assets/08-grok-build-怎样汇合子任务结果-多路交付-批量提醒与去重边界/subagent-result-delivery.svg": {
+      "sha256": "d4993c1987faa145c8a1d37118f017295513f1a61d06bec8c18d363ffe2b6e72",
+      "media_type": "image/svg+xml",
+      "size": 5592
+    },
+    "docs/repository-research/stablyai@orca/09-orca-如何确认终端已经停止-主机证据-旧查询隔离与关闭回执.md": {
+      "sha256": "0d0e1243084b206aed58075723d71b25f3d6b7fd9f26580a860a44992b4f951e",
+      "media_type": "text/markdown",
+      "size": 19766
+    },
+    "docs/repository-research/stablyai@orca/assets/09-orca-如何确认终端已经停止-主机证据-旧查询隔离与关闭回执/orca-terminal-evidence-races.svg": {
+      "sha256": "29aae518b03aff4fa85fdcbd039fef83241aa90442144ec1b42c64fcba88f83e",
+      "media_type": "image/svg+xml",
+      "size": 3847
+    },
+    "docs/repository-research/batches/20261024-01.md": {
+      "sha256": "90e1c0d6698708d9a6045a792ec4c1988e7dae496f5dff24de3bfdb48102e86a",
+      "media_type": "text/markdown",
+      "size": 6283
     }
   }
 }

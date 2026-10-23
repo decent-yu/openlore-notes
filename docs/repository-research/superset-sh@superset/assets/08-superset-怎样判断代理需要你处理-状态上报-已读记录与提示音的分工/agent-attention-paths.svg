@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+<title id="title">同一次代理结束事件，分别进入状态查询和即时通知</title>
+<desc id="desc">主机先记录 Stop 和接收时间，再广播事件。界面重新查询主机绑定，结合本地已读时间派生待查看状态；另一路直接根据收到的事件、当前窗格和窗口焦点决定响铃。重连可以重查绑定，但事件总线不重放错过的提示音。</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker>
+ <marker id="bluearrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#276487"/></marker>
+</defs>
+<rect width="1200" height="780" fill="#fcfbf7"/>
+<g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif" fill="#172b3b">
+ <text x="46" y="51" font-size="28" font-weight="600">同一次 Stop，走向两种不同的结果</text>
+ <text x="46" y="84" font-size="17" fill="#536471">Stop 表示本轮结束；界面状态与即时提醒各有自己的判断。</text>
+ <path d="M46 106H1154" stroke="#d6d8d1"/>
+ <text x="46" y="143" font-size="16" fill="#536471">执行主机</text>
+ <rect x="46" y="166" width="235" height="102" rx="7" fill="#e9eee6" stroke="#b5c6b1"/>
+ <text x="64" y="198" font-size="20" font-weight="600">代理上报本轮结束</text>
+ <text x="64" y="229" font-size="16">notify.sh → 主机 hook 接口</text>
+ <text x="64" y="252" font-size="15" fill="#536471">按终端编号确定所属工作区</text>
+ <path d="M281 216H326" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+ <rect x="330" y="166" width="280" height="102" rx="7" fill="#e9eee6" stroke="#b5c6b1"/>
+ <text x="350" y="198" font-size="20" font-weight="600">先更新绑定，再广播</text>
+ <text x="350" y="229" font-size="16">lastEventType = Stop</text>
+ <text x="350" y="252" font-size="16">lastEventAt = 主机接收时间</text>
+ <path d="M610 216H657" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+ <text x="676" y="195" font-size="19" font-weight="600">事件总线</text>
+ <text x="676" y="224" font-size="17">agent:lifecycle</text>
+ <text x="676" y="251" font-size="16" fill="#536471">只发送给当前连接的客户端</text>
+ <path d="M46 302H1154" stroke="#9dafa7" stroke-dasharray="5 5"/>
+ <text x="46" y="333" font-size="16" fill="#536471">桌面客户端</text>
+ <rect x="46" y="358" width="1108" height="160" rx="8" fill="#edf4f7"/>
+ <text x="66" y="391" font-size="19" font-weight="600" fill="#276487">状态：事件提示重查，重连也可触发重查</text>
+ <rect x="66" y="412" width="220" height="79" rx="5" fill="#fff" stroke="#aac4d4"/>
+ <text x="82" y="443" font-size="18">查询主机当前绑定</text>
+ <text x="82" y="470" font-size="16">listByWorkspace</text>
+ <path d="M286 452H332" stroke="#276487" stroke-width="2" marker-end="url(#bluearrow)"/>
+ <rect x="337" y="412" width="297" height="79" rx="5" fill="#fff" stroke="#aac4d4"/>
+ <text x="354" y="443" font-size="18">对照客户端保存的已读时间</text>
+ <text x="354" y="470" font-size="16">lastEventAt ＞ terminalSeenAt ?</text>
+ <path d="M634 452H683" stroke="#276487" stroke-width="2" marker-end="url(#bluearrow)"/>
+ <text x="704" y="441" font-size="19" font-weight="600">较新 → review（待查看）</text>
+ <text x="704" y="475" font-size="19">已覆盖 → idle（空闲）</text>
+ <path d="M470 268V285H30V452H60" fill="none" stroke="#276487" stroke-width="2" marker-end="url(#bluearrow)"/>
+ <text x="495" y="290" font-size="15" fill="#276487">查询读取保存的状态</text>
+ <rect x="46" y="540" width="1108" height="151" rx="8" fill="#f7eee4"/>
+ <text x="66" y="575" font-size="19" font-weight="600" fill="#8e5d2d">提醒：直接消费本次事件，不等待绑定查询结果</text>
+ <text x="66" y="616" font-size="19">收到 Stop／PermissionRequest／Failed</text>
+ <path d="M506 610H562" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+ <text x="584" y="610" font-size="18">目标窗格当前可见，且窗口有焦点？</text>
+ <text x="584" y="643" font-size="18">是 → 抑制提醒　　否 → 尝试响铃与系统通知</text>
+ <path d="M1003 238H1180V600H1147" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+ <text x="66" y="730" font-size="20" font-weight="600">断线期间错过 Stop：可重查最后状态；不会因重查而补播这次提示音。</text>
+ <text x="66" y="758" font-size="15" fill="#536471">限定：主机已收到并保存事件，绑定仍满足存活查询条件；本图聚焦终端代理的当前桌面路径。</text>
+<g fill="#334155"><path d="M326 216l-9 -5v10Z"/><path d="M657 216l-9 -5v10Z"/><path d="M562 610l-9 -5v10Z"/><path d="M1147 600l9 -5v10Z"/></g>
+<g fill="#276487"><path d="M332 452l-9 -5v10Z"/><path d="M683 452l-9 -5v10Z"/><path d="M60 452l-9 -5v10Z"/></g>
+</g>
+</svg>

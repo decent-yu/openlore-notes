@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="700" viewBox="0 0 1180 700" role="img" aria-labelledby="title desc">
+  <title id="title">一次读取尚未结束，第二次文件改动已经到来</title>
+  <desc id="desc">假设一次全量查询 A 正在运行，文件 b 的变化信号到达。主机保留 b 的待处理标记，客户端保留一次后续刷新。A 返回后，查询 B 局部重读 b，更新界面。这是顺序示意，不表示实际耗时。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#52636c" stroke-width="1.5"/></marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #233b45; }
+      .label { font-size: 18px; font-weight: 600; }
+      .body { font-size: 17px; }
+      .small { font-size: 15px; fill: #62747b; }
+      .guide { stroke: #ccd6d7; stroke-width: 1; stroke-dasharray: 4 5; }
+    </style>
+  </defs>
+  <rect width="1180" height="700" fill="#fafaf7"/>
+  <text x="38" y="49" font-size="27" font-weight="650">查询没结束，下一次改动已经到了</text>
+  <text x="38" y="81" class="body">主机记住“哪些路径还没读”，客户端记住“读完后还要再查一次”。</text>
+  <path d="M206 129H1122" stroke="#52636c" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="1053" y="118" class="small">先后顺序</text>
+  <g class="small" text-anchor="middle">
+    <text x="243" y="158">① A 开始</text>
+    <text x="519" y="158">② b 的变化信号到达</text>
+    <text x="794" y="158">③ A 返回，B 开始</text>
+    <text x="1058" y="158">④ B 返回</text>
+  </g>
+  <g class="guide"><path d="M243 172V571"/><path d="M519 172V571"/><path d="M794 172V571"/><path d="M1058 172V571"/></g>
+  <g stroke="#e4e8e6" stroke-width="1"><path d="M38 275H1135"/><path d="M38 378H1135"/><path d="M38 481H1135"/></g>
+  <g class="label"><text x="38" y="222">文件</text><text x="38" y="321">主机待处理路径</text><text x="38" y="426">状态查询</text><text x="38" y="531">客户端与界面</text></g>
+  <circle cx="519" cy="213" r="7" fill="#bd762e"/>
+  <text x="538" y="218" class="body">b.ts 已改动</text>
+  <text x="538" y="245" class="small">通知用于触发重读，不携带完整文件状态</text>
+  <rect x="214" y="294" width="215" height="58" rx="5" fill="#edf0ec"/>
+  <text x="230" y="329" class="body">清空集合，开始读取</text>
+  <rect x="487" y="294" width="242" height="58" rx="5" fill="#fff0d9"/>
+  <text x="503" y="318" class="body">保留 { b.ts }</text>
+  <text x="503" y="341" class="small">A 返回也不抹掉这个集合</text>
+  <rect x="768" y="294" width="346" height="58" rx="5" fill="#e5f1ed"/>
+  <text x="784" y="318" class="body">B 取走 { b.ts }，只重读这一范围</text>
+  <text x="784" y="341" class="small">读取中再来的变化，进入新的集合</text>
+  <rect x="243" y="400" width="524" height="42" rx="5" fill="#688da1"/>
+  <text x="262" y="427" font-size="17" style="fill:white">A：全量读取；结果可能还没包含 b 的新内容</text>
+  <path d="M768 421H794" stroke="#52636c" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="795" y="400" width="263" height="42" rx="5" fill="#3d806d"/>
+  <text x="811" y="427" font-size="17" style="fill:white">B：局部读取并合并 b</text>
+  <text x="215" y="524" class="body">等待 A</text>
+  <text x="488" y="524" class="body">标记“还要刷新”</text>
+  <text x="766" y="512" class="body">可先显示 A 的结果</text>
+  <text x="766" y="540" class="small">随后发起 B</text>
+  <text x="1034" y="512" class="body">显示 B</text>
+  <text x="1034" y="540" class="small">补上变化</text>
+  <rect x="38" y="594" width="1097" height="76" rx="6" fill="#f0f1eb"/>
+  <text x="57" y="622" class="body">读图条件：假设是普通文件编辑，变化信号在 A 运行期间被处理，B 成功完成。</text>
+  <text x="57" y="649" class="small">若出现 Git 元数据变化、事件溢出或删除／重命名歧义，后续读取可能改为全量；本图不表示耗时或绝对实时保证。</text>
+</svg>

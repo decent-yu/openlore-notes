@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600" role="img" aria-labelledby="title desc">
+  <title id="title">扫描后改写页面与读取页面，会触发不同的淘汰结果</title>
+  <desc id="desc">两个由源码推导的时序。改写页面产生新版本，条件淘汰会跳过旧候选；读取只更新访问计数，版本不变，仍可能按扫描时的低分淘汰。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#52667a" stroke-width="1.5"/></marker>
+    <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#223447}.title{font-size:27px;font-weight:600}.step{font-size:19px;fill:#53667a}.body{font-size:21px}.small{font-size:17px;fill:#53667a}.strong{font-size:23px;font-weight:600}</style>
+  </defs>
+  <rect width="1100" height="600" fill="#f8fafb"/>
+  <text x="44" y="52" class="title">扫描已经选中页面，之后的一次读取能保住它吗？</text>
+  <text x="44" y="84" class="small">源码时序推导；假设普通衰减淘汰开启，页面未固定，也未显式到期。</text>
+  <path d="M64 132 H1035" stroke="#52667a" stroke-width="1.5"/>
+  <path d="M1028 127 L1036 132 L1028 137" fill="none" stroke="#52667a" stroke-width="1.5"/>
+  <text x="64" y="119" class="step">① 扫描并计算分数</text>
+  <text x="427" y="119" class="step">② 淘汰执行前</text>
+  <text x="797" y="119" class="step">③ 复核当前版本</text>
+  <rect x="44" y="165" width="1012" height="150" rx="12" fill="#edf5f8"/>
+  <text x="65" y="198" class="small">发生改写</text>
+  <text x="65" y="239" class="body">版本 A 分数低于阈值</text>
+  <text x="65" y="273" class="small">候选携带版本 A 的标识</text>
+  <path d="M325 241 H399" stroke="#52667a" stroke-width="2"/>
+  <path d="M392 236 L400 241 L392 246" fill="none" stroke="#52667a" stroke-width="2"/>
+  <text x="427" y="239" class="body">写入新正文 → 版本 B</text>
+  <text x="427" y="273" class="small">当前版本标识已经改变</text>
+  <path d="M696 241 H770" stroke="#52667a" stroke-width="2"/>
+  <path d="M763 236 L771 241 L763 246" fill="none" stroke="#52667a" stroke-width="2"/>
+  <text x="797" y="238" class="strong" style="fill:#206950">B ≠ A：跳过淘汰</text>
+  <text x="797" y="273" class="small">保留新版本与当前文件</text>
+  <rect x="44" y="335" width="1012" height="150" rx="12" fill="#fff3e4"/>
+  <text x="65" y="368" class="small">发生读取</text>
+  <text x="65" y="409" class="body">版本 A 分数低于阈值</text>
+  <text x="65" y="443" class="small">候选携带版本 A 的标识</text>
+  <path d="M325 411 H399" stroke="#52667a" stroke-width="2"/>
+  <path d="M392 406 L400 411 L392 416" fill="none" stroke="#52667a" stroke-width="2"/>
+  <text x="427" y="409" class="body">读取并提交访问加权</text>
+  <text x="427" y="443" class="small">计数、访问时间变化；仍是 A</text>
+  <path d="M696 411 H770" stroke="#52667a" stroke-width="2"/>
+  <path d="M763 406 L771 411 L763 416" fill="none" stroke="#52667a" stroke-width="2"/>
+  <text x="797" y="408" class="strong" style="fill:#9c5224">A = A：仍可能淘汰</text>
+  <text x="797" y="443" class="small">此处不重新计算保留分数</text>
+  <text x="44" y="531" class="body">版本检查不等于再次算分：扫描后新增的访问，未必能撤销本轮淘汰。</text>
+  <text x="44" y="565" class="small">依据：sweep::cold_entry_for → Wiki::evict_page_if_latest → ops::soft_delete_for_decay_if_latest</text>
+</svg>

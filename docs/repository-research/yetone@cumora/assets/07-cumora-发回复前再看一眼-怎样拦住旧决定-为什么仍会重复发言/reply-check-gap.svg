@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="730" viewBox="0 0 1120 730" role="img" aria-labelledby="title desc">
+  <title id="title">为什么两份不同措辞的过时回复仍可能先后发出</title>
+  <desc id="desc">假设 Nova 和 Iris 都读到群消息序号四十。Iris 先完成发送前检查，当时还没有新消息。Nova 随后提交四十一。Iris 再进入写入事务，只检查最近他人文本是否与自己的正文完全相同；措辞不同便可提交四十二。此图是依据源码顺序推演的可能交错，未做并发实验。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#345977"/></marker>
+    <marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#2e6f58"/></marker>
+  </defs>
+  <rect width="1120" height="730" fill="#fcfaf6"/>
+  <g font-family="PingFang SC, Noto Sans CJK SC, sans-serif" fill="#203444">
+    <text x="45" y="48" font-size="27" font-weight="600">检查时没有新消息，写入时却已有新消息</text>
+    <text x="45" y="80" font-size="16" fill="#606e77">假设场景 · 从上往下读 · 顺序不代表实际耗时 · 两位均为三人以上群的有效成员</text>
+    <text x="170" y="130" text-anchor="middle" font-size="21" font-weight="600">Nova</text>
+    <text x="560" y="130" text-anchor="middle" font-size="21" font-weight="600">Iris</text>
+    <text x="947" y="130" text-anchor="middle" font-size="21" font-weight="600">服务端消息表</text>
+    <path d="M170 151V598 M560 151V598 M947 151V598" stroke="#cad0cf" stroke-width="2" stroke-dasharray="5 7"/>
+    <rect x="62" y="163" width="216" height="48" rx="5" fill="#e9eef1"/>
+    <text x="170" y="193" text-anchor="middle" font-size="18">已展示位置 = 40</text>
+    <rect x="452" y="163" width="216" height="48" rx="5" fill="#e9eef1"/>
+    <text x="560" y="193" text-anchor="middle" font-size="18">已展示位置 = 40</text>
+    <rect x="842" y="163" width="210" height="48" rx="5" fill="#e9eef1"/>
+    <text x="947" y="193" text-anchor="middle" font-size="18">最新消息：40</text>
+    <circle cx="365" cy="267" r="15" fill="#345977"/>
+    <text x="365" y="273" text-anchor="middle" font-size="16" fill="white">1</text>
+    <text x="393" y="248" font-size="18">发送前检查：是否有他人消息 &gt; 40？</text>
+    <path d="M560 267H933" stroke="#345977" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="710" y="294" font-size="17" fill="#345977">没有 → 检查通过</text>
+    <circle cx="42" cy="351" r="15" fill="#2e6f58"/>
+    <text x="42" y="357" text-anchor="middle" font-size="16" fill="white">2</text>
+    <text x="70" y="332" font-size="18">Nova 的回复先提交：“我来整理发布方案。”</text>
+    <path d="M170 351H933" stroke="#2e6f58" stroke-width="2" marker-end="url(#green)"/>
+    <rect x="842" y="364" width="210" height="42" rx="5" fill="#e1eee5"/>
+    <text x="947" y="392" text-anchor="middle" font-size="18" fill="#2e6f58">已提交消息：41</text>
+    <circle cx="365" cy="446" r="15" fill="#345977"/>
+    <text x="365" y="452" text-anchor="middle" font-size="16" fill="white">3</text>
+    <text x="393" y="430" font-size="18">Iris 进入写入事务，取得下一个序号</text>
+    <path d="M560 446H933" stroke="#345977" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="600" y="477" font-size="17">只重查正文是否完全相同；不重查所有新消息</text>
+    <rect x="420" y="494" width="632" height="80" rx="5" fill="#fff0d9" stroke="#ddbc80"/>
+    <text x="441" y="522" font-size="18">Iris 的正文：“我负责把讨论写成发布计划。”</text>
+    <text x="441" y="553" font-size="18" fill="#805a27">与消息 41 不完全相同 → 可以提交消息 42</text>
+    <rect x="45" y="625" width="1030" height="70" rx="5" fill="#203e50"/>
+    <text x="67" y="653" font-size="19" fill="white">序号把两条消息排出了先后，却没有证明第二份决定吸收了第一份决定。</text>
+    <text x="67" y="680" font-size="16" fill="#dce7eb">若正文完全相同，事务内检查会返回 HELD；此图仅说明不同正文仍可通过的窗口，未做运行复现。</text>
+  </g>
+</svg>

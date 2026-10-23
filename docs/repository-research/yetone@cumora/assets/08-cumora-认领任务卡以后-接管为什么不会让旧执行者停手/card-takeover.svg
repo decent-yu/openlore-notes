@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+<title id="title">任务卡接管不会自动阻止旧执行者修改卡片</title>
+<desc id="desc">假设 Nova 认领后卡片超过二十分钟没有更新，Iris 可以认领。Nova 随后仍可移动卡片到完成列，负责人仍是 Iris。此图是按源码推演，未经运行复现。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#375265"/></marker><marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#ab501d"/></marker></defs>
+<rect width="1120" height="720" fill="#faf9f5"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#243843">
+<text x="48" y="51" font-size="27" font-weight="650">负责人换了，旧执行者仍可能改动卡片</text>
+<text x="48" y="84" font-size="17" fill="#5c6e75">假设场景 · 经过服务端 card 命令 · 旧执行者的运行身份仍有效</text>
+<text x="175" y="136" text-anchor="middle" font-size="21" font-weight="600">Nova</text>
+<text x="560" y="136" text-anchor="middle" font-size="21" font-weight="600">数据库里的任务卡</text>
+<text x="945" y="136" text-anchor="middle" font-size="21" font-weight="600">Iris</text>
+<path d="M175 155 V610 M945 155 V610" stroke="#b2bdc0" stroke-width="2" stroke-dasharray="5 6"/>
+<path d="M560 155 V610" stroke="#b2bdc0" stroke-width="2"/>
+<path d="M175 204 H393" stroke="#375265" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="198" y="187" font-size="17">认领成功</text>
+<rect x="401" y="169" width="318" height="73" rx="5" fill="#e5efec" stroke="#6d9588"/>
+<text x="560" y="199" text-anchor="middle" font-size="19">负责人：Nova</text>
+<text x="560" y="225" text-anchor="middle" font-size="17">所在列：进行中（doing）</text>
+<rect x="338" y="275" width="444" height="76" fill="#faf9f5" stroke="#b5aea1" stroke-dasharray="4 4"/>
+<text x="560" y="303" text-anchor="middle" font-size="18">卡片最后更新已超过二十分钟</text>
+<text x="560" y="330" text-anchor="middle" font-size="16" fill="#5c6e75">不会自动换人；下一次认领才检查这个条件</text>
+<path d="M945 405 H727" stroke="#375265" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="783" y="386" font-size="17">发起认领，成功接管</text>
+<rect x="401" y="370" width="318" height="73" rx="5" fill="#e5efec" stroke="#6d9588"/>
+<text x="560" y="400" text-anchor="middle" font-size="19">负责人：Iris</text>
+<text x="560" y="426" text-anchor="middle" font-size="17">所在列：仍在进行中</text>
+<text x="75" y="477" font-size="17" fill="#ab501d">Nova 此时仍在执行</text>
+<path d="M175 531 H393" stroke="#ab501d" stroke-width="3" marker-end="url(#orange)"/>
+<text x="193" y="514" font-size="17" fill="#ab501d">card move 到完成列</text>
+<rect x="401" y="496" width="318" height="82" rx="5" fill="#fff0df" stroke="#ab501d" stroke-width="1.5"/>
+<text x="560" y="527" text-anchor="middle" font-size="19">负责人：仍是 Iris</text>
+<text x="560" y="556" text-anchor="middle" font-size="18">所在列：完成（done）</text>
+<text x="752" y="524" font-size="17" fill="#ab501d">移动只检查工作区与目标列，</text>
+<text x="752" y="552" font-size="17" fill="#ab501d">不要求 Nova 仍是负责人。</text>
+<path d="M48 635 H1072" stroke="#d3d8d7"/>
+<text x="48" y="667" font-size="17">认领约束的是下一次竞争认领；它没有把后续写入绑定到某一轮任务归属。</text>
+<text x="48" y="696" font-size="15" fill="#5c6e75">依据：cli.ts / cmdCard 的 claim、move 分支。图示为静态推演，不是故障复现实验。</text>
+<polygon points="393,204 382,198 382,210" fill="#375265"/><polygon points="727,405 738,399 738,411" fill="#375265"/><polygon points="393,531 382,525 382,537" fill="#ab501d"/></g></svg>

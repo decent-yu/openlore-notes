@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="800" viewBox="0 0 1120 800" role="img" aria-labelledby="title desc">
+  <title id="title">交接的领取、送达与空会话归还</title>
+  <desc id="desc">两个启动请求都可能读到同一条开放交接，但只有数据库条件更新成功的一方获得正文。数据库提交先于网络返回和宿主注入。已绑定接收会话的交接，在该会话结束且没有记录提问或工具活动时可以重新开放。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#29485a"/></marker>
+    <marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#24775e"/></marker>
+    <style>
+      text {font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #173343; font-size: 19px}
+      .small {font-size: 17px; fill: #4c6573}
+      .label {font-size: 21px; font-weight: 600}
+      .line {fill: none; stroke: #29485a; stroke-width: 2.2; marker-end: url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1120" height="800" fill="#fafbf8"/>
+  <text x="42" y="49" font-size="29" font-weight="650">拿到领取权，还要经过网络返回与宿主注入</text>
+  <text x="42" y="80" class="small">示意条件：两个请求已选中同一条交接 H；A 先提交，B 后提交</text>
+
+  <text x="42" y="142" class="label">① 并发领取</text>
+  <text x="55" y="201">启动请求 A</text>
+  <text x="55" y="312">启动请求 B</text>
+  <path class="line" d="M175 194H300"/>
+  <path class="line" d="M175 305H300"/>
+  <rect x="310" y="166" width="190" height="170" rx="8" fill="#edf2f4" stroke="#bfd0d6"/>
+  <text x="405" y="207" text-anchor="middle">都先读到 H</text>
+  <text x="405" y="241" text-anchor="middle">state = open</text>
+  <text x="405" y="280" text-anchor="middle" class="small">读到候选</text>
+  <text x="405" y="307" text-anchor="middle" class="small">尚未获得领取权</text>
+  <path class="line" d="M500 214H580"/>
+  <path class="line" d="M500 305H580"/>
+  <text x="540" y="198" text-anchor="middle" class="small">A</text>
+  <text x="540" y="290" text-anchor="middle" class="small">B</text>
+  <rect x="590" y="166" width="245" height="170" rx="8" fill="#e7f2ed" stroke="#91b5a4"/>
+  <text x="712" y="200" text-anchor="middle" class="label">数据库条件更新</text>
+  <text x="712" y="237" text-anchor="middle">A：open → accepted</text>
+  <text x="712" y="274" text-anchor="middle">B：已非 open，失败</text>
+  <text x="712" y="309" text-anchor="middle" class="small">同一开放状态只交给一方</text>
+  <path class="line" d="M835 218H900"/>
+  <path class="line" d="M835 301H900"/>
+  <text x="915" y="224">A 返回正文</text>
+  <text x="915" y="307">B 不返回正文</text>
+
+  <text x="42" y="394" class="label">② 提交后的送达窗口</text>
+  <circle cx="124" cy="444" r="7" fill="#29485a"/>
+  <circle cx="438" cy="444" r="7" fill="#29485a"/>
+  <circle cx="756" cy="444" r="7" fill="#29485a"/>
+  <path class="line" d="M134 444H425"/>
+  <path class="line" d="M448 444H743"/>
+  <text x="55" y="481">数据库提交</text>
+  <text x="363" y="481">客户端收到响应</text>
+  <text x="690" y="481">宿主注入上下文</text>
+  <text x="947" y="441" text-anchor="middle" fill="#9a5939">没有模型</text>
+  <text x="947" y="469" text-anchor="middle" fill="#9a5939">阅读回执</text>
+  <path d="M777 444H861" fill="none" stroke="#9a5939" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="438" y="519" text-anchor="middle" class="small">此处若断网，H 可能已是 accepted；重复启动不会重发原正文</text>
+
+  <path d="M42 552H1078" stroke="#ccd7d9"/>
+  <text x="42" y="591" class="label">③ 有条件地归还，并非超时自动重发</text>
+  <rect x="58" y="622" width="205" height="91" rx="45" fill="#e7f2ed" stroke="#91b5a4"/>
+  <text x="160" y="658" text-anchor="middle">accepted</text>
+  <text x="160" y="689" text-anchor="middle" class="small">记录了接收会话 S</text>
+  <path d="M263 666H810" fill="none" stroke="#24775e" stroke-width="2.5" marker-end="url(#green)"/>
+  <text x="535" y="638" text-anchor="middle">S 结束，事务复核没有提问或工具活动</text>
+  <text x="535" y="698" text-anchor="middle" class="small">只归还 S 自己领取的 H，并清空领取信息</text>
+  <rect x="827" y="622" width="222" height="91" rx="45" fill="#edf2f4" stroke="#bfd0d6"/>
+  <text x="938" y="658" text-anchor="middle">open</text>
+  <text x="938" y="689" text-anchor="middle" class="small">下一会话可以再领取</text>
+  <text x="58" y="758" class="small">没有接收会话标识、已经记录实质活动，或没有触发结束处理，都不能据此保证归还。</text>
+</svg>

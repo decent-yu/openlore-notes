@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#526478" /></marker>
+    <style>
+      text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203244;font-size:19px}
+      .title{font-size:29px;font-weight:650}.sub{font-size:17px;fill:#596b7b}.label{font-size:22px;font-weight:600}
+      .line{fill:none;stroke:#526478;stroke-width:2.5;marker-end:url(#arrow)}.node{fill:#fff;stroke:#526478;stroke-width:2.5}
+      .green{fill:#146a56}.small{font-size:16px}
+    </style>
+  </defs>
+  <rect width="1120" height="760" fill="#fbfcfd" />
+  <text x="44" y="54" class="title" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="29" font-weight="600" fill="#203244">分支清理的两类依据：现在没有新增内容，或历史已收录改动</text>
+  <text x="44" y="87" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">自拟示意；箭头表示提交演进。S 是压缩合并生成的新提交，F 的原提交编号没有进入主线。</text>
+  <path d="M158 211 C225 211 227 153 290 153 L476 153" class="line" />
+  <path d="M158 211 C225 211 227 282 290 282 L476 282" class="line" />
+  <path d="M518 282 L773 282" class="line" />
+  <circle cx="136" cy="211" r="22" class="node" /><text x="129" y="218" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">B</text>
+  <circle cx="498" cy="153" r="22" fill="#edf3ff" stroke="#3b69aa" stroke-width="2.5" /><text x="492" y="160" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">F</text>
+  <circle cx="498" cy="282" r="22" fill="#e8f4ef" stroke="#18856b" stroke-width="2.5" /><text x="491" y="289" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">S</text>
+  <circle cx="795" cy="282" r="22" class="node" /><text x="788" y="289" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">T</text>
+  <text x="67" y="257" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">共同祖先</text>
+  <text x="280" y="129" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">任务分支的多次修改</text>
+  <text x="539" y="159" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">分支末端</text>
+  <text x="281" y="326" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">目标历史中的压缩合并</text>
+  <text x="726" y="326" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">目标当前提交</text>
+  <path d="M498 180 L498 254" fill="none" stroke="#18856b" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)" />
+  <text x="526" y="222" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">收录净改动，重新生成提交</text>
+  <text x="856" y="278" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">之后还可继续</text><text x="856" y="304" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">修改或撤销</text>
+  <path d="M44 363 H1076" stroke="#cdd6df" />
+  <text x="44" y="409" class="label" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="600" fill="#203244">① 先问当前目标：合进去会多出内容吗？</text>
+  <text x="64" y="452" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">试算合并 T 与 F</text><path d="M272 446 H346" class="line" />
+  <text x="370" y="452" class="green" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#146a56">结果目录树 = T 的目录树</text>
+  <text x="64" y="489" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">成立即可清理；无需 F 与 T 的提交编号相同，也无需两端目录树直接相同。</text>
+  <path d="M44 522 H1076" stroke="#cdd6df" />
+  <text x="44" y="565" class="label" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="600" fill="#203244">② 当前试算未证明，且分支含独有合并提交：再查历史候选 S</text>
+  <text x="64" y="608" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">B 到 F 的净补丁</text><text x="288" y="608" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">≈</text><text x="328" y="608" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">S 的补丁</text>
+  <text x="64" y="641" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">用稳定补丁指纹找候选；候选相同仍不够</text>
+  <path d="M574 607 H642" class="line" />
+  <text x="664" y="608" class="green" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#146a56">再证明合并 S 与 F 不改变 S</text>
+  <text x="664" y="641" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">最多检查 200 个候选历史提交</text>
+  <rect x="44" y="678" width="1032" height="49" rx="6" fill="#fff1d9" />
+  <text x="64" y="710" fill="#805514" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19">② 证明历史曾收录这份改动；不能由此认定当前 T 仍保留当时的全部文件内容。</text>
+<polygon points="476,153 464,147 464,159" fill="#526478" /><polygon points="476,282 464,276 464,288" fill="#526478" /><polygon points="773,282 761,276 761,288" fill="#526478" /><polygon points="498,254 492,243 504,243" fill="#526478" /><polygon points="346,446 334,440 334,452" fill="#526478" /><polygon points="642,607 630,601 630,613" fill="#526478" /></svg>

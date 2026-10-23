@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="830" viewBox="0 0 1180 830" role="img" aria-labelledby="title desc">
+<title id="title">两份子任务结果怎样合并成一次提醒</title><desc id="desc">假设子任务 A 和 B 先后完成。协调器保留两份结果，父会话队列收到两条唤醒。第一条唤醒只读缓冲，合并结果，等消息写入模型上下文才标记已报告。第二条唤醒被跳过。如果第一条唤醒提前被用户输入替换，结果仍能在后续轮次补送。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="#246c68"/></marker></defs>
+<rect width="1180" height="830" fill="#fbfaf6"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#243b40">
+<text x="45" y="51" font-size="28" font-weight="600">两份结果，可以只启动一轮汇合处理</text>
+<text x="45" y="83" font-size="16" fill="#5a6c70">假设场景 · 从上往下阅读；行距不代表耗时 · “写入上下文”早于向模型请求答案</text>
+<path d="M45 107 H1135" stroke="#c6d1ce"/>
+
+<text x="195" y="141" font-size="21" fill="#243b40" font-weight="600" text-anchor="middle">子任务协调器</text>
+<text x="195" y="169" font-size="15" fill="#64777b" text-anchor="middle">保留待报告结果</text>
+<line x1="195" y1="188" x2="195" y2="603" stroke="#c2ceca" stroke-width="2" stroke-dasharray="4 7"/>
+<text x="590" y="141" font-size="21" fill="#243b40" font-weight="600" text-anchor="middle">父会话输入队列</text>
+<text x="590" y="169" font-size="15" fill="#64777b" text-anchor="middle">等待开始的合成输入</text>
+<line x1="590" y1="188" x2="590" y2="603" stroke="#c2ceca" stroke-width="2" stroke-dasharray="4 7"/>
+<text x="990" y="141" font-size="21" fill="#243b40" font-weight="600" text-anchor="middle">模型上下文与报告记录</text>
+<text x="990" y="169" font-size="15" fill="#64777b" text-anchor="middle">准备下一次模型请求的材料</text>
+<line x1="990" y1="188" x2="990" y2="603" stroke="#c2ceca" stroke-width="2" stroke-dasharray="4 7"/>
+<text x="44" y="230" font-size="18" fill="#243b40" font-weight="600">A 完成</text>
+<text x="218" y="225" font-size="18" fill="#243b40">缓冲：[A]</text>
+<line x1="330" y1="240" x2="582" y2="240" stroke="#246c68" stroke-width="2"/>
+<polygon points="582,240 572.0,236.0 572.0,244.0" fill="#246c68"/>
+<text x="380" y="224" font-size="16" fill="#243b40">排入唤醒 A</text>
+<text x="613" y="232" font-size="18" fill="#243b40">[唤醒 A]</text>
+<text x="613" y="257" font-size="15" fill="#9b6336">A 尚未标记已报告</text>
+<text x="44" y="327" font-size="18" fill="#243b40" font-weight="600">B 完成</text>
+<text x="218" y="321" font-size="18" fill="#243b40">缓冲：[A, B]</text>
+<line x1="348" y1="337" x2="582" y2="337" stroke="#246c68" stroke-width="2"/>
+<polygon points="582,337 572.0,333.0 572.0,341.0" fill="#246c68"/>
+<text x="385" y="321" font-size="16" fill="#243b40">排入唤醒 B</text>
+<text x="613" y="325" font-size="18" fill="#243b40">[唤醒 A, 唤醒 B]</text>
+<rect x="45" y="378" width="1090" height="130" rx="7" fill="#e9f1eb"/>
+<text x="65" y="408" font-size="17" fill="#243b40" font-weight="600">开始处理</text>
+<text x="65" y="434" font-size="17" fill="#243b40" font-weight="600">唤醒 A</text>
+<line x1="585" y1="421" x2="205" y2="421" stroke="#246c68" stroke-width="2"/>
+<polygon points="205,421 215.0,425.0 215.0,417.0" fill="#246c68"/>
+<text x="284" y="409" font-size="16" fill="#243b40">只读缓冲，不移除 A、B</text>
+<line x1="205" y1="464" x2="982" y2="464" stroke="#246c68" stroke-width="2"/>
+<polygon points="982,464 972.0,460.0 972.0,468.0" fill="#246c68"/>
+<text x="420" y="451" font-size="17" fill="#243b40">合并 A、B 的完成结果</text>
+<text x="1007" y="405" font-size="17" fill="#243b40" font-weight="600">写入上下文</text>
+<text x="1007" y="433" font-size="15" fill="#243b40">收到本地确认后</text>
+<text x="1007" y="485" font-size="15" fill="#246c68">记录 A、B 已报告</text>
+<text x="44" y="557" font-size="18" fill="#243b40" font-weight="600">继续队列</text>
+<text x="615" y="550" font-size="18" fill="#243b40">唤醒 B 已无新结果</text>
+<text x="615" y="577" font-size="17" fill="#246c68">跳过，不再次请求模型</text>
+<line x1="585" y1="548" x2="585" y2="591" stroke="#246c68" stroke-width="2"/>
+<line x1="45" y1="625" x2="1135" y2="625" stroke="#c6d1ce" stroke-width="2"/>
+<text x="45" y="663" font-size="21" fill="#243b40" font-weight="600">另一条分支：唤醒 A 尚未写入上下文，就被真实用户输入替换</text>
+<text x="45" y="702" font-size="18" fill="#243b40">缓冲仍有 A、B</text>
+<line x1="225" y1="695" x2="326" y2="695" stroke="#246c68" stroke-width="2"/>
+<polygon points="326,695 316.0,691.0 316.0,699.0" fill="#246c68"/>
+<text x="346" y="702" font-size="18" fill="#243b40">报告记录尚未改变</text>
+<line x1="535" y1="695" x2="642" y2="695" stroke="#246c68" stroke-width="2"/>
+<polygon points="642,695 632.0,691.0 632.0,699.0" fill="#246c68"/>
+<text x="663" y="702" font-size="18" fill="#243b40">后续轮次仍可补入结果</text>
+<text x="45" y="753" font-size="16" fill="#5a6c70">范围：普通本地子任务、允许自动唤醒；不表示崩溃后必定补送，也不证明模型已理解结果。</text>
+<text x="45" y="790" font-size="14" fill="#788789">依据：spawn.rs · coordinator.rs · reminders.rs · turn.rs · auto_wake_suppression_tests.rs</text>
+</g></svg>

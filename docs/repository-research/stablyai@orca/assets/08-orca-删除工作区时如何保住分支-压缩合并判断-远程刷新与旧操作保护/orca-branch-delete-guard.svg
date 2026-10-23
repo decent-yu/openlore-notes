@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="730" viewBox="0 0 1120 730">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#526478" /></marker>
+    <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203244;font-size:19px}.title{font-size:29px;font-weight:650}.sub{font-size:17px;fill:#596b7b}.head{font-size:22px;font-weight:600}.arrow{fill:none;stroke:#526478;stroke-width:2.5;marker-end:url(#a)}</style>
+  </defs>
+  <rect width="1120" height="730" fill="#fbfcfd" />
+  <text x="44" y="54" class="title" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="29" font-weight="600" fill="#203244">目录可以先消失；旧删除动作只能针对当时保存的分支末端</text>
+  <text x="44" y="89" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">下面追踪普通用户删除的分支清理阶段；手动强删与证明后的清理共用末端检查。</text>
+  <text x="48" y="144" class="head" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="600" fill="#203244">删除目录</text><text x="332" y="144" class="head" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="600" fill="#203244">尝试普通分支删除</text><text x="724" y="144" class="head" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="600" fill="#203244">取得额外依据或保留</text>
+  <path d="M48 173 H1047" class="arrow" />
+  <circle cx="108" cy="173" r="7" fill="#526478" /><circle cx="432" cy="173" r="7" fill="#526478" /><circle cx="807" cy="173" r="7" fill="#526478" />
+  <text x="48" y="214" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">保存分支名和末端 H</text><text x="48" y="244" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">git worktree remove</text>
+  <text x="332" y="214" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">git branch -d</text><text x="332" y="244" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">成功则结束；失败再作判断</text>
+  <text x="724" y="214" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">证明成立 → 受条件约束地删引用</text><text x="724" y="244" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">仍不确定 → 返回保留分支及 H</text>
+  <path d="M44 282 H1076" stroke="#cdd6df" />
+  <text x="44" y="327" class="head" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="600" fill="#203244">保留后的复核动作：把分支名、H 和执行主机一起带回来</text>
+  <text x="44" y="362" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">目录已经删除；用户仍可保留分支，或明确选择删除。下例假设另一工具又推进了同名分支。</text>
+  <text x="80" y="418" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">保留时</text><text x="442" y="418" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">另一工具继续提交</text><text x="828" y="418" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">点击旧通知</text>
+  <path d="M148 455 H866" class="arrow" />
+  <circle cx="161" cy="455" r="21" fill="#e8f4ef" stroke="#18856b" stroke-width="2" />
+  <text x="154" y="462" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">H</text>
+  <circle cx="533" cy="455" r="21" fill="#edf3ff" stroke="#3b69aa" stroke-width="2" />
+  <text x="522" y="462" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">H′</text>
+  <text x="63" y="505" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">通知保存 expectedHead = H</text><text x="417" y="505" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">同名分支现在指向 H′</text><text x="805" y="505" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">仍携带旧 H</text>
+  <rect x="44" y="544" width="1032" height="77" rx="6" fill="#eaf0f6" />
+  <text x="66" y="577" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">git update-ref -d refs/heads/任务分支 H</text>
+  <text x="66" y="605" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">仅当引用仍等于 H 才删除；已变为 H′ 时拒绝，并要求重新检查。</text>
+  <text x="44" y="663" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" fill="#203244">删除前后都检查其他工作区是否占用该分支；删除后发现占用，会尝试恢复引用。</text>
+  <text x="44" y="696" class="sub" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#596b7b">这些是分步检查和补救。恢复仍可能失败，不能据此声称整个目录与分支删除是一个事务。</text>
+<polygon points="1047,173 1035,167 1035,179" fill="#526478" /><polygon points="866,455 854,449 854,461" fill="#526478" /></svg>
