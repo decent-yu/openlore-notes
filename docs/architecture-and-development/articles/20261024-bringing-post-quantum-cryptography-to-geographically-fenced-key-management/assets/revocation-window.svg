@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="555" viewBox="0 0 1120 555" role="img" aria-labelledby="title desc">
+<title id="title">撤销授权不等于立即消除已有解封能力</title>
+<desc id="desc">时间从左向右。先修改区域成员记录，再由配发服务同步内核密钥环，最后进程缓存到期或服务重启才重新读取获准密钥。中间可能仍保留旧能力。实际时限原文未披露，图不按时间比例绘制。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#506375"/></marker>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203548}.s{font-size:18px}.b{font-size:21px}.h{font-size:23px;font-weight:600}</style></defs>
+<rect width="1120" height="555" fill="#f8fafc"/>
+<text x="40" y="49" font-size="30" font-weight="650">授权已撤销，旧能力可能仍在进程缓存中</text>
+<text x="42" y="84" class="s">依据原文运行机制推导；不按时间比例绘制，实际缓存时限未披露</text>
+<rect x="160" y="142" width="710" height="222" rx="12" fill="#fff0d5"/>
+<text x="183" y="175" class="h" style="fill:#925b08">需要测量的完整撤销窗口</text>
+<path d="M85 218H1040" fill="none" stroke="#506375" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M180 201V386M520 201V386M870 201V386" stroke="#8e9cad" stroke-width="2" stroke-dasharray="5 5"/>
+<circle cx="180" cy="218" r="9" fill="#506375"/><circle cx="520" cy="218" r="9" fill="#506375"/><circle cx="870" cy="218" r="9" fill="#157c75"/>
+<text x="120" y="260" class="h">修改成员记录</text>
+<text x="120" y="292" class="s">机器不再被授权</text>
+<text x="441" y="260" class="h">同步内核密钥环</text>
+<text x="441" y="292" class="s">移除已撤销的根密钥</text>
+<text x="799" y="260" class="h">进程重新加载</text>
+<text x="799" y="292" class="s">缓存到期或服务重启</text>
+<path d="M220 331H830" fill="none" stroke="#b57913" stroke-width="7" stroke-linecap="round"/>
+<text x="271" y="320" class="s" style="fill:#925b08">原文称进程保留内存副本；具体停止使用时点需验证</text>
+<rect x="65" y="407" width="990" height="101" rx="12" fill="#e7f3ee"/>
+<text x="86" y="442" class="b">验证终点：确认旧能力已不能再成功解封，而不只是控制面已返回“撤销成功”。</text>
+<text x="86" y="476" class="s">边界：这条时间线讨论受控节点；若攻击者已复制密钥，撤销授权无法收回其副本。</text>
+</svg>

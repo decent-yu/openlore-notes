@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="830" viewBox="0 0 1120 830" role="img" aria-labelledby="title desc">
+<title id="title">密文全球分发，区域根密钥单独配发</title>
+<desc id="desc">管理服务接触客户私钥和根密钥。Quicksilver只复制包装后的客户私钥。配发服务验证硬件身份与资产登记，只把德国根密钥发给获准德国节点。法国节点可收到密文，但没有德国根密钥，因此不能解封。管理服务的位置未由原文确定。</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#435769"/></marker>
+<marker id="secret" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#157c75"/></marker>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203548} .h{font-size:24px;font-weight:600}.b{font-size:20px}.s{font-size:17px}.wire{fill:none;stroke:#435769;stroke-width:2.5;marker-end:url(#arrow)}.root{fill:none;stroke:#157c75;stroke-width:3;stroke-dasharray:9 6;marker-end:url(#secret)}</style>
+</defs>
+<rect width="1120" height="830" fill="#f8fafc"/>
+<text x="40" y="49" font-size="30" font-weight="650">同一份密文，可以到达不同地区</text>
+<path d="M43 78H103" class="wire"/><text x="116" y="84" class="s">客户私钥密文</text>
+<path d="M329 78H389" class="root"/><text x="402" y="84" class="s">区域根密钥（秘密）</text>
+<rect x="35" y="108" width="1050" height="218" rx="15" fill="#eaf0f6"/>
+<text x="55" y="136" class="s">控制与分发组件：管理服务地理位置未完整披露，均不能据图假定在德国境内</text>
+<rect x="60" y="165" width="295" height="135" rx="10" fill="white" stroke="#8295a8"/>
+<text x="80" y="198" class="h">密钥管理服务</text>
+<text x="80" y="230" class="b">接触客户私钥、区域根密钥</text>
+<text x="80" y="264" class="s">派生应用密钥 → 包装客户私钥</text>
+<rect x="420" y="165" width="280" height="135" rx="10" fill="white" stroke="#8295a8"/>
+<text x="440" y="198" class="h">Quicksilver</text>
+<text x="440" y="230" class="b">复制密文与元数据</text>
+<text x="440" y="264" class="s">不分发区域根密钥</text>
+<rect x="765" y="165" width="295" height="135" rx="10" fill="#e3f4ef" stroke="#157c75"/>
+<text x="785" y="198" class="h">密钥配发服务</text>
+<text x="785" y="230" class="b">保管并配发区域根密钥</text>
+<text x="785" y="264" class="s">检查 TPM 身份＋Zinc 位置记录</text>
+<path d="M355 234H417" class="wire"/>
+<path d="M207 165V153H913V163" class="root"/>
+<rect x="40" y="405" width="510" height="345" rx="16" fill="#f0faf6" stroke="#157c75" stroke-width="2"/>
+<text x="60" y="438" class="h">德国获准节点</text>
+<rect x="590" y="405" width="490" height="345" rx="16" fill="#fff7f3" stroke="#b96b49" stroke-width="2"/>
+<text x="610" y="438" class="h">法国节点</text>
+<path d="M912 300V349H54V550H103" class="root"/>
+<rect x="336" y="334" width="431" height="27" rx="5" fill="#f8fafc"/>
+<text x="350" y="354" class="s" style="fill:#157c75">按身份和区域授权单独配发（图例：德国）</text>
+<path d="M560 300V379H305V464" class="wire"/>
+<path d="M560 379H835V464" class="wire"/>
+<rect x="104" y="467" width="402" height="53" rx="8" fill="white" stroke="#8295a8"/>
+<text x="123" y="501" class="b">德国／Tunnel／代次 e 的密文</text>
+<rect x="635" y="467" width="402" height="53" rx="8" fill="white" stroke="#8295a8"/>
+<text x="654" y="501" class="b">德国／Tunnel／代次 e 的密文</text>
+<rect x="104" y="531" width="402" height="58" rx="8" fill="#d9eee7" stroke="#157c75"/>
+<text x="123" y="566" class="b">德国根密钥 e → Tunnel 应用私钥</text>
+<path d="M305 520V530" class="wire"/>
+<path d="M305 589V624" class="wire"/>
+<rect x="104" y="628" width="402" height="70" rx="8" fill="#157c75"/>
+<text x="123" y="657" class="b" style="fill:white">检查通过，解封客户私钥</text>
+<text x="123" y="683" class="s" style="fill:white">明文处理地点仍需其他系统约束</text>
+<rect x="635" y="542" width="402" height="103" rx="8" fill="#fff" stroke="#b96b49" stroke-dasharray="5 4"/>
+<text x="655" y="579" class="b">没有德国根密钥</text>
+<text x="655" y="610" class="s">即使获准使用欧盟根密钥，也不能替代</text>
+<path d="M835 520V539" class="wire"/>
+<text x="739" y="696" font-size="26" fill="#a84d2d">拒绝解封</text>
+<text x="42" y="793" class="s">依据：原文的配发与解封流程。地区和服务为解释性示例；箭头不表示实际网络线路。</text>
+</svg>

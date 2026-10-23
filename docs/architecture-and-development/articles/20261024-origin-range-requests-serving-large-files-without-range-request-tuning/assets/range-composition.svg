@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="830" viewBox="0 0 1200 830" role="img" aria-labelledby="title desc">
+<title id="title">一段响应如何使用三种来源的数据</title>
+<desc id="desc">假设一个四 MiB 文件，客户端请求零点五到二点五 MiB。第一个块已缓存，第二个块正在下载，第三个块缺失。协调器读取已缓存部分，共享在途下载，并新取二到三 MiB，校验版本和范围后只向客户端返回所需的两 MiB。</desc>
+<defs>
+ <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff4e5"/><path d="M-2 2L2-2M0 8L8 0M6 10L10 6" stroke="#d99b48" stroke-width="1.3"/></pattern>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#607185"/></marker>
+ <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#1b3047}.title{font-size:29px;font-weight:650}.sub{font-size:17px;fill:#5c6f80}.label{font-size:20px;font-weight:600}.small{font-size:17px}.mono{font-family:Menlo,Consolas,monospace;font-size:17px}.edge{fill:none;stroke:#607185;stroke-width:2}</style>
+</defs>
+<rect width="1200" height="830" rx="20" fill="#f7f9fc"/>
+<text x="50" y="56" class="title">一段响应，三种数据来源</text>
+<text x="50" y="89" class="sub">假设示意：文件共 4 MiB，每块 1 MiB；横轴表示文件位置，不表示耗时。</text>
+<text x="50" y="140" class="label">客户端要读</text>
+<rect x="300" y="117" width="400" height="40" rx="5" fill="#243f61"/>
+<text x="500" y="144" text-anchor="middle" style="fill:#fff;font-size:19px">0.5–2.5 MiB，共 2 MiB</text>
+<path d="M300 161V282M700 161V282" stroke="#243f61" stroke-width="1.5" stroke-dasharray="5 5"/>
+<text x="50" y="220" class="label">边缘节点现状</text>
+<rect x="200" y="190" width="200" height="66" fill="#d4eee7" stroke="#268b76"/>
+<rect x="400" y="190" width="200" height="66" fill="#deebfa" stroke="#487fb7"/>
+<rect x="600" y="190" width="200" height="66" fill="#fff0d8" stroke="#be8735"/>
+<rect x="800" y="190" width="200" height="66" fill="#edf0f4" stroke="#b7c2ce"/>
+<text x="300" y="230" text-anchor="middle" class="label">已缓存</text>
+<text x="500" y="230" text-anchor="middle" class="label">正在下载</text>
+<text x="700" y="230" text-anchor="middle" class="label">缺失</text>
+<text x="900" y="230" text-anchor="middle" class="label" style="fill:#738291">本次不涉及</text>
+<g class="small" text-anchor="middle"><text x="200" y="282">0</text><text x="400" y="282">1 MiB</text><text x="600" y="282">2 MiB</text><text x="800" y="282">3 MiB</text><text x="1000" y="282">4 MiB</text></g>
+<path class="edge" d="M300 298V335"/><path class="edge" d="M500 298V316H570V335"/><path class="edge" d="M700 298V316H875V335"/>
+<rect x="170" y="346" width="250" height="114" rx="10" fill="#fff" stroke="#268b76"/>
+<text x="192" y="378" class="label">直接读磁盘</text><text x="192" y="409" class="small">取已有的 0.5–1 MiB</text><text x="192" y="438" class="small" style="fill:#268b76">不为这部分新回源</text>
+<rect x="445" y="346" width="250" height="114" rx="10" fill="#fff" stroke="#487fb7"/>
+<text x="467" y="378" class="label">接入已有下载</text><text x="467" y="409" class="small">流式读取 1–2 MiB</text><text x="467" y="438" class="small" style="fill:#487fb7">所需字节到达后才能读</text>
+<rect x="720" y="346" width="310" height="114" rx="10" fill="#fff" stroke="#be8735"/>
+<text x="742" y="378" class="label">只补取缺失覆盖范围</text><text x="742" y="409" class="small">向源站请求 2–3 MiB</text><text x="742" y="438" class="small" style="fill:#a16a21">对齐块边界，仍会多取一部分</text>
+<path class="edge" d="M295 460V495H420V520"/><path class="edge" d="M570 460V520"/><path class="edge" d="M875 460V495H720V520"/>
+<rect x="270" y="532" width="660" height="64" rx="12" fill="#243f61"/>
+<text x="600" y="558" text-anchor="middle" style="fill:#fff;font-size:20px;font-weight:600">协调器：校验版本、总长与返回区间，再按文件位置组合</text>
+<text x="600" y="582" text-anchor="middle" style="fill:#dce8f5;font-size:16px">新取得的数据写入缓存，并记录已成功完成的范围</text>
+<path class="edge" d="M500 600V637"/>
+<text x="50" y="679" class="label">客户端收到</text>
+<rect x="300" y="651" width="100" height="44" fill="#9ed7c9"/><rect x="400" y="651" width="200" height="44" fill="#abccee"/><rect x="600" y="651" width="100" height="44" fill="#f4cf92"/>
+<rect x="700" y="651" width="100" height="44" fill="url(#hatch)" stroke="#be8735" stroke-dasharray="4 3"/>
+<path d="M700 640V704" stroke="#243f61" stroke-width="2"/>
+<text x="500" y="725" text-anchor="middle" class="mono">206 · Content-Length: 2097152</text>
+<text x="820" y="673" class="small">2.5–3 MiB 留在缓存</text><text x="820" y="697" class="small">不发送给本次客户端</text>
+<text x="50" y="785" class="sub">机制依据：Cloudflare 原文；1 MiB 对齐依据：官方范围请求文档。状态分布与请求位置均为假设。</text>
+<g fill="#607185"><path d="M295 329L300 338L305 329Z"/><path d="M565 329L570 338L575 329Z"/><path d="M870 329L875 338L880 329Z"/><path d="M415 514L420 523L425 514Z"/><path d="M565 514L570 523L575 514Z"/><path d="M715 514L720 523L725 514Z"/><path d="M495 631L500 640L505 631Z"/></g>
+</svg>

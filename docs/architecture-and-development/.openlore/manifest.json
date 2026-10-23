@@ -155,6 +155,44 @@
       "collected_at": "2026-10-22T23:12:38.101Z",
       "updated_at": "2026-10-22T23:12:38.101Z",
       "has_research": true
+    },
+    "art_9b430fc5-bad1-410d-8281-c4f8aafa3621": {
+      "collection_id": "col_21d811c5-860",
+      "directory": "articles/20261024-origin-range-requests-serving-large-files-without-range-request-tuning",
+      "slug": "origin-range-requests-serving-large-files-without-range-request-tuning",
+      "title": "Origin Range Requests: Serving large files without range-request tuning",
+      "original_url": "https://blog.cloudflare.com/origin-range-requests",
+      "tags": [
+        "HTTP Range Requests",
+        "CDN",
+        "缓存分块",
+        "并发流式传输",
+        "HTTP 缓存一致性",
+        "Pingora",
+        "Cloudflare R2"
+      ],
+      "collected_at": "2026-10-23T23:11:43.869Z",
+      "updated_at": "2026-10-23T23:11:43.869Z",
+      "has_research": true
+    },
+    "art_70c37fba-3b5d-4a05-a4ac-cb31c298628d": {
+      "collection_id": "col_21d811c5-860",
+      "directory": "articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management",
+      "slug": "bringing-post-quantum-cryptography-to-geographically-fenced-key-management",
+      "title": "Bringing post-quantum cryptography to geographically fenced key management",
+      "original_url": "https://blog.cloudflare.com/post-quantum-geo-key-manager",
+      "tags": [
+        "后量子密码学",
+        "GeoKey Manager",
+        "HPKE",
+        "ML-KEM-768",
+        "X25519",
+        "密钥管理",
+        "数据主权"
+      ],
+      "collected_at": "2026-10-23T23:11:43.869Z",
+      "updated_at": "2026-10-23T23:11:43.869Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -193,6 +231,15 @@
         "art_7a6b2bc5-04d2-40dc-af0d-9b70bd0d31f1",
         "art_65f55da6-3513-478a-b9a9-be23cec64ff8"
       ]
+    },
+    "col_21d811c5-860": {
+      "path": "docs/architecture-and-development/batches/20261024-01.md",
+      "date_sequence": "20261024-01",
+      "created_at": "2026-10-23T23:11:43.869Z",
+      "article_ids": [
+        "art_9b430fc5-bad1-410d-8281-c4f8aafa3621",
+        "art_70c37fba-3b5d-4a05-a4ac-cb31c298628d"
+      ]
     }
   },
   "delivered_batches": [
@@ -203,13 +250,14 @@
     "repair_198f008a-b280-466b-9a59-1fd62022fb51",
     "repair_dac43ee2-3fca-492a-a2e8-6c86e1c489bb",
     "batch_45f87efe-f078-4b0e-9781-5649a5dfadee",
-    "batch_55c6040a-51b1-4287-9540-70cd7dd8ce27"
+    "batch_55c6040a-51b1-4287-9540-70cd7dd8ce27",
+    "batch_960af110-bc11-4b4b-91e7-31a52463ebd8"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "5e6619cc41cef44b246444f2c4ca1c8c3f8f717ac4d6c372050480aaab1ddd4b",
+      "sha256": "56c620f3383429e2665e1bd320f74e1c3f5a6a095e4ff9c4f6286dbba1155895",
       "media_type": "text/markdown",
-      "size": 6328
+      "size": 8114
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
       "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
@@ -565,6 +613,106 @@
       "sha256": "d7bbe4e64bc1f1a1233b15e641503765d95287e2a3f95783c0f3b9e0f33dee07",
       "media_type": "text/markdown",
       "size": 946
+    },
+    "docs/architecture-and-development/articles/20261024-origin-range-requests-serving-large-files-without-range-request-tuning/README.md": {
+      "sha256": "62a6c66afb7f1da145d4b788a125954a9508422177540eac62e6d461aa62e5c3",
+      "media_type": "text/markdown",
+      "size": 499
+    },
+    "docs/architecture-and-development/articles/20261024-origin-range-requests-serving-large-files-without-range-request-tuning/article.md": {
+      "sha256": "11bd9ba9dbdee7970043e23a14b642ed391a4380fdadd107ff171e29b5141b6c",
+      "media_type": "text/markdown",
+      "size": 13345
+    },
+    "docs/architecture-and-development/articles/20261024-origin-range-requests-serving-large-files-without-range-request-tuning/article-zh-CN.md": {
+      "sha256": "0600f65720812962304533730e08dbbf591439836eca0caab97d4c52ebf4daa6",
+      "media_type": "text/markdown",
+      "size": 13419
+    },
+    "docs/architecture-and-development/articles/20261024-origin-range-requests-serving-large-files-without-range-request-tuning/research.md": {
+      "sha256": "d4553b3db8d6b7f6d43b888d1f21c485517d093a7d28cdf3af36ee054285bb6e",
+      "media_type": "text/markdown",
+      "size": 23575
+    },
+    "docs/architecture-and-development/articles/20261024-origin-range-requests-serving-large-files-without-range-request-tuning/assets/diagram-a38abfb9b2d5.webp": {
+      "sha256": "a38abfb9b2d5f0b8df64dad381b96f5f607a9e3df1c1fc82ec69cfb4c5542e5d",
+      "media_type": "image/webp",
+      "size": 34674
+    },
+    "docs/architecture-and-development/articles/20261024-origin-range-requests-serving-large-files-without-range-request-tuning/assets/diagram-c2f8a700c02d.webp": {
+      "sha256": "c2f8a700c02dfb0f350d586f66405425854f7251e6bd1d657368e2dee42e4b7c",
+      "media_type": "image/webp",
+      "size": 30476
+    },
+    "docs/architecture-and-development/articles/20261024-origin-range-requests-serving-large-files-without-range-request-tuning/assets/range-composition.svg": {
+      "sha256": "04e965a06a70c5e90e0adbab202c1440b67b9755d36530fe99806568792a5b40",
+      "media_type": "image/svg+xml",
+      "size": 5463
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/README.md": {
+      "sha256": "ab4b6f09ca80d653563ab678826dd79c69b3bf9f5951775aec14cafc621bdb49",
+      "media_type": "text/markdown",
+      "size": 493
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/article.md": {
+      "sha256": "fc4695ea065e1cc80b340a7889b8f01c677d15d3640bff7d240976abc5a117a0",
+      "media_type": "text/markdown",
+      "size": 20544
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/article-zh-CN.md": {
+      "sha256": "4c51d6e4a97325277cceae1256e1ac872bfb0b8b6f607da08d6741ac4b5db67d",
+      "media_type": "text/markdown",
+      "size": 19039
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/research.md": {
+      "sha256": "07fce4b9656f9915ecbf46ef1e998d65238d288c723ec572e519f0f6543a0d1f",
+      "media_type": "text/markdown",
+      "size": 23596
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/assets/diagram-166b36433014.webp": {
+      "sha256": "166b3643301479a4c1d4de4755f8074f84fda4638f89d08197e1a5bdf0c656a2",
+      "media_type": "image/webp",
+      "size": 102740
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/assets/diagram-c83270ad2b47.webp": {
+      "sha256": "c83270ad2b47f40e4ae20d579750cdb0df05962cac1e1d7a79152c1417470fef",
+      "media_type": "image/webp",
+      "size": 20944
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/assets/diagram-cb3f0294796e.webp": {
+      "sha256": "cb3f0294796e0abf5890c6e9ac99f1a36ab6056bf25053ccd88a1453acfab633",
+      "media_type": "image/webp",
+      "size": 10530
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/assets/diagram-ff1d580d57e2.webp": {
+      "sha256": "ff1d580d57e22caf7f2dd1c5b833888f6443a417c7b5e912f3f9c63bab6ff678",
+      "media_type": "image/webp",
+      "size": 16524
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/assets/diagram-b615aff0e07a.webp": {
+      "sha256": "b615aff0e07a15433931f77e279fcc27470a30c20a44161c1ac8c1d7f9b19ec9",
+      "media_type": "image/webp",
+      "size": 14434
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/assets/diagram-23f26d5ce33d.webp": {
+      "sha256": "23f26d5ce33d26be0d09c9165c2642f624f4982897beabea1767d0f3dc8aad76",
+      "media_type": "image/webp",
+      "size": 16664
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/assets/key-distribution.svg": {
+      "sha256": "2256eb60a302d77b03ff415db5b441bb9b9c70422c18dd3f5356c946c1ddb51c",
+      "media_type": "image/svg+xml",
+      "size": 4720
+    },
+    "docs/architecture-and-development/articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/assets/revocation-window.svg": {
+      "sha256": "0a1aa5d05e0db65d677bf296447810019ebc61c0f04254fd4312b83ab6e84027",
+      "media_type": "image/svg+xml",
+      "size": 2588
+    },
+    "docs/architecture-and-development/batches/20261024-01.md": {
+      "sha256": "16a38cd8bc3985addc5c4a728651201dff88c084eb8c04388bd33c911033a642",
+      "media_type": "text/markdown",
+      "size": 1003
     }
   }
 }
