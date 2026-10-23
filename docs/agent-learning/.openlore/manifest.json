@@ -115,6 +115,25 @@
       "collected_at": "2026-10-22T00:07:39.233Z",
       "updated_at": "2026-10-22T00:07:39.233Z",
       "has_research": true
+    },
+    "art_e1fcc1aa-7bf4-4668-b3e5-e692ea11e546": {
+      "collection_id": "col_fa2ffbcf-148",
+      "directory": "articles/20261023-how-commerce-com-and-cloudflare-are-getting-storefronts-ready-for-ai-agents",
+      "slug": "how-commerce-com-and-cloudflare-are-getting-storefronts-ready-for-ai-agents",
+      "title": "How Commerce.com and Cloudflare are getting storefronts ready for AI agents",
+      "original_url": "https://blog.cloudflare.com/webmcp-commerce",
+      "tags": [
+        "WebMCP",
+        "MCP",
+        "Cloudflare for SaaS",
+        "浏览器自动化",
+        "电商平台",
+        "边缘计算",
+        "多租户配置"
+      ],
+      "collected_at": "2026-10-23T00:09:44.189Z",
+      "updated_at": "2026-10-23T00:09:44.189Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -144,6 +163,14 @@
       "article_ids": [
         "art_cdd1f7c2-6fe6-4e73-83ad-1c1412bb8e38"
       ]
+    },
+    "col_fa2ffbcf-148": {
+      "path": "docs/agent-learning/batches/20261023-01.md",
+      "date_sequence": "20261023-01",
+      "created_at": "2026-10-23T00:09:44.189Z",
+      "article_ids": [
+        "art_e1fcc1aa-7bf4-4668-b3e5-e692ea11e546"
+      ]
     }
   },
   "delivered_batches": [
@@ -154,13 +181,14 @@
     "batch_53ac2a25-5c99-4341-b759-6a15cc0f675e",
     "repair_b16015cb-450d-45b7-b522-1692af183715",
     "repair_80f9c79c-f529-4c5a-86cb-2bc6f59269bf",
-    "batch_7723dd56-3a4d-4e95-9db7-246a57a8bbbb"
+    "batch_7723dd56-3a4d-4e95-9db7-246a57a8bbbb",
+    "batch_37317c3a-14c8-4672-9e70-1ee50300f9be"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "70b38a82f029709383b3e5c58f7d90cce729229c03f9c021f5e556fcab8d8116",
+      "sha256": "6b54632de8eea2b8cf074f5afcbe6316614bb9532f7f521faa93dde37f7a7234",
       "media_type": "text/markdown",
-      "size": 4169
+      "size": 5110
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -556,6 +584,46 @@
       "sha256": "0d1505d5003fbdae4b3f9314600adb3d9f1e5757405517fd52f8e244d00321af",
       "media_type": "text/markdown",
       "size": 522
+    },
+    "docs/agent-learning/articles/20261023-how-commerce-com-and-cloudflare-are-getting-storefronts-ready-for-ai-agents/README.md": {
+      "sha256": "35a28a94f2ddc9e8aab5993c8592d2ff9558214e96f9cd78216ad473b304d2c1",
+      "media_type": "text/markdown",
+      "size": 490
+    },
+    "docs/agent-learning/articles/20261023-how-commerce-com-and-cloudflare-are-getting-storefronts-ready-for-ai-agents/article.md": {
+      "sha256": "0f8ac4f719d2b119fc329064a94a400e81e8b2775fac37d824491dd990a2e92c",
+      "media_type": "text/markdown",
+      "size": 10052
+    },
+    "docs/agent-learning/articles/20261023-how-commerce-com-and-cloudflare-are-getting-storefronts-ready-for-ai-agents/article-zh-CN.md": {
+      "sha256": "8fdd41d65db8a14d8e6a9a825fd2d9d268676dcba0e7c5cd2e6b6365551c9035",
+      "media_type": "text/markdown",
+      "size": 9767
+    },
+    "docs/agent-learning/articles/20261023-how-commerce-com-and-cloudflare-are-getting-storefronts-ready-for-ai-agents/research.md": {
+      "sha256": "88bafe64fea0c023e39822596437ee2b70c27609796956f05039dd24cab85af1",
+      "media_type": "text/markdown",
+      "size": 15337
+    },
+    "docs/agent-learning/articles/20261023-how-commerce-com-and-cloudflare-are-getting-storefronts-ready-for-ai-agents/assets/diagram-b017290f0973.webp": {
+      "sha256": "b017290f0973f1c63a3057159f73ac85c95316f6c3468520dc3fbcc714b03581",
+      "media_type": "image/webp",
+      "size": 64514
+    },
+    "docs/agent-learning/articles/20261023-how-commerce-com-and-cloudflare-are-getting-storefronts-ready-for-ai-agents/assets/diagram-214b829bd474.webp": {
+      "sha256": "214b829bd474be5cde603ee095aa110fe31dbf7e0870f9eed80efc78d536c5aa",
+      "media_type": "image/webp",
+      "size": 29230
+    },
+    "docs/agent-learning/articles/20261023-how-commerce-com-and-cloudflare-are-getting-storefronts-ready-for-ai-agents/assets/storefront-tools.svg": {
+      "sha256": "aee54bae998ac644566fe1e507cba9c2059dcea978ef708616008882e7b412f3",
+      "media_type": "image/svg+xml",
+      "size": 6017
+    },
+    "docs/agent-learning/batches/20261023-01.md": {
+      "sha256": "94ff04ccd313752decb35cec7b0c3c2e22ef7bfdc9d5ea835ce5588903a03ed3",
+      "media_type": "text/markdown",
+      "size": 583
     }
   }
 }

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="900" viewBox="0 0 1120 900" role="img" aria-labelledby="title desc">
+  <title id="title">商店如何把后台购物工具带进浏览器</title>
+  <desc id="desc">先在 Cloudflare 边缘判断是否注入脚本；启用后，页面桥接脚本读取商店后台工具定义，注册到浏览器，代理通过它调用后台，人最后完成付款。退出开关存在传播时间。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0L8 4L0 8Z" fill="#356980"/></marker>
+    <marker id="back" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0L8 4L0 8Z" fill="#6b7787"/></marker>
+    <style>
+      text { font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #1c3041; }
+      .heading { font-size: 27px; font-weight: 650; }
+      .label { font-size: 21px; font-weight: 600; }
+      .body { font-size: 19px; }
+      .note { font-size: 17px; fill: #536879; }
+      .line { fill: none; stroke: #356980; stroke-width: 2.5; }
+      .return { fill: none; stroke: #6b7787; stroke-width: 2; stroke-dasharray: 6 5; }
+    </style>
+  </defs>
+  <rect width="1120" height="900" rx="18" fill="#f5f8fb"/>
+  <text x="36" y="47" class="heading">工具在页面注册，商品与购物车仍由商店后台处理</text>
+  <text x="36" y="79" class="note">按上下两段阅读：先决定页面是否获得工具，再看一次工具调用如何完成。</text>
+
+  <rect x="28" y="104" width="1064" height="240" rx="14" fill="#fff" stroke="#d5e0e8"/>
+  <text x="48" y="140" class="label">① 页面送达之前：边缘节点决定是否加入桥接脚本</text>
+  <rect x="52" y="190" width="205" height="80" rx="10" fill="#eaf1f7"/>
+  <text x="77" y="223" class="label">访问商店页面</text>
+  <text x="77" y="250" class="note">返回网页内容</text>
+  <path d="M257 230H350" class="line"/>
+  <rect x="352" y="180" width="290" height="100" rx="10" fill="#e4f2f4" stroke="#94bdc8"/>
+  <text x="376" y="213" class="label">Cloudflare 检查商店标记</text>
+  <text x="376" y="243" class="body">这家商店是否选择退出？</text>
+  <path d="M642 208H756V190H801" class="line"/>
+  <text x="684" y="184" class="note">未退出</text>
+  <rect x="803" y="162" width="256" height="58" rx="9" fill="#e9f4ed"/>
+  <text x="827" y="198" class="body">页面加入桥接脚本</text>
+  <path d="M642 253H756V276H801" class="line"/>
+  <text x="684" y="283" class="note">已退出</text>
+  <rect x="803" y="246" width="256" height="58" rx="9" fill="#f1f2f5"/>
+  <text x="827" y="282" class="body">页面不加入脚本</text>
+  <text x="52" y="322" class="note">此处表示退出配置已生效后的判断；官方文档说明，完全停用可能需要几天。</text>
+
+  <rect x="28" y="368" width="1064" height="480" rx="14" fill="#fff" stroke="#d5e0e8"/>
+  <text x="48" y="406" class="label">② 启用后的调用：浏览器里的工具，把请求交回商店</text>
+  <rect x="48" y="430" width="622" height="278" rx="12" fill="#edf6f8" stroke="#aecdd7"/>
+  <text x="68" y="454" class="note">顾客的浏览器 · 当前商店页面与会话</text>
+  <rect x="70" y="505" width="225" height="106" rx="10" fill="#fff" stroke="#aecdd7"/>
+  <text x="88" y="536" class="label">AI 代理发现工具</text>
+  <text x="88" y="566" class="body" style="font-size:17px">document.modelContext</text>
+  <text x="88" y="592" class="note">按名称与参数调用</text>
+  <rect x="393" y="505" width="250" height="106" rx="10" fill="#fff" stroke="#aecdd7"/>
+  <text x="414" y="537" class="label">页面桥接脚本</text>
+  <text x="414" y="567" class="body">把工具调用转成请求</text>
+  <text x="414" y="593" class="note">同源入口 /api/mcp</text>
+  <path d="M295 544H390" class="line"/>
+  <text x="310" y="530" class="note">调用</text>
+  <path d="M393 590H298" class="return"/>
+  <text x="311" y="617" class="note">结果</text>
+  <path d="M518 505V489H183V502" class="return"/>
+  <text x="237" y="483" class="note">先读取定义，再注册工具</text>
+  <text x="70" y="658" class="body">代理与顾客围绕同一购物车协作</text>
+  <text x="70" y="687" class="note">具体会话关联和界面更新仍由平台实现。</text>
+
+  <rect x="827" y="505" width="236" height="148" rx="10" fill="#fff2e4" stroke="#d7b48f"/>
+  <text x="848" y="539" class="label">商店 MCP 后台</text>
+  <text x="848" y="572" class="body">提供工具定义</text>
+  <text x="848" y="602" class="body">查询商品、更新购物车</text>
+  <text x="848" y="630" class="note">商店保留业务处理逻辑</text>
+  <path d="M643 548H824" class="line"/>
+  <text x="682" y="528" class="note">工具请求</text>
+  <path d="M827 605H673V578H646" class="return"/>
+  <text x="689" y="632" class="note">定义／结果</text>
+  <text x="696" y="677" class="note">经商店域名访问</text>
+  <text x="696" y="700" class="note">Cloudflare 负责交付与代理</text>
+  <path d="M359 708V742" class="line"/>
+  <rect x="70" y="745" width="993" height="70" rx="10" fill="#e9f4ed"/>
+  <text x="94" y="775" class="label">代理准备购物车与结账链接 → 顾客查看订单并完成付款</text>
+  <text x="94" y="800" class="note">这是本次合作描述的购物流程，并非 WebMCP 对所有工具强制规定的付款规则。</text>
+  <g fill="#356980">
+    <path d="M350 230l-10 -5v10Z"/>
+    <path d="M801 190l-10 -5v10Z"/>
+    <path d="M801 276l-10 -5v10Z"/>
+    <path d="M390 544l-10 -5v10Z"/>
+    <path d="M824 548l-10 -5v10Z"/>
+    <path d="M359 742l-5 -10h10Z"/>
+  </g>
+  <g fill="#6b7787">
+    <path d="M298 590l10 -5v10Z"/>
+    <path d="M183 502l-5 -10h10Z"/>
+    <path d="M646 578l10 -5v10Z"/>
+  </g>
+  <text x="36" y="879" class="note">机制示意，非性能测量。依据：Cloudflare 合作文章、桥接说明与 BigCommerce 官方文档。</text>
+</svg>
