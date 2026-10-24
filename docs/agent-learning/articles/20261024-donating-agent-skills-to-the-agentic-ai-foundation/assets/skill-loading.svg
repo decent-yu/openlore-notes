@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="860" viewBox="0 0 1120 860" role="img" aria-labelledby="title desc">
+<title id="title">Agent Skills 如何按任务逐步加载</title>
+<desc id="desc">以假设的 PDF 填表任务为例。启动时展示技能名称与用途，任务相关时读取完整 SKILL.md，执行时按需读取参考文件或运行脚本。脚本结果返回模型，脚本源码不必全文进入上下文。共享格式不保证任务成功。</desc>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#53687b" stroke-width="1.8"/></marker>
+<style>
+text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#183347} .title{font-size:32px;font-weight:650}.sub{font-size:19px;fill:#53687b}.h{font-size:23px;font-weight:600}.body{font-size:21px}.small{font-size:18px;fill:#53687b}.num{font-size:25px;font-weight:700;fill:#fff}.line{fill:none;stroke:#53687b;stroke-width:2}
+</style>
+</defs>
+<rect width="1120" height="860" fill="#f7f9fb"/>
+<text class="title" x="48" y="62">先知道有什么技能，再按任务读取细节</text>
+<text class="sub" x="48" y="98">假设场景：填写 PDF 表单　·　箭头表示加载或执行后返回信息</text>
+<text class="small" x="102" y="151">宿主与智能体的动作</text>
+<text class="small" x="746" y="151">模型本次获得的信息</text>
+<path d="M66 193 V685" stroke="#d3dee6" stroke-width="3"/>
+<circle cx="66" cy="208" r="22" fill="#336e96"/><text class="num" style="fill:#ffffff" x="59" y="217">1</text>
+<rect x="103" y="177" width="515" height="123" rx="12" fill="#fff" stroke="#cbd8e2"/>
+<text class="h" x="126" y="213">启动：展示可用技能目录</text>
+<text class="body" x="126" y="248">PDF 填表、数据分析、其他技能……</text>
+<text class="small" x="126" y="278">先提供名称与用途，不读取全部正文</text>
+<path class="line" d="M618 237 H708"/><path d="M700 232 L708 237 L700 242" fill="none" stroke="#53687b" stroke-width="2"/>
+<rect x="720" y="194" width="352" height="89" rx="10" fill="#e9f0f7" stroke="#aac1d4"/>
+<text class="h" x="745" y="232">名称 ＋ 用途描述</text>
+<text class="small" x="745" y="262">供模型判断哪些技能相关</text>
+<circle cx="66" cy="372" r="22" fill="#287d7c"/><text class="num" style="fill:#ffffff" x="59" y="381">2</text>
+<rect x="103" y="335" width="515" height="134" rx="12" fill="#fff" stroke="#cbd8e2"/>
+<text class="h" x="126" y="371">任务到来：选择并读取技能</text>
+<text class="body" x="126" y="407">“请把报名资料填进这份 PDF。”</text>
+<text class="small" x="126" y="441">模型判断相关；用户也可以直接指定</text>
+<path class="line" d="M618 401 H708"/><path d="M700 396 L708 401 L700 406" fill="none" stroke="#53687b" stroke-width="2"/>
+<rect x="720" y="357" width="352" height="89" rx="10" fill="#e5f2ef" stroke="#98c2ba"/>
+<text class="h" x="745" y="395">完整 SKILL.md</text>
+<text class="small" x="745" y="425">步骤、限制和检查要求</text>
+<circle cx="66" cy="548" r="22" fill="#a66e24"/><text class="num" style="fill:#ffffff" x="59" y="557">3</text>
+<rect x="103" y="510" width="515" height="211" rx="12" fill="#fff" stroke="#cbd8e2"/>
+<text class="h" x="126" y="548">执行：只取当前需要的资源</text>
+<text class="body" x="126" y="588">读取 references/forms.md</text>
+<text class="small" x="126" y="617">取得表单类型与异常处理说明</text>
+<path d="M126 635 H590" stroke="#e4eaf0"/>
+<text class="body" x="126" y="668">用执行工具运行字段提取脚本</text>
+<text class="small" x="126" y="697">依赖、输入文件和执行权限须可用</text>
+<path class="line" d="M618 583 H708"/><path d="M700 578 L708 583 L700 588" fill="none" stroke="#53687b" stroke-width="2"/>
+<path class="line" d="M618 674 H708"/><path d="M700 669 L708 674 L700 679" fill="none" stroke="#53687b" stroke-width="2"/>
+<rect x="720" y="545" width="352" height="76" rx="10" fill="#fff2df" stroke="#d9b783"/>
+<text class="h" x="745" y="576">所需参考说明</text>
+<text class="small" x="745" y="604">按需读入文件内容</text>
+<rect x="720" y="638" width="352" height="76" rx="10" fill="#fff2df" stroke="#d9b783"/>
+<text class="h" x="745" y="669">工具返回的字段信息</text>
+<text class="small" x="745" y="697">无需把脚本源码全文读入</text>
+<rect x="48" y="758" width="1024" height="65" rx="10" fill="#eaf0f5"/>
+<text class="body" x="72" y="786">说明和工具结果支持后续填写与检查；模型并没有在这个过程中重新训练。</text>
+<text class="small" x="72" y="812">这是加载机制示意，不代表每次都会选对技能或成功完成任务。</text>
+</svg>

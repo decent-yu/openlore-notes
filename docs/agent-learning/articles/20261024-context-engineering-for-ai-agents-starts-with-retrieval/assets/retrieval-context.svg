@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="760" viewBox="0 0 1160 760" role="img" aria-labelledby="title desc">
+  <title id="title">检索、外置保存、分派阅读：信息如何进入主代理</title>
+  <desc id="desc">主代理发起查询，检索工具把全文保存到共享文件后端，只返回路径。独立子代理读取指定文件并返回带出处的摘要。主代理发现证据不足时继续查询。全文保存在主代理上下文之外，不代表内容已被验证。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#334155" stroke-width="1.7"/></marker>
+    <marker id="green" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#087f72" stroke-width="1.7"/></marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill:#172b3a; }
+      .title { font-size:27px; font-weight:650; }
+      .label { font-size:18px; font-weight:600; }
+      .body { font-size:18px; }
+      .note { font-size:16px; fill:#526475; }
+      .flow { fill:none; stroke:#334155; stroke-width:2; marker-end:url(#arrow); }
+      .evidence { fill:none; stroke:#087f72; stroke-width:2.3; marker-end:url(#green); }
+    </style>
+  </defs>
+  <rect width="1160" height="760" rx="18" fill="#fbfcfe"/>
+  <text x="36" y="49" class="title">全文放在哪里，决定谁需要读什么</text>
+  <text x="36" y="79" class="note">从上方的问题开始，沿编号阅读；下方的全文不会因保存成文件而自动进入主代理上下文。</text>
+  <rect x="24" y="102" width="1112" height="218" rx="16" fill="#eaf5f3"/>
+  <text x="44" y="132" class="label" fill="#087f72">主代理上下文</text>
+  <rect x="24" y="369" width="1112" height="279" rx="16" fill="#eff3f8"/>
+  <text x="44" y="399" class="label">主代理上下文之外：工具、文件与独立阅读过程</text>
+
+  <rect x="48" y="181" width="240" height="101" rx="12" fill="white" stroke="#aacbc6"/>
+  <text x="68" y="214" class="label">问题与任务条件</text>
+  <text x="68" y="246" class="body">公司、时段、所需事实</text>
+  <rect x="390" y="181" width="260" height="101" rx="12" fill="white" stroke="#aacbc6"/>
+  <text x="410" y="214" class="label">检索结果的路径</text>
+  <text x="410" y="246" class="body">/retrieved/批次/文件.md</text>
+  <rect x="830" y="181" width="282" height="101" rx="12" fill="white" stroke="#59aa9e" stroke-width="2"/>
+  <text x="850" y="214" class="label">证据摘要与综合判断</text>
+  <text x="850" y="246" class="body">事实、适用条件、来源链接</text>
+
+  <rect x="48" y="458" width="240" height="122" rx="12" fill="white" stroke="#bac7d7"/>
+  <text x="68" y="491" class="label">检索工具</text>
+  <text x="68" y="523" class="body">按问题查找候选材料</text>
+  <text x="68" y="552" class="note">关键词、语义或结构化查询</text>
+  <rect x="390" y="440" width="260" height="158" rx="12" fill="white" stroke="#bac7d7"/>
+  <text x="410" y="473" class="label">共享文件后端</text>
+  <path d="M410 487 H630 M410 524 H630 M410 562 H630" stroke="#dce4ec"/>
+  <text x="410" y="513" class="body">候选材料 A ＋ 来源</text>
+  <text x="410" y="551" class="body">候选材料 B ＋ 来源</text>
+  <text x="410" y="586" class="note">保留全文，供按需回读</text>
+  <rect x="830" y="458" width="282" height="122" rx="12" fill="white" stroke="#bac7d7"/>
+  <text x="850" y="491" class="label">独立子代理上下文</text>
+  <text x="850" y="523" class="body">读指定文件，筛选并提取</text>
+  <text x="850" y="552" class="note">只处理分派的问题与材料</text>
+
+  <path d="M168 282 V452" class="flow"/>
+  <rect x="82" y="331" width="173" height="28" rx="5" fill="#fbfcfe"/>
+  <text x="93" y="352" class="body">① 发出查询</text>
+  <path d="M288 519 H384" class="flow"/>
+  <text x="302" y="493" class="note">② 保存</text>
+  <text x="302" y="515" class="note">全文</text>
+  <path d="M520 440 V288" class="flow"/>
+  <rect x="429" y="331" width="182" height="28" rx="5" fill="#fbfcfe"/>
+  <text x="441" y="352" class="body">③ 仅返回路径</text>
+  <path d="M650 231 H742 V428 H960 V452" class="flow"/>
+  <rect x="668" y="327" width="156" height="54" rx="6" fill="#fbfcfe"/>
+  <text x="680" y="349" class="body">④ 分派问题</text>
+  <text x="706" y="373" class="body">与路径</text>
+  <path d="M650 537 H824" class="flow"/>
+  <text x="678" y="570" class="note">⑤ 读取指定文件</text>
+  <path d="M1035 458 V288" class="evidence"/>
+  <rect x="935" y="329" width="181" height="30" rx="5" fill="#fbfcfe"/>
+  <text x="947" y="351" class="body" style="fill:#087f72">⑥ 返回证据摘要</text>
+  <path d="M970 181 V153 H168 V175" class="flow" stroke-dasharray="5 5"/>
+  <rect x="392" y="139" width="270" height="27" rx="5" fill="#eaf5f3"/>
+  <text x="405" y="159" class="note">发现证据不足 → 再查一轮</text>
+
+  <text x="38" y="689" class="body">缩小主代理所见材料 ≠ 降低所有模型的总用量，也不保证摘要正确。</text>
+  <text x="38" y="721" class="note">机制示意，依据 LangChain 官方 RAG 教程与子代理文档；面积、箭头长度不表示实测成本或效果。</text>
+</svg>

@@ -134,6 +134,39 @@
       "collected_at": "2026-10-23T00:09:44.189Z",
       "updated_at": "2026-10-23T00:09:44.189Z",
       "has_research": true
+    },
+    "art_8fb8a207-065b-4e8d-96e8-c34d9c25c278": {
+      "collection_id": "col_73d8d374-8a4",
+      "directory": "articles/20261024-donating-agent-skills-to-the-agentic-ai-foundation",
+      "slug": "donating-agent-skills-to-the-agentic-ai-foundation",
+      "title": "Donating Agent Skills to the Agentic AI Foundation",
+      "original_url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills",
+      "tags": [
+        "Agent Skills",
+        "开放标准",
+        "开源治理"
+      ],
+      "collected_at": "2026-10-24T00:09:50.330Z",
+      "updated_at": "2026-10-24T00:09:50.330Z",
+      "has_research": true
+    },
+    "art_e87fe398-1164-4c65-a406-f38a185f3866": {
+      "collection_id": "col_73d8d374-8a4",
+      "directory": "articles/20261024-context-engineering-for-ai-agents-starts-with-retrieval",
+      "slug": "context-engineering-for-ai-agents-starts-with-retrieval",
+      "title": "Context Engineering for AI Agents Starts with Retrieval",
+      "original_url": "https://www.langchain.com/blog/context-engineering-starts-with-retrieval",
+      "tags": [
+        "上下文工程",
+        "信息检索",
+        "Deep Agents",
+        "语义搜索",
+        "多智能体协作",
+        "提示注入"
+      ],
+      "collected_at": "2026-10-24T00:09:50.330Z",
+      "updated_at": "2026-10-24T00:09:50.330Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -171,6 +204,15 @@
       "article_ids": [
         "art_e1fcc1aa-7bf4-4668-b3e5-e692ea11e546"
       ]
+    },
+    "col_73d8d374-8a4": {
+      "path": "docs/agent-learning/batches/20261024-01.md",
+      "date_sequence": "20261024-01",
+      "created_at": "2026-10-24T00:09:50.330Z",
+      "article_ids": [
+        "art_8fb8a207-065b-4e8d-96e8-c34d9c25c278",
+        "art_e87fe398-1164-4c65-a406-f38a185f3866"
+      ]
     }
   },
   "delivered_batches": [
@@ -182,13 +224,14 @@
     "repair_b16015cb-450d-45b7-b522-1692af183715",
     "repair_80f9c79c-f529-4c5a-86cb-2bc6f59269bf",
     "batch_7723dd56-3a4d-4e95-9db7-246a57a8bbbb",
-    "batch_37317c3a-14c8-4672-9e70-1ee50300f9be"
+    "batch_37317c3a-14c8-4672-9e70-1ee50300f9be",
+    "batch_443bdea0-b941-46c9-9378-80ffcafa14be"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "6b54632de8eea2b8cf074f5afcbe6316614bb9532f7f521faa93dde37f7a7234",
+      "sha256": "60e9eb5b17a877cd14a948e74e2c7999cb2808c0281b1023cd2cb60428f675ed",
       "media_type": "text/markdown",
-      "size": 5110
+      "size": 6581
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -624,6 +667,76 @@
       "sha256": "94ff04ccd313752decb35cec7b0c3c2e22ef7bfdc9d5ea835ce5588903a03ed3",
       "media_type": "text/markdown",
       "size": 583
+    },
+    "docs/agent-learning/articles/20261024-donating-agent-skills-to-the-agentic-ai-foundation/README.md": {
+      "sha256": "ec43b35ff8ffce6d240cb462643e600be1f260690666d4d489c22cd20d9e2a63",
+      "media_type": "text/markdown",
+      "size": 420
+    },
+    "docs/agent-learning/articles/20261024-donating-agent-skills-to-the-agentic-ai-foundation/article.md": {
+      "sha256": "876e98e8b7eefd8d545e720de15f1a43c857a51bc6cfa6b65706dafad7b52e44",
+      "media_type": "text/markdown",
+      "size": 2831
+    },
+    "docs/agent-learning/articles/20261024-donating-agent-skills-to-the-agentic-ai-foundation/article-zh-CN.md": {
+      "sha256": "9e93bfdd4b0085f3802a227245c9820db5def52dbb31f54a5bc21ac87a046c9b",
+      "media_type": "text/markdown",
+      "size": 3036
+    },
+    "docs/agent-learning/articles/20261024-donating-agent-skills-to-the-agentic-ai-foundation/research.md": {
+      "sha256": "259b0b59fa394e4c91e6281a6399d2f8d608dac3a33a2abc11709b9a3154da14",
+      "media_type": "text/markdown",
+      "size": 14838
+    },
+    "docs/agent-learning/articles/20261024-donating-agent-skills-to-the-agentic-ai-foundation/assets/skill-loading.svg": {
+      "sha256": "07e3c7ec2b3e5d020ffd126fe283ee9f67bf905b0ed780e939d194f7c70f919a",
+      "media_type": "image/svg+xml",
+      "size": 4787
+    },
+    "docs/agent-learning/articles/20261024-context-engineering-for-ai-agents-starts-with-retrieval/README.md": {
+      "sha256": "16ccd153712742d8ee1894c5ffffe7685e3860155aab2f453602f48a5922b336",
+      "media_type": "text/markdown",
+      "size": 491
+    },
+    "docs/agent-learning/articles/20261024-context-engineering-for-ai-agents-starts-with-retrieval/article.md": {
+      "sha256": "5c0f979326b1c21563f2b1a81320edd4a01faac0c79ecb69d8c65d3a16427df8",
+      "media_type": "text/markdown",
+      "size": 17932
+    },
+    "docs/agent-learning/articles/20261024-context-engineering-for-ai-agents-starts-with-retrieval/article-zh-CN.md": {
+      "sha256": "34ee61921b3d6ff8749f1327c5196c9d6a8fe49708ab895a44201f97fc0a70ca",
+      "media_type": "text/markdown",
+      "size": 18295
+    },
+    "docs/agent-learning/articles/20261024-context-engineering-for-ai-agents-starts-with-retrieval/research.md": {
+      "sha256": "5e55f3a317e61341a12e575842e6f5e525ad9d522f015d05527af393aea0af2b",
+      "media_type": "text/markdown",
+      "size": 16374
+    },
+    "docs/agent-learning/articles/20261024-context-engineering-for-ai-agents-starts-with-retrieval/assets/diagram-565d91873edc.png": {
+      "sha256": "565d91873edcba7a43f607bf123a2c48b25bafdc079369b493a314cf188b3e37",
+      "media_type": "image/png",
+      "size": 125129
+    },
+    "docs/agent-learning/articles/20261024-context-engineering-for-ai-agents-starts-with-retrieval/assets/diagram-4b6456b78ffe.png": {
+      "sha256": "4b6456b78ffe74aa51e207c1d2f85b017bd0a6cee772a2f149955effc586eb1d",
+      "media_type": "image/png",
+      "size": 86599
+    },
+    "docs/agent-learning/articles/20261024-context-engineering-for-ai-agents-starts-with-retrieval/assets/diagram-956eaaedac7f.png": {
+      "sha256": "956eaaedac7f42706a2902e72118a9143667ea38d6eb6e7e8f203a9890a49807",
+      "media_type": "image/png",
+      "size": 130313
+    },
+    "docs/agent-learning/articles/20261024-context-engineering-for-ai-agents-starts-with-retrieval/assets/retrieval-context.svg": {
+      "sha256": "047c7de816d96cb943c9ccc5712ce1352746d671eafeb1ad37e29bd6205295a5",
+      "media_type": "image/svg+xml",
+      "size": 5392
+    },
+    "docs/agent-learning/batches/20261024-01.md": {
+      "sha256": "3f1cc72dad5c1e0a4a56ff722f88be3e16fc15addec75877f2577351fec0ee68",
+      "media_type": "text/markdown",
+      "size": 846
     }
   }
 }
