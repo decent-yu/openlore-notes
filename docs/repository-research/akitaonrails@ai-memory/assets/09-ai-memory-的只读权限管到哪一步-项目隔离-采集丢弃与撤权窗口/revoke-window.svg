@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="740" viewBox="0 0 1060 740" role="img" aria-labelledby="title desc">
+<title id="title">撤权可以发生在权限检查与页面入库之间</title>
+<desc id="desc">源码允许的时序示意，非实测。请求 A 先通过写权限检查，管理员随后撤权，A 再通过 Wiki 写文件并提交页面。统一写入者依次处理三个独立命令，并没有把检查与提交合为一个事务。</desc>
+<defs>
+ <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#275d79"/></marker>
+ <marker id="orange" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#b66b25"/></marker>
+</defs>
+<rect width="1060" height="740" fill="#faf9f5"/>
+<g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif" fill="#233640">
+ <text x="46" y="48" font-size="27" font-weight="600">同一个写入者，仍可处理出一个撤权窗口</text>
+ <text x="46" y="80" font-size="17" fill="#607078">前提：普通数据库用户，非项目创建者；项目 restricted，最初持有 write 授权。</text>
+ <rect x="405" y="114" width="254" height="500" rx="12" fill="#eaf0f2"/>
+ <text x="165" y="143" text-anchor="middle" font-size="21" font-weight="600">请求 A：写页面</text>
+ <text x="532" y="143" text-anchor="middle" font-size="21" font-weight="600">统一数据库写入者</text>
+ <text x="870" y="143" text-anchor="middle" font-size="21" font-weight="600">管理员：撤权</text>
+ <path d="M165 164 V611 M532 164 V611 M870 164 V611" fill="none" stroke="#c0c8c9" stroke-width="2" stroke-dasharray="5 7"/>
+ <rect x="446" y="195" width="174" height="61" rx="6" fill="#fff" stroke="#8daab7"/>
+ <text x="533" y="220" text-anchor="middle" font-size="18">AuthorizeProject</text>
+ <text x="533" y="244" text-anchor="middle" font-size="17" fill="#2c6f5d">此刻有权限：允许</text>
+ <path d="M165 205 H432" stroke="#275d79" stroke-width="2"/>
+ <text x="280" y="192" text-anchor="middle" font-size="16">① 检查写权限</text>
+ <path d="M446 251 H179" stroke="#275d79" stroke-width="2"/>
+ <text x="275" y="277" text-anchor="middle" font-size="16">检查完成，继续准备正文</text>
+ <rect x="446" y="321" width="174" height="61" rx="6" fill="#fff8ec" stroke="#c28a4b"/>
+ <text x="533" y="346" text-anchor="middle" font-size="18">RevokeMemory</text>
+ <text x="533" y="370" text-anchor="middle" font-size="17" fill="#9a5c22">删除该用户的授权</text>
+ <path d="M870 331 H634" stroke="#b66b25" stroke-width="2"/>
+ <text x="759" y="315" text-anchor="middle" font-size="16">② 撤权命令先到达</text>
+ <path d="M620 377 H856" stroke="#b66b25" stroke-width="2"/>
+ <text x="757" y="404" text-anchor="middle" font-size="16">撤权完成</text>
+ <rect x="54" y="431" width="222" height="68" rx="6" fill="#fff" stroke="#8daab7"/>
+ <text x="165" y="459" text-anchor="middle" font-size="18">Wiki 写入 Markdown</text>
+ <text x="165" y="485" text-anchor="middle" font-size="16" fill="#607078">仍使用先前通过的范围</text>
+ <rect x="446" y="501" width="174" height="80" rx="6" fill="#fff" stroke="#8daab7"/>
+ <text x="533" y="528" text-anchor="middle" font-size="18">UpsertPage</text>
+ <text x="533" y="551" text-anchor="middle" font-size="17">保存页面及索引</text>
+ <text x="533" y="573" text-anchor="middle" font-size="15" fill="#9a5c22">此处不重新查询授权</text>
+ <path d="M165 519 H432" stroke="#275d79" stroke-width="2"/>
+ <text x="292" y="543" text-anchor="middle" font-size="16">③ 提交页面</text>
+ <rect x="46" y="642" width="968" height="65" rx="8" fill="#e6eee8"/>
+ <text x="66" y="668" font-size="18" font-weight="600">顺序执行 ≠ 把检查和提交合成一次不可分割的操作</text>
+ <text x="66" y="694" font-size="16">这是源码允许的交错顺序，未做并发复现；新发起的授权检查仍会看到撤权后的状态。</text>
+<g fill="#275d79"><path d="M442 205 L430 199 L430 211 Z"/><path d="M169 251 L181 245 L181 257 Z"/><path d="M442 519 L430 513 L430 525 Z"/></g>
+ <g fill="#b66b25"><path d="M624 331 L636 325 L636 337 Z"/><path d="M866 377 L854 371 L854 383 Z"/></g>
+</g>
+</svg>

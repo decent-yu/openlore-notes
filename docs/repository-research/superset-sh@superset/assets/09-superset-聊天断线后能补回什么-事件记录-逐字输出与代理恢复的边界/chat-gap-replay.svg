@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="720" viewBox="0 0 1080 720" role="img" aria-labelledby="title desc">
+  <title id="title">聊天断线后补回完整条目，不补播逐字输出</title>
+  <desc id="desc">假设客户端已收到序号41，随后断线。代理继续输出，完整结果写为序号42。客户端重连提交原游标，主机补发42，替换临时文本；断线期间的逐字片段不进入日志。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#245b78"/></marker>
+    <marker id="gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#82786e"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#243440;font-size:18px}
+      .title{font-size:27px;font-weight:650}.head{font-size:21px;font-weight:600}.small{font-size:16px;fill:#596771}
+      .lane{stroke:#bcc9ce;stroke-width:2;stroke-dasharray:5 7}.msg{stroke:#245b78;stroke-width:2;fill:none}
+      .delta{stroke:#82786e;stroke-width:2;stroke-dasharray:6 5;fill:none}
+    </style>
+  </defs>
+  <rect width="1080" height="720" fill="#fcfbf8"/>
+  <text x="40" y="47" class="title">断线后恢复的是记录，不是逐字动画</text>
+  <text x="40" y="78" class="small">假设时序 · 为便于阅读，只保留同一条消息的两次完整条目</text>
+  <text x="165" y="132" class="head" text-anchor="middle">客户端</text>
+  <text x="540" y="132" class="head" text-anchor="middle">主机聊天日志</text>
+  <text x="915" y="132" class="head" text-anchor="middle">代理适配器</text>
+  <text x="540" y="158" class="small" text-anchor="middle">chat.db：序号属于同一日志代号 e</text>
+  <path d="M165 176V641 M540 176V641 M915 176V641" class="lane"/>
+  <path d="M915 209H550" class="msg"/>
+  <path d="m550 209 10-5v10z" fill="#245b78"/>
+  <text x="730" y="197" text-anchor="middle">写入初始条目：seq 41</text>
+  <path d="M530 224H175" class="msg"/>
+  <path d="m175 224 10-5v10z" fill="#245b78"/>
+  <text x="350" y="212" text-anchor="middle">广播；客户端记住 (e, 41)</text>
+  <path d="M915 282H175" class="delta"/>
+  <path d="m175 282 10-5v10z" fill="#82786e"/>
+  <rect x="360" y="255" width="360" height="25" fill="#fcfbf8"/>
+  <text x="540" y="273" text-anchor="middle">逐字片段直接转发，不写入日志</text>
+  <rect x="56" y="311" width="260" height="169" rx="8" fill="#f6e6df"/>
+  <text x="186" y="343" text-anchor="middle" fill="#8d4331">连接中断</text>
+  <text x="186" y="373" class="small" text-anchor="middle">保留已经看到的内容</text>
+  <text x="186" y="399" class="small" text-anchor="middle">未收到的片段无法补播</text>
+  <path d="M915 359H345" class="delta"/>
+  <path d="m330 350 18 18m0-18-18 18" stroke="#a25a42" stroke-width="2"/>
+  <text x="713" y="345" class="small" text-anchor="middle">代理继续生成片段</text>
+  <path d="M915 439H550" class="msg"/>
+  <path d="m550 439 10-5v10z" fill="#245b78"/>
+  <text x="730" y="425" text-anchor="middle">完整结果入库：seq 42</text>
+  <circle cx="540" cy="439" r="6" fill="#245b78"/>
+  <text x="562" y="466" class="small">日志保存完整文本</text>
+  <path d="M165 525H530" class="msg"/>
+  <path d="m530 525-10-5v10z" fill="#245b78"/>
+  <text x="350" y="511" text-anchor="middle">重连：请从 (e, 41) 之后补读</text>
+  <path d="M540 582H175" class="msg"/>
+  <path d="m175 582 10-5v10z" fill="#245b78"/>
+  <text x="350" y="568" text-anchor="middle">补发 seq 42：完整结果</text>
+  <text x="165" y="618" class="small" text-anchor="middle">按条目编号替换临时文本</text>
+  <path d="M40 656H1040" stroke="#d8dfdf"/>
+  <text x="40" y="689" class="small">前提：完整结果成功写入同一日志。若只产生片段便崩溃，日志无法凭空还原缺失文本。</text>
+</svg>

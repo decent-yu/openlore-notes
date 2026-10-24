@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="710" viewBox="0 0 1100 710" role="img" aria-labelledby="title desc">
+<title id="title">新消息进入正在运行的云端 Agent：通知、取消与重新决策的边界</title>
+<desc id="desc">从左至右为数据库与调度器、进程内队列、工具批次、模型输入。新消息一边保存在数据库中，一边通知正在运行的进程；只有满足运行时长条件的工具批次收到取消信号，只有完成工具结果配对且合并窗口已到的批次才进入模型输入。</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#315967"/></marker>
+<marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#b9642c"/></marker>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#193946;font-size:17px}.small{font-size:15px;fill:#4d6370}.label{font-size:19px;font-weight:600}.line{stroke:#315967;stroke-width:2;fill:none;marker-end:url(#arrow)}.lane{stroke:#c6d3d7;stroke-width:1.5;stroke-dasharray:5 7}.note{fill:#f0f5f6;stroke:#cbdade}</style>
+</defs>
+<rect width="1100" height="710" fill="#fcfbf7"/>
+<text x="42" y="45" font-size="25" font-weight="650">收到“先别发送”，距离真正改变动作还有几步</text>
+<text x="42" y="75" class="small">按当前云端实现绘制；向下表示处理先后，间距不代表耗时。</text>
+<text x="60" y="122" class="label">数据库 / 调度器</text>
+<text x="360" y="122" class="label">进程内消息队列</text>
+<text x="646" y="122" class="label">正在运行的工具</text>
+<text x="917" y="122" class="label">模型输入</text>
+<path d="M145 140V608M435 140V608M728 140V608M980 140V608" class="lane"/>
+<circle cx="145" cy="172" r="6" fill="#315967"/>
+<text x="42" y="161">新消息先提交</text>
+<path d="M151 192H425" class="line"/>
+<text x="183" y="182" class="small">唤醒；忙碌时另发 steer</text>
+<rect x="325" y="208" width="220" height="72" rx="6" class="note"/>
+<text x="342" y="234">按编号去重、限制长度</text>
+<text x="342" y="259">首条消息开启 1.5 秒窗口</text>
+<path d="M443 308H718" stroke="#b9642c" stroke-width="2" fill="none" marker-end="url(#orange)"/>
+<text x="470" y="298" class="small">到达时批次已满阈值 → 取消信号</text>
+<rect x="620" y="327" width="220" height="75" rx="6" fill="#fff1e6" stroke="#d7a27b"/>
+<text x="638" y="353">bash 尝试终止子进程</text>
+<text x="638" y="378">其他工具继续；等待整批</text>
+<path d="M728 403V443H445" class="line"/>
+<text x="468" y="431" class="small">先保存每项调用与对应结果</text>
+<rect x="325" y="458" width="220" height="65" rx="6" class="note"/>
+<text x="343" y="484">窗口已到且未超预算？</text>
+<text x="343" y="507" class="small">否则暂不注入新要求</text>
+<path d="M546 543H971" class="line"/>
+<text x="604" y="533" class="small">新消息或摘要追加为用户输入</text>
+<text x="868" y="580">模型重新判断下一步</text>
+<rect x="42" y="625" width="1016" height="58" rx="6" fill="#e7eff2"/>
+<text x="62" y="650">三个不同结果：通知已发出 ≠ 工具已停止 ≠ 新要求已经进入模型输入</text>
+<text x="62" y="673" class="small">取消不会撤回已提交的文档、消息或其他外部动作；本图不表示群聊文字具有硬性撤销能力。</text>
+<g fill="#315967"><path d="M425 192L415 187V197Z"/><path d="M445 443L455 438V448Z"/><path d="M971 543L961 538V548Z"/></g><path d="M718 308L708 303V313Z" fill="#b9642c"/>
+</svg>

@@ -653,6 +653,86 @@
       "has_research": true,
       "reading_path": "stablyai@orca/09-orca-如何确认终端已经停止-主机证据-旧查询隔离与关闭回执.md",
       "research_path": "stablyai@orca/09-orca-如何确认终端已经停止-主机证据-旧查询隔离与关闭回执.md"
+    },
+    "art_be8649e0-2450-4497-be6e-b12a8f748860": {
+      "collection_id": "col_2e7ae85f-b6d",
+      "directory": "yetone@cumora/09-cumora-长任务中收到新要求-怎样插话-为什么不等于立即停手",
+      "slug": "cumora-长任务中收到新要求-怎样插话-为什么不等于立即停手",
+      "title": "Cumora 长任务中收到新要求：怎样插话，为什么不等于立即停手",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-24T21:34:04.636Z",
+      "updated_at": "2026-10-24T21:34:04.636Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/09-cumora-长任务中收到新要求-怎样插话-为什么不等于立即停手.md",
+      "research_path": "yetone@cumora/09-cumora-长任务中收到新要求-怎样插话-为什么不等于立即停手.md"
+    },
+    "art_a5973f06-b3c0-4d4d-8c50-65cd1a33a4b7": {
+      "collection_id": "col_2e7ae85f-b6d",
+      "directory": "superset-sh@superset/09-superset-聊天断线后能补回什么-事件记录-逐字输出与代理恢复的边界",
+      "slug": "superset-聊天断线后能补回什么-事件记录-逐字输出与代理恢复的边界",
+      "title": "Superset 聊天断线后能补回什么：事件记录、逐字输出与代理恢复的边界",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-24T21:34:04.636Z",
+      "updated_at": "2026-10-24T21:34:04.636Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/09-superset-聊天断线后能补回什么-事件记录-逐字输出与代理恢复的边界.md",
+      "research_path": "superset-sh@superset/09-superset-聊天断线后能补回什么-事件记录-逐字输出与代理恢复的边界.md"
+    },
+    "art_aa12c8fd-4959-4a02-9b4a-f8e6eaf5101c": {
+      "collection_id": "col_2e7ae85f-b6d",
+      "directory": "akitaonrails@ai-memory/09-ai-memory-的只读权限管到哪一步-项目隔离-采集丢弃与撤权窗口",
+      "slug": "ai-memory-的只读权限管到哪一步-项目隔离-采集丢弃与撤权窗口",
+      "title": "ai-memory 的只读权限管到哪一步：项目隔离、采集丢弃与撤权窗口",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-24T21:34:04.636Z",
+      "updated_at": "2026-10-24T21:34:04.636Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/09-ai-memory-的只读权限管到哪一步-项目隔离-采集丢弃与撤权窗口.md",
+      "research_path": "akitaonrails@ai-memory/09-ai-memory-的只读权限管到哪一步-项目隔离-采集丢弃与撤权窗口.md"
+    },
+    "art_d8b132f1-7a64-4703-bffd-af04eda8cc55": {
+      "collection_id": "col_2e7ae85f-b6d",
+      "directory": "xai-org@grok-build/09-grok-build-怎样应对编辑中的文件变化-文本匹配-批内锁与覆盖边界",
+      "slug": "grok-build-怎样应对编辑中的文件变化-文本匹配-批内锁与覆盖边界",
+      "title": "Grok Build 怎样应对编辑中的文件变化：文本匹配、批内锁与覆盖边界",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-24T21:34:04.636Z",
+      "updated_at": "2026-10-24T21:34:04.636Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/09-grok-build-怎样应对编辑中的文件变化-文本匹配-批内锁与覆盖边界.md",
+      "research_path": "xai-org@grok-build/09-grok-build-怎样应对编辑中的文件变化-文本匹配-批内锁与覆盖边界.md"
+    },
+    "art_123ad1ba-5d74-4f22-ac6c-2eaa7bf10e41": {
+      "collection_id": "col_2e7ae85f-b6d",
+      "directory": "stablyai@orca/10-orca-如何预热与复用工作区检出-投机准备池-改向分支分歧与防冲撞锁",
+      "slug": "orca-如何预热与复用工作区检出-投机准备池-改向分支分歧与防冲撞锁",
+      "title": "Orca 如何预热与复用工作区检出：投机准备池、改向分支分歧与防冲撞锁",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-24T21:34:04.636Z",
+      "updated_at": "2026-10-24T21:34:04.636Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/10-orca-如何预热与复用工作区检出-投机准备池-改向分支分歧与防冲撞锁.md",
+      "research_path": "stablyai@orca/10-orca-如何预热与复用工作区检出-投机准备池-改向分支分歧与防冲撞锁.md"
     }
   },
   "collection_locations": {
@@ -731,6 +811,18 @@
         "art_943e7bc8-13ce-48f8-b9a3-1bc4ec8a7021",
         "art_d60d21c5-c0dd-4bde-b284-e8401bb359bd"
       ]
+    },
+    "col_2e7ae85f-b6d": {
+      "path": "docs/repository-research/batches/20261025-01.md",
+      "date_sequence": "20261025-01",
+      "created_at": "2026-10-24T21:34:04.636Z",
+      "article_ids": [
+        "art_be8649e0-2450-4497-be6e-b12a8f748860",
+        "art_a5973f06-b3c0-4d4d-8c50-65cd1a33a4b7",
+        "art_aa12c8fd-4959-4a02-9b4a-f8e6eaf5101c",
+        "art_d8b132f1-7a64-4703-bffd-af04eda8cc55",
+        "art_123ad1ba-5d74-4f22-ac6c-2eaa7bf10e41"
+      ]
     }
   },
   "delivered_batches": [
@@ -739,7 +831,8 @@
     "batch_ca872c48-a7cf-45ab-82a1-74a6d71fe961",
     "batch_55eeaf41-d2aa-4ebc-97ca-8e43973fdcc3",
     "batch_75270be3-b29c-43c8-877b-a843c7a34a96",
-    "batch_1fcbd952-af7a-4531-8d1a-99c696ed3041"
+    "batch_1fcbd952-af7a-4531-8d1a-99c696ed3041",
+    "batch_dfedc233-0142-477c-8565-11bfc7f04205"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -763,9 +856,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "9b56902f2a5299b1783995a35b936e8edb687e7d486805013273e0fc09a59d81",
+      "sha256": "7ad642411bbcb7fb1cf6e4b74c77402d85fb6d4dcb0ff2f4dc142dcd390d8b9a",
       "media_type": "text/markdown",
-      "size": 52036
+      "size": 58561
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -1236,6 +1329,66 @@
       "sha256": "90e1c0d6698708d9a6045a792ec4c1988e7dae496f5dff24de3bfdb48102e86a",
       "media_type": "text/markdown",
       "size": 6283
+    },
+    "docs/repository-research/yetone@cumora/09-cumora-长任务中收到新要求-怎样插话-为什么不等于立即停手.md": {
+      "sha256": "bf91a687346a74407201775deb6558599a9a4e154d5429e88b2eb2a041d38ae5",
+      "media_type": "text/markdown",
+      "size": 19105
+    },
+    "docs/repository-research/yetone@cumora/assets/09-cumora-长任务中收到新要求-怎样插话-为什么不等于立即停手/steer-boundaries.svg": {
+      "sha256": "0a9a13b1e0dc2bfc7b82a7081d5cdccf991317de2a0255c3597456d458f07444",
+      "media_type": "image/svg+xml",
+      "size": 3716
+    },
+    "docs/repository-research/yetone@cumora/assets/09-cumora-长任务中收到新要求-怎样插话-为什么不等于立即停手/steer-read-gap.svg": {
+      "sha256": "597ac1924ca0d5996fcea6f468dd578ab7bcfcb0783a52bdfadb441f6426274b",
+      "media_type": "image/svg+xml",
+      "size": 3342
+    },
+    "docs/repository-research/superset-sh@superset/09-superset-聊天断线后能补回什么-事件记录-逐字输出与代理恢复的边界.md": {
+      "sha256": "c66edf4d1ad8b829ba80895bbe1c65677f28216bbf624cf8cc774c89e37ad230",
+      "media_type": "text/markdown",
+      "size": 21455
+    },
+    "docs/repository-research/superset-sh@superset/assets/09-superset-聊天断线后能补回什么-事件记录-逐字输出与代理恢复的边界/chat-gap-replay.svg": {
+      "sha256": "39ba7d758f3d3a36e8242d43571eeab0f41d8f6d52eaf03ba663ae11d4d62018",
+      "media_type": "image/svg+xml",
+      "size": 4002
+    },
+    "docs/repository-research/akitaonrails@ai-memory/09-ai-memory-的只读权限管到哪一步-项目隔离-采集丢弃与撤权窗口.md": {
+      "sha256": "1f017344c5013bb0b0c19db7a0b7465b2d0fead3ca7b49752c3c417239771aa4",
+      "media_type": "text/markdown",
+      "size": 18722
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/09-ai-memory-的只读权限管到哪一步-项目隔离-采集丢弃与撤权窗口/revoke-window.svg": {
+      "sha256": "a2f06763df323b2829b312f2fb3cc9b8705ae20908652f337bf4750dcc710a3d",
+      "media_type": "image/svg+xml",
+      "size": 4262
+    },
+    "docs/repository-research/xai-org@grok-build/09-grok-build-怎样应对编辑中的文件变化-文本匹配-批内锁与覆盖边界.md": {
+      "sha256": "c5f2614d0cf288b70db5f7592bc2412f90bb4e4b3018e8bfe465a179be03b848",
+      "media_type": "text/markdown",
+      "size": 19339
+    },
+    "docs/repository-research/xai-org@grok-build/assets/09-grok-build-怎样应对编辑中的文件变化-文本匹配-批内锁与覆盖边界/edit-timing.svg": {
+      "sha256": "8b59c876b7f76770ca0a54e9ab020dcc119fd61da0e3e5a4073503d9ecd84901",
+      "media_type": "image/svg+xml",
+      "size": 4179
+    },
+    "docs/repository-research/stablyai@orca/10-orca-如何预热与复用工作区检出-投机准备池-改向分支分歧与防冲撞锁.md": {
+      "sha256": "8cdb27c2df6742b0baadd34418ede132a59986dff8b8bd82e60b450427fed1c1",
+      "media_type": "text/markdown",
+      "size": 21398
+    },
+    "docs/repository-research/stablyai@orca/assets/10-orca-如何预热与复用工作区检出-投机准备池-改向分支分歧与防冲撞锁/orca-worktree-preparation-lifecycle.svg": {
+      "sha256": "3e04b2631c2bfd910d5c6bcf1d2219810b5b5fa12c1acfba68248dc46805c25d",
+      "media_type": "image/svg+xml",
+      "size": 13397
+    },
+    "docs/repository-research/batches/20261025-01.md": {
+      "sha256": "4e2b50ec2f8ed9f06cd8d44ad0d2b415dc5c4ae993111f2efe6e79b234f554d0",
+      "media_type": "text/markdown",
+      "size": 3317
     }
   }
 }

@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" style="background:#0f172a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="warmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Title Section -->
+  <text x="40" y="42" fill="#f8fafc" font-size="20" font-weight="700">Orca 关联工作区（Worktree）投机准备与复用全生命周期</text>
+  <text x="40" y="66" fill="#94a3b8" font-size="13">从界面预判触发展开、独占隔离检出、分歧测算改向，到原子转移交付与突发复充</text>
+
+  <!-- Lane 1: 投机预热阶段 (Speculative Pre-warming) -->
+  <g transform="translate(40, 90)">
+    <rect width="280" height="550" rx="12" fill="url(#boxGrad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="280" height="38" rx="12" fill="#1e293b"/>
+    <text x="16" y="24" fill="#38bdf8" font-size="14" font-weight="600">1. 投机预热 (Pre-warming)</text>
+
+    <!-- Trigger -->
+    <g transform="translate(16, 55)">
+      <rect width="248" height="64" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="12" y="22" fill="#e2e8f0" font-size="13" font-weight="600">意图触发 (Prefetch Trigger)</text>
+      <text x="12" y="42" fill="#94a3b8" font-size="11">用户呼出跳转面板或在输入框选库</text>
+      <text x="12" y="56" fill="#64748b" font-size="10">调用 prefetchWorktreeCreateBase()</text>
+    </g>
+
+    <!-- Preparation Pool -->
+    <g transform="translate(16, 135)">
+      <rect width="248" height="110" rx="8" fill="#1e293b" stroke="#0284c7" stroke-dasharray="4 2" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#38bdf8" font-size="13" font-weight="600">准备池管控 (Pool &amp; Limits)</text>
+      <text x="12" y="42" fill="#cbd5e1" font-size="11">• 上限约束：每宿主最多保留 3 处准备</text>
+      <text x="12" y="60" fill="#cbd5e1" font-size="11">• 逐出规则：LRU 优先淘汰同仓库旧检出</text>
+      <text x="12" y="78" fill="#cbd5e1" font-size="11">• 存活周期：TTL 5分钟未消耗自动清理</text>
+      <text x="12" y="96" fill="#cbd5e1" font-size="11">• 排队防抖：相同基线合并，不重复起跑</text>
+    </g>
+
+    <!-- Isolated Git Worktree -->
+    <g transform="translate(16, 260)">
+      <rect width="248" height="150" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="22" fill="#e2e8f0" font-size="13" font-weight="600">隔离检出 (Isolated Checkout)</text>
+      <text x="12" y="42" fill="#94a3b8" font-size="11">隐式临时路径：</text>
+      <text x="12" y="58" fill="#f1f5f9" font-family="monospace" font-size="10">.workspace/.orca-preparing/&lt;pid&gt;-&lt;uuid&gt;</text>
+      <path d="M 12 68 L 236 68" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="84" fill="#cbd5e1" font-size="11">第一步：添加无分支与无检出骨架</text>
+      <text x="12" y="98" fill="#94a3b8" font-family="monospace" font-size="10">git worktree add --detach --no-checkout</text>
+      <text x="12" y="118" fill="#cbd5e1" font-size="11">第二步：强行重置至基线目标</text>
+      <text x="12" y="132" fill="#94a3b8" font-family="monospace" font-size="10">git reset --hard &lt;materializationBase&gt;</text>
+    </g>
+
+    <!-- Safe Lock -->
+    <g transform="translate(16, 425)">
+      <rect width="248" height="105" rx="8" fill="#1e293b" stroke="#eab308" stroke-width="1.2"/>
+      <text x="12" y="22" fill="#facc15" font-size="13" font-weight="600">Git 独占锁文件 (Ownership Lock)</text>
+      <text x="12" y="42" fill="#94a3b8" font-size="11">写入 .git/worktrees/&lt;id&gt;/locked：</text>
+      <text x="12" y="60" fill="#fef08a" font-family="monospace" font-size="9.5">orca-create-preparation:v1:&lt;pid&gt;:&lt;id&gt;:machine=M</text>
+      <text x="12" y="80" fill="#cbd5e1" font-size="10.5">以独占创建标记归属，防止 Git 剪枝 prune</text>
+      <text x="12" y="96" fill="#cbd5e1" font-size="10.5">避开 post-checkout 钩子，不跑耗时脚本</text>
+    </g>
+  </g>
+
+  <!-- Lane 2: 匹配、分歧测算与改向 (Selection & Divergence Guard) -->
+  <g transform="translate(360, 90)">
+    <rect width="280" height="550" rx="12" fill="url(#boxGrad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="280" height="38" rx="12" fill="#1e293b"/>
+    <text x="16" y="24" fill="#f59e0b" font-size="14" font-weight="600">2. 匹配与改向 (Match &amp; Retarget)</text>
+
+    <!-- Consume Request -->
+    <g transform="translate(16, 55)">
+      <rect width="248" height="64" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="12" y="22" fill="#e2e8f0" font-size="13" font-weight="600">用户提交任务 (Consume)</text>
+      <text x="12" y="42" fill="#94a3b8" font-size="11">正式触发 consumePreparedWorktreeCreate()</text>
+      <text x="12" y="56" fill="#64748b" font-size="10">携带目标仓库、根目录、目标分支与基线</text>
+    </g>
+
+    <!-- Selection Check -->
+    <g transform="translate(16, 135)">
+      <rect width="248" height="135" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="22" fill="#e2e8f0" font-size="13" font-weight="600">候选匹配校验 (Selection Gate)</text>
+      <text x="12" y="42" fill="#cbd5e1" font-size="11">1. 仓库路径一致？ (repo_mismatch)</text>
+      <text x="12" y="60" fill="#cbd5e1" font-size="11">2. WSL发行版一致？ (wsl_distro_mismatch)</text>
+      <text x="12" y="78" fill="#cbd5e1" font-size="11">3. 工作区根路径一致？ (workspace_root)</text>
+      <text x="12" y="98" fill="#38bdf8" font-size="11" font-weight="600">• 精确相同基线？ ➔ 直接命中 (Exact Hit)</text>
+      <text x="12" y="118" fill="#f59e0b" font-size="11" font-weight="600">• 同分支家族？ ➔ 触发改向分歧测算</text>
+    </g>
+
+    <!-- Retarget Divergence Calculation -->
+    <g transform="translate(16, 285)">
+      <rect width="248" height="155" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1.2"/>
+      <text x="12" y="22" fill="#fbbf24" font-size="13" font-weight="600">分支改向守卫 (Divergence Guard)</text>
+      <text x="12" y="42" fill="#94a3b8" font-size="11">预热分支与目标分支（如 origin/main ↔ main）</text>
+      <path d="M 12 50 L 236 50" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="68" fill="#cbd5e1" font-size="11">双向提交距离测算 (rev-list --count)：</text>
+      <text x="12" y="86" fill="#fde047" font-family="monospace" font-size="11">ahead + behind ≤ 100 提交？</text>
+      <text x="12" y="106" fill="#cbd5e1" font-size="11">公共历史校验 (git merge-base)：</text>
+      <text x="12" y="122" fill="#fde047" font-family="monospace" font-size="11">确认共享同一祖先提交？</text>
+      <text x="12" y="142" fill="#94a3b8" font-size="10">若超标或孤立，拒绝改向以防巨额IO卡顿</text>
+    </g>
+
+    <!-- Decision Branch -->
+    <g transform="translate(16, 455)">
+      <rect width="116" height="75" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+      <text x="10" y="20" fill="#a7f3d0" font-size="11" font-weight="600">分歧在阈值内</text>
+      <text x="10" y="38" fill="#ecfdf5" font-size="10">保留预热目录</text>
+      <text x="10" y="52" fill="#ecfdf5" font-size="10">硬重置至目标</text>
+      <text x="10" y="66" fill="#34d399" font-size="10">➔ 改向命中交付</text>
+
+      <rect x="132" y="0" width="116" height="75" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="1"/>
+      <text x="142" y="20" fill="#fca5a5" font-size="11" font-weight="600">分歧超标/失败</text>
+      <text x="142" y="38" fill="#fef2f2" font-size="10">判定为未命中</text>
+      <text x="142" y="52" fill="#fef2f2" font-size="10">不毁损现存池</text>
+      <text x="142" y="66" fill="#f87171" font-size="10">➔ 回退常规创建</text>
+    </g>
+  </g>
+
+  <!-- Lane 3: 原子交付与突发复充 (Handover & Rearm) -->
+  <g transform="translate(680, 90)">
+    <rect width="280" height="550" rx="12" fill="url(#boxGrad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="280" height="38" rx="12" fill="#1e293b"/>
+    <text x="16" y="24" fill="#10b981" font-size="14" font-weight="600">3. 原子终结与复充 (Finalize &amp; Rearm)</text>
+
+    <!-- Synchronous Claim -->
+    <g transform="translate(16, 55)">
+      <rect width="248" height="70" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.2"/>
+      <text x="12" y="22" fill="#34d399" font-size="13" font-weight="600">同步认领 (Atomic Claim)</text>
+      <text x="12" y="42" fill="#cbd5e1" font-size="11">同步将预热项从 Map 移除并注销定时器</text>
+      <text x="12" y="58" fill="#94a3b8" font-size="10">绝不让并发创建任务抢到同一目录 (TOCTOU防范)</text>
+    </g>
+
+    <!-- Atomic Directory Move -->
+    <g transform="translate(16, 140)">
+      <rect width="248" height="150" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="22" fill="#e2e8f0" font-size="13" font-weight="600">原子搬移与分支绑定</text>
+      <text x="12" y="42" fill="#cbd5e1" font-size="11">1. 双重强制搬移工作区目录：</text>
+      <text x="12" y="58" fill="#a7f3d0" font-family="monospace" font-size="9.5">git worktree move -f -f &lt;prep&gt; &lt;target&gt;</text>
+      <text x="12" y="74" fill="#64748b" font-size="9.5">（两道 -f 保留 Git 2.25+ 锁原因）</text>
+      <text x="12" y="92" fill="#cbd5e1" font-size="11">2. 签出新业务分支并挂载代码：</text>
+      <text x="12" y="108" fill="#a7f3d0" font-family="monospace" font-size="9.5">git checkout --no-track -b &lt;branch&gt;</text>
+      <text x="12" y="126" fill="#cbd5e1" font-size="11">3. 擦除独占锁标记并持久化基线</text>
+      <text x="12" y="140" fill="#64748b" font-size="9.5">unlink(locked) ➔ 交付给终端/代理挂载</text>
+    </g>
+
+    <!-- Burst Re-arm -->
+    <g transform="translate(16, 305)">
+      <rect width="248" height="120" rx="8" fill="#1e293b" stroke="#0284c7" stroke-width="1.2"/>
+      <text x="12" y="22" fill="#38bdf8" font-size="13" font-weight="600">突发再充能 (Burst Rearm)</text>
+      <text x="12" y="42" fill="#cbd5e1" font-size="11">用户连续派发多个智能体任务时：</text>
+      <text x="12" y="60" fill="#cbd5e1" font-size="11">• 记录消耗时钟 (5分钟时间窗口)</text>
+      <text x="12" y="78" fill="#cbd5e1" font-size="11">• 当前工作区启动彻底就绪后才触发</text>
+      <text x="12" y="96" fill="#cbd5e1" font-size="11">• 避免新预热重置磁盘与当前终端争抢IO</text>
+      <text x="12" y="112" fill="#38bdf8" font-size="10">➔ 自动在后台启动下一个工作区预热</text>
+    </g>
+
+    <!-- Stale Cleanup Guard -->
+    <g transform="translate(16, 440)">
+      <rect width="248" height="90" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+      <text x="12" y="20" fill="#e2e8f0" font-size="12" font-weight="600">崩溃残留保底机制 (Stale Cleanup)</text>
+      <text x="12" y="38" fill="#94a3b8" font-size="10.5">宿主启动或创建时巡检孤儿锁与残留目录：</text>
+      <text x="12" y="54" fill="#cbd5e1" font-size="10.5">• 探测 PID 是否已消亡 (process.kill 0)</text>
+      <text x="12" y="70" fill="#cbd5e1" font-size="10.5">• 仅清除隐藏临时区，绝不删已挂分支文件</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrows connecting lanes -->
+  <path d="M 320 220 L 360 220" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 640 220 L 680 220" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <path d="M 640 500 L 660 500 L 660 360 L 680 360" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrow-amber)"/>
+</svg>

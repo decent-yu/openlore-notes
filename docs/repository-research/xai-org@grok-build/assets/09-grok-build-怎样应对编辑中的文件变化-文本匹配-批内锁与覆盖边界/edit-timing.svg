@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="710" viewBox="0 0 1120 710" role="img" aria-labelledby="title desc">
+  <title id="title">同样是用户改文件，发生时机决定编辑结果</title>
+  <desc id="desc">以把 timeout 从 30 改为 60 为例。用户在工具读取前把 retries 改为 3，这个改动进入底稿并保留。用户在工具读取后、写回前修改 retries，则可能被基于旧底稿的整文件写回覆盖。同批文件锁不能阻止外部编辑器写入。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#475569" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1120" height="710" fill="#fbfaf7"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#243244">
+    <text x="42" y="46" font-size="27" font-weight="600">关键分界：编辑工具何时读取了文件？</text>
+    <text x="42" y="78" font-size="17" fill="#566477">假设模型要求 timeout = 30 → timeout = 60；用户同时调整 retries。</text>
+    <text x="42" y="120" font-size="15" fill="#566477">以下是由普通文件替换实现推导的时序示意，未实际运行；不含持久记忆专用路径。</text>
+
+    <text x="42" y="171" font-size="21" font-weight="600" fill="#24645c">A　用户先保存，工具后读取</text>
+    <line x1="70" y1="230" x2="1045" y2="230" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+    <g stroke="#24645c" stroke-width="2" fill="#fbfaf7">
+      <circle cx="130" cy="230" r="7"/><circle cx="410" cy="230" r="7"/><circle cx="690" cy="230" r="7"/><circle cx="975" cy="230" r="7"/>
+    </g>
+    <text x="70" y="207" font-size="17">用户保存</text>
+    <text x="350" y="207" font-size="17">工具读取</text>
+    <text x="630" y="207" font-size="17">匹配并替换</text>
+    <text x="915" y="207" font-size="17">整文件写回</text>
+    <g font-family="Menlo, monospace" font-size="17">
+      <text x="70" y="268">retries = 3</text>
+      <text x="350" y="268">timeout = 30</text><text x="350" y="293" fill="#24645c">retries = 3</text>
+      <text x="630" y="268">30 → 60</text>
+      <text x="900" y="268">timeout = 60</text><text x="900" y="293" fill="#24645c">retries = 3</text>
+    </g>
+    <path d="M350 321 v9 H1040 v-9" stroke="#24645c" stroke-width="1.5" fill="none"/>
+    <text x="350" y="357" font-size="16" fill="#24645c">替换以工具读到的当前内容为底稿，保留其中未被替换的文字。</text>
+
+    <line x1="42" y1="387" x2="1078" y2="387" stroke="#d9d9d2"/>
+    <text x="42" y="427" font-size="21" font-weight="600" fill="#9b4b35">B　工具已读取，用户才保存</text>
+    <line x1="70" y1="486" x2="1045" y2="486" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+    <g stroke="#9b4b35" stroke-width="2" fill="#fbfaf7">
+      <circle cx="130" cy="486" r="7"/><circle cx="410" cy="486" r="7"/><circle cx="690" cy="486" r="7"/><circle cx="975" cy="486" r="7"/>
+    </g>
+    <text x="70" y="463" font-size="17">工具读取</text><text x="350" y="463" font-size="17">匹配并替换</text>
+    <text x="630" y="463" font-size="17">用户保存</text><text x="915" y="463" font-size="17">整文件写回</text>
+    <g font-family="Menlo, monospace" font-size="17">
+      <text x="70" y="524">timeout = 30</text><text x="70" y="549">retries = 2</text>
+      <text x="350" y="524">30 → 60</text><text x="350" y="549">retries = 2</text>
+      <text x="630" y="524" fill="#9b4b35">retries = 3</text>
+      <text x="900" y="524">timeout = 60</text><text x="900" y="549" fill="#9b4b35">retries = 2</text>
+    </g>
+    <path d="M70 577 v9 H1040 v-9" stroke="#9b4b35" stroke-width="1.5" fill="none"/>
+    <text x="70" y="613" font-size="16" fill="#9b4b35">写回前没有再次比较整文件版本；晚到的用户修改可能被覆盖。</text>
+    <rect x="42" y="644" width="1036" height="42" rx="5" fill="#e9edf0"/>
+    <text x="60" y="671" font-size="16">同批路径锁让受管理的工具调用互相等待；用户编辑器、其他会话和普通终端命令不共享这把锁。</text>
+  </g>
+</svg>

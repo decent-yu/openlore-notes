@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="510" viewBox="0 0 1100 510" role="img" aria-labelledby="title desc">
+<title id="title">摘要失败后的六条消息：保留在数据库，不等于自动再次进入收件箱</title>
+<desc id="desc">假设同一会话的六条消息在回合开始后到达，摘要失败且模型没有另行读取历史。模型只见前五条正文和还有一条的提示，但消费记录包含六个编号。回合成功后已读位置推进到第六条，下一次收件箱不会自动返回第六条。</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#3a626b"/></marker><style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-size:17px;fill:#193946}.s{font-size:15px;fill:#4d6370}.l{font-size:20px;font-weight:600}.arrow{stroke:#3a626b;stroke-width:2;fill:none;marker-end:url(#a)}</style></defs>
+<rect width="1100" height="510" fill="#fcfbf7"/>
+<text x="40" y="43" font-size="25" font-weight="650">六条都记为“已消费”，第六条正文却可能没有展示</text>
+<text x="40" y="75" class="s">静态推演：同一会话、消息均在初始收件箱读取后到达、摘要失败、未另行读取完整历史。</text>
+<text x="40" y="126" class="l">数据库中的原消息</text>
+<g fill="#e7eff2" stroke="#afc4cb"><rect x="40" y="147" width="108" height="58" rx="5"/><rect x="158" y="147" width="108" height="58" rx="5"/><rect x="276" y="147" width="108" height="58" rx="5"/><rect x="394" y="147" width="108" height="58" rx="5"/><rect x="512" y="147" width="108" height="58" rx="5"/></g>
+<rect x="630" y="147" width="180" height="58" rx="5" fill="#fff0e3" stroke="#bf7e4e"/>
+<g text-anchor="middle"><text x="94" y="183">第 1 条</text><text x="212" y="183">第 2 条</text><text x="330" y="183">第 3 条</text><text x="448" y="183">第 4 条</text><text x="566" y="183">第 5 条</text><text x="720" y="183">第 6 条：先别发送</text></g>
+<text x="843" y="182" class="s">六条正文均保留</text>
+<path d="M330 211V253" class="arrow"/><path d="M720 211V253" class="arrow"/>
+<text x="40" y="243" class="l">模型实际收到</text>
+<rect x="40" y="265" width="580" height="66" rx="5" fill="#e7eff2" stroke="#afc4cb"/>
+<text x="64" y="292">前五条正文</text><text x="64" y="316" class="s">renderSteerBatchTruncated() 只保留前五条</text>
+<rect x="630" y="265" width="430" height="66" rx="5" fill="#fff0e3" stroke="#bf7e4e"/>
+<text x="650" y="292">“另有 1 条被省略”的提示</text><text x="650" y="316" class="s">没有第六条正文；可以主动查历史，但并非强制</text>
+<path d="M550 338V372" class="arrow"/>
+<rect x="40" y="387" width="1020" height="83" rx="5" fill="#f3e5df"/>
+<text x="62" y="415">若回合成功：消费记录包含全部六个编号 → 自动把已读位置推进到第六条</text>
+<text x="62" y="444">下一次收件箱只找该位置之后的消息；第六条仍可查到，却不会因此自动重读。</text>
+<text x="40" y="494" class="s">依据：turn.ts 的截短回退、tryDrainSteer() 与成功收尾；inproc-client.ts 的已读位置查询。</text>
+<g fill="#3a626b"><path d="M330 253L325 243H335Z"/><path d="M720 253L715 243H725Z"/><path d="M550 372L545 362H555Z"/></g></svg>
