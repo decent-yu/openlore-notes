@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker><marker id="optional" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#a16207"/></marker></defs>
+<rect width="1120" height="690" fill="#fafaf7"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#172033">
+<text x="38" y="46" font-size="26" font-weight="600">一条细节进入摘要，要经过两次有损处理</text>
+<text x="38" y="78" font-size="16" fill="#526174">源码流程示意：图中数量是实现上限，不代表实际会话的测量结果。</text>
+<path d="M186 187H235M438 187H493M718 187H769M942 187H988" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="38" y="119" width="148" height="137" rx="9" fill="#e2e8f0" stroke="#94a3b8"/>
+<text x="58" y="153" font-size="20" font-weight="600">数据库观察</text><text x="58" y="186" font-size="16">按会话读取</text><text x="58" y="214" font-size="16">原文仍留库中</text><text x="58" y="239" font-size="13" fill="#526174">受另行保留策略约束</text>
+<rect x="235" y="119" width="203" height="137" rx="9" fill="#dbeafe" stroke="#60a5fa"/>
+<text x="253" y="153" font-size="20" font-weight="600">选记录</text><text x="253" y="185" font-size="16">最多 256 条</text><text x="253" y="213" font-size="16">首尾优先；其余评分</text><text x="253" y="239" font-size="14" fill="#526174">入选后按时间排列</text>
+<rect x="493" y="119" width="225" height="137" rx="9" fill="#dbeafe" stroke="#60a5fa"/>
+<text x="511" y="153" font-size="20" font-weight="600">裁正文、核总长度</text><text x="511" y="185" font-size="16">每条正文取前 3000 字符</text><text x="511" y="213" font-size="16">仍超预算：再删低分记录</text><text x="511" y="239" font-size="14" fill="#526174">最后还可能整体截短</text>
+<rect x="769" y="119" width="173" height="137" rx="9" fill="#dbeafe" stroke="#60a5fa"/>
+<text x="787" y="153" font-size="20" font-weight="600">组装模型输入</text><text x="787" y="186" font-size="16">附加省略／截短提示</text><text x="787" y="214" font-size="16">不会自动回读原文</text>
+<rect x="988" y="119" width="94" height="137" rx="9" fill="#dcfce7" stroke="#4ade80"/>
+<text x="1004" y="157" font-size="20" font-weight="600">模型</text><text x="1004" y="190" font-size="16">生成</text><text x="1004" y="218" font-size="16">摘要页</text>
+<path d="M335 256V302H506M604 256V302H506V342" fill="none" stroke="#a16207" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#optional)"/>
+<rect x="289" y="342" width="438" height="149" rx="9" fill="#fef3c7" stroke="#d6a234"/>
+<text x="308" y="375" font-size="20" font-weight="600">可选：从遗漏部分提取字面细节</text><text x="308" y="407" font-size="16">错误行、路径、网址、版本号等；默认关闭</text><text x="308" y="436" font-size="16">最多占观察预算 1/8，且不超过 8192 字符</text><text x="308" y="466" font-size="16" fill="#854d0e">这是再给模型一次机会，不是强制保留到成品</text>
+<path d="M727 414H855V256" fill="none" stroke="#a16207" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#optional)"/>
+<path d="M112 256V557H928" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="137" y="547" font-size="17">摘要缺细节时：有权限的调用者另行分页／检索原始观察</text>
+<rect x="931" y="529" width="151" height="56" rx="7" fill="#e2e8f0" stroke="#94a3b8"/><text x="948" y="564" font-size="18">原始记录回查</text>
+<text x="38" y="615" font-size="17" font-weight="600">三个不同结果：已保存 → 已送入模型 → 已写入摘要</text>
+<text x="38" y="649" font-size="15" fill="#526174">依据：consolidator.rs、projection.rs、keep_tokens.rs；原文查询入口为 memory_read_session_observations。</text>
+</g></svg>

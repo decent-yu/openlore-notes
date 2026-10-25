@@ -733,6 +733,86 @@
       "has_research": true,
       "reading_path": "stablyai@orca/10-orca-如何预热与复用工作区检出-投机准备池-改向分支分歧与防冲撞锁.md",
       "research_path": "stablyai@orca/10-orca-如何预热与复用工作区检出-投机准备池-改向分支分歧与防冲撞锁.md"
+    },
+    "art_2befe9be-a670-4838-b494-c62525844f12": {
+      "collection_id": "col_626575a4-0d9",
+      "directory": "yetone@cumora/10-cumora-把-agent-放在自己电脑上-不能直接联网-怎样仍能替团队办事",
+      "slug": "cumora-把-agent-放在自己电脑上-不能直接联网-怎样仍能替团队办事",
+      "title": "Cumora 把 Agent 放在自己电脑上：不能直接联网，怎样仍能替团队办事",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-25T21:19:13.581Z",
+      "updated_at": "2026-10-25T21:19:13.581Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/10-cumora-把-agent-放在自己电脑上-不能直接联网-怎样仍能替团队办事.md",
+      "research_path": "yetone@cumora/10-cumora-把-agent-放在自己电脑上-不能直接联网-怎样仍能替团队办事.md"
+    },
+    "art_828c1118-79f4-47e6-b1bf-42d698059233": {
+      "collection_id": "col_626575a4-0d9",
+      "directory": "superset-sh@superset/10-superset-怎样把远程开发服务器接到本机-端口归属-连接复用与恢复边界",
+      "slug": "superset-怎样把远程开发服务器接到本机-端口归属-连接复用与恢复边界",
+      "title": "Superset 怎样把远程开发服务器接到本机：端口归属、连接复用与恢复边界",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-25T21:19:13.581Z",
+      "updated_at": "2026-10-25T21:19:13.581Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/10-superset-怎样把远程开发服务器接到本机-端口归属-连接复用与恢复边界.md",
+      "research_path": "superset-sh@superset/10-superset-怎样把远程开发服务器接到本机-端口归属-连接复用与恢复边界.md"
+    },
+    "art_9c08ee99-65fe-4c26-941a-d771abadb23f": {
+      "collection_id": "col_626575a4-0d9",
+      "directory": "akitaonrails@ai-memory/10-ai-memory-的长会话摘要为什么漏细节-输入筛选-字面补充与回查边界",
+      "slug": "ai-memory-的长会话摘要为什么漏细节-输入筛选-字面补充与回查边界",
+      "title": "ai-memory 的长会话摘要为什么漏细节：输入筛选、字面补充与回查边界",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-25T21:19:13.581Z",
+      "updated_at": "2026-10-25T21:19:13.581Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/10-ai-memory-的长会话摘要为什么漏细节-输入筛选-字面补充与回查边界.md",
+      "research_path": "akitaonrails@ai-memory/10-ai-memory-的长会话摘要为什么漏细节-输入筛选-字面补充与回查边界.md"
+    },
+    "art_f971592b-5bb6-4ea1-92d7-678da7f9512c": {
+      "collection_id": "col_626575a4-0d9",
+      "directory": "xai-org@grok-build/10-grok-build-的工具结果为何会有两份-后置检查-输出替换与失败边界",
+      "slug": "grok-build-的工具结果为何会有两份-后置检查-输出替换与失败边界",
+      "title": "Grok Build 的工具结果为何会有两份：后置检查、输出替换与失败边界",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-25T21:19:13.581Z",
+      "updated_at": "2026-10-25T21:19:13.581Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/10-grok-build-的工具结果为何会有两份-后置检查-输出替换与失败边界.md",
+      "research_path": "xai-org@grok-build/10-grok-build-的工具结果为何会有两份-后置检查-输出替换与失败边界.md"
+    },
+    "art_858b541c-2196-4be4-9197-c9922fce9d54": {
+      "collection_id": "col_626575a4-0d9",
+      "directory": "stablyai@orca/11-orca-如何确认-ssh-服务器身份-信任来源-密钥变更与登录回退边界",
+      "slug": "orca-如何确认-ssh-服务器身份-信任来源-密钥变更与登录回退边界",
+      "title": "Orca 如何确认 SSH 服务器身份：信任来源、密钥变更与登录回退边界",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-25T21:19:13.581Z",
+      "updated_at": "2026-10-25T21:19:13.581Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/11-orca-如何确认-ssh-服务器身份-信任来源-密钥变更与登录回退边界.md",
+      "research_path": "stablyai@orca/11-orca-如何确认-ssh-服务器身份-信任来源-密钥变更与登录回退边界.md"
     }
   },
   "collection_locations": {
@@ -823,6 +903,18 @@
         "art_d8b132f1-7a64-4703-bffd-af04eda8cc55",
         "art_123ad1ba-5d74-4f22-ac6c-2eaa7bf10e41"
       ]
+    },
+    "col_626575a4-0d9": {
+      "path": "docs/repository-research/batches/20261026-01.md",
+      "date_sequence": "20261026-01",
+      "created_at": "2026-10-25T21:19:13.581Z",
+      "article_ids": [
+        "art_2befe9be-a670-4838-b494-c62525844f12",
+        "art_828c1118-79f4-47e6-b1bf-42d698059233",
+        "art_9c08ee99-65fe-4c26-941a-d771abadb23f",
+        "art_f971592b-5bb6-4ea1-92d7-678da7f9512c",
+        "art_858b541c-2196-4be4-9197-c9922fce9d54"
+      ]
     }
   },
   "delivered_batches": [
@@ -832,7 +924,8 @@
     "batch_55eeaf41-d2aa-4ebc-97ca-8e43973fdcc3",
     "batch_75270be3-b29c-43c8-877b-a843c7a34a96",
     "batch_1fcbd952-af7a-4531-8d1a-99c696ed3041",
-    "batch_dfedc233-0142-477c-8565-11bfc7f04205"
+    "batch_dfedc233-0142-477c-8565-11bfc7f04205",
+    "batch_d9af3567-a67d-4f13-bd36-7d3b815f66d4"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -856,9 +949,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "7ad642411bbcb7fb1cf6e4b74c77402d85fb6d4dcb0ff2f4dc142dcd390d8b9a",
+      "sha256": "754810a1328e4d5e457f50deb55738d0be82b02c6e93f536662a917d16d28a27",
       "media_type": "text/markdown",
-      "size": 58561
+      "size": 65116
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -1389,6 +1482,61 @@
       "sha256": "4e2b50ec2f8ed9f06cd8d44ad0d2b415dc5c4ae993111f2efe6e79b234f554d0",
       "media_type": "text/markdown",
       "size": 3317
+    },
+    "docs/repository-research/yetone@cumora/10-cumora-把-agent-放在自己电脑上-不能直接联网-怎样仍能替团队办事.md": {
+      "sha256": "c0edcb7c7139e824ea5a03b5c631fde637386f7f0edc62966902d49b19e964a7",
+      "media_type": "text/markdown",
+      "size": 21758
+    },
+    "docs/repository-research/yetone@cumora/assets/10-cumora-把-agent-放在自己电脑上-不能直接联网-怎样仍能替团队办事/local-authority.svg": {
+      "sha256": "d4bc5deb7e59d810341240a5222fac0f7438882749be9302130778f59c7b05fc",
+      "media_type": "image/svg+xml",
+      "size": 6331
+    },
+    "docs/repository-research/superset-sh@superset/10-superset-怎样把远程开发服务器接到本机-端口归属-连接复用与恢复边界.md": {
+      "sha256": "a9272b7b51e35639ef3feba5b575605f060e090fc16bb4b48b5e1e71e8c5e417",
+      "media_type": "text/markdown",
+      "size": 22481
+    },
+    "docs/repository-research/superset-sh@superset/assets/10-superset-怎样把远程开发服务器接到本机-端口归属-连接复用与恢复边界/workspace-port-path.svg": {
+      "sha256": "1e15edd2273aa6e14310b09956aaed578153271d75b983f3c4db2f57ea14e3e7",
+      "media_type": "image/svg+xml",
+      "size": 5081
+    },
+    "docs/repository-research/akitaonrails@ai-memory/10-ai-memory-的长会话摘要为什么漏细节-输入筛选-字面补充与回查边界.md": {
+      "sha256": "876512c6f72f90c9c59960263c4294c107dff83067ed8ece6fe77150341e1058",
+      "media_type": "text/markdown",
+      "size": 19301
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/10-ai-memory-的长会话摘要为什么漏细节-输入筛选-字面补充与回查边界/consolidation-input.svg": {
+      "sha256": "338bc96dce8cc9582e660f30d62902f568ceeb84f0cfbe724105fcdcb6220994",
+      "media_type": "image/svg+xml",
+      "size": 4152
+    },
+    "docs/repository-research/xai-org@grok-build/10-grok-build-的工具结果为何会有两份-后置检查-输出替换与失败边界.md": {
+      "sha256": "fd03f8d175840c2e69e73d0b099413400586b9af75cb5cd3101e69360ed9eb2d",
+      "media_type": "text/markdown",
+      "size": 20424
+    },
+    "docs/repository-research/xai-org@grok-build/assets/10-grok-build-的工具结果为何会有两份-后置检查-输出替换与失败边界/post-tool-result.svg": {
+      "sha256": "68afbac60099fa567235d95f6743c5b27078c294b35c3641d31c7754f35b8e67",
+      "media_type": "image/svg+xml",
+      "size": 4307
+    },
+    "docs/repository-research/stablyai@orca/11-orca-如何确认-ssh-服务器身份-信任来源-密钥变更与登录回退边界.md": {
+      "sha256": "063523fcc39c4f3bc783712954795ec4c5aa122880ccde002f9610847aa537ef",
+      "media_type": "text/markdown",
+      "size": 20862
+    },
+    "docs/repository-research/stablyai@orca/assets/11-orca-如何确认-ssh-服务器身份-信任来源-密钥变更与登录回退边界/orca-ssh-host-trust.svg": {
+      "sha256": "349213a827b7924b69f7811c87feb8d117decc74f97b59ba4ecedfd8bd4cabe0",
+      "media_type": "image/svg+xml",
+      "size": 4802
+    },
+    "docs/repository-research/batches/20261026-01.md": {
+      "sha256": "395421dbf6a49b6cc460e3ae7c9693d6237629e30d1cec00ee05fc82f3822f6b",
+      "media_type": "text/markdown",
+      "size": 3332
     }
   }
 }

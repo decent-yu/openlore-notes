@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="730" viewBox="0 0 1120 730" role="img" aria-labelledby="title desc">
+  <title id="title">同一个 SSH 端点：首次信任与后续密钥冲突</title>
+  <desc id="desc">左侧表示证据可读、没有历史记录且使用默认策略时，密钥 A 被接受并异步记入 Orca 记录。右侧表示后续同一端点提交不同的同类型密钥 B，且 known_hosts 没有匹配记录时，被拒绝并终止密码和系统 SSH 回退。接受主机密钥不表示用户已登录，接受也不等待记录写盘。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#49657b"/></marker>
+    <marker id="redarrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#ac3f3b"/></marker>
+    <style>
+      text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#203246}
+      .h{font-size:26px;font-weight:650}.s{font-size:16px;fill:#576b7c}.label{font-size:20px;font-weight:600}.body{font-size:18px}.small{font-size:16px}.code{font-family:ui-monospace,Menlo,monospace;font-size:17px}
+      .line{stroke:#49657b;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1120" height="730" fill="#f7f9fb"/>
+  <text x="40" y="49" class="h">同一个地址，不同的密钥，为什么得到不同结果？</text>
+  <text x="40" y="80" class="s">自拟场景 · build.example:2222 · 内置 ssh2 连接路径 · A 与 B 是同类型、不同字节的公钥</text>
+  <path d="M560 113V644" stroke="#cfd9e2" stroke-width="1.5"/>
+  <text x="46" y="132" class="label">① 首次连接：双方都没有历史记录</text>
+  <text x="594" y="132" class="label">② 后续连接：Orca 已保存 A，收到 B</text>
+  <text x="46" y="160" class="s">证据可读，普通主机，默认 ask 策略</text>
+  <text x="594" y="160" class="s">known_hosts 未记录该端点；Orca 记录可读</text>
+  <rect x="110" y="191" width="340" height="59" rx="8" fill="#e6eef6" stroke="#aabed0"/>
+  <text x="280" y="227" text-anchor="middle" class="body">服务器提交公钥 A</text>
+  <rect x="658" y="191" width="340" height="59" rx="8" fill="#e6eef6" stroke="#aabed0"/>
+  <text x="828" y="227" text-anchor="middle" class="body">服务器提交公钥 B</text>
+  <path d="M280 250V280" class="line"/><path d="M828 250V280" class="line"/>
+  <path d="M110 282H450V367H110Z" fill="#fff" stroke="#aabed0"/>
+  <text x="280" y="314" text-anchor="middle" class="body">known_hosts：未知</text>
+  <text x="280" y="343" text-anchor="middle" class="body">Orca 记录：未知</text>
+  <path d="M658 282H998V367H658Z" fill="#fff" stroke="#c59492"/>
+  <text x="828" y="314" text-anchor="middle" class="body">known_hosts：未知</text>
+  <text x="828" y="343" text-anchor="middle" class="body">Orca 记录：同端点、同类型，B ≠ A</text>
+  <path d="M280 367V397" class="line"/><path d="M828 367V397" class="line"/>
+  <rect x="110" y="399" width="340" height="62" rx="8" fill="#dfefe7" stroke="#70a68a"/>
+  <text x="280" y="436" text-anchor="middle" class="code">accept-and-remember</text>
+  <rect x="658" y="399" width="340" height="62" rx="8" fill="#f7e5e3" stroke="#ba7470"/>
+  <text x="828" y="436" text-anchor="middle" class="code">HostKeyVerificationError</text>
+  <path d="M215 461V506H155V537" class="line"/>
+  <path d="M345 461V506H410V537" class="line" stroke-dasharray="6 5"/>
+  <rect x="48" y="540" width="216" height="73" rx="8" fill="#fff" stroke="#70a68a"/>
+  <text x="156" y="570" text-anchor="middle" class="body">允许继续用户认证</text>
+  <text x="156" y="596" text-anchor="middle" class="small">此时尚不代表登录成功</text>
+  <rect x="300" y="540" width="216" height="73" rx="8" fill="#fff" stroke="#70a68a"/>
+  <text x="408" y="570" text-anchor="middle" class="body">异步保存公钥 A</text>
+  <text x="408" y="596" text-anchor="middle" class="small">写盘失败不撤销本次接受</text>
+  <path d="M828 461V502" stroke="#ac3f3b" stroke-width="2" marker-end="url(#redarrow)"/>
+  <path d="M625 515H1030" stroke="#ac3f3b" stroke-width="5"/>
+  <text x="828" y="549" text-anchor="middle" class="label" style="fill:#943b37">拒绝成为终止条件</text>
+  <text x="828" y="581" text-anchor="middle" class="body">不再请求密码或私钥口令</text>
+  <text x="828" y="610" text-anchor="middle" class="body">不通过系统 SSH 回退绕过拒绝</text>
+  <rect x="40" y="657" width="1040" height="48" rx="6" fill="#eaf0f5"/>
+  <text x="61" y="688" class="small">边界：默认首次接受仍依赖首次连接可信；若 known_hosts 明确匹配 B，它可以覆盖 Orca 的旧记录 A。</text>
+</svg>

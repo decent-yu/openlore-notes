@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="790" viewBox="0 0 1120 790" role="img" aria-labelledby="title desc">
+  <title id="title">从工作区端口归属到远程页面连接</title>
+  <desc id="desc">上半部说明主机如何从终端进程树和后台进程的环境变量建立端口名册，下半部说明本机浏览器的多个连接如何通过一个共享通道连接远端服务。建立通道、本机监听和远端连接成功是三个不同阶段。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#355b76" stroke-width="1.5"/></marker>
+    <marker id="orange" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#a55a1d" stroke-width="1.5"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#203549;font-size:18px}
+      .title{font-size:27px;font-weight:650}.head{font-size:21px;font-weight:650}.small{font-size:16px}.muted{fill:#536575}
+      .line{fill:none;stroke:#355b76;stroke-width:2}
+      .hint{fill:none;stroke:#a55a1d;stroke-width:2;stroke-dasharray:6 4}
+    </style>
+  </defs>
+  <rect width="1120" height="790" fill="#fafaf7"/>
+  <text x="38" y="47" class="title">端口被发现、转发已就绪、页面能打开，是三件事</text>
+  <text x="38" y="78" class="small muted">假设：远端工作区 A 在 5173 运行开发服务器，本机同号端口空闲</text>
+
+  <rect x="30" y="104" width="1060" height="276" rx="10" fill="#edf3ef"/>
+  <text x="50" y="139" class="head">① 执行主机：先回答“这个端口归谁”</text>
+  <text x="57" y="184">工作区 A 的终端</text>
+  <text x="57" y="214" class="small muted">登记终端编号、工作区编号、进程编号</text>
+  <path d="M225 178 H340" class="line"/>
+  <text x="360" y="181">子进程 → 开发服务器</text>
+  <path d="M225 223 V279 H340" class="hint"/>
+  <text x="360" y="280">脱离进程树的后台服务</text>
+  <text x="360" y="307" class="small muted">尝试读取继承的终端编号</text>
+  <path d="M590 176 H720 V218 H756" class="line"/>
+  <path d="M620 275 H720 V246 H756" class="hint"/>
+  <rect x="773" y="180" width="290" height="135" rx="5" fill="#fff" stroke="#8aa79b"/>
+  <text x="792" y="210" class="head">内存端口名册</text>
+  <text x="792" y="242" class="small">A / 终端 t1 / 进程 p / 5173</text>
+  <text x="792" y="273" class="small">记录真实监听地址</text>
+  <text x="52" y="350" class="small muted">进程与监听扫描提供证据；终端中的启动文字只触发扫描。名册可能滞后于实际进程。</text>
+
+  <text x="47" y="422" class="head">② 桌面选择 A：请求通道，绑定本机端口</text>
+  <text x="47" y="453" class="small muted">握手确认主机支持转发；本机 127.0.0.1:5173 监听成功后，状态可显示 active。</text>
+  <text x="47" y="479" class="small muted">此时尚未连接远端 5173；若本机端口被占用，则显示 busy，等待用户处理。</text>
+
+  <rect x="30" y="503" width="420" height="207" rx="8" fill="#eaf0f8"/>
+  <rect x="785" y="503" width="305" height="207" rx="8" fill="#edf3ef"/>
+  <text x="49" y="535" class="head">③ 浏览器真正发起连接</text>
+  <text x="49" y="576">页面请求</text><text x="49" y="641">热更新连接</text>
+  <path d="M147 570 H217" class="line"/><path d="M158 635 H217" class="line"/>
+  <rect x="232" y="550" width="194" height="112" rx="4" fill="#fff" stroke="#99abc2"/>
+  <text x="245" y="582" class="small">本机转发监听器</text>
+  <text x="245" y="613" class="small">每条连接分配流编号</text>
+  <text x="245" y="641" class="small muted">例如 1、2</text>
+
+  <path d="M444 571 H769" class="line"/>
+  <path d="M444 638 H769" class="line"/>
+  <rect x="490" y="582" width="243" height="42" rx="4" fill="#fafaf7" stroke="#aeb8c0"/>
+  <text x="511" y="609" class="small">同一条 WebSocket 通道</text>
+  <text x="496" y="551" class="small muted">中继只接线、转发原始帧</text>
+  <text x="495" y="681" class="small muted">每条流分别传数据、归还额度</text>
+
+  <text x="807" y="542" class="head">主机 /fwd</text>
+  <text x="807" y="577" class="small">每次 OPEN 检查 A 的名册</text>
+  <text x="807" y="607" class="small">连接名册中的地址:5173</text>
+  <text x="807" y="637" class="small">成功 → OPENED</text>
+  <text x="807" y="669" class="small muted">拒绝单条流时可保留通道</text>
+  <path d="M332 173 L340 178 L332 183 M748 213 L756 218 L748 223 M209 565 L217 570 L209 575 M209 630 L217 635 L209 640 M761 566 L769 571 L761 576 M761 633 L769 638 L761 643" fill="none" stroke="#355b76" stroke-width="2"/>
+  <path d="M332 274 L340 279 L332 284 M748 241 L756 246 L748 251" fill="none" stroke="#a55a1d" stroke-width="2"/>
+  <text x="45" y="750" class="small muted">边界：只转发连接，不启动服务；通道断开会结束旧连接，新请求可另建通道，旧请求不会续传。</text>
+</svg>

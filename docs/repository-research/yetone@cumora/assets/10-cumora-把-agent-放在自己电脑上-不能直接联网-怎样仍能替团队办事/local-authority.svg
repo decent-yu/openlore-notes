@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="title desc">
+<title id="title">本地工具受限，团队动作由可信程序代办</title>
+<desc id="desc">安全默认模式中，模型通过固定 MCP 工具提交命令参数。可信桥把参数写入文件，守护进程将请求移入私有目录检查，附加运行令牌请求服务端。模型的命令网络和宿主机私有文件访问被限制。工具桥、交换目录和令牌均不放在模型可写的 Agent 工作目录 中。</desc>
+<defs>
+ <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#236b60"/></marker>
+ <marker id="gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#6b7280"/></marker>
+</defs>
+<rect width="1200" height="850" fill="#fff"/>
+<g font-family="PingFang SC,Microsoft YaHei,Arial,sans-serif" fill="#172c38">
+ <text x="35" y="46" font-size="28" font-weight="650">不能直接联网，仍然可以在团队里行动</text>
+ <text x="35" y="79" font-size="17" fill="#536575">本图仅画 BYOA 安全默认模式的团队工具请求；模型供应商连接另由引擎核心负责。</text>
+ <rect x="30" y="110" width="305" height="535" rx="8" fill="#eef4fb"/>
+ <rect x="365" y="110" width="435" height="535" rx="8" fill="#eef7f3"/>
+ <rect x="830" y="110" width="340" height="535" rx="8" fill="#f6f4ed"/>
+ <text x="50" y="145" font-size="21" font-weight="600">模型可驱动的本地工具</text>
+ <text x="385" y="145" font-size="21" font-weight="600">可信的本地程序</text>
+ <text x="850" y="145" font-size="21" font-weight="600">Cumora 服务端</text>
+ <text x="50" y="174" font-size="16" fill="#536575">受引擎与操作系统策略约束</text>
+ <text x="385" y="174" font-size="16" fill="#536575">代码与私有状态位于 Agent 工作目录 外</text>
+ <text x="850" y="174" font-size="16" fill="#536575">按当前身份与业务规则授权</text>
+ <rect x="50" y="200" width="265" height="94" rx="6" fill="#fff" stroke="#b1c9de"/>
+ <text x="67" y="229" font-size="19" font-weight="600">本地文件工具与 shell</text>
+ <text x="67" y="257" font-size="17">在 Agent 工作目录 内处理文件</text>
+ <text x="67" y="280" font-size="17">本地脚本、测试与构建</text>
+ <rect x="50" y="332" width="265" height="83" rx="6" fill="#fff" stroke="#87afa9"/>
+ <text x="67" y="361" font-size="19" font-weight="600">模型选择团队动作</text>
+ <text x="67" y="389" font-size="17">如 argv = ["inbox"]</text>
+ <path d="M315 373 H350 V252 H390" fill="none" stroke="#236b60" stroke-width="2.6" marker-end="url(#arrow)"/>
+ <text x="325" y="314" font-size="16" fill="#236b60" transform="rotate(-90 325 314)">固定 MCP 工具</text>
+ <rect x="390" y="205" width="385" height="94" rx="6" fill="#fff" stroke="#87afa9"/>
+ <text x="410" y="234" font-size="20" font-weight="600">① 桥接工具接收 argv</text>
+ <text x="410" y="261" font-size="17">只启动固定客户端；不经过 shell</text>
+ <text x="410" y="284" font-size="17" fill="#9b4141">拒绝 --file、--stdin</text>
+ <path d="M583 300 V336" stroke="#236b60" stroke-width="2.6" marker-end="url(#arrow)"/>
+ <rect x="410" y="339" width="345" height="76" rx="6" fill="#fff" stroke="#87afa9" stroke-dasharray="5 4"/>
+ <text x="430" y="369" font-size="19" font-weight="600">② 文件交换目录</text>
+ <text x="430" y="396" font-size="17">暂存后改名发布请求；无运行令牌</text>
+ <path d="M583 416 V453" stroke="#236b60" stroke-width="2.6" marker-end="url(#arrow)"/>
+ <rect x="390" y="456" width="385" height="138" rx="6" fill="#fff" stroke="#87afa9"/>
+ <text x="410" y="486" font-size="20" font-weight="600">③ 守护进程读取并代办</text>
+ <text x="410" y="515" font-size="17">先移入私有目录，再检查文件与参数</text>
+ <text x="410" y="541" font-size="17">使用自己配置的服务地址</text>
+ <text x="410" y="568" font-size="17" font-weight="600" fill="#236b60">运行令牌留在守护进程内存中</text>
+ <path d="M776 493 H850" stroke="#236b60" stroke-width="2.6" marker-end="url(#arrow)"/>
+ <text x="797" y="477" font-size="14" fill="#236b60">HTTP</text>
+ <rect x="853" y="446" width="294" height="90" rx="6" fill="#fff" stroke="#beb79b"/>
+ <text x="872" y="476" font-size="19" font-weight="600">④ /runtime/cli</text>
+ <text x="872" y="503" font-size="17">核验令牌与当前分配</text>
+ <text x="872" y="526" font-size="17">去掉自报身份，固定调用者</text>
+ <path d="M1000 538 V563" stroke="#236b60" stroke-width="2.6" marker-end="url(#arrow)"/>
+ <text x="866" y="589" font-size="18" font-weight="600">runCli → 消息、文档、邮件等</text>
+ <text x="866" y="616" font-size="16" fill="#536575">各命令继续检查对象访问条件</text>
+ <path d="M181 432 V465" stroke="#ab5151" stroke-width="2" stroke-dasharray="5 5"/>
+ <path d="M168 456 L194 482 M194 456 L168 482" stroke="#ab5151" stroke-width="3"/>
+ <text x="65" y="516" font-size="19" font-weight="600" fill="#9b4141">命令不能任意联网</text>
+ <text x="65" y="544" font-size="17" fill="#9b4141">不能借桥读取宿主机正文文件</text>
+ <text x="65" y="585" font-size="16" fill="#536575">结果沿请求通路返回模型</text>
+ <path d="M93 603 H274" stroke="#6b7280" stroke-width="1.6" marker-start="url(#gray)"/>
+ <g fill="#236b60"><path d="M380 247 L390 252 L380 257Z"/><path d="M578 326 L583 337 L588 326Z"/><path d="M578 443 L583 454 L588 443Z"/><path d="M841 488 L852 493 L841 498Z"/><path d="M995 553 L1000 564 L1005 553Z"/></g>
+ <line x1="35" y1="681" x2="1165" y2="681" stroke="#cdd6dc"/>
+ <text x="35" y="717" font-size="20" font-weight="600">为什么“放在哪个目录”也是权限设计？</text>
+ <text x="35" y="750" font-size="18">Agent 工作目录 可写：任务文件、笔记、工作目录。</text>
+ <text x="35" y="780" font-size="18">工作目录外另放：固定工具代码、请求与响应目录、守护进程私有处理目录。</text>
+ <text x="35" y="815" font-size="17" fill="#536575">这样限制模型改写代办程序；服务端仍须逐项授权，允许的业务动作也可能向外发送内容。</text>
+</g>
+</svg>
