@@ -193,6 +193,26 @@
       "collected_at": "2026-10-23T23:11:43.869Z",
       "updated_at": "2026-10-23T23:11:43.869Z",
       "has_research": true
+    },
+    "art_bccb7a11-1ae4-4a2e-8299-12263174e311": {
+      "collection_id": "col_e4d8a7a3-8cd",
+      "directory": "articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the",
+      "slug": "there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the",
+      "title": "There's always a patient zero: Defending the NetScaler front door before the patch",
+      "original_url": "https://blog.cloudflare.com/protect-your-netscaler-gateway",
+      "tags": [
+        "零信任访问控制",
+        "NetScaler Gateway",
+        "虚拟桌面基础设施",
+        "Web应用防火墙",
+        "源站访问限制",
+        "身份认证",
+        "纵深防御",
+        "安全运维验证"
+      ],
+      "collected_at": "2026-10-25T23:13:55.130Z",
+      "updated_at": "2026-10-25T23:13:55.130Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -240,6 +260,14 @@
         "art_9b430fc5-bad1-410d-8281-c4f8aafa3621",
         "art_70c37fba-3b5d-4a05-a4ac-cb31c298628d"
       ]
+    },
+    "col_e4d8a7a3-8cd": {
+      "path": "docs/architecture-and-development/batches/20261026-01.md",
+      "date_sequence": "20261026-01",
+      "created_at": "2026-10-25T23:13:55.130Z",
+      "article_ids": [
+        "art_bccb7a11-1ae4-4a2e-8299-12263174e311"
+      ]
     }
   },
   "delivered_batches": [
@@ -251,13 +279,14 @@
     "repair_dac43ee2-3fca-492a-a2e8-6c86e1c489bb",
     "batch_45f87efe-f078-4b0e-9781-5649a5dfadee",
     "batch_55c6040a-51b1-4287-9540-70cd7dd8ce27",
-    "batch_960af110-bc11-4b4b-91e7-31a52463ebd8"
+    "batch_960af110-bc11-4b4b-91e7-31a52463ebd8",
+    "batch_eac9d101-9db8-4092-a594-486b91daed90"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "56c620f3383429e2665e1bd320f74e1c3f5a6a095e4ff9c4f6286dbba1155895",
+      "sha256": "3dc7d24ee90d1a233bbfd83b23850838a79a9dc98d021ee6015bc9f364c2ab94",
       "media_type": "text/markdown",
-      "size": 8114
+      "size": 9069
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
       "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
@@ -713,6 +742,51 @@
       "sha256": "16a38cd8bc3985addc5c4a728651201dff88c084eb8c04388bd33c911033a642",
       "media_type": "text/markdown",
       "size": 1003
+    },
+    "docs/architecture-and-development/articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/README.md": {
+      "sha256": "5da6cf8b2c22448068ab8c636e07ed74d5190dcf426137543c6b1be86998358f",
+      "media_type": "text/markdown",
+      "size": 570
+    },
+    "docs/architecture-and-development/articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/article.md": {
+      "sha256": "fd44d898ef3e65d1399463995549a007f54c60dc50ac9df8679e7904de1d2c9b",
+      "media_type": "text/markdown",
+      "size": 18304
+    },
+    "docs/architecture-and-development/articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/article-zh-CN.md": {
+      "sha256": "8af1732da54c5095b451d09acf6afe8c3f4e3d903b2c90dc69e2599343189882",
+      "media_type": "text/markdown",
+      "size": 17156
+    },
+    "docs/architecture-and-development/articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/research.md": {
+      "sha256": "674759c1ad4fcc36af2e09e7b2acf83379358a016f7c9fdd335a30f675cf021b",
+      "media_type": "text/markdown",
+      "size": 22975
+    },
+    "docs/architecture-and-development/articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/assets/diagram-c84c05e942bb.webp": {
+      "sha256": "c84c05e942bb3a4738e3e2ef28ef8a7183eed21d78afd9062ca16b272367f63b",
+      "media_type": "image/webp",
+      "size": 33646
+    },
+    "docs/architecture-and-development/articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/assets/diagram-bde534cf67be.webp": {
+      "sha256": "bde534cf67bec65bac77f312bea40c8b3f1a243887c50c8cb96941eeb153f15a",
+      "media_type": "image/webp",
+      "size": 28938
+    },
+    "docs/architecture-and-development/articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/assets/diagram-32658370de9a.webp": {
+      "sha256": "32658370de9af17ae9b97d0ab9bfe97275a4e332d031aa2a8f3ce02ef6196f5a",
+      "media_type": "image/webp",
+      "size": 62650
+    },
+    "docs/architecture-and-development/articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/assets/two-access-paths.svg": {
+      "sha256": "5d5183d7ec65ac6514435a415eca27e60d3c9b16fad2a069c4ee9f3ffe664b1d",
+      "media_type": "image/svg+xml",
+      "size": 4614
+    },
+    "docs/architecture-and-development/batches/20261026-01.md": {
+      "sha256": "200e15c0979c3226b6744d0ba367e945762b03d9049508f4ce6a27db14e5bc62",
+      "media_type": "text/markdown",
+      "size": 590
     }
   }
 }

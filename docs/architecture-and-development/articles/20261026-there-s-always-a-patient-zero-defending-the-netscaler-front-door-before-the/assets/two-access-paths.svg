@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">网页登录与桌面会话需要两条独立的访问边界</title>
+  <desc id="desc">上方是网页登录路径：浏览器经过网页防火墙、Access 和受限回源入口，到达 NetScaler 与 StoreFront，获得启动信息。下方是原生客户端的单独桌面连接，需要另外部署私网连接和访问策略，之后由同一 NetScaler 角色验证 STA 票据，再代理到虚拟桌面。网页保护不会自动覆盖下方路径。</desc>
+  <defs>
+    <style>
+      text {font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#183047}
+      .title {font-size:30px;font-weight:650}
+      .section {font-size:23px;font-weight:650}
+      .label {font-size:21px;font-weight:600;text-anchor:middle}
+      .body {font-size:18px;text-anchor:middle;fill:#455e73}
+      .note {font-size:18px;fill:#455e73}
+    </style>
+  </defs>
+  <rect width="1200" height="760" rx="18" fill="#f8fafc"/>
+  <text x="40" y="54" class="title">同一次“打开桌面”，经过两条不同的路径</text>
+  <text x="40" y="88" class="note">概念示意：箭头表示请求或连接方向；具体路由与兼容性需要按部署验证。</text>
+
+  <rect x="25" y="116" width="1150" height="246" rx="14" fill="#edf5fc"/>
+  <text x="48" y="151" class="section">① 网页登录：先获准到达，再由 Citrix 决定可用桌面</text>
+  <g stroke="#b2cbe2" stroke-width="1.5" fill="#fff">
+    <rect x="45" y="186" width="185" height="95" rx="10"/>
+    <rect x="280" y="186" width="270" height="95" rx="10"/>
+    <rect x="600" y="186" width="225" height="95" rx="10"/>
+    <rect x="875" y="186" width="280" height="95" rx="10"/>
+  </g>
+  <text x="137" y="225" class="label">浏览器</text>
+  <text x="137" y="255" class="body">请求登录页面</text>
+  <text x="415" y="222" class="label">WAF → Access</text>
+  <text x="415" y="252" class="body">检查请求，再检查访问资格</text>
+  <text x="712" y="222" class="label">受限回源入口</text>
+  <text x="712" y="252" class="body">隧道或受限公网回源</text>
+  <text x="1015" y="222" class="label">NetScaler → StoreFront</text>
+  <text x="1015" y="252" class="body">认证、列出资源、取得票据</text>
+  <g fill="none" stroke="#2563a6" stroke-width="2.5">
+    <path d="M230 233H277"/><path d="M550 233H597"/><path d="M825 233H872"/>
+    <path d="M1015 284V326H138V284"/>
+  </g>
+  <path d="M277 233 266 227 266 239Z M597 233 586 227 586 239Z M872 233 861 227 861 239Z M138 284 132 295 144 295Z" fill="#2563a6"/>
+  <rect x="348" y="307" width="460" height="36" rx="18" fill="#edf5fc"/>
+  <text x="578" y="331" class="body">经原路径返回桌面启动信息（含 STA 票据）</text>
+
+  <rect x="25" y="386" width="1150" height="232" rx="14" fill="#fff4e7"/>
+  <text x="48" y="423" class="section">② 桌面会话：原生客户端另建连接，需单独保护</text>
+  <g stroke="#dfc4a3" stroke-width="1.5" fill="#fff">
+    <rect x="45" y="458" width="185" height="100" rx="10"/>
+    <rect x="280" y="458" width="270" height="100" rx="10" stroke-dasharray="7 5"/>
+    <rect x="600" y="458" width="225" height="100" rx="10"/>
+    <rect x="875" y="458" width="280" height="100" rx="10"/>
+  </g>
+  <text x="137" y="497" class="label">原生客户端</text>
+  <text x="137" y="528" class="body">读取桌面启动信息</text>
+  <text x="415" y="493" class="label">私网连接与访问策略</text>
+  <text x="415" y="524" class="body">需另行部署，不由上排提供</text>
+  <text x="712" y="497" class="label">NetScaler</text>
+  <text x="712" y="528" class="body">向 STA 验证会话票据</text>
+  <text x="1015" y="497" class="label">虚拟桌面</text>
+  <text x="1015" y="528" class="body">传输桌面画面与输入</text>
+  <g fill="none" stroke="#a45b17" stroke-width="2.5">
+    <path d="M230 507H277"/><path d="M550 507H597"/><path d="M825 507H872"/>
+  </g>
+  <path d="M277 507 266 501 266 513Z M597 507 586 501 586 513Z M872 507 861 501 861 513Z" fill="#a45b17"/>
+  <text x="48" y="594" class="note">若仍开放公网 ICA／DTLS 入口，网页 Access 不会自动把该入口变为私有。</text>
+
+  <path d="M48 651H1152" stroke="#d4dde5"/>
+  <text x="48" y="687" class="note">两处 NetScaler 表示同一网关角色；图中省略内部控制器与返回流量等细节。</text>
+  <text x="48" y="718" class="note">STA 是签发并验证启动票据的服务；票据有效，不代表处理票据前的协议代码没有漏洞。</text>
+</svg>
