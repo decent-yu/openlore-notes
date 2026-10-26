@@ -213,6 +213,26 @@
       "collected_at": "2026-10-25T23:13:55.130Z",
       "updated_at": "2026-10-25T23:13:55.130Z",
       "has_research": true
+    },
+    "art_9aee6b48-3c77-48b3-b040-308370b9a184": {
+      "collection_id": "col_d31a6caa-3cc",
+      "directory": "articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our",
+      "slug": "cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our",
+      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang",
+      "original_url": "https://blog.cloudflare.com/kv-cache-exposure-remediation",
+      "tags": [
+        "SGLang",
+        "KV Cache",
+        "Prefill/Decode 分离",
+        "多租户隔离",
+        "GPU 内存安全",
+        "RDMA",
+        "大模型推理",
+        "安全事故复盘"
+      ],
+      "collected_at": "2026-10-26T23:13:33.953Z",
+      "updated_at": "2026-10-26T23:13:33.953Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -268,6 +288,14 @@
       "article_ids": [
         "art_bccb7a11-1ae4-4a2e-8299-12263174e311"
       ]
+    },
+    "col_d31a6caa-3cc": {
+      "path": "docs/architecture-and-development/batches/20261027-01.md",
+      "date_sequence": "20261027-01",
+      "created_at": "2026-10-26T23:13:33.953Z",
+      "article_ids": [
+        "art_9aee6b48-3c77-48b3-b040-308370b9a184"
+      ]
     }
   },
   "delivered_batches": [
@@ -280,13 +308,14 @@
     "batch_45f87efe-f078-4b0e-9781-5649a5dfadee",
     "batch_55c6040a-51b1-4287-9540-70cd7dd8ce27",
     "batch_960af110-bc11-4b4b-91e7-31a52463ebd8",
-    "batch_eac9d101-9db8-4092-a594-486b91daed90"
+    "batch_eac9d101-9db8-4092-a594-486b91daed90",
+    "batch_dcfaae44-b505-4de5-ae42-81e433794c32"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "3dc7d24ee90d1a233bbfd83b23850838a79a9dc98d021ee6015bc9f364c2ab94",
+      "sha256": "de323d56c04a8538569f84f02232cba140981c57303c56da6499c6585400f666",
       "media_type": "text/markdown",
-      "size": 9069
+      "size": 10028
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
       "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
@@ -787,6 +816,51 @@
       "sha256": "200e15c0979c3226b6744d0ba367e945762b03d9049508f4ce6a27db14e5bc62",
       "media_type": "text/markdown",
       "size": 590
+    },
+    "docs/architecture-and-development/articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/README.md": {
+      "sha256": "5ef1651ada9cadc5e505ac681d6725ffe4e83049398497df5178ba56a1798ea8",
+      "media_type": "text/markdown",
+      "size": 546
+    },
+    "docs/architecture-and-development/articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/article.md": {
+      "sha256": "aec2734f8ef09dafcd1ef0ca0bf85531d8698f6b506aeb51e4cc2ee08466bae1",
+      "media_type": "text/markdown",
+      "size": 28519
+    },
+    "docs/architecture-and-development/articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/article-zh-CN.md": {
+      "sha256": "11c7c1666a7aec7578e8149a508f24f45ee5c425ddb2751cfe9e428231daf270",
+      "media_type": "text/markdown",
+      "size": 28417
+    },
+    "docs/architecture-and-development/articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/research.md": {
+      "sha256": "79415f1294f25908b0424a9653ebc4c14bc4bead55f76c6b4a2a267f329eaf63",
+      "media_type": "text/markdown",
+      "size": 24572
+    },
+    "docs/architecture-and-development/articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/assets/diagram-ae76b1faa629.webp": {
+      "sha256": "ae76b1faa629202810b37df1b8a4235c6e0c34f33015cc7f823f34ced5cc7011",
+      "media_type": "image/webp",
+      "size": 50366
+    },
+    "docs/architecture-and-development/articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/assets/diagram-ac2d4514e105.webp": {
+      "sha256": "ac2d4514e1050132c9425fea44cc99558b9e6a261d48d921fe6e80c2061ae0a2",
+      "media_type": "image/webp",
+      "size": 57634
+    },
+    "docs/architecture-and-development/articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/assets/late-write.svg": {
+      "sha256": "ca34dd3a8f388a9025877729f9bc39f08c62f578106dcf8dde8b9c9186da1c0c",
+      "media_type": "image/svg+xml",
+      "size": 4449
+    },
+    "docs/architecture-and-development/articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/assets/short-transfer.svg": {
+      "sha256": "146b154ffdc257afa762cc7e84586c6f950da84cfafb91273c2ba2d97b3b204d",
+      "media_type": "image/svg+xml",
+      "size": 5566
+    },
+    "docs/architecture-and-development/batches/20261027-01.md": {
+      "sha256": "7b23f54a4f71dab3b53830a0af22443eb34f142894804ecefe47fb7116d839de",
+      "media_type": "text/markdown",
+      "size": 592
     }
   }
 }
