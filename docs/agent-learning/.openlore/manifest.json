@@ -167,6 +167,26 @@
       "collected_at": "2026-10-24T00:09:50.330Z",
       "updated_at": "2026-10-24T00:09:50.330Z",
       "has_research": true
+    },
+    "art_7910f0c2-123d-4f09-bf25-ad39beccc28b": {
+      "collection_id": "col_7a682063-030",
+      "directory": "articles/20261026-the-five-components-of-building-a-company-harness",
+      "slug": "the-five-components-of-building-a-company-harness",
+      "title": "The five components of building a \"company harness\"",
+      "original_url": "https://www.langchain.com/blog/components-building-company-harness",
+      "tags": [
+        "企业智能体",
+        "Slack 集成",
+        "身份认证与授权",
+        "智能体记忆",
+        "沙箱代码执行",
+        "凭据代理",
+        "定时任务与事件驱动",
+        "Managed Deep Agents"
+      ],
+      "collected_at": "2026-10-26T00:08:36.580Z",
+      "updated_at": "2026-10-26T00:08:36.580Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -213,6 +233,14 @@
         "art_8fb8a207-065b-4e8d-96e8-c34d9c25c278",
         "art_e87fe398-1164-4c65-a406-f38a185f3866"
       ]
+    },
+    "col_7a682063-030": {
+      "path": "docs/agent-learning/batches/20261026-01.md",
+      "date_sequence": "20261026-01",
+      "created_at": "2026-10-26T00:08:36.580Z",
+      "article_ids": [
+        "art_7910f0c2-123d-4f09-bf25-ad39beccc28b"
+      ]
     }
   },
   "delivered_batches": [
@@ -225,13 +253,14 @@
     "repair_80f9c79c-f529-4c5a-86cb-2bc6f59269bf",
     "batch_7723dd56-3a4d-4e95-9db7-246a57a8bbbb",
     "batch_37317c3a-14c8-4672-9e70-1ee50300f9be",
-    "batch_443bdea0-b941-46c9-9378-80ffcafa14be"
+    "batch_443bdea0-b941-46c9-9378-80ffcafa14be",
+    "batch_7df57b02-1d80-4f15-8c02-56e97db3bb3a"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "60e9eb5b17a877cd14a948e74e2c7999cb2808c0281b1023cd2cb60428f675ed",
+      "sha256": "25ed605d0bc6a15e32421dc20ebe3b54d3f911a7af6373ba06002eea7622827a",
       "media_type": "text/markdown",
-      "size": 6581
+      "size": 7319
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -737,6 +766,66 @@
       "sha256": "3f1cc72dad5c1e0a4a56ff722f88be3e16fc15addec75877f2577351fec0ee68",
       "media_type": "text/markdown",
       "size": 846
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/README.md": {
+      "sha256": "8c344518b321f19b9820437c5e05544f010870c9ac7105059f2618baab06fd56",
+      "media_type": "text/markdown",
+      "size": 546
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/article.md": {
+      "sha256": "d6108339259bc8d2131f9ac0650e451a4a954e7caa9ffb3b57d6fc9cd4286cf1",
+      "media_type": "text/markdown",
+      "size": 8867
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/article-zh-CN.md": {
+      "sha256": "84ea270f2db6790b9f65da7d96b4b818294574554081f8d83728499641ddb2e9",
+      "media_type": "text/markdown",
+      "size": 9250
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/research.md": {
+      "sha256": "c0411a03640566d13132a43cdf620cff1c2ed6aae2329087434cc2537b5f678a",
+      "media_type": "text/markdown",
+      "size": 14791
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/assets/diagram-1777ef9d3773.png": {
+      "sha256": "1777ef9d37733f6b335e0750cb08026bc0afc16f6b86b6762abe514c7a2530f2",
+      "media_type": "image/png",
+      "size": 116499
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/assets/diagram-8a61b7bd7a2b.jpg": {
+      "sha256": "8a61b7bd7a2b83a846ac9e90a202a1958825ed7d188a3a506c49d7e91c92ffb8",
+      "media_type": "image/jpeg",
+      "size": 303411
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/assets/diagram-ffdd550f2d43.jpg": {
+      "sha256": "ffdd550f2d43dbaa4efec2efce6bfda50a2e57b608f561cc89cc1b0b882635c7",
+      "media_type": "image/jpeg",
+      "size": 363488
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/assets/diagram-13f844df265d.png": {
+      "sha256": "13f844df265d477e7740337b878e10ff6433d067d41a4638702fd9834a21e121",
+      "media_type": "image/png",
+      "size": 153759
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/assets/diagram-35e1329a1d9b.jpg": {
+      "sha256": "35e1329a1d9bd12961944e9f12ea30f2d4ec3738067c47f22254efa9f7730fff",
+      "media_type": "image/jpeg",
+      "size": 105066
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/assets/diagram-d939456bd7bd.png": {
+      "sha256": "d939456bd7bdc8f53314acbb5e9d1ebdb3ce8934c6aa6ec1729bf441dbf33b27",
+      "media_type": "image/png",
+      "size": 89112
+    },
+    "docs/agent-learning/articles/20261026-the-five-components-of-building-a-company-harness/assets/sandbox-auth-flow.svg": {
+      "sha256": "182e284161c880aa9d17568c5024581fc2e6a87d89c362763c9ae2947b381f86",
+      "media_type": "image/svg+xml",
+      "size": 5457
+    },
+    "docs/agent-learning/batches/20261026-01.md": {
+      "sha256": "787e569d845b18449c1f860e5c807571c2d1ab607ee0c27eb6dc9118c61f8ced",
+      "media_type": "text/markdown",
+      "size": 481
     }
   }
 }

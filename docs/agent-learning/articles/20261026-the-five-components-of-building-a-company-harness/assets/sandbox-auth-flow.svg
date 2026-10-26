@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="730" viewBox="0 0 1080 730" role="img" aria-labelledby="title desc">
+  <title id="title">代码在沙箱内运行，凭据在沙箱外注入</title>
+  <desc id="desc">上方的 Agent 控制程序向沙箱代码发送执行指令并读取执行结果。下方代码向外部服务发送网络请求，沙箱外的认证代理匹配规则并注入凭据。凭据从外部存储流向代理，服务数据返回代码。本图是基于 LangChain 官方文档的简化机制示意。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#245e76"/></marker>
+    <marker id="back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#687984"/></marker>
+    <marker id="secret" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#a96c20"/></marker>
+  </defs>
+  <rect width="1080" height="730" rx="18" fill="#f7f9fa"/>
+  <g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#172e3b">
+    <text x="46" y="56" font-size="28" font-weight="650">代码在沙箱内运行，凭据在沙箱外注入</text>
+    <text x="46" y="88" font-size="17" fill="#526773">简化机制示意 · 实线表示指令或请求，虚线表示结果返回</text>
+    <rect x="400" y="126" width="450" height="110" rx="14" fill="#e5eff4" stroke="#a4bfcd"/>
+    <text x="425" y="162" font-size="23" font-weight="600">Agent 控制程序</text>
+    <text x="425" y="193" font-size="18">在沙箱外决定下一步，再读取执行结果</text>
+    <text x="425" y="218" font-size="16" fill="#526773">不是把整个 Agent 放进沙箱</text>
+    <rect x="44" y="280" width="330" height="343" rx="18" fill="#e8f4f1" stroke="#4d9586" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="68" y="316" font-size="21" fill="#22685a" font-weight="600">沙箱边界</text>
+    <rect x="70" y="365" width="278" height="165" rx="12" fill="#fff" stroke="#8bb5aa"/>
+    <text x="91" y="403" font-size="22" font-weight="600">模型生成的代码</text>
+    <text x="91" y="439" font-size="18">处理文件、运行命令</text>
+    <text x="91" y="470" font-size="18">发起外部服务请求</text>
+    <text x="68" y="573" font-size="18" fill="#22685a">本路径无需把真实凭据</text>
+    <text x="68" y="600" font-size="18" fill="#22685a">交给沙箱中的代码</text>
+    <path d="M400 159 H208 V355" fill="none" stroke="#245e76" stroke-width="2.5"/>
+    <path d="M201 346 L208 358 L215 346 Z" fill="#245e76"/>
+    <text x="224" y="265" font-size="17" fill="#245e76">① 执行指令</text>
+    <path d="M330 365 V209 H390" fill="none" stroke="#687984" stroke-width="2" stroke-dasharray="6 5"/>
+    <path d="M382 203 L394 209 L382 215 Z" fill="#687984"/>
+    <text x="345" y="329" font-size="16" fill="#687984">执行结果</text>
+    <rect x="444" y="365" width="244" height="165" rx="12" fill="#fff" stroke="#a4bfcd" stroke-width="2"/>
+    <text x="467" y="403" font-size="23" font-weight="600">认证代理</text>
+    <text x="467" y="439" font-size="18">匹配目标与路径规则</text>
+    <text x="467" y="470" font-size="18">③ 添加认证信息</text>
+    <text x="467" y="502" font-size="16" fill="#526773">代理运行在沙箱外</text>
+    <path d="M348 425 H434" fill="none" stroke="#245e76" stroke-width="2.5"/>
+    <path d="M426 418 L438 425 L426 432 Z" fill="#245e76"/>
+    <text x="376" y="407" font-size="17" fill="#245e76">②</text>
+    <rect x="780" y="365" width="250" height="165" rx="12" fill="#fff" stroke="#a4bfcd" stroke-width="2"/>
+    <text x="803" y="403" font-size="23" font-weight="600">外部服务</text>
+    <text x="803" y="439" font-size="18">例如 GitHub 服务</text>
+    <text x="803" y="470" font-size="18">按凭据权限处理请求</text>
+    <path d="M688 425 H770" fill="none" stroke="#245e76" stroke-width="2.5"/>
+    <path d="M762 418 L774 425 L762 432 Z" fill="#245e76"/>
+    <text x="705" y="407" font-size="17" fill="#245e76">④</text>
+    <path d="M780 490 H698 M444 490 H358" fill="none" stroke="#687984" stroke-width="2" stroke-dasharray="6 5"/>
+    <path d="M706 484 L694 490 L706 496 Z M366 484 L354 490 L366 496 Z" fill="#687984"/>
+    <text x="544" y="581" font-size="17" fill="#687984">服务返回的数据仍会进入沙箱</text>
+    <rect x="854" y="135" width="176" height="110" rx="12" fill="#fff2dd" stroke="#d0a15b"/>
+    <text x="873" y="171" font-size="20" font-weight="600" fill="#845314">凭据存储</text>
+    <text x="873" y="201" font-size="16" fill="#845314">共享密钥 / 用户授权</text>
+    <path d="M942 245 V284 H566 V355" fill="none" stroke="#a96c20" stroke-width="2.5"/>
+    <path d="M559 347 L566 359 L573 347 Z" fill="#a96c20"/>
+    <rect x="626" y="269" width="196" height="27" fill="#f7f9fa"/>
+    <text x="638" y="289" font-size="17" fill="#a96c20">真实凭据交给代理</text>
+    <text x="46" y="674" font-size="18" font-weight="600">边界：不暴露凭据，不等于不会误操作。</text>
+    <text x="46" y="704" font-size="16" fill="#526773">依据 LangChain 沙箱与认证代理文档；仅展示匹配规则、注入凭据的请求路径，未展开全部网络控制。</text>
+  </g>
+</svg>
