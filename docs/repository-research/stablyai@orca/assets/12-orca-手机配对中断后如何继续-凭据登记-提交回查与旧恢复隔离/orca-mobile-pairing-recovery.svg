@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="910" viewBox="0 0 1180 910" role="img" aria-labelledby="title desc">
+<title id="title">手机配对回执丢失后，凭什么继续</title><desc id="desc">手机先保存请求编号 I 和候选凭据 R，云端提交凭据摘要与结果。回执丢失后，手机先用 R 连接，再经桌面按 I 查询结果，确认后写入本地正式记录。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#24566c"/></marker></defs>
+<rect width="1180" height="910" fill="#fbfaf6"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#203640">
+<text x="38" y="46" font-size="28" font-weight="600">回执丢失，恢复依据仍在两端</text>
+<text x="38" y="78" font-size="18" fill="#52616a">示意：I 是同一次登记的请求编号；R 是手机生成并保留的候选恢复凭据。</text>
+
+<text x="168" y="120" font-size="22" fill="#203640" font-weight="600">手机</text>
+<line x1="190" y1="140" x2="190" y2="820" stroke="#c6c9c6" stroke-width="2" stroke-dasharray="5 7"/>
+<text x="555" y="120" font-size="22" fill="#203640" font-weight="600">桌面运行时</text>
+<line x1="610" y1="140" x2="610" y2="820" stroke="#c6c9c6" stroke-width="2" stroke-dasharray="5 7"/>
+<text x="912" y="120" font-size="22" fill="#203640" font-weight="600">云端中继与数据库</text>
+<line x1="1000" y1="140" x2="1000" y2="820" stroke="#c6c9c6" stroke-width="2" stroke-dasharray="5 7"/>
+<rect x="38" y="153" width="365" height="87" rx="4" fill="#e8efe9" stroke="#b7cbbd"/>
+<text x="55" y="181" font-size="18" fill="#203640">先保存恢复记录：I、R 与配对信息</text>
+<text x="55" y="211" font-size="17" fill="#48604f">秘密放入系统安全存储；此后才联网</text>
+<line x1="190" y1="269" x2="610" y2="269" stroke="#24566c" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M601 264 L610 269 L601 274" fill="none" stroke="#24566c" stroke-width="2"/>
+<text x="215" y="257" font-size="18" fill="#203640">已选路径：登记 I 与 SHA-256(R)</text>
+<line x1="610" y1="306" x2="1000" y2="306" stroke="#24566c" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M991 301 L1000 306 L991 311" fill="none" stroke="#24566c" stroke-width="2"/>
+<text x="638" y="292" font-size="18" fill="#203640">带连接授权转交登记</text>
+<rect x="834" y="325" width="311" height="69" rx="4" fill="#e7eef2" stroke="#b7cbd4"/>
+<text x="851" y="352" font-size="17" fill="#203640">同一事务：凭据摘要、邀请状态</text>
+<text x="851" y="378" font-size="17" fill="#203640">以及 I 对应的已提交结果</text>
+<line x1="1000" y1="414" x2="610" y2="414" stroke="#24566c" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M619 409 L610 414 L619 419" fill="none" stroke="#24566c" stroke-width="2"/>
+<text x="662" y="402" font-size="18" fill="#203640">已提交结果</text>
+<line x1="610" y1="443" x2="190" y2="443" stroke="#24566c" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="280" y="431" font-size="18" fill="#9b4338">回执未到达手机</text>
+<line x1="323" y1="434" x2="342" y2="453" stroke="#b44c3e" stroke-width="2"/>
+<line x1="342" y1="434" x2="323" y2="453" stroke="#b44c3e" stroke-width="2"/>
+<rect x="0" y="470" width="1180" height="43" fill="#efe5d5"/>
+<text x="38" y="498" font-size="20" fill="#203640">手机进程中断后重启：恢复记录仍携带同一个 I 和同一个 R</text>
+<line x1="190" y1="558" x2="1000" y2="558" stroke="#24566c" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M991 553 L1000 558 L991 563" fill="none" stroke="#24566c" stroke-width="2"/>
+<text x="265" y="545" font-size="18" fill="#203640">先用 R 请求中继接入；若云端已登记，R 就可以被识别</text>
+<text x="208" y="590" font-size="17" fill="#52616a">随后仍需完成手机与桌面的加密通道认证</text>
+<line x1="190" y1="637" x2="610" y2="637" stroke="#24566c" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M601 632 L610 637 L601 642" fill="none" stroke="#24566c" stroke-width="2"/>
+<text x="227" y="624" font-size="18" fill="#203640">查询 I 的登记状态</text>
+<line x1="610" y1="673" x2="1000" y2="673" stroke="#24566c" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M991 668 L1000 673 L991 678" fill="none" stroke="#24566c" stroke-width="2"/>
+<text x="644" y="660" font-size="18" fill="#203640">按原设备与 I 回查</text>
+<line x1="1000" y1="717" x2="610" y2="717" stroke="#24566c" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M619 712 L610 717 L619 722" fill="none" stroke="#24566c" stroke-width="2"/>
+<text x="650" y="704" font-size="18" fill="#203640">committed：返回原结果</text>
+<line x1="610" y1="761" x2="190" y2="761" stroke="#24566c" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M199 756 L190 761 L199 766" fill="none" stroke="#24566c" stroke-width="2"/>
+<text x="252" y="748" font-size="18" fill="#203640">返回已提交结果与中继地址</text>
+<rect x="38" y="785" width="666" height="74" rx="4" fill="#e8efe9" stroke="#b7cbbd"/>
+<text x="55" y="814" font-size="18" fill="#203640">手机确认当前恢复记录仍归自己，才保存正式凭据和主机记录</text>
+<text x="55" y="842" font-size="17" fill="#48604f">最后清除恢复记录；本地保存失败则留待后续处理</text>
+<text x="38" y="892" font-size="17" fill="#52616a">图示限定“云端已提交、手机未收到回执”的分支；未提交与凭据被拒绝的分支见正文。</text>
+</g></svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+  <title id="title">同一句 done，在 Cumora 云端会走三条不同路径</title>
+  <desc id="desc">三组假设场景展示有条件的完成检查。只点表情会进入辅助模型检查，可能被拒绝；移动任务卡后可能被接受并确认收件箱已读；先发一句我来处理，再声明完成，则因本轮已有回复而跳过这道检查。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#70808e" stroke-width="1.5"/></marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; fill:#243644; }
+      .head { font-size:20px; font-weight:600; }
+      .body { font-size:19px; }
+      .small { font-size:17px; fill:#536775; }
+      .flow { fill:none; stroke:#70808e; stroke-width:2; marker-end:url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="740" fill="#fbfaf6"/>
+  <text x="42" y="50" font-size="29" font-weight="650">同一句 done，三种结束路径</text>
+  <text x="42" y="82" class="small">云端 runAgentTurn 的条件分支示意；场景是假设，模型判断结果不是确定规则。</text>
+  <g class="head" fill="#536775">
+    <text x="45" y="132">团队要求</text><text x="282" y="132">已记录的动作</text><text x="544" y="132">模型声明</text><text x="739" y="132">额外完成检查</text><text x="984" y="132">后续动作</text>
+  </g>
+  <path d="M257 148V640 M520 148V640 M707 148V640 M955 148V640" stroke="#dedfd9" stroke-dasharray="4 7"/>
+  <rect x="26" y="163" width="1148" height="138" rx="6" fill="#f0f2ed"/>
+  <rect x="26" y="163" width="5" height="138" fill="#b25b45"/>
+  <g class="body">
+    <text x="45" y="210"><tspan x="45">“请交一张照片”</tspan></text>
+    <text x="282" y="210"><tspan x="282">只添加表情</tspan><tspan x="282" dy="31" class="small">reaction.updated</tspan></text>
+    <text x="544" y="210">done</text>
+    <text x="739" y="210" style="fill:#9d4232;font-weight:600">可能拒绝</text>
+    <text x="739" y="241" class="small">只有回应，没有照片</text>
+    <text x="984" y="210"><tspan x="984">原回合继续</tspan><tspan x="984" dy="31" class="small">要求交付或说明失败</tspan></text>
+  </g>
+  <path class="flow" d="M460 270H565"/><path class="flow" d="M624 211H719"/><path class="flow" d="M895 270H1024"/>
+  <rect x="26" y="324" width="1148" height="138" rx="6" fill="#eef4f3"/>
+  <rect x="26" y="324" width="5" height="138" fill="#3b7a70"/>
+  <g class="body">
+    <text x="45" y="371"><tspan x="45">“请把卡片移到</tspan><tspan x="45" dy="31">完成列”</tspan></text>
+    <text x="282" y="371"><tspan x="282">已经移动卡片</tspan><tspan x="282" dy="31" class="small">kanban.card_moved</tspan></text>
+    <text x="544" y="371">done</text>
+    <text x="739" y="371" style="fill:#286c62;font-weight:600">可能接受</text>
+    <text x="739" y="402" class="small">记录与要求相符</text>
+    <text x="984" y="371"><tspan x="984">本回合结束</tspan><tspan x="984" dy="31" class="small">成功收尾时确认已读</tspan></text>
+  </g>
+  <path class="flow" d="M460 431H565"/><path class="flow" d="M624 372H719"/><path class="flow" d="M895 431H1024"/>
+  <rect x="26" y="485" width="1148" height="138" rx="6" fill="#f6efdf"/>
+  <rect x="26" y="485" width="5" height="138" fill="#a87a26"/>
+  <g class="body">
+    <text x="45" y="532">“请交一张照片”</text>
+    <text x="282" y="532"><tspan x="282">回复“我来处理”</tspan><tspan x="282" dy="31" class="small">message.posted / reply</tspan></text>
+    <text x="544" y="532">done</text>
+    <text x="739" y="532" style="fill:#926719;font-weight:600">跳过这道检查</text>
+    <text x="739" y="563" class="small">本轮已经记录到回复</text>
+    <text x="984" y="532"><tspan x="984">可结束本回合</tspan><tspan x="984" dy="31" class="small">照片是否交付未被核验</tspan></text>
+  </g>
+  <path class="flow" d="M460 592H565"/><path class="flow" d="M624 533H719"/><path class="flow" d="M895 592H1024"/>
+  <text x="42" y="675" class="body" font-weight="600">入口条件决定覆盖范围：收到未读消息 + done / waiting + 有动作记录 + 本轮尚无回复。</text>
+  <text x="42" y="709" class="small">依据：turn.ts 的 shouldVerifyTerminalCompletion、verifyTerminalCompletion 及主循环；“完成”记录的是运行结果。</text>
+</svg>

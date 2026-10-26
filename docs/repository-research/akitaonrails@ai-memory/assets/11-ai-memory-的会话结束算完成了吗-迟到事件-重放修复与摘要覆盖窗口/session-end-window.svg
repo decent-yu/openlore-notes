@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="790" viewBox="0 0 1140 790" role="img" aria-labelledby="title desc">
+  <title id="title">迟到事件落在结束标记前后，会改变摘要重建判断</title>
+  <desc id="desc">左侧在结束标记后收到新记录，当前数量大于已覆盖数量，新的结束事件可以触发重建。右侧在摘要读取后、结束标记前收到新记录，结束标记统计了它，下一次结束认为没有新增记录。数值是假设示例，右侧为源码时序推导。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#7a8899"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;fill:#243446}
+      .title{font-size:28px;font-weight:650}.sub{font-size:17px;fill:#5a6a7a}.head{font-size:21px;font-weight:650}
+      .body{font-size:20px}.small{font-size:17px;fill:#5a6a7a}.result{font-size:21px;font-weight:650}
+      .axis{stroke:#a4afbb;stroke-width:2;marker-end:url(#arrow)}.dot{fill:#62778d}
+    </style>
+  </defs>
+  <rect width="1140" height="790" fill="#fbfcfe"/>
+  <text x="40" y="48" class="title">摘要读到了哪些记录，结束标记又数到了哪些记录？</text>
+  <text x="40" y="81" class="sub">普通 SessionEnd 路径 · C 为当前记录数，W 为结束时保存的已覆盖数量 · 100 / 101 为示意数值</text>
+  <rect x="30" y="110" width="530" height="610" rx="12" fill="#f0f7f5" stroke="#ccded8"/>
+  <rect x="580" y="110" width="530" height="610" rx="12" fill="#fff5ed" stroke="#ead7c4"/>
+  <text x="55" y="148" class="head">A　新记录在结束标记之后提交</text>
+  <text x="605" y="148" class="head">B　新记录落在读取与标记之间</text>
+  <path d="M75 180V535" class="axis"/>
+  <path d="M625 180V535" class="axis"/>
+  <g class="dot"><circle cx="75" cy="200" r="6"/><circle cx="75" cy="277" r="6"/><circle cx="75" cy="354" r="6"/><circle cx="75" cy="431" r="6"/><circle cx="75" cy="508" r="6"/></g>
+  <g class="body">
+    <text x="100" y="207">读取摘要材料：C = 100</text>
+    <text x="100" y="284">页面与交接按这 100 条生成</text>
+    <text x="100" y="361">提交结束标记：W = 100</text>
+    <text x="100" y="438" style="fill:#176957;font-weight:650">新记录入库：C = 101</text>
+    <text x="100" y="515">收到新的结束事件</text>
+  </g>
+  <g class="dot"><circle cx="625" cy="200" r="6"/><circle cx="625" cy="277" r="6"/><circle cx="625" cy="354" r="6"/><circle cx="625" cy="431" r="6"/><circle cx="625" cy="508" r="6"/></g>
+  <g class="body">
+    <text x="650" y="207">读取摘要材料：C = 100</text>
+    <text x="650" y="284" style="fill:#a85616;font-weight:650">新记录入库：C = 101</text>
+    <text x="650" y="361">页面与交接仍按 100 条生成</text>
+    <text x="650" y="438">提交结束标记：W = 101</text>
+    <text x="650" y="515">收到新的结束事件</text>
+  </g>
+  <rect x="55" y="558" width="480" height="132" rx="8" fill="#dcefe8"/>
+  <text x="78" y="593" class="result" style="fill:#176957">C &gt; W → 可以进入重新结束流程</text>
+  <text x="78" y="626" class="small">新的结束事件须避免命中已完成的旧键。</text>
+  <text x="78" y="655" class="small">图中假设页面由规则生成、允许自动交接。</text>
+  <rect x="605" y="558" width="480" height="132" rx="8" fill="#f8e6d5"/>
+  <text x="628" y="593" class="result" style="fill:#9c4b0d">C = W → 不重跑规则摘要与交接</text>
+  <text x="628" y="626" class="small">新记录存在，但计数把它算作已覆盖。</text>
+  <text x="628" y="655" class="small">仍可能尝试 Git 修复及可选模型任务入队。</text>
+  <text x="40" y="751" class="small">B 为调用顺序推导，未做并发复现；独立键的事件可以交错，同键互斥门不能关闭这个窗口。</text>
+</svg>

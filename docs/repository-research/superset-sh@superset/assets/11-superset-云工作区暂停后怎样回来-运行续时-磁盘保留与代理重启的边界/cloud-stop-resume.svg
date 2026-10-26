@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620" role="img" aria-labelledby="title desc">
+  <title id="title">云工作区暂停与恢复：记录和文件延续，进程重新建立</title>
+  <desc id="desc">横向示意运行、停止、再次打开三个阶段。云端 ready 记录和磁盘延续，旧进程在停止时结束。再次打开通过 wake 启动主机服务，另行恢复符合条件的代理。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9" fill="none" stroke="#355b65" stroke-width="1.5"/></marker>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 8 8 0" stroke="#d9e3e5" stroke-width="1"/></pattern>
+    <style>
+      text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203b43;font-size:18px}
+      .small{font-size:15px;fill:#526b72}.label{font-size:17px;font-weight:600}.title{font-size:27px;font-weight:600}
+      .line{fill:none;stroke:#355b65;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1180" height="620" fill="#fbfcfa"/>
+  <text x="40" y="48" class="title">暂停后延续的是什么？</text>
+  <text x="40" y="78" class="small">按当前实现绘制的机制示意；横向表示先后，不表示实际耗时。</text>
+  <text x="245" y="126" class="label">运行中</text>
+  <text x="560" y="126" class="label">会话到期或主动暂停</text>
+  <text x="892" y="126" class="label">再次打开</text>
+  <path d="M220 143H1120" class="line"/>
+  <path d="M510 157V369 M805 157V369" stroke="#b1c0c4" stroke-width="1.5" stroke-dasharray="5 6"/>
+  <text x="40" y="202" class="label">云端工作区记录</text>
+  <path d="M220 196H1120" stroke="#64786a" stroke-width="5"/>
+  <text x="260" y="185" class="small">ready</text>
+  <text x="590" y="185" class="small">仍可为 ready</text>
+  <text x="908" y="185" class="small">仍可为 ready</text>
+  <text x="40" y="268" class="label">磁盘文件与数据库</text>
+  <rect x="220" y="245" width="900" height="35" rx="3" fill="#d8e7d6"/>
+  <text x="247" y="269" font-size="17">代码、host.db、已写入磁盘的代理会话资料随磁盘保留</text>
+  <text x="40" y="340" class="label">运行中的进程</text>
+  <rect x="220" y="313" width="280" height="43" rx="3" fill="#c9e0e8"/>
+  <text x="240" y="341" font-size="17">旧 shell、代理、开发服务器</text>
+  <rect x="520" y="313" width="275" height="43" fill="url(#hatch)"/>
+  <text x="566" y="341" font-size="17">全部结束，不保存内存</text>
+  <rect x="815" y="313" width="305" height="43" rx="3" fill="#eadfc8"/>
+  <text x="843" y="341" font-size="17">新服务、新终端、新代理进程</text>
+  <text x="40" y="418" class="label">运行时间怎样延长</text>
+  <text x="40" y="450" font-size="17">打开的桌面工作区 → 定期 wake</text>
+  <text x="40" y="479" font-size="17">代理活动事件 → 主机请求续时</text>
+  <text x="40" y="510" class="small">没有后续续时，已有到期时间继续逼近。</text>
+  <path d="M440 385V560" stroke="#c4cfd1"/>
+  <text x="480" y="418" class="label">停止后怎样重新建立运行环境</text>
+  <text x="480" y="450" font-size="17">wake → 准备当前配置 → 启动脚本 → 主机服务</text>
+  <path d="M730 461V478H780" class="line"/>
+  <text x="797" y="484" font-size="17">等待健康检查、推送环境变量</text>
+  <path d="M730 478V518H780" class="line"/>
+  <text x="797" y="524" font-size="17">另行筛选代理，尝试恢复到新终端</text>
+  <text x="480" y="558" class="small">主机接口可访问，不代表开发服务或全部代理已经恢复。</text>
+  <path d="M40 580H1120" stroke="#d6dedb"/>
+  <text x="40" y="605" class="small">范围：现有托管云工作区的暂停与唤醒；不含归档删除。永久不可恢复时，记录可转为 failed。</text>
+</svg>

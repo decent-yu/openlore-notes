@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">文字可见与保存确认之间，还有一道保存屏障</title>
+  <desc id="desc">会话运行时向保存任务提交更新，并向界面转发文字。后台追加可以与显示交错。运行时再提交 FlushAndAck，保存任务写出待合并内容，同步改动文件与目录，成功后才回送保存确认。该确认不覆盖所有会话状态与外部副作用。</desc>
+  <defs>
+    <style>
+      text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #203047; }
+      .lane { font-size: 23px; font-weight: 600; }
+      .label { font-size: 20px; }
+      .small { font-size: 18px; fill: #5b687a; }
+      .line { stroke: #334155; stroke-width: 2.2; fill: none; }
+      .ok { stroke: #137461; stroke-width: 2.8; fill: none; }
+    </style>
+  </defs>
+  <rect width="1180" height="760" fill="#fff"/>
+  <text x="44" y="50" font-size="29" font-weight="650">文字已经显示，保存仍可能尚未确认</text>
+  <text x="44" y="84" class="small">本地普通 ACP 文字路径示意；追加与显示可以交错，纵向距离不代表耗时。</text>
+  <rect x="34" y="110" width="1112" height="506" rx="8" fill="#f6f8fa"/>
+  <g class="lane" text-anchor="middle">
+    <text x="130" y="151">会话运行时</text>
+    <text x="410" y="151">用户界面</text>
+    <text x="710" y="151">后台保存任务</text>
+    <text x="1030" y="151">本地存储</text>
+  </g>
+  <g stroke="#c4cdd8" stroke-width="1.5" stroke-dasharray="5 7">
+    <path d="M130 171 V596"/><path d="M410 171 V596"/><path d="M710 171 V596"/><path d="M1030 171 V596"/>
+  </g>
+  <path d="M130 204 H710" class="line"/>
+  <text x="450" y="194" class="label" text-anchor="middle">① 提交更新，进入保存队列</text>
+  <path d="M130 261 H410" class="line"/>
+  <text x="265" y="251" class="label" text-anchor="middle">② 转发文字</text>
+  <circle cx="410" cy="261" r="6" fill="#b25c1c"/>
+  <text x="430" y="270" class="label" style="fill:#a64f16">此时已经可以显示</text>
+  <path d="M710 325 H1030" class="line"/>
+  <text x="870" y="301" class="label" text-anchor="middle">合并后追加记录</text>
+  <text x="870" y="351" class="small" text-anchor="middle">可能仍只在系统缓存中</text>
+  <path d="M130 398 H710" class="line"/>
+  <text x="420" y="388" class="label" text-anchor="middle">③ 排空上游通知，再提交 FlushAndAck</text>
+  <path d="M710 460 H1030" class="line"/>
+  <text x="870" y="439" class="label" text-anchor="middle">写出待合并记录</text>
+  <text x="870" y="486" class="label" text-anchor="middle">同步改动文件与目录</text>
+  <path d="M1030 526 H710" class="ok"/>
+  <text x="870" y="516" class="label" text-anchor="middle" style="fill:#137461">同步成功</text>
+  <path d="M710 582 H130" class="ok"/>
+  <g fill="#334155">
+    <path d="M710 204 L698 198 V210 Z"/>
+    <path d="M400 261 L388 255 V267 Z"/>
+    <path d="M1030 325 L1018 319 V331 Z"/>
+    <path d="M710 398 L698 392 V404 Z"/>
+    <path d="M1030 460 L1018 454 V466 Z"/>
+  </g>
+  <g fill="#137461">
+    <path d="M710 526 L722 520 V532 Z"/>
+    <path d="M130 582 L142 576 V588 Z"/>
+  </g>
+  <text x="420" y="571" class="label" text-anchor="middle" style="fill:#137461">④ 回送保存确认</text>
+  <path d="M44 651 H1136" stroke="#137461" stroke-width="3"/>
+  <text x="44" y="687" font-size="21" font-weight="600">确认范围：此前纳入屏障的相关记录。</text>
+  <text x="44" y="722" class="small">模型对话也进入同一保存队列；全部附属状态、远端副本与工具副作用各有自己的边界。</text>
+</svg>

@@ -813,6 +813,86 @@
       "has_research": true,
       "reading_path": "stablyai@orca/11-orca-如何确认-ssh-服务器身份-信任来源-密钥变更与登录回退边界.md",
       "research_path": "stablyai@orca/11-orca-如何确认-ssh-服务器身份-信任来源-密钥变更与登录回退边界.md"
+    },
+    "art_0dbbe1dc-2ef4-47aa-bc06-9b34b6814dd6": {
+      "collection_id": "col_344d5bc7-f30",
+      "directory": "yetone@cumora/11-cumora-怎样判断-agent-可以收工-发过回复-为什么仍不等于交付完成",
+      "slug": "cumora-怎样判断-agent-可以收工-发过回复-为什么仍不等于交付完成",
+      "title": "Cumora 怎样判断 Agent 可以收工：发过回复，为什么仍不等于交付完成",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-26T21:19:49.808Z",
+      "updated_at": "2026-10-26T21:19:49.808Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/11-cumora-怎样判断-agent-可以收工-发过回复-为什么仍不等于交付完成.md",
+      "research_path": "yetone@cumora/11-cumora-怎样判断-agent-可以收工-发过回复-为什么仍不等于交付完成.md"
+    },
+    "art_801ea0a1-bb32-4bad-8ccf-fbd9d6197397": {
+      "collection_id": "col_344d5bc7-f30",
+      "directory": "superset-sh@superset/11-superset-云工作区暂停后怎样回来-运行续时-磁盘保留与代理重启的边界",
+      "slug": "superset-云工作区暂停后怎样回来-运行续时-磁盘保留与代理重启的边界",
+      "title": "Superset 云工作区暂停后怎样回来：运行续时、磁盘保留与代理重启的边界",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-26T21:19:49.808Z",
+      "updated_at": "2026-10-26T21:19:49.808Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/11-superset-云工作区暂停后怎样回来-运行续时-磁盘保留与代理重启的边界.md",
+      "research_path": "superset-sh@superset/11-superset-云工作区暂停后怎样回来-运行续时-磁盘保留与代理重启的边界.md"
+    },
+    "art_6fa09d81-49b8-4ceb-b615-63beefd6d453": {
+      "collection_id": "col_344d5bc7-f30",
+      "directory": "akitaonrails@ai-memory/11-ai-memory-的会话结束算完成了吗-迟到事件-重放修复与摘要覆盖窗口",
+      "slug": "ai-memory-的会话结束算完成了吗-迟到事件-重放修复与摘要覆盖窗口",
+      "title": "ai-memory 的会话结束算完成了吗：迟到事件、重放修复与摘要覆盖窗口",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-26T21:19:49.808Z",
+      "updated_at": "2026-10-26T21:19:49.808Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/11-ai-memory-的会话结束算完成了吗-迟到事件-重放修复与摘要覆盖窗口.md",
+      "research_path": "akitaonrails@ai-memory/11-ai-memory-的会话结束算完成了吗-迟到事件-重放修复与摘要覆盖窗口.md"
+    },
+    "art_f0fb3114-20d0-4149-bb66-db24018268da": {
+      "collection_id": "col_344d5bc7-f30",
+      "directory": "xai-org@grok-build/11-grok-build-的回答何时才算保存-写入队列-落盘确认与失败边界",
+      "slug": "grok-build-的回答何时才算保存-写入队列-落盘确认与失败边界",
+      "title": "Grok Build 的回答何时才算保存：写入队列、落盘确认与失败边界",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-26T21:19:49.808Z",
+      "updated_at": "2026-10-26T21:19:49.808Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/11-grok-build-的回答何时才算保存-写入队列-落盘确认与失败边界.md",
+      "research_path": "xai-org@grok-build/11-grok-build-的回答何时才算保存-写入队列-落盘确认与失败边界.md"
+    },
+    "art_a411b9c7-84b6-4732-b3ce-0f6e2f7f5b12": {
+      "collection_id": "col_344d5bc7-f30",
+      "directory": "stablyai@orca/12-orca-手机配对中断后如何继续-凭据登记-提交回查与旧恢复隔离",
+      "slug": "orca-手机配对中断后如何继续-凭据登记-提交回查与旧恢复隔离",
+      "title": "Orca 手机配对中断后如何继续：凭据登记、提交回查与旧恢复隔离",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-26T21:19:49.808Z",
+      "updated_at": "2026-10-26T21:19:49.808Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/12-orca-手机配对中断后如何继续-凭据登记-提交回查与旧恢复隔离.md",
+      "research_path": "stablyai@orca/12-orca-手机配对中断后如何继续-凭据登记-提交回查与旧恢复隔离.md"
     }
   },
   "collection_locations": {
@@ -915,6 +995,18 @@
         "art_f971592b-5bb6-4ea1-92d7-678da7f9512c",
         "art_858b541c-2196-4be4-9197-c9922fce9d54"
       ]
+    },
+    "col_344d5bc7-f30": {
+      "path": "docs/repository-research/batches/20261027-01.md",
+      "date_sequence": "20261027-01",
+      "created_at": "2026-10-26T21:19:49.808Z",
+      "article_ids": [
+        "art_0dbbe1dc-2ef4-47aa-bc06-9b34b6814dd6",
+        "art_801ea0a1-bb32-4bad-8ccf-fbd9d6197397",
+        "art_6fa09d81-49b8-4ceb-b615-63beefd6d453",
+        "art_f0fb3114-20d0-4149-bb66-db24018268da",
+        "art_a411b9c7-84b6-4732-b3ce-0f6e2f7f5b12"
+      ]
     }
   },
   "delivered_batches": [
@@ -925,7 +1017,8 @@
     "batch_75270be3-b29c-43c8-877b-a843c7a34a96",
     "batch_1fcbd952-af7a-4531-8d1a-99c696ed3041",
     "batch_dfedc233-0142-477c-8565-11bfc7f04205",
-    "batch_d9af3567-a67d-4f13-bd36-7d3b815f66d4"
+    "batch_d9af3567-a67d-4f13-bd36-7d3b815f66d4",
+    "batch_77dfac8f-8063-4964-887a-523d3e6b9a5c"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -949,9 +1042,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "754810a1328e4d5e457f50deb55738d0be82b02c6e93f536662a917d16d28a27",
+      "sha256": "8dc5a463a0d564fa6f7d7621e2f9815cac4bfe20df6370c6f926286537d7b004",
       "media_type": "text/markdown",
-      "size": 65116
+      "size": 71599
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -1537,6 +1630,61 @@
       "sha256": "395421dbf6a49b6cc460e3ae7c9693d6237629e30d1cec00ee05fc82f3822f6b",
       "media_type": "text/markdown",
       "size": 3332
+    },
+    "docs/repository-research/yetone@cumora/11-cumora-怎样判断-agent-可以收工-发过回复-为什么仍不等于交付完成.md": {
+      "sha256": "a234fc82fc58462a7d57170708eb65abbc688061c1b0ec5ddc102275124db105",
+      "media_type": "text/markdown",
+      "size": 19535
+    },
+    "docs/repository-research/yetone@cumora/assets/11-cumora-怎样判断-agent-可以收工-发过回复-为什么仍不等于交付完成/completion-paths.svg": {
+      "sha256": "5a25beea3c71018d6ab3cee0c9b87878538b29c3b67f299796b9861e6ff50c1b",
+      "media_type": "image/svg+xml",
+      "size": 4605
+    },
+    "docs/repository-research/superset-sh@superset/11-superset-云工作区暂停后怎样回来-运行续时-磁盘保留与代理重启的边界.md": {
+      "sha256": "991dce9815a33ce02774772801c1302c2e84ead7ec42e5c03e12ed77ba7d47a7",
+      "media_type": "text/markdown",
+      "size": 22414
+    },
+    "docs/repository-research/superset-sh@superset/assets/11-superset-云工作区暂停后怎样回来-运行续时-磁盘保留与代理重启的边界/cloud-stop-resume.svg": {
+      "sha256": "7d7738436da2d7d313abd587a1c0ff3f523768aba0551dc28d2096fc5b166c80",
+      "media_type": "image/svg+xml",
+      "size": 3954
+    },
+    "docs/repository-research/akitaonrails@ai-memory/11-ai-memory-的会话结束算完成了吗-迟到事件-重放修复与摘要覆盖窗口.md": {
+      "sha256": "ce318625f25ef735be17e0e4191823a19844dd2f402f8db39bd9e2ce6eee9b5c",
+      "media_type": "text/markdown",
+      "size": 19162
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/11-ai-memory-的会话结束算完成了吗-迟到事件-重放修复与摘要覆盖窗口/session-end-window.svg": {
+      "sha256": "e5dd93aa10bb7148ad123fef21dcd715ae7a5ae1198911155b88934c254cba41",
+      "media_type": "image/svg+xml",
+      "size": 3940
+    },
+    "docs/repository-research/xai-org@grok-build/11-grok-build-的回答何时才算保存-写入队列-落盘确认与失败边界.md": {
+      "sha256": "23aac09b153c30c3f64825de1b9bed079497204e804fbe84ce11e2aa54303504",
+      "media_type": "text/markdown",
+      "size": 19158
+    },
+    "docs/repository-research/xai-org@grok-build/assets/11-grok-build-的回答何时才算保存-写入队列-落盘确认与失败边界/persistence-barrier.svg": {
+      "sha256": "968f8fba6e751b2a2a839a71ad9709e880087c5d4ebcd94a9e0edb02a7e332ba",
+      "media_type": "image/svg+xml",
+      "size": 3726
+    },
+    "docs/repository-research/stablyai@orca/12-orca-手机配对中断后如何继续-凭据登记-提交回查与旧恢复隔离.md": {
+      "sha256": "0cbe18b577a9158cff2139897879d8040c27d934d3ae8ef31c759f19dc626685",
+      "media_type": "text/markdown",
+      "size": 20679
+    },
+    "docs/repository-research/stablyai@orca/assets/12-orca-手机配对中断后如何继续-凭据登记-提交回查与旧恢复隔离/orca-mobile-pairing-recovery.svg": {
+      "sha256": "d0faea1ecbe5dddfa24c32098ea0add197ec5bb4ce1b26f4a299dfbc7bcb397f",
+      "media_type": "image/svg+xml",
+      "size": 5588
+    },
+    "docs/repository-research/batches/20261027-01.md": {
+      "sha256": "b368eb06257870cf56efe3dd6822f04adbc969fcdb5c2c7f8cb1f7e55487f986",
+      "media_type": "text/markdown",
+      "size": 3296
     }
   }
 }
