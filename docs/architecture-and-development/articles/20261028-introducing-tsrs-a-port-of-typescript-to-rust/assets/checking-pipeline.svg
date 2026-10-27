@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="730" viewBox="0 0 1120 730" role="img" aria-labelledby="title desc">
+  <title id="title">tsrs 的共享文件数据与各检查器独立状态</title>
+  <desc id="desc">从文件和配置，经解析与绑定生成共享数据，两个示意检查器分别保存类型与缓存，再汇总诊断。快速模式会改变分配、历史和按需计算，因此更多线程不保证相同结果。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#53677c"/></marker>
+    <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#183247}.title{font-size:28px;font-weight:650}.head{font-size:22px;font-weight:600}.body{font-size:18px}.note{font-size:16px;fill:#53677c}.flow{fill:none;stroke:#53677c;stroke-width:2.3;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1120" height="730" rx="18" fill="#f5f8fb"/>
+  <text x="40" y="50" class="title">同一份文件结构，多份检查状态</text>
+  <text x="40" y="82" class="note">原生版机制简图 · 只画类型检查路径；两个检查器仅为示意，数量不代表默认设置</text>
+  <rect x="40" y="122" width="224" height="137" rx="12" fill="#e5edf5" stroke="#b9cad9"/>
+  <text x="60" y="158" class="head">源码、配置、依赖</text>
+  <text x="60" y="194" class="body">确定检查哪些文件</text>
+  <text x="60" y="225" class="body">寻找导入对应的文件</text>
+  <path d="M264 191H320" class="flow"/>
+  <rect x="324" y="122" width="256" height="137" rx="12" fill="#e5edf5" stroke="#b9cad9"/>
+  <text x="344" y="158" class="head">解析与绑定</text>
+  <text x="344" y="194" class="body">文本 → 语法结构</text>
+  <text x="344" y="225" class="body">把名称与声明关联起来</text>
+  <path d="M580 191H636" class="flow"/>
+  <rect x="640" y="122" width="440" height="137" rx="12" fill="#dceeea" stroke="#88b9ad"/>
+  <text x="664" y="158" class="head">绑定后共享的文件数据</text>
+  <text x="664" y="194" class="body">语法树、声明与符号表等</text>
+  <text x="664" y="225" class="body">检查器共同读取，推导状态各自保存</text>
+  <path d="M860 259V290H290V339" class="flow"/>
+  <path d="M860 290H830V339" class="flow"/>
+  <text x="474" y="315" class="note">分配文件；检查时仍可读取跨文件声明</text>
+  <rect x="70" y="345" width="440" height="159" rx="12" fill="#fff" stroke="#89a8cb" stroke-width="2"/>
+  <text x="94" y="380" class="head">检查器 A</text>
+  <text x="94" y="415" class="body">推导类型，沿分支收窄可能取值</text>
+  <rect x="94" y="438" width="392" height="43" rx="7" fill="#eaf1fa"/>
+  <text x="114" y="466" class="body">自己的类型结果、缓存与检查历史</text>
+  <rect x="610" y="345" width="440" height="159" rx="12" fill="#fff" stroke="#89a8cb" stroke-width="2"/>
+  <text x="634" y="380" class="head">检查器 B</text>
+  <text x="634" y="415" class="body">执行另一组文件的类型检查</text>
+  <rect x="634" y="438" width="392" height="43" rx="7" fill="#eaf1fa"/>
+  <text x="654" y="466" class="body">自己的类型结果、缓存与检查历史</text>
+  <path d="M290 504V535H560V555" class="flow"/>
+  <path d="M830 504V535H560" fill="none" stroke="#53677c" stroke-width="2.3"/>
+  <rect x="305" y="560" width="510" height="62" rx="12" fill="#183e59"/>
+  <text x="560" y="599" text-anchor="middle" style="font-family:'PingFang SC',sans-serif;font-size:22px;fill:white">汇总诊断：错误位置、代码、消息</text>
+  <text x="40" y="665" class="body">快速模式还会改变文件分配、缓存历史和按需计算；边界情况下，报错也会变化。</text>
+  <text x="40" y="699" class="note">依据：tsrs 移植指南、checkerpool.rs 与快速模式说明；不是线程性能或内存比例图。</text>
+</svg>

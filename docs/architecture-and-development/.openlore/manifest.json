@@ -233,6 +233,43 @@
       "collected_at": "2026-10-26T23:13:33.953Z",
       "updated_at": "2026-10-26T23:13:33.953Z",
       "has_research": true
+    },
+    "art_5b776bda-7fcd-4abc-ab22-4d44c3f3e5d3": {
+      "collection_id": "col_4a0f6031-865",
+      "directory": "articles/20261028-a-fully-programmable-secure-web-gateway",
+      "slug": "a-fully-programmable-secure-web-gateway",
+      "title": "A fully programmable secure web gateway",
+      "original_url": "https://blog.cloudflare.com/programmable-gateway-dlp",
+      "tags": [
+        "安全Web网关",
+        "SASE",
+        "边缘计算",
+        "Cloudflare Workers",
+        "零信任",
+        "DLP",
+        "策略引擎"
+      ],
+      "collected_at": "2026-10-27T23:13:35.948Z",
+      "updated_at": "2026-10-27T23:13:35.948Z",
+      "has_research": true
+    },
+    "art_3856dd44-ff1f-47da-94c2-deadd92cf604": {
+      "collection_id": "col_4a0f6031-865",
+      "directory": "articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust",
+      "slug": "introducing-tsrs-a-port-of-typescript-to-rust",
+      "title": "Introducing tsrs: a Port of TypeScript to Rust",
+      "original_url": "https://blog.cloudflare.com/typescript-rust-port",
+      "tags": [
+        "TypeScript",
+        "Rust",
+        "WebAssembly",
+        "类型检查",
+        "编译器性能优化",
+        "编译器兼容性"
+      ],
+      "collected_at": "2026-10-27T23:13:35.948Z",
+      "updated_at": "2026-10-27T23:13:35.948Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -296,6 +333,15 @@
       "article_ids": [
         "art_9aee6b48-3c77-48b3-b040-308370b9a184"
       ]
+    },
+    "col_4a0f6031-865": {
+      "path": "docs/architecture-and-development/batches/20261028-01.md",
+      "date_sequence": "20261028-01",
+      "created_at": "2026-10-27T23:13:35.948Z",
+      "article_ids": [
+        "art_5b776bda-7fcd-4abc-ab22-4d44c3f3e5d3",
+        "art_3856dd44-ff1f-47da-94c2-deadd92cf604"
+      ]
     }
   },
   "delivered_batches": [
@@ -309,13 +355,14 @@
     "batch_55c6040a-51b1-4287-9540-70cd7dd8ce27",
     "batch_960af110-bc11-4b4b-91e7-31a52463ebd8",
     "batch_eac9d101-9db8-4092-a594-486b91daed90",
-    "batch_dcfaae44-b505-4de5-ae42-81e433794c32"
+    "batch_dcfaae44-b505-4de5-ae42-81e433794c32",
+    "batch_c101038a-11a2-4b20-832c-db3db040a7b7"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "de323d56c04a8538569f84f02232cba140981c57303c56da6499c6585400f666",
+      "sha256": "86e4baf76fd5ac02b3c670411ff5ace51b44fada1e36b0b8de3a3b8927908f4d",
       "media_type": "text/markdown",
-      "size": 10028
+      "size": 11333
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
       "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
@@ -861,6 +908,101 @@
       "sha256": "7b23f54a4f71dab3b53830a0af22443eb34f142894804ecefe47fb7116d839de",
       "media_type": "text/markdown",
       "size": 592
+    },
+    "docs/architecture-and-development/articles/20261028-a-fully-programmable-secure-web-gateway/README.md": {
+      "sha256": "bf525700e5b76a47cead11f7583e04244bd53e5e319197c47379c6e3e6151475",
+      "media_type": "text/markdown",
+      "size": 451
+    },
+    "docs/architecture-and-development/articles/20261028-a-fully-programmable-secure-web-gateway/article.md": {
+      "sha256": "c3549dae446f3b788c4d965606b37507b743e4509c7521f094b4434ace9e0120",
+      "media_type": "text/markdown",
+      "size": 20917
+    },
+    "docs/architecture-and-development/articles/20261028-a-fully-programmable-secure-web-gateway/article-zh-CN.md": {
+      "sha256": "f9a553a88a62606ec41cf129233b7790c51b183f5543cf2ac4d3a01b84e2f59b",
+      "media_type": "text/markdown",
+      "size": 19855
+    },
+    "docs/architecture-and-development/articles/20261028-a-fully-programmable-secure-web-gateway/research.md": {
+      "sha256": "970afc68f6e99fa9d99ab71445cb4428142b156751f880be6ef21e51d74578e1",
+      "media_type": "text/markdown",
+      "size": 25004
+    },
+    "docs/architecture-and-development/articles/20261028-a-fully-programmable-secure-web-gateway/assets/diagram-60305d4b7621.webp": {
+      "sha256": "60305d4b762194fdee400542ff691123d31cbe22dcfe5a6b88c350505072cba7",
+      "media_type": "image/webp",
+      "size": 45782
+    },
+    "docs/architecture-and-development/articles/20261028-a-fully-programmable-secure-web-gateway/assets/diagram-0a89211210fb.webp": {
+      "sha256": "0a89211210fbb7111d575969e01a2c4b1040e7ba5cd7f3690bd699fa0f5fd930",
+      "media_type": "image/webp",
+      "size": 17888
+    },
+    "docs/architecture-and-development/articles/20261028-a-fully-programmable-secure-web-gateway/assets/diagram-3536a80a46ef.webp": {
+      "sha256": "3536a80a46ef9045c7589889a5f1039bbcec3cd4fdc51b9b9e2bdd7b862b769a",
+      "media_type": "image/webp",
+      "size": 19510
+    },
+    "docs/architecture-and-development/articles/20261028-a-fully-programmable-secure-web-gateway/assets/dlp-validation.svg": {
+      "sha256": "8bcae637c228c135a3f79f7781f92d8867cd91682dc366ada1c6371bfbf41390",
+      "media_type": "image/svg+xml",
+      "size": 4223
+    },
+    "docs/architecture-and-development/articles/20261028-a-fully-programmable-secure-web-gateway/assets/forward-inspection.svg": {
+      "sha256": "b420d9e92be0853c4baa57fb21499586a0f53f9d9c4c83f164e4959ae38e1a1a",
+      "media_type": "image/svg+xml",
+      "size": 5113
+    },
+    "docs/architecture-and-development/articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/README.md": {
+      "sha256": "3b9f2f6a4fc416f2f9d1bb2a8da2ddb51b4e91c03a1c9c4519223e917c90cad9",
+      "media_type": "text/markdown",
+      "size": 454
+    },
+    "docs/architecture-and-development/articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/article.md": {
+      "sha256": "9f256eba0acf844087279289be2dfcc53a0b5e9142ae434c5bd4e0a006a6c166",
+      "media_type": "text/markdown",
+      "size": 9305
+    },
+    "docs/architecture-and-development/articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/article-zh-CN.md": {
+      "sha256": "25b65327e64783fb85e0d9d407f8ca08efcfd4225bec5419a62ca2e00dfedddc",
+      "media_type": "text/markdown",
+      "size": 9001
+    },
+    "docs/architecture-and-development/articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/research.md": {
+      "sha256": "fe0858ac3413e7b173ff057c2465c93d9ae456c04d5cffdc3b910753076debf2",
+      "media_type": "text/markdown",
+      "size": 24135
+    },
+    "docs/architecture-and-development/articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/assets/diagram-17659d4b7180.webp": {
+      "sha256": "17659d4b718008c9c449974cfa1cf20eb99176127e766497ef1323b5af0b9154",
+      "media_type": "image/webp",
+      "size": 61926
+    },
+    "docs/architecture-and-development/articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/assets/diagram-18fab894d351.webp": {
+      "sha256": "18fab894d351334d11a28e5cffca9647b988b5479cc1cbd42507160b259fd805",
+      "media_type": "image/webp",
+      "size": 28998
+    },
+    "docs/architecture-and-development/articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/assets/diagram-923389c0a73b.webp": {
+      "sha256": "923389c0a73b3d3dac78849fa316686cda811455ee39eb437db1ed779e97db5e",
+      "media_type": "image/webp",
+      "size": 28608
+    },
+    "docs/architecture-and-development/articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/assets/checking-pipeline.svg": {
+      "sha256": "cb4262a62eafc7236390fe317fec71015e1a5cba33b8c17f83bf9def7b5b8753",
+      "media_type": "image/svg+xml",
+      "size": 3900
+    },
+    "docs/architecture-and-development/articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/assets/wasm-boundary.svg": {
+      "sha256": "aab103d5d9773ed3eff5b5549a3637f98151b26de6bc4bd793d9f60c077a8a58",
+      "media_type": "image/svg+xml",
+      "size": 3721
+    },
+    "docs/architecture-and-development/batches/20261028-01.md": {
+      "sha256": "ac43f19476f150972d3847c872572007fc5a790bfe5f468fe9dbbeaba38dc863",
+      "media_type": "text/markdown",
+      "size": 763
     }
   }
 }

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690" role="img" aria-labelledby="title desc">
+  <title id="title">浏览器如何为 tsrs Wasm 提供文件和接收诊断</title>
+  <desc id="desc">页面收集源码、配置及依赖声明，将任务送到调用方自行创建的 Web Worker。后台宿主缓存 Wasm 模块，每次检查创建新实例；检查器通过宿主提供的文件映射工作，返回诊断及可选的生成文件。当前不支持语言服务器或多线程检查。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#53677c"/></marker>
+    <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#183247}.title{font-size:28px;font-weight:650}.head{font-size:22px;font-weight:600}.body{font-size:18px}.note{font-size:16px;fill:#53677c}.flow{fill:none;stroke:#53677c;stroke-width:2.3;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1120" height="690" rx="18" fill="#f6f8fb"/>
+  <text x="40" y="50" class="title">Wasm 把检查器带进浏览器，文件与执行环境仍由宿主提供</text>
+  <text x="40" y="83" class="note">按调用流程从左向右读；后台线程是接入建议，包不会自动为浏览器创建它</text>
+  <rect x="40" y="125" width="278" height="397" rx="14" fill="#e5edf5" stroke="#b9cad9"/>
+  <text x="64" y="164" class="head">页面 / 编辑器</text>
+  <text x="64" y="205" class="body">收集一份文件映射</text>
+  <text x="64" y="244" class="body">• 用户源码</text>
+  <text x="64" y="277" class="body">• tsconfig 配置</text>
+  <text x="64" y="310" class="body">• 依赖的类型声明</text>
+  <path d="M65 336H293" stroke="#b9cad9"/>
+  <text x="64" y="374" class="body">显示诊断与生成文件</text>
+  <text x="64" y="411" class="note">完整自动补全、跳转等功能</text>
+  <text x="64" y="437" class="note">不能仅靠此次检查调用获得</text>
+  <rect x="425" y="125" width="655" height="397" rx="14" fill="#fff" stroke="#73a498" stroke-width="2"/>
+  <text x="450" y="164" class="head">调用方创建的 Web Worker</text>
+  <text x="450" y="193" class="note">后台执行同步检查，避免阻塞页面主线程</text>
+  <rect x="450" y="224" width="602" height="87" rx="10" fill="#dceeea"/>
+  <text x="472" y="257" class="body">JavaScript 宿主：接收文件映射、提供文件访问</text>
+  <text x="472" y="287" class="note">可以复用编译好的 WebAssembly.Module</text>
+  <rect x="450" y="352" width="602" height="136" rx="10" fill="#eaf1fa" stroke="#a1bad6"/>
+  <text x="472" y="387" class="head">每次调用创建新的 Wasm 实例</text>
+  <text x="472" y="423" class="body">tsrs 单线程读取文件、检查类型、按需生成代码</text>
+  <text x="472" y="457" class="note">标准类型库随包提供；上次调用的检查器状态不保留</text>
+  <path d="M751 311V345" class="flow"/>
+  <path d="M318 254H418" class="flow"/>
+  <text x="369" y="235" text-anchor="middle" class="note">发送任务</text>
+  <path d="M425 469H325" class="flow"/>
+  <text x="372" y="449" text-anchor="middle" class="note">返回结果</text>
+  <rect x="40" y="554" width="1040" height="89" rx="12" fill="#fff1dd"/>
+  <text x="63" y="589" class="body">当前边界：没有 --lsp / --watch 服务；本机多核基准不能直接套到此处。</text>
+  <text x="63" y="622" class="body">内存与递归深度受实际宿主限制；Wasm 格式本身不会取消这些资源约束。</text>
+  <text x="40" y="674" class="note">依据：@tsrs/wasm 包文档与 wasm-build 设计记录；不表示已具备完整浏览器开发环境。</text>
+</svg>

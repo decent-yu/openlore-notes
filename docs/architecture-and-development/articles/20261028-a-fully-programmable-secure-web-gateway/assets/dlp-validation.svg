@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="680" viewBox="0 0 1060 680" role="img" aria-labelledby="title desc">
+  <title id="title">DLP 自定义校验如何处理命中与未知结果</title>
+  <desc id="desc">模式匹配筛出候选片段，Worker 再查询受信数据源。确认、否决和未知结果返回到 DLP 的匹配判断，最后由完整策略决定动作。未知不能直接当作安全，未命中模式也不会触发校验。</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#486071"/></marker>
+  <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#163345}.h{font-size:28px;font-weight:650}.t{font-size:21px;font-weight:600}.s{font-size:18px}.m{font-size:17px;fill:#526b7b}.l{fill:none;stroke:#486071;stroke-width:2;marker-end:url(#a)}</style></defs>
+  <rect width="1060" height="680" rx="18" fill="#f8fafb"/>
+  <text class="h" x="38" y="52">先筛候选，再核实；“查不到”需要单独处理</text>
+  <text class="m" x="38" y="85">以原文的密钥检查为例；三种返回结果不直接等于最终的允许或阻断动作。</text>
+  <rect x="38" y="120" width="250" height="105" rx="12" fill="#fff" stroke="#b9c9d2"/>
+  <text class="t" x="163" y="159" text-anchor="middle">DLP 模式匹配</text>
+  <text class="s" x="163" y="191" text-anchor="middle">找到疑似密钥片段</text>
+  <path class="l" d="M288 173H384"/>
+  <text class="m" x="337" y="154" text-anchor="middle">命中后</text>
+  <rect x="392" y="120" width="280" height="105" rx="12" fill="#eaf1fc" stroke="#7197c4"/>
+  <text class="t" x="532" y="159" text-anchor="middle">Worker 校验片段</text>
+  <text class="s" x="532" y="191" text-anchor="middle">接收上下文与匹配偏移</text>
+  <path class="l" d="M672 160H769"/>
+  <path class="l" d="M777 196H679"/>
+  <text class="m" x="723" y="141" text-anchor="middle">查询</text>
+  <rect x="777" y="120" width="245" height="105" rx="12" fill="#fff" stroke="#b9c9d2"/>
+  <text class="t" x="899" y="159" text-anchor="middle">受信数据源</text>
+  <text class="s" x="899" y="191" text-anchor="middle">如受支持的密钥接口</text>
+  <text x="38" y="252" font-size="17" style="fill:#8c6835">未命中模式时，不进入下方校验流程。</text>
+  <path class="l" d="M532 225V302"/>
+  <path class="l" d="M532 270H194V302"/>
+  <path class="l" d="M532 270H870V302"/>
+  <rect x="38" y="310" width="313" height="132" rx="12" fill="#e9f4ef" stroke="#74a68d"/>
+  <text class="t" x="194" y="348" text-anchor="middle">取得支持命中的证据</text>
+  <text class="s" x="194" y="381" text-anchor="middle">正分数：提高置信度</text>
+  <text class="m" x="194" y="411" text-anchor="middle">不是“泄露概率”的直接数值</text>
+  <rect x="375" y="310" width="313" height="132" rx="12" fill="#eef2f6" stroke="#93a7b8"/>
+  <text class="t" x="531" y="348" text-anchor="middle">确认应排除此候选</text>
+  <text class="s" x="531" y="381" text-anchor="middle">veto：否决本次匹配</text>
+  <text class="m" x="531" y="411" text-anchor="middle">不自动否决其他检测项</text>
+  <rect x="713" y="310" width="309" height="132" rx="12" fill="#fff3e2" stroke="#c59b58"/>
+  <text class="t" x="867" y="348" text-anchor="middle">超时、限流或权限不明</text>
+  <text class="s" x="867" y="381" text-anchor="middle">按预设回退策略处理</text>
+  <text class="m" x="867" y="411" text-anchor="middle">score: 0 仅表示不调整置信度</text>
+  <path class="l" d="M194 442V490H457V516"/>
+  <path class="l" d="M531 442V516"/>
+  <path class="l" d="M867 442V490H605V516"/>
+  <rect x="275" y="524" width="512" height="87" rx="12" fill="#163b50"/>
+  <text x="531" y="560" text-anchor="middle" font-size="22" font-weight="600" style="fill:#fff">DLP 汇总匹配 → 完整策略决定动作</text>
+  <text x="531" y="591" text-anchor="middle" font-size="18" style="fill:#d9e8ef">还要结合目的地、检测配置及其他策略条件</text>
+  <text class="m" x="38" y="652">依据 Cloudflare DLP 校验文档；“未知”的业务处置是团队必须明确的设计选择。</text>
+</svg>

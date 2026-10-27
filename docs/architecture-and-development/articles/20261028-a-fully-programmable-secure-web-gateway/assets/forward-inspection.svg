@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="710" viewBox="0 0 1160 710" role="img" aria-labelledby="title desc">
+  <title id="title">Forward 的调用顺序与请求、响应检查边界</title>
+  <desc id="desc">Forward 先调用 Worker，但原始请求体经网关检查后才交给 Worker。请求体检查的阻断可以中断 Worker。改写后的请求体不再扫描，最终响应会被扫描。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#3e596c"/></marker>
+    <marker id="red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#ad383e"/></marker>
+    <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#163345} .h{font-size:29px;font-weight:650}.sub{font-size:18px;fill:#526b7b}.label{font-size:21px;font-weight:600}.small{font-size:18px}.line{fill:none;stroke:#3e596c;stroke-width:2.5;marker-end:url(#arrow)} .box{fill:#fff;stroke:#b5c7d1;stroke-width:1.5}.scan{fill:#e9f5f1;stroke:#5b9f8b;stroke-width:1.5}.code{fill:#eaf1fc;stroke:#7197c4;stroke-width:1.5}</style>
+  </defs>
+  <rect width="1160" height="710" rx="18" fill="#f7fafc"/>
+  <text class="h" x="40" y="52">Worker 已启动，不代表请求体检查已通过</text>
+  <text class="sub" x="40" y="85">控制调用与内容检查分开读；下方只画命中 Forward 的普通 HTTP 请求。</text>
+  <text class="label" x="40" y="133">① 决定是否调用代码</text>
+  <rect class="box" x="40" y="157" width="285" height="80" rx="10"/>
+  <text class="label" x="182" y="190" text-anchor="middle">HTTP 请求策略允许</text>
+  <text class="small" x="182" y="217" text-anchor="middle">若被阻断，不调用 Worker</text>
+  <path class="line" d="M325 197H398"/>
+  <rect class="box" x="405" y="157" width="300" height="80" rx="10"/>
+  <text class="label" x="555" y="190" text-anchor="middle">首条匹配的 Forward</text>
+  <text class="small" x="555" y="217" text-anchor="middle">按请求元数据、身份等选中</text>
+  <path class="line" d="M705 197H778"/>
+  <rect class="code" x="785" y="157" width="335" height="80" rx="10"/>
+  <text class="label" x="952" y="190" text-anchor="middle">启动 Worker.handle()</text>
+  <text class="small" x="952" y="217" text-anchor="middle">DLP 命中不能选择 Forward</text>
+  <text class="label" x="40" y="290">② 看清哪些字节会被检查</text>
+  <text class="sub" x="40" y="320">请求方向 →　原始请求体在交给 Worker 前经过检查</text>
+  <rect class="box" x="40" y="344" width="185" height="82" rx="10"/>
+  <text class="label" x="132" y="391" text-anchor="middle">原始请求体</text>
+  <path class="line" d="M225 385H278"/>
+  <rect class="scan" x="285" y="344" width="235" height="82" rx="10"/>
+  <text class="label" x="402" y="379" text-anchor="middle">Gateway 内容检查</text>
+  <text class="small" x="402" y="405" text-anchor="middle">含 DLP 等检查</text>
+  <path class="line" d="M520 385H603"/>
+  <rect class="code" x="610" y="344" width="225" height="82" rx="10"/>
+  <text class="label" x="722" y="379" text-anchor="middle">Worker 改写请求</text>
+  <text class="small" x="722" y="405" text-anchor="middle">next() 最多一次</text>
+  <path class="line" d="M835 385H928"/>
+  <rect class="box" x="935" y="344" width="185" height="82" rx="10"/>
+  <text class="label" x="1027" y="391" text-anchor="middle">原目标服务</text>
+  <path d="M402 426V462H722V426" fill="none" stroke="#ad383e" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#red)"/>
+  <text x="560" y="488" text-anchor="middle" font-size="18" style="fill:#ad383e">内容检查阻断，可中断已启动的 Worker</text>
+  <text x="953" y="455" text-anchor="middle" font-size="17" style="fill:#775222">改写字节不再扫描</text>
+  <text class="sub" x="40" y="532">响应方向 ←　包括 Worker 自行生成的响应，最终仍经过检查</text>
+  <rect class="box" x="40" y="551" width="185" height="80" rx="10"/>
+  <text class="label" x="132" y="598" text-anchor="middle">用户设备</text>
+  <path class="line" d="M285 591H232"/>
+  <rect class="scan" x="285" y="551" width="235" height="80" rx="10"/>
+  <text class="label" x="402" y="585" text-anchor="middle">Gateway 最终检查</text>
+  <text class="small" x="402" y="612" text-anchor="middle">检查最终响应</text>
+  <path class="line" d="M610 591H527"/>
+  <rect class="code" x="610" y="551" width="225" height="80" rx="10"/>
+  <text class="label" x="722" y="585" text-anchor="middle">Worker 处理响应</text>
+  <text class="small" x="722" y="612" text-anchor="middle">可改写或自行生成</text>
+  <path class="line" d="M935 591H842"/>
+  <rect class="box" x="935" y="551" width="185" height="80" rx="10"/>
+  <text class="label" x="1027" y="598" text-anchor="middle">原目标服务</text>
+  <text class="sub" x="40" y="681">依据 Cloudflare Forward / Order of enforcement 文档；逻辑示意，不表示耗时或整包缓冲。</text>
+</svg>

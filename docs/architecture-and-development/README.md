@@ -2,12 +2,14 @@
 
 关注架构设计与演进，以及有工程证据的新开发方法和协作流程。
 
-## 最近收录（12 篇）
+## 最近收录（14 篇）
 
 按首次收录时间从新到旧排列；更新旧文章不改变收录日期和目录。
 
 | 收录日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261028 | [A fully programmable secure web gateway](articles/20261028-a-fully-programmable-secure-web-gateway/README.md) | [简体中文](articles/20261028-a-fully-programmable-secure-web-gateway/article-zh-CN.md) | [调研](articles/20261028-a-fully-programmable-secure-web-gateway/research.md) |
+| 20261028 | [Introducing tsrs: a Port of TypeScript to Rust](articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/README.md) | [简体中文](articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/article-zh-CN.md) | [调研](articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/research.md) |
 | 20261027 | [Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang](articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/README.md) | [简体中文](articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/article-zh-CN.md) | [调研](articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/research.md) |
 | 20261026 | [There's always a patient zero: Defending the NetScaler front door before the patch](articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/README.md) | [简体中文](articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/article-zh-CN.md) | [调研](articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/research.md) |
 | 20261024 | [Bringing post-quantum cryptography to geographically fenced key management](articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/README.md) | [简体中文](articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/article-zh-CN.md) | [调研](articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/research.md) |
@@ -25,6 +27,8 @@
 
 | 更新日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261028 | [A fully programmable secure web gateway](articles/20261028-a-fully-programmable-secure-web-gateway/README.md) | [简体中文](articles/20261028-a-fully-programmable-secure-web-gateway/article-zh-CN.md) | [调研](articles/20261028-a-fully-programmable-secure-web-gateway/research.md) |
+| 20261028 | [Introducing tsrs: a Port of TypeScript to Rust](articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/README.md) | [简体中文](articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/article-zh-CN.md) | [调研](articles/20261028-introducing-tsrs-a-port-of-typescript-to-rust/research.md) |
 | 20261027 | [Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang](articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/README.md) | [简体中文](articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/article-zh-CN.md) | [调研](articles/20261027-cross-request-kv-cache-exposure-in-the-glm-5-3-workers-ai-model-and-our/research.md) |
 | 20261026 | [There's always a patient zero: Defending the NetScaler front door before the patch](articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/README.md) | [简体中文](articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/article-zh-CN.md) | [调研](articles/20261026-there-s-always-a-patient-zero-defending-the-netscaler-front-door-before-the/research.md) |
 | 20261024 | [Bringing post-quantum cryptography to geographically fenced key management](articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/README.md) | [简体中文](articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/article-zh-CN.md) | [调研](articles/20261024-bringing-post-quantum-cryptography-to-geographically-fenced-key-management/research.md) |
@@ -40,6 +44,7 @@
 
 ## 采集批次
 
+- [20261028-01](batches/20261028-01.md)（2 篇）
 - [20261027-01](batches/20261027-01.md)（1 篇）
 - [20261026-01](batches/20261026-01.md)（1 篇）
 - [20261024-01](batches/20261024-01.md)（2 篇）
