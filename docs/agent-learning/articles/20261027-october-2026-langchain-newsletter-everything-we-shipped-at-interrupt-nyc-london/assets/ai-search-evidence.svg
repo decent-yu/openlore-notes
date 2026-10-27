@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="850" viewBox="0 0 1160 850" role="img" aria-labelledby="title desc">
+  <title id="title">AI Search 怎样选择执行证据</title>
+  <desc id="desc">原始追踪先整理为去重的执行轨迹，结构化过滤缩小候选范围。每条候选按优先级装入八千 token 的预算，恢复原顺序后由决策模型判断。部分工具结果可能未被保留，因此未匹配不能证明没有问题。</desc>
+  <defs>
+    <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="9" height="9" fill="#fff3e9"/><path d="M0 0V9" stroke="#e1a777" stroke-width="2"/></pattern>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#203747}
+      .heading{font-size:24px;font-weight:650}.body{font-size:19px}.small{font-size:17px;fill:#526b7b}.step{font-size:18px;font-weight:650;fill:#007f7a}.flow{fill:none;stroke:#526b7b;stroke-width:2.2}.tip{fill:#526b7b}
+    </style>
+  </defs>
+  <rect width="1160" height="850" rx="20" fill="#f7f9fb"/>
+  <text x="42" y="52" font-size="30" font-weight="700">搜索结果取决于：模型实际读到了哪些证据</text>
+  <text x="42" y="84" class="small">阅读顺序：从上到下。流程依据官方说明；消息为示意，色块不按数据量绘制。</text>
+
+  <rect x="42" y="118" width="300" height="192" rx="12" fill="#fff" stroke="#d1dce3"/>
+  <text x="62" y="150" class="step">1　原始执行追踪</text>
+  <text x="62" y="184" class="body">第一次调用：用户请求</text>
+  <text x="62" y="218" class="body">第二次调用：历史＋工具结果</text>
+  <text x="62" y="252" class="body">第三次调用：更多历史……</text>
+  <text x="62" y="284" class="small">同一消息可能重复出现在历史中</text>
+  <path d="M349 211H391" class="flow"/>
+  <path d="M391 205L401 211L391 217Z" class="tip"/>
+
+  <rect x="405" y="118" width="330" height="192" rx="12" fill="#edf8f6" stroke="#abd7cd"/>
+  <text x="425" y="150" class="step">2　整理成执行轨迹</text>
+  <text x="425" y="184" class="body">用户：请退款</text>
+  <text x="425" y="218" class="body">Agent 调用工具 → 工具返回</text>
+  <text x="425" y="252" class="body">Agent：已完成退款</text>
+  <text x="425" y="284" class="small">每条消息保留一次，按顺序排列</text>
+  <path d="M742 211H784" class="flow"/>
+  <path d="M784 205L794 211L784 217Z" class="tip"/>
+
+  <rect x="798" y="118" width="320" height="192" rx="12" fill="#fff" stroke="#d1dce3"/>
+  <text x="818" y="150" class="step">3　先缩小候选范围</text>
+  <text x="818" y="188" class="body">用时间、标签、运行状态等</text>
+  <text x="818" y="220" class="body">结构化条件筛选</text>
+  <text x="818" y="267" class="small">随后逐条判断剩余候选</text>
+  <path d="M958 317V343H570V368" class="flow"/>
+  <path d="M564 368L570 378L576 368Z" class="tip"/>
+
+  <rect x="42" y="382" width="1076" height="216" rx="12" fill="#fff" stroke="#d1dce3"/>
+  <text x="62" y="416" class="step">4　每条候选的输入预算：发布说明采用约 8K token</text>
+  <text x="62" y="448" class="small">先按优先级选内容；选完后恢复消息的原始顺序，再交给模型。</text>
+  <rect x="62" y="469" width="450" height="62" rx="7" fill="#c8ece3"/>
+  <text x="80" y="496" class="body" font-weight="650">优先：用户消息、面向用户的回答</text>
+  <text x="80" y="520" class="small">先占用预算</text>
+  <rect x="522" y="469" width="350" height="62" rx="7" fill="#e0eaf4"/>
+  <text x="540" y="496" class="body">其次：中间步骤、工具结果等</text>
+  <text x="540" y="520" class="small">使用剩余预算，装不下时裁剪</text>
+  <rect x="884" y="469" width="214" height="62" rx="7" fill="url(#hatch)" stroke="#d39768"/>
+  <text x="902" y="507" class="body">超出部分不再送入</text>
+  <text x="62" y="573" class="body" fill="#a55627">关键限制：工具里的错误证据，可能恰好位于被裁掉的部分。</text>
+  <path d="M570 605V620H294V635" class="flow"/>
+  <path d="M288 635L294 645L300 635Z" class="tip"/>
+
+  <rect x="42" y="649" width="504" height="103" rx="12" fill="#edf8f6" stroke="#abd7cd"/>
+  <text x="62" y="680" class="step">5　决策模型读取选中的内容</text>
+  <text x="62" y="715" class="body">判断：“是否声称完成，却没有完成？”</text>
+  <path d="M553 701H603" class="flow"/>
+  <path d="M603 695L613 701L603 707Z" class="tip"/>
+  <rect x="617" y="649" width="501" height="103" rx="12" fill="#fff" stroke="#d1dce3"/>
+  <text x="637" y="680" class="step">6　陆续返回匹配结果，供人核对</text>
+  <text x="637" y="715" class="body">未匹配 ≠ 没发生；还可能是没看到证据</text>
+  <text x="42" y="794" class="small">范围也有区别：轨迹视图可展示子 Agent，但当前 AI Search 不读取子 Agent 内部消息。</text>
+  <text x="42" y="824" font-size="15" fill="#526b7b">依据：LangChain AI Search 技术说明；LangSmith Filter traces 文档。详见正文链接。</text>
+</svg>

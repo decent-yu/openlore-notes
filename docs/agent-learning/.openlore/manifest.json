@@ -187,6 +187,25 @@
       "collected_at": "2026-10-26T00:08:36.580Z",
       "updated_at": "2026-10-26T00:08:36.580Z",
       "has_research": true
+    },
+    "art_f95b94c0-66bb-475a-9132-ae4c2175a268": {
+      "collection_id": "col_85326d1b-6fe",
+      "directory": "articles/20261027-october-2026-langchain-newsletter-everything-we-shipped-at-interrupt-nyc-london",
+      "slug": "october-2026-langchain-newsletter-everything-we-shipped-at-interrupt-nyc-london",
+      "title": "October 2026 LangChain Newsletter: Everything we shipped at Interrupt NYC & London",
+      "original_url": "https://www.langchain.com/blog/october-2026-langchain-newsletter",
+      "tags": [
+        "AI代理工程",
+        "可观测性与执行追踪",
+        "语义检索",
+        "模型评估与红队测试",
+        "模型微调",
+        "MCP工具集成",
+        "AI治理"
+      ],
+      "collected_at": "2026-10-27T00:09:33.792Z",
+      "updated_at": "2026-10-27T00:09:33.792Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -241,6 +260,14 @@
       "article_ids": [
         "art_7910f0c2-123d-4f09-bf25-ad39beccc28b"
       ]
+    },
+    "col_85326d1b-6fe": {
+      "path": "docs/agent-learning/batches/20261027-01.md",
+      "date_sequence": "20261027-01",
+      "created_at": "2026-10-27T00:09:33.792Z",
+      "article_ids": [
+        "art_f95b94c0-66bb-475a-9132-ae4c2175a268"
+      ]
     }
   },
   "delivered_batches": [
@@ -254,13 +281,14 @@
     "batch_7723dd56-3a4d-4e95-9db7-246a57a8bbbb",
     "batch_37317c3a-14c8-4672-9e70-1ee50300f9be",
     "batch_443bdea0-b941-46c9-9378-80ffcafa14be",
-    "batch_7df57b02-1d80-4f15-8c02-56e97db3bb3a"
+    "batch_7df57b02-1d80-4f15-8c02-56e97db3bb3a",
+    "batch_22a8ceda-7c91-4eba-abde-8f087a9575fd"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "25ed605d0bc6a15e32421dc20ebe3b54d3f911a7af6373ba06002eea7622827a",
+      "sha256": "8140c804079624278c23bf1b016a753b82bfcf7aee21ac9ea7263a5ad789d777",
       "media_type": "text/markdown",
-      "size": 7319
+      "size": 8298
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -826,6 +854,41 @@
       "sha256": "787e569d845b18449c1f860e5c807571c2d1ab607ee0c27eb6dc9118c61f8ced",
       "media_type": "text/markdown",
       "size": 481
+    },
+    "docs/agent-learning/articles/20261027-october-2026-langchain-newsletter-everything-we-shipped-at-interrupt-nyc-london/README.md": {
+      "sha256": "38d88148726473ab45bcea0d34142962dc5765437ceabf90b96e5d7d5c5a4ea6",
+      "media_type": "text/markdown",
+      "size": 548
+    },
+    "docs/agent-learning/articles/20261027-october-2026-langchain-newsletter-everything-we-shipped-at-interrupt-nyc-london/article.md": {
+      "sha256": "ff177dce99e131f84a06dacba56ebc77921c4bdf779ad2a999ce9413705fc86c",
+      "media_type": "text/markdown",
+      "size": 6795
+    },
+    "docs/agent-learning/articles/20261027-october-2026-langchain-newsletter-everything-we-shipped-at-interrupt-nyc-london/article-zh-CN.md": {
+      "sha256": "5f18564bb6c33c8207a65fe7fec87dbfef4a36f3cffb1fb9baf372b4373ac3a2",
+      "media_type": "text/markdown",
+      "size": 7243
+    },
+    "docs/agent-learning/articles/20261027-october-2026-langchain-newsletter-everything-we-shipped-at-interrupt-nyc-london/research.md": {
+      "sha256": "01c04668087408dbabc3867952311c891a2646250cf8ad06e80b0f2b20861095",
+      "media_type": "text/markdown",
+      "size": 16435
+    },
+    "docs/agent-learning/articles/20261027-october-2026-langchain-newsletter-everything-we-shipped-at-interrupt-nyc-london/assets/diagram-6a96f8897e43.png": {
+      "sha256": "6a96f8897e43b10a3980326a44f4a81fec06b72b75e74409fc3c56f698fbd8fb",
+      "media_type": "image/png",
+      "size": 65503
+    },
+    "docs/agent-learning/articles/20261027-october-2026-langchain-newsletter-everything-we-shipped-at-interrupt-nyc-london/assets/ai-search-evidence.svg": {
+      "sha256": "f8ceab5a6f9c82cbbe8ee174e70f0d9ea778f4ed59710a121a9e8cc5dc3efee8",
+      "media_type": "image/svg+xml",
+      "size": 5149
+    },
+    "docs/agent-learning/batches/20261027-01.md": {
+      "sha256": "01ce560eefa265d3ac3d0d44c61d0fb7ed75c2962059ce02fb8bfd228269fcd4",
+      "media_type": "text/markdown",
+      "size": 602
     }
   }
 }
