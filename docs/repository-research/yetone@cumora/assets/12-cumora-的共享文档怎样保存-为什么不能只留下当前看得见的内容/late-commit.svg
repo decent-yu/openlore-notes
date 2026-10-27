@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="790" viewBox="0 0 1120 790" role="img" aria-labelledby="title desc">
+  <title id="title">编号较小的更新，可能在快照生成后才提交</title>
+  <desc id="desc">按源码测试构造的时序。更新 A 取得编号 101 但尚未提交；依赖 A 的更新 B 取得编号 102 并先提交。压缩只读到 B，保存其原始更新并只删除 102。A 后来提交，冷加载读取快照和所有剩余日志，恢复 AB。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#506176"/></marker>
+    <style>
+      text {font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;fill:#202f40}
+      .body {font-size:19px}
+      .small {font-size:17px;fill:#526478}
+      .head {font-size:21px;font-weight:600}
+      .line {stroke:#cad3dc;stroke-width:2;stroke-dasharray:5 7}
+      .flow {stroke:#506176;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1120" height="790" fill="#fbfaf6"/>
+  <text x="40" y="47" font-size="28" font-weight="650">编号顺序 ≠ 提交顺序</text>
+  <text x="40" y="78" class="small">按 document-compaction.test.ts 的交错构造；101、102 为解释用编号，并非线上记录。</text>
+
+  <text x="65" y="135" class="head">写入连接甲</text>
+  <text x="325" y="135" class="head">写入连接乙</text>
+  <text x="595" y="135" class="head">压缩程序</text>
+  <text x="855" y="135" class="head">重新加载</text>
+  <path d="M125 155V555M385 155V555M650 155V555M915 155V555" class="line"/>
+
+  <rect x="38" y="173" width="206" height="80" rx="5" fill="#fff0d4" stroke="#bd8a31"/>
+  <text x="54" y="203" class="body">A 取得 id 101</text>
+  <text x="54" y="231" class="small">事务尚未提交</text>
+
+  <rect x="286" y="266" width="228" height="80" rx="5" fill="#e6f0ec" stroke="#4e806c"/>
+  <text x="302" y="296" class="body">B 取得 id 102，提交</text>
+  <text x="302" y="324" class="small">但 B 需要 A 才能显示</text>
+  <path d="M514 306H540V348H557" class="flow"/>
+
+  <rect x="557" y="322" width="235" height="115" rx="5" fill="#e9eff8" stroke="#6b85aa"/>
+  <text x="573" y="351" class="body">查询只看见 B</text>
+  <text x="573" y="378" class="small">合并原始更新，保留依赖</text>
+  <text x="573" y="405" class="small">写快照；只删除 id 102</text>
+  <text x="573" y="427" font-size="15" fill="#526478">两项修改一起提交</text>
+
+  <rect x="38" y="461" width="206" height="70" rx="5" fill="#e6f0ec" stroke="#4e806c"/>
+  <text x="54" y="490" class="body">A 现在才提交</text>
+  <text x="54" y="516" class="small">id 101 留在更新表</text>
+  <path d="M244 497H826" class="flow"/>
+  <path d="M792 405H806V460H826" class="flow"/>
+
+  <rect x="826" y="439" width="260" height="112" rx="5" fill="#e6f0ec" stroke="#4e806c"/>
+  <text x="843" y="469" class="body">快照 B + 剩余日志 A</text>
+  <text x="843" y="497" class="small">依赖补齐，恢复 AB</text>
+  <text x="843" y="526" class="small">即使 101 小于快照标记 102</text>
+
+  <path d="M40 585H1080" stroke="#ccd3da"/>
+  <text x="40" y="621" font-size="21" font-weight="600">两种看似省事的做法，都会破坏这个过程</text>
+  <text x="40" y="659" class="body"><tspan fill="#a14332" font-weight="600">只读 id &gt; 102</tspan><tspan>：A 虽然已经提交，仍会被跳过。</tspan></text>
+  <text x="40" y="694" class="body"><tspan fill="#a14332" font-weight="600">只保存当前能显示的内容</tspan><tspan>：可能丢掉正在等待 A 的 B。</tspan></text>
+  <text x="40" y="741" class="small">当前实现：读取全部剩余日志；Y.mergeUpdates 保留原始更新；只删除本次实际合并的记录。</text>
+</svg>

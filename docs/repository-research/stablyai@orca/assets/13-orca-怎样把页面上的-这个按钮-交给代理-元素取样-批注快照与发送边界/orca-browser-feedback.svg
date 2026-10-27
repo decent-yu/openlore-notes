@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="730" viewBox="0 0 1120 730">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10" fill="#44546b"/></marker>
+    <marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10" fill="#217b62"/></marker>
+  </defs>
+  <rect width="1120" height="730" fill="#faf9f5"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#203047">
+    <text x="44" y="48" font-size="27" font-weight="600">点中元素以后，保留什么，何时清除？</text>
+    <text x="44" y="78" font-size="16" fill="#627086">当前桌面内嵌浏览器的批注路径 · 实线表示数据或操作，虚线表示临时截图支路</text>
+    <text x="50" y="123" font-size="18" font-weight="600">网页中的选取器</text>
+    <text x="425" y="123" font-size="18" font-weight="600">桌面主进程</text>
+    <text x="792" y="123" font-size="18" font-weight="600">Orca 界面</text>
+    <path d="M365 105V373 M745 105V373" stroke="#d7dcd9"/>
+    <rect x="48" y="149" width="270" height="105" rx="8" fill="#e9eef2"/>
+    <text x="65" y="178" font-size="18">悬停定位 → 点击选取</text>
+    <text x="65" y="207" font-size="16">元素结构、样式、页面位置</text>
+    <text x="65" y="233" font-size="16">可选的 React 源码线索</text>
+    <path d="M320 198H400" fill="none" stroke="#44546b" stroke-width="2"/>
+    <path d="M395 193 405 198 395 203" fill="#44546b"/>
+    <rect x="414" y="149" width="275" height="105" rx="8" fill="#e9eef2"/>
+    <text x="432" y="178" font-size="18">核对窗口与页面归属</text>
+    <text x="432" y="207" font-size="16">重查结构、限制长度</text>
+    <text x="432" y="233" font-size="16">清理 URL、部分敏感字段</text>
+    <path d="M691 198H773" fill="none" stroke="#44546b" stroke-width="2"/>
+    <path d="M768 193 778 198 768 203" fill="#44546b"/>
+    <rect x="787" y="149" width="283" height="105" rx="8" fill="#e0eee7"/>
+    <text x="805" y="178" font-size="18">确认元素，填写反馈</text>
+    <text x="805" y="207" font-size="16">添加批注时 screenshot = null</text>
+    <text x="805" y="233" font-size="16">之后整理为文本发送</text>
+    <path d="M552 255V291H764" fill="none" stroke="#9b7b45" stroke-width="2" stroke-dasharray="6 5"/>
+    <path d="M759 286 769 291 759 296" fill="#9b7b45"/>
+    <text x="421" y="319" font-size="16" fill="#836636">另拍临时截图：裁剪、限量，可缺省</text>
+    <text x="790" y="296" font-size="16" fill="#836636">可复制图片</text>
+    <text x="790" y="322" font-size="16" fill="#836636">旧选取的迟到结果被丢弃</text>
+    <text x="49" y="301" font-size="16" fill="#627086">导航 / 销毁 / 超时 → 取消等待</text>
+    <text x="49" y="329" font-size="16" fill="#627086">同页新选取也有独立操作代次</text>
+    <path d="M48 365H1072" stroke="#c5ccc8"/>
+    <text x="48" y="407" font-size="21" font-weight="600">发送期间修改批注：旧回执只能清除旧对象</text>
+    <text x="49" y="438" font-size="16" fill="#627086">下例为自拟情境。A 与 A′ 的编号可以相同，但编辑操作会生成新的对象。</text>
+    <path d="M86 476H1038" stroke="#9ba7b3" stroke-width="2"/>
+    <path d="M1033 471 1043 476 1033 481" fill="#9ba7b3"/>
+    <g font-size="16">
+      <circle cx="112" cy="476" r="5" fill="#44546b"/><text x="65" y="510">发送 A、B</text>
+      <text x="65" y="538" fill="#627086">暂时排除这两个对象</text>
+      <text x="65" y="563" fill="#627086">防止下一次顺手重发</text>
+      <circle cx="420" cy="476" r="5" fill="#44546b"/><text x="350" y="510">编辑 A → A′</text>
+      <text x="350" y="538">再添加 C</text>
+      <circle cx="728" cy="476" r="5" fill="#217b62"/><text x="649" y="510">交付层确认成功</text>
+      <text x="649" y="538">按对象身份清除</text>
+      <text x="649" y="563" fill="#217b62">删除 B，留下 A′、C</text>
+      <text x="886" y="509" fill="#627086">若失败或未确认</text>
+      <text x="886" y="537" fill="#627086">则释放暂扣、保留批注</text>
+    </g>
+    <rect x="48" y="603" width="1024" height="84" rx="8" fill="#fff" stroke="#d7dcd9"/>
+    <text x="66" y="633" font-size="17">交付层：重新核对所选代理；终端文本粘贴与回车分开，写入前由宿主检查。</text>
+    <text x="66" y="662" font-size="17" fill="#627086">“已发送”不证明修改完成；导航可保留批注文字，但旧位置标记失效，会话恢复会清空批注。</text>
+  </g>
+</svg>

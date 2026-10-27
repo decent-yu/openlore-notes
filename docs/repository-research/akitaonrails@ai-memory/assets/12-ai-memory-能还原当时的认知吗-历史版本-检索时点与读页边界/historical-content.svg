@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img" aria-labelledby="title desc">
+  <title id="title">同一个过去时间，实际配置与记忆版本可以不同</title>
+  <desc id="desc">自拟场景：六月十日实际数据库从 Postgres 迁移到 SQLite，六月十二日记忆页面才更新。查询六月十一日，历史检索选中仍在当时收录区间内的旧版 Postgres；今天按同一路径读页则得到新版 SQLite。日期位置为示意，不按时间比例绘制。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#59677b" stroke-width="1.5"/></marker>
+    <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#233044}.small{font-size:17px}.label{font-size:20px;font-weight:600}.date{font-size:17px;fill:#59677b}.light{fill:#fff}</style>
+  </defs>
+  <rect width="1120" height="620" fill="#fbfcfe"/>
+  <text x="42" y="48" font-size="27" font-weight="650">历史查询还原的是收录版本</text>
+  <text x="42" y="80" class="small">自拟例：实际迁移先发生，记忆页面两天后才更新；横向位置不按时间比例。</text>
+  <path d="M230 125H1060" stroke="#59677b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <g class="date" text-anchor="middle">
+    <text x="245" y="113">6 月 1 日</text><text x="545" y="113">6 月 10 日</text>
+    <text x="675" y="113">6 月 11 日</text><text x="805" y="113">6 月 12 日</text>
+    <text x="1020" y="113">今天</text>
+  </g>
+  <g stroke="#dce1e9" stroke-width="1"><path d="M245 125V328M545 125V328M805 125V328M1020 125V328"/></g>
+  <rect x="659" y="134" width="32" height="195" rx="7" fill="#e8ddfb"/>
+  <path d="M675 125V330" stroke="#7852a4" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="42" y="190" class="label">实际配置</text>
+  <rect x="245" y="157" width="300" height="54" rx="4" fill="#536a84"/>
+  <rect x="545" y="157" width="475" height="54" rx="4" fill="#267c78"/>
+  <text x="395" y="191" class="label light" text-anchor="middle">Postgres</text>
+  <text x="855" y="191" class="label light" text-anchor="middle">SQLite</text>
+  <text x="42" y="291" class="label">系统收录的版本</text>
+  <rect x="245" y="254" width="560" height="54" rx="4" fill="#536a84"/>
+  <rect x="805" y="254" width="215" height="54" rx="4" fill="#267c78"/>
+  <text x="460" y="288" class="label light" text-anchor="middle">v1：Postgres</text>
+  <text x="913" y="288" class="label light" text-anchor="middle">v2：SQLite</text>
+  <text x="675" y="354" class="small" fill="#7852a4" text-anchor="middle">查询时点 T</text>
+  <path d="M42 386H1078" stroke="#dce1e9"/>
+  <text x="42" y="421" class="label">同一路径 notes/db.md，两个入口指向不同版本</text>
+  <path d="M68 466H500" stroke="#59677b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="68" y="454" class="small">memory_query(as_of = 6 月 11 日)</text>
+  <text x="528" y="473" class="label" fill="#536a84">旧版 v1 / 版本标识 A / Postgres</text>
+  <path d="M68 530H500" stroke="#59677b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="68" y="518" class="small">今天 memory_read_page(path)</text>
+  <text x="528" y="537" class="label" fill="#267c78">当前文件 / 通常对应 v2 / SQLite</text>
+  <text x="42" y="589" class="small">假设历史未被删除，文件与索引已同步；按路径读取不会继承上一次查询的 as_of。</text>
+</svg>

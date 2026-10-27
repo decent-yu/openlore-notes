@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="800" viewBox="0 0 1120 800" role="img" aria-labelledby="title desc">
+  <title id="title">同一个 Gmail 工具怎样选定工作账号</title>
+  <desc id="desc">假设已连接工作和个人邮箱。代理先读取带账号参数的工具清单，调用时指定工作账号。云端检查身份和账号归属，准备凭据，移除账号参数，再向 Gmail 发送请求，最后在结果中注明执行账号。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="context-stroke"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#20313d;font-size:18px}
+      .title{font-size:28px;font-weight:650}.small{font-size:16px;fill:#566773}.head{font-size:20px;font-weight:600}
+      .life{stroke:#b9c6cd;stroke-width:1.5;stroke-dasharray:5 7}.line{fill:none;stroke:#316985;stroke-width:2;marker-end:url(#arrow)}
+      .return{fill:none;stroke:#66818e;stroke-width:1.8;stroke-dasharray:6 4;marker-end:url(#arrow)}
+      .credential{fill:none;stroke:#a96125;stroke-width:2.5;marker-end:url(#arrow)}.accent{fill:#8b4f1b}
+    </style>
+  </defs>
+  <rect width="1120" height="800" rx="12" fill="#fafcfc"/>
+  <text x="35" y="48" class="title">一个工具入口，调用时选择账号</text>
+  <text x="35" y="78" class="small">假设场景：代理已获任务，使用工作邮箱发送修复说明；图中省略失败分支</text>
+  <rect x="305" y="105" width="625" height="609" rx="10" fill="#eff5f7"/>
+  <text x="40" y="129" class="small">代理所在电脑</text>
+  <text x="325" y="129" class="small">Superset 云端</text>
+  <text x="975" y="129" class="small">外部服务</text>
+  <path d="M930 148V710" stroke="#aabac3" stroke-dasharray="4 5"/>
+  <text x="140" y="169" text-anchor="middle" class="head">代理客户端</text>
+  <text x="440" y="169" text-anchor="middle" class="head">插件代理接口</text>
+  <text x="730" y="169" text-anchor="middle" class="head">账号连接记录</text>
+  <text x="1010" y="169" text-anchor="middle" class="head">Gmail</text>
+  <path d="M140 187V706M440 187V706M730 187V706M1010 187V706" class="life"/>
+  <text x="157" y="207">① 请求工具清单</text>
+  <text x="157" y="230" class="small">携带 Superset 身份凭据</text>
+  <path d="M140 242H440" class="line"/>
+  <text x="460" y="265">检查安装、用户和组织</text>
+  <path d="M440 277H730" class="line"/>
+  <text x="460" y="303" class="small">返回工作、个人两个账号</text>
+  <path d="M730 315H440" class="return"/>
+  <text x="157" y="342">② 同一个 send_email 工具</text>
+  <text x="157" y="365" class="small">新增必填账号参数，列出可选编号</text>
+  <path d="M440 377H140" class="return"/>
+  <text x="157" y="405">③ 调用 send_email</text>
+  <text x="157" y="428" class="small">邮件内容 ＋ 工作账号编号</text>
+  <path d="M140 440H440" class="line"/>
+  <text x="460" y="467">重新查所选账号</text>
+  <path d="M440 479H730" class="line"/>
+  <text x="460" y="506" class="small">归属、连接状态、加密凭据</text>
+  <path d="M730 518H440" class="return"/>
+  <rect x="350" y="538" width="478" height="56" rx="7" fill="#fff6e9" stroke="#d4a36c"/>
+  <text x="366" y="560" class="accent">④ 检查归属，按需刷新并解密凭据</text>
+  <text x="366" y="583" class="small">转发前移除 Superset 的账号选择参数</text>
+  <text x="600" y="618" class="accent">⑤ 工作账号令牌 ＋ 编码后的邮件</text>
+  <path d="M440 630H1010" class="credential"/>
+  <text x="755" y="656" class="small">发送结果、邮件编号</text>
+  <path d="M1010 667H440" class="return"/>
+  <text x="157" y="693" class="small">⑥ 返回结果，并注明“以工作账号执行”</text>
+  <path d="M440 705H140" class="return"/>
+  <path d="M35 736H1085" stroke="#cbd6db"/>
+  <text x="35" y="763" class="small">账号编号帮助路由；外部服务凭据留在云端这条调用路径中。账号选择不等于逐账号的人工批准。</text>
+  <text x="35" y="786" class="small">依据：resolveTarget → multiServer → Gmail send_email；图中编号与身份均为示意。</text>
+</svg>

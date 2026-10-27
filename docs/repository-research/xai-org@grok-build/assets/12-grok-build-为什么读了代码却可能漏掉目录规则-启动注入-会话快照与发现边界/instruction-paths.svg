@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">项目规则的启动注入与后续文件读取</title>
+  <desc id="desc">假设从仓库根目录启动。根目录规则被读取并存入上下文，随后读业务文件只返回业务文件。子目录规则需要另外明确读取；当前公开树中没有接通访问业务文件后自动发现规则的调用链。</desc>
+  <defs>
+    <marker id="blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="#245b91"/></marker>
+    <marker id="green" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="#167467"/></marker>
+    <style>
+      text {font-family: "PingFang SC", "Microsoft YaHei", sans-serif;fill:#243545}
+      .title {font-size:27px;font-weight:600}
+      .label {font-size:19px;font-weight:600}
+      .body {font-size:18px}
+      .note {font-size:16px;fill:#5a6b79}
+      .code {font-family: "SFMono-Regular",Consolas,monospace;font-size:17px}
+      .blue {stroke:#245b91;stroke-width:2.5;fill:none;marker-end:url(#blue)}
+      .green {stroke:#167467;stroke-width:2.5;fill:none;marker-end:url(#green)}
+    </style>
+  </defs>
+  <rect width="1120" height="720" fill="#fafbf9"/>
+  <text x="38" y="49" class="title">读到业务文件，不等于读到同目录规则</text>
+  <text x="38" y="80" class="note">假设从 /repo 启动，项目已获信任，使用标准 read_file 工具</text>
+
+  <path d="M350 113V660" stroke="#d9e1e6" stroke-width="1.5"/>
+  <text x="38" y="133" class="label">磁盘上的文件</text>
+  <text x="45" y="180" class="code">/repo/</text>
+  <path d="M61 192V460 M61 227H85 M61 307H85 M103 317V459 M103 382H126 M103 459H126" stroke="#a7b6c1" stroke-width="1.5" fill="none"/>
+  <text x="91" y="234" class="code" fill="#245b91">AGENTS.md</text>
+  <text x="91" y="259" class="note">启动时发现并读取</text>
+  <text x="91" y="312" class="code">packages/web/</text>
+  <text x="132" y="389" class="code">app.ts</text>
+  <text x="132" y="414" class="note">之后要修改的业务文件</text>
+  <text x="132" y="466" class="code">AGENTS.md</text>
+  <text x="132" y="491" class="note">不在初始目录链上</text>
+  <text x="38" y="579" class="body">根目录启动只扫描到根目录。</text>
+  <text x="38" y="607" class="body">不会递归读取所有子目录规则。</text>
+
+  <text x="389" y="133" class="label">① 启动：规则正文成为会话材料</text>
+  <path d="M222 228H415" class="blue"/>
+  <rect x="425" y="181" width="253" height="99" rx="8" fill="#eaf1f8" stroke="#adc2d5"/>
+  <text x="444" y="213" class="code">PromptContext</text>
+  <text x="444" y="242" class="body">保存文件路径、正文和来源</text>
+  <text x="444" y="266" class="note">构建时的规则快照</text>
+  <path d="M678 230H750" class="blue"/>
+  <rect x="760" y="181" width="317" height="99" rx="8" fill="#eaf1f8" stroke="#adc2d5"/>
+  <text x="780" y="213" class="body">模型对话中的规则文字</text>
+  <text x="780" y="242" class="note">普通路径：带规则标记的 User 消息</text>
+  <text x="780" y="266" class="note">部分配置：放入开场规则区</text>
+
+  <text x="389" y="334" class="label">② 后续：明确读取的目标，才进入工具结果</text>
+  <path d="M211 384H415" class="green"/>
+  <text x="375" y="360" class="note">读 app.ts</text>
+  <rect x="425" y="366" width="253" height="70" rx="8" fill="#e8f4ef" stroke="#a0c8bc"/>
+  <text x="444" y="395" class="code">read_file</text>
+  <text x="444" y="421" class="note">目标是 app.ts</text>
+  <path d="M678 401H750" class="green"/>
+  <text x="771" y="397" class="body">app.ts 的内容</text>
+  <text x="771" y="422" class="note">不会自动附带同目录规则</text>
+
+  <path d="M244 460H373V507H415" class="green"/>
+  <text x="389" y="474" class="note">另行读取规则</text>
+  <rect x="425" y="485" width="253" height="70" rx="8" fill="#e8f4ef" stroke="#a0c8bc"/>
+  <text x="444" y="514" class="code">read_file</text>
+  <text x="444" y="540" class="note">目标是子目录 AGENTS.md</text>
+  <path d="M678 520H750" class="green"/>
+  <text x="771" y="516" class="body">子目录规则的内容</text>
+  <text x="771" y="541" class="note">默认在读取容量允许时整篇返回</text>
+
+  <path d="M389 600H1077" stroke="#c8d0d5" stroke-width="1.5"/>
+  <text x="389" y="628" class="body">未接通的自动发现：AgentsMdTracker.check_path</text>
+  <text x="389" y="655" class="note">有向上查找和去重实现、也有单元测试；当前公开树未找到生产调用方。</text>
+  <text x="38" y="697" class="note">依据：builder.rs、agents_md.rs、spawn.rs、read_file/mod.rs、agents_md_tracker.rs。图中场景为源码推演。</text>
+</svg>
