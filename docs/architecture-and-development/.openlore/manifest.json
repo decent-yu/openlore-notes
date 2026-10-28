@@ -270,6 +270,44 @@
       "collected_at": "2026-10-27T23:13:35.948Z",
       "updated_at": "2026-10-27T23:13:35.948Z",
       "has_research": true
+    },
+    "art_15295d2e-4f86-4639-971b-556118629acd": {
+      "collection_id": "col_20aa0a42-3e1",
+      "directory": "articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification",
+      "slug": "localizing-compliance-at-scale-achieving-south-korea-s-isms-certification",
+      "title": "Localizing compliance at scale: Achieving South Korea’s ISMS certification",
+      "original_url": "https://blog.cloudflare.com/k-isms",
+      "tags": [
+        "ISMS",
+        "隐私同意管理",
+        "IP 地理定位",
+        "第三方身份认证",
+        "数据流审计",
+        "访问控制",
+        "合规本地化"
+      ],
+      "collected_at": "2026-10-28T23:09:04.539Z",
+      "updated_at": "2026-10-28T23:09:04.539Z",
+      "has_research": true
+    },
+    "art_ff1688d2-b048-4bd4-9289-3208107591d6": {
+      "collection_id": "col_20aa0a42-3e1",
+      "directory": "articles/20261029-the-october-inflection-point-for-vibe-game-development",
+      "slug": "the-october-inflection-point-for-vibe-game-development",
+      "title": "The October inflection point for vibe game development",
+      "original_url": "https://simonwillison.net/2026/Oct/28/vibe-game-development",
+      "tags": [
+        "AI辅助游戏开发",
+        "Vibe Coding",
+        "three.js",
+        "JavaScript",
+        "游戏设计",
+        "WebSockets",
+        "大语言模型"
+      ],
+      "collected_at": "2026-10-28T23:09:04.539Z",
+      "updated_at": "2026-10-28T23:09:04.539Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -342,6 +380,15 @@
         "art_5b776bda-7fcd-4abc-ab22-4d44c3f3e5d3",
         "art_3856dd44-ff1f-47da-94c2-deadd92cf604"
       ]
+    },
+    "col_20aa0a42-3e1": {
+      "path": "docs/architecture-and-development/batches/20261029-01.md",
+      "date_sequence": "20261029-01",
+      "created_at": "2026-10-28T23:09:04.539Z",
+      "article_ids": [
+        "art_15295d2e-4f86-4639-971b-556118629acd",
+        "art_ff1688d2-b048-4bd4-9289-3208107591d6"
+      ]
     }
   },
   "delivered_batches": [
@@ -356,13 +403,14 @@
     "batch_960af110-bc11-4b4b-91e7-31a52463ebd8",
     "batch_eac9d101-9db8-4092-a594-486b91daed90",
     "batch_dcfaae44-b505-4de5-ae42-81e433794c32",
-    "batch_c101038a-11a2-4b20-832c-db3db040a7b7"
+    "batch_c101038a-11a2-4b20-832c-db3db040a7b7",
+    "batch_bbb107d9-141f-46ad-9727-2d6495ac4c89"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "86e4baf76fd5ac02b3c670411ff5ace51b44fada1e36b0b8de3a3b8927908f4d",
+      "sha256": "9291af9493ec2a42562f744f916ad0da72118087f42efa8098ec3a55d67f9752",
       "media_type": "text/markdown",
-      "size": 11333
+      "size": 12986
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
       "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
@@ -1003,6 +1051,101 @@
       "sha256": "ac43f19476f150972d3847c872572007fc5a790bfe5f468fe9dbbeaba38dc863",
       "media_type": "text/markdown",
       "size": 763
+    },
+    "docs/architecture-and-development/articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/README.md": {
+      "sha256": "5b62d9a19d0c9c54c44f4cc22970bfd44cefa39d4a406af88327f2502ba5d7a0",
+      "media_type": "text/markdown",
+      "size": 497
+    },
+    "docs/architecture-and-development/articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/article.md": {
+      "sha256": "30dbef7cea557956c096755b5101fe7d7ec5ad344fb6f3334d5f26e049e3559c",
+      "media_type": "text/markdown",
+      "size": 14416
+    },
+    "docs/architecture-and-development/articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/article-zh-CN.md": {
+      "sha256": "13f4815477f975987ba340c6f0aaa82e0c2535f08c665b5a79f860cacd540ecd",
+      "media_type": "text/markdown",
+      "size": 13934
+    },
+    "docs/architecture-and-development/articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/research.md": {
+      "sha256": "1cebba8af8db3a0cc30b028900eb79f27c174833877830b21e1a8af7b29851e6",
+      "media_type": "text/markdown",
+      "size": 17799
+    },
+    "docs/architecture-and-development/articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/assets/diagram-81d4a3795781.webp": {
+      "sha256": "81d4a3795781493e6d48163f5f69ce6d3d3b21474b4fe364f36ac5dc996e7919",
+      "media_type": "image/webp",
+      "size": 44682
+    },
+    "docs/architecture-and-development/articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/assets/consent-paths.svg": {
+      "sha256": "f20c740af85b1bcaab90085671bc3224161eae76f88425f92546eb592d72ea96",
+      "media_type": "image/svg+xml",
+      "size": 3555
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/README.md": {
+      "sha256": "90f2e05f936c44b01ae3fcab25e40f140bda14045195c71f22766ff464c8a135",
+      "media_type": "text/markdown",
+      "size": 486
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/article.md": {
+      "sha256": "f96e50320bb381e4e0410b4425983176feb5cce92a6b403ae75f7fea35ad807f",
+      "media_type": "text/markdown",
+      "size": 23166
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/article-zh-CN.md": {
+      "sha256": "0f6b82421bf6fa633ae3ddb5c571ba290240244c09afb0bc1718f696423011c8",
+      "media_type": "text/markdown",
+      "size": 23069
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/research.md": {
+      "sha256": "26205956bf03ef76d368ce17a7c3d4c7ce84e639e5efce31499734f3fcdf32dc",
+      "media_type": "text/markdown",
+      "size": 19245
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/assets/diagram-14086d0bff7f.webp": {
+      "sha256": "14086d0bff7f203e3667a8f6e04a07094a43dd317f46686ebb09ccc9ee01bd98",
+      "media_type": "image/webp",
+      "size": 324500
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/assets/diagram-110464a2ea62.webp": {
+      "sha256": "110464a2ea629a8fe5130110c0bdf0219bb1da95e9fe106387589f199a2108be",
+      "media_type": "image/webp",
+      "size": 98578
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/assets/diagram-1b5d612196c7.webp": {
+      "sha256": "1b5d612196c7764710a469b5e4fa012d3413581823606b69641dee3eb7c865bd",
+      "media_type": "image/webp",
+      "size": 115008
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/assets/diagram-564973e40b75.webp": {
+      "sha256": "564973e40b758c7183e283e5c205a19c01c5afa55fbd60df76ffaa10d10f9996",
+      "media_type": "image/webp",
+      "size": 197534
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/assets/diagram-07b18167b525.jpg": {
+      "sha256": "07b18167b5255b66a4d2d7dcf094682d838212895d166b661b8deae6230837d1",
+      "media_type": "image/jpeg",
+      "size": 187804
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/assets/diagram-114bf505ddb4.webp": {
+      "sha256": "114bf505ddb49ce97d5302d9a8185e8b31ff79e8dfa36deb4e266f3b2d048e19",
+      "media_type": "image/webp",
+      "size": 204320
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/assets/determinism.svg": {
+      "sha256": "27685a7aafaf02d9e0959ae3af26bb4da836d90d7f1ba5c3d598c51bfbf32294",
+      "media_type": "image/svg+xml",
+      "size": 2414
+    },
+    "docs/architecture-and-development/articles/20261029-the-october-inflection-point-for-vibe-game-development/assets/development-runtime.svg": {
+      "sha256": "1492ca56c68931fcb64b6c0ae4425cb378a76fdabb854cdb862764b7c26f1e2f",
+      "media_type": "image/svg+xml",
+      "size": 3831
+    },
+    "docs/architecture-and-development/batches/20261029-01.md": {
+      "sha256": "716c9894c3a384afc10b090d0da46a724592aeb8ce6120011a69e6794f8f865f",
+      "media_type": "text/markdown",
+      "size": 937
     }
   }
 }
