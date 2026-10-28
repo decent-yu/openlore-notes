@@ -206,6 +206,44 @@
       "collected_at": "2026-10-27T00:09:33.792Z",
       "updated_at": "2026-10-27T00:09:33.792Z",
       "has_research": true
+    },
+    "art_5c007f69-d6b3-4e59-9fca-c0a2bd0404a8": {
+      "collection_id": "col_8c37ffce-684",
+      "directory": "articles/20261028-how-we-built-our-design-agent",
+      "slug": "how-we-built-our-design-agent",
+      "title": "How We Built Our Design Agent",
+      "original_url": "https://www.langchain.com/blog/design-agent",
+      "tags": [
+        "设计智能体",
+        "品牌设计",
+        "代码驱动媒体制作",
+        "视频渲染",
+        "多智能体协作",
+        "智能体记忆",
+        "人机协作",
+        "自动化质量检查"
+      ],
+      "collected_at": "2026-10-28T00:11:25.112Z",
+      "updated_at": "2026-10-28T00:11:25.112Z",
+      "has_research": true
+    },
+    "art_94a658bc-bdbd-41ae-b705-59b5835f4e36": {
+      "collection_id": "col_8c37ffce-684",
+      "directory": "articles/20261028-gpt-6-1-terra",
+      "slug": "gpt-6-1-terra",
+      "title": "GPT-6.1 Terra",
+      "original_url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra",
+      "tags": [
+        "GPT-6.1 Terra",
+        "大语言模型",
+        "视觉推理",
+        "计算机操作",
+        "模型选型",
+        "推理成本"
+      ],
+      "collected_at": "2026-10-28T00:11:25.112Z",
+      "updated_at": "2026-10-28T00:11:25.112Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -268,6 +306,15 @@
       "article_ids": [
         "art_f95b94c0-66bb-475a-9132-ae4c2175a268"
       ]
+    },
+    "col_8c37ffce-684": {
+      "path": "docs/agent-learning/batches/20261028-01.md",
+      "date_sequence": "20261028-01",
+      "created_at": "2026-10-28T00:11:25.112Z",
+      "article_ids": [
+        "art_5c007f69-d6b3-4e59-9fca-c0a2bd0404a8",
+        "art_94a658bc-bdbd-41ae-b705-59b5835f4e36"
+      ]
     }
   },
   "delivered_batches": [
@@ -282,13 +329,14 @@
     "batch_37317c3a-14c8-4672-9e70-1ee50300f9be",
     "batch_443bdea0-b941-46c9-9378-80ffcafa14be",
     "batch_7df57b02-1d80-4f15-8c02-56e97db3bb3a",
-    "batch_22a8ceda-7c91-4eba-abde-8f087a9575fd"
+    "batch_22a8ceda-7c91-4eba-abde-8f087a9575fd",
+    "batch_86d55003-bb41-4841-a5da-b287239df334"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "8140c804079624278c23bf1b016a753b82bfcf7aee21ac9ea7263a5ad789d777",
+      "sha256": "b0a36b47762b7785d2fa9c2f1a007288e0efe3f1b02c3ae8be7263143708e31c",
       "media_type": "text/markdown",
-      "size": 8298
+      "size": 9265
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -889,6 +937,181 @@
       "sha256": "01ce560eefa265d3ac3d0d44c61d0fb7ed75c2962059ce02fb8bfd228269fcd4",
       "media_type": "text/markdown",
       "size": 602
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/README.md": {
+      "sha256": "c107dbd0c91ebe499f32322366db896f4094753a7dd7f52387cb5c31b7e3ab45",
+      "media_type": "text/markdown",
+      "size": 491
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/article.md": {
+      "sha256": "fab9e075596be02e14435cc07b7712fed3059380b2733891b51d87e10f556c72",
+      "media_type": "text/markdown",
+      "size": 31827
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/article-zh-CN.md": {
+      "sha256": "690f2eb9d504fcd3ff48f8735e6ca3deb50a3fb44485bde59860393e26de6660",
+      "media_type": "text/markdown",
+      "size": 32759
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/research.md": {
+      "sha256": "fd5fe31a90e80f52db3a61d6b6aa866afc8acf6d1848e81e787cf53ade74d664",
+      "media_type": "text/markdown",
+      "size": 16942
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-88012a4d3c5e.png": {
+      "sha256": "88012a4d3c5e5a61c2eca87387e152e34bc755c8b7ce5fc4c9f2f4adf1391aed",
+      "media_type": "image/png",
+      "size": 326700
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-f382cc4e548a.png": {
+      "sha256": "f382cc4e548a75d4553de0ce1f0e98737c0baedb42354e98c68e2c4e8e165cdc",
+      "media_type": "image/png",
+      "size": 1095091
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-965a7bbe527d.png": {
+      "sha256": "965a7bbe527d7709f93bf7966c0a324b0e4c703bd7939b1d66bf9d2815c1ff99",
+      "media_type": "image/png",
+      "size": 239998
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-90d91f06b00e.png": {
+      "sha256": "90d91f06b00e3c40a34bac7f403090e3edd212a143ebf971842688629c11dbca",
+      "media_type": "image/png",
+      "size": 839966
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-11b20eb3d9a1.png": {
+      "sha256": "11b20eb3d9a1ed9f56cffd5c23b9b80b93c49f6a0f569ac56afc8090a41462b0",
+      "media_type": "image/png",
+      "size": 1195813
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-12f4657abc00.png": {
+      "sha256": "12f4657abc00f9d5cd170140ddcf99aea90ff19bee28c437bd0dc6cc5653ca65",
+      "media_type": "image/png",
+      "size": 216779
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-ae63234d6adb.png": {
+      "sha256": "ae63234d6adbe6da95fcac2b5a1309b75d85904d59b997f19eedc5c7def80673",
+      "media_type": "image/png",
+      "size": 103700
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-e654235dd3a2.png": {
+      "sha256": "e654235dd3a2d0fe5b0aba43c4b317cfb0ebbff3cf7d4f0c8f408bac7f4b70b3",
+      "media_type": "image/png",
+      "size": 563666
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-95eca4fa51a2.png": {
+      "sha256": "95eca4fa51a25380daac14c20620a21d9f3bb269edc14fc2a2e927ef0eb4a968",
+      "media_type": "image/png",
+      "size": 736572
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-159b515f0b99.png": {
+      "sha256": "159b515f0b9915ead872a3eb9c92ec6534204c138bec4736c3f96c2f870da2f9",
+      "media_type": "image/png",
+      "size": 509150
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-6fa6e8ebde48.png": {
+      "sha256": "6fa6e8ebde48e78a51c43d6cff557216f319ddc3c92ce973501434d00d5e0e8d",
+      "media_type": "image/png",
+      "size": 755521
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-73356fcfce61.png": {
+      "sha256": "73356fcfce617ebe348e29e999751430be0d0a0ad4948dc389501d05bf6a369d",
+      "media_type": "image/png",
+      "size": 382403
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-580c606f21b3.gif": {
+      "sha256": "580c606f21b37f7e5a935fc405ab1868736bfa9a6afe4b513c03594a706b8d21",
+      "media_type": "image/gif",
+      "size": 6959012
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-b0664ce97382.png": {
+      "sha256": "b0664ce973822b047492567c801dac64ee3179fe1496cbb56bb7bc638e62743a",
+      "media_type": "image/png",
+      "size": 264946
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-24fbed25d8c8.png": {
+      "sha256": "24fbed25d8c8ef9d65b50bb4aef3edc11be934d43aa0c2b46de1f589ee7e6343",
+      "media_type": "image/png",
+      "size": 365434
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-d73bb2ef5ef0.png": {
+      "sha256": "d73bb2ef5ef01b045027a9c9b8465eb6c004465bca4879c72815fbb0891be1bd",
+      "media_type": "image/png",
+      "size": 229764
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-81e0a961a277.png": {
+      "sha256": "81e0a961a277767312bd7af618d5310770e2bd8c112b302371403d9a5ed7e335",
+      "media_type": "image/png",
+      "size": 5154792
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-8bae4eff5a3e.png": {
+      "sha256": "8bae4eff5a3e448755ae35a9e5a69ecdf6f552b1584d341fb1b68a7475035194",
+      "media_type": "image/png",
+      "size": 1546772
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-0f7f6187b539.png": {
+      "sha256": "0f7f6187b53961b08edf6263a8268ffa7545d7b7100a181ee79c38ccacfb2afa",
+      "media_type": "image/png",
+      "size": 169407
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-0b57b8b1ec0f.png": {
+      "sha256": "0b57b8b1ec0feef26c52c82d12b5e3cf078dbacd93d400e60d68f4d8d23f9310",
+      "media_type": "image/png",
+      "size": 242960
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-961df16a1c0c.png": {
+      "sha256": "961df16a1c0c9df9217f66300341c66a380b9b9e29940c510c48030b6f7864d9",
+      "media_type": "image/png",
+      "size": 598383
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/diagram-1267eea82c85.png": {
+      "sha256": "1267eea82c853866f701d05d12972fd317d7e6ba115001c66dc240e2916efb07",
+      "media_type": "image/png",
+      "size": 218260
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/async-feedback.svg": {
+      "sha256": "44d26efa99bd4fd3935247412f369c6d75d6944b9f5083fba5480c64d5e4ad77",
+      "media_type": "image/svg+xml",
+      "size": 3544
+    },
+    "docs/agent-learning/articles/20261028-how-we-built-our-design-agent/assets/design-review-flow.svg": {
+      "sha256": "6678feb311f28062cacf124fc77ef279e3192d2588cbc81a39156b87822e2222",
+      "media_type": "image/svg+xml",
+      "size": 4158
+    },
+    "docs/agent-learning/articles/20261028-gpt-6-1-terra/README.md": {
+      "sha256": "1a9ca32af8caeff38a06514022af3831f84e626944d0e405d53271ccb96af6b9",
+      "media_type": "text/markdown",
+      "size": 426
+    },
+    "docs/agent-learning/articles/20261028-gpt-6-1-terra/article.md": {
+      "sha256": "f39fc98b1522ff95460f77dbf07dc3966bc874a6261fc8184d36b07ff1b94d6a",
+      "media_type": "text/markdown",
+      "size": 4986
+    },
+    "docs/agent-learning/articles/20261028-gpt-6-1-terra/article-zh-CN.md": {
+      "sha256": "944aef216515457c2c72770ce5054c0897ae760acde31a30f5ba71cb4a16497b",
+      "media_type": "text/markdown",
+      "size": 5096
+    },
+    "docs/agent-learning/articles/20261028-gpt-6-1-terra/research.md": {
+      "sha256": "cc8149b850d6c9be347a49dd30b11294cc305ee21a66470828c0485fa3722513",
+      "media_type": "text/markdown",
+      "size": 11706
+    },
+    "docs/agent-learning/articles/20261028-gpt-6-1-terra/assets/diagram-0d67da728aa4.webp": {
+      "sha256": "0d67da728aa483bacb9a66348b2b30d0e027c0f49d9ae42b8a017bfa40bfe052",
+      "media_type": "image/webp",
+      "size": 88638
+    },
+    "docs/agent-learning/articles/20261028-gpt-6-1-terra/assets/computer-use-loop.svg": {
+      "sha256": "314ae29310a694ba1fbb87121685709e7bd8313a3dfc77fd9784ad3da0adff97",
+      "media_type": "image/svg+xml",
+      "size": 4290
+    },
+    "docs/agent-learning/batches/20261028-01.md": {
+      "sha256": "c03724715fc9f12f997739e1b28a940a814973df048ab6db5272b6f7e6330365",
+      "media_type": "text/markdown",
+      "size": 594
     }
   }
 }

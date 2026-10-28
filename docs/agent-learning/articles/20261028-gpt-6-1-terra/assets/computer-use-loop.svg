@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="740" viewBox="0 0 1120 740" role="img" aria-labelledby="title desc">
+  <title id="title">从看懂发票到保存草稿：电脑操作智能体怎样推进任务</title>
+  <desc id="desc">假设例子。模型接收发票、用户要求和软件截图，输出动作请求；外部程序执行动作，软件产生新画面；新截图返回模型以判断下一步。保存后还需核对实际记录。这是工具交互示意，不是 Terra 内部架构或实测结果。</desc>
+  <defs>
+    <marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#2563a0"/></marker>
+    <marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#bd651d"/></marker>
+    <marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#28755c"/></marker>
+    <style>
+      text { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #203448; }
+      .title { font-size: 30px; font-weight: 650; }
+      .sub { font-size: 19px; fill: #526578; }
+      .head { font-size: 23px; font-weight: 650; }
+      .body { font-size: 20px; }
+      .small { font-size: 18px; fill: #526578; }
+      .action { fill: none; stroke: #2563a0; stroke-width: 3; marker-end: url(#blue); }
+    </style>
+  </defs>
+  <rect width="1120" height="740" fill="#f7f9fb"/>
+  <text x="44" y="57" class="title">从看懂发票，到把草稿存进软件</text>
+  <text x="44" y="92" class="sub">假设例子 · 读图顺序：沿蓝色向右，再沿橙色回路返回模型</text>
+
+  <rect x="44" y="126" width="1032" height="90" rx="12" fill="#e9eff5"/>
+  <text x="67" y="161" class="head">用户目标与材料</text>
+  <text x="67" y="194" class="body">发票图像 ＋ 当前软件截图 ＋ 要求：保存草稿，说明看不清的字段</text>
+  <path d="M 202 216 V 276" class="action"/>
+
+  <rect x="44" y="278" width="308" height="192" rx="14" fill="#e7f0fb" stroke="#b4cce5"/>
+  <text x="68" y="315" class="head">① 模型理解并决定</text>
+  <text x="68" y="354" class="body">分辨金额与字段归属</text>
+  <text x="68" y="388" class="body">判断页面处于哪一步</text>
+  <text x="68" y="434" class="small">输出：点击、输入等动作请求</text>
+
+  <rect x="406" y="278" width="288" height="192" rx="14" fill="#ffffff" stroke="#bdcbd8"/>
+  <text x="430" y="315" class="head">② 外部程序执行</text>
+  <text x="430" y="354" class="body">把请求变成鼠标操作</text>
+  <text x="430" y="388" class="body">和键盘输入</text>
+  <text x="430" y="434" class="small">执行一小组动作后再观察</text>
+
+  <rect x="748" y="278" width="328" height="192" rx="14" fill="#ffffff" stroke="#bdcbd8"/>
+  <text x="772" y="315" class="head">③ 软件产生新状态</text>
+  <text x="772" y="354" class="body">菜单打开？选择成功？</text>
+  <text x="772" y="388" class="body">字段报错？草稿已保存？</text>
+  <text x="772" y="434" class="small">以实际画面与记录为准</text>
+
+  <path d="M 352 374 H 406" class="action"/>
+  <path d="M 694 374 H 748" class="action"/>
+
+  <path d="M 910 470 V 524 H 198 V 470" fill="none" stroke="#bd651d" stroke-width="3" marker-end="url(#orange)"/>
+  <rect x="360" y="503" width="392" height="42" rx="9" fill="#fff1df"/>
+  <text x="556" y="531" text-anchor="middle" class="body" style="fill:#965019">④ 新截图返回：决定继续还是修正</text>
+
+  <path d="M 1037 470 V 580" fill="none" stroke="#28755c" stroke-width="3" marker-end="url(#green)"/>
+  <rect x="44" y="583" width="1032" height="88" rx="12" fill="#e6f2ec" stroke="#b9d6c7"/>
+  <text x="67" y="617" class="head" style="fill:#215e49">准备结束时：核对已保存记录，再向用户报告</text>
+  <text x="67" y="650" class="body">检查供应商、日期、币种与金额；把仍不确定的字段明确列出。</text>
+  <text x="44" y="709" class="small">依据：OpenAI 电脑操作文档。通用交互示意，不代表 Terra 内部架构或本次实测。</text>
+</svg>

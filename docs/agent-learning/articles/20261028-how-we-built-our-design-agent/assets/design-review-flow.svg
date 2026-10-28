@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="640" viewBox="0 0 1120 640" role="img" aria-labelledby="title desc">
+  <title id="title">先确认方向和节奏，再进入正式制作</title>
+  <desc id="desc">短片制作由分镜、动态分镜进入正式制作。人先确认方向和节奏；正式制作反复修改代码、取帧检查并运行程序检查，必要时退回修改。工程和评审记录在同一项目中保留，最终发布仍需人工批准。</desc>
+  <rect width="1120" height="640" rx="20" fill="#f7f8f5"/>
+  <g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#193740">
+    <text x="44" y="54" font-size="29" font-weight="650">先确认方向和节奏，再进入正式制作</text>
+    <text x="44" y="89" font-size="18" fill="#52666a">按原文流程整理 · 横向为制作顺序，箭头不代表耗时</text>
+    <g stroke="#cbd8d6" stroke-width="1.5">
+      <rect x="44" y="130" width="280" height="178" rx="14" fill="#fff"/>
+      <rect x="420" y="130" width="280" height="178" rx="14" fill="#fff"/>
+      <rect x="796" y="130" width="280" height="178" rx="14" fill="#e5f0ec"/>
+    </g>
+    <g font-size="23" font-weight="600">
+      <text x="67" y="167">1　分镜</text><text x="443" y="167">2　动态分镜</text><text x="819" y="167">3　正式制作</text>
+    </g>
+    <g font-size="19" fill="#405a62">
+      <text x="67" y="207">关键静帧、文案、构图</text><text x="67" y="240">先看故事和画面是否成立</text>
+      <text x="443" y="207">粗略画面配上时间与音频</text><text x="443" y="240">再看是否读得完、接得上</text>
+      <text x="819" y="207">按已确认方案分工制作</text><text x="819" y="240">通过评审后再组装成片</text>
+    </g>
+    <g fill="none" stroke="#365b67" stroke-width="2">
+      <path d="M332 218H410"/><path d="M708 218H786"/>
+    </g>
+    <g fill="#365b67"><path d="M410 218L399 212V224Z"/><path d="M786 218L775 212V224Z"/></g>
+    <g font-size="17" text-anchor="middle" fill="#365b67">
+      <text x="372" y="183">人工确认</text><text x="372" y="277">方向</text>
+      <text x="748" y="183">人工确认</text><text x="748" y="277">节奏</text>
+    </g>
+    <text x="44" y="358" font-size="21" font-weight="600">正式制作中的修改循环</text>
+    <g fill="none" stroke="#365b67" stroke-width="2">
+      <path d="M936 309V380H162V411"/>
+      <path d="M284 454H328"/><path d="M570 454H614"/><path d="M856 454H899"/>
+      <path d="M736 495V535H162V495"/>
+    </g>
+    <g fill="#365b67">
+      <path d="M162 411L156 400H168Z"/>
+      <path d="M328 454L317 448V460Z"/><path d="M614 454L603 448V460Z"/><path d="M899 454L888 448V460Z"/>
+      <path d="M162 495L156 506H168Z"/>
+    </g>
+    <g stroke="#cbd8d6" stroke-width="1.5">
+      <rect x="44" y="413" width="240" height="82" rx="12" fill="#fff"/>
+      <rect x="330" y="413" width="240" height="82" rx="12" fill="#fff"/>
+      <rect x="616" y="413" width="240" height="82" rx="12" fill="#fff"/>
+      <rect x="901" y="413" width="175" height="82" rx="12" fill="#193f49" stroke="#193f49"/>
+    </g>
+    <g font-size="21" text-anchor="middle">
+      <text x="164" y="447">修改工程代码</text><text x="164" y="477" font-size="17" fill="#52666a">文字、位置、出场时间</text>
+      <text x="450" y="447">取帧或渲染</text><text x="450" y="477" font-size="17" fill="#52666a">查看实际生成的画面</text>
+      <text x="736" y="447">视觉与程序检查</text><text x="736" y="477" font-size="17" fill="#52666a">查画面，也查明确要求</text>
+      <text x="988" y="447" fill="#fff">人工批准</text><text x="988" y="477" font-size="17" fill="#dce9e7">对外发布前</text>
+    </g>
+    <rect x="355" y="520" width="244" height="30" rx="8" fill="#f7f8f5"/>
+    <text x="477" y="542" text-anchor="middle" font-size="17" fill="#365b67">发现问题：回到代码修改</text>
+    <path d="M44 574H1076" stroke="#cbd8d6"/>
+    <text x="44" y="609" font-size="18" fill="#52666a">同一项目保留需求、计划、场景代码、素材、渲染与评审记录，后续修改沿用这些文件。</text>
+  </g>
+</svg>

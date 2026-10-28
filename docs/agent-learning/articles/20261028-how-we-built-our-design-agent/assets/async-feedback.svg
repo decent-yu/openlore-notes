@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520" role="img" aria-labelledby="title desc">
+  <title id="title">后台继续制作，前台仍可接收修改</title>
+  <desc id="desc">示意顺序从左向右。主 Agent 启动后台子任务后结束当前轮次。人发来修改意见，触发主 Agent 新一轮行动并将意见转给执行者；执行者在下一次模型调用前读取意见。子任务完成又触发主 Agent 汇总和送审。不代表实际耗时比例。</desc>
+  <rect width="1120" height="520" rx="20" fill="#f7f8f5"/>
+  <g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#193740">
+    <text x="44" y="54" font-size="29" font-weight="650">后台继续制作，前台仍可接收修改</text>
+    <text x="44" y="88" font-size="18" fill="#52666a">机制示意 · 从左向右读，不表示真实耗时或运行日志</text>
+    <g stroke="#d9e1df" stroke-width="1.5"><path d="M180 162H1076"/><path d="M180 262H1076"/><path d="M180 374H1076"/></g>
+    <g font-size="21" font-weight="600"><text x="44" y="169">人</text><text x="44" y="269">主 Agent</text><text x="44" y="381">后台执行者</text></g>
+    <rect x="194" y="133" width="150" height="56" rx="10" fill="#fff" stroke="#cbd8d6"/>
+    <text x="269" y="168" font-size="19" text-anchor="middle">提出制作需求</text>
+    <rect x="194" y="232" width="192" height="60" rx="10" fill="#193f49"/>
+    <text x="290" y="269" font-size="19" fill="#fff" text-anchor="middle">计划并启动子任务</text>
+    <path d="M269 189V229" fill="none" stroke="#365b67" stroke-width="2"/>
+    <path d="M290 292V341" fill="none" stroke="#365b67" stroke-width="2"/>
+    <g fill="#365b67"><path d="M269 229L263 218H275Z"/><path d="M290 341L284 330H296Z"/></g>
+    <rect x="258" y="344" width="704" height="60" rx="10" fill="#e5f0ec" stroke="#b5cec4"/>
+    <text x="279" y="381" font-size="19">编写、渲染、检查</text>
+    <path d="M391 262H493" fill="none" stroke="#8c9b9b" stroke-width="2" stroke-dasharray="5 6"/>
+    <text x="442" y="222" text-anchor="middle" font-size="16" fill="#52666a">本轮结束</text>
+    <rect x="503" y="133" width="238" height="56" rx="10" fill="#fff" stroke="#cbd8d6"/>
+    <text x="622" y="168" font-size="19" text-anchor="middle">发来修改：角色提前出现</text>
+    <path d="M622 189V229" fill="none" stroke="#365b67" stroke-width="2"/>
+    <path d="M622 229L616 218H628Z" fill="#365b67"/>
+    <rect x="503" y="232" width="238" height="60" rx="10" fill="#193f49"/>
+    <text x="622" y="269" font-size="19" text-anchor="middle" fill="#fff">新一轮：接收并转交意见</text>
+    <path d="M622 292V341" fill="none" stroke="#365b67" stroke-width="2"/>
+    <path d="M622 341L616 330H628Z" fill="#365b67"/>
+    <path d="M622 344V404" stroke="#6f9b88" stroke-width="2"/>
+    <text x="649" y="381" font-size="18">下次模型调用前读取意见</text>
+    <rect x="861" y="232" width="215" height="60" rx="10" fill="#193f49"/>
+    <text x="968" y="269" font-size="19" text-anchor="middle" fill="#fff">新一轮：汇总并送审</text>
+    <path d="M962 344V295" fill="none" stroke="#365b67" stroke-width="2"/>
+    <path d="M962 295L956 306H968Z" fill="#365b67"/>
+    <text x="978" y="326" font-size="16" fill="#52666a">完成通知</text>
+    <path d="M44 453H1076" stroke="#cbd8d6"/>
+    <text x="44" y="488" font-size="18" fill="#52666a">修改意见在行动边界进入工作；正在执行的工具不会因新消息而瞬间改变行为。</text>
+  </g>
+</svg>
