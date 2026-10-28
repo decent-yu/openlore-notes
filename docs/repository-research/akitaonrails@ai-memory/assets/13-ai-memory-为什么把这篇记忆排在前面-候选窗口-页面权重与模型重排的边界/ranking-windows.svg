@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="650" viewBox="0 0 1080 650">
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#405465" stroke-width="1.5"/></marker></defs>
+<rect width="1080" height="650" fill="#f9f8f4"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#223746">
+<text x="42" y="48" font-size="26" font-weight="600">模型只能改变已经送到眼前的候选</text>
+<text x="42" y="80" font-size="17">例：普通单项目查询，limit = 5，已启用模型重排；候选充足时的数量上限</text>
+<g stroke="#405465" stroke-width="2" fill="none" marker-end="url(#a)"><path d="M255 250H315"/><path d="M585 250H645"/><path d="M855 250H915"/></g>
+<rect x="42" y="127" width="213" height="255" rx="8" fill="#e3ecef"/>
+<text x="62" y="161" font-size="20" font-weight="600">每路先找候选</text>
+<text x="62" y="203" font-size="18">全文 / 实体 / 向量</text>
+<text x="62" y="236" font-size="18">链接邻居 / 事件投票</text>
+<text x="62" y="286" font-size="26" font-weight="600">每路最多 60 篇</text>
+<text x="62" y="323" font-size="16">不是共用 60 个名额</text>
+<text x="62" y="352" font-size="16">未启用的路不参与</text>
+<rect x="315" y="127" width="270" height="255" rx="8" fill="#e3ecef"/>
+<text x="335" y="161" font-size="20" font-weight="600">融合，再按元数据调整</text>
+<text x="335" y="203" font-size="18">各路按名次贡献分数</text>
+<text x="335" y="236" font-size="18">页面权重乘数：0.55～1.50</text>
+<text x="335" y="286" font-size="26" font-weight="600">保留前 15 篇</text>
+<text x="335" y="323" font-size="16">因为重排预取量 = 5 × 3</text>
+<text x="335" y="352" font-size="16">其余候选到此退出</text>
+<rect x="645" y="127" width="210" height="255" rx="8" fill="#efe4cf"/>
+<text x="665" y="161" font-size="20" font-weight="600">模型重排这 15 篇</text>
+<text x="665" y="203" font-size="18">只读标题和搜索片段</text>
+<text x="665" y="236" font-size="18">按相关性分数降序</text>
+<text x="665" y="286" font-size="26" font-weight="600">返回前 5 篇</text>
+<text x="665" y="323" font-size="16">失败则保留本地顺序</text>
+<text x="665" y="352" font-size="16">不重新遍历全部页面</text>
+<text x="927" y="244" font-size="22" font-weight="600">结果</text>
+<text x="927" y="275" font-size="17">最多 5 篇</text>
+<path d="M42 429H1038" stroke="#c1c8c8"/>
+<text x="42" y="471" font-size="20" font-weight="600">把 limit 调到 35，也不会让第 31 篇参与模型比较</text>
+<rect x="42" y="497" width="745" height="45" fill="#e3ecef"/><rect x="787" y="497" width="251" height="45" fill="#e8e6e0"/>
+<text x="62" y="526" font-size="18">前 30 篇：模型可以重新排序</text><text x="804" y="526" font-size="18">第 31～35 篇：原序接在后面</text>
+<text x="42" y="584" font-size="17">图示不含 pin_first 插入的置顶页，也不含另外返回的偏好补充与原始事件。</text>
+<text x="42" y="616" font-size="16" fill="#5b6870">依据：authority_candidate_limit、hybrid_search_inner、RerankStage::fetch_limit / apply</text>
+</g></svg>

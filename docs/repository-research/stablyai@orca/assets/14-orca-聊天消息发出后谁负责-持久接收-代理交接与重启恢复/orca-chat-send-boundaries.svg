@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8" fill="#44556a"/></marker></defs>
+<rect width="1120" height="720" fill="#fafaf7"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#263849">
+<text x="46" y="48" font-size="27" font-weight="600">一次聊天发送，跨过两个不同的边界</text>
+<text x="46" y="80" font-size="16" fill="#5c6976">上半部：正常交付顺序　　下半部：执行主机重启后的分流（示意，非时间比例）</text>
+<path d="M65 245H1055" stroke="#44556a" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M320 111V350" stroke="#278079" stroke-dasharray="6 5" stroke-width="2"/>
+<path d="M665 111V350" stroke="#b67b2f" stroke-dasharray="6 5" stroke-width="2"/>
+<text x="335" y="127" font-size="18" fill="#166b66">保存事务提交</text>
+<text x="680" y="127" font-size="18" fill="#986024">先记录交接，再调用代理</text>
+<g fill="#fafaf7" stroke-width="3"><circle cx="120" cy="245" r="9" stroke="#44556a"/><circle cx="320" cy="245" r="9" stroke="#278079"/><circle cx="665" cy="245" r="9" stroke="#b67b2f"/><circle cx="970" cy="245" r="9" stroke="#44556a"/></g>
+<text x="65" y="185" font-size="20">点击发送</text><text x="65" y="212" font-size="16">携带操作编号</text>
+<text x="357" y="181" font-size="20">主机持有消息</text><text x="357" y="209" font-size="16">消息与接收回执一起落盘</text>
+<text x="716" y="181" font-size="20">可能已对代理产生作用</text><text x="716" y="209" font-size="16">调用返回后仍可能等待接收证据</text>
+<text x="359" y="287" font-size="17" fill="#166b66">pending · 没有交接时间</text>
+<text x="716" y="287" font-size="17" fill="#986024">pending · 有交接时间</text>
+<text x="359" y="317" font-size="16">现代客户端此时就可收到成功回复</text>
+<text x="716" y="317" font-size="16">结果可能变成 accepted / rejected / unknown</text>
+<path d="M490 342V405H295V440" fill="none" stroke="#44556a" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M845 342V440" fill="none" stroke="#44556a" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="60" y="451" width="490" height="190" rx="10" fill="#eaf3ef" stroke="#7da398"/>
+<rect x="600" y="451" width="460" height="190" rx="10" fill="#fff1dd" stroke="#c7a16c"/>
+<text x="84" y="486" font-size="21" font-weight="600">能证明尚未交接</text>
+<text x="84" y="522" font-size="17">符合条件的个人纯文本 → 等待卡片</text>
+<text x="84" y="553" font-size="17">旧提交拒绝与卡片建立，在同一事务完成</text>
+<text x="84" y="584" font-size="17">重新打开不立即发送；继续动作才释放</text>
+<text x="84" y="615" font-size="15" fill="#596d65">命令、图片、非个人消息等，不普遍套用此规则</text>
+<text x="624" y="486" font-size="21" font-weight="600">不能证明代理未收到</text>
+<text x="624" y="522" font-size="17">未确认交接 → unknown（结果不明）</text>
+<text x="624" y="553" font-size="17">相同操作编号读回已有结果</text>
+<text x="624" y="584" font-size="17">不因超时或同编号重试而重新派发</text>
+<text x="624" y="615" font-size="15" fill="#7c684d">即使实际调用尚未发生，也可能落入这个保守区间</text>
+<text x="60" y="685" font-size="16" fill="#5c6976">网络断线与主机重启不同：断线后的主机仍可能继续交付。消息去重不保证任务副作用恰好发生一次。</text>
+</g></svg>

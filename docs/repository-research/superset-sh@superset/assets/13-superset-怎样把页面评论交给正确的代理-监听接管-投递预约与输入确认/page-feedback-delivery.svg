@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="690" viewBox="0 0 1100 690">
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#35495b"/></marker></defs>
+<rect width="1100" height="690" fill="#fafaf6"/>
+<g font-family="PingFang SC, sans-serif" fill="#233342">
+<text x="40" y="43" font-size="25" font-weight="600">一次页面反馈，经过三次不同的确认</text>
+<text x="40" y="74" font-size="16">示意：监听已登记，读者随后新增评论；时间向下。发送成功仍不代表代理已处理。</text>
+<g font-size="20" text-anchor="middle"><text x="165" y="126">云端：评论与所有权</text><text x="550" y="126">主机：监听与输入队列</text><text x="940" y="126">代理会话</text></g>
+<g stroke="#c1c9ce" stroke-dasharray="5 5"><path d="M165 145V585M550 145V585M940 145V585"/></g>
+<rect x="44" y="162" width="242" height="49" rx="6" fill="#e2eee7"/><text x="165" y="192" font-size="17" text-anchor="middle">① 评论已保存，带唯一编号</text>
+<g stroke="#35495b" stroke-width="1.5" fill="none" marker-end="url(#a)"><path d="M550 235H175"/><path d="M165 285H540"/><path d="M550 361H175"/><path d="M165 410H540"/><path d="M550 463H930"/><path d="M550 536H175"/></g>
+<g font-size="16" text-anchor="middle"><text x="355" y="226">轮询读取评论</text><text x="355" y="274">返回未处理的人工评论</text><text x="355" y="352">到达输入队首，申请十秒投递预约</text><text x="355" y="399">② 当前令牌有效，准许本次投递</text><text x="748" y="452">复查代理身份、忙碌状态与有效期</text><text x="748" y="487">③ 写入提示文字，再发送提交按键</text><text x="355" y="525">确认投递；云端推进评论编号记录</text></g>
+<rect x="421" y="294" width="258" height="34" rx="4" fill="#e6ebf3"/><text x="550" y="317" font-size="16" text-anchor="middle">工作中或等待许可：暂缓输入</text>
+<rect x="813" y="509" width="254" height="60" rx="5" fill="#f4e8d3"/><text x="940" y="533" font-size="16" text-anchor="middle">代理再决定修改、回复或不处理</text><text x="940" y="555" font-size="15" text-anchor="middle">这一步没有投递协议的完成保证</text>
+<path d="M40 607H1060" stroke="#b4bdc3"/>
+<text x="40" y="638" font-size="17" font-weight="600">接管约束</text><text x="160" y="638" font-size="16">预约有效时，新代理暂不能接管；接管成功后，旧令牌不能预约、续时或清除新所有者。</text>
+<text x="40" y="667" font-size="15" fill="#5c6973">依据：PageWatchManager、watch-ownership.ts、writeSessionMessage。图中终端路径不表示所有聊天入口都发送按键。</text>
+</g></svg>

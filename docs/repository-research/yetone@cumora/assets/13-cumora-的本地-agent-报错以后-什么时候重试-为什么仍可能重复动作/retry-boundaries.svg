@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="670" viewBox="0 0 1080 670">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#475569"/></marker></defs>
+<rect width="1080" height="670" fill="#fafaf7"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#203047">
+<text x="48" y="54" font-size="28" font-weight="600">同一份工作，在三个位置可能再次进入引擎</text>
+<text x="48" y="88" font-size="17" fill="#64748b">依据 daemon.ts 与 session-recovery.ts；箭头表示调用或后续尝试，不表示动作已回滚</text>
+<rect x="42" y="125" width="996" height="178" rx="12" fill="#e9eff6" stroke="#9cacc2"/>
+<text x="66" y="158" font-size="21" font-weight="600">① 外层：恢复旧会话</text>
+<text x="66" y="190" font-size="18">有旧编号，且结果明确分类为“恢复目标不存在”</text>
+<path d="M540 184H610" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="633" y="190" font-size="18">清空编号 → 新会话再试一次</text>
+<text x="66" y="229" font-size="18">崩溃、断线等不明确失败：此函数本身不再调用一次</text>
+<text x="66" y="270" font-size="17" fill="#64748b">但它调用的 runEngineAttempt 内部，还有下一层回退。</text>
+<path d="M87 303V336" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="42" y="340" width="996" height="146" rx="12" fill="#fff2dc" stroke="#c4a063"/>
+<text x="66" y="374" font-size="21" font-weight="600">② 内层：常驻进程改用单次进程</text>
+<text x="66" y="408" font-size="18">有错误 + 没有用量记录 + 进程已死 + 非恢复目标缺失</text>
+<path d="M652 402H710" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="735" y="408" font-size="18">再次提交同一增量</text>
+<text x="66" y="452" font-size="18" fill="#925719">工作中途死亡也可能没有用量；这里缺少“工具从未执行”的独立确认。</text>
+<path d="M87 486V519" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="42" y="523" width="996" height="108" rx="12" fill="#edf3e8" stroke="#a2b59a"/>
+<text x="66" y="558" font-size="21" font-weight="600">③ 后续唤醒：失败时不补做本轮批量已读确认</text>
+<text x="66" y="596" font-size="18">未读若仍存在 → 后续轮询再处理；已提交的文档、消息等动作不会因此撤销。</text>
+</g></svg>

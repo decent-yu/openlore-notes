@@ -973,6 +973,86 @@
       "has_research": true,
       "reading_path": "stablyai@orca/13-orca-怎样把页面上的-这个按钮-交给代理-元素取样-批注快照与发送边界.md",
       "research_path": "stablyai@orca/13-orca-怎样把页面上的-这个按钮-交给代理-元素取样-批注快照与发送边界.md"
+    },
+    "art_a82377ce-e69f-497b-998d-90c44636241a": {
+      "collection_id": "col_94293f67-c91",
+      "directory": "yetone@cumora/13-cumora-的本地-agent-报错以后-什么时候重试-为什么仍可能重复动作",
+      "slug": "cumora-的本地-agent-报错以后-什么时候重试-为什么仍可能重复动作",
+      "title": "Cumora 的本地 Agent 报错以后：什么时候重试，为什么仍可能重复动作",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-28T21:12:21.793Z",
+      "updated_at": "2026-10-28T21:12:21.793Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/13-cumora-的本地-agent-报错以后-什么时候重试-为什么仍可能重复动作.md",
+      "research_path": "yetone@cumora/13-cumora-的本地-agent-报错以后-什么时候重试-为什么仍可能重复动作.md"
+    },
+    "art_4e4877a9-4cec-422a-a533-24673657c0cd": {
+      "collection_id": "col_94293f67-c91",
+      "directory": "superset-sh@superset/13-superset-怎样把页面评论交给正确的代理-监听接管-投递预约与输入确认",
+      "slug": "superset-怎样把页面评论交给正确的代理-监听接管-投递预约与输入确认",
+      "title": "Superset 怎样把页面评论交给正确的代理：监听接管、投递预约与输入确认",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-28T21:12:21.793Z",
+      "updated_at": "2026-10-28T21:12:21.793Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/13-superset-怎样把页面评论交给正确的代理-监听接管-投递预约与输入确认.md",
+      "research_path": "superset-sh@superset/13-superset-怎样把页面评论交给正确的代理-监听接管-投递预约与输入确认.md"
+    },
+    "art_225837d0-7bb2-4e7b-8780-8dc95d4c61f2": {
+      "collection_id": "col_94293f67-c91",
+      "directory": "akitaonrails@ai-memory/13-ai-memory-为什么把这篇记忆排在前面-候选窗口-页面权重与模型重排的边界",
+      "slug": "ai-memory-为什么把这篇记忆排在前面-候选窗口-页面权重与模型重排的边界",
+      "title": "ai-memory 为什么把这篇记忆排在前面：候选窗口、页面权重与模型重排的边界",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-28T21:12:21.793Z",
+      "updated_at": "2026-10-28T21:12:21.793Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/13-ai-memory-为什么把这篇记忆排在前面-候选窗口-页面权重与模型重排的边界.md",
+      "research_path": "akitaonrails@ai-memory/13-ai-memory-为什么把这篇记忆排在前面-候选窗口-页面权重与模型重排的边界.md"
+    },
+    "art_0dbc95d7-71b2-409a-b1de-d0917b1e1824": {
+      "collection_id": "col_94293f67-c91",
+      "directory": "xai-org@grok-build/13-grok-build-回答到一半断线后怎样继续-流式显示-请求重试与工具执行边界",
+      "slug": "grok-build-回答到一半断线后怎样继续-流式显示-请求重试与工具执行边界",
+      "title": "Grok Build 回答到一半断线后怎样继续：流式显示、请求重试与工具执行边界",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-28T21:12:21.793Z",
+      "updated_at": "2026-10-28T21:12:21.793Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/13-grok-build-回答到一半断线后怎样继续-流式显示-请求重试与工具执行边界.md",
+      "research_path": "xai-org@grok-build/13-grok-build-回答到一半断线后怎样继续-流式显示-请求重试与工具执行边界.md"
+    },
+    "art_2856d2ac-fb3b-4b56-8310-30a80aef8a86": {
+      "collection_id": "col_94293f67-c91",
+      "directory": "stablyai@orca/14-orca-聊天消息发出后谁负责-持久接收-代理交接与重启恢复",
+      "slug": "orca-聊天消息发出后谁负责-持久接收-代理交接与重启恢复",
+      "title": "Orca 聊天消息发出后谁负责：持久接收、代理交接与重启恢复",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-28T21:12:21.793Z",
+      "updated_at": "2026-10-28T21:12:21.793Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/14-orca-聊天消息发出后谁负责-持久接收-代理交接与重启恢复.md",
+      "research_path": "stablyai@orca/14-orca-聊天消息发出后谁负责-持久接收-代理交接与重启恢复.md"
     }
   },
   "collection_locations": {
@@ -1099,6 +1179,18 @@
         "art_8a72176a-f30e-4e4b-a894-e160012831a0",
         "art_2ec5a4c4-599c-45d4-8379-a46e5f314db7"
       ]
+    },
+    "col_94293f67-c91": {
+      "path": "docs/repository-research/batches/20261029-01.md",
+      "date_sequence": "20261029-01",
+      "created_at": "2026-10-28T21:12:21.793Z",
+      "article_ids": [
+        "art_a82377ce-e69f-497b-998d-90c44636241a",
+        "art_4e4877a9-4cec-422a-a533-24673657c0cd",
+        "art_225837d0-7bb2-4e7b-8780-8dc95d4c61f2",
+        "art_0dbc95d7-71b2-409a-b1de-d0917b1e1824",
+        "art_2856d2ac-fb3b-4b56-8310-30a80aef8a86"
+      ]
     }
   },
   "delivered_batches": [
@@ -1111,7 +1203,8 @@
     "batch_dfedc233-0142-477c-8565-11bfc7f04205",
     "batch_d9af3567-a67d-4f13-bd36-7d3b815f66d4",
     "batch_77dfac8f-8063-4964-887a-523d3e6b9a5c",
-    "batch_f74c1acd-225a-4f69-a1f0-bcbfd58b0f05"
+    "batch_f74c1acd-225a-4f69-a1f0-bcbfd58b0f05",
+    "batch_7e474e44-216f-4bd5-8d51-acca89e20926"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -1135,9 +1228,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "4edbc984dbab14e6d0373112fd7a90a8a54b89ac8be0b444dec995eb31169da9",
+      "sha256": "db7761bdd16bc2d8c3678f36debe9af66fee0b41561c27a6a078fd1a7084d1c4",
       "media_type": "text/markdown",
-      "size": 78302
+      "size": 85037
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -1833,6 +1926,61 @@
       "sha256": "80e056a6d3468731f01bf5813f481b5be60eb7203d0a75fe4b8de32d73586177",
       "media_type": "text/markdown",
       "size": 3406
+    },
+    "docs/repository-research/yetone@cumora/13-cumora-的本地-agent-报错以后-什么时候重试-为什么仍可能重复动作.md": {
+      "sha256": "e0761d45fe7b0d39d36bb24e4c9a9128b7a0ad4a6d039f32c73b17303fbc26fa",
+      "media_type": "text/markdown",
+      "size": 14468
+    },
+    "docs/repository-research/yetone@cumora/assets/13-cumora-的本地-agent-报错以后-什么时候重试-为什么仍可能重复动作/retry-boundaries.svg": {
+      "sha256": "96aa2067d90d3094ef68a8b65aea188d6521e6eb5383d35747fe4130d7bf5903",
+      "media_type": "image/svg+xml",
+      "size": 2493
+    },
+    "docs/repository-research/superset-sh@superset/13-superset-怎样把页面评论交给正确的代理-监听接管-投递预约与输入确认.md": {
+      "sha256": "84c7e752c60de3ad7d1d4186855d59b51c27f0c753f9a4773f03a79edcb7e6b6",
+      "media_type": "text/markdown",
+      "size": 17798
+    },
+    "docs/repository-research/superset-sh@superset/assets/13-superset-怎样把页面评论交给正确的代理-监听接管-投递预约与输入确认/page-feedback-delivery.svg": {
+      "sha256": "0ff2d7c28f287e5c70cb2e0cd5c8451b38d5474b9ddd0fef8ed7cee1345e5b9e",
+      "media_type": "image/svg+xml",
+      "size": 2761
+    },
+    "docs/repository-research/akitaonrails@ai-memory/13-ai-memory-为什么把这篇记忆排在前面-候选窗口-页面权重与模型重排的边界.md": {
+      "sha256": "9e036f55d1d904d1c5e87808e9654d3303fda1607177d19e9110bad892b4f1d4",
+      "media_type": "text/markdown",
+      "size": 18053
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/13-ai-memory-为什么把这篇记忆排在前面-候选窗口-页面权重与模型重排的边界/ranking-windows.svg": {
+      "sha256": "bc230ce6c6906c647d12680c840d9d4c7105b2b650b5ceb6e11c6da8f3fadfb7",
+      "media_type": "image/svg+xml",
+      "size": 3220
+    },
+    "docs/repository-research/xai-org@grok-build/13-grok-build-回答到一半断线后怎样继续-流式显示-请求重试与工具执行边界.md": {
+      "sha256": "6852d3a6e8e7c5fd1259def1697e5f9e3904cb10b6479d9a89dee9d5caed83ba",
+      "media_type": "text/markdown",
+      "size": 14472
+    },
+    "docs/repository-research/xai-org@grok-build/assets/13-grok-build-回答到一半断线后怎样继续-流式显示-请求重试与工具执行边界/retry-boundary.svg": {
+      "sha256": "b23202d80fc511f4b38941545e8e819b406a1cd2210fb4dd6aadbba9b23d02dd",
+      "media_type": "image/svg+xml",
+      "size": 2490
+    },
+    "docs/repository-research/stablyai@orca/14-orca-聊天消息发出后谁负责-持久接收-代理交接与重启恢复.md": {
+      "sha256": "b5f68f3da3744602993cee13bd114621f6bc7346f236032b6f32e1df000a62bd",
+      "media_type": "text/markdown",
+      "size": 18713
+    },
+    "docs/repository-research/stablyai@orca/assets/14-orca-聊天消息发出后谁负责-持久接收-代理交接与重启恢复/orca-chat-send-boundaries.svg": {
+      "sha256": "50154f232ede722b221527899019aa2c29586b61a25a34dac7d3775f24dbacce",
+      "media_type": "image/svg+xml",
+      "size": 3619
+    },
+    "docs/repository-research/batches/20261029-01.md": {
+      "sha256": "9e39cf443c7fc75a517c028e7dc492acd5a4520bf5af971726bd4412b5140371",
+      "media_type": "text/markdown",
+      "size": 3422
     }
   }
 }

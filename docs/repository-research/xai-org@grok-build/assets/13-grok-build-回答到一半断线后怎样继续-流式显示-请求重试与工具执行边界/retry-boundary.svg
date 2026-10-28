@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#465568" stroke-width="1.5"/></marker></defs>
+<rect width="1040" height="620" fill="#fcfaf6"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#243447">
+<text x="40" y="43" font-size="25" font-weight="600">断线后重发的是生成请求，执行边界仍在完整响应之后</text>
+<text x="40" y="73" font-size="15" fill="#627082">假设场景：此前已改文件；当前模型请求的工具参数生成到一半时断线。时间向下。</text>
+<g font-size="18" text-anchor="middle"><text x="180" y="122">模型请求</text><text x="520" y="122">界面通知</text><text x="860" y="122">正式对话与本地工具</text></g>
+<g stroke="#ccd1d4" stroke-dasharray="5 5"><path d="M180 138V547"/><path d="M520 138V547"/><path d="M860 138V547"/></g>
+<rect x="728" y="145" width="264" height="45" rx="5" fill="#e0eee7"/>
+<text x="860" y="174" text-anchor="middle" font-size="17">此前的修改与结果继续保留</text>
+<g stroke="#465568" stroke-width="1.6" fill="none" marker-end="url(#arrow)"><path d="M180 222H520"/><path d="M180 289H520"/><path d="M180 455H520"/><path d="M180 498H860"/></g>
+<g font-size="16"><text x="205" y="208">文字片段、工具参数片段</text><text x="547" y="228">可以先显示</text><text x="205" y="276">断线；符合条件则报告重试</text><text x="547" y="294">保留已收到的片段</text></g>
+<path d="M180 307C80 307 80 370 180 370" stroke="#b96c2f" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<g font-size="16" fill="#955321"><text x="204" y="336">等待后重新生成</text><text x="204" y="362">失败尝试的半截参数不在这里分派</text></g>
+<g font-size="16"><text x="205" y="441">新尝试的文字片段</text><text x="547" y="461">继续接收并呈现</text><text x="205" y="486">接受完整响应 → 记录响应 → 分派工具</text></g>
+<rect x="740" y="514" width="240" height="34" rx="4" fill="#dce7f0"/><text x="860" y="537" text-anchor="middle" font-size="16">执行本次接受的工具调用</text>
+<path d="M40 570H1000" stroke="#d8d1c7"/>
+<text x="40" y="598" font-size="15" fill="#627082">范围：普通会话的本地工具链。服务端托管工具另有执行路径；重试不提供副作用只发生一次的保证。</text>
+</g></svg>
