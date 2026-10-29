@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="690" viewBox="0 0 1080 690">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#42576b" stroke-width="1.5"/></marker></defs>
+<rect width="1080" height="690" fill="#faf9f5"/>
+<g font-family="PingFang SC, Noto Sans CJK SC, sans-serif" fill="#243849">
+<text x="40" y="45" font-size="26" font-weight="bold">清除一次会话：三种边界，三种结果</text>
+<text x="40" y="76" font-size="16">依据当前源码；红色路径是假设可读文件残留时的推导，未作故障复现。</text>
+<rect x="40" y="108" width="1000" height="154" rx="6" fill="#e8f1ee" stroke="#538575"/>
+<text x="60" y="139" font-size="21" font-weight="bold">① 数据库事务：一起提交</text>
+<text x="65" y="176" font-size="18">收集待删版本 → 删除观察、摘要等记录 → 写入清除标记 → 删除会话、记审计</text>
+<text x="65" y="212" font-size="17">清除标记与删除同时生效；不会先删掉会话，再遗忘“它已经被删过”。</text>
+<text x="65" y="241" font-size="16" fill="#426756">标记按工作区、项目、会话标识检查，不是对相同文字的全库禁令。</text>
+<path d="M300 263V301" stroke="#42576b" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M790 263V301" stroke="#42576b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="210" y="289" font-size="15">后续恢复与投递</text><text x="737" y="289" font-size="15">提交后清理</text>
+<rect x="40" y="310" width="464" height="182" fill="#edf1f5" stroke="#7892a7"/>
+<text x="60" y="343" font-size="21" font-weight="bold">② 自动写回：检查标记</text>
+<text x="60" y="380" font-size="18">旧事件补发 → 拒绝重建同范围会话</text>
+<text x="60" y="416" font-size="18">残留摘要重新索引 → 拒绝重新入库</text>
+<text x="60" y="459" font-size="16">显式页面写入、恢复走另一条路径。</text>
+<rect x="540" y="310" width="500" height="182" fill="#fbede5" stroke="#bc7a5c"/>
+<text x="560" y="343" font-size="21" font-weight="bold">③ 磁盘文件：尽力删除</text>
+<text x="560" y="380" font-size="18">成功 → 正常移除文件</text>
+<text x="560" y="416" font-size="18">失败 → 返回 files_failed，数据库不回滚</text>
+<text x="560" y="459" font-size="16">清除标记阻止入库，不负责拦截直接读盘。</text>
+<path d="M790 493V537" stroke="#ad503c" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="540" y="546" width="500" height="105" fill="#fff7f3" stroke="#ad503c" stroke-dasharray="5 4"/>
+<text x="560" y="577" font-size="18" fill="#9c4230">若残留的是可读 Markdown，且调用者有权限：</text>
+<text x="560" y="612" font-size="18" fill="#9c4230">memory_read_page(path) 仍可能返回正文。</text>
+<text x="40" y="566" font-size="19" font-weight="bold">另有独立副本</text>
+<text x="40" y="602" font-size="18">Git 历史、备份、宿主工具原始会话</text>
+<text x="40" y="633" font-size="16">不因一次会话清除自动消失。</text>
+</g></svg>

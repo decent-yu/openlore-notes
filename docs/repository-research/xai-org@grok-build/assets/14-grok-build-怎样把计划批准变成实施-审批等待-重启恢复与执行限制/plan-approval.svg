@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="690" viewBox="0 0 1080 690">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#42556b"/></marker></defs>
+<rect width="1080" height="690" fill="#fbfaf6"/>
+<g font-family="sans-serif" fill="#203447">
+<text x="42" y="44" font-size="25" font-weight="bold">计划写完以后，谁真正打开执行入口？</text>
+<text x="42" y="76" font-size="16">交互会话中的正常审批；下方显示断开后重新加载会话的分支</text>
+<g font-size="19" font-weight="bold"><text x="65" y="123">模型 / 工具</text><text x="385" y="123">会话运行时</text><text x="778" y="123">终端界面 / 用户</text></g>
+<g stroke="#c8ced1" stroke-dasharray="5 5"><path d="M135 140V455M450 140V455M870 140V455"/></g>
+<g stroke="#42556b" stroke-width="2" fill="none" marker-end="url(#arrow)">
+<path d="M135 178H450"/><path d="M450 255H870"/><path d="M870 321H450"/><path d="M450 378H135"/><path d="M135 431H450"/>
+</g>
+<g font-size="16"><text x="150" y="166">同批编辑完成，再处理 exit_plan_mode</text>
+<text x="475" y="242">读取 plan.md，发送审批请求</text><text x="480" y="279" fill="#786132">先记录 awaiting_plan_approval = true</text>
+<text x="553" y="310">用户回答 approved</text><text x="155" y="367">放行退出工具；工具再次读取计划</text>
+<text x="151" y="420">PlanModeExited 通知</text><text x="472" y="436">退出计划状态，通知界面，继续模型循环</text></g>
+<path d="M42 468H1038" stroke="#c8ced1"/>
+<text x="42" y="505" font-size="19" font-weight="bold">如果界面在回答前断开</text>
+<g font-size="16"><text x="42" y="543">保留等待标记</text><text x="298" y="543">重新加载：读取状态与当前 plan.md</text><text x="739" y="543">重新发起审批请求</text></g>
+<g stroke="#42556b" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M190 537H280"/><path d="M642 537H720"/></g>
+<rect x="42" y="576" width="996" height="77" rx="4" fill="#eee9dc"/>
+<text x="60" y="605" font-size="16">恢复的是一次新的审批等待，不是原来的内存执行栈；获批后会排入一条新的实施请求。</text>
+<text x="60" y="632" font-size="16">边界：状态保存可能失败；恢复时无有效计划则清除等待标记；无界面宿主会自动批准。</text>
+</g></svg>

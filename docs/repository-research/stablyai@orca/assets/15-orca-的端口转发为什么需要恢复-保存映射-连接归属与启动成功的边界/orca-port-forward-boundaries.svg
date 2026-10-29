@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="760" viewBox="0 0 1080 760">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#334155"/></marker></defs>
+<rect width="1080" height="760" fill="#f8fafc"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#172033">
+<text x="44" y="49" font-size="27" font-weight="600">保存的映射，不等于已经可用的网页</text>
+<text x="44" y="80" font-size="16" fill="#475569">自拟场景：笔记本 127.0.0.1:13000 → SSH 服务器上的 127.0.0.1:3000</text>
+<path d="M70 179H1000" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 6"/>
+<g fill="#fff" stroke="#334155" stroke-width="2"><circle cx="150" cy="179" r="25"/><circle cx="530" cy="179" r="25"/><circle cx="920" cy="179" r="25"/></g>
+<g font-size="21" text-anchor="middle"><text x="150" y="187">A</text><text x="530" y="187">B</text><text x="920" y="187">C</text></g>
+<g font-size="21" text-anchor="middle" font-weight="600"><text x="150" y="126">保存映射</text><text x="530" y="126">建立本地转发</text><text x="920" y="126">请求远端服务</text></g>
+<g font-size="17" text-anchor="middle"><text x="150" y="237">目标配置中保留地址与端口</text><text x="530" y="237">管理器中出现运行记录</text><text x="920" y="237">浏览器实际发起访问</text></g>
+<path d="M315 267V375M715 267V375" stroke="#cbd5e1" stroke-dasharray="4 5"/>
+<g font-size="16" fill="#475569"><text x="44" y="292">恢复失败仍保留配置</text><text x="44" y="322">编辑其他项不应把它抹掉</text><text x="348" y="292">ssh2：等待本地监听建立</text><text x="348" y="322">系统 SSH：本地探测成功，或</text><text x="348" y="350">750 毫秒宽限期结束且未报失败</text><text x="754" y="292">仍可能被服务器策略拒绝</text><text x="754" y="322">或远端程序根本没有运行</text><text x="754" y="350">前两步不能证明此步成功</text></g>
+<text x="44" y="384" font-size="15" fill="#64748b">三栏用于区分状态；新增请求实际先启动转发，再保存配置，并非按 A、B、C 创建。</text>
+<path d="M44 398H1036" stroke="#cbd5e1"/>
+<text x="44" y="440" font-size="23" font-weight="600">编辑途中断线：让迟到的启动自行收尾</text>
+<g font-size="17"><text x="44" y="488">编辑动作</text><text x="44" y="566">断线清理</text><text x="44" y="644">迟到结果</text></g>
+<g stroke="#cbd5e1"><path d="M170 483H1030M170 561H1030M170 639H1030"/></g>
+<g fill="#fff" stroke="#64748b"><rect x="180" y="462" width="220" height="42" rx="4"/><rect x="440" y="462" width="260" height="42" rx="4"/><rect x="440" y="540" width="260" height="42" rx="4"/><rect x="760" y="618" width="260" height="42" rx="4"/></g>
+<g text-anchor="middle" font-size="17"><text x="290" y="489">等待旧监听关闭</text><text x="570" y="489">启动新映射，尚未完成</text><text x="570" y="567">标记在途启动已被关闭</text><text x="890" y="645">关闭新资源，拒绝登记</text></g>
+<g stroke="#334155" fill="none" marker-end="url(#arrow)"><path d="M400 483H435"/><path d="M570 504V534"/><path d="M700 561H735V639H754"/></g>
+<text x="44" y="709" font-size="17" fill="#9a3412">返回专用的“会话已关闭”错误；不回滚到旧连接，也不把断线当成删除保存配置。</text>
+<text x="44" y="737" font-size="14" fill="#64748b">图示表达源码中的完成边界与先后关系，不表示实测耗时。750 毫秒是代码配置的宽限期。</text>
+</g></svg>

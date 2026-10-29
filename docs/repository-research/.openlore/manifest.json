@@ -1053,6 +1053,86 @@
       "has_research": true,
       "reading_path": "stablyai@orca/14-orca-聊天消息发出后谁负责-持久接收-代理交接与重启恢复.md",
       "research_path": "stablyai@orca/14-orca-聊天消息发出后谁负责-持久接收-代理交接与重启恢复.md"
+    },
+    "art_973bc001-5ee7-4885-a83c-ce662df038a3": {
+      "collection_id": "col_1b459970-5d6",
+      "directory": "yetone@cumora/14-cumora-的长任务怎样继续-上下文压缩保住了什么-又会丢掉什么",
+      "slug": "cumora-的长任务怎样继续-上下文压缩保住了什么-又会丢掉什么",
+      "title": "Cumora 的长任务怎样继续：上下文压缩保住了什么，又会丢掉什么",
+      "original_url": "https://github.com/yetone/cumora",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-29T21:10:58.219Z",
+      "updated_at": "2026-10-29T21:10:58.219Z",
+      "has_research": true,
+      "reading_path": "yetone@cumora/14-cumora-的长任务怎样继续-上下文压缩保住了什么-又会丢掉什么.md",
+      "research_path": "yetone@cumora/14-cumora-的长任务怎样继续-上下文压缩保住了什么-又会丢掉什么.md"
+    },
+    "art_3393060c-0fdb-4155-94b3-a70712f7307c": {
+      "collection_id": "col_1b459970-5d6",
+      "directory": "superset-sh@superset/14-superset-怎样把-改这个按钮-交给代理-元素定位-上下文附件与提交边界",
+      "slug": "superset-怎样把-改这个按钮-交给代理-元素定位-上下文附件与提交边界",
+      "title": "Superset 怎样把“改这个按钮”交给代理：元素定位、上下文附件与提交边界",
+      "original_url": "https://github.com/superset-sh/superset",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-29T21:10:58.219Z",
+      "updated_at": "2026-10-29T21:10:58.219Z",
+      "has_research": true,
+      "reading_path": "superset-sh@superset/14-superset-怎样把-改这个按钮-交给代理-元素定位-上下文附件与提交边界.md",
+      "research_path": "superset-sh@superset/14-superset-怎样把-改这个按钮-交给代理-元素定位-上下文附件与提交边界.md"
+    },
+    "art_5d46507d-0f8a-4c89-9825-4e2b406fb433": {
+      "collection_id": "col_1b459970-5d6",
+      "directory": "akitaonrails@ai-memory/14-ai-memory-删掉会话后还留下什么-派生内容-重放阻断与文件残留",
+      "slug": "ai-memory-删掉会话后还留下什么-派生内容-重放阻断与文件残留",
+      "title": "ai-memory 删掉会话后还留下什么：派生内容、重放阻断与文件残留",
+      "original_url": "https://github.com/akitaonrails/ai-memory",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-29T21:10:58.219Z",
+      "updated_at": "2026-10-29T21:10:58.219Z",
+      "has_research": true,
+      "reading_path": "akitaonrails@ai-memory/14-ai-memory-删掉会话后还留下什么-派生内容-重放阻断与文件残留.md",
+      "research_path": "akitaonrails@ai-memory/14-ai-memory-删掉会话后还留下什么-派生内容-重放阻断与文件残留.md"
+    },
+    "art_4b862f88-d266-4f57-9996-2a797f0a5455": {
+      "collection_id": "col_1b459970-5d6",
+      "directory": "xai-org@grok-build/14-grok-build-怎样把计划批准变成实施-审批等待-重启恢复与执行限制",
+      "slug": "grok-build-怎样把计划批准变成实施-审批等待-重启恢复与执行限制",
+      "title": "Grok Build 怎样把计划批准变成实施：审批等待、重启恢复与执行限制",
+      "original_url": "https://github.com/xai-org/grok-build",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-29T21:10:58.219Z",
+      "updated_at": "2026-10-29T21:10:58.219Z",
+      "has_research": true,
+      "reading_path": "xai-org@grok-build/14-grok-build-怎样把计划批准变成实施-审批等待-重启恢复与执行限制.md",
+      "research_path": "xai-org@grok-build/14-grok-build-怎样把计划批准变成实施-审批等待-重启恢复与执行限制.md"
+    },
+    "art_4b9a0b06-2b42-42b5-848e-5df50883096d": {
+      "collection_id": "col_1b459970-5d6",
+      "directory": "stablyai@orca/15-orca-的端口转发为什么需要恢复-保存映射-连接归属与启动成功的边界",
+      "slug": "orca-的端口转发为什么需要恢复-保存映射-连接归属与启动成功的边界",
+      "title": "Orca 的端口转发为什么需要恢复：保存映射、连接归属与启动成功的边界",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-29T21:10:58.219Z",
+      "updated_at": "2026-10-29T21:10:58.219Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/15-orca-的端口转发为什么需要恢复-保存映射-连接归属与启动成功的边界.md",
+      "research_path": "stablyai@orca/15-orca-的端口转发为什么需要恢复-保存映射-连接归属与启动成功的边界.md"
     }
   },
   "collection_locations": {
@@ -1191,6 +1271,18 @@
         "art_0dbc95d7-71b2-409a-b1de-d0917b1e1824",
         "art_2856d2ac-fb3b-4b56-8310-30a80aef8a86"
       ]
+    },
+    "col_1b459970-5d6": {
+      "path": "docs/repository-research/batches/20261030-01.md",
+      "date_sequence": "20261030-01",
+      "created_at": "2026-10-29T21:10:58.219Z",
+      "article_ids": [
+        "art_973bc001-5ee7-4885-a83c-ce662df038a3",
+        "art_3393060c-0fdb-4155-94b3-a70712f7307c",
+        "art_5d46507d-0f8a-4c89-9825-4e2b406fb433",
+        "art_4b862f88-d266-4f57-9996-2a797f0a5455",
+        "art_4b9a0b06-2b42-42b5-848e-5df50883096d"
+      ]
     }
   },
   "delivered_batches": [
@@ -1204,7 +1296,8 @@
     "batch_d9af3567-a67d-4f13-bd36-7d3b815f66d4",
     "batch_77dfac8f-8063-4964-887a-523d3e6b9a5c",
     "batch_f74c1acd-225a-4f69-a1f0-bcbfd58b0f05",
-    "batch_7e474e44-216f-4bd5-8d51-acca89e20926"
+    "batch_7e474e44-216f-4bd5-8d51-acca89e20926",
+    "batch_ce6da51d-a279-40d1-a7ea-f2f4c69be528"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -1228,9 +1321,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "db7761bdd16bc2d8c3678f36debe9af66fee0b41561c27a6a078fd1a7084d1c4",
+      "sha256": "f567ed27ee766d703927d84ca8cc56e8dbdcfd28b1113afb4e135e0eb21563d3",
       "media_type": "text/markdown",
-      "size": 85037
+      "size": 91624
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -1981,6 +2074,61 @@
       "sha256": "9e39cf443c7fc75a517c028e7dc492acd5a4520bf5af971726bd4412b5140371",
       "media_type": "text/markdown",
       "size": 3422
+    },
+    "docs/repository-research/yetone@cumora/14-cumora-的长任务怎样继续-上下文压缩保住了什么-又会丢掉什么.md": {
+      "sha256": "ae8888e1b2005dbbd63c011a897a144a3d5164f65d18fd45d3f9f1b78e6113ce",
+      "media_type": "text/markdown",
+      "size": 14996
+    },
+    "docs/repository-research/yetone@cumora/assets/14-cumora-的长任务怎样继续-上下文压缩保住了什么-又会丢掉什么/compaction-order.svg": {
+      "sha256": "8d7175f59c87cf0e75422c2c225c82dd0e997e64c33250d74ac1f58ce4f4b08b",
+      "media_type": "image/svg+xml",
+      "size": 3410
+    },
+    "docs/repository-research/superset-sh@superset/14-superset-怎样把-改这个按钮-交给代理-元素定位-上下文附件与提交边界.md": {
+      "sha256": "9582425f2da7879212dfb521aef6668e43ad0fc3a2ea36037ae4731340f4ec29",
+      "media_type": "text/markdown",
+      "size": 21880
+    },
+    "docs/repository-research/superset-sh@superset/assets/14-superset-怎样把-改这个按钮-交给代理-元素定位-上下文附件与提交边界/design-feedback-path.svg": {
+      "sha256": "e6e5187ba9b563bb2a66b918977456888ed1b15879345ce06eb57e00a130c478",
+      "media_type": "image/svg+xml",
+      "size": 3414
+    },
+    "docs/repository-research/akitaonrails@ai-memory/14-ai-memory-删掉会话后还留下什么-派生内容-重放阻断与文件残留.md": {
+      "sha256": "f2d81661b58055c2602b3ebaa3591b52fe162f7a52343040099ab5cb9782ae14",
+      "media_type": "text/markdown",
+      "size": 17079
+    },
+    "docs/repository-research/akitaonrails@ai-memory/assets/14-ai-memory-删掉会话后还留下什么-派生内容-重放阻断与文件残留/purge-boundaries.svg": {
+      "sha256": "dc8c7a4389085f78f68be1dc6d29bbb1cc7b5eb43ef5e2cc36985f2775a6ac74",
+      "media_type": "image/svg+xml",
+      "size": 3133
+    },
+    "docs/repository-research/xai-org@grok-build/14-grok-build-怎样把计划批准变成实施-审批等待-重启恢复与执行限制.md": {
+      "sha256": "c1fb1c40a559dc248f1fa83b93fb27db71734441f34865c8d943d018a57277ef",
+      "media_type": "text/markdown",
+      "size": 15955
+    },
+    "docs/repository-research/xai-org@grok-build/assets/14-grok-build-怎样把计划批准变成实施-审批等待-重启恢复与执行限制/plan-approval.svg": {
+      "sha256": "10bfa99f5f8a34b3247e3a2c01928a1ef623befdeaec5f02cd1ad829296fdf9e",
+      "media_type": "image/svg+xml",
+      "size": 2419
+    },
+    "docs/repository-research/stablyai@orca/15-orca-的端口转发为什么需要恢复-保存映射-连接归属与启动成功的边界.md": {
+      "sha256": "080022a84a46ebb8028707da16640d75b4b94d560e643f8928d540cad7f34f54",
+      "media_type": "text/markdown",
+      "size": 15863
+    },
+    "docs/repository-research/stablyai@orca/assets/15-orca-的端口转发为什么需要恢复-保存映射-连接归属与启动成功的边界/orca-port-forward-boundaries.svg": {
+      "sha256": "8965bda7deeb18bbe355fe4d6bfa1dcc01ecf0803bb39576a2de655b3623d3fb",
+      "media_type": "image/svg+xml",
+      "size": 3591
+    },
+    "docs/repository-research/batches/20261030-01.md": {
+      "sha256": "e95e44a2f08743a81be586fa2f812098b88492123c852ab5104965c49544bbc4",
+      "media_type": "text/markdown",
+      "size": 3348
     }
   }
 }

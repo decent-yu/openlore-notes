@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#64748b"/></marker></defs>
+<rect width="1040" height="620" fill="#faf9f5"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#253344">
+<text x="40" y="48" font-size="26" font-weight="600">压缩的是工作记录；消息与动作的先后关系仍要留下</text>
+<text x="40" y="80" font-size="16" fill="#64748b">假设示意：四组工具调用，最新两组暂不删除；每一组都包含调用及对应结果。</text>
+<text x="40" y="130" font-size="19" font-weight="600">原输入</text>
+<path d="M180 150H980" stroke="#a5acb4" marker-end="url(#arrow)"/>
+<text x="905" y="138" font-size="14" fill="#64748b">从早到晚</text>
+<g font-size="16" text-anchor="middle">
+<rect x="40" y="170" width="130" height="78" rx="5" fill="#e8edf2"/><text x="105" y="204">最初要求</text><text x="105" y="227">整理方案</text>
+<rect x="190" y="170" width="130" height="78" rx="5" fill="#ede4d5"/><text x="255" y="204">旧调用 A</text><text x="255" y="227">读取资料</text>
+<rect x="340" y="170" width="130" height="78" rx="5" fill="#ede4d5"/><text x="405" y="204">旧调用 B</text><text x="405" y="227">检查文档</text>
+<rect x="490" y="170" width="150" height="78" rx="5" fill="#f9dfb8"/><text x="565" y="204">中途补充要求</text><text x="565" y="227">也检查日志</text>
+<rect x="660" y="170" width="150" height="78" rx="5" fill="#d9ebe5"/><text x="735" y="204">近期调用 C</text><text x="735" y="227">回复检查结果</text>
+<rect x="830" y="170" width="160" height="78" rx="5" fill="#d9ebe5"/><text x="910" y="204">近期调用 D</text><text x="910" y="227">继续整理</text>
+</g>
+<path d="M330 260V305" stroke="#64748b" marker-end="url(#arrow)"/>
+<text x="365" y="285" font-size="16">先截短过长结果，再摘要旧组 A、B</text>
+<text x="40" y="345" font-size="19" font-weight="600">摘要后的输入</text>
+<g font-size="16" text-anchor="middle">
+<rect x="40" y="370" width="130" height="78" rx="5" fill="#e8edf2"/><text x="105" y="404">最初要求</text><text x="105" y="427">原样保留</text>
+<rect x="190" y="370" width="280" height="78" rx="5" fill="#ede4d5"/><text x="330" y="404">A、B 的续工摘要</text><text x="330" y="427">替代两组原始调用记录</text>
+<rect x="490" y="370" width="150" height="78" rx="5" fill="#f9dfb8"/><text x="565" y="404">中途补充要求</text><text x="565" y="427">仍在回复之前</text>
+<rect x="660" y="370" width="150" height="78" rx="5" fill="#d9ebe5"/><text x="735" y="404">近期调用 C</text><text x="735" y="427">调用组留下</text>
+<rect x="830" y="370" width="160" height="78" rx="5" fill="#d9ebe5"/><text x="910" y="404">近期调用 D</text><text x="910" y="427">调用组留下</text>
+</g>
+<path d="M565 461V480H735V461" fill="none" stroke="#b67c28" stroke-width="2"/>
+<text x="40" y="526" font-size="17" font-weight="600">两条不同的保障</text>
+<text x="40" y="558" font-size="16">配对与顺序：程序保留结构，避免拆散调用，或把已回应的要求搬到末尾。</text>
+<text x="40" y="588" font-size="16">内容完整性：近期结果也可能被截短；摘要也可能遗漏，不能据此保证不重复工作。</text>
+</g></svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680">
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#425466" stroke-width="1.4"/></marker></defs>
+<rect width="1120" height="680" fill="#faf9f5"/>
+<g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" fill="#243447">
+<text x="42" y="48" font-size="26" font-weight="700">点选按钮之后：页面线索怎样交给代理</text>
+<text x="42" y="80" font-size="16" fill="#596778">箭头表示数据交接；各步骤的成功只证明本步骤完成。</text>
+<path d="M42 112H1078M42 322H1078" stroke="#c7ced5"/>
+<text x="42" y="144" font-size="17" font-weight="700">桌面浏览器</text>
+<rect x="42" y="167" width="270" height="120" rx="8" fill="#e7f1fa" stroke="#91b9d9"/>
+<text x="61" y="198" font-size="19">网页中的选择脚本</text><text x="61" y="228" font-size="16">拦截点击，读取元素与样式</text><text x="61" y="255" font-size="16">React 调试线索可有可无</text>
+<path d="M314 222H393" stroke="#425466" stroke-width="2" marker-end="url(#a)"/>
+<rect x="397" y="167" width="280" height="120" rx="8" fill="#fff" stroke="#9caab7"/>
+<text x="417" y="198" font-size="19">主进程再次检查</text><text x="417" y="228" font-size="16">限制字段、过滤部分敏感信息</text><text x="417" y="255" font-size="16">另行截图；截图失败仍可继续</text>
+<path d="M680 222H759" stroke="#425466" stroke-width="2" marker-end="url(#a)"/>
+<rect x="763" y="167" width="315" height="120" rx="8" fill="#fff" stroke="#9caab7"/>
+<text x="783" y="198" font-size="19">桌面确认框</text><text x="783" y="228" font-size="16">用户写要求、选目标代理</text><text x="783" y="255" font-size="16">旧选择结果按轮次丢弃</text>
+<path d="M920 290V350H536V373" fill="none" stroke="#425466" stroke-width="2" marker-end="url(#a)"/>
+<text x="42" y="358" font-size="17" font-weight="700">工作区所在主机</text>
+<rect x="297" y="379" width="480" height="90" rx="8" fill="#f1eee4" stroke="#b9ad8b"/>
+<text x="318" y="411" font-size="19">先保存到 .superset/attachments/</text><text x="318" y="441" font-size="16">先写文字，再写可选图片；提示词引用相对路径</text>
+<path d="M536 472V498H218V520M536 498H831V520" fill="none" stroke="#425466" stroke-width="2" marker-end="url(#a)"/>
+<path d="M218 498V520" fill="none" stroke="#425466" stroke-width="2" marker-end="url(#a)"/>
+<rect x="42" y="526" width="450" height="109" rx="8" fill="#e6f1ea" stroke="#89ac94"/>
+<text x="62" y="556" font-size="19" font-weight="600">已有终端代理</text><text x="62" y="585" font-size="17">terminal.send，submit: false</text><text x="62" y="614" font-size="16">只放入输入框，用户再确认提交</text>
+<rect x="574" y="526" width="504" height="109" rx="8" fill="#f9edda" stroke="#c8aa75"/>
+<text x="594" y="556" font-size="19" font-weight="600">新建会话</text><text x="594" y="585" font-size="16">可用时新建聊天：先登记待发送首条消息</text><text x="594" y="614" font-size="16">否则启动终端代理：提示词随启动命令传入</text>
+<text x="42" y="662" font-size="15" fill="#596778">页面内容与截图不是原子快照；修改正确与否仍需代理检查源码、运行测试并查看页面。</text>
+</g></svg>
