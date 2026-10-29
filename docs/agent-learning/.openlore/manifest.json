@@ -244,6 +244,43 @@
       "collected_at": "2026-10-28T00:11:25.112Z",
       "updated_at": "2026-10-28T00:11:25.112Z",
       "has_research": true
+    },
+    "art_1ed0d069-0ea6-4f27-a2da-34477d4ec079": {
+      "collection_id": "col_1b6013d3-88a",
+      "directory": "articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs",
+      "slug": "how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs",
+      "title": "How to build evidence-grounded agent memory with OpenWiki and Graphs",
+      "original_url": "https://www.langchain.com/blog/building-agent-memory-openwiki-graphs",
+      "tags": [
+        "OpenWiki",
+        "智能体记忆",
+        "跨文档问答",
+        "GraphRAG",
+        "证据溯源",
+        "知识更新",
+        "检索评估"
+      ],
+      "collected_at": "2026-10-29T00:09:07.810Z",
+      "updated_at": "2026-10-29T00:09:07.810Z",
+      "has_research": true
+    },
+    "art_9316eb12-08f4-4124-8356-0aa63bff0b26": {
+      "collection_id": "col_1b6013d3-88a",
+      "directory": "articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep",
+      "slug": "how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep",
+      "title": "How to Build Proactive, Always-On Agents with the Schedules SDK in Managed Deep Agents",
+      "original_url": "https://www.langchain.com/blog/proactive-agents",
+      "tags": [
+        "智能体",
+        "cron",
+        "任务调度",
+        "Managed Deep Agents",
+        "LangChain",
+        "长期记忆"
+      ],
+      "collected_at": "2026-10-29T00:09:07.810Z",
+      "updated_at": "2026-10-29T00:09:07.810Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -315,6 +352,15 @@
         "art_5c007f69-d6b3-4e59-9fca-c0a2bd0404a8",
         "art_94a658bc-bdbd-41ae-b705-59b5835f4e36"
       ]
+    },
+    "col_1b6013d3-88a": {
+      "path": "docs/agent-learning/batches/20261029-01.md",
+      "date_sequence": "20261029-01",
+      "created_at": "2026-10-29T00:09:07.810Z",
+      "article_ids": [
+        "art_1ed0d069-0ea6-4f27-a2da-34477d4ec079",
+        "art_9316eb12-08f4-4124-8356-0aa63bff0b26"
+      ]
     }
   },
   "delivered_batches": [
@@ -330,13 +376,14 @@
     "batch_443bdea0-b941-46c9-9378-80ffcafa14be",
     "batch_7df57b02-1d80-4f15-8c02-56e97db3bb3a",
     "batch_22a8ceda-7c91-4eba-abde-8f087a9575fd",
-    "batch_86d55003-bb41-4841-a5da-b287239df334"
+    "batch_86d55003-bb41-4841-a5da-b287239df334",
+    "batch_01ce9c93-d8c4-4c17-a51f-efd7ca8c84a5"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "b0a36b47762b7785d2fa9c2f1a007288e0efe3f1b02c3ae8be7263143708e31c",
+      "sha256": "7b9cb8d324a868094f01eb33ccc8c00d62d0b112b0574fc1643b52cdaa739608",
       "media_type": "text/markdown",
-      "size": 9265
+      "size": 11080
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -1112,6 +1159,91 @@
       "sha256": "c03724715fc9f12f997739e1b28a940a814973df048ab6db5272b6f7e6330365",
       "media_type": "text/markdown",
       "size": 594
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/README.md": {
+      "sha256": "b1071f1567173aea402b121126ebda57073c207f41afffd8f7c0af2b6d4d6bda",
+      "media_type": "text/markdown",
+      "size": 505
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/article.md": {
+      "sha256": "f0020bdd40b98bc670019ba61699894b0490474c82dedbe46e04eb5495dd667f",
+      "media_type": "text/markdown",
+      "size": 15267
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/article-zh-CN.md": {
+      "sha256": "48cc6c169440fc7bee0911cb1e01dcef614b58120cb2bac4e8dc7be6001b32bc",
+      "media_type": "text/markdown",
+      "size": 15445
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/research.md": {
+      "sha256": "4050588730c6186d6fc2eff0f24d638ab5b33865615e820130b9c681858665d0",
+      "media_type": "text/markdown",
+      "size": 15438
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/assets/diagram-f8f4dcd8afc0.png": {
+      "sha256": "f8f4dcd8afc0b7965443c2ed807a488e915245a62e2238577bcbac30b20d0ba2",
+      "media_type": "image/png",
+      "size": 366410
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/assets/diagram-5d94d9ea6d63.png": {
+      "sha256": "5d94d9ea6d638bcffdace14379549a3069ce283125ca20a6002ec21754207c85",
+      "media_type": "image/png",
+      "size": 222596
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/assets/diagram-96713f8abe70.png": {
+      "sha256": "96713f8abe70456b553ab1ac5c05e2b5b8f99a81881507a94ab06af19a155fb8",
+      "media_type": "image/png",
+      "size": 150003
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/assets/diagram-0e905ecacdc9.png": {
+      "sha256": "0e905ecacdc9879a20d9c6d3dad3fe6d53555bb70793ca4ccee64746647cf533",
+      "media_type": "image/png",
+      "size": 198671
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/assets/diagram-89f2c95cd73d.png": {
+      "sha256": "89f2c95cd73d5cdcf8e73fc98cc2ec6685f15155c795b866a54a4489cd86ec0c",
+      "media_type": "image/png",
+      "size": 198389
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/assets/evidence-path.svg": {
+      "sha256": "9a965011ddd0acb668a1ea2a9f74499351f26a55c0ab515b56e6a0fa09aa5752",
+      "media_type": "image/svg+xml",
+      "size": 3584
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/README.md": {
+      "sha256": "58b8d77a6ef72bc4aaba34e1c8f0757bd817bd9b6dcc3132ba8fcba6aa821333",
+      "media_type": "text/markdown",
+      "size": 482
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/article.md": {
+      "sha256": "ffc2c93994975d95f6ceaf6aa43f036c607799544eccde9ea80791d66b18659a",
+      "media_type": "text/markdown",
+      "size": 9512
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/article-zh-CN.md": {
+      "sha256": "458d695959c994343db49ab3a740b0ae2727b2ee7b3080fd92238756f11480b1",
+      "media_type": "text/markdown",
+      "size": 9481
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/research.md": {
+      "sha256": "4f89c5b6156c39d7e50bf36918fec83b3db7b95a8849323b94199b6e319255be",
+      "media_type": "text/markdown",
+      "size": 13074
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/assets/diagram-20de60b046b2.png": {
+      "sha256": "20de60b046b29df55c8cb00005c57d349189ba397facbb4149f9c4ada60ce16e",
+      "media_type": "image/png",
+      "size": 518619
+    },
+    "docs/agent-learning/articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/assets/scheduled-agent.svg": {
+      "sha256": "2061e1abc25f7fe5a8dca9791eafb62a4894c291cf4e3d33d3e958a71fb3436c",
+      "media_type": "image/svg+xml",
+      "size": 4150
+    },
+    "docs/agent-learning/batches/20261029-01.md": {
+      "sha256": "c74cec9096c9b968b0492ef25b67bb31fafb2b6329c010a69d7b8837a77ae2ad",
+      "media_type": "text/markdown",
+      "size": 1018
     }
   }
 }

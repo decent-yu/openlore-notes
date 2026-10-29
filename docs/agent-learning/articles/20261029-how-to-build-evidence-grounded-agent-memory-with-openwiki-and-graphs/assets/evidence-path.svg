@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="700" viewBox="0 0 1120 700" role="img" aria-labelledby="title desc">
+<title id="title">从整理好的结论回到原始证据</title>
+<desc id="desc">假设保险示例：问题定位到维基中的声明，声明引用原始条款与修改条款。修改条款修改原始条款，操作手册引用原始条款；反向遍历引用关系可以发现可能受影响的手册。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#49657c"/></marker></defs>
+<rect width="1120" height="700" fill="#f7f8fa"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#20394d">
+<text x="48" y="54" font-size="28" font-weight="700">先找到整理好的关系，再沿引用核对原文</text>
+<text x="48" y="88" font-size="17" fill="#617281">假设示例 · 金额、文件与关系仅用于解释机制</text>
+<rect x="48" y="124" width="280" height="96" rx="12" fill="#e9edf3" stroke="#bac8d4"/>
+<text x="70" y="159" font-size="20" font-weight="600">提问</text><text x="70" y="193" font-size="18">这张保单的赔付上限是多少？</text>
+<path d="M328 172H466" fill="none" stroke="#49657c" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="356" y="153" font-size="16">定位入口</text>
+<rect x="478" y="124" width="594" height="96" rx="12" fill="#e5f3ed" stroke="#6da68e"/>
+<text x="500" y="159" font-size="20" font-weight="600">维基页中的声明</text><text x="500" y="193" font-size="18">若修改条款 B 适用，上限由 100 万元改为 60 万元</text>
+<text x="48" y="270" font-size="18" font-weight="600">证据图：保存可逐条跟随的关系</text>
+<path d="M650 220V300H248V340" fill="none" stroke="#49657c" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M890 220V340" fill="none" stroke="#49657c" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="336" y="291" font-size="16">引用原文</text><text x="907" y="294" font-size="16">引用原文</text>
+<rect x="48" y="352" width="400" height="104" rx="12" fill="#fff" stroke="#9bafbf"/>
+<text x="70" y="388" font-size="20" font-weight="600">原始条款 A · 第 4 节</text><text x="70" y="424" font-size="18">一般赔付上限：100 万元</text>
+<rect x="672" y="352" width="400" height="104" rx="12" fill="#fff" stroke="#9bafbf"/>
+<text x="694" y="388" font-size="20" font-weight="600">修改条款 B · 第 2 节</text><text x="694" y="424" font-size="18">将 A 第 4 节上限改为 60 万元</text>
+<path d="M672 410H460" fill="none" stroke="#49657c" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="504" y="391" font-size="17">修改（amends）</text>
+<rect x="48" y="542" width="400" height="88" rx="12" fill="#fff" stroke="#9bafbf"/>
+<text x="70" y="577" font-size="20" font-weight="600">操作手册 C · 第 3 节</text><text x="70" y="610" font-size="18">按 A 第 4 节计算赔付</text>
+<path d="M248 542V468" fill="none" stroke="#49657c" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="270" y="509" font-size="16">引用（refers_to）</text>
+<text x="505" y="553" font-size="18" font-weight="600">沿反向引用，可找到可能受影响的手册 C</text>
+<text x="505" y="589" font-size="17" fill="#617281">发现依赖 ≠ 已判定如何修改；适用条件仍需核对。</text>
+<text x="48" y="671" font-size="16" fill="#617281">箭头表示记录的关系方向；工具可沿正向或反向关系查找。图不表示真实实验中的文件。</text>
+</g></svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680" role="img" aria-labelledby="title desc">
+<title id="title">主动智能体如何从一句请求走到未来的一次执行</title>
+<desc id="desc">假设用户要求每个工作日检查项目风险。对话中的智能体创建计划，调度服务到点启动一次运行，运行读取项目与允许的记忆，再判断并输出。每次运行结束后等待下一次触发，而非模型持续思考。</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#506879" stroke-width="1.5"/></marker></defs>
+<rect width="1100" height="680" fill="#f7f9fb"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#183347">
+<text x="48" y="53" font-size="28" font-weight="600">“一直待命”由服务维持，模型按次运行</text>
+<text x="48" y="85" font-size="17" fill="#5a6f80">假设场景 · 工作日检查项目风险；流程是机制示意，不是运行实测</text>
+<text x="48" y="137" font-size="17" font-weight="600" fill="#216e66">现在：把未来任务保存下来</text>
+<rect x="48" y="158" width="285" height="96" rx="12" fill="#e3f1ec" stroke="#9dcabc"/>
+<text x="68" y="191" font-size="20">用户提出请求</text><text x="68" y="223" font-size="17">“工作日 9 点检查项目风险”</text>
+<path d="M333 206H386" stroke="#506879" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="396" y="158" width="275" height="96" rx="12" fill="white" stroke="#a9bac6"/>
+<text x="416" y="191" font-size="20">智能体调用创建计划工具</text><text x="416" y="223" font-size="17">保存时间、提示词与所属身份</text>
+<path d="M671 206H724" stroke="#506879" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="734" y="158" width="318" height="96" rx="12" fill="#e6edf9" stroke="#a8bcdf"/>
+<text x="754" y="191" font-size="20">调度服务持有计划</text><text x="754" y="223" font-size="17">等待到点，无需模型持续推理</text>
+<path d="M893 254V330" stroke="#506879" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="913" y="297" font-size="17" fill="#5a6f80">到达计划时间</text>
+<text x="48" y="322" font-size="17" font-weight="600" fill="#335e9b">未来：启动一次智能体运行</text>
+<rect x="734" y="340" width="318" height="104" rx="12" fill="#e6edf9" stroke="#a8bcdf"/>
+<text x="754" y="374" font-size="20">用保存的提示词启动运行</text><text x="754" y="405" font-size="17">解析执行身份，选择会话</text><text x="754" y="429" font-size="15" fill="#5a6f80">周期计划默认开启新会话</text>
+<path d="M734 392H681" stroke="#506879" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="396" y="340" width="275" height="104" rx="12" fill="white" stroke="#a9bac6"/>
+<text x="416" y="374" font-size="20">调用工具，判断当前情况</text><text x="416" y="405" font-size="17">读取项目资料与允许的记忆</text><text x="416" y="429" font-size="15" fill="#5a6f80">“是否值得提醒”仍需任务规则</text>
+<path d="M396 392H343" stroke="#506879" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="48" y="340" width="285" height="104" rx="12" fill="#e3f1ec" stroke="#9dcabc"/>
+<text x="68" y="374" font-size="20">生成结果，结束本次运行</text><text x="68" y="405" font-size="17">按配置送回消息渠道</text><text x="68" y="429" font-size="15" fill="#5a6f80">并非每次检查都有新风险</text>
+<path d="M190 444V492H1080V206H1052" fill="none" stroke="#506879" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
+<rect x="385" y="476" width="345" height="30" fill="#f7f9fb"/><text x="400" y="497" font-size="17" fill="#5a6f80">周期计划继续等待下一次触发</text>
+<rect x="48" y="545" width="1004" height="96" rx="10" fill="#fff3dc"/>
+<text x="68" y="579" font-size="19" font-weight="600">跨次衔接需要单独处理</text>
+<text x="68" y="609" font-size="17">会话保存本次对话过程；长期记忆保存跨会话知识。创建计划本身不会自动获得长期记忆。</text>
+</g></svg>
