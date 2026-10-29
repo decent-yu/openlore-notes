@@ -308,6 +308,42 @@
       "collected_at": "2026-10-28T23:09:04.539Z",
       "updated_at": "2026-10-28T23:09:04.539Z",
       "has_research": true
+    },
+    "art_6919da5e-64dc-4875-81b6-77f5a55a22b9": {
+      "collection_id": "col_29d1c374-a14",
+      "directory": "articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf",
+      "slug": "introducing-full-transaction-detection-for-cloudflare-waf",
+      "title": "Introducing full transaction detection for Cloudflare WAF",
+      "original_url": "https://blog.cloudflare.com/full-transaction-waf",
+      "tags": [
+        "Web应用防火墙",
+        "HTTP事务检测",
+        "响应规则",
+        "攻击检测",
+        "目录穿越",
+        "数据泄露防护"
+      ],
+      "collected_at": "2026-10-29T23:09:19.767Z",
+      "updated_at": "2026-10-29T23:09:19.767Z",
+      "has_research": true
+    },
+    "art_f33afa0d-4d01-4613-98c7-eaa5a9dfd387": {
+      "collection_id": "col_29d1c374-a14",
+      "directory": "articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models",
+      "slug": "building-a-multiplayer-game-world-with-autonomous-fable-class-models",
+      "title": "Building a multiplayer game world with autonomous Fable-class models",
+      "original_url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world",
+      "tags": [
+        "自主编程智能体",
+        "游戏开发",
+        "持续部署",
+        "生产监控",
+        "故障恢复",
+        "大语言模型"
+      ],
+      "collected_at": "2026-10-29T23:09:19.767Z",
+      "updated_at": "2026-10-29T23:09:19.767Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -389,6 +425,15 @@
         "art_15295d2e-4f86-4639-971b-556118629acd",
         "art_ff1688d2-b048-4bd4-9289-3208107591d6"
       ]
+    },
+    "col_29d1c374-a14": {
+      "path": "docs/architecture-and-development/batches/20261030-01.md",
+      "date_sequence": "20261030-01",
+      "created_at": "2026-10-29T23:09:19.767Z",
+      "article_ids": [
+        "art_6919da5e-64dc-4875-81b6-77f5a55a22b9",
+        "art_f33afa0d-4d01-4613-98c7-eaa5a9dfd387"
+      ]
     }
   },
   "delivered_batches": [
@@ -404,13 +449,14 @@
     "batch_eac9d101-9db8-4092-a594-486b91daed90",
     "batch_dcfaae44-b505-4de5-ae42-81e433794c32",
     "batch_c101038a-11a2-4b20-832c-db3db040a7b7",
-    "batch_bbb107d9-141f-46ad-9727-2d6495ac4c89"
+    "batch_bbb107d9-141f-46ad-9727-2d6495ac4c89",
+    "batch_91e40289-e08d-4f8c-a06b-591e74620358"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "9291af9493ec2a42562f744f916ad0da72118087f42efa8098ec3a55d67f9752",
+      "sha256": "124f684d8b06a4a960cedc2aea7281c28c68e3a904bddd2533d21851b3aa82b4",
       "media_type": "text/markdown",
-      "size": 12986
+      "size": 14617
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
       "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
@@ -1146,6 +1192,91 @@
       "sha256": "716c9894c3a384afc10b090d0da46a724592aeb8ce6120011a69e6794f8f865f",
       "media_type": "text/markdown",
       "size": 937
+    },
+    "docs/architecture-and-development/articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/README.md": {
+      "sha256": "fc27a1620e99ffe7c43c9daf2b14baaeb9da39f8f01e3ab9bb82681b5c516741",
+      "media_type": "text/markdown",
+      "size": 477
+    },
+    "docs/architecture-and-development/articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/article.md": {
+      "sha256": "bd9819b2e049653cd7cca9d725ed2397d1866c54b7bdbc674565a4dcc1fd3225",
+      "media_type": "text/markdown",
+      "size": 12484
+    },
+    "docs/architecture-and-development/articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/article-zh-CN.md": {
+      "sha256": "0cf8fed310615604676e8115225a5eddb1bae9e8c644afb30d052b182e67569b",
+      "media_type": "text/markdown",
+      "size": 11594
+    },
+    "docs/architecture-and-development/articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/research.md": {
+      "sha256": "f494d41ecc38a2af6c8094d81c845921ead139c6ac489b98e06acb81f573f99b",
+      "media_type": "text/markdown",
+      "size": 18860
+    },
+    "docs/architecture-and-development/articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/assets/diagram-1ccd32b9851a.webp": {
+      "sha256": "1ccd32b9851a6d540bbd64510a3169daaf64f8786e69f95715ab692cc9d2cde5",
+      "media_type": "image/webp",
+      "size": 50862
+    },
+    "docs/architecture-and-development/articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/assets/diagram-2150df01fab2.webp": {
+      "sha256": "2150df01fab204371164c94a9ccec3f796507e6907b35e6501627cada33abfa6",
+      "media_type": "image/webp",
+      "size": 15732
+    },
+    "docs/architecture-and-development/articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/assets/diagram-ce8951be4582.webp": {
+      "sha256": "ce8951be4582c25a3104e6d13166c6f967c45fbaacfa8e4e92cd92132a4181a0",
+      "media_type": "image/webp",
+      "size": 2736
+    },
+    "docs/architecture-and-development/articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/assets/diagram-eabe9d9704b0.webp": {
+      "sha256": "eabe9d9704b08b84df3af75d90cbad99a4699e0786ca706d3a3eb22f70431119",
+      "media_type": "image/webp",
+      "size": 13538
+    },
+    "docs/architecture-and-development/articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/assets/diagram-52ff4b4a42ce.webp": {
+      "sha256": "52ff4b4a42ce3c91623b34a93aea038aef5a40df95951062a79f7c0909439e6d",
+      "media_type": "image/webp",
+      "size": 14562
+    },
+    "docs/architecture-and-development/articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/assets/transaction-boundary.svg": {
+      "sha256": "b0bf5ae75fa68a47220510ee58116724e0c404680a2776632a6db20acde181d8",
+      "media_type": "image/svg+xml",
+      "size": 4576
+    },
+    "docs/architecture-and-development/articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/README.md": {
+      "sha256": "cf390f84e77c89f68fc2e17f9332361b3717374c1f2c0f7d76e2bdf11aa2a219",
+      "media_type": "text/markdown",
+      "size": 525
+    },
+    "docs/architecture-and-development/articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/article.md": {
+      "sha256": "3b47c86bba46aeffc151e7cc8ad7d1464f0eaa3bbd696c04310ffb9d1c218f16",
+      "media_type": "text/markdown",
+      "size": 6978
+    },
+    "docs/architecture-and-development/articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/article-zh-CN.md": {
+      "sha256": "2681a271049d8a9245c1b375a648fe1c7e8c5ebe55d7b08f0df73d2c3eeab86e",
+      "media_type": "text/markdown",
+      "size": 7388
+    },
+    "docs/architecture-and-development/articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/research.md": {
+      "sha256": "c8b42698afc9be4e396119d414b492c6f84074a3031f5e7506252e963b3dc25c",
+      "media_type": "text/markdown",
+      "size": 20955
+    },
+    "docs/architecture-and-development/articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/assets/diagram-996c38329b59.webp": {
+      "sha256": "996c38329b59c73849df6edd64448827dcea754693093cb9e3a81e75474ccc02",
+      "media_type": "image/webp",
+      "size": 133650
+    },
+    "docs/architecture-and-development/articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/assets/two-loops.svg": {
+      "sha256": "b69e35b4321b4bc76d3f3b04aa11eec6a7224bbda363e41d275125180d572000",
+      "media_type": "image/svg+xml",
+      "size": 4333
+    },
+    "docs/architecture-and-development/batches/20261030-01.md": {
+      "sha256": "87aea5bd4d9f99a0e2f47f2ffa308f2b861b6923461f1bb2b389a2702ddf063e",
+      "media_type": "text/markdown",
+      "size": 926
     }
   }
 }

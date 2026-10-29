@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="770" viewBox="0 0 1080 770" role="img" aria-labelledby="title desc">
+<title id="title">请求与响应联合检测的动作顺序和保护边界</title>
+<desc id="desc">从上到下阅读。请求先经过边缘请求检查，再由源站执行。源站响应回到边缘后，检测器结合本次请求产生检测结果，响应规则选择记录、放行或替换响应。替换响应无法撤销源站动作。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#475569"/></marker></defs>
+<rect width="1080" height="770" fill="#f8fafc"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#172b42">
+<text x="42" y="48" font-size="28" font-weight="700">多看一份响应证据，阻断点也随之后移</text>
+<text x="42" y="80" font-size="17" fill="#526579">从上到下读：假设请求通过了入口检查；此图表达逻辑顺序，不代表内部服务拓扑。</text>
+<rect x="55" y="109" width="215" height="47" rx="9" fill="#e2e8f0"/>
+<rect x="380" y="109" width="315" height="47" rx="9" fill="#dbeafe"/>
+<rect x="810" y="109" width="215" height="47" rx="9" fill="#fef3c7"/>
+<text x="162" y="140" text-anchor="middle" font-size="21" font-weight="600">请求者</text>
+<text x="537" y="140" text-anchor="middle" font-size="21" font-weight="600">Cloudflare 边缘</text>
+<text x="917" y="140" text-anchor="middle" font-size="21" font-weight="600">源站应用</text>
+<g stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 6"><path d="M162 165V650"/><path d="M537 165V650"/><path d="M917 165V650"/></g>
+<g stroke="#475569" stroke-width="2.4" fill="none" marker-end="url(#arrow)"><path d="M162 205H445"/><path d="M640 245H917V290"/><path d="M917 382H655"/><path d="M445 607H162"/></g>
+<text x="197" y="191" font-size="17">① 发出可疑请求</text>
+<rect x="445" y="211" width="195" height="62" rx="8" fill="#fff" stroke="#93c5fd"/>
+<text x="542" y="237" text-anchor="middle" font-size="18">② 请求阶段检查</text>
+<text x="542" y="259" text-anchor="middle" font-size="15" fill="#526579">已知攻击可在此拦住</text>
+<rect x="801" y="290" width="232" height="72" rx="8" fill="#fff" stroke="#e6b857"/>
+<text x="917" y="318" text-anchor="middle" font-size="18">③ 应用执行请求</text>
+<text x="917" y="344" text-anchor="middle" font-size="16">读取文件／写入数据等</text>
+<text x="703" y="407" font-size="17">④ 返回源站响应</text>
+<rect x="390" y="348" width="265" height="92" rx="8" fill="#fff" stroke="#60a5fa" stroke-width="2"/>
+<text x="522" y="376" text-anchor="middle" font-size="19" font-weight="600">⑤ 联合检测</text>
+<text x="522" y="402" text-anchor="middle" font-size="17">本次请求 + 响应信号</text>
+<text x="522" y="426" text-anchor="middle" font-size="16" fill="#526579">输出类别、置信度、特征编号</text>
+<path d="M445 273L390 308V363" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<text x="217" y="313" font-size="16" fill="#526579">保留本次请求上下文</text>
+<path d="M522 440V477" fill="none" stroke="#475569" stroke-width="2.4" marker-end="url(#arrow)"/>
+<rect x="390" y="477" width="265" height="78" rx="8" fill="#e0f2fe" stroke="#60a5fa"/>
+<text x="522" y="507" text-anchor="middle" font-size="19" font-weight="600">⑥ 响应规则决定动作</text>
+<text x="522" y="534" text-anchor="middle" font-size="17">记录后放行，或阻断</text>
+<path d="M522 555V607H445" fill="none" stroke="#475569" stroke-width="2.4"/>
+<text x="172" y="588" font-size="17">⑦ 原响应，或替换后的拦截响应</text>
+<rect x="730" y="461" width="303" height="153" rx="10" fill="#fff1f2" stroke="#fda4af"/>
+<text x="750" y="493" font-size="20" font-weight="700" fill="#9f1239">保护边界</text>
+<text x="750" y="525" font-size="18">可以阻止匹配的响应送达。</text>
+<text x="750" y="555" font-size="18">不能撤销第 ③ 步的执行，</text>
+<text x="750" y="583" font-size="18">也不能收回已发出的数据。</text>
+<rect x="42" y="681" width="996" height="56" rx="8" fill="#e2e8f0"/>
+<text x="62" y="705" font-size="16">依据：Cloudflare 原文的处理语义；步骤拆分为解释性示意。正文检查的缓冲与覆盖细节未公开。</text>
+<text x="62" y="727" font-size="16">“完整事务”指同一次 HTTP 请求与响应，不代表跨请求攻击链追踪或业务事务回滚。</text>
+</g></svg>

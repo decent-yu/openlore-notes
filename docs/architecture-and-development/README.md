@@ -2,12 +2,14 @@
 
 关注架构设计与演进，以及有工程证据的新开发方法和协作流程。
 
-## 最近收录（16 篇）
+## 最近收录（18 篇）
 
 按首次收录时间从新到旧排列；更新旧文章不改变收录日期和目录。
 
 | 收录日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261030 | [Building a multiplayer game world with autonomous Fable-class models](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/README.md) | [简体中文](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/article-zh-CN.md) | [调研](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/research.md) |
+| 20261030 | [Introducing full transaction detection for Cloudflare WAF](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/README.md) | [简体中文](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/article-zh-CN.md) | [调研](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/research.md) |
 | 20261029 | [Localizing compliance at scale: Achieving South Korea’s ISMS certification](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/README.md) | [简体中文](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/article-zh-CN.md) | [调研](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/research.md) |
 | 20261029 | [The October inflection point for vibe game development](articles/20261029-the-october-inflection-point-for-vibe-game-development/README.md) | [简体中文](articles/20261029-the-october-inflection-point-for-vibe-game-development/article-zh-CN.md) | [调研](articles/20261029-the-october-inflection-point-for-vibe-game-development/research.md) |
 | 20261028 | [A fully programmable secure web gateway](articles/20261028-a-fully-programmable-secure-web-gateway/README.md) | [简体中文](articles/20261028-a-fully-programmable-secure-web-gateway/article-zh-CN.md) | [调研](articles/20261028-a-fully-programmable-secure-web-gateway/research.md) |
@@ -29,6 +31,8 @@
 
 | 更新日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261030 | [Building a multiplayer game world with autonomous Fable-class models](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/README.md) | [简体中文](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/article-zh-CN.md) | [调研](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/research.md) |
+| 20261030 | [Introducing full transaction detection for Cloudflare WAF](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/README.md) | [简体中文](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/article-zh-CN.md) | [调研](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/research.md) |
 | 20261029 | [Localizing compliance at scale: Achieving South Korea’s ISMS certification](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/README.md) | [简体中文](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/article-zh-CN.md) | [调研](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/research.md) |
 | 20261029 | [The October inflection point for vibe game development](articles/20261029-the-october-inflection-point-for-vibe-game-development/README.md) | [简体中文](articles/20261029-the-october-inflection-point-for-vibe-game-development/article-zh-CN.md) | [调研](articles/20261029-the-october-inflection-point-for-vibe-game-development/research.md) |
 | 20261028 | [A fully programmable secure web gateway](articles/20261028-a-fully-programmable-secure-web-gateway/README.md) | [简体中文](articles/20261028-a-fully-programmable-secure-web-gateway/article-zh-CN.md) | [调研](articles/20261028-a-fully-programmable-secure-web-gateway/research.md) |
@@ -48,6 +52,7 @@
 
 ## 采集批次
 
+- [20261030-01](batches/20261030-01.md)（2 篇）
 - [20261029-01](batches/20261029-01.md)（2 篇）
 - [20261028-01](batches/20261028-01.md)（2 篇）
 - [20261027-01](batches/20261027-01.md)（1 篇）
