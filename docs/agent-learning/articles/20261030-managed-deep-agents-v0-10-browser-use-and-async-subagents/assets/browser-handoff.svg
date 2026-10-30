@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="660" viewBox="0 0 1040 660" role="img" aria-labelledby="title desc">
+<title id="title">人工接管时，浏览器控制权如何往返</title>
+<desc id="desc">从上往下阅读。代理操作浏览器，遇到登录后向用户请求接管。用户直接在网站登录并交还控制，代理重新检查页面后继续。用户接管期间代理不能操作该窗口。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#275f78"/></marker></defs>
+<rect width="1040" height="660" rx="18" fill="#f6f8fa"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#173345">
+<text x="42" y="50" font-size="27" font-weight="600">登录时把窗口交给人，完成后再交还</text>
+<text x="42" y="82" font-size="17" fill="#526775">从上往下读 · 机制示意，不代表实测耗时</text>
+<g font-size="21" font-weight="600" text-anchor="middle">
+<text x="190" y="134">代理</text><text x="520" y="134">远程浏览器</text><text x="850" y="134">用户</text></g>
+<g stroke="#b9c9d3" stroke-dasharray="5 7" stroke-width="2"><path d="M190 154V565"/><path d="M520 154V565"/><path d="M850 154V565"/></g>
+<rect x="445" y="275" width="470" height="98" rx="12" fill="#fff0d4"/>
+<g stroke="#275f78" stroke-width="2.5" marker-end="url(#arrow)"><path d="M190 198H520"/><path d="M190 257H850"/><path d="M850 320H520"/><path d="M850 422H190"/><path d="M190 502H520"/></g>
+<g font-size="18" text-anchor="middle">
+<text x="355" y="183">① 操作网页，遇到登录</text>
+<text x="520" y="241">② 请求接管并说明原因</text>
+<text x="689" y="305">③ 在网站直接登录</text>
+<text x="680" y="352" fill="#80551d">此时代理不能操作该窗口</text>
+<text x="520" y="406">④ 点击 Hand back，交还控制</text>
+<text x="355" y="486">⑤ 检查登录结果，再继续</text>
+</g>
+<rect x="42" y="583" width="956" height="45" rx="8" fill="#e6eef3"/>
+<text x="61" y="612" font-size="17">密码不必进入聊天；代理接续后，仍能读取工具可访问的登录后页面。</text>
+</g></svg>

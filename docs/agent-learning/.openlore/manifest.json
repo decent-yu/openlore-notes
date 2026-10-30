@@ -281,6 +281,25 @@
       "collected_at": "2026-10-29T00:09:07.810Z",
       "updated_at": "2026-10-29T00:09:07.810Z",
       "has_research": true
+    },
+    "art_34f1594a-1064-414f-99aa-17fa7bec9b52": {
+      "collection_id": "col_19234663-c5e",
+      "directory": "articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents",
+      "slug": "managed-deep-agents-v0-10-browser-use-and-async-subagents",
+      "title": "Managed Deep Agents v0.10: Browser Use and Async Subagents",
+      "original_url": "https://www.langchain.com/blog/managed-deep-agents-browser-use-and-asynchronous-subagents",
+      "tags": [
+        "Managed Deep Agents",
+        "浏览器自动化",
+        "异步子智能体",
+        "人机协作",
+        "会话隔离",
+        "Slack 集成",
+        "身份映射"
+      ],
+      "collected_at": "2026-10-30T00:06:14.897Z",
+      "updated_at": "2026-10-30T00:06:14.897Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -361,6 +380,14 @@
         "art_1ed0d069-0ea6-4f27-a2da-34477d4ec079",
         "art_9316eb12-08f4-4124-8356-0aa63bff0b26"
       ]
+    },
+    "col_19234663-c5e": {
+      "path": "docs/agent-learning/batches/20261030-01.md",
+      "date_sequence": "20261030-01",
+      "created_at": "2026-10-30T00:06:14.897Z",
+      "article_ids": [
+        "art_34f1594a-1064-414f-99aa-17fa7bec9b52"
+      ]
     }
   },
   "delivered_batches": [
@@ -377,13 +404,14 @@
     "batch_7df57b02-1d80-4f15-8c02-56e97db3bb3a",
     "batch_22a8ceda-7c91-4eba-abde-8f087a9575fd",
     "batch_86d55003-bb41-4841-a5da-b287239df334",
-    "batch_01ce9c93-d8c4-4c17-a51f-efd7ca8c84a5"
+    "batch_01ce9c93-d8c4-4c17-a51f-efd7ca8c84a5",
+    "batch_d93a14a0-4e15-4104-9344-259170bd608e"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "7b9cb8d324a868094f01eb33ccc8c00d62d0b112b0574fc1643b52cdaa739608",
+      "sha256": "d6c233b2d036c58c27e2d54c73b77b5a30dffb89b43656baefd5f73502e00473",
       "media_type": "text/markdown",
-      "size": 11080
+      "size": 11879
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -1244,6 +1272,46 @@
       "sha256": "c74cec9096c9b968b0492ef25b67bb31fafb2b6329c010a69d7b8837a77ae2ad",
       "media_type": "text/markdown",
       "size": 1018
+    },
+    "docs/agent-learning/articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/README.md": {
+      "sha256": "532239199b1db8c5128b70c0a3ef478a27bd6679ae3b69cc1f0b005ce5df176f",
+      "media_type": "text/markdown",
+      "size": 537
+    },
+    "docs/agent-learning/articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/article.md": {
+      "sha256": "4d216d5b49efa6f6f266fbeacec9781789d744f1e9dd7df11f63d20d91214147",
+      "media_type": "text/markdown",
+      "size": 12037
+    },
+    "docs/agent-learning/articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/article-zh-CN.md": {
+      "sha256": "dab8188976d8a4eb663c67cb9163bfaa9ba10902be455e3b46a4cecfbfe16265",
+      "media_type": "text/markdown",
+      "size": 12828
+    },
+    "docs/agent-learning/articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/research.md": {
+      "sha256": "a1f5b748cb863eae00927a64ea87ce4c35f6c6cea7428b3c92b9d0569ff0fd27",
+      "media_type": "text/markdown",
+      "size": 14749
+    },
+    "docs/agent-learning/articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/assets/diagram-9bb5ecbab33e.png": {
+      "sha256": "9bb5ecbab33e760d5f118162ad2c9f5313f7ff1a42073e96a2bf1001d94f5aaa",
+      "media_type": "image/png",
+      "size": 143035
+    },
+    "docs/agent-learning/articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/assets/async-results.svg": {
+      "sha256": "542f34902205813bdb26caec4d62c863a1747dd377c5b13d33333c0d718f9fd2",
+      "media_type": "image/svg+xml",
+      "size": 3083
+    },
+    "docs/agent-learning/articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/assets/browser-handoff.svg": {
+      "sha256": "acd3759a2758594814719a107c67a036affbbc98d290084d93ad78ece4f8c4c8",
+      "media_type": "image/svg+xml",
+      "size": 2196
+    },
+    "docs/agent-learning/batches/20261030-01.md": {
+      "sha256": "f32a653ab6c5565a7dc7d7960a14030c97c9c84485487205ff5840a0538ffa71",
+      "media_type": "text/markdown",
+      "size": 512
     }
   }
 }

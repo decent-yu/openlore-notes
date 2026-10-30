@@ -2,12 +2,13 @@
 
 关注 Agent 前沿技术、新能力与发展趋势，持续发现有价值的研究、框架和应用进展。
 
-## 最近收录（15 篇）
+## 最近收录（16 篇）
 
 按首次收录时间从新到旧排列；更新旧文章不改变收录日期和目录。
 
 | 收录日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261030 | [Managed Deep Agents v0.10: Browser Use and Async Subagents](articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/README.md) | [简体中文](articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/article-zh-CN.md) | [调研](articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/research.md) |
 | 20261029 | [How to build evidence-grounded agent memory with OpenWiki and Graphs](articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/README.md) | [简体中文](articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/article-zh-CN.md) | [调研](articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/research.md) |
 | 20261029 | [How to Build Proactive, Always-On Agents with the Schedules SDK in Managed Deep Agents](articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/README.md) | [简体中文](articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/article-zh-CN.md) | [调研](articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/research.md) |
 | 20261028 | [GPT-6.1 Terra](articles/20261028-gpt-6-1-terra/README.md) | [简体中文](articles/20261028-gpt-6-1-terra/article-zh-CN.md) | [调研](articles/20261028-gpt-6-1-terra/research.md) |
@@ -28,6 +29,7 @@
 
 | 更新日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261030 | [Managed Deep Agents v0.10: Browser Use and Async Subagents](articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/README.md) | [简体中文](articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/article-zh-CN.md) | [调研](articles/20261030-managed-deep-agents-v0-10-browser-use-and-async-subagents/research.md) |
 | 20261029 | [How to build evidence-grounded agent memory with OpenWiki and Graphs](articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/README.md) | [简体中文](articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/article-zh-CN.md) | [调研](articles/20261029-how-to-build-evidence-grounded-agent-memory-with-openwiki-and-graphs/research.md) |
 | 20261029 | [How to Build Proactive, Always-On Agents with the Schedules SDK in Managed Deep Agents](articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/README.md) | [简体中文](articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/article-zh-CN.md) | [调研](articles/20261029-how-to-build-proactive-always-on-agents-with-the-schedules-sdk-in-managed-deep/research.md) |
 | 20261028 | [GPT-6.1 Terra](articles/20261028-gpt-6-1-terra/README.md) | [简体中文](articles/20261028-gpt-6-1-terra/article-zh-CN.md) | [调研](articles/20261028-gpt-6-1-terra/research.md) |
@@ -46,6 +48,7 @@
 
 ## 采集批次
 
+- [20261030-01](batches/20261030-01.md)（1 篇）
 - [20261029-01](batches/20261029-01.md)（2 篇）
 - [20261028-01](batches/20261028-01.md)（2 篇）
 - [20261027-01](batches/20261027-01.md)（1 篇）

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+<title id="title">异步子代理的完成结果怎样回到主代理</title>
+<desc id="desc">子代理在独立会话中运行，主代理继续交流。子代理完成时，如果主代理忙碌，在下一次模型调用前获取结果；空闲则启动新的执行；等待审批则保留审批，用户答复后获取结果。主代理决定最终回复内容。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#456878"/></marker></defs>
+<rect width="1040" height="620" rx="18" fill="#f6f8fa"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#173345">
+<text x="42" y="50" font-size="27" font-weight="600">后台完成以后，结果怎样进入主对话？</text>
+<text x="42" y="82" font-size="17" fill="#526775">先按主代理当前状态选择路径，再由主代理组织回复</text>
+<rect x="285" y="114" width="470" height="70" rx="12" fill="#dceee9"/>
+<text x="520" y="143" font-size="20" font-weight="600" text-anchor="middle">子代理在独立会话中完成任务</text>
+<text x="520" y="169" font-size="16" text-anchor="middle">运行期间，主代理可以继续与用户交流</text>
+<g fill="none" stroke="#456878" stroke-width="2.5" marker-end="url(#arrow)"><path d="M520 184V217H195V251"/><path d="M520 184V251"/><path d="M520 184V217H845V251"/></g>
+<g font-size="21" text-anchor="middle" font-weight="600">
+<rect x="55" y="254" width="280" height="56" rx="10" fill="#dfebf7"/><text x="195" y="290">主代理仍在工作</text>
+<rect x="380" y="254" width="280" height="56" rx="10" fill="#dceee9"/><text x="520" y="290">主代理已经空闲</text>
+<rect x="705" y="254" width="280" height="56" rx="10" fill="#fff0d4"/><text x="845" y="290">主代理等待审批</text></g>
+<g stroke="#456878" stroke-width="2.5" marker-end="url(#arrow)"><path d="M195 310V349"/><path d="M520 310V349"/><path d="M845 310V349"/></g>
+<g fill="#fff" stroke="#c7d4dc"><rect x="55" y="353" width="280" height="111" rx="10"/><rect x="380" y="353" width="280" height="111" rx="10"/><rect x="705" y="353" width="280" height="111" rx="10"/></g>
+<g font-size="19" text-anchor="middle">
+<text x="195" y="391">在后续模型调用前</text><text x="195" y="422">检查任务并取得结果</text>
+<text x="520" y="391">完成通知启动新执行</text><text x="520" y="422">让主代理处理结果</text>
+<text x="845" y="391">不跳过当前审批</text><text x="845" y="422">用户答复后交付结果</text>
+</g>
+<rect x="55" y="505" width="930" height="71" rx="10" fill="#e6eef3"/>
+<text x="520" y="535" font-size="19" text-anchor="middle">平台不会直接把子代理原始答案发到频道里；主代理决定向用户说什么。</text>
+<text x="520" y="560" font-size="16" text-anchor="middle" fill="#526775">依据官方默认通知行为绘制；“无需轮询”不代表运行时没有状态检查。</text>
+</g></svg>
