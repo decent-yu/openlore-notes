@@ -1133,6 +1133,40 @@
       "has_research": true,
       "reading_path": "stablyai@orca/15-orca-的端口转发为什么需要恢复-保存映射-连接归属与启动成功的边界.md",
       "research_path": "stablyai@orca/15-orca-的端口转发为什么需要恢复-保存映射-连接归属与启动成功的边界.md"
+    },
+    "art_dc6ea0ba-8950-464e-9633-5cbcd094dfe9": {
+      "collection_id": "col_c6870764-9ae",
+      "directory": "didi@helixharness/01-helixharness-怎样把一项需求变成可核对-可续跑-可复用的归档",
+      "slug": "helixharness-怎样把一项需求变成可核对-可续跑-可复用的归档",
+      "title": "HelixHarness 怎样把一项需求变成可核对、可续跑、可复用的归档",
+      "original_url": "https://github.com/didi/helixharness",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-31T21:07:42.552Z",
+      "updated_at": "2026-10-31T21:07:42.552Z",
+      "has_research": true,
+      "reading_path": "didi@helixharness/01-helixharness-怎样把一项需求变成可核对-可续跑-可复用的归档.md",
+      "article_path": "didi@helixharness/articles/01-helixharness-怎样把一项需求变成可核对-可续跑-可复用的归档.md",
+      "research_path": "didi@helixharness/01-helixharness-怎样把一项需求变成可核对-可续跑-可复用的归档.md"
+    },
+    "art_6cff3578-b149-4b14-8bab-058d8c1a43c4": {
+      "collection_id": "col_c6870764-9ae",
+      "directory": "paradevai@paradev/01-从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面",
+      "slug": "从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面",
+      "title": "从一次工作区创建看 Superset：如何隔离代码、启动 Agent 并把结果送回界面",
+      "original_url": "https://github.com/ParadevAI/Paradev",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-10-31T21:07:42.552Z",
+      "updated_at": "2026-10-31T21:07:42.552Z",
+      "has_research": true,
+      "reading_path": "paradevai@paradev/01-从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面.md",
+      "article_path": "paradevai@paradev/articles/01-从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面.md",
+      "research_path": "paradevai@paradev/01-从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面.md"
     }
   },
   "collection_locations": {
@@ -1283,6 +1317,15 @@
         "art_4b862f88-d266-4f57-9996-2a797f0a5455",
         "art_4b9a0b06-2b42-42b5-848e-5df50883096d"
       ]
+    },
+    "col_c6870764-9ae": {
+      "path": "docs/repository-research/batches/20261101-01.md",
+      "date_sequence": "20261101-01",
+      "created_at": "2026-10-31T21:07:42.552Z",
+      "article_ids": [
+        "art_dc6ea0ba-8950-464e-9633-5cbcd094dfe9",
+        "art_6cff3578-b149-4b14-8bab-058d8c1a43c4"
+      ]
     }
   },
   "delivered_batches": [
@@ -1297,7 +1340,8 @@
     "batch_77dfac8f-8063-4964-887a-523d3e6b9a5c",
     "batch_f74c1acd-225a-4f69-a1f0-bcbfd58b0f05",
     "batch_7e474e44-216f-4bd5-8d51-acca89e20926",
-    "batch_ce6da51d-a279-40d1-a7ea-f2f4c69be528"
+    "batch_ce6da51d-a279-40d1-a7ea-f2f4c69be528",
+    "batch_dc6aede8-b487-4c7a-a727-73f149d0d1ad"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -1321,9 +1365,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "f567ed27ee766d703927d84ca8cc56e8dbdcfd28b1113afb4e135e0eb21563d3",
+      "sha256": "3d8b0f6326623e38ec252a553bf829b34782964dea27bfe88a39d68145550ecf",
       "media_type": "text/markdown",
-      "size": 91624
+      "size": 94185
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -2129,6 +2173,51 @@
       "sha256": "e95e44a2f08743a81be586fa2f812098b88492123c852ab5104965c49544bbc4",
       "media_type": "text/markdown",
       "size": 3348
+    },
+    "docs/repository-research/didi@helixharness/01-helixharness-怎样把一项需求变成可核对-可续跑-可复用的归档.md": {
+      "sha256": "0d232af0d0cd5678e5c5f2426df744026c8ad0469c38b61fdc87c210446bb2ca",
+      "media_type": "text/markdown",
+      "size": 23912
+    },
+    "docs/repository-research/didi@helixharness/articles/01-helixharness-怎样把一项需求变成可核对-可续跑-可复用的归档.md": {
+      "sha256": "8e7327051db772c891703ae92ec8c4e9375d7d76981cca58f79fc143e8d4372f",
+      "media_type": "text/markdown",
+      "size": 40901
+    },
+    "docs/repository-research/didi@helixharness/assets/01-helixharness-怎样把一项需求变成可核对-可续跑-可复用的归档/feature-evidence-flow.svg": {
+      "sha256": "af0dfff408fee951b93731a5bcc7574a0ac8cabfbe82a5670719d8bdc2135681",
+      "media_type": "image/svg+xml",
+      "size": 3617
+    },
+    "docs/repository-research/paradevai@paradev/01-从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面.md": {
+      "sha256": "c1c1cdee7f9856d8f95befad37642a5aefd6d3f25970e73750788093902be21a",
+      "media_type": "text/markdown",
+      "size": 26417
+    },
+    "docs/repository-research/paradevai@paradev/articles/01-从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面.md": {
+      "sha256": "18c70d1e517cae744795778a6b8e6ff23907e50b8cb3ff47064b78b0e682e7c5",
+      "media_type": "text/markdown",
+      "size": 74620
+    },
+    "docs/repository-research/paradevai@paradev/assets/01-从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面/workspace-launch.svg": {
+      "sha256": "0d48cb0769c2cb3d5921eaa70dc0bce34d43c5623482dc82becfd88587192505",
+      "media_type": "image/svg+xml",
+      "size": 3101
+    },
+    "docs/repository-research/didi@helixharness/README.md": {
+      "sha256": "9bf3e22a3d170d495a743e54346e9e788e97d7da7d82b2c3f1b9abf16d12a9ed",
+      "media_type": "text/markdown",
+      "size": 333
+    },
+    "docs/repository-research/paradevai@paradev/README.md": {
+      "sha256": "6e0ef96c84a5f70e5ca2975825d8c1c9b14a334a646b63775ef9e8788042b2bf",
+      "media_type": "text/markdown",
+      "size": 387
+    },
+    "docs/repository-research/batches/20261101-01.md": {
+      "sha256": "6bb0a7fc67fde8bcc22e82528b01d95c790f98626601ebf514e83d6af306b9d8",
+      "media_type": "text/markdown",
+      "size": 1371
     }
   }
 }
