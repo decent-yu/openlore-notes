@@ -446,7 +446,7 @@ THIRD_PARTY_NOTICES.md
 
 [固定版本源码](https://github.com/didi/helixharness/blob/44ffc536f73d8af525b4795ad10384c516898576/README.md)
 
-```
+````
 # HelixHarness
 
 **English** | [简体中文](README.zh-CN.md)
@@ -584,7 +584,7 @@ See [third-party notices](THIRD_PARTY_NOTICES.md) for attribution and related wo
   <tr>
     <td><a href="docs/assets/platform-observability.png"><img src="docs/assets/platform-observability.png" alt="Synthetic Demo: HelixHarness usage and stage observations" width="100%"></a></td>
     <td><a href="docs/assets/platform-e
-```
+````
 
 （文件节选，后续内容未采集）
 
