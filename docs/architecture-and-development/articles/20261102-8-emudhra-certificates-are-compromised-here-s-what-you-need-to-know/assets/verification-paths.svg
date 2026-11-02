@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+<title id="title">同一设备上的应用，可能执行不同的证书验证</title>
+<desc id="desc">从左向右读取。实线箭头表示应用调用验证器，再由验证器产生结果。浏览器接收阻止名单后拒绝受影响证书；后台应用如果仍使用旧证书包且未检查吊销，可能接受同一条证书链。这是假设配置示意。</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#f1f5f9"/></linearGradient><filter id="shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.04"/></filter><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L8 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<g font-family="Inter, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+<text x="800" y="105" text-anchor="middle" font-size="36" font-weight="800" fill="#0f172a">浏览器通过检查，不代表后台程序也已修复</text>
+<text x="800" y="150" text-anchor="middle" font-size="20" fill="#64748b">假设配置示意 · 从左向右读 · 箭头表示调用与验证结果</text>
+<rect x="80" y="215" width="1440" height="230" rx="20" fill="#fff" stroke="#e2e8f0" filter="url(#shadow)"/>
+<rect x="80" y="485" width="1440" height="230" rx="20" fill="#fff" stroke="#e2e8f0" filter="url(#shadow)"/>
+<rect x="120" y="270" width="300" height="120" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+<text x="150" y="315" font-size="25" font-weight="700" fill="#1d4ed8">浏览器发起新连接</text><text x="150" y="354" font-size="20" fill="#475569">收到受影响的证书链</text>
+<rect x="570" y="270" width="460" height="120" rx="12" fill="#f5f3ff" stroke="#c4b5fd"/>
+<text x="600" y="315" font-size="25" font-weight="700" fill="#6d28d9">浏览器自己的验证器</text><text x="600" y="354" font-size="20" fill="#475569">已接收紧急阻止名单</text>
+<rect x="1180" y="270" width="300" height="120" rx="12" fill="#f0fdf4" stroke="#86efac"/>
+<text x="1210" y="315" font-size="25" font-weight="700" fill="#166534">拒绝证书</text><text x="1210" y="354" font-size="20" fill="#475569">此次连接被阻止</text>
+<line x1="425" y1="330" x2="566" y2="330" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/><line x1="1035" y1="330" x2="1176" y2="330" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="120" y="540" width="300" height="120" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+<text x="150" y="585" font-size="25" font-weight="700" fill="#1d4ed8">后台任务发起新连接</text><text x="150" y="624" font-size="20" fill="#475569">收到同一条证书链</text>
+<rect x="570" y="540" width="460" height="120" rx="12" fill="#f5f3ff" stroke="#c4b5fd"/>
+<text x="600" y="585" font-size="25" font-weight="700" fill="#6d28d9">应用所用的验证器</text><text x="600" y="624" font-size="20" fill="#475569">旧证书包；未检查吊销或阻止名单</text>
+<rect x="1180" y="540" width="300" height="120" rx="12" fill="#fff7ed" stroke="#fdba74"/>
+<text x="1210" y="585" font-size="25" font-weight="700" fill="#9a3412">仍可能接受证书</text><text x="1210" y="624" font-size="20" fill="#475569">需单独更新并验证</text>
+<line x1="425" y1="600" x2="566" y2="600" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/><line x1="1035" y1="600" x2="1176" y2="600" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="800" y="800" text-anchor="middle" font-size="25" font-weight="700" fill="#0f172a">验证单位应是应用实际使用的连接路径，而不是整台设备</text>
+</g></svg>

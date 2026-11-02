@@ -2,12 +2,13 @@
 
 关注架构设计与演进，以及有工程证据的新开发方法和协作流程。
 
-## 最近收录（18 篇）
+## 最近收录（19 篇）
 
 按首次收录时间从新到旧排列；更新旧文章不改变收录日期和目录。
 
 | 收录日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261102 | [8 eMudhra certificates are compromised. Here's what you need to know](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/README.md) | [简体中文](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/article-zh-CN.md) | [调研](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/research.md) |
 | 20261030 | [Building a multiplayer game world with autonomous Fable-class models](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/README.md) | [简体中文](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/article-zh-CN.md) | [调研](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/research.md) |
 | 20261030 | [Introducing full transaction detection for Cloudflare WAF](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/README.md) | [简体中文](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/article-zh-CN.md) | [调研](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/research.md) |
 | 20261029 | [Localizing compliance at scale: Achieving South Korea’s ISMS certification](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/README.md) | [简体中文](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/article-zh-CN.md) | [调研](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/research.md) |
@@ -31,6 +32,7 @@
 
 | 更新日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261102 | [8 eMudhra certificates are compromised. Here's what you need to know](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/README.md) | [简体中文](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/article-zh-CN.md) | [调研](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/research.md) |
 | 20261030 | [Building a multiplayer game world with autonomous Fable-class models](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/README.md) | [简体中文](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/article-zh-CN.md) | [调研](articles/20261030-building-a-multiplayer-game-world-with-autonomous-fable-class-models/research.md) |
 | 20261030 | [Introducing full transaction detection for Cloudflare WAF](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/README.md) | [简体中文](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/article-zh-CN.md) | [调研](articles/20261030-introducing-full-transaction-detection-for-cloudflare-waf/research.md) |
 | 20261029 | [Localizing compliance at scale: Achieving South Korea’s ISMS certification](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/README.md) | [简体中文](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/article-zh-CN.md) | [调研](articles/20261029-localizing-compliance-at-scale-achieving-south-korea-s-isms-certification/research.md) |
@@ -52,6 +54,7 @@
 
 ## 采集批次
 
+- [20261102-01](batches/20261102-01.md)（1 篇）
 - [20261030-01](batches/20261030-01.md)（2 篇）
 - [20261029-01](batches/20261029-01.md)（2 篇）
 - [20261028-01](batches/20261028-01.md)（2 篇）
