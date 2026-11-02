@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+  <title id="title">远程浏览器怎样访问开发中的应用</title>
+  <desc id="desc">先看上方：Agent 用浏览器工具发送命令。再看下方：浏览器经私有桥接访问 Agent 沙箱中的应用。虚线表示观察结果返回。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#f1f5f9"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/></filter>
+    <marker id="purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#6d28d9"/></marker>
+    <marker id="blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#1d4ed8"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g font-family="Inter, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <text x="800" y="100" text-anchor="middle" font-size="36" font-weight="800" fill="#0f172a">远程浏览器怎样访问开发中的应用</text>
+    <text x="800" y="145" text-anchor="middle" font-size="22" fill="#64748b">两条路线：发送操作命令，以及取得应用页面</text>
+    <rect x="80" y="220" width="590" height="540" rx="20" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="930" y="220" width="590" height="540" rx="20" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="115" y="270" font-size="26" font-weight="700" fill="#0f172a">Agent 沙箱</text>
+    <text x="965" y="270" font-size="26" font-weight="700" fill="#0f172a">浏览器沙箱</text>
+    <rect x="130" y="320" width="490" height="140" rx="12" fill="#ffffff" stroke="#c4b5fd"/>
+    <text x="165" y="370" font-size="26" font-weight="700" fill="#6d28d9">Agent 与浏览器工具</text>
+    <text x="165" y="415" font-size="23" fill="#475569">决定动作、读取结果</text>
+    <rect x="980" y="320" width="490" height="140" rx="12" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="1015" y="370" font-size="26" font-weight="700" fill="#1d4ed8">浏览器与 Stagehand</text>
+    <text x="1015" y="415" font-size="23" fill="#475569">打开页面、输入和点击</text>
+    <line x1="620" y1="352" x2="975" y2="352" stroke="#6d28d9" stroke-width="2.5" marker-end="url(#purple)"/>
+    <text x="800" y="327" text-anchor="middle" font-size="22" fill="#6d28d9">① 发送操作命令</text>
+    <line x1="980" y1="435" x2="625" y2="435" stroke="#6d28d9" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#purple)"/>
+    <text x="800" y="475" text-anchor="middle" font-size="21" fill="#6d28d9">返回快照或截图</text>
+    <rect x="130" y="570" width="490" height="140" rx="12" fill="#ffffff" stroke="#c4b5fd"/>
+    <text x="165" y="620" font-size="26" font-weight="700" fill="#0f172a">待测应用 · 端口 5173</text>
+    <text x="165" y="665" font-size="23" fill="#475569">Agent 启动的开发服务</text>
+    <rect x="980" y="570" width="490" height="140" rx="12" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="1015" y="620" font-size="26" font-weight="700" fill="#0f172a">浏览器发起网页请求</text>
+    <text x="1015" y="665" font-size="23" fill="#475569">localhost:5173/signup</text>
+    <line x1="1225" y1="460" x2="1225" y2="565" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#blue)"/>
+    <line x1="980" y1="640" x2="625" y2="640" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#blue)"/>
+    <text x="800" y="590" text-anchor="middle" font-size="22" fill="#1d4ed8">② 经私有桥接</text>
+    <text x="800" y="620" text-anchor="middle" font-size="22" fill="#1d4ed8">请求应用页面</text>
+    <text x="800" y="815" text-anchor="middle" font-size="23" fill="#475569">此处 localhost 经平台转向 Agent 沙箱；应用无需公开到互联网</text>
+  </g>
+</svg>

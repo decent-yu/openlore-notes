@@ -300,6 +300,26 @@
       "collected_at": "2026-10-30T00:06:14.897Z",
       "updated_at": "2026-10-30T00:06:14.897Z",
       "has_research": true
+    },
+    "art_40dc88e3-b3a8-479e-99b3-c4b3338dc329": {
+      "collection_id": "col_7ba12306-7ab",
+      "directory": "articles/20261102-browser-use-in-managed-deep-agents",
+      "slug": "browser-use-in-managed-deep-agents",
+      "title": "Browser Use in Managed Deep Agents",
+      "original_url": "https://www.langchain.com/blog/browser-use-in-managed-deep-agents",
+      "tags": [
+        "浏览器自动化",
+        "Managed Deep Agents",
+        "会话管理",
+        "人机协作",
+        "端到端测试",
+        "Stagehand",
+        "Playwright",
+        "WebVoyager"
+      ],
+      "collected_at": "2026-11-02T01:37:33.175Z",
+      "updated_at": "2026-11-02T01:37:33.175Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -388,6 +408,14 @@
       "article_ids": [
         "art_34f1594a-1064-414f-99aa-17fa7bec9b52"
       ]
+    },
+    "col_7ba12306-7ab": {
+      "path": "docs/agent-learning/batches/20261102-01.md",
+      "date_sequence": "20261102-01",
+      "created_at": "2026-11-02T01:37:33.175Z",
+      "article_ids": [
+        "art_40dc88e3-b3a8-479e-99b3-c4b3338dc329"
+      ]
     }
   },
   "delivered_batches": [
@@ -405,13 +433,14 @@
     "batch_22a8ceda-7c91-4eba-abde-8f087a9575fd",
     "batch_86d55003-bb41-4841-a5da-b287239df334",
     "batch_01ce9c93-d8c4-4c17-a51f-efd7ca8c84a5",
-    "batch_d93a14a0-4e15-4104-9344-259170bd608e"
+    "batch_d93a14a0-4e15-4104-9344-259170bd608e",
+    "batch_24d7e4ba-c4de-4e87-a9ad-cd142ed45207"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "d6c233b2d036c58c27e2d54c73b77b5a30dffb89b43656baefd5f73502e00473",
+      "sha256": "593f136b70a24780a48878a0fcbf4e5d7fced1ead68478b7d6e39d6e72cdb363",
       "media_type": "text/markdown",
-      "size": 11879
+      "size": 12492
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -1312,6 +1341,61 @@
       "sha256": "f32a653ab6c5565a7dc7d7960a14030c97c9c84485487205ff5840a0538ffa71",
       "media_type": "text/markdown",
       "size": 512
+    },
+    "docs/agent-learning/articles/20261102-browser-use-in-managed-deep-agents/README.md": {
+      "sha256": "fc58177185fb308584c58ff081d2fb543c15643f472eb717c8baa07fdf8061f6",
+      "media_type": "text/markdown",
+      "size": 494
+    },
+    "docs/agent-learning/articles/20261102-browser-use-in-managed-deep-agents/article.md": {
+      "sha256": "56802aa53041e1650b293b6474f87983501785db4b23f88a3f9ee44443e4a140",
+      "media_type": "text/markdown",
+      "size": 13298
+    },
+    "docs/agent-learning/articles/20261102-browser-use-in-managed-deep-agents/article-zh-CN.md": {
+      "sha256": "117565e02371c0fbb874d4fd6551b39444d979b71d76f69d5f90262998b2e319",
+      "media_type": "text/markdown",
+      "size": 14159
+    },
+    "docs/agent-learning/articles/20261102-browser-use-in-managed-deep-agents/research.md": {
+      "sha256": "f09db56f156085f900390dfd9d37811791889c68da75b89a1fc2a6dac897f2bc",
+      "media_type": "text/markdown",
+      "size": 16130
+    },
+    "docs/agent-learning/articles/20261102-browser-use-in-managed-deep-agents/assets/diagram-49fb7d68dae5.png": {
+      "sha256": "49fb7d68dae5d47b6281db37e787ed3ccb5dfaecf310417eb6228c982e39f496",
+      "media_type": "image/png",
+      "size": 446442
+    },
+    "docs/agent-learning/articles/20261102-browser-use-in-managed-deep-agents/assets/diagram-0217b5ba4d22.gif": {
+      "sha256": "0217b5ba4d22c29cff6069c78e7f24f92a23aba5e82901d75ea2b9713140a260",
+      "media_type": "image/gif",
+      "size": 359087
+    },
+    "docs/agent-learning/articles/20261102-browser-use-in-managed-deep-agents/assets/diagram-349ea4264e79.gif": {
+      "sha256": "349ea4264e7950403692a6bdfa1f322cf99e7e48022d5beb651c093854ec99b1",
+      "media_type": "image/gif",
+      "size": 223090
+    },
+    "docs/agent-learning/articles/20261102-browser-use-in-managed-deep-agents/assets/diagram-542d6cf9ad88.png": {
+      "sha256": "542d6cf9ad885dedc7c72787eebba8a20675d2021ae968372831fd08f3cd143a",
+      "media_type": "image/png",
+      "size": 122608
+    },
+    "docs/agent-learning/articles/20261102-browser-use-in-managed-deep-agents/assets/diagram-bf800ff308ad.png": {
+      "sha256": "bf800ff308ad1fbd41d2f0d10dbe423e6ebff1c02d1eaf331fbe08e81146fb1f",
+      "media_type": "image/png",
+      "size": 203699
+    },
+    "docs/agent-learning/articles/20261102-browser-use-in-managed-deep-agents/assets/browser-bridge.svg": {
+      "sha256": "0f785100aa357853ec9e2d8b9b1c3a95aafe8d073ba2b2deca471e1bfa36b487",
+      "media_type": "image/svg+xml",
+      "size": 4215
+    },
+    "docs/agent-learning/batches/20261102-01.md": {
+      "sha256": "19b2b990b864268b8f85bb6387ade026dbd239717aea58726fd3bccc805f20fd",
+      "media_type": "text/markdown",
+      "size": 419
     }
   }
 }
