@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="420" viewBox="0 0 1040 420" role="img" aria-labelledby="title desc">
+<title id="title">跨仓任务的顺序与恢复依据</title><desc id="desc">根合同摘要绑定 API 和 Web 两仓。实现先 API 后 Web，归档先 Web 后 API，根合同最后移动。恢复时重新检查各仓文件。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#455568"/></marker></defs>
+<rect width="1040" height="420" fill="#f7f9fc"/>
+<g font-family="sans-serif" fill="#172738">
+<text x="36" y="42" font-size="23" font-weight="bold">同一份根合同，独立的子仓证据</text>
+<rect x="36" y="65" width="968" height="63" rx="9" fill="#e3ebf5"/>
+<text x="57" y="92" font-size="18">根 spec.md：仓库职责、直接依赖、C-NN 接口合同</text>
+<text x="57" y="115" font-size="15">摘要排除 status；API 与 Web 的本地 Spec 均须绑定当前摘要</text>
+<text x="36" y="176" font-size="17">实现批次</text><text x="36" y="255" font-size="17">归档批次</text>
+<g fill="#fff" stroke="#8b9eb4"><rect x="185" y="146" width="212" height="50" rx="7"/><rect x="481" y="146" width="212" height="50" rx="7"/><rect x="185" y="225" width="212" height="50" rx="7"/><rect x="481" y="225" width="212" height="50" rx="7"/><rect x="778" y="225" width="226" height="50" rx="7"/></g>
+<text x="237" y="178" font-size="18">API 完整 Apply</text><text x="532" y="178" font-size="18">Web 完整 Apply</text>
+<text x="226" y="257" font-size="18">Web 完整 Archive</text><text x="521" y="257" font-size="18">API 完整 Archive</text><text x="803" y="257" font-size="18">最后移动根 Spec</text>
+<g stroke="#455568" stroke-width="2" marker-end="url(#a)"><path d="M403 171H472"/><path d="M403 250H472"/><path d="M700 250H768"/></g>
+<rect x="36" y="306" width="968" height="86" rx="9" fill="#e7f1ec"/>
+<text x="57" y="335" font-size="18">中断恢复：重新读取本地工件 → 校验身份、合同摘要与完成证据</text>
+<text x="57" y="361" font-size="16">已归档仓库校验后跳过；失败仓库保留现场；根目录不会先行归档。</text>
+<text x="57" y="382" font-size="14">箭头表示协议规定的阶段顺序，不表示跨仓事务或自动回滚。</text>
+</g></svg>

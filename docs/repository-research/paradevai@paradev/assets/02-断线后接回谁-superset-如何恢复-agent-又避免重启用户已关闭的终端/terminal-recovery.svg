@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="560" viewBox="0 0 1080 560" role="img" aria-labelledby="title desc">
+<title id="title">断线后的三种处理结果</title><desc id="desc">用户关闭意图优先；没有关闭意图时先接回活进程，确认丢失后才恢复会话。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#536475"/></marker></defs>
+<rect width="1080" height="560" fill="#f7f8fa"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#243449">
+<text x="44" y="48" font-size="25" font-weight="600">同一个旧终端，三种不同结果</text>
+<text x="44" y="78" font-size="15">依据：连接入口、终端生命周期判定、Agent 恢复与关闭路径</text>
+<rect x="44" y="120" width="230" height="82" rx="10" fill="#e7edf6" stroke="#b8c8dd"/>
+<text x="64" y="153" font-size="18">界面重新连接旧终端</text><text x="64" y="180" font-size="15">读取数据库中的状态与意图</text>
+<rect x="365" y="120" width="300" height="82" rx="10" fill="#fff0e7" stroke="#d9a17d"/>
+<text x="385" y="153" font-size="18">已有关闭意图</text><text x="385" y="180" font-size="15">disposeRequestedAt 或 disposed</text>
+<rect x="760" y="120" width="275" height="82" rx="10" fill="#fff0e7" stroke="#d9a17d"/>
+<text x="780" y="153" font-size="18">拒绝连接：session-gone</text><text x="780" y="180" font-size="15">终止失败则由后台清理器重试</text>
+<rect x="365" y="260" width="300" height="82" rx="10" fill="#e6f2eb" stroke="#91b7a0"/>
+<text x="385" y="293" font-size="18">可恢复的 active 记录</text><text x="385" y="320" font-size="15">先询问守护进程是否仍拥有 PTY</text>
+<rect x="760" y="260" width="275" height="82" rx="10" fill="#e6f2eb" stroke="#91b7a0"/>
+<text x="780" y="293" font-size="18">仍活着：接回原进程</text><text x="780" y="320" font-size="15">保留原 shell 与终端缓冲</text>
+<rect x="365" y="410" width="300" height="100" rx="10" fill="#e9eafa" stroke="#aaaed4"/>
+<text x="385" y="443" font-size="18">确认 PTY 已丢失</text><text x="385" y="470" font-size="15">标记 Agent 绑定 terminal-exited</text><text x="385" y="494" font-size="15">旧终端可先补一个新 shell</text>
+<rect x="760" y="410" width="275" height="100" rx="10" fill="#e9eafa" stroke="#aaaed4"/>
+<text x="780" y="443" font-size="18">有候选且配置支持恢复</text><text x="780" y="470" font-size="15">领取候选 → 新终端启动 Agent</text><text x="780" y="494" font-size="15">记录后继终端，界面跟随</text>
+<g stroke="#536475" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M274 160H355"/><path d="M665 160H750"/><path d="M274 182H310V301H355"/><path d="M665 301H750"/><path d="M515 342V400"/><path d="M665 460H750"/></g>
+<text x="283" y="145" font-size="13">优先检查</text><text x="300" y="242" font-size="13">无关闭意图</text><text x="527" y="378" font-size="14">列表确认缺失</text>
+<text x="44" y="545" font-size="14" fill="#596b7d">守护进程不可达时，连接入口返回错误供重试；不可达本身不触发这里的“确认丢失”分支。</text>
+</g></svg>

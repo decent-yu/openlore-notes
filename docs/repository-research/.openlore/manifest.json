@@ -1167,6 +1167,34 @@
       "reading_path": "paradevai@paradev/01-从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面.md",
       "article_path": "paradevai@paradev/articles/01-从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面.md",
       "research_path": "paradevai@paradev/01-从一次工作区创建看-superset-如何隔离代码-启动-agent-并把结果送回界面.md"
+    },
+    "art_e59ba9bb-f389-441b-943f-159032141b4e": {
+      "collection_id": "col_7a0a976f-391",
+      "directory": "didi@helixharness/02-helixharness-怎样让跨仓任务按顺序执行-并在中断后核对进度",
+      "slug": "helixharness-怎样让跨仓任务按顺序执行-并在中断后核对进度",
+      "title": "HelixHarness 怎样让跨仓任务按顺序执行，并在中断后核对进度",
+      "original_url": "https://github.com/didi/helixharness",
+      "tags": [],
+      "collected_at": "2026-11-02T01:37:56.494Z",
+      "updated_at": "2026-11-02T01:37:56.494Z",
+      "has_research": true,
+      "reading_path": "didi@helixharness/02-helixharness-怎样让跨仓任务按顺序执行-并在中断后核对进度.md",
+      "article_path": "didi@helixharness/articles/02-helixharness-怎样让跨仓任务按顺序执行-并在中断后核对进度.md",
+      "research_path": "didi@helixharness/02-helixharness-怎样让跨仓任务按顺序执行-并在中断后核对进度.md"
+    },
+    "art_eb896c3b-88be-4210-95c9-f8521465e6bf": {
+      "collection_id": "col_7a0a976f-391",
+      "directory": "paradevai@paradev/02-断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端",
+      "slug": "断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端",
+      "title": "断线后接回谁：Superset 如何恢复 Agent，又避免重启用户已关闭的终端",
+      "original_url": "https://github.com/ParadevAI/Paradev",
+      "tags": [],
+      "collected_at": "2026-11-02T01:37:56.494Z",
+      "updated_at": "2026-11-02T01:37:56.494Z",
+      "has_research": true,
+      "reading_path": "paradevai@paradev/02-断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端.md",
+      "article_path": "paradevai@paradev/articles/02-断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端.md",
+      "research_path": "paradevai@paradev/02-断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端.md"
     }
   },
   "collection_locations": {
@@ -1326,6 +1354,15 @@
         "art_dc6ea0ba-8950-464e-9633-5cbcd094dfe9",
         "art_6cff3578-b149-4b14-8bab-058d8c1a43c4"
       ]
+    },
+    "col_7a0a976f-391": {
+      "path": "docs/repository-research/batches/20261102-01.md",
+      "date_sequence": "20261102-01",
+      "created_at": "2026-11-02T01:37:56.494Z",
+      "article_ids": [
+        "art_e59ba9bb-f389-441b-943f-159032141b4e",
+        "art_eb896c3b-88be-4210-95c9-f8521465e6bf"
+      ]
     }
   },
   "delivered_batches": [
@@ -1341,7 +1378,8 @@
     "batch_f74c1acd-225a-4f69-a1f0-bcbfd58b0f05",
     "batch_7e474e44-216f-4bd5-8d51-acca89e20926",
     "batch_ce6da51d-a279-40d1-a7ea-f2f4c69be528",
-    "batch_dc6aede8-b487-4c7a-a727-73f149d0d1ad"
+    "batch_dc6aede8-b487-4c7a-a727-73f149d0d1ad",
+    "batch_953d3650-0958-465b-ab87-d91dab8ff945"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -1365,9 +1403,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "3d8b0f6326623e38ec252a553bf829b34782964dea27bfe88a39d68145550ecf",
+      "sha256": "d4514b547bc7268da976b98e8de6bb67b1903ad1c791220d70b2e334cc450e0f",
       "media_type": "text/markdown",
-      "size": 94185
+      "size": 96646
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -2205,19 +2243,54 @@
       "size": 3101
     },
     "docs/repository-research/didi@helixharness/README.md": {
-      "sha256": "9bf3e22a3d170d495a743e54346e9e788e97d7da7d82b2c3f1b9abf16d12a9ed",
+      "sha256": "a8f725c3140775a8ea46ddd5171b728671f32b933365edda8d42d3c921b6f6bd",
       "media_type": "text/markdown",
-      "size": 333
+      "size": 628
     },
     "docs/repository-research/paradevai@paradev/README.md": {
-      "sha256": "6e0ef96c84a5f70e5ca2975825d8c1c9b14a334a646b63775ef9e8788042b2bf",
+      "sha256": "a21c5b89c4f6324acb91d9d0f9449dc8f370b77c94c01b71a53e07258b1245e7",
       "media_type": "text/markdown",
-      "size": 387
+      "size": 714
     },
     "docs/repository-research/batches/20261101-01.md": {
       "sha256": "6bb0a7fc67fde8bcc22e82528b01d95c790f98626601ebf514e83d6af306b9d8",
       "media_type": "text/markdown",
       "size": 1371
+    },
+    "docs/repository-research/didi@helixharness/02-helixharness-怎样让跨仓任务按顺序执行-并在中断后核对进度.md": {
+      "sha256": "dda097de49e647ebbcbecfcf8aa5cc763100f2d764de2583bc651c34f3990d28",
+      "media_type": "text/markdown",
+      "size": 21108
+    },
+    "docs/repository-research/didi@helixharness/articles/02-helixharness-怎样让跨仓任务按顺序执行-并在中断后核对进度.md": {
+      "sha256": "209e652cb43323b16669d8c28fe53e1aec854734317756974509128016f284d0",
+      "media_type": "text/markdown",
+      "size": 66125
+    },
+    "docs/repository-research/didi@helixharness/assets/02-helixharness-怎样让跨仓任务按顺序执行-并在中断后核对进度/workspace-recovery.svg": {
+      "sha256": "769fe78753c443e89eeb6378cea6311aeca30362646a5202e215da114de97a7f",
+      "media_type": "image/svg+xml",
+      "size": 2327
+    },
+    "docs/repository-research/paradevai@paradev/02-断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端.md": {
+      "sha256": "cb0cdf5b4a6ac342a4210924a487156bb37995d9b559ac1e06661b4c9057892a",
+      "media_type": "text/markdown",
+      "size": 21663
+    },
+    "docs/repository-research/paradevai@paradev/articles/02-断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端.md": {
+      "sha256": "35ae514423565fd533171ffde301bb3be68ad2f52ac7b64e4807f98ead82b2ff",
+      "media_type": "text/markdown",
+      "size": 63763
+    },
+    "docs/repository-research/paradevai@paradev/assets/02-断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端/terminal-recovery.svg": {
+      "sha256": "88d607d6beeb646f94000a11a11338851e1f07987990962a67d385f7cc9ea7f2",
+      "media_type": "image/svg+xml",
+      "size": 3256
+    },
+    "docs/repository-research/batches/20261102-01.md": {
+      "sha256": "5cbe4bbc7090ca66d0f6024c246497196debcf5a32248fd7326e6ce1327ff7a9",
+      "media_type": "text/markdown",
+      "size": 1321
     }
   }
 }

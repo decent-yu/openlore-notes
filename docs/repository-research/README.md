@@ -2,12 +2,14 @@
 
 
 
-## 最近收录（73 篇）
+## 最近收录（75 篇）
 
 按首次收录时间从新到旧排列；更新旧文章不改变收录日期和目录。
 
 | 收录日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261102 | [HelixHarness 怎样让跨仓任务按顺序执行，并在中断后核对进度](didi%40helixharness/02-helixharness-%E6%80%8E%E6%A0%B7%E8%AE%A9%E8%B7%A8%E4%BB%93%E4%BB%BB%E5%8A%A1%E6%8C%89%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C-%E5%B9%B6%E5%9C%A8%E4%B8%AD%E6%96%AD%E5%90%8E%E6%A0%B8%E5%AF%B9%E8%BF%9B%E5%BA%A6.md) | — | [调研](didi%40helixharness/02-helixharness-%E6%80%8E%E6%A0%B7%E8%AE%A9%E8%B7%A8%E4%BB%93%E4%BB%BB%E5%8A%A1%E6%8C%89%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C-%E5%B9%B6%E5%9C%A8%E4%B8%AD%E6%96%AD%E5%90%8E%E6%A0%B8%E5%AF%B9%E8%BF%9B%E5%BA%A6.md) |
+| 20261102 | [断线后接回谁：Superset 如何恢复 Agent，又避免重启用户已关闭的终端](paradevai%40paradev/02-%E6%96%AD%E7%BA%BF%E5%90%8E%E6%8E%A5%E5%9B%9E%E8%B0%81-superset-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D-agent-%E5%8F%88%E9%81%BF%E5%85%8D%E9%87%8D%E5%90%AF%E7%94%A8%E6%88%B7%E5%B7%B2%E5%85%B3%E9%97%AD%E7%9A%84%E7%BB%88%E7%AB%AF.md) | — | [调研](paradevai%40paradev/02-%E6%96%AD%E7%BA%BF%E5%90%8E%E6%8E%A5%E5%9B%9E%E8%B0%81-superset-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D-agent-%E5%8F%88%E9%81%BF%E5%85%8D%E9%87%8D%E5%90%AF%E7%94%A8%E6%88%B7%E5%B7%B2%E5%85%B3%E9%97%AD%E7%9A%84%E7%BB%88%E7%AB%AF.md) |
 | 20261101 | [HelixHarness 怎样把一项需求变成可核对、可续跑、可复用的归档](didi%40helixharness/01-helixharness-%E6%80%8E%E6%A0%B7%E6%8A%8A%E4%B8%80%E9%A1%B9%E9%9C%80%E6%B1%82%E5%8F%98%E6%88%90%E5%8F%AF%E6%A0%B8%E5%AF%B9-%E5%8F%AF%E7%BB%AD%E8%B7%91-%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%BD%92%E6%A1%A3.md) | — | [调研](didi%40helixharness/01-helixharness-%E6%80%8E%E6%A0%B7%E6%8A%8A%E4%B8%80%E9%A1%B9%E9%9C%80%E6%B1%82%E5%8F%98%E6%88%90%E5%8F%AF%E6%A0%B8%E5%AF%B9-%E5%8F%AF%E7%BB%AD%E8%B7%91-%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%BD%92%E6%A1%A3.md) |
 | 20261101 | [从一次工作区创建看 Superset：如何隔离代码、启动 Agent 并把结果送回界面](paradevai%40paradev/01-%E4%BB%8E%E4%B8%80%E6%AC%A1%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%88%9B%E5%BB%BA%E7%9C%8B-superset-%E5%A6%82%E4%BD%95%E9%9A%94%E7%A6%BB%E4%BB%A3%E7%A0%81-%E5%90%AF%E5%8A%A8-agent-%E5%B9%B6%E6%8A%8A%E7%BB%93%E6%9E%9C%E9%80%81%E5%9B%9E%E7%95%8C%E9%9D%A2.md) | — | [调研](paradevai%40paradev/01-%E4%BB%8E%E4%B8%80%E6%AC%A1%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%88%9B%E5%BB%BA%E7%9C%8B-superset-%E5%A6%82%E4%BD%95%E9%9A%94%E7%A6%BB%E4%BB%A3%E7%A0%81-%E5%90%AF%E5%8A%A8-agent-%E5%B9%B6%E6%8A%8A%E7%BB%93%E6%9E%9C%E9%80%81%E5%9B%9E%E7%95%8C%E9%9D%A2.md) |
 | 20261030 | [ai-memory 删掉会话后还留下什么：派生内容、重放阻断与文件残留](akitaonrails%40ai-memory/14-ai-memory-%E5%88%A0%E6%8E%89%E4%BC%9A%E8%AF%9D%E5%90%8E%E8%BF%98%E7%95%99%E4%B8%8B%E4%BB%80%E4%B9%88-%E6%B4%BE%E7%94%9F%E5%86%85%E5%AE%B9-%E9%87%8D%E6%94%BE%E9%98%BB%E6%96%AD%E4%B8%8E%E6%96%87%E4%BB%B6%E6%AE%8B%E7%95%99.md) | — | [调研](akitaonrails%40ai-memory/14-ai-memory-%E5%88%A0%E6%8E%89%E4%BC%9A%E8%AF%9D%E5%90%8E%E8%BF%98%E7%95%99%E4%B8%8B%E4%BB%80%E4%B9%88-%E6%B4%BE%E7%94%9F%E5%86%85%E5%AE%B9-%E9%87%8D%E6%94%BE%E9%98%BB%E6%96%AD%E4%B8%8E%E6%96%87%E4%BB%B6%E6%AE%8B%E7%95%99.md) |
@@ -86,6 +88,8 @@
 
 | 更新日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261102 | [HelixHarness 怎样让跨仓任务按顺序执行，并在中断后核对进度](didi%40helixharness/02-helixharness-%E6%80%8E%E6%A0%B7%E8%AE%A9%E8%B7%A8%E4%BB%93%E4%BB%BB%E5%8A%A1%E6%8C%89%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C-%E5%B9%B6%E5%9C%A8%E4%B8%AD%E6%96%AD%E5%90%8E%E6%A0%B8%E5%AF%B9%E8%BF%9B%E5%BA%A6.md) | — | [调研](didi%40helixharness/02-helixharness-%E6%80%8E%E6%A0%B7%E8%AE%A9%E8%B7%A8%E4%BB%93%E4%BB%BB%E5%8A%A1%E6%8C%89%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C-%E5%B9%B6%E5%9C%A8%E4%B8%AD%E6%96%AD%E5%90%8E%E6%A0%B8%E5%AF%B9%E8%BF%9B%E5%BA%A6.md) |
+| 20261102 | [断线后接回谁：Superset 如何恢复 Agent，又避免重启用户已关闭的终端](paradevai%40paradev/02-%E6%96%AD%E7%BA%BF%E5%90%8E%E6%8E%A5%E5%9B%9E%E8%B0%81-superset-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D-agent-%E5%8F%88%E9%81%BF%E5%85%8D%E9%87%8D%E5%90%AF%E7%94%A8%E6%88%B7%E5%B7%B2%E5%85%B3%E9%97%AD%E7%9A%84%E7%BB%88%E7%AB%AF.md) | — | [调研](paradevai%40paradev/02-%E6%96%AD%E7%BA%BF%E5%90%8E%E6%8E%A5%E5%9B%9E%E8%B0%81-superset-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D-agent-%E5%8F%88%E9%81%BF%E5%85%8D%E9%87%8D%E5%90%AF%E7%94%A8%E6%88%B7%E5%B7%B2%E5%85%B3%E9%97%AD%E7%9A%84%E7%BB%88%E7%AB%AF.md) |
 | 20261101 | [HelixHarness 怎样把一项需求变成可核对、可续跑、可复用的归档](didi%40helixharness/01-helixharness-%E6%80%8E%E6%A0%B7%E6%8A%8A%E4%B8%80%E9%A1%B9%E9%9C%80%E6%B1%82%E5%8F%98%E6%88%90%E5%8F%AF%E6%A0%B8%E5%AF%B9-%E5%8F%AF%E7%BB%AD%E8%B7%91-%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%BD%92%E6%A1%A3.md) | — | [调研](didi%40helixharness/01-helixharness-%E6%80%8E%E6%A0%B7%E6%8A%8A%E4%B8%80%E9%A1%B9%E9%9C%80%E6%B1%82%E5%8F%98%E6%88%90%E5%8F%AF%E6%A0%B8%E5%AF%B9-%E5%8F%AF%E7%BB%AD%E8%B7%91-%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%BD%92%E6%A1%A3.md) |
 | 20261101 | [从一次工作区创建看 Superset：如何隔离代码、启动 Agent 并把结果送回界面](paradevai%40paradev/01-%E4%BB%8E%E4%B8%80%E6%AC%A1%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%88%9B%E5%BB%BA%E7%9C%8B-superset-%E5%A6%82%E4%BD%95%E9%9A%94%E7%A6%BB%E4%BB%A3%E7%A0%81-%E5%90%AF%E5%8A%A8-agent-%E5%B9%B6%E6%8A%8A%E7%BB%93%E6%9E%9C%E9%80%81%E5%9B%9E%E7%95%8C%E9%9D%A2.md) | — | [调研](paradevai%40paradev/01-%E4%BB%8E%E4%B8%80%E6%AC%A1%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%88%9B%E5%BB%BA%E7%9C%8B-superset-%E5%A6%82%E4%BD%95%E9%9A%94%E7%A6%BB%E4%BB%A3%E7%A0%81-%E5%90%AF%E5%8A%A8-agent-%E5%B9%B6%E6%8A%8A%E7%BB%93%E6%9E%9C%E9%80%81%E5%9B%9E%E7%95%8C%E9%9D%A2.md) |
 | 20261030 | [ai-memory 删掉会话后还留下什么：派生内容、重放阻断与文件残留](akitaonrails%40ai-memory/14-ai-memory-%E5%88%A0%E6%8E%89%E4%BC%9A%E8%AF%9D%E5%90%8E%E8%BF%98%E7%95%99%E4%B8%8B%E4%BB%80%E4%B9%88-%E6%B4%BE%E7%94%9F%E5%86%85%E5%AE%B9-%E9%87%8D%E6%94%BE%E9%98%BB%E6%96%AD%E4%B8%8E%E6%96%87%E4%BB%B6%E6%AE%8B%E7%95%99.md) | — | [调研](akitaonrails%40ai-memory/14-ai-memory-%E5%88%A0%E6%8E%89%E4%BC%9A%E8%AF%9D%E5%90%8E%E8%BF%98%E7%95%99%E4%B8%8B%E4%BB%80%E4%B9%88-%E6%B4%BE%E7%94%9F%E5%86%85%E5%AE%B9-%E9%87%8D%E6%94%BE%E9%98%BB%E6%96%AD%E4%B8%8E%E6%96%87%E4%BB%B6%E6%AE%8B%E7%95%99.md) |
@@ -162,6 +166,7 @@
 
 ## 采集批次
 
+- [20261102-01](batches/20261102-01.md)（2 篇）
 - [20261101-01](batches/20261101-01.md)（2 篇）
 - [20261030-01](batches/20261030-01.md)（5 篇）
 - [20261029-01](batches/20261029-01.md)（5 篇）
