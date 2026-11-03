@@ -320,6 +320,43 @@
       "collected_at": "2026-11-02T01:37:33.175Z",
       "updated_at": "2026-11-02T01:37:33.175Z",
       "has_research": true
+    },
+    "art_4ac182d1-797e-4e62-be84-11691ad759cd": {
+      "collection_id": "col_77ed6228-2e6",
+      "directory": "articles/20261103-new-context-engineering-challenges-in-late-2026",
+      "slug": "new-context-engineering-challenges-in-late-2026",
+      "title": "New context engineering challenges in late 2026",
+      "original_url": "https://www.langchain.com/blog/context-engineering-challenges-late-2026",
+      "tags": [
+        "上下文工程",
+        "主动式智能体",
+        "智能体记忆",
+        "异步工具调用",
+        "长期目标追踪",
+        "目标对齐",
+        "浏览器自动化"
+      ],
+      "collected_at": "2026-11-03T00:09:38.790Z",
+      "updated_at": "2026-11-03T00:09:38.790Z",
+      "has_research": true
+    },
+    "art_e073af39-014b-403a-b9a7-20f19fb51f1a": {
+      "collection_id": "col_77ed6228-2e6",
+      "directory": "articles/20261103-dbreunig-nesformer",
+      "slug": "dbreunig-nesformer",
+      "title": "dbreunig/nesformer",
+      "original_url": "https://simonwillison.net/2026/Oct/30/nesformer",
+      "tags": [
+        "6502",
+        "NES",
+        "CPU仿真",
+        "Qwen3.5-4B",
+        "模型权重",
+        "一致性测试"
+      ],
+      "collected_at": "2026-11-03T00:09:38.790Z",
+      "updated_at": "2026-11-03T00:09:38.790Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -416,6 +453,15 @@
       "article_ids": [
         "art_40dc88e3-b3a8-479e-99b3-c4b3338dc329"
       ]
+    },
+    "col_77ed6228-2e6": {
+      "path": "docs/agent-learning/batches/20261103-01.md",
+      "date_sequence": "20261103-01",
+      "created_at": "2026-11-03T00:09:38.790Z",
+      "article_ids": [
+        "art_4ac182d1-797e-4e62-be84-11691ad759cd",
+        "art_e073af39-014b-403a-b9a7-20f19fb51f1a"
+      ]
     }
   },
   "delivered_batches": [
@@ -434,13 +480,14 @@
     "batch_86d55003-bb41-4841-a5da-b287239df334",
     "batch_01ce9c93-d8c4-4c17-a51f-efd7ca8c84a5",
     "batch_d93a14a0-4e15-4104-9344-259170bd608e",
-    "batch_24d7e4ba-c4de-4e87-a9ad-cd142ed45207"
+    "batch_24d7e4ba-c4de-4e87-a9ad-cd142ed45207",
+    "batch_028990fd-b763-40e9-972e-0e2a078cdba2"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "593f136b70a24780a48878a0fcbf4e5d7fced1ead68478b7d6e39d6e72cdb363",
+      "sha256": "3a4a6f42da3ad590710895b10e9ce9ea6aba57342539288c36a306cb9a513d93",
       "media_type": "text/markdown",
-      "size": 12492
+      "size": 13643
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -1396,6 +1443,76 @@
       "sha256": "19b2b990b864268b8f85bb6387ade026dbd239717aea58726fd3bccc805f20fd",
       "media_type": "text/markdown",
       "size": 419
+    },
+    "docs/agent-learning/articles/20261103-new-context-engineering-challenges-in-late-2026/README.md": {
+      "sha256": "b991333ff70dc0abfe243589808e00b09437c9136ce4310e92673494412e13c1",
+      "media_type": "text/markdown",
+      "size": 519
+    },
+    "docs/agent-learning/articles/20261103-new-context-engineering-challenges-in-late-2026/article.md": {
+      "sha256": "167fe9bacfcbf134d8e0bef29cc9fa95f79310dd9fbabaa14286470403b56606",
+      "media_type": "text/markdown",
+      "size": 8814
+    },
+    "docs/agent-learning/articles/20261103-new-context-engineering-challenges-in-late-2026/article-zh-CN.md": {
+      "sha256": "6d53dbd64db5506d40cd32250239e958978d68ac0a4df4b97d7008f1eddcddc0",
+      "media_type": "text/markdown",
+      "size": 8844
+    },
+    "docs/agent-learning/articles/20261103-new-context-engineering-challenges-in-late-2026/research.md": {
+      "sha256": "5bfb95393913336ec85b7be1318b3a300827d188b5e67fb0c801db651ed1ed92",
+      "media_type": "text/markdown",
+      "size": 14680
+    },
+    "docs/agent-learning/articles/20261103-new-context-engineering-challenges-in-late-2026/assets/diagram-3a35b4346253.jpg": {
+      "sha256": "3a35b4346253406b338a5972012cfa95142d94547d931dd58b28f46835d2788d",
+      "media_type": "image/jpeg",
+      "size": 139088
+    },
+    "docs/agent-learning/articles/20261103-new-context-engineering-challenges-in-late-2026/assets/diagram-86e3e64e37ea.png": {
+      "sha256": "86e3e64e37ea5c32e0bece5daa6ed8da87d3fb89ceb99fb2a34be1ecc84fb441",
+      "media_type": "image/png",
+      "size": 68976
+    },
+    "docs/agent-learning/articles/20261103-new-context-engineering-challenges-in-late-2026/assets/diagram-fd48d0410eea.png": {
+      "sha256": "fd48d0410eeabd669e5e1010e2dfe5d2c227c4b1d1af9e1ad99ff3ff643ee332",
+      "media_type": "image/png",
+      "size": 82290
+    },
+    "docs/agent-learning/articles/20261103-new-context-engineering-challenges-in-late-2026/assets/async-result.svg": {
+      "sha256": "29f8a527ffb508c5c73e7fa47834e38d199da3b7a412d1407feca3892532f51e",
+      "media_type": "image/svg+xml",
+      "size": 3709
+    },
+    "docs/agent-learning/articles/20261103-dbreunig-nesformer/README.md": {
+      "sha256": "558ce81446c2a15fd9dd4f0099ee79f8ec5b944e969c4540cb2266c22e2715c7",
+      "media_type": "text/markdown",
+      "size": 402
+    },
+    "docs/agent-learning/articles/20261103-dbreunig-nesformer/article.md": {
+      "sha256": "86dced575ee66d62aa377597660b3a9ecb17860417be4187676480e80b8ae075",
+      "media_type": "text/markdown",
+      "size": 3180
+    },
+    "docs/agent-learning/articles/20261103-dbreunig-nesformer/article-zh-CN.md": {
+      "sha256": "daa3efcb61279d74e17f3b6c791e1a41890cff3b3907b2e7c5a45c536e63cf60",
+      "media_type": "text/markdown",
+      "size": 3294
+    },
+    "docs/agent-learning/articles/20261103-dbreunig-nesformer/research.md": {
+      "sha256": "2eaf4fbc2e946ed7575581666a386b349bedb5042f334f7c7e77b4b66752c605",
+      "media_type": "text/markdown",
+      "size": 16323
+    },
+    "docs/agent-learning/articles/20261103-dbreunig-nesformer/assets/model-host.svg": {
+      "sha256": "d685f8ff17938d8dca4fe28a6562958a753734d88410a9e4cd7df23740ed4873",
+      "media_type": "image/svg+xml",
+      "size": 4320
+    },
+    "docs/agent-learning/batches/20261103-01.md": {
+      "sha256": "67454b7a7f6ab21192325da177665d65a895d92af87a1f37de78b5b06535b18a",
+      "media_type": "text/markdown",
+      "size": 686
     }
   }
 }

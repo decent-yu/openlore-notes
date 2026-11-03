@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+<title id="title">后台任务完成后，何时交付结果？</title>
+<desc id="desc">从左向右阅读。后台任务完成后按主代理状态交付：忙碌时在后续模型调用前交付，空闲时启动新运行，等待审批时保留审批并等待用户回答。实线表示执行，虚线表示结果通知。</desc>
+<defs>
+<linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#f1f5f9"/></linearGradient>
+<filter id="shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.04"/></filter>
+<marker id="arrow" refX="8" refY="4" markerWidth="9" markerHeight="8" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#6d28d9"/></marker>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<g font-family="Inter, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+<text x="800" y="105" text-anchor="middle" font-size="36" font-weight="800" fill="#0f172a">后台任务完成后，何时交付结果？</text>
+<text x="800" y="150" text-anchor="middle" font-size="20" fill="#64748b">从左向右读 · 实线：任务执行 · 虚线：按状态交付结果</text>
+<rect x="80" y="230" width="1440" height="540" rx="20" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="120" y="425" width="270" height="150" rx="16" fill="#f5f3ff" stroke="#c4b5fd"/>
+<text x="150" y="480" font-size="26" font-weight="700" fill="#0f172a">子代理在后台工作</text>
+<text x="150" y="525" font-size="21" fill="#475569">主代理可继续响应用户</text>
+<line x1="390" y1="500" x2="486" y2="500" stroke="#6d28d9" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="490" y="425" width="240" height="150" rx="16" fill="#f5f3ff" stroke="#c4b5fd"/>
+<text x="520" y="480" font-size="26" font-weight="700" fill="#0f172a">后台任务完成</text>
+<text x="520" y="525" font-size="21" fill="#475569">检查主代理当前状态</text>
+<path d="M730 500H790V330H866" fill="none" stroke="#6d28d9" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrow)"/>
+<line x1="730" y1="500" x2="866" y2="500" stroke="#6d28d9" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrow)"/>
+<path d="M730 500H790V670H866" fill="none" stroke="#6d28d9" stroke-width="2.5" stroke-dasharray="6,6" marker-end="url(#arrow)"/>
+<rect x="870" y="270" width="600" height="120" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+<text x="900" y="315" font-size="25" font-weight="700" fill="#1d4ed8">正在执行</text>
+<text x="900" y="355" font-size="23" fill="#475569">在后续模型调用前接收结果</text>
+<rect x="870" y="440" width="600" height="120" rx="12" fill="#f0fdf4" stroke="#86efac"/>
+<text x="900" y="485" font-size="25" font-weight="700" fill="#166534">当前空闲</text>
+<text x="900" y="525" font-size="23" fill="#475569">由完成结果触发新一轮运行</text>
+<rect x="870" y="610" width="600" height="120" rx="12" fill="#fff7ed" stroke="#fdba74"/>
+<text x="900" y="655" font-size="25" font-weight="700" fill="#ea580c">等待人工审批</text>
+<text x="900" y="695" font-size="23" fill="#475569">保留审批；用户回应后再交付结果</text>
+<text x="800" y="830" text-anchor="middle" font-size="19" fill="#64748b">依据 Managed Deep Agents v0.10 官方发布说明；这是通知规则，不代表结果已获执行授权。</text>
+</g>
+</svg>
