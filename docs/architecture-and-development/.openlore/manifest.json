@@ -362,6 +362,44 @@
       "collected_at": "2026-11-02T01:37:21.102Z",
       "updated_at": "2026-11-02T01:37:21.102Z",
       "has_research": true
+    },
+    "art_a61f1670-d828-47b7-afea-a4c94267aacc": {
+      "collection_id": "col_0f32da0c-e4b",
+      "directory": "articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85",
+      "slug": "how-we-halved-dns-build-delay-and-cut-memory-use-by-85",
+      "title": "How we halved DNS build delay and cut memory use by 85%",
+      "original_url": "https://blog.cloudflare.com/dns-targeted-zone-builds",
+      "tags": [
+        "DNS",
+        "增量构建",
+        "Kafka",
+        "分布式系统",
+        "任务调度",
+        "一致性测试",
+        "Quicksilver"
+      ],
+      "collected_at": "2026-11-04T02:15:39.511Z",
+      "updated_at": "2026-11-04T02:15:39.511Z",
+      "has_research": true
+    },
+    "art_b5ae00cf-832c-4fb9-8ffa-67e0822c81e5": {
+      "collection_id": "col_0f32da0c-e4b",
+      "directory": "articles/20261104-release-llm-0-37",
+      "slug": "release-llm-0-37",
+      "title": "Release: llm 0.37",
+      "original_url": "https://simonwillison.net/2026/Nov/2/llm",
+      "tags": [
+        "LLM",
+        "命令行工具",
+        "Python",
+        "OpenAI-compatible API",
+        "多模态嵌入",
+        "AI 辅助代码审查",
+        "开源维护"
+      ],
+      "collected_at": "2026-11-04T02:15:39.511Z",
+      "updated_at": "2026-11-04T02:15:39.511Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -460,6 +498,15 @@
       "article_ids": [
         "art_530b9943-40e6-4690-964b-e88b63f45d4a"
       ]
+    },
+    "col_0f32da0c-e4b": {
+      "path": "docs/architecture-and-development/batches/20261104-01.md",
+      "date_sequence": "20261104-01",
+      "created_at": "2026-11-04T02:15:39.511Z",
+      "article_ids": [
+        "art_a61f1670-d828-47b7-afea-a4c94267aacc",
+        "art_b5ae00cf-832c-4fb9-8ffa-67e0822c81e5"
+      ]
     }
   },
   "delivered_batches": [
@@ -477,13 +524,14 @@
     "batch_c101038a-11a2-4b20-832c-db3db040a7b7",
     "batch_bbb107d9-141f-46ad-9727-2d6495ac4c89",
     "batch_91e40289-e08d-4f8c-a06b-591e74620358",
-    "batch_1224f26d-911d-49f1-94d4-55d3e59648a3"
+    "batch_1224f26d-911d-49f1-94d4-55d3e59648a3",
+    "batch_50206bb2-a3f2-4166-9f4b-e45699dc7117"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "1dc49bbffcc598d2d55501d4bf034c7de08dc8e6b9ac2c83fe093383e9b1607f",
+      "sha256": "75948f829bf54375056a9ca24cb003e75ff279cfb8f0f15dbeed72679e69ffa7",
       "media_type": "text/markdown",
-      "size": 15496
+      "size": 16691
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
       "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
@@ -1339,6 +1387,126 @@
       "sha256": "f281d07663ba98b566e9ef6d7675b9659172136c3865e8179ff880598a0e8436",
       "media_type": "text/markdown",
       "size": 552
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/README.md": {
+      "sha256": "f4a8393934a593507ee5afcb55e697191fe8a92d04b63f1f654bc9567cc27af9",
+      "media_type": "text/markdown",
+      "size": 467
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/article.md": {
+      "sha256": "b56be9154ade2df14e3ed6fd70ee1c2ce21279bcb7b8b8bb9f09b4564ba934e4",
+      "media_type": "text/markdown",
+      "size": 24862
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/article-zh-CN.md": {
+      "sha256": "509fcf2d2261ec794afa617ed8601d74519c5a59856cb3fb4fc5a7a1d154a449",
+      "media_type": "text/markdown",
+      "size": 24634
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/research.md": {
+      "sha256": "dde3eaf2e562a57916d6c8866936bd123046c3db06615e57cad722da7c8679db",
+      "media_type": "text/markdown",
+      "size": 23457
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-d72f2393f7bb.webp": {
+      "sha256": "d72f2393f7bb3b90500adb4794cf976878721f1bd273d330344d71dba44750e1",
+      "media_type": "image/webp",
+      "size": 34998
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-3ecfe9c06a74.webp": {
+      "sha256": "3ecfe9c06a7409ade40601000dfd4a8d45eb15b45ebb51e3980c336f15e70712",
+      "media_type": "image/webp",
+      "size": 19002
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-1ff16ff2fd18.webp": {
+      "sha256": "1ff16ff2fd185837f267dce134f3be2a054db925d88eaea12809de7101de92cf",
+      "media_type": "image/webp",
+      "size": 11632
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-e0f8d51a407e.webp": {
+      "sha256": "e0f8d51a407e2045947a621c7eb09a6d08159c91d117182d742bd8917f17ecc2",
+      "media_type": "image/webp",
+      "size": 8866
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-0b52f9338097.webp": {
+      "sha256": "0b52f9338097b19112542f8fd918410aeb97c72ddf611039f3c0081aaa9ee7f0",
+      "media_type": "image/webp",
+      "size": 9130
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-508948d0a4e9.webp": {
+      "sha256": "508948d0a4e9ab4cfbd30c68f30034bae502de3f901b3caefe137862df7738b4",
+      "media_type": "image/webp",
+      "size": 21470
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-38b8c55ba70b.webp": {
+      "sha256": "38b8c55ba70b3444e165eab2064cd529695d44f674a1fccda8789f6022bdb6ce",
+      "media_type": "image/webp",
+      "size": 14790
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-9d07d221bf9e.webp": {
+      "sha256": "9d07d221bf9edd857640db51750dd3a9eb0f8aa0522b5241828054439f1f5c12",
+      "media_type": "image/webp",
+      "size": 20152
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-5034e80064b7.webp": {
+      "sha256": "5034e80064b780224737a4f8bccea4159932efda4be738c63c4b5cbb0a3f2f69",
+      "media_type": "image/webp",
+      "size": 13460
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-3a1f05ba0c79.webp": {
+      "sha256": "3a1f05ba0c79d05d8c936dd61b85c9beb561cd88d35d7a604b8cbc2771bf3776",
+      "media_type": "image/webp",
+      "size": 15466
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-696a25c2541c.webp": {
+      "sha256": "696a25c2541c967bd50194cbea614a777eeacd2f728092b726a0bcdcb6e2954b",
+      "media_type": "image/webp",
+      "size": 16606
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-d006bd1da315.webp": {
+      "sha256": "d006bd1da315bf200f09d1fe025923374bddb8498072323d8883d285b270cdf6",
+      "media_type": "image/webp",
+      "size": 14720
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/diagram-79750b440b24.webp": {
+      "sha256": "79750b440b245af7e93b581107a4f211c48e64166b0b4b5516de5462fc5738e0",
+      "media_type": "image/webp",
+      "size": 21644
+    },
+    "docs/architecture-and-development/articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/assets/build-flow.svg": {
+      "sha256": "46e8b4e99cc93c57b5a1ed590c18e8dc6128009d5fab7cd778a601f2c333ea82",
+      "media_type": "image/svg+xml",
+      "size": 3300
+    },
+    "docs/architecture-and-development/articles/20261104-release-llm-0-37/README.md": {
+      "sha256": "83589c2ee75ca5251f7a416c25a0c52399292db1c77edbc01983d6f706f09f01",
+      "media_type": "text/markdown",
+      "size": 437
+    },
+    "docs/architecture-and-development/articles/20261104-release-llm-0-37/article.md": {
+      "sha256": "626636267becc2dcdb42d7ae7c2156e6e5afc8eda2d6ac0d170f2e1e00814849",
+      "media_type": "text/markdown",
+      "size": 4044
+    },
+    "docs/architecture-and-development/articles/20261104-release-llm-0-37/article-zh-CN.md": {
+      "sha256": "046ea491608a6164ef3eb3d90cb72020b83ddddfc326a90fdeca172dd08f03b6",
+      "media_type": "text/markdown",
+      "size": 4134
+    },
+    "docs/architecture-and-development/articles/20261104-release-llm-0-37/research.md": {
+      "sha256": "bc1d73f9388f8296d805a41778398eaa40947b7e513c6b0b39af37717826be1f",
+      "media_type": "text/markdown",
+      "size": 17904
+    },
+    "docs/architecture-and-development/articles/20261104-release-llm-0-37/assets/typed-embedding.svg": {
+      "sha256": "17ec51ea9597286daebc958138deb87c5ee1afa971ca91216f5159efe31a22fd",
+      "media_type": "image/svg+xml",
+      "size": 3541
+    },
+    "docs/architecture-and-development/batches/20261104-01.md": {
+      "sha256": "85dd397aa83ea08c896b2fca84fbe14b3c37175f02498228d9c1a307e936fb7d",
+      "media_type": "text/markdown",
+      "size": 708
     }
   }
 }

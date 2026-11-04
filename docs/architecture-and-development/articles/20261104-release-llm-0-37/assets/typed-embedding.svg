@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+<title id="title">类型信息如何从文件传到嵌入插件</title>
+<desc id="desc">上半部比较裸字节与带类型附件，下半部展示插件、模型、批次校验和集合写入。查询必须使用兼容的向量空间。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#496778"/></marker></defs>
+<rect width="1100" height="650" fill="#f5f7fa"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#183344">
+<text x="42" y="48" font-size="27" font-weight="700">文件能被读入，还不等于模型知道怎样处理</text>
+<text x="42" y="79" font-size="16" fill="#556b79">概念流程：客户端保留信息，插件翻译请求，模型生成向量；每一步都有边界。</text>
+<rect x="42" y="112" width="260" height="151" rx="12" fill="#fff" stroke="#bbcbd6"/>
+<text x="62" y="143" font-size="20" font-weight="600">旧接口：裸字节</text>
+<text x="62" y="177" font-size="17">文件 → bytes</text>
+<text x="62" y="207" font-size="16">接口本身不携带类型和来源</text>
+<text x="62" y="237" font-size="16" fill="#735b37">插件需另行判断或约定</text>
+<rect x="340" y="112" width="718" height="151" rx="12" fill="#e6f2ee" stroke="#81b3a1"/>
+<text x="362" y="143" font-size="20" font-weight="600">新接口：llm.Attachment</text>
+<text x="362" y="177" font-size="17">图片文件 + image/jpeg + 路径或 URL</text>
+<text x="362" y="207" font-size="16">MIME 类型说明“按哪种格式解释”，不是把文件转换成该格式。</text>
+<text x="362" y="237" font-size="16">插件通过 attachment_types 声明自己接收哪些类型。</text>
+<path d="M700 263V297H172V332" fill="none" stroke="#496778" stroke-width="2" marker-end="url(#arrow)"/>
+<g fill="#fff" stroke="#bbcbd6"><rect x="42" y="334" width="260" height="110" rx="10"/><rect x="408" y="334" width="260" height="110" rx="10"/><rect x="788" y="334" width="270" height="110" rx="10"/></g>
+<text x="62" y="366" font-size="20" font-weight="600">插件适配</text><text x="62" y="397" font-size="16">读取内容与类型</text><text x="62" y="423" font-size="16">组装服务端所需请求</text>
+<text x="428" y="366" font-size="20" font-weight="600">嵌入模型</text><text x="428" y="397" font-size="16">按实际能力处理媒体</text><text x="428" y="423" font-size="16">返回每项对应的数字向量</text>
+<text x="808" y="366" font-size="20" font-weight="600">当前批次校验与写入</text><text x="808" y="397" font-size="16">返回数量相符才写入集合</text><text x="808" y="423" font-size="16">记录 ID、向量与内容类型</text>
+<path d="M302 386H406M668 386H786" fill="none" stroke="#496778" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="321" y="374" font-size="15">请求</text><text x="687" y="374" font-size="15">向量</text>
+<rect x="42" y="483" width="1016" height="124" rx="10" fill="#fff4df"/>
+<text x="62" y="515" font-size="19" font-weight="600">读图时注意三件事</text>
+<text x="62" y="544" font-size="16">① 类型正确 ≠ 内容有效，也不保证检索准确。　② 数量相符 ≠ 顺序和语义一定正确。</text>
+<text x="62" y="575" font-size="16">③ 查询与资料需使用兼容的模型和维度；失败批次未写入，不代表前面的批次已撤销。</text>
+</g></svg>
