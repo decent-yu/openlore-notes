@@ -2,12 +2,14 @@
 
 关注架构设计与演进，以及有工程证据的新开发方法和协作流程。
 
-## 最近收录（21 篇）
+## 最近收录（23 篇）
 
 按首次收录时间从新到旧排列；更新旧文章不改变收录日期和目录。
 
 | 收录日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261105 | [Cloudflare services for private origins is now generally available](articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/README.md) | [简体中文](articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/article-zh-CN.md) | [调研](articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/research.md) |
+| 20261105 | [Jev and the rise of decision models: what you need to know and why they matter](articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/README.md) | [简体中文](articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/article-zh-CN.md) | [调研](articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/research.md) |
 | 20261104 | [How we halved DNS build delay and cut memory use by 85%](articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/README.md) | [简体中文](articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/article-zh-CN.md) | [调研](articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/research.md) |
 | 20261104 | [Release: llm 0.37](articles/20261104-release-llm-0-37/README.md) | [简体中文](articles/20261104-release-llm-0-37/article-zh-CN.md) | [调研](articles/20261104-release-llm-0-37/research.md) |
 | 20261102 | [8 eMudhra certificates are compromised. Here's what you need to know](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/README.md) | [简体中文](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/article-zh-CN.md) | [调研](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/research.md) |
@@ -34,6 +36,8 @@
 
 | 更新日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261105 | [Cloudflare services for private origins is now generally available](articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/README.md) | [简体中文](articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/article-zh-CN.md) | [调研](articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/research.md) |
+| 20261105 | [Jev and the rise of decision models: what you need to know and why they matter](articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/README.md) | [简体中文](articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/article-zh-CN.md) | [调研](articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/research.md) |
 | 20261104 | [How we halved DNS build delay and cut memory use by 85%](articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/README.md) | [简体中文](articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/article-zh-CN.md) | [调研](articles/20261104-how-we-halved-dns-build-delay-and-cut-memory-use-by-85/research.md) |
 | 20261104 | [Release: llm 0.37](articles/20261104-release-llm-0-37/README.md) | [简体中文](articles/20261104-release-llm-0-37/article-zh-CN.md) | [调研](articles/20261104-release-llm-0-37/research.md) |
 | 20261102 | [8 eMudhra certificates are compromised. Here's what you need to know](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/README.md) | [简体中文](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/article-zh-CN.md) | [调研](articles/20261102-8-emudhra-certificates-are-compromised-here-s-what-you-need-to-know/research.md) |
@@ -58,6 +62,7 @@
 
 ## 采集批次
 
+- [20261105-01](batches/20261105-01.md)（2 篇）
 - [20261104-01](batches/20261104-01.md)（2 篇）
 - [20261102-01](batches/20261102-01.md)（1 篇）
 - [20261030-01](batches/20261030-01.md)（2 篇）

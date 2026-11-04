@@ -400,6 +400,43 @@
       "collected_at": "2026-11-04T02:15:39.511Z",
       "updated_at": "2026-11-04T02:15:39.511Z",
       "has_research": true
+    },
+    "art_1059d35e-ea7e-4505-9bae-a3308b7fa098": {
+      "collection_id": "col_73395374-ece",
+      "directory": "articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available",
+      "slug": "cloudflare-services-for-private-origins-is-now-generally-available",
+      "title": "Cloudflare services for private origins is now generally available",
+      "original_url": "https://blog.cloudflare.com/private-origins-public-to-private",
+      "tags": [
+        "Cloudflare Private Origins",
+        "私有网络路由",
+        "DNS",
+        "WAF",
+        "Cloudflare One",
+        "Cloudflare Tunnel"
+      ],
+      "collected_at": "2026-11-04T23:11:43.241Z",
+      "updated_at": "2026-11-04T23:11:43.241Z",
+      "has_research": true
+    },
+    "art_979757c9-e162-4396-84c0-460914f0efed": {
+      "collection_id": "col_73395374-ece",
+      "directory": "articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter",
+      "slug": "jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter",
+      "title": "Jev and the rise of decision models: what you need to know and why they matter",
+      "original_url": "https://www.thoughtworks.com/insights/blog/generative-ai/jev-decision-models-what-need-know-why",
+      "tags": [
+        "决策模型",
+        "概率建模",
+        "模型评估",
+        "代码重构",
+        "编码代理",
+        "人机协同",
+        "模型选型"
+      ],
+      "collected_at": "2026-11-04T23:11:43.241Z",
+      "updated_at": "2026-11-04T23:11:43.241Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -507,6 +544,15 @@
         "art_a61f1670-d828-47b7-afea-a4c94267aacc",
         "art_b5ae00cf-832c-4fb9-8ffa-67e0822c81e5"
       ]
+    },
+    "col_73395374-ece": {
+      "path": "docs/architecture-and-development/batches/20261105-01.md",
+      "date_sequence": "20261105-01",
+      "created_at": "2026-11-04T23:11:43.241Z",
+      "article_ids": [
+        "art_1059d35e-ea7e-4505-9bae-a3308b7fa098",
+        "art_979757c9-e162-4396-84c0-460914f0efed"
+      ]
     }
   },
   "delivered_batches": [
@@ -525,13 +571,14 @@
     "batch_bbb107d9-141f-46ad-9727-2d6495ac4c89",
     "batch_91e40289-e08d-4f8c-a06b-591e74620358",
     "batch_1224f26d-911d-49f1-94d4-55d3e59648a3",
-    "batch_50206bb2-a3f2-4166-9f4b-e45699dc7117"
+    "batch_50206bb2-a3f2-4166-9f4b-e45699dc7117",
+    "batch_cce99c49-8a80-4661-b565-e7bda215eea8"
   ],
   "managed_files": {
     "docs/architecture-and-development/README.md": {
-      "sha256": "75948f829bf54375056a9ca24cb003e75ff279cfb8f0f15dbeed72679e69ffa7",
+      "sha256": "58b00091d05b67dbcf13e39c4e31ec6196d06eb0335acf629624ae02659a143e",
       "media_type": "text/markdown",
-      "size": 16691
+      "size": 18468
     },
     "docs/architecture-and-development/articles/20261020-secure-access-and-repo-hygiene/README.md": {
       "sha256": "68fe7a150e2bbb45d83244d6e34bd0698c40223775f2931b7006c9a09cfe9909",
@@ -1507,6 +1554,81 @@
       "sha256": "85dd397aa83ea08c896b2fca84fbe14b3c37175f02498228d9c1a307e936fb7d",
       "media_type": "text/markdown",
       "size": 708
+    },
+    "docs/architecture-and-development/articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/README.md": {
+      "sha256": "00abf509ff37a28af70f1ea4902721d5a87fc7256ca4f613177a235996113609",
+      "media_type": "text/markdown",
+      "size": 492
+    },
+    "docs/architecture-and-development/articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/article.md": {
+      "sha256": "4ecca7f091dab4f0e5b83dec31ff80896d05c2ae146615be262a189735305d3a",
+      "media_type": "text/markdown",
+      "size": 9838
+    },
+    "docs/architecture-and-development/articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/article-zh-CN.md": {
+      "sha256": "544e1387709120ba0998d85798b8c5ae6a097f48aa8760d955c549a609c472a2",
+      "media_type": "text/markdown",
+      "size": 9259
+    },
+    "docs/architecture-and-development/articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/research.md": {
+      "sha256": "d5ac5e5c7fd4ce5c2f226b571133c1d59d2dda66eb00048a6ed0de26091793e0",
+      "media_type": "text/markdown",
+      "size": 20465
+    },
+    "docs/architecture-and-development/articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/assets/diagram-129b2c91f200.webp": {
+      "sha256": "129b2c91f200ef5d5665259ebfb7c5d7e8101856d1e86a861e580e319db57d8e",
+      "media_type": "image/webp",
+      "size": 36798
+    },
+    "docs/architecture-and-development/articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/assets/diagram-54af8152112e.webp": {
+      "sha256": "54af8152112e39810fb3dcf1c68dffbec7e6bd6463a0cbfdbc17d4e8db92d151",
+      "media_type": "image/webp",
+      "size": 6294
+    },
+    "docs/architecture-and-development/articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/assets/diagram-31777f00c9c8.webp": {
+      "sha256": "31777f00c9c843cbc5acf43f7b80007e87469593a8af54d2e6db146bc260af3d",
+      "media_type": "image/webp",
+      "size": 25130
+    },
+    "docs/architecture-and-development/articles/20261105-cloudflare-services-for-private-origins-is-now-generally-available/assets/private-origin-flow.svg": {
+      "sha256": "a5c13a9be1149658c33f1135f9f3fd03934418f7eb93c19c55cba6f1f3a74379",
+      "media_type": "image/svg+xml",
+      "size": 3990
+    },
+    "docs/architecture-and-development/articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/README.md": {
+      "sha256": "38ff05030fbd98451e644a3c0ff8351ed3f5cf50db2d26fecc4db9c12f1ca781",
+      "media_type": "text/markdown",
+      "size": 544
+    },
+    "docs/architecture-and-development/articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/article.md": {
+      "sha256": "20414edc52a8c8fd8b3fd0620452a1e1e568490ec5c0f74baf82158320501e5e",
+      "media_type": "text/markdown",
+      "size": 10853
+    },
+    "docs/architecture-and-development/articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/article-zh-CN.md": {
+      "sha256": "e05c0cd5b3fbc5ef20abeacca81b80a7b0a006277a42273198241cd5d9080886",
+      "media_type": "text/markdown",
+      "size": 10253
+    },
+    "docs/architecture-and-development/articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/research.md": {
+      "sha256": "f4687727da88acdda6259cc6937861ad57bac69a7480126ee5b824e37ab5f095",
+      "media_type": "text/markdown",
+      "size": 18034
+    },
+    "docs/architecture-and-development/articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/assets/diagram-e662c7f66cc9.jpg": {
+      "sha256": "e662c7f66cc97fdb8f6374a55a5e140ae28692a0cef9b76cda488f34111248d3",
+      "media_type": "image/jpeg",
+      "size": 572137
+    },
+    "docs/architecture-and-development/articles/20261105-jev-and-the-rise-of-decision-models-what-you-need-to-know-and-why-they-matter/assets/refactoring-flow.svg": {
+      "sha256": "64a37c72d572e2cd022fc8123a6c2f5f3d8d2288cd2fb0a39bd99e3a690c4ec8",
+      "media_type": "image/svg+xml",
+      "size": 4017
+    },
+    "docs/architecture-and-development/batches/20261105-01.md": {
+      "sha256": "01fe5a36a4642e070340bc76953cba682d246417f49a8dddfc5e6c6926e011e1",
+      "media_type": "text/markdown",
+      "size": 999
     }
   }
 }

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="760" viewBox="0 0 1040 760" role="img" aria-labelledby="title desc">
+<title id="title">用决策模型筛选重构候选：建议流程</title>
+<desc id="desc">解析器提取函数和上下文，Jev并行回答三个独立问题，程序合并判断并将不确定候选交给人工。入选候选由生成模型修改，再通过测试和人工审查。Jev不直接读取仓库或执行修改。</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="none" stroke="#536474" stroke-width="1.5"/></marker></defs>
+<rect width="1040" height="760" fill="#f6f7f9"/>
+<g fill="#536474"><path d="M515 239L520 248L525 239Z"/><path d="M515 436L520 445L525 436Z"/><path d="M699 491L709 496L699 501Z"/><path d="M335 579L340 588L345 579Z"/></g>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#172e42">
+<text x="40" y="48" font-size="26" font-weight="650">先判断是否值得改，再生成修改</text>
+<text x="40" y="79" font-size="16" fill="#536474">假设的团队实践方案 · 箭头表示数据或处理结果的流向，不代表 Jev 内部架构</text>
+<rect x="40" y="112" width="960" height="101" rx="10" fill="#fff" stroke="#b9c5cf"/>
+<text x="63" y="143" font-size="19" font-weight="600">① 程序准备输入</text>
+<text x="63" y="173" font-size="17">解析器定位函数 → 提取相关代码、调用点和已有测试 → 固定版本与候选编号</text>
+<text x="63" y="197" font-size="15" fill="#536474">遍历仓库、查找引用和组织上下文由工具完成；缺少上下文要显式记录。</text>
+<path d="M520 213V247" stroke="#536474" stroke-width="2" marker-end="url(#a)"/>
+<rect x="40" y="253" width="960" height="157" rx="10" fill="#eaf3f5" stroke="#79aab4"/>
+<text x="63" y="284" font-size="19" font-weight="600">② Jev 对同一份输入分别判断</text>
+<g font-size="17"><text x="72" y="326">Noul：是否混合了</text><text x="72" y="352">可分开的职责？</text><text x="390" y="326">Score：问题有多明显？</text><text x="390" y="352">等级必须事先定义</text><text x="708" y="326">Noul：输入是否足以</text><text x="708" y="352">支持这次判断？</text></g>
+<path d="M356 307V365M675 307V365" stroke="#b5cdd2"/>
+<text x="63" y="389" font-size="15" fill="#536474">每题只读取输入；同一请求中的问题不能读取彼此的答案。</text>
+<path d="M520 410V444" stroke="#536474" stroke-width="2" marker-end="url(#a)"/>
+<rect x="40" y="450" width="600" height="93" rx="10" fill="#fff" stroke="#b9c5cf"/>
+<text x="63" y="482" font-size="19" font-weight="600">③ 程序按经过验证的阈值分流</text>
+<text x="63" y="513" font-size="17">结合概率、测试覆盖情况与允许修改的范围</text>
+<path d="M640 496H708" stroke="#536474" stroke-width="2" marker-end="url(#a)"/>
+<rect x="716" y="450" width="284" height="93" rx="10" fill="#fff3de" stroke="#d2af6e"/>
+<text x="735" y="482" font-size="19" font-weight="600">不确定、缺材料或未入选</text>
+<text x="735" y="513" font-size="17">人工复核 / 补材料 / 暂缓</text>
+<path d="M340 543V587" stroke="#536474" stroke-width="2" marker-end="url(#a)"/>
+<text x="356" y="573" font-size="15" fill="#536474">只把入选项送去修改</text>
+<rect x="40" y="594" width="600" height="105" rx="10" fill="#edf2ec" stroke="#9db395"/>
+<text x="63" y="626" font-size="19" font-weight="600">④ 生成模型修改 → 编译与测试 → 人工审查</text>
+<text x="63" y="656" font-size="17">检查通过后，由团队既有流程决定是否合并</text>
+<text x="63" y="681" font-size="15" fill="#536474">判断“值得改”的概率，不是修改后“不会出错”的概率。</text>
+<text x="40" y="733" font-size="15" fill="#536474">机制依据：TypeSafe 的问题独立求值说明；流程与职责划分为本文建议，并非原文演示的复刻。</text>
+</g></svg>

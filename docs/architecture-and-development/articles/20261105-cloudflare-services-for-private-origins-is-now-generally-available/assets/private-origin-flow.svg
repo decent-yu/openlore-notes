@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="650" viewBox="0 0 1160 650" role="img" aria-labelledby="title desc">
+  <title id="title">公开域名如何访问私有源站</title>
+  <desc id="desc">假设订单接口经 Cloudflare WAN 接入。配置中的私网路由标记影响代理选择路径；用户连接 Cloudflare，回源流量经过私网连接到服务器，响应需要正确的回程路由。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#315a80" stroke-width="1.5"/></marker>
+    <marker id="back" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#157a6e" stroke-width="1.5"/></marker>
+    <style>text{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#183047}.title{font-size:27px;font-weight:600}.label{font-size:19px;font-weight:600}.body{font-size:17px}.small{font-size:15px;fill:#4a6275}.request{fill:none;stroke:#315a80;stroke-width:2;marker-end:url(#arrow)}.response{fill:none;stroke:#157a6e;stroke-width:2.5;marker-end:url(#back)}</style>
+  </defs>
+  <rect width="1160" height="650" fill="#f7f9fc"/>
+  <text x="40" y="48" class="title">公开的是应用入口，源站仍通过私网到达</text>
+  <text x="40" y="79" class="small">假设示例 · orders.example.com → 10.0.0.50 · 采用 WAN 接入</text>
+  <rect x="310" y="105" width="430" height="119" rx="12" fill="#fff4de" stroke="#d7b46c"/>
+  <text x="333" y="136" class="label">配置：代理记录 + 私网路由标记</text>
+  <text x="333" y="167" class="body">源站地址：10.0.0.50</text>
+  <text x="333" y="196" class="body">proxied: true · private_routing: true</text>
+  <path d="M525 224V269" class="request" stroke-dasharray="6 5"/>
+  <text x="541" y="252" class="small">影响回源决策</text>
+  <rect x="290" y="273" width="410" height="203" rx="16" fill="#e9f1fb" stroke="#b5cbe2"/>
+  <text x="314" y="307" class="label">Cloudflare 网络</text>
+  <rect x="40" y="336" width="190" height="113" rx="12" fill="white" stroke="#b7c9d9"/>
+  <text x="61" y="373" class="label">外部调用者</text>
+  <text x="61" y="405" class="body">连接代理地址</text>
+  <path d="M230 365H310" class="request"/>
+  <text x="235" y="346" class="small">HTTPS</text>
+  <rect x="312" y="326" width="190" height="120" rx="9" fill="white"/>
+  <text x="328" y="354" class="label">应用检查与处理</text>
+  <text x="328" y="385" class="body">TLS、WAF、限流</text>
+  <text x="328" y="414" class="body">缓存、Workers 等</text>
+  <rect x="540" y="326" width="138" height="120" rx="9" fill="white"/>
+  <text x="555" y="361" class="label">私网转发</text>
+  <text x="555" y="394" class="body">选择已配置</text>
+  <text x="555" y="420" class="body">的连接路由</text>
+  <path d="M502 370H540" class="request"/>
+  <rect x="881" y="273" width="239" height="203" rx="16" fill="#e7f4ef" stroke="#9bcbbb"/>
+  <text x="903" y="307" class="label">企业私网</text>
+  <text x="903" y="362" class="label">订单源站</text>
+  <text x="903" y="395" class="body">10.0.0.50</text>
+  <text x="903" y="437" class="small">应用鉴权仍需执行</text>
+  <path d="M678 369H881" class="request"/>
+  <text x="717" y="345" class="body">已有 WAN 连接</text>
+  <text x="714" y="397" class="small">仅需回源时走此路径</text>
+  <path d="M995 476V524H610V476" class="response"/>
+  <text x="674" y="553" class="body" style="fill:#157a6e">响应：回程路由必须送回 Cloudflare</text>
+  <path d="M385 476V524H135V449" class="response"/>
+  <text x="40" y="553" class="small">Cloudflare 再把响应返回调用者</text>
+  <rect x="40" y="583" width="1080" height="43" rx="8" fill="#edf1f6"/>
+  <text x="57" y="610" class="small">读图提示：虚线是配置影响，实线是流量；应用服务不表示固定执行顺序。Tunnel 的源地址与回程行为不同。</text>
+</svg>
