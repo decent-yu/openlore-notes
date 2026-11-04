@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="860" viewBox="0 0 1160 860">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#465567"/></marker></defs>
+<rect width="1160" height="860" fill="#fafaf7"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#223344">
+<text x="48" y="54" font-size="28" font-weight="700">同一代理，怎样接住两个人的消息</text>
+<text x="48" y="88" font-size="17" fill="#596575">源码机制示意；示例人物与消息为假设。箭头表示投递或状态推进，不表示耗时。</text>
+<text x="50" y="135" font-size="21" font-weight="600">① 先确定接收者</text>
+<path d="M50 150H1110" stroke="#b8c2c9"/>
+<rect x="50" y="170" width="240" height="100" rx="8" fill="#e9eef4" stroke="#b0becd"/>
+<text x="70" y="203" font-size="20">人发送消息</text><text x="70" y="234" font-size="17">先保存频道记录</text><text x="70" y="257" font-size="16">代理发言不会再次唤醒代理</text>
+<path d="M290 220H345" stroke="#465567" stroke-width="2" marker-end="url(#a)"/>
+<rect x="350" y="170" width="425" height="100" rx="8" fill="#eef2df" stroke="#bbc696"/>
+<text x="370" y="201" font-size="19">私信／点名 → 直接选择</text><text x="370" y="232" font-size="19">未点名 → 模型分类，再按阈值筛选</text><text x="370" y="256" font-size="16">匹配频道工作规则的代理先单独接收</text>
+<path d="M775 220H830" stroke="#465567" stroke-width="2" marker-end="url(#a)"/>
+<rect x="835" y="170" width="275" height="100" rx="8" fill="#e5f0eb" stroke="#83b59d"/>
+<text x="855" y="203" font-size="20">选中 Ada</text><text x="855" y="234" font-size="17">所有来源进入她的主会话</text>
+<text x="50" y="322" font-size="21" font-weight="600">② 按请求者分流执行（不是按频道分开）</text>
+<path d="M50 337H1110" stroke="#b8c2c9"/>
+<rect x="50" y="360" width="240" height="70" rx="6" fill="#e9eef4"/><text x="70" y="388" font-size="19">你：检查登录接口</text><text x="70" y="414" font-size="16">会话空闲，建立回合 T1</text>
+<rect x="50" y="452" width="240" height="70" rx="6" fill="#e9eef4"/><text x="70" y="480" font-size="19">你：先看昨晚的发布</text><text x="70" y="506" font-size="16">同一人，登记为追问</text>
+<rect x="50" y="544" width="240" height="70" rx="6" fill="#f4e9df"/><text x="70" y="572" font-size="19">同事：另一个请求</text><text x="70" y="598" font-size="16">另一人，建立排队回合 T2</text>
+<rect x="390" y="360" width="350" height="162" rx="8" fill="#e5f0eb" stroke="#83b59d" stroke-width="2"/>
+<text x="410" y="394" font-size="22" font-weight="600">T1 运行中 · 为你工作</text><text x="410" y="429" font-size="18">输入：最初请求 ＋ 你的追问</text><text x="410" y="463" font-size="18">执行器读取追问，继续运行</text><text x="410" y="497" font-size="16">该会话同时至多一个运行回合</text>
+<rect x="390" y="544" width="350" height="70" rx="8" fill="#f4e9df" stroke="#c9a785"/>
+<text x="410" y="573" font-size="20">T2 排队 · 为同事工作</text><text x="410" y="599" font-size="16">保存自己的请求者身份与提示词</text>
+<path d="M290 395H385M290 487H385M290 579H385" stroke="#465567" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M740 440H810" stroke="#465567" stroke-width="2" marker-end="url(#a)"/>
+<rect x="815" y="360" width="295" height="162" rx="8" fill="#fff" stroke="#8795a5"/>
+<text x="835" y="393" font-size="21" font-weight="600">允许结束吗？</text><text x="835" y="429" font-size="18">数据库登记追问数</text><text x="835" y="459" font-size="18">＝ 执行器已读追问数</text><text x="835" y="496" font-size="16">不相等：等待追问到达并继续</text>
+<path d="M965 522V579H747" stroke="#465567" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="815" y="559" font-size="16">相等：结束 T1，尝试启动 T2</text>
+<text x="50" y="670" font-size="21" font-weight="600">③ 身份分开，不等于记忆隔离</text>
+<path d="M50 685H1110" stroke="#b8c2c9"/>
+<text x="50" y="721" font-size="19">每回合的工具令牌：绑定请求者；每次调用再检查回合仍在运行和资源访问权。</text>
+<text x="50" y="757" font-size="19">主会话的历史：跨私信与频道恢复。接口权限不会清除代理此前已经读过的上下文。</text>
+<text x="50" y="809" font-size="16" fill="#596575">依据：turns.ts、agent-worker.ts、agentSession.ts、trpc.ts 与频道访问实现。图中省略任务子会话。</text>
+</g></svg>

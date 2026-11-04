@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760" role="img" aria-labelledby="title desc">
+<title id="title">Orca 取消外部会话：先截住输入，再处理代理</title>
+<desc id="desc">假设代理等待批准，一条消息正在等待写入，另一条排队。取消先中止整条会话队列，等待在途操作返回，再向原进程的原批准请求发送拒绝。写入回执与代理结束事件分开。</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#334155" stroke-width="1.5"/></marker></defs>
+<rect width="1120" height="760" fill="#fcfaf5"/>
+<g font-family="sans-serif" fill="#172b3a">
+<text x="46" y="50" font-size="27" font-weight="700">先截住后续输入，再拒绝批准</text>
+<text x="46" y="83" font-size="17" fill="#52616c">自拟场景：代理正在等待批准；消息 A 等待写入，消息 B 排在后面。时间向下。</text>
+<path d="M0 130H1120" stroke="#d6d6cf"/>
+<g font-size="19" font-weight="700" text-anchor="middle"><text x="140" y="120">取消请求</text><text x="420" y="120">会话队列</text><text x="730" y="120">终端写入器</text><text x="1000" y="120">代理状态</text></g>
+<g stroke="#c8cdd0" stroke-dasharray="5 6"><path d="M140 142V683"/><path d="M420 142V683"/><path d="M730 142V683"/><path d="M1000 142V683"/></g>
+<g font-size="16">
+<rect x="326" y="151" width="190" height="69" rx="6" fill="#edf0e8" stroke="#b4bda7"/><text x="345" y="177">A：正在等待批准</text><text x="345" y="203">B：尚未开始写入</text>
+<rect x="916" y="155" width="168" height="50" rx="6" fill="#fff0cf"/><text x="933" y="186">批准请求 P 待处理</text>
+<path d="M140 249H420" fill="none" stroke="#334155" stroke-width="2"/><text x="180" y="238">① 中止整条会话队列</text>
+<path d="M420 286H730" fill="none" stroke="#334155" stroke-width="2"/><text x="458" y="274">中止 A 的等待；B 直接拒绝</text>
+<path d="M730 328H420" fill="none" stroke="#334155" stroke-width="2"/><text x="475" y="316">A 返回“取消”，未写入</text>
+<path d="M420 364H140" fill="none" stroke="#334155" stroke-width="2"/><text x="185" y="352">② 确认在途操作已收尾</text>
+<rect x="39" y="385" width="494" height="54" rx="5" fill="#f5e3db"/><text x="55" y="407" fill="#8c3c2d">若等待超过 5 秒：拒绝确认取消</text><text x="55" y="429" fill="#8c3c2d">旧队列仍封锁，直到在途操作真正返回</text>
+<path d="M140 480H730" fill="none" stroke="#334155" stroke-width="2"/><text x="184" y="468">③ 重新检查进程与请求 P，再写入拒绝按键</text>
+<path d="M730 510H1000" fill="none" stroke="#334155" stroke-width="2"/><text x="767" y="499">传输交接：reject_once</text>
+<path d="M730 553H140" fill="none" stroke="#334155" stroke-width="2"/><text x="226" y="542">取消回执 accepted：此次写入已获确认</text>
+<path d="M1000 624H420" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="7 5"/><text x="484" y="611">④ 另行观察结束证据，再发布 turn-ended</text>
+<g fill="#334155">
+<path d="M420 249l-10 -5v10z"/><path d="M730 286l-10 -5v10z"/><path d="M420 328l10 -5v10z"/><path d="M140 364l10 -5v10z"/><path d="M730 480l-10 -5v10z"/><path d="M1000 510l-10 -5v10z"/><path d="M140 553l10 -5v10z"/><path d="M420 624l10 -5v10z"/>
+</g></g>
+<rect x="46" y="690" width="1028" height="45" fill="#e6edf0" rx="5"/><text x="65" y="719" font-size="17">取消队列 ≠ 撤回已写字节　　按键写入成功 ≠ 本轮已经结束　　中断当前轮次 ≠ 杀死代理进程</text>
+</g></svg>

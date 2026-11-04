@@ -1195,6 +1195,102 @@
       "reading_path": "paradevai@paradev/02-断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端.md",
       "article_path": "paradevai@paradev/articles/02-断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端.md",
       "research_path": "paradevai@paradev/02-断线后接回谁-superset-如何恢复-agent-又避免重启用户已关闭的终端.md"
+    },
+    "art_8d847b66-21a2-4033-9015-b358abee9382": {
+      "collection_id": "col_40944fec-2c2",
+      "directory": "didi@helixharness/03-helixharness-的-hooks-能拦住什么-从写后提醒到完成门禁",
+      "slug": "helixharness-的-hooks-能拦住什么-从写后提醒到完成门禁",
+      "title": "HelixHarness 的 Hooks 能拦住什么：从写后提醒到完成门禁",
+      "original_url": "https://github.com/didi/helixharness",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-11-04T02:54:00.935Z",
+      "updated_at": "2026-11-04T02:54:00.935Z",
+      "has_research": true,
+      "reading_path": "didi@helixharness/03-helixharness-的-hooks-能拦住什么-从写后提醒到完成门禁.md",
+      "research_path": "didi@helixharness/03-helixharness-的-hooks-能拦住什么-从写后提醒到完成门禁.md"
+    },
+    "art_5e1019c8-14f4-4958-a308-fe02e49b3a2c": {
+      "collection_id": "col_40944fec-2c2",
+      "directory": "paradevai@paradev/03-频道里谁来接话-superset-如何选择代理-合并追问并隔开不同人的执行回合",
+      "slug": "频道里谁来接话-superset-如何选择代理-合并追问并隔开不同人的执行回合",
+      "title": "频道里谁来接话：Superset 如何选择代理、合并追问并隔开不同人的执行回合",
+      "original_url": "https://github.com/ParadevAI/Paradev",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-11-04T02:54:00.935Z",
+      "updated_at": "2026-11-04T02:54:00.935Z",
+      "has_research": true,
+      "reading_path": "paradevai@paradev/03-频道里谁来接话-superset-如何选择代理-合并追问并隔开不同人的执行回合.md",
+      "research_path": "paradevai@paradev/03-频道里谁来接话-superset-如何选择代理-合并追问并隔开不同人的执行回合.md"
+    },
+    "art_399d87c7-9904-4efc-ad4d-e0a148797080": {
+      "collection_id": "col_40944fec-2c2",
+      "directory": "stablyai@orca/16-orca-怎样取消外部会话-先截住后续消息-再处理批准与中断",
+      "slug": "orca-怎样取消外部会话-先截住后续消息-再处理批准与中断",
+      "title": "Orca 怎样取消外部会话：先截住后续消息，再处理批准与中断",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-11-04T02:54:00.935Z",
+      "updated_at": "2026-11-04T02:54:00.935Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/16-orca-怎样取消外部会话-先截住后续消息-再处理批准与中断.md",
+      "research_path": "stablyai@orca/16-orca-怎样取消外部会话-先截住后续消息-再处理批准与中断.md"
+    },
+    "art_7ad51306-5ae9-43ff-86dd-c1f1c54a8155": {
+      "collection_id": "col_40944fec-2c2",
+      "directory": "didi@helixharness/04-helixharness-平台怎样比较两个框架版本-并防止-完成-冒充-更好",
+      "slug": "helixharness-平台怎样比较两个框架版本-并防止-完成-冒充-更好",
+      "title": "HelixHarness 平台怎样比较两个框架版本，并防止“完成”冒充“更好”",
+      "original_url": "https://github.com/didi/helixharness",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-11-04T02:54:00.935Z",
+      "updated_at": "2026-11-04T02:54:00.935Z",
+      "has_research": true,
+      "reading_path": "didi@helixharness/04-helixharness-平台怎样比较两个框架版本-并防止-完成-冒充-更好.md",
+      "research_path": "didi@helixharness/04-helixharness-平台怎样比较两个框架版本-并防止-完成-冒充-更好.md"
+    },
+    "art_c50096f1-93a7-4d1d-92a0-17c996c34b28": {
+      "collection_id": "col_40944fec-2c2",
+      "directory": "paradevai@paradev/04-superset-怎样把代码工作交出去-主会话-任务队列与独立审阅的协作边界",
+      "slug": "superset-怎样把代码工作交出去-主会话-任务队列与独立审阅的协作边界",
+      "title": "Superset 怎样把代码工作交出去：主会话、任务队列与独立审阅的协作边界",
+      "original_url": "https://github.com/ParadevAI/Paradev",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-11-04T02:54:00.935Z",
+      "updated_at": "2026-11-04T02:54:00.935Z",
+      "has_research": true,
+      "reading_path": "paradevai@paradev/04-superset-怎样把代码工作交出去-主会话-任务队列与独立审阅的协作边界.md",
+      "research_path": "paradevai@paradev/04-superset-怎样把代码工作交出去-主会话-任务队列与独立审阅的协作边界.md"
+    },
+    "art_d8d61d13-a2ed-45d5-8b7a-d6eb42fc2d3d": {
+      "collection_id": "col_40944fec-2c2",
+      "directory": "stablyai@orca/17-orca-怎样判断代理结果尚未读过-完成去重-人在场证据与通知分流",
+      "slug": "orca-怎样判断代理结果尚未读过-完成去重-人在场证据与通知分流",
+      "title": "Orca 怎样判断代理结果尚未读过：完成去重、人在场证据与通知分流",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-11-04T02:54:00.935Z",
+      "updated_at": "2026-11-04T02:54:00.935Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/17-orca-怎样判断代理结果尚未读过-完成去重-人在场证据与通知分流.md",
+      "research_path": "stablyai@orca/17-orca-怎样判断代理结果尚未读过-完成去重-人在场证据与通知分流.md"
     }
   },
   "collection_locations": {
@@ -1363,6 +1459,19 @@
         "art_e59ba9bb-f389-441b-943f-159032141b4e",
         "art_eb896c3b-88be-4210-95c9-f8521465e6bf"
       ]
+    },
+    "col_40944fec-2c2": {
+      "path": "docs/repository-research/batches/20261104-01.md",
+      "date_sequence": "20261104-01",
+      "created_at": "2026-11-04T02:54:00.935Z",
+      "article_ids": [
+        "art_8d847b66-21a2-4033-9015-b358abee9382",
+        "art_5e1019c8-14f4-4958-a308-fe02e49b3a2c",
+        "art_399d87c7-9904-4efc-ad4d-e0a148797080",
+        "art_7ad51306-5ae9-43ff-86dd-c1f1c54a8155",
+        "art_c50096f1-93a7-4d1d-92a0-17c996c34b28",
+        "art_d8d61d13-a2ed-45d5-8b7a-d6eb42fc2d3d"
+      ]
     }
   },
   "delivered_batches": [
@@ -1379,7 +1488,8 @@
     "batch_7e474e44-216f-4bd5-8d51-acca89e20926",
     "batch_ce6da51d-a279-40d1-a7ea-f2f4c69be528",
     "batch_dc6aede8-b487-4c7a-a727-73f149d0d1ad",
-    "batch_953d3650-0958-465b-ab87-d91dab8ff945"
+    "batch_953d3650-0958-465b-ab87-d91dab8ff945",
+    "batch_2147383c-0114-4b5a-b4e6-460740cea19c"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -1403,9 +1513,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "d4514b547bc7268da976b98e8de6bb67b1903ad1c791220d70b2e334cc450e0f",
+      "sha256": "1be3434804858c952b18b227aa3b117193086b9df0aab7b22ede655e989b09a0",
       "media_type": "text/markdown",
-      "size": 96646
+      "size": 104181
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -2291,6 +2401,71 @@
       "sha256": "5cbe4bbc7090ca66d0f6024c246497196debcf5a32248fd7326e6ce1327ff7a9",
       "media_type": "text/markdown",
       "size": 1321
+    },
+    "docs/repository-research/didi@helixharness/03-helixharness-的-hooks-能拦住什么-从写后提醒到完成门禁.md": {
+      "sha256": "85874b704fc68ee4abe412a4150dae95f63e019a7bdc86f70cdfd3f3399974ef",
+      "media_type": "text/markdown",
+      "size": 18829
+    },
+    "docs/repository-research/didi@helixharness/assets/03-helixharness-的-hooks-能拦住什么-从写后提醒到完成门禁/hook-boundaries.svg": {
+      "sha256": "f04689a57d94791bdd949462205295356608a23a8689ce14d75a30c2b02b69d8",
+      "media_type": "image/svg+xml",
+      "size": 2947
+    },
+    "docs/repository-research/paradevai@paradev/03-频道里谁来接话-superset-如何选择代理-合并追问并隔开不同人的执行回合.md": {
+      "sha256": "875e25f6ec01546bc9c5ebf3ff41fd2cb775ce71395489b3eef310081e40051d",
+      "media_type": "text/markdown",
+      "size": 22016
+    },
+    "docs/repository-research/paradevai@paradev/assets/03-频道里谁来接话-superset-如何选择代理-合并追问并隔开不同人的执行回合/channel-turn-arbitration.svg": {
+      "sha256": "c5f609eb1e68dce300dfadf366ce31884f3295d780eb0689f1c4f3b0a00e8f3e",
+      "media_type": "image/svg+xml",
+      "size": 4678
+    },
+    "docs/repository-research/stablyai@orca/16-orca-怎样取消外部会话-先截住后续消息-再处理批准与中断.md": {
+      "sha256": "b45537c1f49be7747813151cf34b6b6d35b26ca1e4bf16552ce8310091b8bdc3",
+      "media_type": "text/markdown",
+      "size": 18898
+    },
+    "docs/repository-research/stablyai@orca/assets/16-orca-怎样取消外部会话-先截住后续消息-再处理批准与中断/orca-connector-cancel-order.svg": {
+      "sha256": "a5d2de4dcc041a41b76f3d51c731e53ff8d9541aec2f93d11786ef31c6cb0fa7",
+      "media_type": "image/svg+xml",
+      "size": 3661
+    },
+    "docs/repository-research/didi@helixharness/04-helixharness-平台怎样比较两个框架版本-并防止-完成-冒充-更好.md": {
+      "sha256": "60903a7e9d6f155d1c4fae54ee33dc002d6b8a73fd27599759a411bdd260f7e8",
+      "media_type": "text/markdown",
+      "size": 16556
+    },
+    "docs/repository-research/didi@helixharness/assets/04-helixharness-平台怎样比较两个框架版本-并防止-完成-冒充-更好/evaluation-pipeline.svg": {
+      "sha256": "2620dddf5366a2f4882b39154273ef4c0c982e90b349a06640a4484810be316d",
+      "media_type": "image/svg+xml",
+      "size": 3690
+    },
+    "docs/repository-research/paradevai@paradev/04-superset-怎样把代码工作交出去-主会话-任务队列与独立审阅的协作边界.md": {
+      "sha256": "53d496a753e0d5b849f9aaf665f70129a87029bab7205b240789674e913a1da2",
+      "media_type": "text/markdown",
+      "size": 19135
+    },
+    "docs/repository-research/paradevai@paradev/assets/04-superset-怎样把代码工作交出去-主会话-任务队列与独立审阅的协作边界/task-delegation.svg": {
+      "sha256": "b6cad6a7acbce56bed4015404891c1190178ea35bdbf40888a1fe148162d2e0d",
+      "media_type": "image/svg+xml",
+      "size": 2190
+    },
+    "docs/repository-research/stablyai@orca/17-orca-怎样判断代理结果尚未读过-完成去重-人在场证据与通知分流.md": {
+      "sha256": "ec8acbffc747dca033bf1ee34eb225bca0fa38970f7e30ee6cd7d81110e17a2b",
+      "media_type": "text/markdown",
+      "size": 19497
+    },
+    "docs/repository-research/stablyai@orca/assets/17-orca-怎样判断代理结果尚未读过-完成去重-人在场证据与通知分流/orca-attention-read-boundaries.svg": {
+      "sha256": "847b56ab2e325a30b2c51acc30ec80d163f8d9dfded4a3f54252b3f024c93821",
+      "media_type": "image/svg+xml",
+      "size": 4351
+    },
+    "docs/repository-research/batches/20261104-01.md": {
+      "sha256": "eb4821f6a5b12c49c69241b160fd63bc3310d85786bbf442a9e8c2919b85b4dc",
+      "media_type": "text/markdown",
+      "size": 3810
     }
   }
 }

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620">
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#334155"/></marker></defs>
+<rect width="1040" height="620" fill="#fafaf7"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#233244">
+<text x="36" y="40" font-size="25" font-weight="600">同一项修复，两份执行环境，一条汇报通道</text>
+<text x="36" y="70" font-size="15">示意：时间向下；实线为程序交接，虚线为主会话按提示词作出的委派决定</text>
+<path d="M175 135V535M515 135V535M870 135V535" stroke="#c6cdd1" stroke-width="2"/>
+<g font-size="19" font-weight="600" text-anchor="middle"><text x="175" y="112">主会话：接待与协调</text><text x="515" y="112">写入会话＋云工作区 A</text><text x="870" y="112">审阅会话＋云工作区 B</text></g>
+<g stroke="#334155" stroke-width="2" fill="none" marker-end="url(#a)"><path d="M175 174H515"/><path d="M515 303H175"/><path d="M870 459H175"/><path d="M175 506H515"/></g>
+<path d="M175 360H870" stroke="#334155" stroke-width="2" stroke-dasharray="7 5" fill="none" marker-end="url(#a)"/>
+<g font-size="16"><text x="212" y="162">start_task：任务编号、完整指令、环境</text><text x="543" y="210">排队 → 取得名额 → 配置环境</text><text x="543" y="239">工作进程取得远程工具地址后执行</text><text x="205" y="290">settleTurn → afterTaskTurn → 状态、报告、PR</text><text x="265" y="347">主会话决定 start_task(role=reviewer, taskId)</text><text x="650" y="396">另建环境；读取 PR 与写入者报告</text><text x="650" y="424">提示词要求检查、测试，不推送修改</text><text x="340" y="446">审阅回合结束，结果投递回主会话</text><text x="210" y="494">如需返工：message_task，继续原写入会话</text></g>
+<rect x="36" y="549" width="968" height="48" rx="6" fill="#e9efec"/>
+<text x="53" y="579" font-size="16">共同引用 tasks 记录；每个 task 会话保存自己的 cloudWorkspaceId。审阅与验收不由 done 状态自动证明。</text>
+</g></svg>

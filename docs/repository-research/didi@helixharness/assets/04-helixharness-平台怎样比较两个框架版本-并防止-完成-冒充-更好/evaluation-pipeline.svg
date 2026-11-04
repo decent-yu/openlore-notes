@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#49637a"/></marker>
+    <style>
+      .title{font:700 22px sans-serif;fill:#17324d}.h{font:700 17px sans-serif;fill:#17324d}.p{font:14px sans-serif;fill:#385267}.small{font:13px sans-serif;fill:#385267}.box{stroke:#8aa7bd;stroke-width:2;rx:14}.freeze{fill:#eaf3f8}.run{fill:#fff5df}.judge{fill:#edf7ee}.gate{fill:#fcebea}.note{fill:#f7f8fa;stroke:#bcc8d1;stroke-dasharray:5 4}
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="#fbfcfd"/>
+  <text x="48" y="42" class="title">一次 Formal Run 如何变成可比较的报告</text>
+  <text x="48" y="70" class="p">平台先冻结合同和场景版本，再分别执行 Base / Candidate，最后按业务门禁与评分规则聚合。</text>
+  <rect x="48" y="110" width="230" height="110" class="box freeze"/>
+  <text x="68" y="140" class="h">1. 预览后冻结</text>
+  <text x="68" y="166" class="small">发布且已校准的 Case</text><text x="68" y="188" class="small">提交、命令与评分规则</text>
+  <rect x="350" y="100" width="235" height="130" class="box run"/>
+  <text x="370" y="132" class="h">2. 后台执行</text>
+  <text x="370" y="158" class="small">隔离工作区与 Codex 配置</text><text x="370" y="180" class="small">检查点恢复、重试与租约</text><text x="370" y="202" class="small">保存轮次、资源和产物</text>
+  <rect x="655" y="90" width="235" height="150" class="box judge"/>
+  <text x="675" y="122" class="h">3. 独立业务检查</text>
+  <text x="675" y="148" class="small">F2P：新增行为从失败到通过</text><text x="675" y="170" class="small">P2P：既有行为继续通过</text><text x="675" y="192" class="small">执行错误 / 超时 → 无法判定</text><text x="675" y="214" class="small">业务失败 → 结果分记 0</text>
+  <rect x="955" y="90" width="215" height="150" class="box gate"/>
+  <text x="975" y="122" class="h">4. 评分与报告</text>
+  <text x="975" y="148" class="small">结果与工作流分别评分</text><text x="975" y="170" class="small">效率只用可归因资源</text><text x="975" y="192" class="small">按 Case 等权聚合</text><text x="975" y="214" class="small">推荐 / 无明显收益 / 不推荐</text>
+  <path d="M278 165 H342" stroke="#49637a" stroke-width="3" marker-end="url(#arrow)"/><path d="M585 165 H647" stroke="#49637a" stroke-width="3" marker-end="url(#arrow)"/><path d="M890 165 H947" stroke="#49637a" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="120" y="305" width="440" height="130" class="box note"/>
+  <text x="145" y="338" class="h">可比较性的边界</text>
+  <text x="145" y="365" class="small">双方业务均失败：排除该题，保留失败事实。</text>
+  <text x="145" y="388" class="small">任一侧业务无法判定：排除该题，不给推荐。</text>
+  <text x="145" y="411" class="small">部分可比较：报告覆盖率，并保留排除原因。</text>
+  <rect x="640" y="305" width="440" height="130" class="box note"/>
+  <text x="665" y="338" class="h">“候选更好”还要过什么</text>
+  <text x="665" y="365" class="small">默认容忍 1 项候选业务回归；超过便不推荐。</text>
+  <text x="665" y="388" class="small">统一分差 ≥ 5，且业务结果不下降，才推荐。</text>
+  <text x="665" y="411" class="small">输入含全局门禁时阻断；并不等于已自动检测。</text>
+<path d="M334 159 L344 165 L334 171 Z M639 159 L649 165 L639 171 Z M939 159 L949 165 L939 171 Z" fill="#49637a"/></svg>
