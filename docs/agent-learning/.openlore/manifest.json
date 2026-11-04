@@ -357,6 +357,45 @@
       "collected_at": "2026-11-03T00:09:38.790Z",
       "updated_at": "2026-11-03T00:09:38.790Z",
       "has_research": true
+    },
+    "art_7dd4a591-3829-4796-9860-d0648a8750f1": {
+      "collection_id": "col_22bc9b81-0f7",
+      "directory": "articles/20261104-how-we-optimized-browser-use-for-deep-agents",
+      "slug": "how-we-optimized-browser-use-for-deep-agents",
+      "title": "How We Optimized Browser Use for Deep Agents",
+      "original_url": "https://www.langchain.com/blog/how-we-optimized-browser-use-for-deep-agents",
+      "tags": [
+        "浏览器代理",
+        "Stagehand",
+        "上下文工程",
+        "Chrome DevTools Protocol",
+        "LangSmith",
+        "WebVoyager",
+        "HardBench",
+        "WebTailBench"
+      ],
+      "collected_at": "2026-11-04T02:26:28.144Z",
+      "updated_at": "2026-11-04T02:26:28.144Z",
+      "has_research": true
+    },
+    "art_878c7b61-ed39-4cf6-9216-ac94d6edb0fc": {
+      "collection_id": "col_22bc9b81-0f7",
+      "directory": "articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too",
+      "slug": "qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too",
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "original_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+      "tags": [
+        "大语言模型",
+        "模型权重分析",
+        "权重空间编程",
+        "强化学习",
+        "模型评测",
+        "Qwen",
+        "神经网络可解释性"
+      ],
+      "collected_at": "2026-11-04T02:26:28.144Z",
+      "updated_at": "2026-11-04T02:26:28.144Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -462,6 +501,15 @@
         "art_4ac182d1-797e-4e62-be84-11691ad759cd",
         "art_e073af39-014b-403a-b9a7-20f19fb51f1a"
       ]
+    },
+    "col_22bc9b81-0f7": {
+      "path": "docs/agent-learning/batches/20261104-01.md",
+      "date_sequence": "20261104-01",
+      "created_at": "2026-11-04T02:26:28.144Z",
+      "article_ids": [
+        "art_7dd4a591-3829-4796-9860-d0648a8750f1",
+        "art_878c7b61-ed39-4cf6-9216-ac94d6edb0fc"
+      ]
     }
   },
   "delivered_batches": [
@@ -481,13 +529,14 @@
     "batch_01ce9c93-d8c4-4c17-a51f-efd7ca8c84a5",
     "batch_d93a14a0-4e15-4104-9344-259170bd608e",
     "batch_24d7e4ba-c4de-4e87-a9ad-cd142ed45207",
-    "batch_028990fd-b763-40e9-972e-0e2a078cdba2"
+    "batch_028990fd-b763-40e9-972e-0e2a078cdba2",
+    "batch_cee9fd2e-8e05-42fc-9806-52aefdd17b59"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "3a4a6f42da3ad590710895b10e9ce9ea6aba57342539288c36a306cb9a513d93",
+      "sha256": "95b8cb1c9eadefbe3b9fe7e77f5e5d0626ad55c98caa8703ddc18d5d8a6b23c3",
       "media_type": "text/markdown",
-      "size": 13643
+      "size": 15084
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -1513,6 +1562,86 @@
       "sha256": "67454b7a7f6ab21192325da177665d65a895d92af87a1f37de78b5b06535b18a",
       "media_type": "text/markdown",
       "size": 686
+    },
+    "docs/agent-learning/articles/20261104-how-we-optimized-browser-use-for-deep-agents/README.md": {
+      "sha256": "9de4517342ba28ac880f412350b07aadd710d2b66b201e741fdca52338364ca7",
+      "media_type": "text/markdown",
+      "size": 512
+    },
+    "docs/agent-learning/articles/20261104-how-we-optimized-browser-use-for-deep-agents/article.md": {
+      "sha256": "7b264f426984b338c01abfc53871d950c5263ed5fc81033ff102663f8e6bb5a8",
+      "media_type": "text/markdown",
+      "size": 16849
+    },
+    "docs/agent-learning/articles/20261104-how-we-optimized-browser-use-for-deep-agents/article-zh-CN.md": {
+      "sha256": "15222f424c68422d9e33b3fc1e4f1075705d73cbf5359d25c881e8a4c0892f37",
+      "media_type": "text/markdown",
+      "size": 18423
+    },
+    "docs/agent-learning/articles/20261104-how-we-optimized-browser-use-for-deep-agents/research.md": {
+      "sha256": "00d6a391bc65a50afe12979e5ede6ef2df53b5340725f87b63e3448bf61f51b5",
+      "media_type": "text/markdown",
+      "size": 14741
+    },
+    "docs/agent-learning/articles/20261104-how-we-optimized-browser-use-for-deep-agents/assets/diagram-0f50bf5cf961.png": {
+      "sha256": "0f50bf5cf961f5d72976635e09890925908362301dffb9d453e983b22985155b",
+      "media_type": "image/png",
+      "size": 256860
+    },
+    "docs/agent-learning/articles/20261104-how-we-optimized-browser-use-for-deep-agents/assets/diagram-349ea4264e79.gif": {
+      "sha256": "349ea4264e7950403692a6bdfa1f322cf99e7e48022d5beb651c093854ec99b1",
+      "media_type": "image/gif",
+      "size": 223090
+    },
+    "docs/agent-learning/articles/20261104-how-we-optimized-browser-use-for-deep-agents/assets/diagram-e2e7a0c389b4.png": {
+      "sha256": "e2e7a0c389b4d392e3024cac5754136a4619d2f1628fabf900e2da9baac71b63",
+      "media_type": "image/png",
+      "size": 128822
+    },
+    "docs/agent-learning/articles/20261104-how-we-optimized-browser-use-for-deep-agents/assets/diagram-c54d35a5d6f1.png": {
+      "sha256": "c54d35a5d6f1d2d88e654dce3b78be46520b6ce7c5f8e621513a66e17c04f431",
+      "media_type": "image/png",
+      "size": 73484
+    },
+    "docs/agent-learning/articles/20261104-how-we-optimized-browser-use-for-deep-agents/assets/browser-agent-loop.svg": {
+      "sha256": "3e7eb1dd16732a399a3641345668068e6b865b1df0491afbfcf18f12dcb9eb5b",
+      "media_type": "image/svg+xml",
+      "size": 3502
+    },
+    "docs/agent-learning/articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/README.md": {
+      "sha256": "c1742d122eedd4b494bf9f57e7f9276f2771a31ac03a251fd881ef24a07bca60",
+      "media_type": "text/markdown",
+      "size": 517
+    },
+    "docs/agent-learning/articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/article.md": {
+      "sha256": "1f48149307505c7257a55195158d8c12bbcf23c0a8c4502cb37efdb5adc6fa6f",
+      "media_type": "text/markdown",
+      "size": 11603
+    },
+    "docs/agent-learning/articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/article-zh-CN.md": {
+      "sha256": "75412f75572865874b6a00e73994e7972c2b71ce8047cfe1bf6576f1af03a2d2",
+      "media_type": "text/markdown",
+      "size": 12110
+    },
+    "docs/agent-learning/articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/research.md": {
+      "sha256": "d7486cb3792f040b60be49d4d283ce6b0ec2a6679b3d4bd1050a387b5eabe800",
+      "media_type": "text/markdown",
+      "size": 14546
+    },
+    "docs/agent-learning/articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/assets/weights-to-game.png": {
+      "sha256": "2413254733d2eb43700ab573d9b034739dbea49adc5a880309a4efb29753aa65",
+      "media_type": "image/png",
+      "size": 165841
+    },
+    "docs/agent-learning/articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/assets/weights-to-game.svg": {
+      "sha256": "321206c66d403c3909e9177b357246a68918646fb144ba2e02941e3d7a4b5624",
+      "media_type": "image/svg+xml",
+      "size": 23266
+    },
+    "docs/agent-learning/batches/20261104-01.md": {
+      "sha256": "fee8b5ba5add3704fbec884bc26f74bda9fdcf163884136e146b61c4abd4bb75",
+      "media_type": "text/markdown",
+      "size": 831
     }
   }
 }

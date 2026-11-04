@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="700" viewBox="0 0 1120 700" role="img" aria-labelledby="title desc">
+<title id="title">模型负责观察和判断，程序负责连续执行</title>
+<desc id="desc">假设订位场景示意。模型先读取带编号的页面快照，再提交包含填写人数、时间、姓名、提交和读取确认的操作。浏览器附近的程序连续执行，只返回结果或错误。新页面或新分支出现时重新观察。</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#386779" stroke-width="1.5"/></marker></defs>
+<rect width="1120" height="700" fill="#f6f8f7"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#18333d">
+<text x="42" y="49" font-size="27" font-weight="600">模型少往返，网页动作照常执行</text>
+<text x="42" y="80" font-size="17" fill="#506670">假设订位场景 · 从上往下读 · 箭头表示请求或返回，不代表耗时比例</text>
+<rect x="40" y="113" width="310" height="520" rx="15" fill="#e7eff2"/>
+<rect x="465" y="113" width="615" height="520" rx="15" fill="#fff" stroke="#c8d7d5"/>
+<text x="63" y="150" font-size="21" font-weight="600">模型：观察、判断</text>
+<text x="490" y="150" font-size="21" font-weight="600">执行程序与浏览器：连续操作</text>
+<text x="65" y="206" font-size="19">① 读取页面快照</text>
+<path d="M280 211H440" stroke="#386779" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="491" y="202" font-size="18">snapshot 返回文字结构与元素编号</text>
+<text x="491" y="232" font-size="16" fill="#506670">人数框 [0-1]　时间框 [0-2]　提交按钮 [0-7]</text>
+<path d="M471 252H370" stroke="#386779" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="65" y="293" font-size="19">② 写出一段操作</text>
+<text x="65" y="322" font-size="16" fill="#506670">已确认字段与步骤后</text>
+<text x="65" y="346" font-size="16" fill="#506670">一次调用 run</text>
+<path d="M280 316H440" stroke="#386779" stroke-width="2" marker-end="url(#arrow)"/>
+<g fill="#e5f3ed" stroke="#b6d6c6"><rect x="491" y="278" width="562" height="62" rx="8"/><rect x="491" y="365" width="562" height="62" rx="8"/><rect x="491" y="452" width="562" height="62" rx="8"/></g>
+<text x="511" y="315" font-size="19">填写人数、选择时间、填写姓名</text>
+<path d="M773 342V360" stroke="#386779" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="511" y="402" font-size="19">提交表单 → 读取确认内容</text>
+<path d="M773 429V447" stroke="#386779" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="511" y="489" font-size="19">提取所需结果；中间数据留在程序里</text>
+<path d="M489 550H371" stroke="#386779" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="65" y="542" font-size="19">③ 接收结果或错误</text>
+<text x="65" y="573" font-size="16" fill="#506670">有新选择、报错或页面改变</text>
+<text x="65" y="598" font-size="16" fill="#506670">再观察，再决定下一步</text>
+<text x="491" y="558" font-size="18">返回确认信息，或返回需要处理的异常</text>
+<text x="491" y="591" font-size="16" fill="#506670">不要求每填写一个字段就重新调用模型</text>
+<text x="42" y="671" font-size="16" fill="#506670">机制示意，依据 LangChain 原文与 Stagehand 集成文档；不表示所有动态表单都能一次执行完。</text>
+</g></svg>
