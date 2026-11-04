@@ -1291,6 +1291,54 @@
       "has_research": true,
       "reading_path": "stablyai@orca/17-orca-怎样判断代理结果尚未读过-完成去重-人在场证据与通知分流.md",
       "research_path": "stablyai@orca/17-orca-怎样判断代理结果尚未读过-完成去重-人在场证据与通知分流.md"
+    },
+    "art_b50f983b-8734-42ca-8f05-0f3aa9945b36": {
+      "collection_id": "col_3520ee1d-988",
+      "directory": "didi@helixharness/05-helixharness-如何把-codex-的入口上下文冻结-分页并安全交给工作流",
+      "slug": "helixharness-如何把-codex-的入口上下文冻结-分页并安全交给工作流",
+      "title": "HelixHarness 如何把 Codex 的入口上下文冻结、分页并安全交给工作流",
+      "original_url": "https://github.com/didi/helixharness",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-11-04T21:09:03.974Z",
+      "updated_at": "2026-11-04T21:09:03.974Z",
+      "has_research": true,
+      "reading_path": "didi@helixharness/05-helixharness-如何把-codex-的入口上下文冻结-分页并安全交给工作流.md",
+      "research_path": "didi@helixharness/05-helixharness-如何把-codex-的入口上下文冻结-分页并安全交给工作流.md"
+    },
+    "art_62f0ebf5-1a8a-4796-9035-d5b10d47f076": {
+      "collection_id": "col_3520ee1d-988",
+      "directory": "paradevai@paradev/05-查询超时以后-git-停了吗-superset-主机线程池的调度-收尾与降级边界",
+      "slug": "查询超时以后-git-停了吗-superset-主机线程池的调度-收尾与降级边界",
+      "title": "查询超时以后，Git 停了吗：Superset 主机线程池的调度、收尾与降级边界",
+      "original_url": "https://github.com/ParadevAI/Paradev",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-11-04T21:09:03.974Z",
+      "updated_at": "2026-11-04T21:09:03.974Z",
+      "has_research": true,
+      "reading_path": "paradevai@paradev/05-查询超时以后-git-停了吗-superset-主机线程池的调度-收尾与降级边界.md",
+      "research_path": "paradevai@paradev/05-查询超时以后-git-停了吗-superset-主机线程池的调度-收尾与降级边界.md"
+    },
+    "art_45c2b426-cc17-451a-a6be-6c53c83fac15": {
+      "collection_id": "col_3520ee1d-988",
+      "directory": "stablyai@orca/18-orca-怎样预览代理生成的文件-读取凭证-分段加载与主机身份边界",
+      "slug": "orca-怎样预览代理生成的文件-读取凭证-分段加载与主机身份边界",
+      "title": "Orca 怎样预览代理生成的文件：读取凭证、分段加载与主机身份边界",
+      "original_url": "https://github.com/stablyai/orca",
+      "tags": [
+        "GitHub",
+        "仓库研读"
+      ],
+      "collected_at": "2026-11-04T21:09:03.974Z",
+      "updated_at": "2026-11-04T21:09:03.974Z",
+      "has_research": true,
+      "reading_path": "stablyai@orca/18-orca-怎样预览代理生成的文件-读取凭证-分段加载与主机身份边界.md",
+      "research_path": "stablyai@orca/18-orca-怎样预览代理生成的文件-读取凭证-分段加载与主机身份边界.md"
     }
   },
   "collection_locations": {
@@ -1472,6 +1520,16 @@
         "art_c50096f1-93a7-4d1d-92a0-17c996c34b28",
         "art_d8d61d13-a2ed-45d5-8b7a-d6eb42fc2d3d"
       ]
+    },
+    "col_3520ee1d-988": {
+      "path": "docs/repository-research/batches/20261105-01.md",
+      "date_sequence": "20261105-01",
+      "created_at": "2026-11-04T21:09:03.974Z",
+      "article_ids": [
+        "art_b50f983b-8734-42ca-8f05-0f3aa9945b36",
+        "art_62f0ebf5-1a8a-4796-9035-d5b10d47f076",
+        "art_45c2b426-cc17-451a-a6be-6c53c83fac15"
+      ]
     }
   },
   "delivered_batches": [
@@ -1489,7 +1547,8 @@
     "batch_ce6da51d-a279-40d1-a7ea-f2f4c69be528",
     "batch_dc6aede8-b487-4c7a-a727-73f149d0d1ad",
     "batch_953d3650-0958-465b-ab87-d91dab8ff945",
-    "batch_2147383c-0114-4b5a-b4e6-460740cea19c"
+    "batch_2147383c-0114-4b5a-b4e6-460740cea19c",
+    "batch_a0804d79-cc84-43ff-be52-f72901983a8e"
   ],
   "managed_files": {
     "docs/repository-research/stablyai@orca/01-orca-如何组织多个编码代理-从独立工作区到终端-聊天与故障恢复.md": {
@@ -1513,9 +1572,9 @@
       "size": 782
     },
     "docs/repository-research/README.md": {
-      "sha256": "1be3434804858c952b18b227aa3b117193086b9df0aab7b22ede655e989b09a0",
+      "sha256": "2a3780cfe6c6446b1cb7f0e03192468ab6c3fc4d6addd519375b0dd8c7ebc981",
       "media_type": "text/markdown",
-      "size": 104181
+      "size": 108032
     },
     "docs/repository-research/yetone@cumora/01-cumora-如何把团队消息变成-agent-的协作行动.md": {
       "sha256": "1cc1e062c6a2a5e0e92902a315ee6c5486af5795828ad37ea18060ab6a3a4451",
@@ -2466,6 +2525,41 @@
       "sha256": "eb4821f6a5b12c49c69241b160fd63bc3310d85786bbf442a9e8c2919b85b4dc",
       "media_type": "text/markdown",
       "size": 3810
+    },
+    "docs/repository-research/didi@helixharness/05-helixharness-如何把-codex-的入口上下文冻结-分页并安全交给工作流.md": {
+      "sha256": "a7d8b89efc616c3f78fe60df9e5d464d3f9ebe49d4e05d278bfd2bbed1829d16",
+      "media_type": "text/markdown",
+      "size": 15611
+    },
+    "docs/repository-research/didi@helixharness/assets/05-helixharness-如何把-codex-的入口上下文冻结-分页并安全交给工作流/codex-entry-loading.svg": {
+      "sha256": "586a4d6dd1d7282dbe9501d45b46df612b3c4dc8656c44057994a953f2cad406",
+      "media_type": "image/svg+xml",
+      "size": 5418
+    },
+    "docs/repository-research/paradevai@paradev/05-查询超时以后-git-停了吗-superset-主机线程池的调度-收尾与降级边界.md": {
+      "sha256": "12e6d0b67b6cf238270950af2d22915df4d48b729878a3bd7df76e05243152bd",
+      "media_type": "text/markdown",
+      "size": 18151
+    },
+    "docs/repository-research/paradevai@paradev/assets/05-查询超时以后-git-停了吗-superset-主机线程池的调度-收尾与降级边界/worker-timeouts.svg": {
+      "sha256": "6c5b5dca5e2081efff3d5a599206ec86b936dbca3346e2ba104f07723ab4bf9f",
+      "media_type": "image/svg+xml",
+      "size": 2875
+    },
+    "docs/repository-research/stablyai@orca/18-orca-怎样预览代理生成的文件-读取凭证-分段加载与主机身份边界.md": {
+      "sha256": "a3f6dd4e3b33b41a9b8ac4f5a1f26216f672654a070781977a5f6c97eea0d340",
+      "media_type": "text/markdown",
+      "size": 17417
+    },
+    "docs/repository-research/stablyai@orca/assets/18-orca-怎样预览代理生成的文件-读取凭证-分段加载与主机身份边界/orca-preview-read-boundaries.svg": {
+      "sha256": "6e640f831362b98aa69ff77d76ec0472ffd161afc8f3071fdd5b401794631209",
+      "media_type": "image/svg+xml",
+      "size": 2765
+    },
+    "docs/repository-research/batches/20261105-01.md": {
+      "sha256": "8e5b9a0adb6c1e88dc1fe914afc48f70569be74565aa77159c71e917c8c3d152",
+      "media_type": "text/markdown",
+      "size": 2004
     }
   }
 }

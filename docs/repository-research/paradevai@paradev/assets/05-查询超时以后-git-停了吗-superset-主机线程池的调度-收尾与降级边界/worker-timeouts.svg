@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="610" viewBox="0 0 1000 610">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="none" stroke="#475569" stroke-width="1.5"/></marker></defs>
+<rect width="1000" height="610" fill="#f8fafc"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#172b42">
+<text x="44" y="48" font-size="27" font-weight="600">一次查询，两处计时，三种“结束”</text>
+<text x="44" y="79" font-size="16" fill="#536579">以 getCommitFiles 为例；顺序示意，不按时长比例绘制</text>
+<path d="M230 132H940" stroke="#475569" marker-end="url(#arrow)"/>
+<text x="44" y="138" font-size="18">事件顺序 →</text>
+<text x="235" y="117" font-size="15">进入接口</text><text x="454" y="117" font-size="15">派发给线程</text><text x="722" y="117" font-size="15">收尾与退出</text>
+<path d="M240 147V455M466 147V455M748 147V455" stroke="#cbd5e1" stroke-dasharray="4 6"/>
+<text x="44" y="190" font-size="19" font-weight="600">接口等待</text>
+<rect x="240" y="166" width="365" height="40" rx="5" fill="#cde5f5"/>
+<text x="257" y="192" font-size="16">准备、排队和执行都占用接口预算</text>
+<circle cx="605" cy="186" r="6" fill="#c05a27"/>
+<text x="625" y="191" font-size="16" fill="#a14821">① 接口可能先报超时</text>
+<text x="44" y="270" font-size="19" font-weight="600">线程任务</text>
+<rect x="240" y="245" width="226" height="40" rx="5" fill="#e2e8f0"/>
+<text x="263" y="272" font-size="16">排队：任务计时未启动</text>
+<rect x="466" y="245" width="282" height="40" rx="5" fill="#c9e9dc"/>
+<text x="481" y="272" font-size="16">派发后才启动任务的 15 秒计时</text>
+<circle cx="748" cy="265" r="6" fill="#c05a27"/>
+<text x="768" y="270" font-size="16" fill="#a14821">② 任务超时，拒绝结果</text>
+<text x="44" y="350" font-size="19" font-weight="600">线程与子进程</text>
+<path d="M466 344H748" stroke="#388368" stroke-width="4"/>
+<path d="M748 344H930" stroke="#c05a27" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="480" y="330" font-size="16">Git 在工作线程中运行</text>
+<text x="759" y="325" font-size="15">请求协作关闭</text>
+<text x="759" y="374" font-size="15">杀死并等待回收已跟踪子进程</text>
+<text x="759" y="399" font-size="15">默认宽限 5 秒，再强制终止线程</text>
+<text x="759" y="438" font-size="16" fill="#a14821">③ 实际资源退出</text>
+<rect x="44" y="480" width="912" height="88" rx="6" fill="#fff2df"/>
+<text x="62" y="509" font-size="17" font-weight="600">关键边界</text>
+<text x="62" y="538" font-size="16">接口超时只停止等待；本入口未转发取消信号。退回主线程执行时，任务超时也不停止处理函数。</text>
+</g></svg>

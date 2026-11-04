@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="690" viewBox="0 0 1100 690">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10" fill="#315e78"/></marker></defs>
+<rect width="1100" height="690" fill="#fcfbf7"/>
+<g font-family="PingFang SC, Noto Sans CJK SC, sans-serif" fill="#213b49">
+<text x="42" y="48" font-size="27" font-weight="600">打开预览，只登记读取入口；实际读取仍有边界</text>
+<text x="42" y="80" font-size="16">桌面编辑器的图片、PDF 与音视频路径 · 箭头表示请求，不表示复制整份文件</text>
+<path d="M365 110V526 M735 110V526" stroke="#c5d1d5" stroke-dasharray="6 6"/>
+<g font-size="21" font-weight="600"><text x="50" y="137">查看器</text><text x="401" y="137">桌面主进程</text><text x="778" y="137">文件所在机器</text></g>
+<g font-size="17"><text x="50" y="190">请求打开某个文件</text><text x="401" y="190">登记随机令牌 → 目标、窗口、类型</text>
+<path d="M224 185H387" stroke="#315e78" stroke-width="2" marker-end="url(#a)"/>
+<text x="50" y="238">收到 orca-media 地址</text><path d="M610 229H303" stroke="#315e78" stroke-width="2" marker-end="url(#a)"/>
+<text x="50" y="302">图片 / 音视频元素加载</text><text x="401" y="302">凭令牌找到登记项</text>
+<path d="M268 296H387" stroke="#315e78" stroke-width="2" marker-end="url(#a)"/>
+<text x="50" y="359">PDF 经进程桥请求字节区间</text><text x="401" y="359">再核对请求窗口与 PDF 类型</text>
+<path d="M289 353H387" stroke="#315e78" stroke-width="2" marker-end="url(#a)"/>
+<path d="M615 390H764" stroke="#315e78" stroke-width="2" marker-end="url(#a)"/>
+<text x="401" y="417">按需读取；远程每块 ≤ 256 KiB</text>
+<text x="778" y="298">本地：重新核对路径权限</text><text x="778" y="329">打开普通文件后读取</text>
+<text x="778" y="389">远程：配对版本仍须相符</text><text x="778" y="420">宿主检查路径并返回读块</text>
+<text x="50" y="482">页面离开 / 窗口销毁</text><path d="M249 476H387" stroke="#315e78" stroke-width="2" marker-end="url(#a)"/>
+<text x="401" y="482">撤销该窗口登记项</text><text x="778" y="482">重新配对：旧地址不跟随新主机</text></g>
+<path d="M42 540H1058" stroke="#afbec4"/>
+<text x="42" y="578" font-size="21" font-weight="600">两个不能混同的限制</text>
+<g font-size="17"><text x="42" y="613">读取量：视频与 PDF 分块；图片仍可能整体解码，另有体积和可识别尺寸检查。</text><text x="42" y="645">读取资格：协议仅装在应用会话；PDF 加验窗口。元素加载处理器自身不按窗口逐次鉴权。</text></g>
+</g></svg>

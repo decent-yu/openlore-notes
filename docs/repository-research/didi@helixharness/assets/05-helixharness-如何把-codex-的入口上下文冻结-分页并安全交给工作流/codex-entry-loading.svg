@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620" role="img" aria-labelledby="title desc">
+  <title id="title">HelixHarness Codex 入口资源加载链</title>
+  <desc id="desc">从薄 Skill 到 prepare、分页读取、finish，以及失败边界的流程图。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#355070"/>
+    </marker>
+    <style>
+      .title{font:700 24px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif;fill:#172033}
+      .label{font:600 16px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif;fill:#172033}
+      .small{font:14px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif;fill:#334155}
+      .tiny{font:13px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif;fill:#475569}
+    </style>
+  </defs>
+  <rect width="1180" height="620" fill="#f8fafc"/>
+  <text x="48" y="48" class="title">Codex 入口如何把一个命令冻结成可续读快照</text>
+  <text x="48" y="76" class="small">逻辑上最多两包；每页单独返回，完成前不能跳过或改读另一份安装。</text>
+
+  <rect x="48" y="120" width="210" height="116" rx="14" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="70" y="151" class="label">薄 Skill</text>
+  <text x="70" y="178" class="small">读取 skill-entry.md</text>
+  <text x="70" y="201" class="small">runtime preflight</text>
+  <text x="70" y="224" class="tiny">一次 prepare</text>
+
+  <rect x="310" y="105" width="250" height="146" rx="14" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="332" y="137" class="label">prepare_entry()</text>
+  <text x="332" y="164" class="small">校验 host.json / projection</text>
+  <text x="332" y="187" class="small">解析 command allowlist</text>
+  <text x="332" y="210" class="small">读取并冻结资源快照</text>
+  <text x="332" y="233" class="tiny">源文件 SHA-256 + 15 分钟 TTL</text>
+
+  <rect x="620" y="105" width="250" height="146" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="642" y="137" class="label">私有 invocation 状态</text>
+  <text x="642" y="164" class="small">manifest.json</text>
+  <text x="642" y="187" class="small">page-*.txt（只读快照）</text>
+  <text x="642" y="210" class="small">progress / owner 标记</text>
+  <text x="642" y="233" class="tiny">不写项目仓库，不保存 runtime handle</text>
+
+  <rect x="930" y="105" width="202" height="146" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="952" y="137" class="label">ready 回执</text>
+  <text x="952" y="164" class="small">invocation_key</text>
+  <text x="952" y="187" class="small">每包 page_count</text>
+  <text x="952" y="210" class="small">资源路径与 hash</text>
+  <text x="952" y="233" class="tiny">不含正文</text>
+
+  <path d="M258 178 H310" stroke="#355070" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M560 178 H620" stroke="#355070" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M870 178 H930" stroke="#355070" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="115" y="340" width="270" height="156" rx="14" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+  <text x="139" y="374" class="label">read-page（顺序）</text>
+  <text x="139" y="402" class="small">page_index = 当前进度</text>
+  <text x="139" y="425" class="small">校验 page_sha256</text>
+  <text x="139" y="448" class="small">拼接 resource_page_index</text>
+  <text x="139" y="476" class="tiny">重复当前页可幂等重读；跳页阻断</text>
+
+  <rect x="455" y="340" width="270" height="156" rx="14" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+  <text x="479" y="374" class="label">第二逻辑包（可选）</text>
+  <text x="479" y="402" class="small">只加载命令允许的 adapter</text>
+  <text x="479" y="425" class="small">subagent / telemetry / UT</text>
+  <text x="479" y="448" class="small">必须先读完第一包</text>
+  <text x="479" y="476" class="tiny">不允许第三包或重新发现资源</text>
+
+  <rect x="795" y="340" width="270" height="156" rx="14" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="819" y="374" class="label">finish</text>
+  <text x="819" y="402" class="small">检查所有 progress 已到末页</text>
+  <text x="819" y="425" class="small">成功后删除 invocation 状态</text>
+  <text x="819" y="448" class="small">工作流才消费完整契约</text>
+  <text x="819" y="476" class="tiny">缺页、过期、篡改均失败关闭</text>
+
+  <path d="M1030 251 C1030 292 250 292 250 340" fill="none" stroke="#355070" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M385 418 H455" stroke="#355070" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M725 418 H795" stroke="#355070" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M930 496 C930 548 560 548 560 496" fill="none" stroke="#355070" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="48" y="548" width="1084" height="42" rx="10" fill="#fff1f2" stroke="#e11d48"/>
+  <text x="68" y="575" class="small">失败边界：资源缺失、路径越界、编码/大小超限、hash 不符、TTL 过期或调用顺序错误 → CLI 返回 blocked，不能猜测旧缓存或其他插件版本。</text>
+</svg>
