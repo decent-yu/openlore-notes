@@ -2,12 +2,13 @@
 
 关注 Agent 前沿技术、新能力与发展趋势，持续发现有价值的研究、框架和应用进展。
 
-## 最近收录（21 篇）
+## 最近收录（22 篇）
 
 按首次收录时间从新到旧排列；更新旧文章不改变收录日期和目录。
 
 | 收录日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261105 | [See the agents, set the terms: new visibility and control for personal agents](articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/README.md) | [简体中文](articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/article-zh-CN.md) | [调研](articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/research.md) |
 | 20261104 | [How We Optimized Browser Use for Deep Agents](articles/20261104-how-we-optimized-browser-use-for-deep-agents/README.md) | [简体中文](articles/20261104-how-we-optimized-browser-use-for-deep-agents/article-zh-CN.md) | [调研](articles/20261104-how-we-optimized-browser-use-for-deep-agents/research.md) |
 | 20261104 | [Qwen 3.8 27B on my laptop can interpret model weights, too](articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/README.md) | [简体中文](articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/article-zh-CN.md) | [调研](articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/research.md) |
 | 20261103 | [dbreunig/nesformer](articles/20261103-dbreunig-nesformer/README.md) | [简体中文](articles/20261103-dbreunig-nesformer/article-zh-CN.md) | [调研](articles/20261103-dbreunig-nesformer/research.md) |
@@ -34,6 +35,7 @@
 
 | 更新日期 | 文章 | 中文阅读 | 深度调研 |
 | --- | --- | --- | --- |
+| 20261105 | [See the agents, set the terms: new visibility and control for personal agents](articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/README.md) | [简体中文](articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/article-zh-CN.md) | [调研](articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/research.md) |
 | 20261104 | [How We Optimized Browser Use for Deep Agents](articles/20261104-how-we-optimized-browser-use-for-deep-agents/README.md) | [简体中文](articles/20261104-how-we-optimized-browser-use-for-deep-agents/article-zh-CN.md) | [调研](articles/20261104-how-we-optimized-browser-use-for-deep-agents/research.md) |
 | 20261104 | [Qwen 3.8 27B on my laptop can interpret model weights, too](articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/README.md) | [简体中文](articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/article-zh-CN.md) | [调研](articles/20261104-qwen-3-8-27b-on-my-laptop-can-interpret-model-weights-too/research.md) |
 | 20261103 | [dbreunig/nesformer](articles/20261103-dbreunig-nesformer/README.md) | [简体中文](articles/20261103-dbreunig-nesformer/article-zh-CN.md) | [调研](articles/20261103-dbreunig-nesformer/research.md) |
@@ -58,6 +60,7 @@
 
 ## 采集批次
 
+- [20261105-01](batches/20261105-01.md)（1 篇）
 - [20261104-01](batches/20261104-01.md)（2 篇）
 - [20261103-01](batches/20261103-01.md)（2 篇）
 - [20261102-01](batches/20261102-01.md)（1 篇）

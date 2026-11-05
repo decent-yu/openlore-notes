@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="720" viewBox="0 0 1080 720" role="img" aria-labelledby="title desc">
+  <title id="title">代理身份、账户关联与用户授权的边界</title>
+  <desc id="desc">用户经个人代理访问网站。Cloudflare 的代理识别支持流量分析与访问政策；已识别登录和注册事件可有条件关联账户。用户授权范围仍不能由这些信息推出。本图是概念关系，不表示内部执行顺序。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10" fill="none" stroke="#496577" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1080" height="720" fill="#f6f8fa"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#183647">
+    <text x="44" y="52" font-size="28" font-weight="700">认出代理 ≠ 证明用户授权</text>
+    <text x="44" y="84" font-size="16" fill="#586e7b">从左向右看请求路径；下方展示两种信息用途与尚未解决的边界。</text>
+    <g fill="#fff" stroke="#adc0ca" stroke-width="1.5">
+      <rect x="44" y="126" width="160" height="88" rx="12"/>
+      <rect x="272" y="126" width="178" height="88" rx="12"/>
+      <rect x="520" y="126" width="250" height="88" rx="12" stroke="#287c87"/>
+      <rect x="878" y="126" width="158" height="88" rx="12"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="124" y="163" font-size="21" font-weight="600">用户</text><text x="124" y="191" font-size="16">发出任务指令</text>
+      <text x="361" y="163" font-size="21" font-weight="600">个人代理</text><text x="361" y="191" font-size="16">代用户发出请求</text>
+      <text x="645" y="163" font-size="21" font-weight="600">Cloudflare</text><text x="645" y="191" font-size="16">核验、识别代理来源</text>
+      <text x="957" y="163" font-size="21" font-weight="600">网站</text><text x="957" y="191" font-size="16">检查业务权限</text>
+    </g>
+    <g stroke="#496577" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <path d="M204 170H262"/><path d="M450 170H510"/><path d="M770 170H868"/>
+      <path d="M596 214V256H285V298"/><path d="M693 214V256H795V298"/>
+    </g>
+    <text x="824" y="151" text-anchor="middle" font-size="15" fill="#586e7b">符合访问政策</text>
+    <rect x="44" y="308" width="482" height="198" rx="14" fill="#e3f2f0"/>
+    <text x="68" y="343" font-size="22" font-weight="700">哪个代理来访？</text>
+    <text x="68" y="377" font-size="18">按代理查看路径、请求量与响应结果</text>
+    <text x="68" y="410" font-size="18">为支持的代理分别选择访问政策</text>
+    <text x="68" y="447" font-size="16" fill="#315c61">依据：代理识别结果与站点配置</text>
+    <text x="68" y="477" font-size="16" fill="#315c61">不等于：任务完成或交易成功</text>
+    <rect x="550" y="308" width="486" height="198" rx="14" fill="#e8eef9"/>
+    <text x="574" y="343" font-size="22" font-weight="700">涉及哪个账户？</text>
+    <text x="574" y="377" font-size="18">账户滥用防护关联助手与账户事件</text>
+    <text x="574" y="410" font-size="18">调查后可针对账户设置防护规则</text>
+    <text x="574" y="447" font-size="16" fill="#425b81">前提：开通功能、正确识别端点与助手</text>
+    <text x="574" y="477" font-size="16" fill="#425b81">当前范围：登录和注册事件</text>
+    <path d="M44 546H1036" stroke="#bb8849" stroke-width="2" stroke-dasharray="7 6"/>
+    <rect x="44" y="570" width="992" height="104" rx="12" fill="#fff2df"/>
+    <text x="68" y="606" font-size="22" font-weight="700" fill="#785322">用户允许它做什么？仍不能由上面的信息推出</text>
+    <text x="68" y="641" font-size="18" fill="#785322">读取订阅内容、允许购买的金额、委托期限与责任归属，需要额外上下文与授权机制。</text>
+    <text x="44" y="702" font-size="14" fill="#637885">依据 Cloudflare 公告与官方文档整理；概念关系示意，不表示内部规则执行顺序。</text>
+  </g>
+</svg>

@@ -396,6 +396,25 @@
       "collected_at": "2026-11-04T02:26:28.144Z",
       "updated_at": "2026-11-04T02:26:28.144Z",
       "has_research": true
+    },
+    "art_e17e507a-4b5e-4143-a6a0-d9f6796e5f17": {
+      "collection_id": "col_64427667-ba8",
+      "directory": "articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents",
+      "slug": "see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents",
+      "title": "See the agents, set the terms: new visibility and control for personal agents",
+      "original_url": "https://blog.cloudflare.com/personal-agents-visibility-control",
+      "tags": [
+        "Personal agents",
+        "Security Analytics",
+        "Bot Analysis",
+        "Account Abuse Protection",
+        "WAF",
+        "AI Crawler and Agent access policies",
+        "反欺诈"
+      ],
+      "collected_at": "2026-11-05T00:07:25.445Z",
+      "updated_at": "2026-11-05T00:07:25.445Z",
+      "has_research": true
     }
   },
   "collection_locations": {
@@ -510,6 +529,14 @@
         "art_7dd4a591-3829-4796-9860-d0648a8750f1",
         "art_878c7b61-ed39-4cf6-9216-ac94d6edb0fc"
       ]
+    },
+    "col_64427667-ba8": {
+      "path": "docs/agent-learning/batches/20261105-01.md",
+      "date_sequence": "20261105-01",
+      "created_at": "2026-11-05T00:07:25.445Z",
+      "article_ids": [
+        "art_e17e507a-4b5e-4143-a6a0-d9f6796e5f17"
+      ]
     }
   },
   "delivered_batches": [
@@ -530,13 +557,14 @@
     "batch_d93a14a0-4e15-4104-9344-259170bd608e",
     "batch_24d7e4ba-c4de-4e87-a9ad-cd142ed45207",
     "batch_028990fd-b763-40e9-972e-0e2a078cdba2",
-    "batch_cee9fd2e-8e05-42fc-9806-52aefdd17b59"
+    "batch_cee9fd2e-8e05-42fc-9806-52aefdd17b59",
+    "batch_383061d7-94f5-4c84-912c-8697c5be1e8c"
   ],
   "managed_files": {
     "docs/agent-learning/README.md": {
-      "sha256": "95b8cb1c9eadefbe3b9fe7e77f5e5d0626ad55c98caa8703ddc18d5d8a6b23c3",
+      "sha256": "1907819d61475033790b0b82cd464a2628ca4799b6bba61a834f409e3909b161",
       "media_type": "text/markdown",
-      "size": 15084
+      "size": 16029
     },
     "docs/agent-learning/articles/20261020-agent-evals-faq/README.md": {
       "sha256": "575acf771fc3c4eb9a725d56773b39cd45103c77664c4a615577af48eafe1722",
@@ -1642,6 +1670,66 @@
       "sha256": "fee8b5ba5add3704fbec884bc26f74bda9fdcf163884136e146b61c4abd4bb75",
       "media_type": "text/markdown",
       "size": 831
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/README.md": {
+      "sha256": "a814545a8cd394030e654dd0de006b7cb995f5777b3e08e9c503fe7228f8cf47",
+      "media_type": "text/markdown",
+      "size": 543
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/article.md": {
+      "sha256": "85773b51f9bb9efc00855cc395511841380ee19bcd538fb64eea9d899def1af9",
+      "media_type": "text/markdown",
+      "size": 8192
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/article-zh-CN.md": {
+      "sha256": "d17f10a375447b7b022e80518d0af0ace23cf920c819689dccfe5a082dbd9fea",
+      "media_type": "text/markdown",
+      "size": 7980
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/research.md": {
+      "sha256": "a4bffdda5fde703a0fa4401b159fd4ee65811c16e1c28b5166fbca4a369f0052",
+      "media_type": "text/markdown",
+      "size": 11921
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/assets/diagram-33db620dfb96.webp": {
+      "sha256": "33db620dfb96bf47a7a9c2a4c4a46a09b827b2850f47335c56f6b397039255b0",
+      "media_type": "image/webp",
+      "size": 49620
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/assets/diagram-55514a0c6217.webp": {
+      "sha256": "55514a0c6217003d98733d7ec9f9a39b5c05d3a1994a77e9faa38d390a872d6f",
+      "media_type": "image/webp",
+      "size": 22082
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/assets/diagram-2d5cc22724ec.webp": {
+      "sha256": "2d5cc22724ecf75adba6a2b362085b87e1bbe567a4458443fb2e706d4c65edc1",
+      "media_type": "image/webp",
+      "size": 15338
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/assets/diagram-27b543d7ad42.webp": {
+      "sha256": "27b543d7ad4289badb75d6be0b26c0c72c6caf4be952b3b7c04e52cfe45ff30c",
+      "media_type": "image/webp",
+      "size": 31548
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/assets/diagram-5aee11412962.webp": {
+      "sha256": "5aee11412962f45306e587a139038bc52585b45fba5147bb00cffc9197908c80",
+      "media_type": "image/webp",
+      "size": 14112
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/assets/diagram-469129a4e137.webp": {
+      "sha256": "469129a4e13731da316ceb277097126ad1e2cf6d3428348a1eb461d7977bb90f",
+      "media_type": "image/webp",
+      "size": 25422
+    },
+    "docs/agent-learning/articles/20261105-see-the-agents-set-the-terms-new-visibility-and-control-for-personal-agents/assets/agent-identity-boundaries.svg": {
+      "sha256": "f3bbfb5cc834fe9d4a4754681ab5752e5097086098beaefb9ef94411709cb576",
+      "media_type": "image/svg+xml",
+      "size": 4155
+    },
+    "docs/agent-learning/batches/20261105-01.md": {
+      "sha256": "9a4eb348ad9d2a3bf1ea981be40181e78d7b15a41b65a36bfe06423bd5e7b6ab",
+      "media_type": "text/markdown",
+      "size": 585
     }
   }
 }
